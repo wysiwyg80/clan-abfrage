@@ -9,7 +9,8 @@ excel_path = "Master_Total_Battle.xlsx"
 
 if os.path.exists(excel_path):
   try:
-    df = pd.read_excel(excel_path)
+    # header=1 überspringt die erste Titelzeile und nutzt Zeile 2 als Spaltennamen
+    df = pd.read_excel(excel_path, header=1)
 
     # Suchfeld anzeigen
     spieler_name = st.text_input("🔍 Spielername eingeben:")
@@ -22,9 +23,7 @@ if os.path.exists(excel_path):
       ergebnis = df[mask.any(axis=1)]
 
       if not ergebnis.empty:
-        st.success(
-            f"  {len(ergebnis)} Treffer für '{spieler_name}' gefunden!"
-        )
+        st.success(f"  {len(ergebnis)} Treffer für '{spieler_name}' gefunden!")
         st.dataframe(ergebnis, use_container_width=True)
       else:
         st.warning(f"Keine Einträge für '{spieler_name}' gefunden.")
@@ -35,7 +34,4 @@ if os.path.exists(excel_path):
   except Exception as e:
     st.error(f"Fehler beim Lesen der Excel-Datei: {e}")
 else:
-  st.error(
-    f"Die Datei '{excel_path}' wurde im Ordner"
-    f" 'C:\\Users\\cpfro\\Documents\\totalbattle\\Test\\' nicht gefunden!"
-  )
+  st.error(f"Die Datei '{excel_path}' wurde nicht im Projektordner gefunden!")
