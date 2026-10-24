@@ -164,7 +164,7 @@ st.markdown(
     '<div class="main-title">BAD LegioXEquentris</div>', unsafe_allow_html=True
 )
 st.markdown(
-    '<div class="sub-title">🌸 Lieber Blume im Asphalt als Blut im Gras 🩸</div>',
+    '<div class="sub-title">🌸 Lieber Blumen im Asphalt als Blut im Gras 🩸</div>',
     unsafe_allow_html=True,
 )
 
