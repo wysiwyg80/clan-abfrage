@@ -7,7 +7,7 @@ import streamlit as st
 # 1. PAGE CONFIGURATION & DESIGN (WEISS & ROT)
 # ==========================================
 st.set_page_config(
-    page_title="Bad in Blut — Clan Tracker",
+    page_title="BAD LegioXEquentris — Clan Tracker",
     page_icon="🩸",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -23,15 +23,25 @@ st.markdown(
         color: #111111;
     }
     
-    /* Hauptüberschrift: Bad in Blut in kräftigem Blutrot */
+    /* Hauptüberschrift: BAD LegioXEquentris in kräftigem Blutrot */
     .main-title {
         color: #B22222 !important;
         text-shadow: 0px 0px 8px rgba(178, 34, 34, 0.2);
         text-align: center;
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         font-weight: 900;
-        margin-bottom: 25px;
+        margin-bottom: 5px;
         letter-spacing: 1px;
+    }
+    
+    /* Untertitel / Clan-Motto */
+    .sub-title {
+        color: #444444 !important;
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 600;
+        margin-bottom: 30px;
     }
     
     /* Alle Beschriftungen & Texte in schwarzer/dunkler Schrift */
@@ -151,7 +161,10 @@ def load_and_process_data(file_path="Master_Total_Battle.xlsx"):
 # 3. STREAMLIT USER INTERFACE
 # ==========================================
 st.markdown(
-    '<div class="main-title">🩸 Bad in Blut — Total Battle Clan Tracker</div>',
+    '<div class="main-title">BAD LegioXEquentris</div>', unsafe_allow_html=True
+)
+st.markdown(
+    '<div class="sub-title">🌸 Lieber Blume im Asphalt als Blut im Gras 🩸</div>',
     unsafe_allow_html=True,
 )
 
