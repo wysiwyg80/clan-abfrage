@@ -9,9 +9,8 @@ excel_path = "Master_Total_Battle.xlsx"
 
 if os.path.exists(excel_path):
   try:
-    # Wir laden gezielt das Blatt "Truhen_Tracker" und setzen header=2 
-    # (Falls die Punkte immer noch fehlen, probiere hier header=3)
-    df = pd.read_excel(excel_path, sheet_name="Truhen_Tracker", header=2)
+    # Wir laden das Blatt "Truhen_Tracker" und nutzen header=1 für die Spaltenüberschriften
+    df = pd.read_excel(excel_path, sheet_name="Truhen_Tracker", header=1)
 
     # Suchfeld anzeigen
     spieler_name = st.text_input("🔍 Spielername eingeben:")
