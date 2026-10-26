@@ -16,7 +16,7 @@
 <body class="bg-slate-900 text-slate-100 min-h-screen pb-12">
 
     <!-- Header -->
-    <header class="bg-slate-850 bg-slate-900 border-b border-red-900/40 sticky top-0 z-50 shadow-lg">
+    <header class="bg-slate-900 border-b border-red-900/40 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-800 to-amber-700 flex items-center justify-center border border-amber-500/30">
@@ -29,7 +29,7 @@
             </div>
             <div class="flex items-center gap-2">
                 <button onclick="toggleAdminPanel()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
-                    <i class="fa-solid fa-sliders"></i> Admin-Bereich & Massen-Import
+                    <i class="fa-solid fa-sliders"></i> Admin-Bereich & Punkte-Regeln
                 </button>
             </div>
         </div>
@@ -38,12 +38,30 @@
     <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
 
         <!-- ADMIN PANEL -->
-        <div id="adminPanel" class="hidden bg-slate-850 bg-slate-900 border border-amber-500/40 rounded-xl p-5 shadow-2xl space-y-6">
+        <div id="adminPanel" class="hidden bg-slate-900 border border-amber-500/40 rounded-xl p-5 shadow-2xl space-y-6">
             <div class="flex justify-between items-center border-b border-slate-700 pb-3">
                 <h2 class="font-cinzel font-bold text-lg text-amber-400 flex items-center gap-2">
-                    <i class="fa-solid fa-gears"></i> Admin-Verwaltung & Massen-Import
+                    <i class="fa-solid fa-gears"></i> Admin-Verwaltung & Punkte-Konfiguration
                 </h2>
                 <button onclick="toggleAdminPanel()" class="text-slate-300 hover:text-white text-sm cursor-pointer"><i class="fa-solid fa-xmark"></i> Schließen</button>
+            </div>
+
+            <!-- KONFIGURATION: WERT PRO TRUHE & TURMBAU -->
+            <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
+                <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
+                    <i class="fa-solid fa-calculator"></i> Punktewert-Einstellungen
+                </h3>
+                <p class="text-xs text-slate-300">Lest fest, wie viele Punkte 1 Truhe oder 1 Turmbau-Aktion bringt:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-2">
+                        <label class="text-xs text-slate-300 whitespace-nowrap">Punkte pro Truhe:</label>
+                        <input type="number" id="chestValueInput" value="1" min="1" onchange="updatePointValues()" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1 text-xs text-amber-300 w-24 focus:outline-none focus:border-amber-500 font-bold">
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <label class="text-xs text-slate-300 whitespace-nowrap">Punkte pro Turmbau:</label>
+                        <input type="number" id="towerValueInput" value="1" min="1" onchange="updatePointValues()" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1 text-xs text-amber-300 w-24 focus:outline-none focus:border-amber-500 font-bold">
+                    </div>
+                </div>
             </div>
 
             <!-- MASSEN-IMPORT -->
@@ -51,8 +69,8 @@
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-file-import"></i> Massen-Import aus KI / PDFs
                 </h3>
-                <p class="text-xs text-slate-300">Format pro Zeile: <code class="text-amber-300">Name, TruhenPunkte, Turmbau, Macht, VorherigeMacht, TageInSaison(optional, std=28)</code></p>
-                <textarea id="bulkImportText" rows="4" placeholder="SirLancelot, 15000, 5200, 125000000, 120000000, 28&#10;KriegerinA, 8000, 2000, 95000000, 90000000, 14" class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
+                <p class="text-xs text-slate-300">Format pro Zeile: <code class="text-amber-300">Name, TruhenAnzahl (oder Punkte), TurmbauAnzahl, Macht, VorherigeMacht, TageInSaison</code></p>
+                <textarea id="bulkImportText" rows="4" placeholder="SirLancelot, 1500, 520, 125000000, 120000000, 28&#10;KriegerinA, 800, 200, 95000000, 90000000, 14" class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
                 <div class="flex gap-2">
                     <button onclick="processBulkImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
                         <i class="fa-solid fa-upload"></i> Daten Importieren
@@ -68,8 +86,8 @@
                 <h3 class="text-xs font-bold uppercase text-amber-300 mb-2">Mitglied manuell anlegen / bearbeiten</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-3 bg-slate-800 p-3 rounded-lg border border-slate-700">
                     <input type="text" id="addName" placeholder="Spielername" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
-                    <input type="number" id="addChestsPoints" placeholder="Truhen-Punkte" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
-                    <input type="number" id="addTower" placeholder="Turmbau-Punkte" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
+                    <input type="number" id="addChests" placeholder="Truhen (Anzahl/Pkt)" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
+                    <input type="number" id="addTower" placeholder="Turmbau (Anzahl/Pkt)" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
                     <input type="number" id="addPower" placeholder="Aktuelle Macht" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
                     <input type="number" id="addPrevPower" placeholder="Vorherige Macht" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
                     <input type="number" id="addActiveDays" placeholder="Tage (1-28)" value="28" min="1" max="28" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
@@ -125,7 +143,7 @@
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse" id="rosterTable">
                     <thead>
-                        <tr class="bg-slate-850 bg-slate-900 text-slate-300 text-xs uppercase border-b border-slate-700 font-cinzel">
+                        <tr class="bg-slate-900 text-slate-300 text-xs uppercase border-b border-slate-700 font-cinzel">
                             <th class="p-3">Rang / Name</th>
                             <th class="p-3 text-right data-col-chests">Truhen-Pkt</th>
                             <th class="p-3 text-right data-col-chests">Turmbau-Pkt</th>
@@ -145,15 +163,27 @@
 
     <script>
         let clanData = JSON.parse(localStorage.getItem('legio_clan_data')) || [];
+        let chestPointValue = parseInt(localStorage.getItem('legio_chest_val')) || 1;
+        let towerPointValue = parseInt(localStorage.getItem('legio_tower_val')) || 1;
         let activeTab = 'chests';
         let topChart = null, growthChart = null;
 
         function saveData() {
             localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
+            localStorage.setItem('legio_chest_val', chestPointValue);
+            localStorage.setItem('legio_tower_val', towerPointValue);
             refreshUI();
         }
 
+        function updatePointValues() {
+            chestPointValue = parseInt(document.getElementById('chestValueInput').value) || 1;
+            towerPointValue = parseInt(document.getElementById('towerValueInput').value) || 1;
+            saveData();
+        }
+
         function refreshUI() {
+            document.getElementById('chestValueInput').value = chestPointValue;
+            document.getElementById('towerValueInput').value = towerPointValue;
             renderMetrics();
             renderTable();
             renderCharts();
@@ -167,21 +197,21 @@
             let name = document.getElementById('addName').value.trim();
             if(!name) return alert("Bitte Spielernamen eingeben!");
 
-            let chests = parseInt(document.getElementById('addChestsPoints').value) || 0;
-            let tower = parseInt(document.getElementById('addTower').value) || 0;
+            let rawChests = parseInt(document.getElementById('addChests').value) || 0;
+            let rawTower = parseInt(document.getElementById('addTower').value) || 0;
             let power = parseInt(document.getElementById('addPower').value) || 0;
             let prevPower = parseInt(document.getElementById('addPrevPower').value) || power;
             let activeDays = parseInt(document.getElementById('addActiveDays').value) || 28;
 
             let idx = clanData.findIndex(m => m.name.toLowerCase() === name.toLowerCase());
             if(idx >= 0) {
-                clanData[idx] = { name, chests, tower, power, prevPower, activeDays };
+                clanData[idx] = { name, chests: rawChests, tower: rawTower, power, prevPower, activeDays };
             } else {
-                clanData.push({ name, chests, tower, power, prevPower, activeDays });
+                clanData.push({ name, chests: rawChests, tower: rawTower, power, prevPower, activeDays });
             }
 
             document.getElementById('addName').value = '';
-            document.getElementById('addChestsPoints').value = '';
+            document.getElementById('addChests').value = '';
             document.getElementById('addTower').value = '';
             document.getElementById('addPower').value = '';
             document.getElementById('addPrevPower').value = '';
@@ -200,7 +230,7 @@
         function editMember(index) {
             let m = clanData[index];
             document.getElementById('addName').value = m.name;
-            document.getElementById('addChestsPoints').value = m.chests;
+            document.getElementById('addChests').value = m.chests;
             document.getElementById('addTower').value = m.tower;
             document.getElementById('addPower').value = m.power;
             document.getElementById('addPrevPower').value = m.prevPower;
@@ -249,8 +279,10 @@
 
         function renderMetrics() {
             document.getElementById('stat-members').innerText = clanData.length;
-            document.getElementById('stat-chests').innerText = clanData.reduce((s, m) => s + m.chests, 0).toLocaleString('de-DE');
-            document.getElementById('stat-tower').innerText = clanData.reduce((s, m) => s + m.tower, 0).toLocaleString('de-DE');
+            let totalChestsPts = clanData.reduce((s, m) => s + (m.chests * chestPointValue), 0);
+            let totalTowerPts = clanData.reduce((s, m) => s + (m.tower * towerPointValue), 0);
+            document.getElementById('stat-chests').innerText = totalChestsPts.toLocaleString('de-DE');
+            document.getElementById('stat-tower').innerText = totalTowerPts.toLocaleString('de-DE');
             let totalPower = clanData.reduce((s, m) => s + m.power, 0);
             document.getElementById('stat-power').innerText = (totalPower / 1000000).toFixed(1) + "M";
         }
@@ -259,12 +291,18 @@
             let tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
 
-            let sorted = [...clanData].sort((a, b) => (b.chests + b.tower) - (a.chests + a.tower));
+            let sorted = [...clanData].sort((a, b) => {
+                let pA = (a.chests * chestPointValue) + (a.tower * towerPointValue);
+                let pB = (b.chests * chestPointValue) + (b.tower * towerPointValue);
+                return pB - pA;
+            });
 
             sorted.forEach((member, index) => {
                 let row = document.createElement('tr');
-                let totalPoints = member.chests + member.tower;
-                
+                let chestPoints = member.chests * chestPointValue;
+                let towerPoints = member.tower * towerPointValue;
+                let totalPoints = chestPoints + towerPoints;
+
                 let activeDays = member.activeDays !== undefined ? member.activeDays : 28;
                 let baseGoal = member.power < 100000000 ? 12500 : 15000;
                 let individualGoal = Math.round((baseGoal / 28) * activeDays);
@@ -280,8 +318,8 @@
 
                 row.innerHTML = `
                     <td class="p-3 font-medium">#${index + 1} ${member.name} ${activeDays < 28 ? `<span class="text-amber-400 text-[10px] ml-1">(${activeDays}/28 T.)</span>` : ''}</td>
-                    <td class="p-3 text-right text-amber-300 font-bold data-col-chests">${member.chests.toLocaleString('de-DE')}</td>
-                    <td class="p-3 text-right text-slate-200 data-col-chests">${member.tower.toLocaleString('de-DE')}</td>
+                    <td class="p-3 text-right text-amber-300 font-bold data-col-chests">${chestPoints.toLocaleString('de-DE')} <span class="text-[10px] text-slate-400">(${member.chests}T)</span></td>
+                    <td class="p-3 text-right text-slate-200 data-col-chests">${towerPoints.toLocaleString('de-DE')} <span class="text-[10px] text-slate-400">(${member.tower}X)</span></td>
                     <td class="p-3 text-right font-bold text-amber-400 data-col-chests">${totalPoints.toLocaleString('de-DE')}</td>
                     <td class="p-3 text-center data-col-chests">${statusBadge}</td>
                     <td class="p-3 text-right data-col-power hidden">${(member.power / 1000000).toFixed(2)}M</td>
@@ -324,7 +362,11 @@
         }
 
         function renderCharts() {
-            let sorted = [...clanData].sort((a, b) => (b.chests + b.tower) - (a.chests + a.tower)).slice(0, 10);
+            let sorted = [...clanData].sort((a, b) => {
+                let pA = (a.chests * chestPointValue) + (a.tower * towerPointValue);
+                let pB = (b.chests * chestPointValue) + (b.tower * towerPointValue);
+                return pB - pA;
+            }).slice(0, 10);
             
             let ctxTop = document.getElementById('topChestsChart').getContext('2d');
             if(topChart) topChart.destroy();
@@ -332,7 +374,7 @@
                 type: 'bar',
                 data: {
                     labels: sorted.map(m => m.name),
-                    datasets: [{ label: 'Gesamtpunkte', data: sorted.map(m => m.chests + m.tower), backgroundColor: '#d97706' }]
+                    datasets: [{ label: 'Gesamtpunkte', data: sorted.map(m => (m.chests * chestPointValue) + (m.tower * towerPointValue)), backgroundColor: '#d97706' }]
                 },
                 options: { responsive: true, maintainAspectRatio: false }
             });
