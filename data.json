@@ -329,7 +329,7 @@
     },
     {
       "name": "Vudorr",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 28357999,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:32:54.593Z"
+  "lastUpdated": "2026-10-26T14:33:02.414Z"
 }
