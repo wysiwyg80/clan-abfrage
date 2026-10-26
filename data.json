@@ -1,593 +1,457 @@
-{
-  "chestTypeValues": {
-    "Turmbau": 50
+[
+  {
+    "name": "LegatusLabienus",
+    "rank": "Anführer",
+    "power": 759664191,
+    "truhen": 0,
+    "turmbau": 0
   },
-  "clanData": [
-    {
-      "name": "Manador II",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 613978215,
-      "prevPower": 613978215,
-      "activeDays": 28
-    },
-    {
-      "name": "Riyash CP CITY",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 479641500,
-      "prevPower": 479641500,
-      "activeDays": 28
-    },
-    {
-      "name": "Magellan",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 444829445,
-      "prevPower": 444829445,
-      "activeDays": 28
-    },
-    {
-      "name": "Explorer",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 400582555,
-      "prevPower": 400582555,
-      "activeDays": 28
-    },
-    {
-      "name": "DRACULA",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 372735775,
-      "prevPower": 372735775,
-      "activeDays": 28
-    },
-    {
-      "name": "bjar",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 345143816,
-      "prevPower": 345143816,
-      "activeDays": 28
-    },
-    {
-      "name": "Biin",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 297109251,
-      "prevPower": 297109251,
-      "activeDays": 28
-    },
-    {
-      "name": "Maem",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 294660699,
-      "prevPower": 294660699,
-      "activeDays": 28
-    },
-    {
-      "name": "Kariel",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 294183295,
-      "prevPower": 294183295,
-      "activeDays": 28
-    },
-    {
-      "name": "Auzar",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 293537875,
-      "prevPower": 293537875,
-      "activeDays": 28
-    },
-    {
-      "name": "Elginan",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 293038296,
-      "prevPower": 293038296,
-      "activeDays": 28
-    },
-    {
-      "name": "Dalas",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 254013635,
-      "prevPower": 254013635,
-      "activeDays": 28
-    },
-    {
-      "name": "Heimdall sk",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 251012385,
-      "prevPower": 251012385,
-      "activeDays": 28
-    },
-    {
-      "name": "Carruggi 5r",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 238262685,
-      "prevPower": 238262685,
-      "activeDays": 28
-    },
-    {
-      "name": "ICHNOS",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 234760925,
-      "prevPower": 234760925,
-      "activeDays": 28
-    },
-    {
-      "name": "Lee the Ugly",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 229346491,
-      "prevPower": 229346491,
-      "activeDays": 28
-    },
-    {
-      "name": "kordy",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 226682191,
-      "prevPower": 226682191,
-      "activeDays": 28
-    },
-    {
-      "name": "Ajax",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 217496435,
-      "prevPower": 217496435,
-      "activeDays": 28
-    },
-    {
-      "name": "Granidred",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 212187521,
-      "prevPower": 212187521,
-      "activeDays": 28
-    },
-    {
-      "name": "BELEN",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 209779281,
-      "prevPower": 209779281,
-      "activeDays": 28
-    },
-    {
-      "name": "Daula",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 209779281,
-      "prevPower": 209779281,
-      "activeDays": 28
-    },
-    {
-      "name": "Roula",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 206038061,
-      "prevPower": 206038061,
-      "activeDays": 28
-    },
-    {
-      "name": "gaviiCABJ",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 203237900,
-      "prevPower": 203237900,
-      "activeDays": 28
-    },
-    {
-      "name": "UNVSU",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 203115305,
-      "prevPower": 203115305,
-      "activeDays": 28
-    },
-    {
-      "name": "Sirius",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 202642463,
-      "prevPower": 202642463,
-      "activeDays": 28
-    },
-    {
-      "name": "Vudor SK6",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 197059645,
-      "prevPower": 197059645,
-      "activeDays": 28
-    },
-    {
-      "name": "Angelina38",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 181613611,
-      "prevPower": 181613611,
-      "activeDays": 28
-    },
-    {
-      "name": "eroi",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 175490091,
-      "prevPower": 175490091,
-      "activeDays": 28
-    },
-    {
-      "name": "King Slayer",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 159878138,
-      "prevPower": 159878138,
-      "activeDays": 28
-    },
-    {
-      "name": "invisible",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 154067470,
-      "prevPower": 154067470,
-      "activeDays": 28
-    },
-    {
-      "name": "Jamaman",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 146017683,
-      "prevPower": 146017683,
-      "activeDays": 28
-    },
-    {
-      "name": "Maginad",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 140126133,
-      "prevPower": 140126133,
-      "activeDays": 28
-    },
-    {
-      "name": "AyBars",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 108735016,
-      "prevPower": 108735016,
-      "activeDays": 28
-    },
-    {
-      "name": "Orodrafin",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 94927582,
-      "prevPower": 94927582,
-      "activeDays": 28
-    },
-    {
-      "name": "Itachi",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 87119009,
-      "prevPower": 87119009,
-      "activeDays": 28
-    },
-    {
-      "name": "Burigas",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 81059435,
-      "prevPower": 81059435,
-      "activeDays": 28
-    },
-    {
-      "name": "Vudorr",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 28357999,
-      "prevPower": 28357999,
-      "activeDays": 28
-    },
-    {
-      "name": "Greynelf",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 12336183,
-      "prevPower": 12336183,
-      "activeDays": 28
-    },
-    {
-      "name": "Ayanin",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 11741000,
-      "prevPower": 11741000,
-      "activeDays": 28
-    },
-    {
-      "name": "Ria",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 751848,
-      "prevPower": 751848,
-      "activeDays": 28
-    },
-    {
-      "name": "Que",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 113010980,
-      "prevPower": 113010980,
-      "activeDays": 28
-    },
-    {
-      "name": "SaturdayNightFever",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 105402693,
-      "prevPower": 105402693,
-      "activeDays": 28
-    },
-    {
-      "name": "eroi2",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 64865466,
-      "prevPower": 64865466,
-      "activeDays": 28
-    },
-    {
-      "name": "LegatusLabienus",
-      "rank": "Anführer",
-      "chests": {},
-      "tower": 0,
-      "power": 759664191,
-      "prevPower": 759664191,
-      "activeDays": 28
-    },
-    {
-      "name": "man of war",
-      "rank": "Vorgesetzter",
-      "chests": {},
-      "tower": 0,
-      "power": 1460506831,
-      "prevPower": 1460506831,
-      "activeDays": 28
-    },
-    {
-      "name": "Miss Dire",
-      "rank": "Vorgesetzter",
-      "chests": {},
-      "tower": 0,
-      "power": 446408785,
-      "prevPower": 446408785,
-      "activeDays": 28
-    },
-    {
-      "name": "Cologne am Rhein",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 417332905,
-      "prevPower": 417332905,
-      "activeDays": 28
-    },
-    {
-      "name": "WYSIWYG",
-      "rank": "Vorgesetzter",
-      "chests": {},
-      "tower": 0,
-      "power": 398220910,
-      "prevPower": 398220910,
-      "activeDays": 28
-    },
-    {
-      "name": "kikito",
-      "rank": "Vorgesetzter",
-      "chests": {},
-      "tower": 0,
-      "power": 274164761,
-      "prevPower": 274164761,
-      "activeDays": 28
-    },
-    {
-      "name": "LedZep2",
-      "rank": "Vorgesetzter",
-      "chests": {},
-      "tower": 0,
-      "power": 266496970,
-      "prevPower": 266496970,
-      "activeDays": 28
-    },
-    {
-      "name": "Frederico Freitas",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "power": 125917166,
-      "prevPower": 125917166,
-      "activeDays": 28
-    },
-    {
-      "name": "Goll",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "power": 352669156,
-      "prevPower": 352669156,
-      "activeDays": 28
-    },
-    {
-      "name": "Delalen",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "power": 330786949,
-      "prevPower": 330786949,
-      "activeDays": 28
-    },
-    {
-      "name": "Loki",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "power": 260077406,
-      "prevPower": 260077406,
-      "activeDays": 28
-    },
-    {
-      "name": "Gran Rex",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "power": 224975841,
-      "prevPower": 224975841,
-      "activeDays": 28
-    },
-    {
-      "name": "TECH",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "power": 199715135,
-      "prevPower": 199715135,
-      "activeDays": 28
-    },
-    {
-      "name": "Son Of Algéri",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "power": 182695460,
-      "prevPower": 182695460,
-      "activeDays": 28
-    },
-    {
-      "name": "PABLUS",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "power": 104122751,
-      "prevPower": 104122751,
-      "activeDays": 28
-    },
-    {
-      "name": "Tanmisis",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 1095026005,
-      "prevPower": 1095026005,
-      "activeDays": 28
-    },
-    {
-      "name": "Sir spanksALot",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 783379255,
-      "prevPower": 783379255,
-      "activeDays": 28
-    },
-    {
-      "name": "BAD Guo II",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 753964259,
-      "prevPower": 753964259,
-      "activeDays": 28
-    },
-    {
-      "name": "Riyash",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 660458681,
-      "prevPower": 660458681,
-      "activeDays": 28
-    },
-    {
-      "name": "Sir Charles",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 620996471,
-      "prevPower": 620996471,
-      "activeDays": 28
-    },
-    {
-      "name": "Mojo",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 302960645,
-      "prevPower": 302960645,
-      "activeDays": 28
-    },
-    {
-      "name": "Gigi",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "power": 110298690,
-      "prevPower": 110298690,
-      "activeDays": 28
-    }
-  ],
-  "lastUpdated": "2026-10-26T14:09:04.622Z"
-}
+  {
+    "name": "man of war",
+    "rank": "Vorgesetzter",
+    "power": 1460506831,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Miss Dire",
+    "rank": "Vorgesetzter",
+    "power": 446408785,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "WYSIWYG",
+    "rank": "Vorgesetzter",
+    "power": 398220910,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "kikito",
+    "rank": "Vorgesetzter",
+    "power": 274164761,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "LedZep2",
+    "rank": "Vorgesetzter",
+    "power": 266496970,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Goll",
+    "rank": "Offizier",
+    "power": 352669156,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Delalen",
+    "rank": "Offizier",
+    "power": 330786949,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Loki",
+    "rank": "Offizier",
+    "power": 260077406,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Gran Rex",
+    "rank": "Offizier",
+    "power": 224975841,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "TECH",
+    "rank": "Offizier",
+    "power": 199715135,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Son Of Algéri",
+    "rank": "Offizier",
+    "power": 182695460,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Frederico Freitas",
+    "rank": "Offizier",
+    "power": 125917166,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "PABLUS",
+    "rank": "Offizier",
+    "power": 104122751,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Tanmisis",
+    "rank": "Veteran",
+    "power": 1095026005,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Sir spanksALot",
+    "rank": "Veteran",
+    "power": 783379255,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "BAD Guo II",
+    "rank": "Veteran",
+    "power": 753964259,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Riyash",
+    "rank": "Veteran",
+    "power": 660458681,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Sir Charles",
+    "rank": "Veteran",
+    "power": 620996471,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Manador II",
+    "rank": "Veteran",
+    "power": 613978215,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Riyash CP CITY",
+    "rank": "Veteran",
+    "power": 479641500,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Magellan",
+    "rank": "Veteran",
+    "power": 444829445,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Explorer",
+    "rank": "Veteran",
+    "power": 400582555,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "DRACULA",
+    "rank": "Veteran",
+    "power": 372735775,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "bjar",
+    "rank": "Veteran",
+    "power": 345143816,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Mojo",
+    "rank": "Veteran",
+    "power": 302960645,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Biin",
+    "rank": "Veteran",
+    "power": 297109251,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Maem",
+    "rank": "Veteran",
+    "power": 294660699,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Kariel",
+    "rank": "Veteran",
+    "power": 294183295,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Auzar",
+    "rank": "Veteran",
+    "power": 293537875,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Elginan",
+    "rank": "Veteran",
+    "power": 293038296,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Dalas",
+    "rank": "Veteran",
+    "power": 254013635,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Heimdall sk",
+    "rank": "Veteran",
+    "power": 251012385,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Carruggi 5r",
+    "rank": "Veteran",
+    "power": 238262685,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "ICHNOS",
+    "rank": "Veteran",
+    "power": 234760925,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Lee the Ugly",
+    "rank": "Veteran",
+    "power": 229346491,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "kordy",
+    "rank": "Veteran",
+    "power": 226682191,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Cologne am Rhein",
+    "rank": "Soldat",
+    "power": 417332905,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Ajax",
+    "rank": "Soldat",
+    "power": 217496435,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Granidred",
+    "rank": "Soldat",
+    "power": 212187521,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "BELEN",
+    "rank": "Soldat",
+    "power": 209779281,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Daula",
+    "rank": "Soldat",
+    "power": 209779281,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Roula",
+    "rank": "Soldat",
+    "power": 206038061,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "gaviiCABJ",
+    "rank": "Soldat",
+    "power": 203237900,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "UNVSU",
+    "rank": "Soldat",
+    "power": 203115305,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Sirius",
+    "rank": "Soldat",
+    "power": 202642463,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Vudor SK6",
+    "rank": "Soldat",
+    "power": 197059645,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Angelina38",
+    "rank": "Soldat",
+    "power": 181613611,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "eroi",
+    "rank": "Soldat",
+    "power": 175490091,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "King Slayer",
+    "rank": "Soldat",
+    "power": 159878138,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "invisible",
+    "rank": "Soldat",
+    "power": 154067470,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Jamaman",
+    "rank": "Soldat",
+    "power": 146017683,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Maginad",
+    "rank": "Soldat",
+    "power": 140126133,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Que",
+    "rank": "Soldat",
+    "power": 113010980,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Gigi",
+    "rank": "Soldat",
+    "power": 110298690,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "AyBars",
+    "rank": "Soldat",
+    "power": 108735016,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "SaturdayNightFever",
+    "rank": "Soldat",
+    "power": 105402693,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Orodrafin",
+    "rank": "Soldat",
+    "power": 94927582,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Itachi",
+    "rank": "Soldat",
+    "power": 87119009,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Burigas",
+    "rank": "Soldat",
+    "power": 81059435,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "eroi2",
+    "rank": "Soldat",
+    "power": 64865466,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Vudorr",
+    "rank": "Soldat",
+    "power": 28357999,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Greynelf",
+    "rank": "Soldat",
+    "power": 12336183,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Ayanin",
+    "rank": "Soldat",
+    "power": 11741000,
+    "truhen": 0,
+    "turmbau": 0
+  },
+  {
+    "name": "Ria",
+    "rank": "Soldat",
+    "power": 751848,
+    "truhen": 0,
+    "turmbau": 0
+  }
+]
