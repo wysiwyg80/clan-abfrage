@@ -13,10 +13,10 @@
         .font-cinzel { font-family: 'Cinzel', serif; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen pb-12">
+<body class="bg-slate-900 text-slate-100 min-h-screen pb-12">
 
     <!-- Header -->
-    <header class="bg-slate-900 border-b border-red-900/40 sticky top-0 z-50 shadow-lg">
+    <header class="bg-slate-850 bg-slate-900 border-b border-red-900/40 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-red-800 to-amber-700 flex items-center justify-center border border-amber-500/30">
@@ -24,12 +24,12 @@
                 </div>
                 <div>
                     <h1 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-400">BAD LegioXEquentris</h1>
-                    <p class="text-xs text-slate-400 tracking-wide uppercase">Allianz Taktik, Truhen & Macht Dashboard</p>
+                    <p class="text-xs text-slate-300 tracking-wide uppercase">Allianz Taktik, Truhen & Macht Dashboard</p>
                 </div>
             </div>
             <div class="flex items-center gap-2">
                 <button onclick="toggleAdminPanel()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
-                    <i class="fa-solid fa-sliders"></i> Admin-Bereich & Punkte-Konfiguration
+                    <i class="fa-solid fa-sliders"></i> Admin-Bereich & Massen-Import
                 </button>
             </div>
         </div>
@@ -38,52 +38,43 @@
     <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
 
         <!-- ADMIN PANEL -->
-        <div id="adminPanel" class="hidden bg-slate-900 border border-amber-500/30 rounded-xl p-5 shadow-2xl space-y-6">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <div id="adminPanel" class="hidden bg-slate-850 bg-slate-900 border border-amber-500/40 rounded-xl p-5 shadow-2xl space-y-6">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-3">
                 <h2 class="font-cinzel font-bold text-lg text-amber-400 flex items-center gap-2">
-                    <i class="fa-solid fa-gears"></i> Admin-Verwaltung & Punktevergabe
+                    <i class="fa-solid fa-gears"></i> Admin-Verwaltung & Massen-Import
                 </h2>
-                <button onclick="toggleAdminPanel()" class="text-slate-400 hover:text-slate-200 text-sm"><i class="fa-solid fa-xmark"></i> Schließen</button>
+                <button onclick="toggleAdminPanel()" class="text-slate-300 hover:text-white text-sm cursor-pointer"><i class="fa-solid fa-xmark"></i> Schließen</button>
+            </div>
+
+            <!-- MASSEN-IMPORT -->
+            <div class="bg-slate-800 border border-amber-500/40 rounded-xl p-4 space-y-3 shadow-inner">
+                <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
+                    <i class="fa-solid fa-file-import"></i> Massen-Import aus KI / PDFs
+                </h3>
+                <p class="text-xs text-slate-300">Format pro Zeile: <code class="text-amber-300">Name, TruhenPunkte, Turmbau, Macht, VorherigeMacht, TageInSaison(optional, std=28)</code></p>
+                <textarea id="bulkImportText" rows="4" placeholder="SirLancelot, 15000, 5200, 125000000, 120000000, 28&#10;KriegerinA, 8000, 2000, 95000000, 90000000, 14" class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
+                <div class="flex gap-2">
+                    <button onclick="processBulkImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                        <i class="fa-solid fa-upload"></i> Daten Importieren
+                    </button>
+                    <button onclick="clearAllData()" class="bg-red-900/80 hover:bg-red-800 text-red-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer ml-auto flex items-center gap-1.5">
+                        <i class="fa-solid fa-trash-can"></i> Alle Daten löschen
+                    </button>
+                </div>
             </div>
 
             <!-- Manuelle Mitglieder- & Wert-Eingabe -->
             <div>
                 <h3 class="text-xs font-bold uppercase text-amber-300 mb-2">Mitglied manuell anlegen / bearbeiten</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3 bg-slate-950/60 p-3 rounded-lg border border-slate-800">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-3 bg-slate-800 p-3 rounded-lg border border-slate-700">
                     <input type="text" id="addName" placeholder="Spielername" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
-                    <input type="number" id="addChestsPoints" placeholder="Truhen-Punkte (direkt)" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
+                    <input type="number" id="addChestsPoints" placeholder="Truhen-Punkte" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
                     <input type="number" id="addTower" placeholder="Turmbau-Punkte" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
                     <input type="number" id="addPower" placeholder="Aktuelle Macht" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
                     <input type="number" id="addPrevPower" placeholder="Vorherige Macht" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
+                    <input type="number" id="addActiveDays" placeholder="Tage (1-28)" value="28" min="1" max="28" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-amber-500">
                     <button onclick="addOrUpdateMember()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded px-3 py-1.5 text-xs transition cursor-pointer flex items-center justify-center gap-1">
                         <i class="fa-solid fa-save"></i> Speichern
-                    </button>
-                </div>
-            </div>
-
-            <!-- Manuelle Truhen-Eingabe (Typ + Level) -->
-            <div>
-                <h3 class="text-xs font-bold uppercase text-amber-300 mb-2">Einzelne Truhe einem Spieler zuweisen</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 bg-slate-950/60 p-3 rounded-lg border border-slate-800">
-                    <input type="text" id="chestPlayerName" placeholder="Spielername" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100">
-                    <input type="text" id="chestType" placeholder="Bezeichnung/Typ (z.B. Clan-Truhe)" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100">
-                    <input type="number" id="chestLevel" placeholder="Truhen-Level (z.B. 10)" class="bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100">
-                    <button onclick="addChestToPlayer()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold rounded px-3 py-1.5 text-xs transition cursor-pointer flex items-center justify-center gap-1">
-                        <i class="fa-solid fa-box-open"></i> Truhe Buchen
-                    </button>
-                </div>
-            </div>
-
-            <!-- Massen-Import von ausgelesenen KI-Daten -->
-            <div class="space-y-2">
-                <label class="text-xs text-slate-400 font-medium">Massen-Import aus KI / PDFs (Hier den kopierten KI-Text einfügen):</label>
-                <textarea id="bulkImportText" rows="3" placeholder="Format: Spielername, TruhenPunkte, Turmbau, Macht, VorherigeMacht" class="w-full bg-slate-950 border border-slate-800 rounded p-2.5 text-xs text-slate-300 focus:outline-none focus:border-amber-500 font-mono"></textarea>
-                <div class="flex gap-2">
-                    <button onclick="processBulkImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-3 py-1.5 rounded text-xs transition cursor-pointer">
-                        <i class="fa-solid fa-file-import"></i> Daten Importieren
-                    </button>
-                    <button onclick="clearAllData()" class="bg-red-900/80 hover:bg-red-800 text-red-200 font-semibold px-3 py-1.5 rounded text-xs transition cursor-pointer ml-auto">
-                        <i class="fa-solid fa-trash-can"></i> Alle Daten löschen
                     </button>
                 </div>
             </div>
@@ -91,61 +82,61 @@
 
         <!-- Metric Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
-                <span class="text-xs text-slate-400 uppercase">Aktive Mitglieder</span>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
+                <span class="text-xs text-slate-300 uppercase">Aktive Mitglieder</span>
                 <div class="text-2xl font-bold font-cinzel text-amber-300 mt-1" id="stat-members">0</div>
             </div>
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
-                <span class="text-xs text-slate-400 uppercase">Truhen-Punkte Gesamt</span>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
+                <span class="text-xs text-slate-300 uppercase">Truhen-Punkte Gesamt</span>
                 <div class="text-2xl font-bold font-cinzel text-amber-300 mt-1" id="stat-chests">0</div>
             </div>
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
-                <span class="text-xs text-slate-400 uppercase">Turmbau Gesamt</span>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
+                <span class="text-xs text-slate-300 uppercase">Turmbau Gesamt</span>
                 <div class="text-2xl font-bold font-cinzel text-amber-300 mt-1" id="stat-tower">0</div>
             </div>
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
-                <span class="text-xs text-slate-400 uppercase">Allianz Macht</span>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
+                <span class="text-xs text-slate-300 uppercase">Allianz Macht</span>
                 <div class="text-2xl font-bold font-cinzel text-amber-300 mt-1" id="stat-power">0</div>
             </div>
         </div>
 
         <!-- Charts -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
-                <h3 class="text-xs font-bold text-amber-400 uppercase mb-3"><i class="fa-solid fa-trophy"></i> Top 10 Punkte (Truhe + Turm)</h3>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
+                <h3 class="text-xs font-bold text-amber-400 uppercase mb-3"><i class="fa-solid fa-trophy"></i> Top 10 Gesamtpunkte</h3>
                 <div class="h-56"><canvas id="topChestsChart"></canvas></div>
             </div>
-            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-4">
-                <h3 class="text-xs font-bold text-amber-400 uppercase mb-3"><i class="fa-solid fa-chart-line"></i> Macht-Zuwachs ($\Delta$)</h3>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
+                <h3 class="text-xs font-bold text-amber-400 uppercase mb-3"><i class="fa-solid fa-chart-line"></i> Macht-Zuwachs</h3>
                 <div class="h-56"><canvas id="powerGrowthChart"></canvas></div>
             </div>
         </div>
 
         <!-- Haupttabelle -->
-        <div class="bg-slate-900/80 border border-slate-800 rounded-xl overflow-hidden">
-            <div class="p-4 border-b border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <input type="text" id="searchInput" placeholder="Mitglied suchen..." onkeyup="filterTable()" class="bg-slate-950 border border-slate-800 rounded px-3 py-1.5 text-xs text-slate-200 w-full sm:w-60">
+        <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow">
+            <div class="p-4 border-b border-slate-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <input type="text" id="searchInput" placeholder="Mitglied suchen..." onkeyup="filterTable()" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-slate-200 w-full sm:w-60">
                 <div class="flex gap-2">
-                    <button onclick="switchTab('chests')" id="btn-tab-chests" class="bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold">Truhen & Turm (Soll)</button>
-                    <button onclick="switchTab('power')" id="btn-tab-power" class="bg-slate-900 text-slate-400 border border-slate-800 px-3 py-1 rounded text-xs font-bold">Macht-Entwicklung</button>
+                    <button onclick="switchTab('chests')" id="btn-tab-chests" class="bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer">Truhen & Turm (Soll)</button>
+                    <button onclick="switchTab('power')" id="btn-tab-power" class="bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer">Macht-Entwicklung</button>
                 </div>
             </div>
 
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse" id="rosterTable">
                     <thead>
-                        <tr class="bg-slate-950 text-slate-400 text-xs uppercase border-b border-slate-800 font-cinzel">
+                        <tr class="bg-slate-850 bg-slate-900 text-slate-300 text-xs uppercase border-b border-slate-700 font-cinzel">
                             <th class="p-3">Rang / Name</th>
                             <th class="p-3 text-right data-col-chests">Truhen-Pkt</th>
                             <th class="p-3 text-right data-col-chests">Turmbau-Pkt</th>
                             <th class="p-3 text-right data-col-chests">Gesamt-Pkt</th>
-                            <th class="p-3 text-center data-col-chests">Soll-Status (Ziel: <span id="targetGoalLabel">50.000</span>)</th>
+                            <th class="p-3 text-center data-col-chests">Soll-Status (&lt;100M: 12.5k | &gt;100M: 15k / 28T)</th>
                             <th class="p-3 text-right data-col-power hidden">Macht</th>
                             <th class="p-3 text-right data-col-power hidden">Zuwachs</th>
                             <th class="p-3 text-center">Aktionen</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-slate-800/60 text-xs" id="tableBody"></tbody>
+                    <tbody class="divide-y divide-slate-700/60 text-xs" id="tableBody"></tbody>
                 </table>
             </div>
         </div>
@@ -153,8 +144,6 @@
     </main>
 
     <script>
-        // Hauptspeicher & LocalStorage
-        let targetGoal = 50000;
         let clanData = JSON.parse(localStorage.getItem('legio_clan_data')) || [];
         let activeTab = 'chests';
         let topChart = null, growthChart = null;
@@ -182,15 +171,13 @@
             let tower = parseInt(document.getElementById('addTower').value) || 0;
             let power = parseInt(document.getElementById('addPower').value) || 0;
             let prevPower = parseInt(document.getElementById('addPrevPower').value) || power;
+            let activeDays = parseInt(document.getElementById('addActiveDays').value) || 28;
 
             let idx = clanData.findIndex(m => m.name.toLowerCase() === name.toLowerCase());
             if(idx >= 0) {
-                clanData[idx].chests = chests;
-                clanData[idx].tower = tower;
-                clanData[idx].power = power;
-                clanData[idx].prevPower = prevPower;
+                clanData[idx] = { name, chests, tower, power, prevPower, activeDays };
             } else {
-                clanData.push({ name, chests, tower, power, prevPower, chestList: [] });
+                clanData.push({ name, chests, tower, power, prevPower, activeDays });
             }
 
             document.getElementById('addName').value = '';
@@ -198,32 +185,7 @@
             document.getElementById('addTower').value = '';
             document.getElementById('addPower').value = '';
             document.getElementById('addPrevPower').value = '';
-
-            saveData();
-        }
-
-        function addChestToPlayer() {
-            let name = document.getElementById('chestPlayerName').value.trim();
-            let type = document.getElementById('chestType').value.trim() || "Unbekannt";
-            let level = parseInt(document.getElementById('chestLevel').value) || 1;
-
-            if(!name) return alert("Bitte Spielername angeben!");
-
-            // Formel / Standard-Punktevergabe nach Level (Kann angepasst werden)
-            let pointsForChest = level * 100;
-
-            let idx = clanData.findIndex(m => m.name.toLowerCase() === name.toLowerCase());
-            if(idx < 0) {
-                clanData.push({ name: name, chests: pointsForChest, tower: 0, power: 0, prevPower: 0, chestList: [{ type, level, points: pointsForChest }] });
-            } else {
-                if(!clanData[idx].chestList) clanData[idx].chestList = [];
-                clanData[idx].chestList.push({ type, level, points: pointsForChest });
-                clanData[idx].chests += pointsForChest;
-            }
-
-            document.getElementById('chestPlayerName').value = '';
-            document.getElementById('chestType').value = '';
-            document.getElementById('chestLevel').value = '';
+            document.getElementById('addActiveDays').value = '28';
 
             saveData();
         }
@@ -242,6 +204,7 @@
             document.getElementById('addTower').value = m.tower;
             document.getElementById('addPower').value = m.power;
             document.getElementById('addPrevPower').value = m.prevPower;
+            document.getElementById('addActiveDays').value = m.activeDays !== undefined ? m.activeDays : 28;
             document.getElementById('adminPanel').classList.remove('hidden');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -255,9 +218,10 @@
 
         function processBulkImport() {
             let text = document.getElementById('bulkImportText').value.trim();
-            if(!text) return;
+            if(!text) return alert("Das Import-Feld ist leer!");
 
             let lines = text.split('\n');
+            let count = 0;
             lines.forEach(line => {
                 let parts = line.split(',').map(p => p.trim());
                 if(parts.length >= 2) {
@@ -266,55 +230,65 @@
                     let tower = parseInt(parts[2]) || 0;
                     let power = parseInt(parts[3]) || 0;
                     let prevPower = parseInt(parts[4]) || power;
+                    let activeDays = parts[5] ? parseInt(parts[5]) : 28;
 
                     let idx = clanData.findIndex(m => m.name.toLowerCase() === name.toLowerCase());
                     if(idx >= 0) {
-                        clanData[idx] = { name, chests, tower, power, prevPower };
+                        clanData[idx] = { name, chests, tower, power, prevPower, activeDays };
                     } else {
-                        clanData.push({ name, chests, tower, power, prevPower });
+                        clanData.push({ name, chests, tower, power, prevPower, activeDays });
                     }
+                    count++;
                 }
             });
 
             document.getElementById('bulkImportText').value = '';
             saveData();
+            alert(`${count} Datensätze erfolgreich importiert!`);
         }
 
         function renderMetrics() {
             document.getElementById('stat-members').innerText = clanData.length;
             document.getElementById('stat-chests').innerText = clanData.reduce((s, m) => s + m.chests, 0).toLocaleString('de-DE');
             document.getElementById('stat-tower').innerText = clanData.reduce((s, m) => s + m.tower, 0).toLocaleString('de-DE');
-            document.getElementById('stat-power').innerText = (clanData.reduce((s, m) => s + m.power, 0) / 1000000).toFixed(1) + "M";
+            let totalPower = clanData.reduce((s, m) => s + m.power, 0);
+            document.getElementById('stat-power').innerText = (totalPower / 1000000).toFixed(1) + "M";
         }
 
         function renderTable() {
             let tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
 
-            // Sortieren nach Gesamtpunkten (Truhe + Turm)
             let sorted = [...clanData].sort((a, b) => (b.chests + b.tower) - (a.chests + a.tower));
 
             sorted.forEach((member, index) => {
                 let row = document.createElement('tr');
                 let totalPoints = member.chests + member.tower;
-                let goalMet = totalPoints >= targetGoal;
+                
+                let activeDays = member.activeDays !== undefined ? member.activeDays : 28;
+                let baseGoal = member.power < 100000000 ? 12500 : 15000;
+                let individualGoal = Math.round((baseGoal / 28) * activeDays);
+                let goalMet = totalPoints >= individualGoal;
+
                 let statusBadge = goalMet 
-                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2 py-0.5 rounded-full font-medium">Erfüllt</span>`
-                    : `<span class="bg-red-950 text-red-300 border border-red-800/60 px-2 py-0.5 rounded-full font-medium">Offen</span>`;
+                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2.5 py-1 rounded-full font-medium" title="Soll: ${individualGoal.toLocaleString('de-DE')} Pkt (${activeDays}/28 Tage)">Erfüllt (${individualGoal.toLocaleString('de-DE')})</span>`
+                    : `<span class="bg-red-950 text-red-300 border border-red-800/60 px-2.5 py-1 rounded-full font-medium" title="Soll: ${individualGoal.toLocaleString('de-DE')} Pkt (${activeDays}/28 Tage)">Offen (${individualGoal.toLocaleString('de-DE')})</span>`;
 
                 let powerDelta = member.power - member.prevPower;
+                let deltaColor = powerDelta >= 0 ? "text-emerald-400" : "text-red-400";
+                let deltaSign = powerDelta > 0 ? "+" : "";
 
                 row.innerHTML = `
-                    <td class="p-3 font-medium">#${index + 1} ${member.name}</td>
+                    <td class="p-3 font-medium">#${index + 1} ${member.name} ${activeDays < 28 ? `<span class="text-amber-400 text-[10px] ml-1">(${activeDays}/28 T.)</span>` : ''}</td>
                     <td class="p-3 text-right text-amber-300 font-bold data-col-chests">${member.chests.toLocaleString('de-DE')}</td>
-                    <td class="p-3 text-right text-slate-300 data-col-chests">${member.tower.toLocaleString('de-DE')}</td>
+                    <td class="p-3 text-right text-slate-200 data-col-chests">${member.tower.toLocaleString('de-DE')}</td>
                     <td class="p-3 text-right font-bold text-amber-400 data-col-chests">${totalPoints.toLocaleString('de-DE')}</td>
                     <td class="p-3 text-center data-col-chests">${statusBadge}</td>
                     <td class="p-3 text-right data-col-power hidden">${(member.power / 1000000).toFixed(2)}M</td>
-                    <td class="p-3 text-right text-emerald-400 font-bold data-col-power hidden">+${(powerDelta / 1000).toLocaleString('de-DE')}k</td>
+                    <td class="p-3 text-right ${deltaColor} font-bold data-col-power hidden">${deltaSign}${(powerDelta / 1000).toLocaleString('de-DE')}k</td>
                     <td class="p-3 text-center flex justify-center gap-2">
-                        <button onclick="editMember(${clanData.indexOf(member)})" class="text-amber-400 hover:text-amber-200 cursor-pointer"><i class="fa-solid fa-pen"></i></button>
-                        <button onclick="deleteMember(${clanData.indexOf(member)})" class="text-red-400 hover:text-red-200 cursor-pointer"><i class="fa-solid fa-trash"></i></button>
+                        <button onclick="editMember(${clanData.indexOf(member)})" class="text-amber-400 hover:text-amber-200 cursor-pointer" title="Bearbeiten"><i class="fa-solid fa-pen"></i></button>
+                        <button onclick="deleteMember(${clanData.indexOf(member)})" class="text-red-400 hover:text-red-200 cursor-pointer" title="Löschen"><i class="fa-solid fa-trash"></i></button>
                     </td>
                 `;
                 tbody.appendChild(row);
@@ -328,11 +302,11 @@
             let btnPower = document.getElementById('btn-tab-power');
 
             if(tab === 'chests') {
-                btnChests.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold";
-                btnPower.className = "bg-slate-900 text-slate-400 border border-slate-800 px-3 py-1 rounded text-xs font-bold";
+                btnChests.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer";
+                btnPower.className = "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
             } else {
-                btnPower.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold";
-                btnChests.className = "bg-slate-900 text-slate-400 border border-slate-800 px-3 py-1 rounded text-xs font-bold";
+                btnPower.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer";
+                btnChests.className = "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
             }
             toggleColumns();
         }
