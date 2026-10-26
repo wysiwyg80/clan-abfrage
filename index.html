@@ -631,11 +631,13 @@
                 let activeDays = member.activeDays !== undefined ? member.activeDays : 28;
                 let baseGoal = member.power < 100000000 ? 12500 : 15000;
                 let individualGoal = Math.round((baseGoal / 28) * activeDays);
+                
                 let goalMet = pts.total >= individualGoal;
+                let difference = individualGoal - pts.total;
 
                 let statusBadge = goalMet 
-                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2.5 py-1 rounded-full font-medium" title="Soll: ${individualGoal.toLocaleString('de-DE')} Pkt">Erfüllt (${individualGoal.toLocaleString('de-DE')})</span>`
-                    : `<span class="bg-red-950 text-red-300 border border-red-800/60 px-2.5 py-1 rounded-full font-medium" title="Soll: ${individualGoal.toLocaleString('de-DE')} Pkt">Offen (${individualGoal.toLocaleString('de-DE')})</span>`;
+                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2.5 py-1 rounded-full font-medium" title="Ziel erreicht">+${Math.abs(difference).toLocaleString('de-DE')} Pkt Puffer</span>`
+                    : `<span class="bg-red-950 text-red-300 border border-red-800/60 px-2.5 py-1 rounded-full font-medium" title="Ziel: ${individualGoal.toLocaleString('de-DE')} Pkt">Fehlen: ${difference.toLocaleString('de-DE')} Pkt</span>`;
 
                 let powerDelta = member.power - member.prevPower;
                 let deltaColor = powerDelta >= 0 ? "text-emerald-400" : "text-red-400";
