@@ -356,7 +356,7 @@
     },
     {
       "name": "Ria",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 751848,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:34:53.413Z"
+  "lastUpdated": "2026-10-26T14:35:15.906Z"
 }
