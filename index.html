@@ -143,7 +143,12 @@
         <!-- Haupttabelle -->
         <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow">
             <div class="p-4 border-b border-slate-700 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <input type="text" id="searchInput" placeholder="Mitglied suchen..." onkeyup="filterTable()" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-slate-200 w-full sm:w-60">
+                <div class="flex items-center gap-2 w-full sm:w-auto">
+                    <input type="text" id="searchInput" placeholder="Mitglied suchen..." onkeyup="filterTable()" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-slate-200 w-full sm:w-60">
+                    <button onclick="openAddModal()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-3 py-1.5 rounded text-xs transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-user-plus"></i> + Mitglied hinzufügen
+                    </button>
+                </div>
                 <div class="flex gap-2">
                     <button onclick="switchTab('chests')" id="btn-tab-chests" class="bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer">Punkte & Soll</button>
                     <button onclick="switchTab('power')" id="btn-tab-power" class="bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer">Macht-Entwicklung</button>
@@ -171,11 +176,11 @@
 
     </main>
 
-    <!-- MODAL FÜR MANUELLE BEARBEITUNG -->
+    <!-- MODAL FÜR HINZUFÜGEN / BEARBEITEN -->
     <div id="editModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-md space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
-                <h3 class="font-cinzel font-bold text-amber-400 text-base flex items-center gap-2">
+                <h3 id="modalTitle" class="font-cinzel font-bold text-amber-400 text-base flex items-center gap-2">
                     <i class="fa-solid fa-user-pen"></i> Mitglied bearbeiten
                 </h3>
                 <button onclick="closeEditModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
@@ -443,10 +448,22 @@
             }
         }
 
-        // --- MANUELLE BEARBEITUNG ---
+        // --- MANUELLES HINZUFÜGEN & BEARBEITEN ---
+        function openAddModal() {
+            document.getElementById('editIndex').value = "";
+            document.getElementById('modalTitle').innerHTML = '<i class="fa-solid fa-user-plus"></i> Neues Mitglied hinzufügen';
+            document.getElementById('editName').value = "";
+            document.getElementById('editRank').value = "Soldat";
+            document.getElementById('editPower').value = "";
+            document.getElementById('editTower').value = "";
+            document.getElementById('editActiveDays').value = 28;
+            document.getElementById('editModal').classList.remove('hidden');
+        }
+
         function openEditModal(index) {
             let m = clanData[index];
             document.getElementById('editIndex').value = index;
+            document.getElementById('modalTitle').innerHTML = '<i class="fa-solid fa-user-pen"></i> Mitglied bearbeiten';
             document.getElementById('editName').value = m.name;
             document.getElementById('editRank').value = m.rank || 'Soldat';
             document.getElementById('editPower').value = m.power || 0;
@@ -461,17 +478,33 @@
 
         function saveMemberEdit() {
             let idx = document.getElementById('editIndex').value;
-            if(idx !== "") {
-                clanData[idx].name = document.getElementById('editName').value.trim();
-                clanData[idx].rank = document.getElementById('editRank').value;
-                clanData[idx].power = parseInt(document.getElementById('editPower').value) || 0;
-                clanData[idx].tower = parseInt(document.getElementById('editTower').value) || 0;
-                clanData[idx].activeDays = parseInt(document.getElementById('editActiveDays').value) || 28;
-                
-                closeEditModal();
-                saveData();
-                syncToGitHub();
+            let nameVal = document.getElementById('editName').value.trim();
+            if(!nameVal) return alert("Bitte einen Namen angeben!");
+
+            let memberObj = {
+                name: nameVal,
+                rank: document.getElementById('editRank').value,
+                chests: {},
+                tower: parseInt(document.getElementById('editTower').value) || 0,
+                power: parseInt(document.getElementById('editPower').value) || 0,
+                prevPower: parseInt(document.getElementById('editPower').value) || 0,
+                activeDays: parseInt(document.getElementById('editActiveDays').value) || 28
+            };
+
+            if(idx === "") {
+                // Neu hinzufügen
+                clanData.push(memberObj);
+            } else {
+                // Bestehenden behalten (Truhen/alte Werte übernehmen, falls vorhanden)
+                let existing = clanData[idx];
+                memberObj.chests = existing.chests || {};
+                memberObj.prevPower = existing.prevPower || memberObj.power;
+                clanData[idx] = memberObj;
             }
+            
+            closeEditModal();
+            saveData();
+            syncToGitHub();
         }
 
         function clearAllData() {
@@ -511,144 +544,4 @@
         function renderMetrics() {
             document.getElementById('stat-members').innerText = clanData.length;
             let totalChests = clanData.reduce((s, m) => s + getMemberPoints(m).chestsPts, 0);
-            let totalTower = clanData.reduce((s, m) => s + getMemberPoints(m).towerPts, 0);
-            document.getElementById('stat-chests').innerText = totalChests.toLocaleString('de-DE');
-            document.getElementById('stat-tower').innerText = totalTower.toLocaleString('de-DE');
-            let totalPower = clanData.reduce((s, m) => s + m.power, 0);
-            document.getElementById('stat-power').innerText = (totalPower / 1000000).toFixed(1) + "M";
-        }
-
-        function getRankBadge(rank) {
-            let r = rank || 'Soldat';
-            let colorMap = {
-                'Anführer': 'bg-red-900/80 text-amber-300 border-red-700',
-                'Vorgesetzter': 'bg-amber-900/80 text-amber-300 border-amber-700',
-                'Offizier': 'bg-indigo-900/80 text-indigo-200 border-indigo-700',
-                'Veteran': 'bg-emerald-900/80 text-emerald-200 border-emerald-700',
-                'Soldat': 'bg-slate-800 text-slate-300 border-slate-700'
-            };
-            let cls = colorMap[r] || colorMap['Soldat'];
-            return `<span class="${cls} border px-2 py-0.5 rounded text-[10px] font-bold font-cinzel mr-1.5 uppercase tracking-wider">${r}</span>`;
-        }
-
-        function renderTable() {
-            let tbody = document.getElementById('tableBody');
-            tbody.innerHTML = '';
-
-            let sorted = [...clanData].sort((a, b) => getMemberPoints(b).total - getMemberPoints(a).total);
-
-            sorted.forEach((member, index) => {
-                let originalIndex = clanData.indexOf(member);
-                let row = document.createElement('tr');
-                let pts = getMemberPoints(member);
-
-                let activeDays = member.activeDays !== undefined ? member.activeDays : 28;
-                let baseGoal = member.power < 100000000 ? 12500 : 15000;
-                let individualGoal = Math.round((baseGoal / 28) * activeDays);
-                let goalMet = pts.total >= individualGoal;
-
-                let statusBadge = goalMet 
-                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2.5 py-1 rounded-full font-medium" title="Soll: ${individualGoal.toLocaleString('de-DE')} Pkt">Erfüllt (${individualGoal.toLocaleString('de-DE')})</span>`
-                    : `<span class="bg-red-950 text-red-300 border border-red-800/60 px-2.5 py-1 rounded-full font-medium" title="Soll: ${individualGoal.toLocaleString('de-DE')} Pkt">Offen (${individualGoal.toLocaleString('de-DE')})</span>`;
-
-                let powerDelta = member.power - member.prevPower;
-                let deltaColor = powerDelta >= 0 ? "text-emerald-400" : "text-red-400";
-                let deltaSign = powerDelta > 0 ? "+" : "";
-
-                row.innerHTML = `
-                    <td class="p-3 font-medium flex items-center">
-                        <span class="text-slate-400 mr-2 text-[10px]">#${index + 1}</span>
-                        ${getRankBadge(member.rank)}
-                        <span>${member.name}</span>
-                        ${activeDays < 28 ? `<span class="text-amber-400 text-[10px] ml-1">(${activeDays}/28 T.)</span>` : ''}
-                    </td>
-                    <td class="p-3 text-right data-col-chests">
-                        <div class="font-bold text-amber-300">${pts.chestsPts.toLocaleString('de-DE')} Pkt</div>
-                        <div class="text-[10px] text-slate-400 truncate max-w-xs" title="${pts.summary}">${pts.summary}</div>
-                    </td>
-                    <td class="p-3 text-right text-slate-200 data-col-chests">${pts.towerPts.toLocaleString('de-DE')} <span class="text-[9px] text-slate-400">(${member.tower||0}x)</span></td>
-                    <td class="p-3 text-right font-bold text-amber-400 data-col-chests">${pts.total.toLocaleString('de-DE')}</td>
-                    <td class="p-3 text-center data-col-chests">${statusBadge}</td>
-                    <td class="p-3 text-right data-col-power hidden">${(member.power / 1000000).toFixed(2)}M</td>
-                    <td class="p-3 text-right ${deltaColor} font-bold data-col-power hidden">${deltaSign}${(powerDelta / 1000).toLocaleString('de-DE')}k</td>
-                    <td class="p-3 text-center space-x-2">
-                        <button onclick="openEditModal(${originalIndex})" class="text-amber-400 hover:text-amber-200 cursor-pointer" title="Bearbeiten"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button onclick="deleteMember(${originalIndex})" class="text-red-400 hover:text-red-200 cursor-pointer" title="Löschen"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                `;
-                tbody.appendChild(row);
-            });
-            toggleColumns();
-        }
-
-        function switchTab(tab) {
-            activeTab = tab;
-            let btnChests = document.getElementById('btn-tab-chests');
-            let btnPower = document.getElementById('btn-tab-power');
-
-            if(tab === 'chests') {
-                btnChests.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer";
-                btnPower.className = "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
-            } else {
-                btnPower.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer";
-                btnChests.className = "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
-            }
-            toggleColumns();
-        }
-
-        function toggleColumns() {
-            let chestCols = document.querySelectorAll('.data-col-chests');
-            let powerCols = document.querySelectorAll('.data-col-power');
-            if(activeTab === 'chests') {
-                chestCols.forEach(el => el.classList.remove('hidden'));
-                powerCols.forEach(el => el.classList.add('hidden'));
-            } else {
-                chestCols.forEach(el => el.classList.add('hidden'));
-                powerCols.forEach(el => el.classList.remove('hidden'));
-            }
-        }
-
-        function renderCharts() {
-            let sorted = [...clanData].sort((a, b) => getMemberPoints(b).total - getMemberPoints(a).total).slice(0, 10);
-            
-            let ctxTop = document.getElementById('topChestsChart').getContext('2d');
-            if(topChart) topChart.destroy();
-            topChart = new Chart(ctxTop, {
-                type: 'bar',
-                data: {
-                    labels: sorted.map(m => m.name),
-                    datasets: [{ label: 'Gesamtpunkte', data: sorted.map(m => getMemberPoints(m).total), backgroundColor: '#d97706' }]
-                },
-                options: { responsive: true, maintainAspectRatio: false }
-            });
-
-            let ctxGrowth = document.getElementById('powerGrowthChart').getContext('2d');
-            if(growthChart) growthChart.destroy();
-            growthChart = new Chart(ctxGrowth, {
-                type: 'bar',
-                data: {
-                    labels: sorted.map(m => m.name),
-                    datasets: [{ label: 'Macht-Zuwachs', data: sorted.map(m => m.power - m.prevPower), backgroundColor: '#059669' }]
-                },
-                options: { responsive: true, maintainAspectRatio: false }
-            });
-        }
-
-        function filterTable() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let rows = document.getElementById('tableBody').getElementsByTagName('tr');
-            for (let i = 0; i < rows.length; i++) {
-                let nameCell = rows[i].getElementsByTagName('td')[0];
-                if (nameCell) {
-                    rows[i].style.display = (nameCell.textContent || nameCell.innerText).toLowerCase().indexOf(input) > -1 ? "" : "none";
-                }
-            }
-        }
-
-        window.onload = async () => {
-            await loadFromGitHub();
-            refreshUI();
-        };
-    </script>
-</body>
-</html>
+            let totalTower = clanData.
