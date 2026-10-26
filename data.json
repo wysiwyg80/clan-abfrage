@@ -158,7 +158,7 @@
     },
     {
       "name": "Ajax",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 217496435,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:27:10.092Z"
+  "lastUpdated": "2026-10-26T14:27:37.956Z"
 }
