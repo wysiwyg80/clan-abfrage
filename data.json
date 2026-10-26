@@ -248,7 +248,7 @@
     },
     {
       "name": "eroi",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 175490091,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:34:43.294Z"
+  "lastUpdated": "2026-10-26T14:34:53.413Z"
 }
