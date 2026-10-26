@@ -560,16 +560,7 @@
       "power": 620996471,
       "prevPower": 620996471,
       "activeDays": 28
-    },
-    {
-      "name": "Sinem",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 1,
-      "power": 0,
-      "prevPower": 0,
-      "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:37:47.428Z"
+  "lastUpdated": "2026-10-26T23:19:09.805Z"
 }
