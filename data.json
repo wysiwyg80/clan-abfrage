@@ -455,7 +455,7 @@
     },
     {
       "name": "Frederico Freitas",
-      "rank": "Offizier",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 125917166,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:27:37.956Z"
+  "lastUpdated": "2026-10-26T14:30:04.502Z"
 }
