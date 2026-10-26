@@ -266,7 +266,7 @@
     },
     {
       "name": "invisible",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 154067470,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:33:52.062Z"
+  "lastUpdated": "2026-10-26T14:33:59.118Z"
 }
