@@ -176,7 +176,7 @@
     },
     {
       "name": "BELEN",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 209779281,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:31:31.743Z"
+  "lastUpdated": "2026-10-26T14:31:41.274Z"
 }
