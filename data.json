@@ -320,7 +320,7 @@
     },
     {
       "name": "Burigas",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 81059435,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:33:02.414Z"
+  "lastUpdated": "2026-10-26T14:33:11.194Z"
 }
