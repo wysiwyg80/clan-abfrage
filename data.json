@@ -52,14 +52,6 @@
       "activeDays": 28
     },
     {
-      "name": "Mojo",
-      "chests": {},
-      "tower": 0,
-      "power": 302960645,
-      "prevPower": 302960645,
-      "activeDays": 28
-    },
-    {
       "name": "Biin",
       "chests": {},
       "tower": 0,
@@ -516,5 +508,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T13:46:36.898Z"
+  "lastUpdated": "2026-10-26T13:47:16.288Z"
 }
