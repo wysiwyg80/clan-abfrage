@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BAD LegioXEquentris - Dynamisches Allianz Dashboard</title>
+    <title>BAD LegioXEquentris - GitHub API Synchronisiertes Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,12 +24,12 @@
                 </div>
                 <div>
                     <h1 class="text-xl sm:text-2xl font-cinzel font-bold text-amber-400">BAD LegioXEquentris</h1>
-                    <p class="text-xs text-slate-300 tracking-wide uppercase">Allianz Taktik & Dynamische Truhen-Verwaltung</p>
+                    <p class="text-xs text-slate-300 tracking-wide uppercase">Allianz Taktik & GitHub API Cloud Dashboard</p>
                 </div>
             </div>
             <div class="flex items-center gap-2">
                 <button onclick="toggleAdminPanel()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer">
-                    <i class="fa-solid fa-sliders"></i> Admin & Truhen-Punkte
+                    <i class="fa-solid fa-sliders"></i> Admin & GitHub API
                 </button>
             </div>
         </div>
@@ -41,26 +41,53 @@
         <div id="adminPanel" class="hidden bg-slate-900 border border-amber-500/40 rounded-xl p-5 shadow-2xl space-y-6">
             <div class="flex justify-between items-center border-b border-slate-700 pb-3">
                 <h2 class="font-cinzel font-bold text-lg text-amber-400 flex items-center gap-2">
-                    <i class="fa-solid fa-gears"></i> Admin-Verwaltung & Erfasset Truhen-Kategorien
+                    <i class="fa-solid fa-gears"></i> Admin-Verwaltung & GitHub API Cloud
                 </h2>
                 <button onclick="toggleAdminPanel()" class="text-slate-300 hover:text-white text-sm cursor-pointer"><i class="fa-solid fa-xmark"></i> Schließen</button>
+            </div>
+
+            <!-- GITHUB API SYNC EINSTELLUNGEN -->
+            <div class="bg-slate-800 border border-indigo-500/30 rounded-xl p-4 space-y-3">
+                <h3 class="text-xs font-bold uppercase text-indigo-400 flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i> GitHub API Verbindung (Cloud Sync)
+                </h3>
+                <p class="text-xs text-slate-300">Trage hier deine Repository-Daten ein, damit Änderungen direkt per GitHub-API in deine <code class="text-amber-300">data.json</code> geschrieben werden:</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Repository (owner/repo):</label>
+                        <input type="text" id="ghRepo" placeholder="z.B. MeinName/total-battle" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Branch:</label>
+                        <input type="text" id="ghBranch" value="main" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Personal Access Token (PAT):</label>
+                        <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxx" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-indigo-500">
+                    </div>
+                </div>
+                <div class="flex gap-2 pt-1">
+                    <button onclick="saveGitHubSettings()" class="bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded transition cursor-pointer">
+                        Zugangsdaten speichern
+                    </button>
+                    <button onclick="syncToGitHub()" class="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-4 py-1.5 rounded transition cursor-pointer flex items-center gap-1.5 ml-auto">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Mit GitHub synchronisieren (Push)
+                    </button>
+                </div>
             </div>
 
             <!-- DYNAMISCHE TRUHEN-KATEGORIEN & PUNKTWERTE -->
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <div class="flex justify-between items-center">
                     <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
-                        <i class="fa-solid fa-tags"></i> Erfasste Truhen-Bezeichnungen & Punktwerte
+                        <i class="fa-solid fa-tags"></i> Truhen-Bezeichnungen & Punktwerte
                     </h3>
                     <button onclick="addNewChestTypePrompt()" class="bg-amber-600/80 hover:bg-amber-500 text-slate-950 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer">
-                        + Neue Truhen-Art manuell hinzufügen
+                        + Neue Truhen-Art hinzufügen
                     </button>
                 </div>
-                <p class="text-xs text-slate-300">Alle in PDFs oder Importen erfassten Truhen-Bezeichnungen tauchen hier automatisch auf. Gib hier den Punktwert pro Truhe an:</p>
-                
-                <div id="chestTypesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                    <!-- Wird dynamisch aus JS befüllt -->
-                </div>
+                <div id="chestTypesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"></div>
             </div>
 
             <!-- MASSEN-IMPORT -->
@@ -68,11 +95,11 @@
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-file-import"></i> JSON / KI Massen-Import
                 </h3>
-                <p class="text-xs text-slate-300">Füge hier die ausgewerteten Daten ein (JSON-Format verarbeitet alle Truhen-Arten automatisch):</p>
-                <textarea id="bulkImportText" rows="4" placeholder='[{"name":"SirLancelot","chests":{"Krypta-Truhe Stufe 1":10,"Monstertruhe":5},"tower":100,"power":125000000,"prevPower":120000000,"activeDays":28}]' class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
+                <p class="text-xs text-slate-300">Füge hier die ausgewerteten Daten ein:</p>
+                <textarea id="bulkImportText" rows="4" placeholder='[{"name":"SirLancelot","chests":{"Krypta-Truhe":10,"Monster-Truhe":5},"tower":100,"power":125000000,"prevPower":120000000,"activeDays":28}]' class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
                 <div class="flex gap-2">
                     <button onclick="processJSONImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
-                        <i class="fa-solid fa-upload"></i> Daten Importieren
+                        <i class="fa-solid fa-upload"></i> Daten Importieren & Sync
                     </button>
                     <button onclick="clearAllData()" class="bg-red-900/80 hover:bg-red-800 text-red-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer ml-auto flex items-center gap-1.5">
                         <i class="fa-solid fa-trash-can"></i> Alle Daten löschen
@@ -146,12 +173,16 @@
 
     <script>
         let clanData = JSON.parse(localStorage.getItem('legio_clan_data')) || [];
-        // Map von Truhen-Namen zu ihren Punktwerten: z.B. {"Krypta Stufe 1": 10, "Drachen-Truhe": 50}
         let chestTypeValues = JSON.parse(localStorage.getItem('legio_chest_type_values')) || {
             "Krypta-Truhe": 10,
             "Monster-Truhe": 5,
             "Turmbau": 1
         };
+
+        // GitHub API Config State
+        let ghRepo = localStorage.getItem('legio_gh_repo') || '';
+        let ghBranch = localStorage.getItem('legio_gh_branch') || 'main';
+        let ghToken = localStorage.getItem('legio_gh_token') || '';
 
         let activeTab = 'chests';
         let topChart = null, growthChart = null;
@@ -162,7 +193,100 @@
             refreshUI();
         }
 
+        function saveGitHubSettings() {
+            ghRepo = document.getElementById('ghRepo').value.trim();
+            ghBranch = document.getElementById('ghBranch').value.trim() || 'main';
+            ghToken = document.getElementById('ghToken').value.trim();
+            
+            localStorage.setItem('legio_gh_repo', ghRepo);
+            localStorage.setItem('legio_gh_branch', ghBranch);
+            localStorage.setItem('legio_gh_token', ghToken);
+            alert("GitHub-Einstellungen erfolgreich gespeichert!");
+        }
+
+        async function syncToGitHub() {
+            if(!ghRepo || !ghToken) {
+                ghRepo = document.getElementById('ghRepo').value.trim();
+                ghBranch = document.getElementById('ghBranch').value.trim() || 'main';
+                ghToken = document.getElementById('ghToken').value.trim();
+            }
+
+            if(!ghRepo || !ghToken) {
+                return alert("Bitte zuerst Repository (owner/repo) und Personal Access Token eingeben!");
+            }
+
+            let payload = {
+                chestTypeValues: chestTypeValues,
+                clanData: clanData,
+                lastUpdated: new Date().toISOString()
+            };
+
+            let jsonContent = JSON.stringify(payload, null, 2);
+            let filePath = "data.json";
+            let apiUrl = `https://api.github.com/repos/${ghRepo}/contents/${filePath}`;
+
+            try {
+                let sha = null;
+                let getResp = await fetch(apiUrl, {
+                    headers: { 'Authorization': `token ${ghToken}`, 'Accept': 'application/vnd.github.v3+json' }
+                });
+                if(getResp.ok) {
+                    let fileData = await getResp.json();
+                    sha = fileData.sha;
+                }
+
+                let putBody = {
+                    message: "Update alliance dashboard data via GitHub API sync",
+                    content: btoa(unescape(encodeURIComponent(jsonContent))),
+                    branch: ghBranch
+                };
+                if(sha) putBody.sha = sha;
+
+                let putResp = await fetch(apiUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${ghToken}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(putBody)
+                });
+
+                if(putResp.ok) {
+                    alert("Erfolgreich mit GitHub synchronisiert! data.json wurde aktualisiert.");
+                } else {
+                    let err = await putResp.json();
+                    alert("Fehler beim Sync: " + (err.message || putResp.statusText));
+                }
+            } catch(e) {
+                alert("Netzwerkfehler bei GitHub API: " + e.message);
+            }
+        }
+
+        async function loadFromGitHub() {
+            if(!ghRepo) return;
+            try {
+                let apiUrl = `https://api.github.com/repos/${ghRepo}/contents/data.json?ref=${ghBranch}`;
+                let resp = await fetch(apiUrl, {
+                    headers: { 'Accept': 'application/vnd.github.v3+json' }
+                });
+                if(resp.ok) {
+                    let fileData = await resp.json();
+                    let decoded = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+                    if(decoded.clanData) clanData = decoded.clanData;
+                    if(decoded.chestTypeValues) chestTypeValues = decoded.chestTypeValues;
+                    refreshUI();
+                }
+            } catch(e) {
+                console.log("Konnte data.json nicht automatisch laden (evtl. noch nicht vorhanden).");
+            }
+        }
+
         function refreshUI() {
+            document.getElementById('ghRepo').value = ghRepo;
+            document.getElementById('ghBranch').value = ghBranch;
+            document.getElementById('ghToken').value = ghToken;
+
             renderChestTypeConfig();
             renderMetrics();
             renderTable();
@@ -200,14 +324,14 @@
         }
 
         function removeChestType(typeName) {
-            if(confirm(`Truhen-Typ "${typeName}" wirklich aus der Konfiguration entfernen?`)) {
+            if(confirm(`Truhen-Typ "${typeName}" wirklich entfernen?`)) {
                 delete chestTypeValues[typeName];
                 saveData();
             }
         }
 
         function addNewChestTypePrompt() {
-            let name = prompt("Name der neuen Truhen-Art eingeben (z. B. Drachen-Truhe):");
+            let name = prompt("Name der neuen Truhen-Art eingeben:");
             if(name && name.trim()) {
                 let trimmed = name.trim();
                 if(!chestTypeValues[trimmed]) {
@@ -230,12 +354,10 @@
 
                 imported.forEach(item => {
                     if(!item.name) return;
-                    
-                    // Prüfen, ob neue Truhen-Typen enthalten sind & zur Auswahl hinzufügen
                     if(item.chests && typeof item.chests === 'object') {
                         Object.keys(item.chests).forEach(cName => {
                             if(chestTypeValues[cName] === undefined) {
-                                chestTypeValues[cName] = 10; // Standardwert 10 Pkt für neu entdeckte Truhe
+                                chestTypeValues[cName] = 10;
                             }
                         });
                     }
@@ -243,7 +365,7 @@
                     let idx = clanData.findIndex(m => m.name.toLowerCase() === item.name.toLowerCase());
                     let memberObj = {
                         name: item.name,
-                        chests: item.chests || {}, // Key-Value z.B. {"Krypta": 5, "Monster": 2}
+                        chests: item.chests || {},
                         tower: item.tower || 0,
                         power: item.power || 0,
                         prevPower: item.prevPower || item.power || 0,
@@ -259,9 +381,9 @@
 
                 document.getElementById('bulkImportText').value = '';
                 saveData();
-                alert("Import erfolgreich! Neue Truhen-Arten wurden automatisch zur Auswahl hinzugefügt.");
+                syncToGitHub();
             } catch(e) {
-                alert("Fehler beim Parsen der Daten: " + e.message);
+                alert("Fehler beim Parsen: " + e.message);
             }
         }
 
@@ -269,6 +391,7 @@
             if(confirm(`Möchtest du "${clanData[index].name}" wirklich löschen?`)) {
                 clanData.splice(index, 1);
                 saveData();
+                syncToGitHub();
             }
         }
 
@@ -276,6 +399,7 @@
             if(confirm("WIRKLICH ALLE DATEN LÖSCHEN?")) {
                 clanData = [];
                 saveData();
+                syncToGitHub();
             }
         }
 
@@ -422,7 +546,10 @@
             }
         }
 
-        window.onload = refreshUI;
+        window.onload = async () => {
+            await loadFromGitHub();
+            refreshUI();
+        };
     </script>
 </body>
 </html>
