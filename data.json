@@ -88,7 +88,7 @@
       "name": "Auzar",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
       "power": 293537875,
       "prevPower": 293537875,
       "activeDays": 28
@@ -97,7 +97,7 @@
       "name": "Elginan",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
       "power": 293038296,
       "prevPower": 293038296,
       "activeDays": 28
@@ -457,7 +457,7 @@
       "name": "Goll",
       "rank": "Offizier",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
       "power": 352669156,
       "prevPower": 352669156,
       "activeDays": 28
@@ -502,7 +502,7 @@
       "name": "Son Of Algéri",
       "rank": "Offizier",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
       "power": 182695460,
       "prevPower": 182695460,
       "activeDays": 28
@@ -511,7 +511,7 @@
       "name": "PABLUS",
       "rank": "Offizier",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
       "power": 104122751,
       "prevPower": 104122751,
       "activeDays": 28
@@ -556,9 +556,18 @@
       "name": "Sir Charles",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
       "power": 620996471,
       "prevPower": 620996471,
+      "activeDays": 28
+    },
+    {
+      "name": "Sinem",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 1,
+      "power": 0,
+      "prevPower": 0,
       "activeDays": 28
     }
   ],
