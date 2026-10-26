@@ -143,12 +143,7 @@
         <!-- Haupttabelle -->
         <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow">
             <div class="p-4 border-b border-slate-700 flex flex-col sm:flex-row justify-between items-center gap-4">
-                <div class="flex items-center gap-2 w-full sm:w-auto">
-                    <input type="text" id="searchInput" placeholder="Mitglied suchen..." onkeyup="filterTable()" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-slate-200 w-full sm:w-60">
-                    <button onclick="openAddModal()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-3 py-1.5 rounded text-xs transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
-                        <i class="fa-solid fa-user-plus"></i> + Mitglied hinzufügen
-                    </button>
-                </div>
+                <input type="text" id="searchInput" placeholder="Mitglied suchen..." onkeyup="filterTable()" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-slate-200 w-full sm:w-60">
                 <div class="flex gap-2">
                     <button onclick="switchTab('chests')" id="btn-tab-chests" class="bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer">Punkte & Soll</button>
                     <button onclick="switchTab('power')" id="btn-tab-power" class="bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer">Macht-Entwicklung</button>
@@ -176,11 +171,11 @@
 
     </main>
 
-    <!-- MODAL FÜR HINZUFÜGEN / BEARBEITEN -->
+    <!-- MODAL FÜR MANUELLE BEARBEITUNG -->
     <div id="editModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-md space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
-                <h3 id="modalTitle" class="font-cinzel font-bold text-amber-400 text-base flex items-center gap-2">
+                <h3 class="font-cinzel font-bold text-amber-400 text-base flex items-center gap-2">
                     <i class="fa-solid fa-user-pen"></i> Mitglied bearbeiten
                 </h3>
                 <button onclick="closeEditModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
@@ -448,22 +443,10 @@
             }
         }
 
-        // --- MANUELLES HINZUFÜGEN & BEARBEITEN ---
-        function openAddModal() {
-            document.getElementById('editIndex').value = "";
-            document.getElementById('modalTitle').innerHTML = '<i class="fa-solid fa-user-plus"></i> Neues Mitglied hinzufügen';
-            document.getElementById('editName').value = "";
-            document.getElementById('editRank').value = "Soldat";
-            document.getElementById('editPower').value = "";
-            document.getElementById('editTower').value = "";
-            document.getElementById('editActiveDays').value = 28;
-            document.getElementById('editModal').classList.remove('hidden');
-        }
-
+        // --- MANUELLE BEARBEITUNG ---
         function openEditModal(index) {
             let m = clanData[index];
             document.getElementById('editIndex').value = index;
-            document.getElementById('modalTitle').innerHTML = '<i class="fa-solid fa-user-pen"></i> Mitglied bearbeiten';
             document.getElementById('editName').value = m.name;
             document.getElementById('editRank').value = m.rank || 'Soldat';
             document.getElementById('editPower').value = m.power || 0;
@@ -478,33 +461,17 @@
 
         function saveMemberEdit() {
             let idx = document.getElementById('editIndex').value;
-            let nameVal = document.getElementById('editName').value.trim();
-            if(!nameVal) return alert("Bitte einen Namen angeben!");
-
-            let memberObj = {
-                name: nameVal,
-                rank: document.getElementById('editRank').value,
-                chests: {},
-                tower: parseInt(document.getElementById('editTower').value) || 0,
-                power: parseInt(document.getElementById('editPower').value) || 0,
-                prevPower: parseInt(document.getElementById('editPower').value) || 0,
-                activeDays: parseInt(document.getElementById('editActiveDays').value) || 28
-            };
-
-            if(idx === "") {
-                // Neu hinzufügen
-                clanData.push(memberObj);
-            } else {
-                // Bestehenden behalten (Truhen/alte Werte übernehmen, falls vorhanden)
-                let existing = clanData[idx];
-                memberObj.chests = existing.chests || {};
-                memberObj.prevPower = existing.prevPower || memberObj.power;
-                clanData[idx] = memberObj;
+            if(idx !== "") {
+                clanData[idx].name = document.getElementById('editName').value.trim();
+                clanData[idx].rank = document.getElementById('editRank').value;
+                clanData[idx].power = parseInt(document.getElementById('editPower').value) || 0;
+                clanData[idx].tower = parseInt(document.getElementById('editTower').value) || 0;
+                clanData[idx].activeDays = parseInt(document.getElementById('editActiveDays').value) || 28;
+                
+                closeEditModal();
+                saveData();
+                syncToGitHub();
             }
-            
-            closeEditModal();
-            saveData();
-            syncToGitHub();
         }
 
         function clearAllData() {
