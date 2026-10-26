@@ -203,7 +203,7 @@
     },
     {
       "name": "gaviiCABJ",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 203237900,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:32:04.872Z"
+  "lastUpdated": "2026-10-26T14:32:25.981Z"
 }
