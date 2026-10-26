@@ -230,7 +230,7 @@
     },
     {
       "name": "Vudor SK6",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 197059645,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:34:24.439Z"
+  "lastUpdated": "2026-10-26T14:34:31.781Z"
 }
