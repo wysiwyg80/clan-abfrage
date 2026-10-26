@@ -284,7 +284,7 @@
     },
     {
       "name": "Maginad",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 140126133,
@@ -571,5 +571,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-26T14:33:28.401Z"
+  "lastUpdated": "2026-10-26T14:33:36.590Z"
 }
