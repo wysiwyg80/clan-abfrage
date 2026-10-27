@@ -464,7 +464,7 @@
       "power": 759664191,
       "prevPower": 759664191,
       "activeDays": 28,
-      "customGoal": 100000000
+      "customGoal": null
     },
     {
       "name": "man of war",
@@ -682,7 +682,7 @@
       "silver": 0,
       "power": 235429605,
       "prevPower": 235429605,
-      "activeDays": null,
+      "activeDays": 28,
       "customGoal": null
     }
   ],
