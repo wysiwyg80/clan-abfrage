@@ -500,11 +500,12 @@
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 398220910,
       "prevPower": 398220910,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "kikito",
@@ -685,5 +686,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T18:01:30.012Z"
+  "lastUpdated": "2026-10-27T18:01:42.901Z"
 }
