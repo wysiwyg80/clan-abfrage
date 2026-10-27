@@ -459,11 +459,12 @@
       "name": "Miss Dire",
       "rank": "Vorgesetzter",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 446408785,
       "prevPower": 446408785,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Cologne am Rhein",
@@ -656,5 +657,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:49:41.625Z"
+  "lastUpdated": "2026-10-27T17:50:01.955Z"
 }
