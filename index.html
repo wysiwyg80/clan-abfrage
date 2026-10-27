@@ -121,8 +121,8 @@
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-file-import"></i> JSON / KI Massen-Import (Addierend)
                 </h3>
-                <p class="text-xs text-slate-300">Tägliche Werte einfügen (Truhen und Turmbau werden automatisch addiert):</p>
-                <textarea id="bulkImportText" rows="4" placeholder='[{"name":"SirLancelot","rank":"Offizier","chests":{"Krypta-Truhe":2},"tower":5,"power":125000000}]' class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
+                <p class="text-xs text-slate-300">Tägliche Werte einfügen (Truhen, Turmbau und Silber werden automatisch addiert):</p>
+                <textarea id="bulkImportText" rows="4" placeholder='[{"name":"SirLancelot","rank":"Offizier","chests":{"Krypta-Truhe":2},"tower":5,"silver":15000000,"power":125000000}]' class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
                 <div class="flex flex-wrap gap-2">
                     <button onclick="processJSONImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
                         <i class="fa-solid fa-upload"></i> Daten Addieren & Sync
@@ -148,8 +148,8 @@
                 <div class="text-2xl font-bold font-cinzel text-amber-300 mt-1" id="stat-chests">0</div>
             </div>
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
-                <span class="text-xs text-slate-300 uppercase">Turmbau Gesamt</span>
-                <div class="text-2xl font-bold font-cinzel text-amber-300 mt-1" id="stat-tower">0</div>
+                <span class="text-xs text-slate-300 uppercase">Silber-Lieferung Gesamt</span>
+                <div class="text-2xl font-bold font-cinzel text-cyan-300 mt-1" id="stat-silver">0</div>
             </div>
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
                 <span class="text-xs text-slate-300 uppercase">Allianz Macht</span>
@@ -191,8 +191,9 @@
                             <th class="p-3">Rang / Name</th>
                             <th class="p-3 text-right data-col-chests">Truhen (Details & Pkt)</th>
                             <th class="p-3 text-right data-col-chests">Turmbau-Pkt</th>
+                            <th class="p-3 text-right data-col-chests text-cyan-400">Silber / Bank</th>
                             <th class="p-3 text-right data-col-chests">Gesamt-Pkt</th>
-                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status (Tages-Anteil)</th>
+                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status</th>
                             <th class="p-3 text-right data-col-power hidden">Macht</th>
                             <th class="p-3 text-right data-col-power hidden">Zuwachs</th>
                             <th class="p-3 text-center">Aktionen</th>
@@ -230,14 +231,18 @@
                         <option value="Soldat">Soldat</option>
                     </select>
                 </div>
-                <div class="grid grid-cols-2 gap-3">
+                <div class="grid grid-cols-3 gap-2">
                     <div>
                         <label class="text-[10px] uppercase font-bold text-slate-400">Macht</label>
                         <input type="number" id="editPower" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
                     </div>
                     <div>
-                        <label class="text-[10px] uppercase font-bold text-slate-400">Turmbau (Anzahl)</label>
+                        <label class="text-[10px] uppercase font-bold text-slate-400">Turmbau</label>
                         <input type="number" id="editTower" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
+                    </div>
+                    <div>
+                        <label class="text-[10px] uppercase font-bold text-cyan-400">Silber</label>
+                        <input type="number" id="editSilver" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
                     </div>
                 </div>
                 <div class="grid grid-cols-2 gap-3">
@@ -276,7 +281,6 @@
         let goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
         let goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
 
-        // Fester Standard-Wert für das Repo, damit es auf Handys ohne manuelles Setup direkt lädt!
         let ghRepo = localStorage.getItem('legio_gh_repo') || 'wysiwyg80/clan-abfrage';
         let ghBranch = localStorage.getItem('legio_gh_branch') || 'main';
         let ghToken = localStorage.getItem('legio_gh_token') || '';
@@ -496,6 +500,14 @@
             }
         }
 
+        // Direktes Speichern des Silber-Werts aus der Tabellenzeile heraus
+        function updateDirectSilver(index, val) {
+            let parsed = parseInt(val) || 0;
+            clanData[index].silver = parsed;
+            saveData();
+            syncToGitHub();
+        }
+
         function processJSONImport() {
             let text = document.getElementById('bulkImportText').value.trim();
             if(!text) return alert("Das Import-Feld ist leer!");
@@ -526,6 +538,9 @@
                         let newTower = item.tower || item.turmbau || 0;
                         existing.tower = (existing.tower || 0) + newTower;
 
+                        let newSilver = item.silver || item.silber || 0;
+                        existing.silver = (existing.silver || 0) + newSilver;
+
                         let incomingChests = item.chests || {};
                         if(!existing.chests) existing.chests = {};
                         Object.keys(incomingChests).forEach(cName => {
@@ -542,6 +557,7 @@
                             rank: item.rank || item.rang || 'Soldat',
                             chests: item.chests || {},
                             tower: item.tower || item.turmbau || 0,
+                            silver: item.silver || item.silber || 0,
                             power: item.power || item.macht || 0,
                             prevPower: item.power || item.macht || 0,
                             activeDays: item.activeDays || null,
@@ -561,28 +577,31 @@
         }
 
         function resetAllPoints() {
-            if(confirm("Möchtest du WIRKLICH die Truhen und Turmbau-Punkte ALLER Mitglieder auf Null zurücksetzen?\n(Spieler, Ränge und Macht bleiben erhalten)")) {
+            if(confirm("Möchtest du WIRKLICH die Truhen-, Turmbau- und Silberwerte ALLER Mitglieder auf Null zurücksetzen?\n(Spieler, Ränge und Macht bleiben erhalten)")) {
                 clanData.forEach(member => {
                     member.chests = {};
                     member.tower = 0;
+                    member.silver = 0;
                 });
                 saveData();
                 syncToGitHub();
-                alert("Alle Truhen- und Turmbau-Punkte wurden auf 0 zurückgesetzt!");
+                alert("Alle Werte wurden auf 0 zurückgesetzt!");
             }
         }
 
         function resetSingleMemberPoints() {
             let idx = document.getElementById('editIndex').value;
             if(idx !== "") {
-                if(confirm(`Truhen und Turmbau-Punkte für "${clanData[idx].name}" auf 0 zurücksetzen?`)) {
+                if(confirm(`Truhen, Turmbau und Silber für "${clanData[idx].name}" auf 0 zurücksetzen?`)) {
                     clanData[idx].chests = {};
                     clanData[idx].tower = 0;
+                    clanData[idx].silver = 0;
                     document.getElementById('editTower').value = 0;
+                    document.getElementById('editSilver').value = 0;
                     saveData();
                     syncToGitHub();
                     closeEditModal();
-                    alert(`Punkte für ${clanData[idx].name} wurden zurückgesetzt!`);
+                    alert(`Werte für ${clanData[idx].name} wurden zurückgesetzt!`);
                 }
             }
         }
@@ -602,6 +621,7 @@
             document.getElementById('editRank').value = "Soldat";
             document.getElementById('editPower').value = "";
             document.getElementById('editTower').value = "";
+            document.getElementById('editSilver').value = "";
             document.getElementById('editCustomGoal').value = "";
             document.getElementById('editActiveDays').value = "";
             document.getElementById('btnResetSingle').classList.add('hidden');
@@ -616,6 +636,7 @@
             document.getElementById('editRank').value = m.rank || 'Soldat';
             document.getElementById('editPower').value = m.power || 0;
             document.getElementById('editTower').value = m.tower || 0;
+            document.getElementById('editSilver').value = m.silver || 0;
             document.getElementById('editCustomGoal').value = m.customGoal || "";
             document.getElementById('editActiveDays').value = m.activeDays !== null && m.activeDays !== undefined ? m.activeDays : "";
             document.getElementById('btnResetSingle').classList.remove('hidden');
@@ -639,6 +660,7 @@
                 rank: document.getElementById('editRank').value,
                 chests: {},
                 tower: parseInt(document.getElementById('editTower').value) || 0,
+                silver: parseInt(document.getElementById('editSilver').value) || 0,
                 power: parseInt(document.getElementById('editPower').value) || 0,
                 prevPower: parseInt(document.getElementById('editPower').value) || 0,
                 activeDays: activeDaysInput !== "" ? parseInt(activeDaysInput) : null,
@@ -697,8 +719,19 @@
             document.getElementById('stat-members').innerText = clanData.length;
             let totalChests = clanData.reduce((s, m) => s + getMemberPoints(m).chestsPts, 0);
             let totalTower = clanData.reduce((s, m) => s + getMemberPoints(m).towerPts, 0);
+            let totalSilver = clanData.reduce((s, m) => s + (m.silver || 0), 0);
+            
             document.getElementById('stat-chests').innerText = totalChests.toLocaleString('de-DE');
             document.getElementById('stat-tower').innerText = totalTower.toLocaleString('de-DE');
+            
+            if(totalSilver >= 1000000000) {
+                document.getElementById('stat-silver').innerText = (totalSilver / 1000000000).toFixed(2) + "B";
+            } else if(totalSilver >= 1000000) {
+                document.getElementById('stat-silver').innerText = (totalSilver / 1000000).toFixed(1) + "M";
+            } else {
+                document.getElementById('stat-silver').innerText = totalSilver.toLocaleString('de-DE');
+            }
+
             let totalPower = clanData.reduce((s, m) => s + m.power, 0);
             document.getElementById('stat-power').innerText = (totalPower / 1000000).toFixed(1) + "M";
         }
@@ -768,6 +801,13 @@
                         <div class="text-[10px] text-slate-400 truncate max-w-xs" title="${pts.summary}">${pts.summary}</div>
                     </td>
                     <td class="p-3 text-right text-slate-200 data-col-chests">${pts.towerPts.toLocaleString('de-DE')} <span class="text-[9px] text-slate-400">(${member.tower||0}x)</span></td>
+                    <td class="p-3 text-right data-col-chests">
+                        <input type="number" 
+                               value="${member.silver || 0}" 
+                               onchange="updateDirectSilver(${originalIndex}, this.value)" 
+                               class="w-24 bg-slate-900 border border-cyan-500/40 focus:border-cyan-400 rounded px-2 py-1 text-right text-xs text-cyan-300 font-bold focus:outline-none" 
+                               placeholder="Silber...">
+                    </td>
                     <td class="p-3 text-right font-bold text-amber-400 data-col-chests">${pts.total.toLocaleString('de-DE')}</td>
                     <td class="p-3 text-center data-col-chests">${statusBadge}</td>
                     <td class="p-3 text-right data-col-power hidden">${(member.power / 1000000).toFixed(2)}M</td>
