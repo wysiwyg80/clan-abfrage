@@ -570,11 +570,21 @@
       "prevPower": 235429605,
       "activeDays": null,
       "customGoal": null
+    },
+    {
+      "name": "Ajji",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "power": 384327063,
+      "prevPower": 384327063,
+      "activeDays": null,
+      "customGoal": null
     }
   ],
   "cycleStartDate": "2026-10-01",
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T01:06:35.946Z"
+  "lastUpdated": "2026-10-27T01:09:41.108Z"
 }
