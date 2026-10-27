@@ -14,7 +14,6 @@
 
         /* DRUCK-STYLING FOR PDF / AUSDRUCK */
         @media print {
-            /* Ausblenden von Interaktions-Elementen */
             button, .no-print, header button, #adminPanel, #editModal, .p-3 input[type="number"], #searchInput, th:last-child, td:last-child {
                 display: none !important;
             }
@@ -60,14 +59,12 @@
                 color: #000000 !important;
             }
 
-            /* Silber-Eingabefelder für Druck in flachen Text verwandeln */
             .print-silver-val {
                 display: inline !important;
                 font-weight: bold;
                 color: #0891b2 !important;
             }
 
-            /* Diagramme verkleinern, damit sie gut auf ein A4-Blatt passen */
             canvas {
                 max-height: 180px !important;
             }
@@ -234,6 +231,30 @@
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
                 <h3 class="text-xs font-bold text-amber-400 uppercase mb-3"><i class="fa-solid fa-chart-line"></i> Macht-Zuwachs</h3>
                 <div class="h-56"><canvas id="powerGrowthChart"></canvas></div>
+            </div>
+        </div>
+
+        <!-- SCHNELLBEFEHL: Spieler ohne Türme -->
+        <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 shadow no-print">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                <div>
+                    <h3 class="text-xs font-bold text-amber-400 uppercase"><i class="fa-solid fa-chess-rook"></i> Turmbau-Kontrolle</h3>
+                    <p class="text-xs text-slate-300 mt-0.5">Ermittle sofort alle Spieler, die noch keine Türme gebaut haben.</p>
+                </div>
+                <button onclick="zeigeSpielerOhneTuermeText()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Spieler ohne Türme anzeigen
+                </button>
+            </div>
+
+            <!-- Ausgabebereich (Standardmäßig versteckt) -->
+            <div id="ohneTuermeContainer" class="hidden mt-4 pt-4 border-t border-slate-700 space-y-3">
+                <div class="bg-slate-900 border border-amber-500/30 rounded p-3">
+                    <h4 class="text-xs font-bold text-amber-300 mb-2">📋 Ergebnis-Liste für WhatsApp / Discord:</h4>
+                    <pre id="ohneTuermeText" class="text-xs font-mono text-slate-200 whitespace-pre-wrap bg-slate-950 p-3 rounded border border-slate-800 max-h-40 overflow-y-auto"></pre>
+                </div>
+                <button onclick="kopiereText()" class="bg-cyan-700 hover:bg-cyan-600 text-white font-bold px-3 py-1.5 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                    <i class="fa-regular fa-copy"></i> Liste in Zwischenablage kopieren
+                </button>
             </div>
         </div>
 
@@ -557,137 +578,221 @@
         }
 
         function addNewChestTypePrompt() {
-            let name = prompt("Name der neuen Truhen-Art eingeben:");
-            if(name && name.trim()) {
-                let trimmed = name.trim();
-                if(!chestTypeValues[trimmed]) {
-                    chestTypeValues[trimmed] = 10;
-                    saveData();
-                }
+            let name = prompt("Name der neuen Truhe (z.B. Event-Truhe):");
+            if(name && name.trim() !== "") {
+                let pts = parseInt(prompt(`Wie viele Punkte gibt eine "${name}"?`, "5")) || 0;
+                chestTypeValues[name.trim()] = pts;
+                saveData();
             }
         }
 
-        function updateDirectSilver(index, val) {
-            let parsed = parseInt(val) || 0;
-            clanData[index].silver = parsed;
-            saveData();
-            syncToGitHub();
+        // Funktion: Spieler ohne Türme als Text anzeigen
+        function zeigeSpielerOhneTuermeText() {
+            const container = document.getElementById('ohneTuermeContainer');
+            const textElement = document.getElementById('ohneTuermeText');
+
+            const ohneTuerme = clanData.filter(player => {
+                const tuerme = Number(player.tower || player.tuerme || 0);
+                return tuerme === 0;
+            });
+
+            if (ohneTuerme.length === 0) {
+                textElement.textContent = "🎉 Super! Alle Spieler haben mindestens einen Turm gebaut.";
+            } else {
+                const namenListe = ohneTuerme.map((p, index) => `${index + 1}. ${p.name || p.spieler} (${p.rank || 'Soldat'})`).join("\n");
+                textElement.textContent = `⚠️ Folgende ${ohneTuerme.length} Spieler haben KEINE Türme gebaut:\n\n${namenListe}`;
+            }
+
+            container.classList.remove('hidden');
         }
 
-        function processJSONImport() {
-            let text = document.getElementById('bulkImportText').value.trim();
-            if(!text) return alert("Das Import-Feld ist leer!");
+        function kopiereText() {
+            const text = document.getElementById('ohneTuermeText').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Liste wurde in die Zwischenablage kopiert!");
+            });
+        }
 
-            try {
-                let imported = JSON.parse(text);
-                if(!Array.isArray(imported)) {
-                    alert("Bitte ein gültiges JSON-Array einfügen!");
-                    return;
+        function renderMetrics() {
+            document.getElementById('stat-members').innerText = clanData.length;
+            
+            let totalChestsPts = 0;
+            let totalTowerPts = 0;
+            let totalSilver = 0;
+            let totalPower = 0;
+
+            clanData.forEach(p => {
+                let cPts = 0;
+                if(p.chests) {
+                    Object.keys(p.chests).forEach(cName => {
+                        let count = p.chests[cName] || 0;
+                        let val = chestTypeValues[cName] || 0;
+                        cPts += count * val;
+                    });
                 }
+                totalChestsPts += cPts;
+                totalTowerPts += Number(p.tower || 0) * (chestTypeValues["Turmbau"] || 1);
+                totalSilver += Number(p.silver || 0);
+                totalPower += Number(p.power || 0);
+            });
 
-                imported.forEach(item => {
-                    if(!item.name) return;
-                    
-                    let idx = clanData.findIndex(m => m.name.toLowerCase() === item.name.toLowerCase());
+            document.getElementById('stat-chests').innerText = totalChestsPts.toLocaleString();
+            document.getElementById('stat-tower').innerText = totalTowerPts.toLocaleString();
+            document.getElementById('stat-silver').innerText = formatSilver(totalSilver);
+            document.getElementById('stat-power').innerText = formatPower(totalPower);
+        }
 
-                    if(idx >= 0) {
-                        let existing = clanData[idx];
-                        
-                        if(item.rank) existing.rank = item.rank;
-                        if(item.rang) existing.rank = item.rang;
+        function formatSilver(val) {
+            if(val >= 1000000000) return (val / 1000000000).toFixed(2) + 'B';
+            if(val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+            if(val >= 1000) return (val / 1000).toFixed(0) + 'K';
+            return val.toLocaleString();
+        }
 
-                        if(item.power !== undefined) {
-                            existing.prevPower = existing.power;
-                            existing.power = item.power;
+        function formatPower(val) {
+            if(val >= 1000000000) return (val / 1000000000).toFixed(2) + 'B';
+            if(val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+            return val.toLocaleString();
+        }
+
+        function renderTable() {
+            let tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            let sorted = [...clanData].sort((a, b) => {
+                let rA = RANK_ORDER[a.rank] || 99;
+                let rB = RANK_ORDER[b.rank] || 99;
+                if(rA !== rB) return rA - rB;
+                return (b.power || 0) - (a.power || 0);
+            });
+
+            let activeDays = getAutomaticActiveDays();
+
+            sorted.forEach((p, index) => {
+                let originalIndex = clanData.indexOf(p);
+                let row = document.createElement('tr');
+                row.className = "hover:bg-slate-700/40 transition";
+
+                let rankBadgeColor = "bg-slate-700 text-slate-300";
+                if(p.rank === "Anführer") rankBadgeColor = "bg-red-900/80 text-amber-300 border border-red-700";
+                else if(p.rank === "Vorgesetzter") rankBadgeColor = "bg-amber-900/60 text-amber-200 border border-amber-700";
+                else if(p.rank === "Offizier") rankBadgeColor = "bg-indigo-900/60 text-indigo-200";
+                else if(p.rank === "Veteran") rankBadgeColor = "bg-emerald-900/60 text-emerald-200";
+
+                // Truhen Punkte berechnen
+                let chestsHTML = '';
+                let chestPtsTotal = 0;
+                if(p.chests) {
+                    Object.keys(p.chests).forEach(cName => {
+                        let cnt = p.chests[cName] || 0;
+                        let val = chestTypeValues[cName] || 0;
+                        chestPtsTotal += cnt * val;
+                        if(cnt > 0) {
+                            chestsHTML += `<span class="inline-block bg-slate-900 text-[10px] px-1.5 py-0.5 rounded mr-1 mb-1 border border-slate-700">${cName}: <b>${cnt}</b></span>`;
                         }
-
-                        let newTower = item.tower || item.turmbau || 0;
-                        existing.tower = (existing.tower || 0) + newTower;
-
-                        let newSilver = item.silver || item.silber || 0;
-                        existing.silver = (existing.silver || 0) + newSilver;
-
-                        let incomingChests = item.chests || {};
-                        if(!existing.chests) existing.chests = {};
-                        Object.keys(incomingChests).forEach(cName => {
-                            let count = incomingChests[cName] || 0;
-                            existing.chests[cName] = (existing.chests[cName] || 0) + count;
-                            if(chestTypeValues[cName] === undefined) {
-                                chestTypeValues[cName] = 10;
-                            }
-                        });
-
-                    } else {
-                        let memberObj = {
-                            name: item.name,
-                            rank: item.rank || item.rang || 'Soldat',
-                            chests: item.chests || {},
-                            tower: item.tower || item.turmbau || 0,
-                            silver: item.silver || item.silber || 0,
-                            power: item.power || item.macht || 0,
-                            prevPower: item.power || item.macht || 0,
-                            activeDays: item.activeDays || null,
-                            customGoal: item.customGoal || null
-                        };
-                        clanData.push(memberObj);
-                    }
-                });
-
-                document.getElementById('bulkImportText').value = '';
-                saveData();
-                syncToGitHub();
-                alert("Tagesdaten erfolgreich addiert und synchronisiert!");
-            } catch(e) {
-                alert("Fehler beim Parsen: " + e.message);
-            }
-        }
-
-        function resetAllPoints() {
-            if(confirm("Möchtest du WIRKLICH die Truhen-, Turmbau- und Silberwerte ALLER Mitglieder auf Null zurücksetzen?\n(Spieler, Ränge und Macht bleiben erhalten)")) {
-                clanData.forEach(member => {
-                    member.chests = {};
-                    member.tower = 0;
-                    member.silver = 0;
-                });
-                saveData();
-                syncToGitHub();
-                alert("Alle Werte wurden auf 0 zurückgesetzt!");
-            }
-        }
-
-        function resetSingleMemberPoints() {
-            let idx = document.getElementById('editIndex').value;
-            if(idx !== "") {
-                if(confirm(`Truhen, Turmbau und Silber für "${clanData[idx].name}" auf 0 zurücksetzen?`)) {
-                    clanData[idx].chests = {};
-                    clanData[idx].tower = 0;
-                    clanData[idx].silver = 0;
-                    document.getElementById('editTower').value = 0;
-                    document.getElementById('editSilver').value = 0;
-                    saveData();
-                    syncToGitHub();
-                    closeEditModal();
-                    alert(`Werte für ${clanData[idx].name} wurden zurückgesetzt!`);
+                    });
                 }
+
+                let towerVal = Number(p.tower || 0);
+                let towerPts = towerVal * (chestTypeValues["Turmbau"] || 1);
+                let totalPts = chestPtsTotal + towerPts;
+
+                let pMacht = Number(p.power || 0);
+                let limitMacht = 100000000;
+                let requiredGoal = p.customGoal ? Number(p.customGoal) : (pMacht < limitMacht ? goalLow : goalHigh);
+                
+                let pActiveDays = p.activeDays ? Number(p.activeDays) : activeDays;
+                let dailyTarget = requiredGoal / cycleTotalDays;
+                let targetSoFar = Math.round(dailyTarget * pActiveDays);
+
+                let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-amber-950/40 border-amber-800";
+                let statusText = totalPts >= targetSoFar ? `✅ Soll erfüllt` : `⚠️ Noch ${targetSoFar - totalPts} Pkt`;
+
+                row.innerHTML = `
+                    <td class="p-3">
+                        <div class="font-bold text-amber-300">${p.name || 'Unbekannt'}</div>
+                        <span class="inline-block text-[10px] px-2 py-0.5 rounded font-bold uppercase mt-0.5 ${rankBadgeColor}">${p.rank || 'Soldat'}</span>
+                    </td>
+                    <td class="p-3 text-right data-col-chests">
+                        <div class="text-slate-300">${chestsHTML || '<span class="text-slate-500">-</span>'}</div>
+                    </td>
+                    <td class="p-3 text-right data-col-chests font-bold text-amber-200">
+                        ${towerVal} <span class="text-[10px] text-slate-400">(${towerPts}P)</span>
+                    </td>
+                    <td class="p-3 text-right data-col-chests text-cyan-400 font-bold">
+                        <span class="print-silver-val">${formatSilver(Number(p.silver || 0))}</span>
+                        <div class="no-print mt-1">
+                            <input type="number" value="${p.silver || 0}" step="1000000" onchange="quickUpdateSilver(${originalIndex}, this.value)" class="w-24 bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-right text-[11px] text-cyan-300 focus:outline-none focus:border-cyan-500">
+                        </div>
+                    </td>
+                    <td class="p-3 text-right data-col-chests font-bold text-amber-300 text-sm">
+                        ${totalPts.toLocaleString()}
+                    </td>
+                    <td class="p-3 text-center data-col-chests">
+                        <span class="inline-block px-2 py-1 rounded border text-[11px] font-bold ${statusColor}">${statusText}</span>
+                    </td>
+                    <td class="p-3 text-right data-col-power hidden font-bold text-slate-200">
+                        ${formatPower(pMacht)}
+                    </td>
+                    <td class="p-3 text-right data-col-power hidden text-emerald-400 font-bold">
+                        +${formatPower(p.growth || 0)}
+                    </td>
+                    <td class="p-3 text-center no-print">
+                        <button onclick="openEditModal(${originalIndex})" class="bg-slate-700 hover:bg-slate-600 text-amber-300 px-2 py-1 rounded text-xs transition cursor-pointer" title="Bearbeiten">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button onclick="deleteMember(${originalIndex})" class="bg-red-900/60 hover:bg-red-800 text-red-200 px-2 py-1 rounded text-xs transition cursor-pointer ml-1" title="Löschen">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function quickUpdateSilver(index, val) {
+            clanData[index].silver = parseInt(val) || 0;
+            saveData();
+        }
+
+        function switchTab(tab) {
+            activeTab = tab;
+            let btnChests = document.getElementById('btn-tab-chests');
+            let btnPower = document.getElementById('btn-tab-power');
+            
+            let colsChests = document.querySelectorAll('.data-col-chests');
+            let colsPower = document.querySelectorAll('.data-col-power');
+
+            if(tab === 'chests') {
+                btnChests.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer";
+                btnPower.className = "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
+                colsChests.forEach(el => el.classList.remove('hidden'));
+                colsPower.forEach(el => el.classList.add('hidden'));
+            } else {
+                btnPower.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer";
+                btnChests.className = "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
+                colsPower.forEach(el => el.classList.remove('hidden'));
+                colsChests.forEach(el => el.classList.add('hidden'));
             }
         }
 
-        function deleteMember(index) {
-            if(confirm(`Möchtest du "${clanData[index].name}" wirklich löschen?`)) {
-                clanData.splice(index, 1);
-                saveData();
-                syncToGitHub();
-            }
+        function filterTable() {
+            let query = document.getElementById('searchInput').value.toLowerCase();
+            let rows = document.querySelectorAll('#tableBody tr');
+            rows.forEach(r => {
+                let name = r.querySelector('div.font-bold').innerText.toLowerCase();
+                r.style.display = name.includes(query) ? '' : 'none';
+            });
         }
 
         function openAddModal() {
-            document.getElementById('editIndex').value = "";
-            document.getElementById('modalTitle').innerHTML = '<i class="fa-solid fa-user-plus"></i> Neues Mitglied hinzufügen';
+            document.getElementById('modalTitle').innerHTML = `<i class="fa-solid fa-user-plus"></i> Mitglied hinzufügen`;
+            document.getElementById('editIndex').value = "-1";
             document.getElementById('editName').value = "";
             document.getElementById('editRank').value = "Soldat";
-            document.getElementById('editPower').value = "";
-            document.getElementById('editTower').value = "";
-            document.getElementById('editSilver').value = "";
+            document.getElementById('editPower').value = "50000000";
+            document.getElementById('editTower').value = "0";
+            document.getElementById('editSilver').value = "0";
             document.getElementById('editCustomGoal').value = "";
             document.getElementById('editActiveDays').value = "";
             document.getElementById('btnResetSingle').classList.add('hidden');
@@ -695,16 +800,16 @@
         }
 
         function openEditModal(index) {
-            let m = clanData[index];
+            let p = clanData[index];
+            document.getElementById('modalTitle').innerHTML = `<i class="fa-solid fa-user-pen"></i> Mitglied bearbeiten: ${p.name}`;
             document.getElementById('editIndex').value = index;
-            document.getElementById('modalTitle').innerHTML = '<i class="fa-solid fa-user-pen"></i> Mitglied bearbeiten';
-            document.getElementById('editName').value = m.name;
-            document.getElementById('editRank').value = m.rank || 'Soldat';
-            document.getElementById('editPower').value = m.power || 0;
-            document.getElementById('editTower').value = m.tower || 0;
-            document.getElementById('editSilver').value = m.silver || 0;
-            document.getElementById('editCustomGoal').value = m.customGoal || "";
-            document.getElementById('editActiveDays').value = m.activeDays !== null && m.activeDays !== undefined ? m.activeDays : "";
+            document.getElementById('editName').value = p.name || '';
+            document.getElementById('editRank').value = p.rank || 'Soldat';
+            document.getElementById('editPower').value = p.power || 0;
+            document.getElementById('editTower').value = p.tower || 0;
+            document.getElementById('editSilver').value = p.silver || 0;
+            document.getElementById('editCustomGoal').value = p.customGoal || '';
+            document.getElementById('editActiveDays').value = p.activeDays || '';
             document.getElementById('btnResetSingle').classList.remove('hidden');
             document.getElementById('editModal').classList.remove('hidden');
         }
@@ -714,245 +819,180 @@
         }
 
         function saveMemberEdit() {
-            let idx = document.getElementById('editIndex').value;
-            let nameVal = document.getElementById('editName').value.trim();
-            if(!nameVal) return alert("Bitte einen Namen angeben!");
-
-            let activeDaysInput = document.getElementById('editActiveDays').value.trim();
-            let customGoalInput = document.getElementById('editCustomGoal').value.trim();
+            let index = parseInt(document.getElementById('editIndex').value);
+            let name = document.getElementById('editName').value.trim();
+            if(!name) return alert("Name darf nicht leer sein!");
 
             let memberObj = {
-                name: nameVal,
+                name: name,
                 rank: document.getElementById('editRank').value,
-                chests: {},
+                power: parseInt(document.getElementById('editPower').value) || 0,
                 tower: parseInt(document.getElementById('editTower').value) || 0,
                 silver: parseInt(document.getElementById('editSilver').value) || 0,
-                power: parseInt(document.getElementById('editPower').value) || 0,
-                prevPower: parseInt(document.getElementById('editPower').value) || 0,
-                activeDays: activeDaysInput !== "" ? parseInt(activeDaysInput) : null,
-                customGoal: customGoalInput !== "" ? parseInt(customGoalInput) : null
+                customGoal: parseInt(document.getElementById('editCustomGoal').value) || null,
+                activeDays: parseInt(document.getElementById('editActiveDays').value) || null
             };
 
-            if(idx === "") {
+            if(index === -1) {
+                memberObj.chests = {};
                 clanData.push(memberObj);
             } else {
-                let existing = clanData[idx];
-                memberObj.chests = existing.chests || {};
-                memberObj.prevPower = existing.prevPower || memberObj.power;
-                clanData[idx] = memberObj;
+                memberObj.chests = clanData[index].chests || {};
+                memberObj.growth = clanData[index].growth || 0;
+                clanData[index] = memberObj;
             }
-            
-            closeEditModal();
+
             saveData();
-            syncToGitHub();
+            closeEditModal();
+        }
+
+        function resetSingleMemberPoints() {
+            let index = parseInt(document.getElementById('editIndex').value);
+            if(index >= 0) {
+                clanData[index].tower = 0;
+                clanData[index].silver = 0;
+                clanData[index].chests = {};
+                saveData();
+                closeEditModal();
+            }
+        }
+
+        function deleteMember(index) {
+            if(confirm(`Mitglied "${clanData[index].name}" wirklich löschen?`)) {
+                clanData.splice(index, 1);
+                saveData();
+            }
+        }
+
+        function resetAllPoints() {
+            if(confirm("Wirklich alle Truhen-, Turm- und Silber-Punkte von ALLEN Mitgliedern auf 0 zurücksetzen?")) {
+                clanData.forEach(p => {
+                    p.tower = 0;
+                    p.silver = 0;
+                    p.chests = {};
+                });
+                saveData();
+            }
         }
 
         function clearAllData() {
-            if(confirm("WIRKLICH ALLE MITGLIEDER LÖSCHEN?")) {
+            if(confirm("ACHTUNG: Möchtest du wirklich alle Mitglieder komplett aus der Liste löschen?")) {
                 clanData = [];
                 saveData();
-                syncToGitHub();
             }
         }
 
-        function getMemberPoints(m) {
-            let chestTotalPts = 0;
-            let detailsText = [];
+        function processJSONImport() {
+            let raw = document.getElementById('bulkImportText').value.trim();
+            if(!raw) return alert("Bitte füge gültiges JSON ein.");
+            try {
+                let imported = JSON.parse(raw);
+                if(!Array.isArray(imported)) imported = [imported];
 
-            if(m.chests && typeof m.chests === 'object') {
-                Object.keys(m.chests).forEach(cName => {
-                    let count = m.chests[cName] || 0;
-                    let pVal = chestTypeValues[cName] !== undefined ? chestTypeValues[cName] : 10;
-                    chestTotalPts += (count * pVal);
-                    if(count > 0) {
-                        detailsText.push(`${count}x ${cName}`);
+                imported.forEach(imp => {
+                    let existing = clanData.find(p => p.name.toLowerCase() === imp.name.toLowerCase());
+                    if(existing) {
+                        if(imp.rank) existing.rank = imp.rank;
+                        if(imp.power) existing.growth = imp.power - (existing.power || imp.power);
+                        if(imp.power) existing.power = imp.power;
+                        if(imp.silver) existing.silver = (existing.silver || 0) + Number(imp.silver);
+                        if(imp.tower) existing.tower = (existing.tower || 0) + Number(imp.tower);
+                        
+                        if(imp.chests) {
+                            if(!existing.chests) existing.chests = {};
+                            Object.keys(imp.chests).forEach(cKey => {
+                                existing.chests[cKey] = (existing.chests[cKey] || 0) + Number(imp.chests[cKey]);
+                            });
+                        }
+                    } else {
+                        clanData.push({
+                            name: imp.name,
+                            rank: imp.rank || "Soldat",
+                            power: imp.power || 0,
+                            growth: 0,
+                            tower: imp.tower || 0,
+                            silver: imp.silver || 0,
+                            chests: imp.chests || {}
+                        });
                     }
                 });
-            }
 
-            let towerVal = chestTypeValues["Turmbau"] !== undefined ? chestTypeValues["Turmbau"] : 1;
-            let towerPts = (m.tower || 0) * towerVal;
-
-            return {
-                chestsPts: chestTotalPts,
-                towerPts: towerPts,
-                total: chestTotalPts + towerPts,
-                summary: detailsText.join(', ') || 'Keine Truhen'
-            };
-        }
-
-        function renderMetrics() {
-            document.getElementById('stat-members').innerText = clanData.length;
-            let totalChests = clanData.reduce((s, m) => s + getMemberPoints(m).chestsPts, 0);
-            let totalTower = clanData.reduce((s, m) => s + getMemberPoints(m).towerPts, 0);
-            let totalSilver = clanData.reduce((s, m) => s + (m.silver || 0), 0);
-            
-            document.getElementById('stat-chests').innerText = totalChests.toLocaleString('de-DE');
-            document.getElementById('stat-tower').innerText = totalTower.toLocaleString('de-DE');
-            
-            if(totalSilver >= 1000000000) {
-                document.getElementById('stat-silver').innerText = (totalSilver / 1000000000).toFixed(2) + "B";
-            } else if(totalSilver >= 1000000) {
-                document.getElementById('stat-silver').innerText = (totalSilver / 1000000).toFixed(1) + "M";
-            } else {
-                document.getElementById('stat-silver').innerText = totalSilver.toLocaleString('de-DE');
-            }
-
-            let totalPower = clanData.reduce((s, m) => s + m.power, 0);
-            document.getElementById('stat-power').innerText = (totalPower / 1000000).toFixed(1) + "M";
-        }
-
-        function getRankBadge(rank) {
-            let r = rank || 'Soldat';
-            let colorMap = {
-                'Anführer': 'bg-red-900/80 text-amber-300 border-red-700',
-                'Vorgesetzter': 'bg-amber-900/80 text-amber-300 border-amber-700',
-                'Offizier': 'bg-indigo-900/80 text-indigo-200 border-indigo-700',
-                'Veteran': 'bg-emerald-900/80 text-emerald-200 border-emerald-700',
-                'Soldat': 'bg-slate-800 text-slate-300 border-slate-700'
-            };
-            let cls = colorMap[r] || colorMap['Soldat'];
-            return `<span class="${cls} border px-2 py-0.5 rounded text-[10px] font-bold font-cinzel mr-1.5 uppercase tracking-wider">${r}</span>`;
-        }
-
-        function renderTable() {
-            let tbody = document.getElementById('tableBody');
-            tbody.innerHTML = '';
-
-            let sorted = [...clanData].sort((a, b) => {
-                let rankA = RANK_ORDER[a.rank] || 99;
-                let rankB = RANK_ORDER[b.rank] || 99;
-
-                if (rankA !== rankB) {
-                    return rankA - rankB;
-                }
-                return getMemberPoints(b).total - getMemberPoints(a).total;
-            });
-
-            let autoDays = getAutomaticActiveDays();
-
-            sorted.forEach((member, index) => {
-                let originalIndex = clanData.indexOf(member);
-                let row = document.createElement('tr');
-                let pts = getMemberPoints(member);
-
-                let activeDays = (member.activeDays !== null && member.activeDays !== undefined) ? member.activeDays : autoDays;
-                
-                let baseGoal = (member.customGoal !== null && member.customGoal !== undefined)
-                    ? member.customGoal 
-                    : (member.power < 100000000 ? goalLow : goalHigh);
-
-                let proportionalGoal = Math.round((baseGoal / cycleTotalDays) * activeDays);
-                
-                let goalMet = pts.total >= proportionalGoal;
-                let difference = proportionalGoal - pts.total;
-
-                let statusBadge = goalMet 
-                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2.5 py-1 rounded-full font-medium" title="Gesamtziel: ${baseGoal.toLocaleString('de-DE')} Pkt">+${Math.abs(difference).toLocaleString('de-DE')} Pkt Puffer</span>`
-                    : `<span class="bg-red-950 text-red-300 border border-red-800/60 px-2.5 py-1 rounded-full font-medium" title="Soll für Tag ${activeDays}: ${proportionalGoal.toLocaleString('de-DE')} / Gesamtziel: ${baseGoal.toLocaleString('de-DE')} Pkt">Fehlen: ${difference.toLocaleString('de-DE')} Pkt</span>`;
-
-                let powerDelta = member.power - member.prevPower;
-                let deltaColor = powerDelta >= 0 ? "text-emerald-400" : "text-red-400";
-                let deltaSign = powerDelta > 0 ? "+" : "";
-
-                let formattedSilver = (member.silver || 0).toLocaleString('de-DE');
-
-                row.innerHTML = `
-                    <td class="p-3 font-medium flex items-center">
-                        <span class="text-slate-400 mr-2 text-[10px]">#${index + 1}</span>
-                        ${getRankBadge(member.rank)}
-                        <span>${member.name}</span>
-                        <span class="text-slate-400 text-[10px] ml-1">(${activeDays}/${cycleTotalDays} T.)</span>
-                    </td>
-                    <td class="p-3 text-right data-col-chests">
-                        <div class="font-bold text-amber-300">${pts.chestsPts.toLocaleString('de-DE')} Pkt</div>
-                        <div class="text-[10px] text-slate-400 truncate max-w-xs" title="${pts.summary}">${pts.summary}</div>
-                    </td>
-                    <td class="p-3 text-right text-slate-200 data-col-chests">${pts.towerPts.toLocaleString('de-DE')} <span class="text-[9px] text-slate-400">(${member.tower||0}x)</span></td>
-                    <td class="p-3 text-right data-col-chests">
-                        <input type="number" 
-                               value="${member.silver || 0}" 
-                               onchange="updateDirectSilver(${originalIndex}, this.value)" 
-                               class="w-24 bg-slate-900 border border-cyan-500/40 focus:border-cyan-400 rounded px-2 py-1 text-right text-xs text-cyan-300 font-bold focus:outline-none" 
-                               placeholder="Silber...">
-                        <span class="hidden print-silver-val">${formattedSilver}</span>
-                    </td>
-                    <td class="p-3 text-right font-bold text-amber-400 data-col-chests">${pts.total.toLocaleString('de-DE')}</td>
-                    <td class="p-3 text-center data-col-chests">${statusBadge}</td>
-                    <td class="p-3 text-right data-col-power hidden">${(member.power / 1000000).toFixed(2)}M</td>
-                    <td class="p-3 text-right ${deltaColor} font-bold data-col-power hidden">${deltaSign}${(powerDelta / 1000).toLocaleString('de-DE')}k</td>
-                    <td class="p-3 text-center space-x-2 no-print">
-                        <button onclick="openEditModal(${originalIndex})" class="text-amber-400 hover:text-amber-200 cursor-pointer" title="Bearbeiten"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <button onclick="deleteMember(${originalIndex})" class="text-red-400 hover:text-red-200 cursor-pointer" title="Löschen"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                `;
-                tbody.appendChild(row);
-            });
-            toggleColumns();
-        }
-
-        function switchTab(tab) {
-            activeTab = tab;
-            let btnChests = document.getElementById('btn-tab-chests');
-            let btnPower = document.getElementById('btn-tab-power');
-
-            if(tab === 'chests') {
-                btnChests.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer";
-                btnPower.className = "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
-            } else {
-                btnPower.className = "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer";
-                btnChests.className = "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
-            }
-            toggleColumns();
-        }
-
-        function toggleColumns() {
-            let chestCols = document.querySelectorAll('.data-col-chests');
-            let powerCols = document.querySelectorAll('.data-col-power');
-            if(activeTab === 'chests') {
-                chestCols.forEach(el => el.classList.remove('hidden'));
-                powerCols.forEach(el => el.classList.add('hidden'));
-            } else {
-                chestCols.forEach(el => el.classList.add('hidden'));
-                powerCols.forEach(el => el.classList.remove('hidden'));
+                saveData();
+                document.getElementById('bulkImportText').value = '';
+                alert("Massen-Import erfolgreich addiert und gespeichert!");
+            } catch(e) {
+                alert("Fehler beim Parsen des JSON: " + e.message);
             }
         }
 
         function renderCharts() {
-            let sorted = [...clanData].sort((a, b) => getMemberPoints(b).total - getMemberPoints(a).total).slice(0, 10);
-            
-            let ctxTop = document.getElementById('topChestsChart').getContext('2d');
-            if(topChart) topChart.destroy();
-            topChart = new Chart(ctxTop, {
-                type: 'bar',
-                data: {
-                    labels: sorted.map(m => m.name),
-                    datasets: [{ label: 'Gesamtpunkte', data: sorted.map(m => getMemberPoints(m).total), backgroundColor: '#d97706' }]
-                },
-                options: { responsive: true, maintainAspectRatio: false }
-            });
+            let topCtx = document.getElementById('topChestsChart').getContext('2d');
+            let growthCtx = document.getElementById('powerGrowthChart').getContext('2d');
 
-            let ctxGrowth = document.getElementById('powerGrowthChart').getContext('2d');
-            if(growthChart) growthChart.destroy();
-            growthChart = new Chart(ctxGrowth, {
-                type: 'bar',
-                data: {
-                    labels: sorted.map(m => m.name),
-                    datasets: [{ label: 'Macht-Zuwachs', data: sorted.map(m => m.power - m.prevPower), backgroundColor: '#059669' }]
-                },
-                options: { responsive: true, maintainAspectRatio: false }
-            });
-        }
-
-        function filterTable() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let rows = document.getElementById('tableBody').getElementsByTagName('tr');
-            for (let i = 0; i < rows.length; i++) {
-                let nameCell = rows[i].getElementsByTagName('td')[0];
-                if (nameCell) {
-                    rows[i].style.display = (nameCell.textContent || nameCell.innerText).toLowerCase().indexOf(input) > -1 ? "" : "none";
+            let scoredList = clanData.map(p => {
+                let pts = 0;
+                if(p.chests) {
+                    Object.keys(p.chests).forEach(cName => {
+                        pts += (p.chests[cName] || 0) * (chestTypeValues[cName] || 0);
+                    });
                 }
-            }
+                pts += Number(p.tower || 0) * (chestTypeValues["Turmbau"] || 1);
+                return { name: p.name, points: pts, growth: p.growth || 0 };
+            });
+
+            scoredList.sort((a, b) => b.points - a.points);
+            let top10 = scoredList.slice(0, 10);
+
+            if(topChart) topChart.destroy();
+            topChart = new Chart(topCtx, {
+                type: 'bar',
+                data: {
+                    labels: top10.map(x => x.name),
+                    datasets: [{
+                        label: 'Gesamtpunkte',
+                        data: top10.map(x => x.points),
+                        backgroundColor: 'rgba(217, 119, 6, 0.7)',
+                        borderColor: 'rgba(245, 158, 11, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
+                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+                    }
+                }
+            });
+
+            scoredList.sort((a, b) => b.growth - a.growth);
+            let topGrowth = scoredList.slice(0, 10);
+
+            if(growthChart) growthChart.destroy();
+            growthChart = new Chart(growthCtx, {
+                type: 'bar',
+                data: {
+                    labels: topGrowth.map(x => x.name),
+                    datasets: [{
+                        label: 'Macht-Zuwachs',
+                        data: topGrowth.map(x => x.growth),
+                        backgroundColor: 'rgba(13, 148, 136, 0.7)',
+                        borderColor: 'rgba(20, 184, 166, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
+                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+                    }
+                }
+            });
         }
 
         window.onload = async () => {
