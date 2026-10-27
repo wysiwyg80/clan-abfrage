@@ -91,7 +91,7 @@
       "tower": 1,
       "power": 293537875,
       "prevPower": 293537875,
-      "activeDays": 24
+      "activeDays": 28
     },
     {
       "name": "Elginan",
@@ -562,5 +562,5 @@
       "activeDays": 28
     }
   ],
-  "lastUpdated": "2026-10-27T00:03:00.278Z"
+  "lastUpdated": "2026-10-27T00:03:10.951Z"
 }
