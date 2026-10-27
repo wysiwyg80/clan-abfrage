@@ -418,6 +418,7 @@
         function getAutomaticActiveDays() {
             let start = new Date(cycleStartDate);
             let today = new Date();
+            if(isNaN(start.getTime())) return 1;
             let diffTime = today - start;
             let days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
             if (days < 1) return 1;
@@ -644,6 +645,7 @@
         }
 
         function formatSilver(val) {
+            val = Number(val) || 0;
             if(val >= 1000000000) return (val / 1000000000).toFixed(2) + 'B';
             if(val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
             if(val >= 1000) return (val / 1000).toFixed(0) + 'K';
@@ -651,6 +653,7 @@
         }
 
         function formatPower(val) {
+            val = Number(val) || 0;
             if(val >= 1000000000) return (val / 1000000000).toFixed(2) + 'B';
             if(val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
             return val.toLocaleString();
@@ -664,7 +667,7 @@
                 let rA = RANK_ORDER[a.rank] || 99;
                 let rB = RANK_ORDER[b.rank] || 99;
                 if(rA !== rB) return rA - rB;
-                return (b.power || 0) - (a.power || 0);
+                return (Number(b.power) || 0) - (Number(a.power) || 0);
             });
 
             let activeDays = getAutomaticActiveDays();
@@ -685,8 +688,8 @@
                 let chestPtsTotal = 0;
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
-                        let cnt = p.chests[cName] || 0;
-                        let val = chestTypeValues[cName] || 0;
+                        let cnt = Number(p.chests[cName]) || 0;
+                        let val = Number(chestTypeValues[cName]) || 0;
                         chestPtsTotal += cnt * val;
                         if(cnt > 0) {
                             chestsHTML += `<span class="inline-block bg-slate-900 text-[10px] px-1.5 py-0.5 rounded mr-1 mb-1 border border-slate-700">${cName}: <b>${cnt}</b></span>`;
@@ -698,16 +701,19 @@
                 let towerPts = towerVal * towerPointValue;
                 let totalPts = chestPtsTotal + towerPts;
 
-                let pMacht = Number(p.power || 0);
+                // Korrigierte & abgesicherte Macht- und Sollberechnung
+                let pMacht = Number(p.power) || 0;
                 let limitMacht = 100000000;
                 let requiredGoal = p.customGoal ? Number(p.customGoal) : (pMacht < limitMacht ? goalLow : goalHigh);
                 
                 let pActiveDays = p.activeDays ? Number(p.activeDays) : activeDays;
-                let dailyTarget = requiredGoal / cycleTotalDays;
+                let validTotalDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
+                let dailyTarget = requiredGoal / validTotalDays;
                 let targetSoFar = Math.round(dailyTarget * pActiveDays);
 
+                let pointsNeeded = targetSoFar - totalPts;
                 let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-amber-950/40 border-amber-800";
-                let statusText = totalPts >= targetSoFar ? `✅ Soll erfüllt` : `⚠️ Noch ${targetSoFar - totalPts} Pkt`;
+                let statusText = totalPts >= targetSoFar ? `✅ Soll erfüllt` : `⚠️ Noch ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt`;
 
                 row.innerHTML = `
                     <td class="p-3">
@@ -781,8 +787,11 @@
             let query = document.getElementById('searchInput').value.toLowerCase();
             let rows = document.querySelectorAll('#tableBody tr');
             rows.forEach(r => {
-                let name = r.querySelector('div.font-bold').innerText.toLowerCase();
-                r.style.display = name.includes(query) ? '' : 'none';
+                let nameElement = r.querySelector('div.font-bold');
+                if(nameElement) {
+                    let name = nameElement.innerText.toLowerCase();
+                    r.style.display = name.includes(query) ? '' : 'none';
+                }
             });
         }
 
@@ -894,25 +903,25 @@
                     let existing = clanData.find(p => p.name.toLowerCase() === imp.name.toLowerCase());
                     if(existing) {
                         if(imp.rank) existing.rank = imp.rank;
-                        if(imp.power) existing.growth = imp.power - (existing.power || imp.power);
-                        if(imp.power) existing.power = imp.power;
-                        if(imp.silver) existing.silver = (existing.silver || 0) + Number(imp.silver);
-                        if(imp.tower) existing.tower = (existing.tower || 0) + Number(imp.tower);
+                        if(imp.power) existing.growth = Number(imp.power) - (Number(existing.power) || Number(imp.power));
+                        if(imp.power) existing.power = Number(imp.power);
+                        if(imp.silver) existing.silver = (Number(existing.silver) || 0) + Number(imp.silver);
+                        if(imp.tower) existing.tower = (Number(existing.tower) || 0) + Number(imp.tower);
                         
                         if(imp.chests) {
                             if(!existing.chests) existing.chests = {};
                             Object.keys(imp.chests).forEach(cKey => {
-                                existing.chests[cKey] = (existing.chests[cKey] || 0) + Number(imp.chests[cKey]);
+                                existing.chests[cKey] = (Number(existing.chests[cKey]) || 0) + Number(imp.chests[cKey]);
                             });
                         }
                     } else {
                         clanData.push({
                             name: imp.name,
                             rank: imp.rank || "Soldat",
-                            power: imp.power || 0,
+                            power: Number(imp.power) || 0,
                             growth: 0,
-                            tower: imp.tower || 0,
-                            silver: imp.silver || 0,
+                            tower: Number(imp.tower) || 0,
+                            silver: Number(imp.silver) || 0,
                             chests: imp.chests || {}
                         });
                     }
@@ -936,11 +945,11 @@
                 let pts = 0;
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
-                        pts += (p.chests[cName] || 0) * (chestTypeValues[cName] || 0);
+                        pts += (Number(p.chests[cName]) || 0) * (Number(chestTypeValues[cName]) || 0);
                     });
                 }
                 pts += Number(p.tower || 0) * towerPointValue;
-                return { name: p.name, points: pts, growth: p.growth || 0 };
+                return { name: p.name, points: pts, growth: Number(p.growth) || 0 };
             });
 
             scoredList.sort((a, b) => b.points - a.points);
