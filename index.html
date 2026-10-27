@@ -46,7 +46,7 @@
                 <button onclick="toggleAdminPanel()" class="text-slate-300 hover:text-white text-sm cursor-pointer"><i class="fa-solid fa-xmark"></i> Schließen</button>
             </div>
 
-            <!-- ZYKLUS EINSTELLUNGEN (FLEXIBLE TAGE & STARTDATUM) -->
+            <!-- ZYKLUS EINSTELLUNGEN -->
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-calendar-days"></i> Zyklus-Einstellungen (Flexibel)
@@ -257,17 +257,24 @@
             "Turmbau": 1
         };
 
-        // Zyklus Startdatum & Gesamtdauer in Tagen
         let cycleStartDate = localStorage.getItem('legio_cycle_start') || '2026-10-01';
         let cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28;
 
-        // GitHub API Config State
         let ghRepo = localStorage.getItem('legio_gh_repo') || '';
         let ghBranch = localStorage.getItem('legio_gh_branch') || 'main';
         let ghToken = localStorage.getItem('legio_gh_token') || '';
 
         let activeTab = 'chests';
         let topChart = null, growthChart = null;
+
+        // Hierarchie der Ränge festlegen
+        const RANK_ORDER = {
+            "Anführer": 1,
+            "Vorgesetzter": 2,
+            "Offizier": 3,
+            "Veteran": 4,
+            "Soldat": 5
+        };
 
         function saveData() {
             localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
@@ -294,7 +301,6 @@
             alert("GitHub-Einstellungen erfolgreich gespeichert!");
         }
 
-        // Automatische Berechnung der vergangenen Tage seit Zyklusbeginn
         function getAutomaticActiveDays() {
             let start = new Date(cycleStartDate);
             let today = new Date();
@@ -459,7 +465,6 @@
             }
         }
 
-        // --- AUTOMATISCH ADDIRIERENDER JSON-IMPORT ---
         function processJSONImport() {
             let text = document.getElementById('bulkImportText').value.trim();
             if(!text) return alert("Das Import-Feld ist leer!");
@@ -679,7 +684,17 @@
             let tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
 
-            let sorted = [...clanData].sort((a, b) => getMemberPoints(b).total - getMemberPoints(a).total);
+            // Hierarchie-Sortierung: Erst nach Rang (Anführer -> Vorgesetzter -> Offizier -> Veteran -> Soldat), danach nach Gesamtpunkten
+            let sorted = [...clanData].sort((a, b) => {
+                let rankA = RANK_ORDER[a.rank] || 99;
+                let rankB = RANK_ORDER[b.rank] || 99;
+
+                if (rankA !== rankB) {
+                    return rankA - rankB;
+                }
+                return getMemberPoints(b).total - getMemberPoints(a).total;
+            });
+
             let autoDays = getAutomaticActiveDays();
 
             sorted.forEach((member, index) => {
@@ -687,7 +702,6 @@
                 let row = document.createElement('tr');
                 let pts = getMemberPoints(member);
 
-                // Dynamische Zyklus-Tage anwenden
                 let activeDays = (member.activeDays !== null && member.activeDays !== undefined) ? member.activeDays : autoDays;
                 
                 let baseGoal = member.power < 100000000 ? 12500 : 15000;
