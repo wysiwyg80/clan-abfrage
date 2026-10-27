@@ -164,7 +164,7 @@
             </div>
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
                 <span class="text-xs text-slate-300 uppercase">Allianz Macht</span>
-                <div class="text-2xl font-bold font-cinzel text-amber-300 mt-1" id="stat-power">0</div>
+                <div class="text-lg font-bold font-cinzel text-amber-300 mt-1" id="stat-power">0</div>
             </div>
         </div>
 
@@ -597,6 +597,7 @@
 
         function formatSilver(val) {
             val = Number(val) || 0;
+            if(val >= 1000000000000) return (val / 1000000000000).toFixed(2) + 'T';
             if(val >= 1000000000) return (val / 1000000000).toFixed(2) + 'B';
             if(val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
             if(val >= 1000) return (val / 1000).toFixed(0) + 'K';
@@ -605,9 +606,7 @@
 
         function formatPower(val) {
             val = Number(val) || 0;
-            if(val >= 1000000000) return (val / 1000000000).toFixed(2) + 'B';
-            if(val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
-            return val.toLocaleString();
+            return val.toLocaleString('de-DE');
         }
 
         function renderTable() {
@@ -629,13 +628,13 @@
                 let row = document.createElement('tr');
                 row.className = "hover:bg-slate-700/40 transition";
 
-                let rankBadgeColor = "bg-slate-700 text-slate-300";
-                if(p.rank === "Anführer") rankBadgeColor = "bg-red-900/80 text-amber-300 border border-red-700";
-                else if(p.rank === "Vorgesetzter") rankBadgeColor = "bg-amber-900/60 text-amber-200 border border-amber-700";
-                else if(p.rank === "Offizier") rankBadgeColor = "bg-indigo-900/60 text-indigo-200";
-                else if(p.rank === "Veteran") rankBadgeColor = "bg-emerald-900/60 text-emerald-200";
+                let rankBadgeColor = "bg-slate-800 text-slate-300 border border-slate-700";
+                if(p.rank === "Anführer") rankBadgeColor = "bg-red-950 text-amber-300 border border-red-700 shadow-sm";
+                else if(p.rank === "Vorgesetzter") rankBadgeColor = "bg-amber-950/80 text-amber-200 border border-amber-600/60 shadow-sm";
+                else if(p.rank === "Offizier") rankBadgeColor = "bg-indigo-950 text-indigo-200 border border-indigo-800";
+                else if(p.rank === "Veteran") rankBadgeColor = "bg-emerald-950 text-emerald-200 border border-emerald-800";
 
-                let chestsHTML = '';
+                let chestDetailsList = [];
                 let chestPtsTotal = 0;
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
@@ -643,10 +642,11 @@
                         let val = Number(chestTypeValues[cName]) || 0;
                         chestPtsTotal += cnt * val;
                         if(cnt > 0) {
-                            chestsHTML += `<span class="inline-block bg-slate-900 text-[10px] px-1.5 py-0.5 rounded mr-1 mb-1 border border-slate-700">${cName}: <b>${cnt}</b></span>`;
+                            chestDetailsList.push(`${cName}: ${cnt}`);
                         }
                     });
                 }
+                let tooltipText = chestDetailsList.length > 0 ? chestDetailsList.join(" | ") : "Keine Truhen eingetragen";
 
                 let towerVal = Number(p.tower || 0);
                 let towerPts = towerVal * towerPointValue;
@@ -668,13 +668,17 @@
                 let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-amber-950/40 border-amber-800";
                 let statusText = totalPts >= targetSoFar ? `✅ Soll erfüllt` : `⚠️ Noch ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt`;
 
+                let growthVal = Number(p.growth || 0);
+
                 row.innerHTML = `
                     <td class="p-3">
-                        <div class="font-bold text-amber-300">${p.name || 'Unbekannt'}</div>
-                        <span class="inline-block text-[10px] px-2 py-0.5 rounded font-bold uppercase mt-0.5 ${rankBadgeColor}">${p.rank || 'Soldat'}</span>
+                        <div class="font-bold text-amber-300 text-sm mb-1">${p.name || 'Unbekannt'}</div>
+                        <span class="inline-block text-[10px] px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider ${rankBadgeColor}">${p.rank || 'Soldat'}</span>
                     </td>
                     <td class="p-3 text-right data-col-chests">
-                        <div class="text-slate-300">${chestsHTML || '<span class="text-slate-500">-</span>'}</div>
+                        <div class="cursor-help inline-block bg-slate-900 border border-slate-700 px-2 py-1 rounded text-amber-300 font-bold" title="${tooltipText}">
+                            ${chestPtsTotal} Pkt <span class="text-[10px] text-slate-400 font-normal">(Details)</span>
+                        </div>
                     </td>
                     <td class="p-3 text-right data-col-chests font-bold text-amber-200">
                         ${towerVal} <span class="text-[10px] text-slate-400">(${towerPts}P)</span>
@@ -697,7 +701,7 @@
                         ${formatPower(pMacht)}
                     </td>
                     <td class="p-3 text-right data-col-power hidden text-emerald-400 font-bold">
-                        +${formatPower(p.growth || 0)}
+                        +${formatPower(growthVal)}
                     </td>
                     <td class="p-3 text-center no-print">
                         <button onclick="openEditModal(${originalIndex})" class="bg-slate-700 hover:bg-slate-600 text-amber-300 px-2 py-1 rounded text-xs transition cursor-pointer" title="Bearbeiten">
