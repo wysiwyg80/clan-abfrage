@@ -509,11 +509,12 @@
       "name": "kikito",
       "rank": "Vorgesetzter",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 274164761,
       "prevPower": 274164761,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "LedZep2",
@@ -682,5 +683,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:59:25.864Z"
+  "lastUpdated": "2026-10-27T17:59:43.895Z"
 }
