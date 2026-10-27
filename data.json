@@ -432,11 +432,12 @@
       "name": "SaturdayNightFever",
       "rank": "Soldat",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 105402693,
       "prevPower": 105402693,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "eroi2",
@@ -678,5 +679,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:58:09.951Z"
+  "lastUpdated": "2026-10-27T17:58:23.781Z"
 }
