@@ -467,11 +467,12 @@
       "name": "man of war",
       "rank": "Vorgesetzter",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 1460506831,
       "prevPower": 1460506831,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Miss Dire",
@@ -684,5 +685,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T18:00:50.786Z"
+  "lastUpdated": "2026-10-27T18:01:30.012Z"
 }
