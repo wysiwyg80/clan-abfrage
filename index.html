@@ -398,16 +398,15 @@
         }
 
         async function loadFromGitHub() {
-            if(!ghRepo) return;
+            // 1. Direktes Laden der data.json über GitHub Pages
             try {
-                let apiUrl = `https://api.github.com/repos/${ghRepo}/contents/data.json?ref=${ghBranch}`;
-                let resp = await fetch(apiUrl, {
-                    headers: { 'Accept': 'application/vnd.github.v3+json' }
-                });
+                let resp = await fetch('data.json?t=' + new Date().getTime(), { cache: 'no-store' });
                 if(resp.ok) {
-                    let fileData = await resp.json();
-                    let decoded = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
-                    if(decoded.clanData) clanData = decoded.clanData;
+                    let decoded = await resp.json();
+                    if(decoded.clanData && decoded.clanData.length > 0) {
+                        clanData = decoded.clanData;
+                        localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
+                    }
                     if(decoded.chestTypeValues) chestTypeValues = decoded.chestTypeValues;
                     if(decoded.cycleStartDate) {
                         cycleStartDate = decoded.cycleStartDate;
@@ -426,9 +425,32 @@
                         localStorage.setItem('legio_goal_high', goalHigh);
                     }
                     refreshUI();
+                    return;
                 }
             } catch(e) {
-                console.log("Konnte data.json nicht automatisch laden.");
+                console.log("Konnte data.json nicht direkt laden.");
+            }
+
+            // 2. Fallback: Abruf über GitHub REST API
+            if(!ghRepo) return;
+            try {
+                let apiUrl = `https://api.github.com/repos/${ghRepo}/contents/data.json?ref=${ghBranch}`;
+                let headers = { 'Accept': 'application/vnd.github.v3+json' };
+                if(ghToken) headers['Authorization'] = `token ${ghToken}`;
+
+                let resp = await fetch(apiUrl, { headers: headers });
+                if(resp.ok) {
+                    let fileData = await resp.json();
+                    let decoded = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+                    if(decoded.clanData && decoded.clanData.length > 0) {
+                        clanData = decoded.clanData;
+                        localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
+                    }
+                    if(decoded.chestTypeValues) chestTypeValues = decoded.chestTypeValues;
+                    refreshUI();
+                }
+            } catch(e) {
+                console.log("Konnte data.json nicht über API laden.");
             }
         }
 
@@ -500,7 +522,6 @@
             }
         }
 
-        // Direktes Speichern des Silber-Werts aus der Tabellenzeile heraus
         function updateDirectSilver(index, val) {
             let parsed = parseInt(val) || 0;
             clanData[index].silver = parsed;
