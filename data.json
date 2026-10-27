@@ -1,6 +1,8 @@
 {
   "chestTypeValues": {
-    "Turmbau": 50
+    "Turmbau": 50,
+    "Truhe der Festung der Elfen": 10,
+    "Geflochtene Truhe": 10
   },
   "clanData": [
     {
@@ -125,7 +127,9 @@
     {
       "name": "Dalas",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Geflochtene Truhe": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 254013635,
@@ -458,7 +462,9 @@
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
-      "chests": {},
+      "chests": {
+        "Truhe der Festung der Elfen": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 759664191,
