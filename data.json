@@ -518,11 +518,12 @@
       "name": "Frederico Freitas",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 125917166,
       "prevPower": 125917166,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Goll",
@@ -666,5 +667,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:53:36.827Z"
+  "lastUpdated": "2026-10-27T17:53:50.411Z"
 }
