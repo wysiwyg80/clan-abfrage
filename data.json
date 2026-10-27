@@ -565,11 +565,12 @@
       "name": "Gran Rex",
       "rank": "Offizier",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 224975841,
       "prevPower": 224975841,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "TECH",
@@ -673,5 +674,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:56:26.976Z"
+  "lastUpdated": "2026-10-27T17:56:39.297Z"
 }
