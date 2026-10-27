@@ -58,11 +58,12 @@
       "name": "bjar",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 345143816,
       "prevPower": 345143816,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Biin",
@@ -663,5 +664,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:52:46.746Z"
+  "lastUpdated": "2026-10-27T17:53:01.992Z"
 }
