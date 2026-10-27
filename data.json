@@ -436,11 +436,12 @@
       "name": "eroi2",
       "rank": "Soldat",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 64865466,
       "prevPower": 64865466,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "LegatusLabienus",
@@ -667,5 +668,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:53:50.411Z"
+  "lastUpdated": "2026-10-27T17:54:07.341Z"
 }
