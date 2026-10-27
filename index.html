@@ -430,8 +430,6 @@
 
         async function loadFromGitHub() {
             let fetchedData = null;
-            
-            // Versuche 1: Relativ
             try {
                 let resp = await fetch('data.json?t=' + new Date().getTime(), { cache: 'no-store' });
                 if(resp.ok) {
@@ -439,7 +437,6 @@
                 }
             } catch(e) {}
 
-            // Versuche 2: Direkter Fallback auf Raw GitHub CDN falls 404
             if(!fetchedData) {
                 try {
                     let resp = await fetch(`https://raw.githubusercontent.com/${ghRepo}/${ghBranch}/data.json?t=` + new Date().getTime(), { cache: 'no-store' });
@@ -658,7 +655,6 @@
                 let pMacht = (p.power !== undefined && p.power !== null && !isNaN(Number(p.power))) ? Number(p.power) : 0;
                 let limitMacht = 100000000;
                 
-                // Nutze customGoal NUR wenn vorhanden und sinnvoll
                 let requiredGoal = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
                     ? Number(p.customGoal) 
                     : (pMacht < limitMacht ? goalLow : goalHigh);
@@ -683,10 +679,12 @@
                     <td class="p-3 text-right data-col-chests font-bold text-amber-200">
                         ${towerVal} <span class="text-[10px] text-slate-400">(${towerPts}P)</span>
                     </td>
-                    <td class="p-3 text-right data-col-chests text-cyan-400 font-bold">
-                        <span class="print-silver-val">${formatSilver(Number(p.silver || 0))}</span>
-                        <div class="no-print mt-1">
-                            <input type="number" value="${p.silver || 0}" step="1000000" onchange="quickUpdateSilver(${originalIndex}, this.value)" class="w-24 bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-right text-[11px] text-cyan-300 focus:outline-none focus:border-cyan-500">
+                    <td class="p-3 text-right data-col-chests">
+                        <div class="flex flex-col items-end gap-1">
+                            <span class="print-silver-val text-cyan-400 font-bold">${formatSilver(Number(p.silver || 0))}</span>
+                            <div class="no-print">
+                                <input type="number" value="${p.silver || 0}" step="1000000" onchange="quickUpdateSilver(${originalIndex}, this.value)" class="w-24 bg-slate-900 border border-slate-700 rounded px-1.5 py-0.5 text-right text-[11px] text-cyan-300 focus:outline-none focus:border-cyan-500">
+                            </div>
                         </div>
                     </td>
                     <td class="p-3 text-right data-col-chests font-bold text-amber-300 text-sm">
