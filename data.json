@@ -369,11 +369,12 @@
       "name": "Vudorr",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 28357999,
       "prevPower": 28357999,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Greynelf",
@@ -659,5 +660,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:51:17.783Z"
+  "lastUpdated": "2026-10-27T17:51:36.918Z"
 }
