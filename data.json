@@ -522,17 +522,6 @@
       "customGoal": null
     },
     {
-      "name": "LedZep2",
-      "rank": "Vorgesetzter",
-      "chests": {},
-      "tower": 1,
-      "silver": 0,
-      "power": 266496970,
-      "prevPower": 266496970,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
       "name": "Frederico Freitas",
       "rank": "Veteran",
       "chests": {},
@@ -690,5 +679,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T18:07:29.601Z"
+  "lastUpdated": "2026-10-27T20:21:35.522Z"
 }
