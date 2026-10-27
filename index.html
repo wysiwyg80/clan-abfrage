@@ -77,12 +77,12 @@
                 <h3 class="text-xs font-bold uppercase text-indigo-400 flex items-center gap-2">
                     <i class="fa-brands fa-github"></i> GitHub API Verbindung (Cloud Sync)
                 </h3>
-                <p class="text-xs text-slate-300">Trage hier deine Repository-Daten ein, damit Änderungen direkt per GitHub-API in deine <code class="text-amber-300">data.json</code> geschrieben werden:</p>
+                <p class="text-xs text-slate-300">Trage hier deine Repository-Daten ein:</p>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div>
                         <label class="text-[10px] text-slate-400 uppercase font-bold">Repository (owner/repo):</label>
-                        <input type="text" id="ghRepo" placeholder="z.B. MeinName/total-battle" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-indigo-500">
+                        <input type="text" id="ghRepo" placeholder="z.B. wysiwyg80/clan-abfrage" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-slate-100 focus:outline-none focus:border-indigo-500">
                     </div>
                     <div>
                         <label class="text-[10px] text-slate-400 uppercase font-bold">Branch:</label>
@@ -276,7 +276,8 @@
         let goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
         let goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
 
-        let ghRepo = localStorage.getItem('legio_gh_repo') || '';
+        // Fester Standard-Wert für das Repo, damit es auf Handys ohne manuelles Setup direkt lädt!
+        let ghRepo = localStorage.getItem('legio_gh_repo') || 'wysiwyg80/clan-abfrage';
         let ghBranch = localStorage.getItem('legio_gh_branch') || 'main';
         let ghToken = localStorage.getItem('legio_gh_token') || '';
 
@@ -311,7 +312,7 @@
         }
 
         function saveGitHubSettings() {
-            ghRepo = document.getElementById('ghRepo').value.trim();
+            ghRepo = document.getElementById('ghRepo').value.trim() || 'wysiwyg80/clan-abfrage';
             ghBranch = document.getElementById('ghBranch').value.trim() || 'main';
             ghToken = document.getElementById('ghToken').value.trim();
             
@@ -332,14 +333,12 @@
         }
 
         async function syncToGitHub() {
-            if(!ghRepo || !ghToken) {
-                ghRepo = document.getElementById('ghRepo').value.trim();
-                ghBranch = document.getElementById('ghBranch').value.trim() || 'main';
+            if(!ghToken) {
                 ghToken = document.getElementById('ghToken').value.trim();
             }
 
-            if(!ghRepo || !ghToken) {
-                return alert("Bitte zuerst Repository (owner/repo) und Personal Access Token eingeben!");
+            if(!ghToken) {
+                return alert("Bitte zuerst den Personal Access Token (PAT) eingeben, um zu synchronisieren!");
             }
 
             let payload = {
@@ -740,12 +739,10 @@
 
                 let activeDays = (member.activeDays !== null && member.activeDays !== undefined) ? member.activeDays : autoDays;
                 
-                // Gesamtziel ermitteln (Individuell oder nach Macht-Tier)
                 let baseGoal = (member.customGoal !== null && member.customGoal !== undefined)
                     ? member.customGoal 
                     : (member.power < 100000000 ? goalLow : goalHigh);
 
-                // Anteiliges Tages-Soll für den aktuellen Status berechnen (ohne das Hauptziel zu überschreiben)
                 let proportionalGoal = Math.round((baseGoal / cycleTotalDays) * activeDays);
                 
                 let goalMet = pts.total >= proportionalGoal;
