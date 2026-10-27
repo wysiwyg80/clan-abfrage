@@ -244,11 +244,12 @@
       "name": "UNVSU",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 203115305,
       "prevPower": 203115305,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Sirius",
@@ -680,5 +681,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:58:55.902Z"
+  "lastUpdated": "2026-10-27T17:59:12.383Z"
 }
