@@ -147,11 +147,12 @@
       "name": "Carruggi 5r",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 238262685,
       "prevPower": 238262685,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "ICHNOS",
@@ -687,5 +688,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T18:02:10.812Z"
+  "lastUpdated": "2026-10-27T18:03:40.994Z"
 }
