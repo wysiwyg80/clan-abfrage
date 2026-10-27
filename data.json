@@ -161,11 +161,12 @@
       "name": "Lee the Ugly",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 229346491,
       "prevPower": 229346491,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "kordy",
@@ -654,5 +655,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:48:36.012Z"
+  "lastUpdated": "2026-10-27T17:49:19.902Z"
 }
