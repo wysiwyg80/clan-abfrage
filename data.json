@@ -627,11 +627,12 @@
       "name": "BAD Guo II",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 753964259,
       "prevPower": 753964259,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Riyash",
@@ -670,5 +671,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:54:57.320Z"
+  "lastUpdated": "2026-10-27T17:55:11.350Z"
 }
