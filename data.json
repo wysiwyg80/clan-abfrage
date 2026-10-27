@@ -599,11 +599,12 @@
       "name": "Tanmisis",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 1095026005,
       "prevPower": 1095026005,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Sir spanksALot",
@@ -662,5 +663,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:52:32.508Z"
+  "lastUpdated": "2026-10-27T17:52:46.746Z"
 }
