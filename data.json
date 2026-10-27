@@ -7,11 +7,12 @@
       "name": "Manador II",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 613978215,
       "prevPower": 613978215,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Riyash CP CITY",
@@ -652,5 +653,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:47:52.319Z"
+  "lastUpdated": "2026-10-27T17:48:17.254Z"
 }
