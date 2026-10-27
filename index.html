@@ -12,68 +12,24 @@
         body { font-family: 'Inter', sans-serif; }
         .font-cinzel { font-family: 'Cinzel', serif; }
 
-        /* DRUCK-STYLING FOR PDF / AUSDRUCK */
         @media print {
             button, .no-print, header button, #adminPanel, #editModal, .p-3 input[type="number"], #searchInput, th:last-child, td:last-child {
                 display: none !important;
             }
-
-            body {
-                background-color: #ffffff !important;
-                color: #000000 !important;
-                padding: 0 !important;
-            }
-
-            header {
-                position: static !important;
-                border-bottom: 2px solid #b91c1c !important;
-                background: transparent !important;
-                color: #000000 !important;
-            }
-
-            h1, h2, h3, .font-cinzel {
-                color: #854d0e !important;
-            }
-
-            .bg-slate-800, .bg-slate-900 {
-                background-color: #ffffff !important;
-                border: 1px solid #cbd5e1 !important;
-                color: #000000 !important;
-                box-shadow: none !important;
-            }
-
-            table {
-                width: 100% !important;
-                border-collapse: collapse !important;
-                color: #000000 !important;
-            }
-
-            th {
-                background-color: #f1f5f9 !important;
-                color: #000000 !important;
-                border-bottom: 2px solid #94a3b8 !important;
-            }
-
-            td {
-                border-bottom: 1px solid #e2e8f0 !important;
-                color: #000000 !important;
-            }
-
-            .print-silver-val {
-                display: inline !important;
-                font-weight: bold;
-                color: #0891b2 !important;
-            }
-
-            canvas {
-                max-height: 180px !important;
-            }
+            body { background-color: #ffffff !important; color: #000000 !important; padding: 0 !important; }
+            header { position: static !important; border-bottom: 2px solid #b91c1c !important; background: transparent !important; color: #000000 !important; }
+            h1, h2, h3, .font-cinzel { color: #854d0e !important; }
+            .bg-slate-800, .bg-slate-900 { background-color: #ffffff !important; border: 1px solid #cbd5e1 !important; color: #000000 !important; box-shadow: none !important; }
+            table { width: 100% !important; border-collapse: collapse !important; color: #000000 !important; }
+            th { background-color: #f1f5f9 !important; color: #000000 !important; border-bottom: 2px solid #94a3b8 !important; }
+            td { border-bottom: 1px solid #e2e8f0 !important; color: #000000 !important; }
+            .print-silver-val { display: inline !important; font-weight: bold; color: #0891b2 !important; }
+            canvas { max-height: 180px !important; }
         }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen pb-12">
 
-    <!-- Header -->
     <header class="bg-slate-900 border-b border-red-900/40 sticky top-0 z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
@@ -98,7 +54,6 @@
 
     <main class="max-w-7xl mx-auto px-4 py-6 space-y-6">
 
-        <!-- ADMIN PANEL -->
         <div id="adminPanel" class="hidden bg-slate-900 border border-amber-500/40 rounded-xl p-5 shadow-2xl space-y-6">
             <div class="flex justify-between items-center border-b border-slate-700 pb-3">
                 <h2 class="font-cinzel font-bold text-lg text-amber-400 flex items-center gap-2">
@@ -107,12 +62,10 @@
                 <button onclick="toggleAdminPanel()" class="text-slate-300 hover:text-white text-sm cursor-pointer"><i class="fa-solid fa-xmark"></i> Schließen</button>
             </div>
 
-            <!-- ZYKLUS & GOAL EINSTELLUNGEN -->
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-calendar-days"></i> Zyklus & Standard-Gesamtziel
                 </h3>
-                <p class="text-xs text-slate-300">Stelle hier die Zyklusdauer, das Startdatum und die Standard-Gesamtzielpunkte ein:</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                     <div>
                         <label class="text-[10px] text-slate-400 uppercase font-bold">Startdatum:</label>
@@ -133,13 +86,10 @@
                 </div>
             </div>
 
-            <!-- GITHUB API SYNC EINSTELLUNGEN -->
             <div class="bg-slate-800 border border-indigo-500/30 rounded-xl p-4 space-y-3">
                 <h3 class="text-xs font-bold uppercase text-indigo-400 flex items-center gap-2">
                     <i class="fa-brands fa-github"></i> GitHub API Verbindung (Cloud Sync)
                 </h3>
-                <p class="text-xs text-slate-300">Trage hier deine Repository-Daten ein:</p>
-                
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <div>
                         <label class="text-[10px] text-slate-400 uppercase font-bold">Repository (owner/repo):</label>
@@ -164,7 +114,6 @@
                 </div>
             </div>
 
-            <!-- DYNAMISCHE TRUHEN-KATEGORIEN & PUNKTWERTE -->
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <div class="flex justify-between items-center">
                     <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
@@ -177,12 +126,10 @@
                 <div id="chestTypesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"></div>
             </div>
 
-            <!-- MASSEN-IMPORT (ADDIEREND) & ZURÜCKSETZEN -->
             <div class="bg-slate-800 border border-amber-500/40 rounded-xl p-4 space-y-3 shadow-inner">
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-file-import"></i> JSON / KI Massen-Import (Addierend)
                 </h3>
-                <p class="text-xs text-slate-300">Tägliche Werte einfügen (Truhen, Turmbau und Silber werden automatisch addiert):</p>
                 <textarea id="bulkImportText" rows="4" placeholder='[{"name":"SirLancelot","rank":"Offizier","chests":{"Krypta-Truhe":2},"tower":5,"silver":15000000,"power":125000000}]' class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
                 <div class="flex flex-wrap gap-2">
                     <button onclick="processJSONImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
@@ -198,7 +145,6 @@
             </div>
         </div>
 
-        <!-- Metric Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
                 <span class="text-xs text-slate-300 uppercase">Aktive Mitglieder</span>
@@ -222,7 +168,6 @@
             </div>
         </div>
 
-        <!-- Charts -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
                 <h3 class="text-xs font-bold text-amber-400 uppercase mb-3"><i class="fa-solid fa-trophy"></i> Top 10 Gesamtpunkte</h3>
@@ -234,7 +179,6 @@
             </div>
         </div>
 
-        <!-- SCHNELLBEFEHL: Spieler ohne Türme -->
         <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 shadow no-print">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                 <div>
@@ -246,7 +190,6 @@
                 </button>
             </div>
 
-            <!-- Ausgabebereich (Standardmäßig versteckt) -->
             <div id="ohneTuermeContainer" class="hidden mt-4 pt-4 border-t border-slate-700 space-y-3">
                 <div class="bg-slate-900 border border-amber-500/30 rounded p-3">
                     <h4 class="text-xs font-bold text-amber-300 mb-2">📋 Ergebnis-Liste für WhatsApp / Discord:</h4>
@@ -258,7 +201,6 @@
             </div>
         </div>
 
-        <!-- Haupttabelle -->
         <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow">
             <div class="p-4 border-b border-slate-700 flex flex-col sm:flex-row justify-between items-center gap-4 no-print">
                 <div class="flex items-center gap-2 w-full sm:w-auto">
@@ -295,7 +237,6 @@
 
     </main>
 
-    <!-- MODAL FÜR HINZUFÜGEN / BEARBEITEN -->
     <div id="editModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-md space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
@@ -488,36 +429,49 @@
         }
 
         async function loadFromGitHub() {
+            let fetchedData = null;
+            
+            // Versuche 1: Relativ
             try {
                 let resp = await fetch('data.json?t=' + new Date().getTime(), { cache: 'no-store' });
                 if(resp.ok) {
-                    let decoded = await resp.json();
-                    if(decoded.clanData && decoded.clanData.length > 0) {
-                        clanData = decoded.clanData;
-                        localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
-                    }
-                    if(decoded.chestTypeValues) chestTypeValues = decoded.chestTypeValues;
-                    if(decoded.cycleStartDate) {
-                        cycleStartDate = decoded.cycleStartDate;
-                        localStorage.setItem('legio_cycle_start', cycleStartDate);
-                    }
-                    if(decoded.cycleTotalDays) {
-                        cycleTotalDays = decoded.cycleTotalDays;
-                        localStorage.setItem('legio_cycle_total_days', cycleTotalDays);
-                    }
-                    if(decoded.goalLow) {
-                        goalLow = decoded.goalLow;
-                        localStorage.setItem('legio_goal_low', goalLow);
-                    }
-                    if(decoded.goalHigh) {
-                        goalHigh = decoded.goalHigh;
-                        localStorage.setItem('legio_goal_high', goalHigh);
-                    }
-                    refreshUI();
-                    return;
+                    fetchedData = await resp.json();
                 }
-            } catch(e) {
-                console.log("Konnte data.json nicht direkt laden:", e);
+            } catch(e) {}
+
+            // Versuche 2: Direkter Fallback auf Raw GitHub CDN falls 404
+            if(!fetchedData) {
+                try {
+                    let resp = await fetch(`https://raw.githubusercontent.com/${ghRepo}/${ghBranch}/data.json?t=` + new Date().getTime(), { cache: 'no-store' });
+                    if(resp.ok) {
+                        fetchedData = await resp.json();
+                    }
+                } catch(e) {}
+            }
+
+            if(fetchedData) {
+                if(fetchedData.clanData && fetchedData.clanData.length > 0) {
+                    clanData = fetchedData.clanData;
+                    localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
+                }
+                if(fetchedData.chestTypeValues) chestTypeValues = fetchedData.chestTypeValues;
+                if(fetchedData.cycleStartDate) {
+                    cycleStartDate = fetchedData.cycleStartDate;
+                    localStorage.setItem('legio_cycle_start', cycleStartDate);
+                }
+                if(fetchedData.cycleTotalDays) {
+                    cycleTotalDays = fetchedData.cycleTotalDays;
+                    localStorage.setItem('legio_cycle_total_days', cycleTotalDays);
+                }
+                if(fetchedData.goalLow) {
+                    goalLow = fetchedData.goalLow;
+                    localStorage.setItem('legio_goal_low', goalLow);
+                }
+                if(fetchedData.goalHigh) {
+                    goalHigh = fetchedData.goalHigh;
+                    localStorage.setItem('legio_goal_high', goalHigh);
+                }
+                refreshUI();
             }
         }
 
@@ -701,12 +655,15 @@
                 let towerPts = towerVal * towerPointValue;
                 let totalPts = chestPtsTotal + towerPts;
 
-                // Korrigierte & abgesicherte Macht- und Sollberechnung
-                let pMacht = Number(p.power) || 0;
+                let pMacht = (p.power !== undefined && p.power !== null && !isNaN(Number(p.power))) ? Number(p.power) : 0;
                 let limitMacht = 100000000;
-                let requiredGoal = p.customGoal ? Number(p.customGoal) : (pMacht < limitMacht ? goalLow : goalHigh);
                 
-                let pActiveDays = p.activeDays ? Number(p.activeDays) : activeDays;
+                // Nutze customGoal NUR wenn vorhanden und sinnvoll
+                let requiredGoal = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
+                    ? Number(p.customGoal) 
+                    : (pMacht < limitMacht ? goalLow : goalHigh);
+                
+                let pActiveDays = (p.activeDays && !isNaN(Number(p.activeDays))) ? Number(p.activeDays) : activeDays;
                 let validTotalDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
                 let dailyTarget = requiredGoal / validTotalDays;
                 let targetSoFar = Math.round(dailyTarget * pActiveDays);
