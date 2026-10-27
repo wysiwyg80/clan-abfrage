@@ -88,11 +88,12 @@
       "name": "Kariel",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 294183295,
       "prevPower": 294183295,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Auzar",
@@ -657,5 +658,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:50:01.955Z"
+  "lastUpdated": "2026-10-27T17:50:40.335Z"
 }
