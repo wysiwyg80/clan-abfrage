@@ -388,7 +388,8 @@
       "tower": 0,
       "power": 759664191,
       "prevPower": 759664191,
-      "activeDays": 28
+      "activeDays": 28,
+      "customGoal": 100000000
     },
     {
       "name": "man of war",
@@ -586,5 +587,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T01:09:41.108Z"
+  "lastUpdated": "2026-10-27T01:12:48.742Z"
 }
