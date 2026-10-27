@@ -46,20 +46,28 @@
                 <button onclick="toggleAdminPanel()" class="text-slate-300 hover:text-white text-sm cursor-pointer"><i class="fa-solid fa-xmark"></i> Schließen</button>
             </div>
 
-            <!-- ZYKLUS EINSTELLUNGEN -->
+            <!-- ZYKLUS & GOAL EINSTELLUNGEN -->
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
-                    <i class="fa-solid fa-calendar-days"></i> Zyklus-Einstellungen (Flexibel)
+                    <i class="fa-solid fa-calendar-days"></i> Zyklus & Standard-Gesamtziel
                 </h3>
-                <p class="text-xs text-slate-300">Stelle hier das Startdatum und die Dauer eures aktuellen Zyklus ein:</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <p class="text-xs text-slate-300">Stelle hier die Zyklusdauer, das Startdatum und die Standard-Gesamtzielpunkte ein:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                     <div>
-                        <label class="text-[10px] text-slate-400 uppercase font-bold">Zyklus-Startdatum:</label>
-                        <input type="date" id="cycleStartDateInput" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Startdatum:</label>
+                        <input type="date" id="cycleStartDateInput" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                     <div>
-                        <label class="text-[10px] text-slate-400 uppercase font-bold">Gesamtdauer des Zyklus (Tage):</label>
-                        <input type="number" id="cycleTotalDaysInput" min="1" value="28" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Zyklus Dauer (Tage):</label>
+                        <input type="number" id="cycleTotalDaysInput" min="1" value="28" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Gesamtziel &lt; 100M Macht:</label>
+                        <input type="number" id="goalLowInput" value="12500" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
+                    </div>
+                    <div>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Gesamtziel &gt; 100M Macht:</label>
+                        <input type="number" id="goalHighInput" value="15000" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                 </div>
             </div>
@@ -184,7 +192,7 @@
                             <th class="p-3 text-right data-col-chests">Truhen (Details & Pkt)</th>
                             <th class="p-3 text-right data-col-chests">Turmbau-Pkt</th>
                             <th class="p-3 text-right data-col-chests">Gesamt-Pkt</th>
-                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status</th>
+                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status (Tages-Anteil)</th>
                             <th class="p-3 text-right data-col-power hidden">Macht</th>
                             <th class="p-3 text-right data-col-power hidden">Zuwachs</th>
                             <th class="p-3 text-center">Aktionen</th>
@@ -232,9 +240,15 @@
                         <input type="number" id="editTower" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
                     </div>
                 </div>
-                <div>
-                    <label class="text-[10px] uppercase font-bold text-slate-400">Aktive Tage (Manuell überschreiben, sonst automatisch)</label>
-                    <input type="number" id="editActiveDays" min="1" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-[10px] uppercase font-bold text-slate-400">Individuelles Gesamtziel (optional)</label>
+                        <input type="number" id="editCustomGoal" placeholder="z.B. 20000" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
+                    </div>
+                    <div>
+                        <label class="text-[10px] uppercase font-bold text-slate-400">Aktive Tage (optional überschreiben)</label>
+                        <input type="number" id="editActiveDays" min="1" placeholder="z.B. 10" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
+                    </div>
                 </div>
             </div>
             <div class="flex justify-between items-center pt-2 border-t border-slate-700">
@@ -259,6 +273,8 @@
 
         let cycleStartDate = localStorage.getItem('legio_cycle_start') || '2026-10-01';
         let cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28;
+        let goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
+        let goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
 
         let ghRepo = localStorage.getItem('legio_gh_repo') || '';
         let ghBranch = localStorage.getItem('legio_gh_branch') || 'main';
@@ -267,7 +283,6 @@
         let activeTab = 'chests';
         let topChart = null, growthChart = null;
 
-        // Hierarchie der Ränge festlegen
         const RANK_ORDER = {
             "Anführer": 1,
             "Vorgesetzter": 2,
@@ -285,8 +300,13 @@
         function saveCycleSettings() {
             cycleStartDate = document.getElementById('cycleStartDateInput').value;
             cycleTotalDays = parseInt(document.getElementById('cycleTotalDaysInput').value) || 28;
+            goalLow = parseInt(document.getElementById('goalLowInput').value) || 12500;
+            goalHigh = parseInt(document.getElementById('goalHighInput').value) || 15000;
+
             localStorage.setItem('legio_cycle_start', cycleStartDate);
             localStorage.setItem('legio_cycle_total_days', cycleTotalDays);
+            localStorage.setItem('legio_goal_low', goalLow);
+            localStorage.setItem('legio_goal_high', goalHigh);
             refreshUI();
         }
 
@@ -327,6 +347,8 @@
                 clanData: clanData,
                 cycleStartDate: cycleStartDate,
                 cycleTotalDays: cycleTotalDays,
+                goalLow: goalLow,
+                goalHigh: goalHigh,
                 lastUpdated: new Date().toISOString()
             };
 
@@ -392,6 +414,14 @@
                         cycleTotalDays = decoded.cycleTotalDays;
                         localStorage.setItem('legio_cycle_total_days', cycleTotalDays);
                     }
+                    if(decoded.goalLow) {
+                        goalLow = decoded.goalLow;
+                        localStorage.setItem('legio_goal_low', goalLow);
+                    }
+                    if(decoded.goalHigh) {
+                        goalHigh = decoded.goalHigh;
+                        localStorage.setItem('legio_goal_high', goalHigh);
+                    }
                     refreshUI();
                 }
             } catch(e) {
@@ -405,10 +435,12 @@
             document.getElementById('ghToken').value = ghToken;
             document.getElementById('cycleStartDateInput').value = cycleStartDate;
             document.getElementById('cycleTotalDaysInput').value = cycleTotalDays;
+            document.getElementById('goalLowInput').value = goalLow;
+            document.getElementById('goalHighInput').value = goalHigh;
 
             let headerElem = document.getElementById('th-soll-header');
             if(headerElem) {
-                headerElem.innerText = `Soll-Status (<100M: 12.5k | >100M: 15k / ${cycleTotalDays}T)`;
+                headerElem.innerText = `Soll-Status (<100M: ${goalLow.toLocaleString()} | >100M: ${goalHigh.toLocaleString()} / ${cycleTotalDays}T)`;
             }
 
             renderChestTypeConfig();
@@ -513,7 +545,8 @@
                             tower: item.tower || item.turmbau || 0,
                             power: item.power || item.macht || 0,
                             prevPower: item.power || item.macht || 0,
-                            activeDays: item.activeDays || null
+                            activeDays: item.activeDays || null,
+                            customGoal: item.customGoal || null
                         };
                         clanData.push(memberObj);
                     }
@@ -570,6 +603,7 @@
             document.getElementById('editRank').value = "Soldat";
             document.getElementById('editPower').value = "";
             document.getElementById('editTower').value = "";
+            document.getElementById('editCustomGoal').value = "";
             document.getElementById('editActiveDays').value = "";
             document.getElementById('btnResetSingle').classList.add('hidden');
             document.getElementById('editModal').classList.remove('hidden');
@@ -583,6 +617,7 @@
             document.getElementById('editRank').value = m.rank || 'Soldat';
             document.getElementById('editPower').value = m.power || 0;
             document.getElementById('editTower').value = m.tower || 0;
+            document.getElementById('editCustomGoal').value = m.customGoal || "";
             document.getElementById('editActiveDays').value = m.activeDays !== null && m.activeDays !== undefined ? m.activeDays : "";
             document.getElementById('btnResetSingle').classList.remove('hidden');
             document.getElementById('editModal').classList.remove('hidden');
@@ -598,6 +633,7 @@
             if(!nameVal) return alert("Bitte einen Namen angeben!");
 
             let activeDaysInput = document.getElementById('editActiveDays').value.trim();
+            let customGoalInput = document.getElementById('editCustomGoal').value.trim();
 
             let memberObj = {
                 name: nameVal,
@@ -606,7 +642,8 @@
                 tower: parseInt(document.getElementById('editTower').value) || 0,
                 power: parseInt(document.getElementById('editPower').value) || 0,
                 prevPower: parseInt(document.getElementById('editPower').value) || 0,
-                activeDays: activeDaysInput !== "" ? parseInt(activeDaysInput) : null
+                activeDays: activeDaysInput !== "" ? parseInt(activeDaysInput) : null,
+                customGoal: customGoalInput !== "" ? parseInt(customGoalInput) : null
             };
 
             if(idx === "") {
@@ -684,7 +721,6 @@
             let tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
 
-            // Hierarchie-Sortierung: Erst nach Rang (Anführer -> Vorgesetzter -> Offizier -> Veteran -> Soldat), danach nach Gesamtpunkten
             let sorted = [...clanData].sort((a, b) => {
                 let rankA = RANK_ORDER[a.rank] || 99;
                 let rankB = RANK_ORDER[b.rank] || 99;
@@ -704,15 +740,20 @@
 
                 let activeDays = (member.activeDays !== null && member.activeDays !== undefined) ? member.activeDays : autoDays;
                 
-                let baseGoal = member.power < 100000000 ? 12500 : 15000;
-                let individualGoal = Math.round((baseGoal / cycleTotalDays) * activeDays);
+                // Gesamtziel ermitteln (Individuell oder nach Macht-Tier)
+                let baseGoal = (member.customGoal !== null && member.customGoal !== undefined)
+                    ? member.customGoal 
+                    : (member.power < 100000000 ? goalLow : goalHigh);
+
+                // Anteiliges Tages-Soll für den aktuellen Status berechnen (ohne das Hauptziel zu überschreiben)
+                let proportionalGoal = Math.round((baseGoal / cycleTotalDays) * activeDays);
                 
-                let goalMet = pts.total >= individualGoal;
-                let difference = individualGoal - pts.total;
+                let goalMet = pts.total >= proportionalGoal;
+                let difference = proportionalGoal - pts.total;
 
                 let statusBadge = goalMet 
-                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2.5 py-1 rounded-full font-medium" title="Ziel erreicht">+${Math.abs(difference).toLocaleString('de-DE')} Pkt Puffer</span>`
-                    : `<span class="bg-red-950 text-red-300 border border-red-800/60 px-2.5 py-1 rounded-full font-medium" title="Ziel: ${individualGoal.toLocaleString('de-DE')} Pkt">Fehlen: ${difference.toLocaleString('de-DE')} Pkt</span>`;
+                    ? `<span class="bg-emerald-950 text-emerald-300 border border-emerald-800/60 px-2.5 py-1 rounded-full font-medium" title="Gesamtziel: ${baseGoal.toLocaleString('de-DE')} Pkt">+${Math.abs(difference).toLocaleString('de-DE')} Pkt Puffer</span>`
+                    : `<span class="bg-red-950 text-red-300 border border-red-800/60 px-2.5 py-1 rounded-full font-medium" title="Soll für Tag ${activeDays}: ${proportionalGoal.toLocaleString('de-DE')} / Gesamtziel: ${baseGoal.toLocaleString('de-DE')} Pkt">Fehlen: ${difference.toLocaleString('de-DE')} Pkt</span>`;
 
                 let powerDelta = member.power - member.prevPower;
                 let deltaColor = powerDelta >= 0 ? "text-emerald-400" : "text-red-400";
