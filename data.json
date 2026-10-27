@@ -136,11 +136,12 @@
       "name": "Heimdall sk",
       "rank": "Veteran",
       "chests": {},
-      "tower": 0,
+      "tower": 1,
+      "silver": 0,
       "power": 251012385,
       "prevPower": 251012385,
       "activeDays": 28,
-      "silver": 0
+      "customGoal": null
     },
     {
       "name": "Carruggi 5r",
@@ -674,5 +675,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-27T17:56:39.297Z"
+  "lastUpdated": "2026-10-27T17:57:04.872Z"
 }
