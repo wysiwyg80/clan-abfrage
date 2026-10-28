@@ -102,7 +102,11 @@
     "Sandtruhe (Level 25)": 10,
     "Sandtruhe (Level 10)": 10,
     "Truhe der Festung der Elfen (Level 15)": 10,
-    "Festung (Level 25)": 10
+    "Festung (Level 25)": 10,
+    "Schatzkammer der Ahnen (Level 30-34)": 10,
+    "Truhe der Orks": 10,
+    "Schatzkammer der Ahnen (Level 40-44)": 10,
+    "Truhe der Orks (Level 25)": 10
   },
   "clanData": [
     {
@@ -228,7 +232,9 @@
     {
       "name": "Elginan",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Sandtruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 293549896,
@@ -343,7 +349,13 @@
     {
       "name": "Roula",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Sandtruhe (Level 25)": 2,
+        "Truhe der Orks": 1,
+        "Sandtruhe": 2,
+        "Truhe der Orks (Level 25)": 2,
+        "Gruft (Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 206098061,
@@ -410,7 +422,10 @@
     {
       "name": "eroi",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Schatzkammer der Ahnen (Level 30-34)": 1,
+        "Truhe der Festung der Elfen (Level 15)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 176643591,
@@ -528,7 +543,9 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Gruft (Level 15)": 1
+      },
       "growth": 0
     },
     {
@@ -592,7 +609,10 @@
     {
       "name": "eroi2",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Gruft-Truhe (Level 20)": 1,
+        "Gladiatorentruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 64930666,
@@ -632,7 +652,9 @@
       "name": "Miss Dire",
       "rank": "Vorgesetzter",
       "chests": {
-        "Schöne Truhe": 1
+        "Schöne Truhe": 1,
+        "Saphir-Truhe": 5,
+        "Schatzkammer der Ahnen (Level 40-44)": 1
       },
       "tower": 0,
       "silver": 0,
@@ -690,7 +712,8 @@
       "rank": "Offizier",
       "chests": {
         "Truhe der Maya (Level 25)": 1,
-        "Festung (Level 25)": 1
+        "Festung (Level 25)": 1,
+        "Saphir-Truhe": 1
       },
       "tower": 0,
       "silver": 0,
@@ -702,7 +725,11 @@
     {
       "name": "Delalen",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Saphir-Truhe": 1,
+        "Truhe der Maya (Gruft Level 15)": 1,
+        "Gruft (Level 15)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 333575999,
