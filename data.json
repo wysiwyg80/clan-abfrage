@@ -59,22 +59,8 @@
     "Geflochtene Truhe (Epische Gruft Level 30)": 10,
     "Schildkröten-Truhe (Epische Gruft Level 30)": 10,
     "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 10,
-    "Seltene Drachentruhe": 10,
-    "Geflochtene Truhe": 10,
-    "Truhe der Zwergen-Werkstatt": 10,
-    "Truhe der Kobra": 10,
-    "Vergessene Truhe": 10,
-    "Sandtruhe": 10,
-    "Schöne Truhe": 10,
-    "Barbarentruhe": 10,
     "Knochentruhe": 10,
-    "Saphir-Truhe": 10,
-    "Truhe der Orks": 10,
-    "Steintruhe": 10,
-    "Truhe der Festung der Elfen": 10,
-    "Truhe der Maya": 10,
-    "Schatzkammer der Ahnen Level 35-39": 10,
-    "Gladiatorentruhe": 10
+    "Schatzkammer der Ahnen Level 35-39": 10
   },
   "clanData": [
     {
@@ -286,11 +272,7 @@
     {
       "name": "Roula",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Orks": 4,
-        "Sandtruhe": 3,
-        "Gladiatorentruhe": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 206098061,
@@ -354,10 +336,7 @@
     {
       "name": "eroi",
       "rank": "Veteran",
-      "chests": {
-        "Steintruhe": 1,
-        "Truhe der Festung der Elfen": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 176643591,
@@ -553,10 +532,7 @@
     {
       "name": "Miss Dire",
       "rank": "Vorgesetzter",
-      "chests": {
-        "Saphir-Truhe": 4,
-        "Schatzkammer der Ahnen Level 35-39": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 447252685,
@@ -611,9 +587,7 @@
     {
       "name": "Goll",
       "rank": "Offizier",
-      "chests": {
-        "Truhe der Festung der Elfen": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 353205806,
@@ -624,10 +598,7 @@
     {
       "name": "Delalen",
       "rank": "Offizier",
-      "chests": {
-        "Saphir-Truhe": 1,
-        "Truhe der Maya": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 333575999,
@@ -747,10 +718,7 @@
     {
       "name": "Noli",
       "rank": "Veteran",
-      "chests": {
-        "Vergessene Truhe": 1,
-        "Truhe der Orks": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 235429605,
@@ -786,5 +754,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-28T20:50:12.275Z"
+  "lastUpdated": "2026-10-28T22:58:43.246Z"
 }
