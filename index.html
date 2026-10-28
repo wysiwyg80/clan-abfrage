@@ -63,9 +63,14 @@
             </div>
 
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
-                <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
-                    <i class="fa-solid fa-calendar-days"></i> Zyklus & Standard-Gesamtziel
-                </h3>
+                <div class="flex justify-between items-center">
+                    <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-days"></i> Zyklus & Standard-Gesamtziel
+                    </h3>
+                    <button onclick="resetCycleDateToToday()" class="bg-slate-700 hover:bg-slate-600 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-rotate-right"></i> Zyklus auf heute zurücksetzen (Tag 1)
+                    </button>
+                </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                     <div>
                         <label class="text-[10px] text-slate-400 uppercase font-bold">Startdatum:</label>
@@ -135,10 +140,13 @@
                     <button onclick="processJSONImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
                         <i class="fa-solid fa-upload"></i> Daten Addieren & Sync
                     </button>
-                    <button onclick="resetAllPoints()" class="bg-amber-900/60 hover:bg-amber-800 text-amber-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 ml-auto">
+                    <button onclick="resetOnlyChestsPoints()" class="bg-amber-800/80 hover:bg-amber-700 text-amber-100 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                        <i class="fa-solid fa-box-archive"></i> Truhen-Punkte auf Null
+                    </button>
+                    <button onclick="resetAllPoints()" class="bg-amber-950 hover:bg-amber-900 text-amber-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
                         <i class="fa-solid fa-rotate-left"></i> Alle Punkte auf Null setzen
                     </button>
-                    <button onclick="clearAllData()" class="bg-red-900/80 hover:bg-red-800 text-red-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                    <button onclick="clearAllData()" class="bg-red-900/80 hover:bg-red-800 text-red-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 ml-auto">
                         <i class="fa-solid fa-trash-can"></i> Alle Mitglieder löschen
                     </button>
                 </div>
@@ -343,6 +351,14 @@
             localStorage.setItem('legio_goal_low', goalLow);
             localStorage.setItem('legio_goal_high', goalHigh);
             refreshUI();
+        }
+
+        function resetCycleDateToToday() {
+            let todayIso = new Date().toISOString().split('T')[0];
+            cycleStartDate = todayIso;
+            document.getElementById('cycleStartDateInput').value = todayIso;
+            saveCycleSettings();
+            alert("Zyklus-Startdatum wurde auf heute (" + todayIso + ") zurückgesetzt (Tag 1 aktiv).");
         }
 
         function saveGitHubSettings() {
@@ -830,6 +846,16 @@
             if(confirm(`Mitglied "${clanData[index].name}" wirklich löschen?`)) {
                 clanData.splice(index, 1);
                 saveData();
+            }
+        }
+
+        function resetOnlyChestsPoints() {
+            if(confirm("Möchtest du wirklich die Truhen-Punkte (Zählerstände aller Truhenarten) für ALLE Mitglieder auf 0 zurücksetzen? (Turmbau, Silber und Macht bleiben erhalten)")) {
+                clanData.forEach(p => {
+                    p.chests = {};
+                });
+                saveData();
+                alert("Alle Truhen-Punkte wurden auf 0 zurückgesetzt.");
             }
         }
 
