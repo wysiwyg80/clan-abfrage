@@ -58,7 +58,16 @@
     "Truhe der Festung der Elfen (Festung Level 25)": 10,
     "Geflochtene Truhe (Epische Gruft Level 30)": 10,
     "Schildkröten-Truhe (Epische Gruft Level 30)": 10,
-    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 10
+    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 10,
+    "Seltene Drachentruhe": 10,
+    "Geflochtene Truhe": 10,
+    "Truhe der Zwergen-Werkstatt": 10,
+    "Truhe der Kobra": 10,
+    "Vergessene Truhe": 10,
+    "Sandtruhe": 10,
+    "Schöne Truhe": 10,
+    "Barbarentruhe": 10,
+    "Knochentruhe": 10
   },
   "clanData": [
     {
@@ -752,5 +761,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-28T20:49:42.986Z"
+  "lastUpdated": "2026-10-28T20:50:12.275Z"
 }
