@@ -805,7 +805,9 @@
       "chests": {
         "Sandtruhe": 1,
         "Sandtruhe (Level 10)": 1,
-        "Truhe der Festung der Elfen (Level 15)": 1
+        "Truhe der Festung der Elfen (Level 15)": 1,
+        "Schöne Truhe": 1,
+        "Schöne Truhe (Level 20)": 1
       },
       "growth": 0
     },
