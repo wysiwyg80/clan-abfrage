@@ -35,7 +35,24 @@
     "Truhe der Untoten (Heldenhafte Monster Level 26)": 10,
     "Sandtruhe (Gruft Level 20)": 10,
     "Feuertruhe (Gruft Level 20)": 10,
-    "Knochentruhe (Gruft Level 20)": 10
+    "Knochentruhe (Gruft Level 20)": 10,
+    "Heldenhafte Monster Level 26": 10,
+    "Gruft Level 20": 10,
+    "Gruft Level 25": 10,
+    "Truhe der Orks (Gruft Level 20)": 10,
+    "Truhe der Maya (Gruft Level 15)": 10,
+    "Schöne Truhe (Gruft Level 15)": 10,
+    "Infernale Truhe (Gruft Level 20)": 10,
+    "Feuertruhe (Gruft Level 15)": 10,
+    "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 10,
+    "Vergessene Truhe (Gruft Level 20)": 10,
+    "Sandtruhe (Gruft Level 15)": 10,
+    "Truhe der Elfen (Heldenhafte Monster Level 17)": 10,
+    "Truhe der Untoten (Heldenhafte Monster Level 16)": 10,
+    "Harpyien-Truhe (Epische Gruft Level 20)": 10,
+    "Jack-Reaper-Truhe (Kürbis)": 10,
+    "Skorpion-Truhe (Epische Gruft Level 25)": 10,
+    "Harpyien-Truhe (Epische Gruft Level 25)": 10
   },
   "clanData": [
     {
@@ -48,8 +65,9 @@
         "Truhe der Verfluchten": 2,
         "Infernale Truhe": 2,
         "Infernotruhe (Heldenhafte Monster Level 25)": 3,
-        "Barbarentruhe (Heldenhafte Monster Level 24)": 4,
-        "Truhe der Untoten (Heldenhafte Monster Level 26)": 4
+        "Barbarentruhe (Heldenhafte Monster Level 24)": 6,
+        "Truhe der Untoten (Heldenhafte Monster Level 26)": 7,
+        "Heldenhafte Monster Level 26": 2
       },
       "tower": 1,
       "silver": 0,
@@ -295,8 +313,20 @@
         "Schöne Truhe": 3,
         "Sandtruhe": 2,
         "Truhe der Kobra (Gruft Level 20)": 2,
-        "Truhe der Kobra (Gruft Level 25)": 2,
-        "Sandtruhe (Gruft Level 20)": 4
+        "Truhe der Kobra (Gruft Level 25)": 5,
+        "Sandtruhe (Gruft Level 20)": 10,
+        "Gruft Level 20": 2,
+        "Gruft Level 25": 1,
+        "Truhe der Orks (Gruft Level 20)": 8,
+        "Schöne Truhe (Gruft Level 15)": 4,
+        "Infernale Truhe (Gruft Level 20)": 4,
+        "Feuertruhe (Gruft Level 15)": 2,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 2,
+        "Vergessene Truhe (Gruft Level 20)": 1,
+        "Feuertruhe (Gruft Level 20)": 2,
+        "Sandtruhe (Gruft Level 15)": 2,
+        "Truhe der Orks (Gruft Level 25)": 8,
+        "Sandtruhe (Gruft Level 25)": 5
       },
       "tower": 1,
       "silver": 0,
@@ -455,11 +485,12 @@
       "rank": "Veteran",
       "chests": {
         "Sandtruhe": 1,
-        "Schöne Truhe (Gruft Level 25)": 2,
-        "Feuertruhe (Gruft Level 25)": 2,
+        "Schöne Truhe (Gruft Level 25)": 3,
+        "Feuertruhe (Gruft Level 25)": 4,
         "Feuertruhe (Gruft Level 20)": 1,
         "Knochentruhe (Gruft Level 20)": 1,
-        "Knochentruhe (Gruft Level 25)": 1
+        "Knochentruhe (Gruft Level 25)": 5,
+        "Gruft Level 25": 1
       },
       "tower": 1,
       "silver": 0,
@@ -529,8 +560,8 @@
       "name": "SaturdayNightFever",
       "rank": "Soldat",
       "chests": {
-        "Schöne Truhe (Gruft Level 20)": 2,
-        "Truhe der Orks (Gruft Level 25)": 2
+        "Schöne Truhe (Gruft Level 20)": 4,
+        "Truhe der Orks (Gruft Level 25)": 4
       },
       "tower": 1,
       "silver": 0,
@@ -554,7 +585,7 @@
       "name": "LegatusLabienus",
       "rank": "Anführer",
       "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 14
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 18
       },
       "tower": 1,
       "silver": 0,
@@ -646,13 +677,14 @@
         "Truhe der Maya (Gruft Level 20)": 2,
         "Seltene Gruft Level 25 (Seltene Gruft Level 25)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2,
-        "Vergessene Truhe (Gruft Level 25)": 3,
-        "Truhe der Orks (Gruft Level 25)": 1,
+        "Vergessene Truhe (Gruft Level 25)": 5,
+        "Truhe der Orks (Gruft Level 25)": 3,
         "Sandtruhe (Seltene Gruft Level 30)": 1,
         "Drachentruhe (Gruft Level 25)": 1,
         "Alte Truhe (Gruft Level 25)": 2,
-        "Schöne Truhe (Gruft Level 25)": 4,
-        "Barbarentruhe (Gruft Level 25)": 2
+        "Schöne Truhe (Gruft Level 25)": 8,
+        "Barbarentruhe (Gruft Level 25)": 4,
+        "Sandtruhe (Gruft Level 25)": 2
       },
       "tower": 1,
       "silver": 0,
@@ -668,7 +700,10 @@
         "Feuertruhe": 2,
         "Harpyien-Truhe": 5,
         "Kobalt-Truhe": 2,
-        "Harpylen-Truhe": 1
+        "Harpylen-Truhe": 1,
+        "Harpyien-Truhe (Epische Gruft Level 20)": 1,
+        "Skorpion-Truhe (Epische Gruft Level 25)": 4,
+        "Harpyien-Truhe (Epische Gruft Level 25)": 2
       },
       "tower": 1,
       "silver": 0,
@@ -717,7 +752,9 @@
         "Truhe der Festung der Elfen": 5,
         "Truhe der Festung der Verfluchten": 1,
         "Truhe der Verfluchten": 8,
-        "Truhe der Elfen": 3
+        "Truhe der Elfen": 3,
+        "Truhe der Elfen (Heldenhafte Monster Level 17)": 4,
+        "Truhe der Untoten (Heldenhafte Monster Level 16)": 2
       },
       "tower": 1,
       "silver": 0,
@@ -729,7 +766,9 @@
     {
       "name": "PABLUS",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Gruft Level 15)": 2
+      },
       "tower": 1,
       "silver": 0,
       "power": 104122751,
@@ -740,7 +779,9 @@
     {
       "name": "Tanmisis",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Jack-Reaper-Truhe (Kürbis)": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 1095026005,
@@ -838,7 +879,7 @@
       "name": "Furya",
       "rank": "Soldat",
       "chests": {
-        "Feuertruhe (Gruft Level 25)": 2,
+        "Feuertruhe (Gruft Level 25)": 4,
         "Barbarentruhe (Gruft Level 25)": 2
       },
       "tower": 0,
