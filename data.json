@@ -1,12 +1,39 @@
 {
   "chestTypeValues": {
-    "Turmbau": 50
+    "Turmbau": 50,
+    "Feuertruhe": 10,
+    "Infernale Truhe": 10,
+    "Sandtruhe": 10,
+    "Schöne Truhe": 10,
+    "Truhe der Festung der Elfen": 10,
+    "Truhe der Festung der Verfluchten": 10,
+    "Truhe der Maya": 10,
+    "Infernotruhe": 10,
+    "Trillium-Truhe": 10,
+    "Geflochtene Truhe": 10,
+    "Seltene Drachentruhe": 10,
+    "Steintruhe": 10,
+    "Barbarentruhe": 10,
+    "Truhe der Kobra": 10,
+    "Truhe der Zwergen-Werkstatt": 10,
+    "Knochentruhe": 10,
+    "Kürbistruhe": 10,
+    "Truhe der Untoten": 10,
+    "Truhe der Verfluchten": 10,
+    "Truhe der Orks": 10,
+    "Alte Truhe eines Kriegers": 10,
+    "Titanstahl-Truhe": 10
   },
   "clanData": [
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Kürbistruhe": 1,
+        "Infernotruhe": 7,
+        "Truhe der Untoten": 2,
+        "Truhe der Verfluchten": 2
+      },
       "tower": 1,
       "silver": 0,
       "power": 613978215,
@@ -147,7 +174,11 @@
     {
       "name": "Carruggi 5r",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Infernale Truhe": 4,
+        "Sandtruhe": 2,
+        "Schöne Truhe": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 238262685,
@@ -201,7 +232,9 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Steintruhe": 2
+      },
       "tower": 1,
       "silver": 0,
       "power": 212187521,
@@ -212,7 +245,16 @@
     {
       "name": "BELEN",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Orks": 2,
+        "Alte Truhe eines Kriegers": 2,
+        "Sandtruhe": 2,
+        "Knochentruhe": 2,
+        "Titanstahl-Truhe": 2,
+        "Truhe der Untoten": 2,
+        "Seltene Drachentruhe": 8,
+        "Truhe der Kobra": 2
+      },
       "tower": 1,
       "silver": 0,
       "power": 209779281,
@@ -223,7 +265,10 @@
     {
       "name": "Roula",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Feuertruhe": 1,
+        "Infernale Truhe": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 206038061,
@@ -245,7 +290,11 @@
     {
       "name": "UNVSU",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Sandtruhe": 3,
+        "Barbarentruhe": 2,
+        "Truhe der Maya": 2
+      },
       "tower": 1,
       "silver": 0,
       "power": 203115305,
@@ -372,7 +421,9 @@
     {
       "name": "Burigas",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Sandtruhe": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 81059435,
@@ -383,7 +434,9 @@
     {
       "name": "Vudorr",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Feuertruhe": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 28357999,
@@ -590,7 +643,10 @@
     {
       "name": "Son Of Algéri",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Truhe der Festung der Elfen": 5,
+        "Truhe der Festung der Verfluchten": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 182695460,
@@ -601,7 +657,12 @@
     {
       "name": "PABLUS",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Truhe der Zwergen-Werkstatt": 4,
+        "Truhe der Maya": 1,
+        "Feuertruhe": 1,
+        "Knochentruhe": 2
+      },
       "tower": 1,
       "silver": 0,
       "power": 104122751,
@@ -671,6 +732,39 @@
       "silver": 0,
       "power": 235429605,
       "prevPower": 235429605,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Furya",
+      "rank": "Soldat",
+      "chests": {
+        "Truhe der Festung der Elfen": 3,
+        "Truhe der Festung der Verfluchten": 2,
+        "Truhe der Maya": 1,
+        "Infernotruhe": 4,
+        "Trillium-Truhe": 1,
+        "Geflochtene Truhe": 1,
+        "Seltene Drachentruhe": 1
+      },
+      "tower": 0,
+      "silver": 0,
+      "power": 0,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Ajji",
+      "rank": "Soldat",
+      "chests": {
+        "Schöne Truhe": 2,
+        "Truhe der Kobra": 1
+      },
+      "tower": 0,
+      "silver": 0,
+      "power": 0,
+      "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
     }
