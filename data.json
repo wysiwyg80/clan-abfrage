@@ -58,13 +58,28 @@
     "Truhe der Festung der Elfen (Festung Level 25)": 10,
     "Geflochtene Truhe (Epische Gruft Level 30)": 10,
     "Schildkröten-Truhe (Epische Gruft Level 30)": 10,
-    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 10
+    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 10,
+    "Seltene Drachentruhe": 10,
+    "Geflochtene Truhe": 10,
+    "Truhe der Zwergen-Werkstatt": 10,
+    "Truhe der Kobra": 10,
+    "Vergessene Truhe": 10,
+    "Sandtruhe": 10,
+    "Schöne Truhe": 10,
+    "Barbarentruhe": 10,
+    "Knochentruhe": 10
   },
   "clanData": [
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Seltene Drachentruhe": 3,
+        "Geflochtene Truhe": 1,
+        "Truhe der Zwergen-Werkstatt": 1,
+        "Truhe der Kobra": 1,
+        "Vergessene Truhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 615897675,
@@ -248,7 +263,10 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Schöne Truhe": 1,
+        "Sandtruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 212471521,
@@ -399,7 +417,13 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Kobra": 2,
+        "Sandtruhe": 1,
+        "Schöne Truhe": 1,
+        "Barbarentruhe": 1,
+        "Seltene Drachentruhe": 1
+      },
       "tower": 0,
       "power": 95110582,
       "prevPower": 94927582,
@@ -475,7 +499,9 @@
     {
       "name": "Que",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Knochentruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 113076480,
@@ -640,7 +666,9 @@
     {
       "name": "Son Of Algéri",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Sandtruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 183405360,
