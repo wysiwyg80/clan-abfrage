@@ -734,14 +734,14 @@
     },
     {
       "name": "Ajji",
-      "rank": "Veteran",
-      "power": 0,
+      "rank": "Soldat",
+      "chests": {},
       "tower": 0,
       "silver": 0,
-      "customGoal": null,
+      "power": 0,
+      "prevPower": 0,
       "activeDays": 28,
-      "chests": {},
-      "growth": 0
+      "customGoal": null
     },
     {
       "name": "Şivanê dîn",
@@ -753,11 +753,22 @@
       "activeDays": 28,
       "chests": {},
       "growth": 0
+    },
+    {
+      "name": "Furya",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 0,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
     }
   ],
   "cycleStartDate": "2026-10-01",
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-28T17:06:21.332Z"
+  "lastUpdated": "2026-10-28T17:07:15.677Z"
 }
