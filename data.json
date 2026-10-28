@@ -95,13 +95,22 @@
     "Truhe der Festung der Elfen (Level 15)": 10,
     "Schatzkammer der Ahnen (Level 30-34)": 10,
     "Schatzkammer der Ahnen (Level 40-44)": 10,
-    "Truhe der Orks (Level 25)": 10
+    "Truhe der Orks (Level 25)": 10,
+    "Seltene Truhe (Seltene Gruft Level 30)": 10,
+    "Seltene Drachentruhe": 10,
+    "Epische Truhe (Epische Gruft Level 30)": 10
   },
   "clanData": [
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 4,
+        "Seltene Truhe (Seltene Gruft Level 30)": 1,
+        "Seltene Drachentruhe": 1,
+        "Geflochtene Truhe (Epische Gruft Level 30)": 1,
+        "Epische Truhe (Epische Gruft Level 30)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 615897675,
