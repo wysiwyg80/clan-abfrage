@@ -60,13 +60,61 @@
     "Schildkröten-Truhe (Epische Gruft Level 30)": 10,
     "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 10,
     "Knochentruhe": 10,
-    "Schatzkammer der Ahnen Level 35-39": 10
+    "Schatzkammer der Ahnen Level 35-39": 10,
+    "Seltene Drachentruhe (Level 30)": 10,
+    "Geflochtene Truhe": 10,
+    "Schildkröten-Truhe (Level 30)": 10,
+    "Truhe der Kobra (Level 20)": 10,
+    "Gruft (Level 20)": 10,
+    "Vergessene Truhe": 10,
+    "Truhe der Kobra (Level 25)": 10,
+    "Steintruhe": 10,
+    "Gruft-Truhe (Level 25)": 10,
+    "Barbarentruhe": 10,
+    "Knochentruhe (Level 25)": 10,
+    "Seltene Gruft (Level 20)": 10,
+    "Sandtruhe": 10,
+    "Sandtruhe (Level 20)": 10,
+    "Truhe der Kobra": 10,
+    "Feuertruhe (Level 25)": 10,
+    "Gruft-Truhe (Level 10)": 10,
+    "Barbarentruhe (Level 5)": 10,
+    "Feuertruhe (Gruft Level 5)": 10,
+    "Gruft (Level 25)": 10,
+    "Saphir-Truhe": 10,
+    "Feuertruhe": 10,
+    "Epische Gruft (Level 20)": 10,
+    "Truhe der Maya": 10,
+    "Vergessene Truhe (Level 25)": 10,
+    "Gruft (Level 15)": 10,
+    "Gladiatorentruhe": 10,
+    "Barbarentruhe (Level 25)": 10,
+    "Gruft-Truhe (Level 20)": 10,
+    "Schöne Truhe (Level 20)": 10,
+    "Infernale Truhe (Level 25)": 10,
+    "Kürbistruhe": 10,
+    "Infernale Truhe (Level 10)": 10,
+    "Gruft (Level 10)": 10,
+    "Truhe der Festung der Elfen (Level 25)": 10,
+    "Truhe der Kobra (Level 10)": 10,
+    "Schöne Truhe": 10,
+    "Truhe der Maya (Level 25)": 10,
+    "Sandtruhe (Level 25)": 10,
+    "Sandtruhe (Level 10)": 10,
+    "Truhe der Festung der Elfen (Level 15)": 10,
+    "Festung (Level 25)": 10
   },
   "clanData": [
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Seltene Drachentruhe (Level 30)": 2,
+        "Geflochtene Truhe": 1,
+        "Schildkröten-Truhe (Level 30)": 1,
+        "Truhe der Kobra (Level 20)": 1,
+        "Gruft (Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 615897675,
@@ -77,7 +125,12 @@
     {
       "name": "Riyash CP CITY",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe": 1,
+        "Truhe der Maya (Gruft Level 25)": 1,
+        "Gruft (Level 25)": 1,
+        "Kürbistruhe": 1
+      },
       "tower": 0,
       "power": 479661600,
       "prevPower": 479641500,
@@ -98,7 +151,10 @@
     {
       "name": "Explorer",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Gruft Level 25)": 1,
+        "Infernale Truhe (Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 401058355,
@@ -109,7 +165,12 @@
     {
       "name": "DRACULA",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe (Level 25)": 1,
+        "Gruft (Level 15)": 1,
+        "Gladiatorentruhe": 1,
+        "Kürbistruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 373562075,
@@ -130,7 +191,9 @@
     {
       "name": "Maem",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Maya": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 294660699,
@@ -141,7 +204,9 @@
     {
       "name": "Kariel",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Kürbistruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 295275445,
@@ -239,7 +304,10 @@
     {
       "name": "Ajax",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Gruft-Truhe (Level 20)": 1,
+        "Schöne Truhe (Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 218893585,
@@ -250,7 +318,10 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Schöne Truhe (Gruft Level 20)": 1,
+        "Sandtruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 212471521,
@@ -283,7 +354,10 @@
     {
       "name": "gaviiCABJ",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Infernale Truhe (Level 10)": 1,
+        "Gruft (Level 10)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 203840900,
@@ -347,7 +421,10 @@
     {
       "name": "King Slayer",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Gruft (Level 25)": 1,
+        "Truhe der Kobra (Level 10)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 160682688,
@@ -369,7 +446,11 @@
     {
       "name": "Jamaman",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Gruft-Truhe (Level 10)": 1,
+        "Barbarentruhe (Level 5)": 1,
+        "Feuertruhe (Gruft Level 5)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 146017683,
@@ -380,7 +461,9 @@
     {
       "name": "Maginad",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Feuertruhe": 1
+      },
       "tower": 0,
       "power": 140163133,
       "prevPower": 140126133,
@@ -401,7 +484,14 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe": 1,
+        "Truhe der Kobra (Level 25)": 1,
+        "Steintruhe": 1,
+        "Barbarentruhe": 1,
+        "Seltene Gruft (Level 20)": 1,
+        "Truhe der Kobra": 1
+      },
       "tower": 0,
       "power": 95110582,
       "prevPower": 94927582,
@@ -477,7 +567,10 @@
     {
       "name": "Que",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Gruft-Truhe (Level 25)": 1,
+        "Knochentruhe (Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 113076480,
@@ -510,7 +603,13 @@
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
-      "chests": {},
+      "chests": {
+        "Gruft (Level 25)": 1,
+        "Truhe der Kobra (Level 20)": 1,
+        "Feuertruhe": 1,
+        "Saphir-Truhe": 2,
+        "Truhe der Festung der Elfen (Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 759664191,
@@ -532,7 +631,9 @@
     {
       "name": "Miss Dire",
       "rank": "Vorgesetzter",
-      "chests": {},
+      "chests": {
+        "Schöne Truhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 447252685,
@@ -587,7 +688,10 @@
     {
       "name": "Goll",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Level 25)": 1,
+        "Festung (Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 353205806,
@@ -620,7 +724,9 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Saphir-Truhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 225618041,
@@ -631,7 +737,11 @@
     {
       "name": "TECH",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Schöne Truhe": 1,
+        "Gruft (Level 25)": 1,
+        "Saphir-Truhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 199973135,
@@ -642,7 +752,14 @@
     {
       "name": "Son Of Algéri",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Sandtruhe": 1,
+        "Sandtruhe (Level 20)": 1,
+        "Gruft (Level 20)": 1,
+        "Infernale Truhe (Gruft Level 20)": 1,
+        "Epische Gruft (Level 20)": 1,
+        "Kürbistruhe": 2
+      },
       "tower": 0,
       "silver": 0,
       "power": 183405360,
@@ -658,13 +775,23 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Sandtruhe": 1,
+        "Sandtruhe (Level 10)": 1,
+        "Truhe der Festung der Elfen (Level 15)": 1
+      },
       "growth": 0
     },
     {
       "name": "Tanmisis",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Schöne Truhe": 1,
+        "Gruft (Level 25)": 1,
+        "Barbarentruhe": 1,
+        "Sandtruhe (Level 25)": 1,
+        "Saphir-Truhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 1095026005,
@@ -697,7 +824,9 @@
     {
       "name": "Riyash",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Barbarentruhe (Level 25)": 1
+      },
       "tower": 0,
       "power": 671205971,
       "prevPower": 660458681,
@@ -712,7 +841,10 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Feuertruhe (Level 25)": 1,
+        "Saphir-Truhe": 1
+      },
       "growth": 0
     },
     {
@@ -734,7 +866,11 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Saphir-Truhe": 1,
+        "Truhe der Maya (Level 25)": 1,
+        "Vergessene Truhe": 1
+      },
       "growth": 0
     },
     {
@@ -748,6 +884,19 @@
       "chests": {},
       "growth": 0,
       "prevPower": 169122215
+    },
+    {
+      "name": "Furya",
+      "rank": "Soldat",
+      "chests": {
+        "Knochentruhe": 1
+      },
+      "tower": 0,
+      "silver": 0,
+      "power": 0,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
     }
   ],
   "cycleStartDate": "2026-10-01",
