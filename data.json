@@ -52,7 +52,13 @@
     "Harpyien-Truhe (Epische Gruft Level 20)": 10,
     "Jack-Reaper-Truhe (Kürbis)": 10,
     "Skorpion-Truhe (Epische Gruft Level 25)": 10,
-    "Harpyien-Truhe (Epische Gruft Level 25)": 10
+    "Harpyien-Truhe (Epische Gruft Level 25)": 10,
+    "Barbarentruhe (Gruft Level 20)": 10,
+    "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 10,
+    "Truhe der Festung der Elfen (Festung Level 25)": 10,
+    "Geflochtene Truhe (Epische Gruft Level 30)": 10,
+    "Schildkröten-Truhe (Epische Gruft Level 30)": 10,
+    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 10
   },
   "clanData": [
     {
@@ -66,8 +72,15 @@
         "Infernale Truhe": 2,
         "Infernotruhe (Heldenhafte Monster Level 25)": 3,
         "Barbarentruhe (Heldenhafte Monster Level 24)": 6,
-        "Truhe der Untoten (Heldenhafte Monster Level 26)": 7,
-        "Heldenhafte Monster Level 26": 2
+        "Truhe der Untoten (Heldenhafte Monster Level 26)": 10,
+        "Heldenhafte Monster Level 26": 2,
+        "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 6,
+        "Geflochtene Truhe (Epische Gruft Level 30)": 1,
+        "Schildkröten-Truhe (Epische Gruft Level 30)": 2,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 2,
+        "Truhe der Kobra (Gruft Level 20)": 1,
+        "Infernale Truhe (Gruft Level 20)": 1
       },
       "tower": 1,
       "silver": 0,
@@ -702,8 +715,8 @@
         "Kobalt-Truhe": 2,
         "Harpylen-Truhe": 1,
         "Harpyien-Truhe (Epische Gruft Level 20)": 1,
-        "Skorpion-Truhe (Epische Gruft Level 25)": 4,
-        "Harpyien-Truhe (Epische Gruft Level 25)": 2
+        "Skorpion-Truhe (Epische Gruft Level 25)": 6,
+        "Harpyien-Truhe (Epische Gruft Level 25)": 6
       },
       "tower": 1,
       "silver": 0,
@@ -726,7 +739,14 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Truhe der Kobra (Gruft Level 20)": 1,
+        "Barbarentruhe (Gruft Level 20)": 2,
+        "Knochentruhe (Gruft Level 20)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 4,
+        "Truhe der Festung der Elfen (Festung Level 30)": 2,
+        "Truhe der Festung der Elfen (Festung Level 25)": 2
+      },
       "tower": 1,
       "silver": 0,
       "power": 224975841,
@@ -879,7 +899,7 @@
       "name": "Furya",
       "rank": "Soldat",
       "chests": {
-        "Feuertruhe (Gruft Level 25)": 4,
+        "Feuertruhe (Gruft Level 25)": 5,
         "Barbarentruhe (Gruft Level 25)": 2
       },
       "tower": 0,
