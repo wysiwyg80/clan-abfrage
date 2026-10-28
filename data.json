@@ -1,35 +1,6 @@
 {
   "chestTypeValues": {
-    "Turmbau": 50,
-    "Feuertruhe": 10,
-    "Infernale Truhe": 10,
-    "Sandtruhe": 10,
-    "Schöne Truhe": 10,
-    "Truhe der Festung der Elfen": 10,
-    "Truhe der Festung der Verfluchten": 10,
-    "Truhe der Maya": 10,
-    "Infernotruhe": 10,
-    "Trillium-Truhe": 10,
-    "Geflochtene Truhe": 10,
-    "Seltene Drachentruhe": 10,
-    "Steintruhe": 10,
-    "Barbarentruhe": 10,
-    "Truhe der Kobra": 10,
-    "Truhe der Zwergen-Werkstatt": 10,
-    "Knochentruhe": 10,
-    "Kürbistruhe": 10,
-    "Truhe der Untoten": 10,
-    "Truhe der Verfluchten": 10,
-    "Truhe der Orks": 10,
-    "Alte Truhe eines Kriegers": 10,
-    "Titanstahl-Truhe": 10,
-    "Truhe der Elfen": 10,
-    "Harpyien-Truhe": 10,
-    "Kobalt-Truhe": 10,
-    "Harpylen-Truhe": 10,
-    "Truhe der Festung der Elfen (Festung Level 30)": 10,
-    "Truhe der Orks (Gruft Level 20)": 10,
-    "Steintruhe (Gruft Level 20)": 10
+    "Turmbau": 50
   },
   "clanData": [
     {
@@ -764,27 +735,6 @@
       "customGoal": null
     },
     {
-      "name": "Furya",
-      "rank": "Soldat",
-      "chests": {
-        "Truhe der Festung der Elfen": 3,
-        "Truhe der Festung der Verfluchten": 2,
-        "Truhe der Maya": 1,
-        "Infernotruhe": 4,
-        "Trillium-Truhe": 1,
-        "Geflochtene Truhe": 1,
-        "Seltene Drachentruhe": 1,
-        "Sandtruhe": 2,
-        "Feuertruhe": 2
-      },
-      "tower": 0,
-      "silver": 0,
-      "power": 0,
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
       "name": "Ajji",
       "rank": "Soldat",
       "chests": {
@@ -800,7 +750,12 @@
     },
     {
       "name": "Şivanê dîn",
-      "rank": "Soldat",
+      "rank": "Veteran",
+      "power": 0,
+      "tower": 0,
+      "silver": 0,
+      "customGoal": null,
+      "activeDays": 28,
       "chests": {
         "Sandtruhe": 3,
         "Knochentruhe": 3,
@@ -809,17 +764,12 @@
         "Truhe der Maya": 2,
         "Schöne Truhe": 1
       },
-      "tower": 0,
-      "silver": 0,
-      "power": 0,
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null
+      "growth": 0
     }
   ],
   "cycleStartDate": "2026-10-01",
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-28T12:03:28.555Z"
+  "lastUpdated": "2026-10-28T12:46:36.756Z"
 }
