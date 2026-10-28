@@ -26,7 +26,10 @@
     "Truhe der Elfen": 10,
     "Harpyien-Truhe": 10,
     "Kobalt-Truhe": 10,
-    "Harpylen-Truhe": 10
+    "Harpylen-Truhe": 10,
+    "Truhe der Festung der Elfen (Festung Level 30)": 10,
+    "Truhe der Orks (Gruft Level 20)": 10,
+    "Steintruhe (Gruft Level 20)": 10
   },
   "clanData": [
     {
@@ -368,7 +371,10 @@
     {
       "name": "invisible",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Orks (Gruft Level 20)": 11,
+        "Steintruhe (Gruft Level 20)": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 154067470,
@@ -523,7 +529,9 @@
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
-      "chests": {},
+      "chests": {
+        "Truhe der Festung der Elfen (Festung Level 30)": 28
+      },
       "tower": 1,
       "silver": 0,
       "power": 759664191,
