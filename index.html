@@ -141,10 +141,13 @@
                         <i class="fa-solid fa-upload"></i> Daten Addieren & Sync
                     </button>
                     <button onclick="resetOnlyChestsPoints()" class="bg-amber-800/80 hover:bg-amber-700 text-amber-100 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
-                        <i class="fa-solid fa-box-archive"></i> Truhen-Punkte auf Null
+                        <i class="fa-solid fa-box-archive"></i> Nur Truhen-Punkte auf Null
                     </button>
-                    <button onclick="resetAllPoints()" class="bg-amber-950 hover:bg-amber-900 text-amber-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
-                        <i class="fa-solid fa-rotate-left"></i> Alle Punkte auf Null setzen
+                    <button onclick="resetPointsExceptSilver()" class="bg-amber-950 hover:bg-amber-900 text-amber-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                        <i class="fa-solid fa-rotate-left"></i> Punkte auf Null (OHNE Silber)
+                    </button>
+                    <button onclick="resetOnlySilver()" class="bg-cyan-950 hover:bg-cyan-900 text-cyan-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                        <i class="fa-solid fa-coins"></i> Nur Silber auf Null
                     </button>
                     <button onclick="clearAllData()" class="bg-red-900/80 hover:bg-red-800 text-red-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 ml-auto">
                         <i class="fa-solid fa-trash-can"></i> Alle Mitglieder löschen
@@ -294,13 +297,18 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-between items-center pt-2 border-t border-slate-700">
-                <button type="button" onclick="resetSingleMemberPoints()" id="btnResetSingle" class="bg-amber-900/60 hover:bg-amber-800 text-amber-200 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">
-                    <i class="fa-solid fa-rotate-left"></i> Punkte auf 0
-                </button>
+            <div class="flex flex-wrap justify-between items-center gap-2 pt-2 border-t border-slate-700">
+                <div class="flex gap-1.5">
+                    <button type="button" onclick="resetSingleMemberChests()" class="bg-amber-800/80 hover:bg-amber-700 text-amber-100 px-2.5 py-1.5 rounded text-[11px] font-semibold cursor-pointer" title="Nur Truhen auf 0">
+                        <i class="fa-solid fa-box-archive"></i> Nur Truhen 0
+                    </button>
+                    <button type="button" onclick="resetSingleMemberPoints()" id="btnResetSingle" class="bg-amber-950 hover:bg-amber-900 text-amber-200 px-2.5 py-1.5 rounded text-[11px] font-semibold cursor-pointer" title="Alle Punkte (ohne Silber) auf 0">
+                        <i class="fa-solid fa-rotate-left"></i> Punkte 0
+                    </button>
+                </div>
                 <div class="flex gap-2">
                     <button onclick="closeEditModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">Abbrechen</button>
-                    <button onclick="saveMemberEdit()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-4 py-1.5 rounded text-xs font-bold cursor-pointer">Speichern & Sync</button>
+                    <button onclick="saveMemberEdit()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-4 py-1.5 rounded text-xs font-bold cursor-pointer">Speichern</button>
                 </div>
             </div>
         </div>
@@ -831,14 +839,24 @@
             closeEditModal();
         }
 
+        function resetSingleMemberChests() {
+            let index = parseInt(document.getElementById('editIndex').value);
+            if(index >= 0) {
+                clanData[index].chests = {};
+                saveData();
+                closeEditModal();
+                alert("Truhen-Punkte für dieses Mitglied wurden auf 0 gesetzt.");
+            }
+        }
+
         function resetSingleMemberPoints() {
             let index = parseInt(document.getElementById('editIndex').value);
             if(index >= 0) {
                 clanData[index].tower = 0;
-                clanData[index].silver = 0;
                 clanData[index].chests = {};
                 saveData();
                 closeEditModal();
+                alert("Punkte (Truhen & Türme) für dieses Mitglied wurden auf 0 gesetzt.");
             }
         }
 
@@ -850,7 +868,7 @@
         }
 
         function resetOnlyChestsPoints() {
-            if(confirm("Möchtest du wirklich die Truhen-Punkte (Zählerstände aller Truhenarten) für ALLE Mitglieder auf 0 zurücksetzen? (Turmbau, Silber und Macht bleiben erhalten)")) {
+            if(confirm("Möchtest du wirklich NUR die Truhen-Punkte für ALLE Mitglieder auf 0 zurücksetzen? (Turmbau, Silber und Macht bleiben erhalten)")) {
                 clanData.forEach(p => {
                     p.chests = {};
                 });
@@ -859,14 +877,24 @@
             }
         }
 
-        function resetAllPoints() {
-            if(confirm("Wirklich alle Truhen-, Turm- und Silber-Punkte von ALLEN Mitgliedern auf 0 zurücksetzen?")) {
+        function resetPointsExceptSilver() {
+            if(confirm("Wirklich alle Truhen- und Turm-Punkte von ALLEN Mitgliedern auf 0 zurücksetzen? (WICHTIG: Silber bleibt unverändert erhalten!)")) {
                 clanData.forEach(p => {
                     p.tower = 0;
-                    p.silver = 0;
                     p.chests = {};
                 });
                 saveData();
+                alert("Alle Punkte (Truhen & Türme) wurden auf 0 zurückgesetzt. Das Silber wurde NICHT verändert!");
+            }
+        }
+
+        function resetOnlySilver() {
+            if(confirm("Möchtest du wirklich NUR die Silber-Werte aller Mitglieder auf 0 zurücksetzen?")) {
+                clanData.forEach(p => {
+                    p.silver = 0;
+                });
+                saveData();
+                alert("Alle Silber-Werte wurden auf 0 zurückgesetzt.");
             }
         }
 
