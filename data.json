@@ -2,9 +2,6 @@
   "chestTypeValues": {
     "Turmbau": 50,
     "Seltene Drachentruhe (Seltene Gruft Level 30)": 10,
-    "Gewöhnliche Truhe des (Clan-Wohlstand)": 10,
-    "Ungewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 10,
-    "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 10,
     "Steintruhe (Gruft Level 15)": 10,
     "Truhe der Festung der Elfen (Festung Level 30)": 10,
     "Truhe der Maya (Gruft Level 25)": 10,
@@ -109,13 +106,7 @@
     {
       "name": "Kariel",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Maya (Gruft Level 25)": 4,
-        "Infernale Truhe (Gruft Level 25)": 2,
-        "Feuertruhe (Gruft Level 25)": 3,
-        "Knochentruhe (Gruft Level 25)": 1,
-        "Aufgegebene Truhe (Epische Gruft Level 35)": 1
-      },
+      "chests": {},
       "tower": 1,
       "silver": 0,
       "power": 294183295,
@@ -676,14 +667,7 @@
     {
       "name": "PABLUS",
       "rank": "Offizier",
-      "chests": {
-        "Truhe der Zwergen-Werkstatt": 4,
-        "Truhe der Maya": 1,
-        "Feuertruhe": 1,
-        "Knochentruhe": 2,
-        "Steintruhe": 2,
-        "Steintruhe (Gruft Level 15)": 1
-      },
+      "chests": {},
       "tower": 1,
       "silver": 0,
       "power": 104122751,
@@ -793,5 +777,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-28T13:12:08.774Z"
+  "lastUpdated": "2026-10-28T14:10:58.857Z"
 }
