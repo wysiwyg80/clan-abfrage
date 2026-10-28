@@ -372,7 +372,7 @@
       "name": "invisible",
       "rank": "Veteran",
       "chests": {
-        "Truhe der Orks (Gruft Level 20)": 11,
+        "Truhe der Orks (Gruft Level 20)": 12,
         "Steintruhe (Gruft Level 20)": 1
       },
       "tower": 1,
@@ -530,7 +530,7 @@
       "name": "LegatusLabienus",
       "rank": "Anführer",
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 30)": 28
+        "Truhe der Festung der Elfen (Festung Level 30)": 29
       },
       "tower": 1,
       "silver": 0,
