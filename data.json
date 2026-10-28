@@ -1,6 +1,17 @@
 {
   "chestTypeValues": {
-    "Turmbau": 50
+    "Turmbau": 50,
+    "Seltene Drachentruhe (Seltene Gruft Level 30)": 10,
+    "Gewöhnliche Truhe des (Clan-Wohlstand)": 10,
+    "Ungewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 10,
+    "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 10,
+    "Steintruhe (Gruft Level 15)": 10,
+    "Truhe der Festung der Elfen (Festung Level 30)": 10,
+    "Truhe der Maya (Gruft Level 25)": 10,
+    "Infernale Truhe (Gruft Level 25)": 10,
+    "Feuertruhe (Gruft Level 25)": 10,
+    "Knochentruhe (Gruft Level 25)": 10,
+    "Aufgegebene Truhe (Epische Gruft Level 35)": 10
   },
   "clanData": [
     {
@@ -98,7 +109,13 @@
     {
       "name": "Kariel",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Gruft Level 25)": 4,
+        "Infernale Truhe (Gruft Level 25)": 2,
+        "Feuertruhe (Gruft Level 25)": 3,
+        "Knochentruhe (Gruft Level 25)": 1,
+        "Aufgegebene Truhe (Epische Gruft Level 35)": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 294183295,
@@ -501,7 +518,11 @@
       "name": "LegatusLabienus",
       "rank": "Anführer",
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 30)": 35
+        "Truhe der Festung der Elfen (Festung Level 30)": 36,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 45,
+        "Gewöhnliche Truhe des (Clan-Wohlstand)": 2,
+        "Ungewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 2,
+        "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 2
       },
       "tower": 1,
       "silver": 0,
@@ -660,7 +681,8 @@
         "Truhe der Maya": 1,
         "Feuertruhe": 1,
         "Knochentruhe": 2,
-        "Steintruhe": 2
+        "Steintruhe": 2,
+        "Steintruhe (Gruft Level 15)": 1
       },
       "tower": 1,
       "silver": 0,
