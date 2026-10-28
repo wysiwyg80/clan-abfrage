@@ -116,17 +116,6 @@
       "customGoal": null
     },
     {
-      "name": "bjar",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 1,
-      "silver": 0,
-      "power": 345143816,
-      "prevPower": 345143816,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
       "name": "Biin",
       "rank": "Veteran",
       "chests": {},
@@ -419,66 +408,69 @@
     },
     {
       "name": "Itachi",
-      "rank": "155",
-      "chests": {},
-      "tower": 0,
+      "rank": "Veteran",
       "power": 87141009,
-      "prevPower": 87119009,
+      "tower": 0,
+      "silver": 0,
+      "customGoal": null,
       "activeDays": 28,
-      "silver": 0
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Burigas",
-      "rank": "175",
-      "chests": {},
+      "rank": "Veteran",
+      "power": 81780025,
       "tower": 1,
       "silver": 0,
-      "power": 81780025,
-      "prevPower": 81059435,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Vudorr",
-      "rank": "78",
-      "chests": {},
+      "rank": "Veteran",
+      "power": 28530049,
       "tower": 1,
       "silver": 0,
-      "power": 28530049,
-      "prevPower": 28357999,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Greynelf",
-      "rank": "94",
-      "chests": {},
+      "rank": "Veteran",
+      "power": 12341183,
       "tower": 1,
       "silver": 0,
-      "power": 12341183,
-      "prevPower": 12336183,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Ayanin",
-      "rank": "52",
-      "chests": {},
-      "tower": 0,
+      "rank": "Veteran",
       "power": 12011030,
-      "prevPower": 11741000,
+      "tower": 0,
+      "silver": 0,
+      "customGoal": null,
       "activeDays": 28,
-      "silver": 0
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Ria",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
+      "rank": "Veteran",
       "power": 777998,
-      "prevPower": 777998,
+      "tower": 0,
+      "silver": 0,
+      "customGoal": null,
       "activeDays": 28,
-      "silver": 0
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Que",
@@ -581,14 +573,14 @@
     },
     {
       "name": "Frederico Freitas",
-      "rank": "Veteran",
-      "chests": {},
+      "rank": "Vorgesetzter",
+      "power": 125945616,
       "tower": 1,
       "silver": 0,
-      "power": 125945616,
-      "prevPower": 125917166,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Goll",
@@ -658,14 +650,14 @@
     },
     {
       "name": "PABLUS",
-      "rank": "Veteran",
-      "chests": {},
+      "rank": "Offizier",
+      "power": 105383231,
       "tower": 1,
       "silver": 0,
-      "power": 105383231,
-      "prevPower": 104122751,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Tanmisis",
@@ -713,13 +705,13 @@
     {
       "name": "Sir Charles",
       "rank": "Veteran",
-      "chests": {},
+      "power": 621331471,
       "tower": 1,
       "silver": 0,
-      "power": 620996471,
-      "prevPower": 620996471,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Noli",
@@ -734,14 +726,14 @@
     },
     {
       "name": "Ajji",
-      "rank": "Soldat",
-      "chests": {},
+      "rank": "Veteran",
+      "power": 384327063,
       "tower": 0,
       "silver": 0,
-      "power": 384327063,
-      "prevPower": 384327063,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Şivanê dîn",
@@ -754,55 +746,11 @@
       "chests": {},
       "growth": 0,
       "prevPower": 169122215
-    },
-    {
-      "name": "Furya",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 269932801,
-      "prevPower": 269932801,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
-      "name": "“",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 384327063,
-      "prevPower": 384327063,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
-      "name": "Unnamed",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 95110582,
-      "prevPower": 95110582,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
-      "name": "Soldat",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 777998,
-      "prevPower": 777998,
-      "activeDays": 28,
-      "customGoal": null
     }
   ],
   "cycleStartDate": "2026-10-01",
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-28T17:07:15.677Z"
+  "lastUpdated": "2026-10-28T17:41:46.509Z"
 }
