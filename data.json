@@ -67,7 +67,14 @@
     "Sandtruhe": 10,
     "Schöne Truhe": 10,
     "Barbarentruhe": 10,
-    "Knochentruhe": 10
+    "Knochentruhe": 10,
+    "Saphir-Truhe": 10,
+    "Truhe der Orks": 10,
+    "Steintruhe": 10,
+    "Truhe der Festung der Elfen": 10,
+    "Truhe der Maya": 10,
+    "Schatzkammer der Ahnen Level 35-39": 10,
+    "Gladiatorentruhe": 10
   },
   "clanData": [
     {
@@ -279,7 +286,11 @@
     {
       "name": "Roula",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Orks": 3,
+        "Sandtruhe": 3,
+        "Gladiatorentruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 206098061,
@@ -343,7 +354,10 @@
     {
       "name": "eroi",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Steintruhe": 1,
+        "Truhe der Festung der Elfen": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 176643591,
@@ -539,7 +553,10 @@
     {
       "name": "Miss Dire",
       "rank": "Vorgesetzter",
-      "chests": {},
+      "chests": {
+        "Saphir-Truhe": 4,
+        "Schatzkammer der Ahnen Level 35-39": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 447252685,
@@ -594,7 +611,9 @@
     {
       "name": "Goll",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Truhe der Festung der Elfen": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 353205806,
@@ -605,7 +624,10 @@
     {
       "name": "Delalen",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Saphir-Truhe": 1,
+        "Truhe der Maya": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 333575999,
@@ -725,7 +747,10 @@
     {
       "name": "Noli",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe": 1,
+        "Truhe der Orks": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 235429605,
