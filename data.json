@@ -93,7 +93,8 @@
     "Steintruhe (Gruft Level 25)": 10,
     "Seltene Drachentruhe (Seltene Gruft Level 20)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 10,
-    "Aufgegebene Truhe (Epische Gruft Level 20)": 10
+    "Aufgegebene Truhe (Epische Gruft Level 20)": 10,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 10
   },
   "clanData": [
     {
@@ -565,7 +566,8 @@
       "chests": {
         "Truhe der Orks (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 20)": 1,
-        "Feuertruhe (Gruft Level 20)": 1
+        "Feuertruhe (Gruft Level 20)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 1
       },
       "tower": 0,
       "silver": 0,
