@@ -106,7 +106,8 @@
     "Truhe der Festung der Elfen (Festung Level 20)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 10,
-    "Truhe der Festung der Elfen (Festung Level 15)": 10
+    "Truhe der Festung der Elfen (Festung Level 15)": 10,
+    "Truhe der Festung der Verfluchten (Festung Level 25)": 10
   },
   "clanData": [
     {
@@ -719,7 +720,8 @@
       "rank": "Offizier",
       "chests": {
         "Vergessene Truhe (Gruft Level 25)": 1,
-        "Truhe der Maya (Gruft Level 25)": 1
+        "Truhe der Maya (Gruft Level 25)": 1,
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
