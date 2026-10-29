@@ -289,7 +289,9 @@
     {
       "name": "Ajax",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Schöne Truhe (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 218893585,
