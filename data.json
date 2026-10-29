@@ -431,7 +431,9 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe (Gruft Level 25)": 1
+      },
       "tower": 0,
       "power": 95110582,
       "prevPower": 94927582,
