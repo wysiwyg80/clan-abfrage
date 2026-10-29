@@ -37,7 +37,6 @@
     "Feuertruhe (Gruft Level 20)": 10,
     "Knochentruhe (Gruft Level 20)": 10,
     "Heldenhafte Monster Level 26": 10,
-    "Gruft Level 20": 10,
     "Gruft Level 25": 10,
     "Truhe der Orks (Gruft Level 20)": 10,
     "Truhe der Maya (Gruft Level 15)": 10,
@@ -104,13 +103,7 @@
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 4,
-        "Seltene Truhe (Seltene Gruft Level 30)": 1,
-        "Seltene Drachentruhe": 1,
-        "Geflochtene Truhe (Epische Gruft Level 30)": 1,
-        "Epische Truhe (Epische Gruft Level 30)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 615897675,
@@ -809,5 +802,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-28T23:20:32.968Z"
+  "lastUpdated": "2026-10-29T00:00:59.342Z"
 }
