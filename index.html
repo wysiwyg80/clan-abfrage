@@ -12,24 +12,13 @@
         body { font-family: 'Inter', sans-serif; }
         .font-cinzel { font-family: 'Cinzel', serif; }
 
-        /* Custom Scrollbar für die Truhen-Verwaltung */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #0f172a;
-            border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #b45309;
-            border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #d97706;
-        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #b45309; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #d97706; }
 
         @media print {
-            button, .no-print, header button, #adminPanel, #editModal, .p-3 input[type="number"], #searchInput, th:last-child, td:last-child {
+            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, .p-3 input[type="number"], #searchInput, th:last-child, td:last-child {
                 display: none !important;
             }
             body { background-color: #ffffff !important; color: #000000 !important; padding: 0 !important; }
@@ -149,7 +138,6 @@
                         </button>
                     </div>
                 </div>
-                <!-- Vertikaler Scrollbalken (max-h-64 overflow-y-auto custom-scrollbar) -->
                 <div id="chestTypesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-64 overflow-y-auto custom-scrollbar pr-1"></div>
             </div>
 
@@ -269,6 +257,34 @@
         </div>
 
     </main>
+
+    <!-- NEUES MODAL: Truhen-Details & Admin-Bewertung für Mobile & PC -->
+    <div id="chestDetailsModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-lg space-y-4 shadow-2xl">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+                <h3 id="chestModalTitle" class="font-cinzel font-bold text-amber-400 text-base flex items-center gap-2">
+                    <i class="fa-solid fa-box-open"></i> Truhen-Details & Bewertung
+                </h3>
+                <button onclick="closeChestDetailsModal()" class="text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <input type="hidden" id="chestModalMemberIndex">
+            <p class="text-xs text-slate-300">Hier siehst du exakt, welche Truhen der Spieler geholt hat. Du kannst die Anzahl hier direkt anpassen oder korrigieren (Admin-Bewertung):</p>
+            
+            <div id="chestModalListContainer" class="space-y-2 max-h-60 overflow-y-auto custom-scrollbar pr-1 bg-slate-950/60 p-3 rounded border border-slate-800">
+                <!-- Dynamische Liste der Truhen -->
+            </div>
+
+            <div class="flex justify-between items-center pt-2 border-t border-slate-700">
+                <button onclick="resetThisMemberChestsFromModal()" class="bg-red-900/60 hover:bg-red-800 text-red-200 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">
+                    <i class="fa-solid fa-trash-can"></i> Alle Truhen auf 0
+                </button>
+                <div class="flex gap-2">
+                    <button onclick="closeChestDetailsModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">Schließen</button>
+                    <button onclick="saveChestDetailsChanges()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-4 py-1.5 rounded text-xs font-bold cursor-pointer">Änderungen speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="editModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-md space-y-4 shadow-2xl">
@@ -570,7 +586,7 @@
                 card.innerHTML = `
                     <div class="flex justify-between items-center">
                         <span class="text-xs font-bold text-amber-300 truncate" title="${typeName}">${typeName}</span>
-                        <button onclick="removeChestType('${typeName}')" class="text-slate-500 hover:text-red-400 text-[10px]"><i class="fa-solid fa-trash"></i></button>
+                        <button onclick="removeChestType('${typeName}')" class="text-slate-500 hover:text-red-400 text-[10px] cursor-pointer"><i class="fa-solid fa-trash"></i></button>
                     </div>
                     <div class="flex items-center gap-2">
                         <span class="text-[10px] text-slate-400">Punkte:</span>
@@ -698,19 +714,14 @@
                 else if(p.rank === "Offizier") rankBadgeColor = "bg-indigo-950 text-indigo-200 border border-indigo-800";
                 else if(p.rank === "Veteran") rankBadgeColor = "bg-emerald-950 text-emerald-200 border border-emerald-800";
 
-                let chestDetailsList = [];
                 let chestPtsTotal = 0;
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
                         let cnt = Number(p.chests[cName]) || 0;
                         let val = Number(chestTypeValues[cName]) || 0;
                         chestPtsTotal += cnt * val;
-                        if(cnt > 0) {
-                            chestDetailsList.push(`${cName}: ${cnt}`);
-                        }
                     });
                 }
-                let tooltipText = chestDetailsList.length > 0 ? chestDetailsList.join(" | ") : "Keine Truhen eingetragen";
 
                 let towerVal = Number(p.tower || 0);
                 let towerPts = towerVal * towerPointValue;
@@ -740,8 +751,9 @@
                         <span class="inline-block text-[10px] px-2.5 py-0.5 rounded-md font-bold uppercase tracking-wider ${rankBadgeColor}">${p.rank || 'Soldat'}</span>
                     </td>
                     <td class="p-3 text-right data-col-chests">
-                        <div class="cursor-help inline-block bg-slate-900 border border-slate-700 px-2 py-1 rounded text-amber-300 font-bold" title="${tooltipText}">
-                            ${chestPtsTotal} Pkt <span class="text-[10px] text-slate-400 font-normal">(Details)</span>
+                        <div onclick="openChestDetailsModal(${originalIndex})" class="cursor-pointer inline-flex items-center gap-1.5 bg-slate-900 hover:bg-slate-950 border border-amber-500/40 hover:border-amber-400 px-2.5 py-1 rounded text-amber-300 font-bold transition shadow-sm" title="Antippen zum Anzeigen & Bewerten der Truhen">
+                            <span>${chestPtsTotal} Pkt</span>
+                            <span class="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded"><i class="fa-solid fa-magnifying-glass"></i> Details</span>
                         </div>
                     </td>
                     <td class="p-3 text-right data-col-chests font-bold text-amber-200">
@@ -779,6 +791,84 @@
                 tbody.appendChild(row);
             });
         }
+
+        // --- FUNKTIONEN FÜR DAS NEUE TRUHEN-DETAILS & BEWERTUNGS-MODAL ---
+        function openChestDetailsModal(index) {
+            let p = clanData[index];
+            document.getElementById('chestModalMemberIndex').value = index;
+            document.getElementById('chestModalTitle.innerText', `<i class="fa-solid fa-box-open"></i> Truhen von ${p.name}`);
+            
+            let container = document.getElementById('chestModalListContainer');
+            container.innerHTML = '';
+
+            let chests = p.chests || {};
+            let allTypes = Object.keys(chestTypeValues).filter(t => t !== "Turmbau");
+
+            // Stelle sicher, dass auch Truhentypen angezeigt werden, die der Spieler evtl. hat, aber in den globalen Typen stehen
+            let playerChestKeys = Object.keys(chests);
+            let combinedTypes = Array.from(new Set([...allTypes, ...playerChestKeys]));
+
+            if(combinedTypes.length === 0) {
+                container.innerHTML = `<p class="text-xs text-slate-400 text-center py-4">Keine Truhen-Typen konfiguriert oder eingetragen.</p>`;
+            } else {
+                combinedTypes.forEach(cName => {
+                    let count = chests[cName] || 0;
+                    let val = chestTypeValues[cName] || 0;
+                    let rowDiv = document.createElement('div');
+                    rowDiv.className = "flex items-center justify-between gap-3 bg-slate-900 p-2 rounded border border-slate-800";
+                    rowDiv.innerHTML = `
+                        <div class="truncate">
+                            <span class="text-xs font-bold text-amber-300">${cName}</span>
+                            <div class="text-[10px] text-slate-400">je ${val} Pkt</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <input type="number" min="0" data-chest-name="${cName}" value="${count}" class="chest-count-input w-20 bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs text-amber-300 font-bold text-right focus:outline-none focus:border-amber-500">
+                            <span class="text-[11px] text-slate-400 w-12 text-right">Stk.</span>
+                        </div>
+                    `;
+                    container.appendChild(rowDiv);
+                });
+            }
+
+            document.getElementById('chestDetailsModal').classList.remove('hidden');
+        }
+
+        function closeChestDetailsModal() {
+            document.getElementById('chestDetailsModal').classList.add('hidden');
+        }
+
+        function saveChestDetailsChanges() {
+            let index = parseInt(document.getElementById('chestModalMemberIndex').value);
+            if(isNaN(index) || index < 0) return;
+
+            let inputs = document.querySelectorAll('.chest-count-input');
+            let updatedChests = {};
+
+            inputs.forEach(input => {
+                let cName = input.getAttribute('data-chest-name');
+                let cVal = parseInt(input.value) || 0;
+                if(cVal > 0) {
+                    updatedChests[cName] = cVal;
+                }
+            });
+
+            clanData[index].chests = updatedChests;
+            saveData();
+            closeChestDetailsModal();
+            alert("Truhen-Daten erfolgreich bewertet und aktualisiert!");
+        }
+
+        function resetThisMemberChestsFromModal() {
+            let index = parseInt(document.getElementById('chestModalMemberIndex').value);
+            if(isNaN(index) || index < 0) return;
+            if(confirm("Möchtest du wirklich alle Truhen für dieses Mitglied auf 0 zurücksetzen?")) {
+                clanData[index].chests = {};
+                saveData();
+                closeChestDetailsModal();
+                alert("Alle Truhen dieses Mitglieds wurden auf 0 gesetzt.");
+            }
+        }
+        // -------------------------------------------------------------
 
         function quickUpdateSilver(index, val) {
             clanData[index].silver = parseInt(val) || 0;
@@ -1045,8 +1135,8 @@
                         data: topGrowth.map(x => x.growth),
                         backgroundColor: 'rgba(13, 148, 136, 0.7)',
                         borderColor: 'rgba(20, 184, 166, 1)',
-                        borderWidth: 1
-                    }]
+                        borderWidth: 1}
+                    ]
                 },
                 options: {
                     responsive: true,
