@@ -129,7 +129,8 @@
     "Kobalt-Truhe (Epische Gruft Level 20)": 10,
     "Truhe des Priesters (Epische Gruft Level 20)": 10,
     "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 10,
-    "Barbarentruhe (Epische Gruft Level 20)": 10
+    "Barbarentruhe (Epische Gruft Level 20)": 10,
+    "Truhe der alten Bastion (Epische Gruft Level 20)": 10
   },
   "clanData": [
     {
@@ -345,7 +346,8 @@
         "Truhe des Priesters (Epische Gruft Level 20)": 1,
         "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1,
         "Barbarentruhe (Epische Gruft Level 20)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 20)": 1
+        "Harpyien-Truhe (Epische Gruft Level 20)": 1,
+        "Truhe der alten Bastion (Epische Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
