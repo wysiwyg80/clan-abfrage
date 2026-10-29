@@ -118,7 +118,9 @@
     "Ungewöhnliche Truhe des Clan-Wohlstand": 0,
     "Seltene Truhe des Wohlstands": 0,
     "Epische Truhe des Wohlstands": 0,
-    "Turmbau": 0
+    "Turmbau": 0,
+    "Epische Truhe des Goldenen Wächters": 0,
+    "Epische Truhe des Goldenen": 0
   },
   "clanData": [
     {
@@ -705,7 +707,10 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Epische Truhe des Goldenen Wächters": 1,
+        "Epische Truhe des Goldenen": 1
+      },
       "growth": 0
     },
     {
