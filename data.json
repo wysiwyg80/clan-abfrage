@@ -282,7 +282,8 @@
       "name": "Granidred",
       "rank": "Veteran",
       "chests": {
-        "Schöne Truhe (Gruft Level 20)": 1
+        "Schöne Truhe (Gruft Level 20)": 1,
+        "Sandtruhe (Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
