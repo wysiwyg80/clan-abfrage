@@ -630,7 +630,9 @@
     {
       "name": "SaturdayNightFever",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 105672693,
