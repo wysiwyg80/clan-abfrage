@@ -523,11 +523,11 @@
     },
     {
       "name": "Que",
-      "rank": "Soldat",
+      "rank": "203",
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 113076480,
+      "power": 114753140,
       "prevPower": 113076480,
       "activeDays": 28,
       "customGoal": null
@@ -803,6 +803,17 @@
       "tower": 0,
       "silver": 0,
       "power": 0,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Cologne am R",
+      "rank": "251",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 41734790,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
