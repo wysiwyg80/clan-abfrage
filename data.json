@@ -699,7 +699,7 @@
     },
     {
       "name": "PABLUS",
-      "rank": "Offizier",
+      "rank": "Soldat",
       "power": 105383231,
       "tower": 0,
       "silver": 0,
@@ -797,17 +797,6 @@
       "prevPower": 169122215
     },
     {
-      "name": "Furya",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 0,
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
       "name": "Cologne am R",
       "rank": "251",
       "chests": {},
@@ -823,5 +812,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-29T20:54:54.932Z"
+  "lastUpdated": "2026-10-29T22:33:48.600Z"
 }
