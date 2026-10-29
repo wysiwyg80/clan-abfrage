@@ -122,7 +122,8 @@
     "Barbarentruhe (Epische Gruft Level 30)": 10,
     "Harpyien-Truhe (Epische Gruft Level 30)": 10,
     "Infernale Truhe (Gruft Level 15)": 10,
-    "Barbarentruhe (Gruft Level 15)": 10
+    "Barbarentruhe (Gruft Level 15)": 10,
+    "Skorpion-Truhe (Epische Gruft Level 20)": 10
   },
   "clanData": [
     {
@@ -329,7 +330,8 @@
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1,
-        "Infernale Truhe (Gruft Level 25)": 2
+        "Infernale Truhe (Gruft Level 25)": 2,
+        "Skorpion-Truhe (Epische Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
