@@ -91,7 +91,8 @@
     "Seltene Truhe (Seltene Gruft Level 30)": 10,
     "Epische Truhe (Epische Gruft Level 30)": 10,
     "Steintruhe (Gruft Level 25)": 10,
-    "Seltene Drachentruhe (Seltene Gruft Level 20)": 10
+    "Seltene Drachentruhe (Seltene Gruft Level 20)": 10,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 10
   },
   "clanData": [
     {
@@ -763,7 +764,8 @@
       "chests": {
         "Truhe der Maya (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1
+        "Barbarentruhe (Gruft Level 25)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1
       },
       "growth": 0
     },
