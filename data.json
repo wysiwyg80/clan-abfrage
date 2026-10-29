@@ -685,7 +685,9 @@
     {
       "name": "Son Of Algéri",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Sandtruhe (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 183405360,
