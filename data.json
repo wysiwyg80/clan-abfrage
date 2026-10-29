@@ -127,7 +127,8 @@
     "Skarabäus-Truhe (Epische Gruft Level 20)": 10,
     "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 10,
     "Kobalt-Truhe (Epische Gruft Level 20)": 10,
-    "Truhe des Priesters (Epische Gruft Level 20)": 10
+    "Truhe des Priesters (Epische Gruft Level 20)": 10,
+    "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 10
   },
   "clanData": [
     {
@@ -340,7 +341,8 @@
         "Skarabäus-Truhe (Epische Gruft Level 20)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
         "Kobalt-Truhe (Epische Gruft Level 20)": 1,
-        "Truhe des Priesters (Epische Gruft Level 20)": 1
+        "Truhe des Priesters (Epische Gruft Level 20)": 1,
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
