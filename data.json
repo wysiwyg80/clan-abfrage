@@ -105,7 +105,8 @@
     "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 10,
     "Truhe der Festung der Elfen (Festung Level 20)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 10,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 10
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 10,
+    "Truhe der Festung der Elfen (Festung Level 15)": 10
   },
   "clanData": [
     {
@@ -800,7 +801,8 @@
       "customGoal": null,
       "activeDays": 28,
       "chests": {
-        "Sandtruhe (Gruft Level 15)": 1
+        "Sandtruhe (Gruft Level 15)": 1,
+        "Truhe der Festung der Elfen (Festung Level 15)": 1
       },
       "growth": 0
     },
