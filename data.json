@@ -523,14 +523,14 @@
     },
     {
       "name": "Que",
-      "rank": "203",
-      "chests": {},
+      "rank": "Veteran",
+      "power": 114753140,
       "tower": 0,
       "silver": 0,
-      "power": 114753140,
-      "prevPower": 113076480,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "SaturdayNightFever",
@@ -812,5 +812,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-29T22:34:31.466Z"
+  "lastUpdated": "2026-10-29T22:54:50.486Z"
 }
