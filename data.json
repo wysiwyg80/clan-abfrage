@@ -104,7 +104,8 @@
     "Truhe der Verfluchten (Epische Gruft Level 35)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 10,
     "Truhe der Festung der Elfen (Festung Level 20)": 10,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 10
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 10,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 10
   },
   "clanData": [
     {
@@ -761,7 +762,8 @@
       "rank": "Offizier",
       "chests": {
         "Infernale Truhe (Gruft Level 20)": 1,
-        "Schöne Truhe (Gruft Level 25)": 2
+        "Schöne Truhe (Gruft Level 25)": 2,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 1
       },
       "tower": 0,
       "silver": 0,
