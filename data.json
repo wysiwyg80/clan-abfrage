@@ -795,22 +795,11 @@
       "chests": {},
       "growth": 0,
       "prevPower": 169122215
-    },
-    {
-      "name": "Cologne am R",
-      "rank": "251",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 41734790,
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null
     }
   ],
   "cycleStartDate": "2026-10-01",
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-29T22:33:48.600Z"
+  "lastUpdated": "2026-10-29T22:34:31.466Z"
 }
