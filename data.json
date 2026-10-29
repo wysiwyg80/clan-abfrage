@@ -772,7 +772,8 @@
       "name": "Riyash",
       "rank": "Veteran",
       "chests": {
-        "Barbarentruhe (Gruft Level 25)": 1
+        "Barbarentruhe (Gruft Level 25)": 1,
+        "Knochentruhe (Gruft Level 25)": 1
       },
       "tower": 0,
       "power": 671205971,
