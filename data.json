@@ -455,7 +455,8 @@
       "name": "Vudor SK6",
       "rank": "Veteran",
       "chests": {
-        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1
+        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
+        "Infernale Truhe (Gruft Level 20)": 1
       },
       "tower": 0,
       "power": 199465145,
