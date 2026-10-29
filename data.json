@@ -118,7 +118,8 @@
     "Epische Truhe des Wohlstands": 10,
     "Truhe der Kobra (Gruft Level 15)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 40–44)": 10,
-    "Jack-Reaper-Truhe": 10
+    "Jack-Reaper-Truhe": 10,
+    "Barbarentruhe (Epische Gruft Level 30)": 10
   },
   "clanData": [
     {
@@ -271,7 +272,8 @@
       "name": "Elginan",
       "rank": "Veteran",
       "chests": {
-        "Jack-Reaper-Truhe": 1
+        "Jack-Reaper-Truhe": 1,
+        "Barbarentruhe (Epische Gruft Level 30)": 1
       },
       "tower": 0,
       "silver": 0,
