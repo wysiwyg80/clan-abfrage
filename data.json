@@ -641,7 +641,9 @@
     {
       "name": "eroi2",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Steintruhe (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 64930666,
