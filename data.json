@@ -220,11 +220,11 @@
     },
     {
       "name": "Elginan",
-      "rank": "Veteran",
+      "rank": "Offizier",
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 293549896,
+      "power": 297155446,
       "prevPower": 293038296,
       "activeDays": 28,
       "customGoal": null
@@ -637,7 +637,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 353205806,
+      "power": 353239806,
       "prevPower": 352669156,
       "activeDays": 28,
       "customGoal": null
@@ -648,7 +648,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 333575999,
+      "power": 339362999,
       "prevPower": 330786949,
       "activeDays": 28,
       "customGoal": null
@@ -795,6 +795,17 @@
       "chests": {},
       "growth": 0,
       "prevPower": 169122215
+    },
+    {
+      "name": "Furya",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 280724451,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
     }
   ],
   "cycleStartDate": "2026-10-01",
