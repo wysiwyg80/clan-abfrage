@@ -909,7 +909,8 @@
       "name": "Noli",
       "rank": "Veteran",
       "chests": {
-        "Vergessene Truhe (Gruft Level 25)": 1
+        "Vergessene Truhe (Gruft Level 25)": 1,
+        "Feuertruhe (Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
