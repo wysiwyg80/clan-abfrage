@@ -61,7 +61,6 @@
     "Seltene Drachentruhe (Level 30)": 10,
     "Schildkröten-Truhe (Level 30)": 10,
     "Truhe der Kobra (Level 20)": 10,
-    "Gruft (Level 20)": 10,
     "Truhe der Kobra (Level 25)": 10,
     "Gruft-Truhe (Level 25)": 10,
     "Knochentruhe (Level 25)": 10,
@@ -75,7 +74,6 @@
     "Gruft-Truhe (Level 20)": 10,
     "Schöne Truhe (Level 20)": 10,
     "Infernale Truhe (Level 25)": 10,
-    "Kürbistruhe": 10,
     "Truhe der Festung der Elfen (Level 25)": 10,
     "Truhe der Maya (Level 25)": 10,
     "Sandtruhe (Level 25)": 10,
@@ -90,7 +88,6 @@
     "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 10,
     "Aufgegebene Truhe (Epische Gruft Level 20)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 10,
-    "Gladiatorentruhe": 10,
     "Barbarentruhe (Epische Gruft Level 25)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 10,
     "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 10,
@@ -1042,5 +1039,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-29T01:31:32.574Z"
+  "lastUpdated": "2026-10-29T01:33:01.694Z"
 }
