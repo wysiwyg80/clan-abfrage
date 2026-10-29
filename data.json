@@ -126,7 +126,8 @@
     "Skorpion-Truhe (Epische Gruft Level 20)": 10,
     "Skarabäus-Truhe (Epische Gruft Level 20)": 10,
     "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 10,
-    "Kobalt-Truhe (Epische Gruft Level 20)": 10
+    "Kobalt-Truhe (Epische Gruft Level 20)": 10,
+    "Truhe des Priesters (Epische Gruft Level 20)": 10
   },
   "clanData": [
     {
@@ -338,7 +339,8 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1,
         "Skarabäus-Truhe (Epische Gruft Level 20)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
-        "Kobalt-Truhe (Epische Gruft Level 20)": 1
+        "Kobalt-Truhe (Epische Gruft Level 20)": 1,
+        "Truhe des Priesters (Epische Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
