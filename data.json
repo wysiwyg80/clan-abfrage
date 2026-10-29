@@ -760,7 +760,9 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Gruft Level 25)": 1
+      },
       "growth": 0
     },
     {
