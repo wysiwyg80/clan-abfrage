@@ -64,16 +64,11 @@
     "Gruft (Level 20)": 10,
     "Truhe der Kobra (Level 25)": 10,
     "Gruft-Truhe (Level 25)": 10,
-    "Barbarentruhe": 10,
     "Knochentruhe (Level 25)": 10,
     "Seltene Gruft (Level 20)": 10,
     "Sandtruhe (Level 20)": 10,
-    "Truhe der Kobra": 10,
     "Feuertruhe (Level 25)": 10,
-    "Barbarentruhe (Level 5)": 10,
     "Feuertruhe (Gruft Level 5)": 10,
-    "Gruft (Level 25)": 10,
-    "Saphir-Truhe": 10,
     "Epische Gruft (Level 20)": 10,
     "Vergessene Truhe (Level 25)": 10,
     "Barbarentruhe (Level 25)": 10,
@@ -118,7 +113,6 @@
     "Epische Truhe des Wohlstands": 10,
     "Truhe der Kobra (Gruft Level 15)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 40–44)": 10,
-    "Jack-Reaper-Truhe": 10,
     "Barbarentruhe (Epische Gruft Level 30)": 10,
     "Harpyien-Truhe (Epische Gruft Level 30)": 10,
     "Infernale Truhe (Gruft Level 15)": 10,
@@ -352,8 +346,7 @@
         "Weiße Holztruhe (Epische Gruft Level 20)": 1,
         "Aufgegebene Truhe (Epische Gruft Level 20)": 1,
         "Vergessene Truhe (Gruft Level 25)": 2,
-        "Truhe der Orks (Gruft Level 25)": 2,
-        "Knochentruhe (Gruft Level 25)": 1
+        "Truhe der Orks (Gruft Level 25)": 2
       },
       "tower": 0,
       "silver": 0,
@@ -1049,5 +1042,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-29T00:10:16.156Z"
+  "lastUpdated": "2026-10-29T01:31:32.574Z"
 }
