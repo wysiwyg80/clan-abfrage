@@ -475,7 +475,9 @@
     {
       "name": "Maginad",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Kobra (Gruft Level 25)": 1
+      },
       "tower": 0,
       "power": 140163133,
       "prevPower": 140126133,
