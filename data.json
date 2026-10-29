@@ -97,13 +97,16 @@
     "Truhe der Orks (Level 25)": 10,
     "Seltene Truhe (Seltene Gruft Level 30)": 10,
     "Seltene Drachentruhe": 10,
-    "Epische Truhe (Epische Gruft Level 30)": 10
+    "Epische Truhe (Epische Gruft Level 30)": 10,
+    "Steintruhe (Gruft Level 25)": 10
   },
   "clanData": [
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Infernale Truhe (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 615897675,
@@ -438,7 +441,12 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Kobra (Gruft Level 25)": 1,
+        "Sandtruhe (Gruft Level 25)": 2,
+        "Steintruhe (Gruft Level 25)": 2,
+        "Barbarentruhe (Gruft Level 25)": 1
+      },
       "tower": 0,
       "power": 95110582,
       "prevPower": 94927582,
@@ -514,7 +522,9 @@
     {
       "name": "Que",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Knochentruhe (Gruft Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 113076480,
