@@ -120,7 +120,8 @@
     "Epische Truhe des Wohlstands": 0,
     "Turmbau": 0,
     "Epische Truhe des Goldenen Wächters": 0,
-    "Epische Truhe des Goldenen": 0
+    "Epische Truhe des Goldenen": 0,
+    "Ahnentruhe": 0
   },
   "clanData": [
     {
@@ -709,7 +710,8 @@
       "activeDays": 28,
       "chests": {
         "Epische Truhe des Goldenen Wächters": 1,
-        "Epische Truhe des Goldenen": 11
+        "Epische Truhe des Goldenen": 14,
+        "Ahnentruhe": 3
       },
       "growth": 0
     },
