@@ -90,7 +90,8 @@
     "Truhe der Orks (Level 25)": 10,
     "Seltene Truhe (Seltene Gruft Level 30)": 10,
     "Epische Truhe (Epische Gruft Level 30)": 10,
-    "Steintruhe (Gruft Level 25)": 10
+    "Steintruhe (Gruft Level 25)": 10,
+    "Seltene Drachentruhe (Seltene Gruft Level 20)": 10
   },
   "clanData": [
     {
@@ -437,7 +438,8 @@
         "Vergessene Truhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Sandtruhe (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1
+        "Barbarentruhe (Gruft Level 25)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 20)": 1
       },
       "tower": 0,
       "power": 95110582,
