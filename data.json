@@ -116,7 +116,9 @@
     {
       "name": "Riyash CP CITY",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe (Gruft Level 25)": 1
+      },
       "tower": 0,
       "power": 479661600,
       "prevPower": 479641500,
