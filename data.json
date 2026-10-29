@@ -590,7 +590,8 @@
       "activeDays": 28,
       "chests": {
         "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Infernale Truhe (Gruft Level 15)": 1
+        "Infernale Truhe (Gruft Level 15)": 1,
+        "Steintruhe (Gruft Level 15)": 1
       },
       "growth": 0
     },
