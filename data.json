@@ -103,7 +103,8 @@
     "Alte Truhe eines Kriegers (Epische Gruft Level 35)": 10,
     "Truhe der Verfluchten (Epische Gruft Level 35)": 10,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 10,
-    "Truhe der Festung der Elfen (Festung Level 20)": 10
+    "Truhe der Festung der Elfen (Festung Level 20)": 10,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 10
   },
   "clanData": [
     {
@@ -657,7 +658,8 @@
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 25)": 2
+        "Harpyien-Truhe (Epische Gruft Level 25)": 2,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 1
       },
       "tower": 0,
       "silver": 0,
