@@ -134,7 +134,7 @@
                         <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Sortiert alle Truhen aufsteigend nach Level">
                             <i class="fa-solid fa-arrow-down-1-9"></i> Nach Level sortieren
                         </button>
-                        <button onclick="resetAllChestPointValuesToZero()" class="bg-amber-900/80 hover:bg-amber-800 text-amber-200 border border-amber-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Setzt die Punktwerte aller Truhenarten auf 0">
+                        <button onclick="resetAllChestPointValuesToZero()" class="bg-amber-900/80 hover:bg-amber-800 text-amber-200 border border-amber-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Setzt die Punktewerte aller Truhenarten auf 0">
                             <i class="fa-solid fa-rotate-left"></i> Alle Punktewerte auf 0
                         </button>
                         <button onclick="resetOnlyChestsPoints()" class="bg-red-950 hover:bg-red-900 text-red-200 border border-red-800 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Setzt die geholten Truhen der Mitglieder auf 0">
@@ -478,7 +478,6 @@
             alert("Truhen wurden erfolgreich nach Level / Stufe sortiert angezeigt!");
         }
 
-        // --- NEUE FUNKTION: ALLE TRUHEN-PUNKTWERTE AUF 0 ZURÜCKSETZEN ---
         function resetAllChestPointValuesToZero() {
             if(confirm("Möchtest du wirklich die Punktewerte ALLER Truhenarten auf 0 zurücksetzen?")) {
                 Object.keys(chestTypeValues).forEach(k => {
@@ -488,7 +487,6 @@
                 alert("Alle Truhen-Punktewerte wurden auf 0 gesetzt.");
             }
         }
-        // -------------------------------------------------------------
 
         async function syncToGitHub() {
             if(!ghToken) {
