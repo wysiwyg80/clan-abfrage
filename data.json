@@ -102,7 +102,8 @@
     "Kürbistruhe (Quelle: Kürbis)": 10,
     "Alte Truhe eines Kriegers (Epische Gruft Level 35)": 10,
     "Truhe der Verfluchten (Epische Gruft Level 35)": 10,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 10
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 10,
+    "Truhe der Festung der Elfen (Festung Level 20)": 10
   },
   "clanData": [
     {
@@ -354,7 +355,8 @@
       "chests": {
         "Truhe der Maya (Gruft Level 20)": 1,
         "Feuertruhe (Gruft Level 20)": 1,
-        "Schöne Truhe (Gruft Level 20)": 1
+        "Schöne Truhe (Gruft Level 20)": 1,
+        "Truhe der Festung der Elfen (Festung Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
