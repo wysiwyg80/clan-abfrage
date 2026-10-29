@@ -37,7 +37,6 @@
     "Feuertruhe (Gruft Level 20)": 10,
     "Knochentruhe (Gruft Level 20)": 10,
     "Heldenhafte Monster Level 26": 10,
-    "Gruft Level 25": 10,
     "Truhe der Orks (Gruft Level 20)": 10,
     "Truhe der Maya (Gruft Level 15)": 10,
     "Schöne Truhe (Gruft Level 15)": 10,
@@ -58,21 +57,16 @@
     "Geflochtene Truhe (Epische Gruft Level 30)": 10,
     "Schildkröten-Truhe (Epische Gruft Level 30)": 10,
     "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 10,
-    "Knochentruhe": 10,
     "Schatzkammer der Ahnen Level 35-39": 10,
     "Seltene Drachentruhe (Level 30)": 10,
-    "Geflochtene Truhe": 10,
     "Schildkröten-Truhe (Level 30)": 10,
     "Truhe der Kobra (Level 20)": 10,
     "Gruft (Level 20)": 10,
-    "Vergessene Truhe": 10,
     "Truhe der Kobra (Level 25)": 10,
-    "Steintruhe": 10,
     "Gruft-Truhe (Level 25)": 10,
     "Barbarentruhe": 10,
     "Knochentruhe (Level 25)": 10,
     "Seltene Gruft (Level 20)": 10,
-    "Sandtruhe": 10,
     "Sandtruhe (Level 20)": 10,
     "Truhe der Kobra": 10,
     "Feuertruhe (Level 25)": 10,
@@ -81,7 +75,6 @@
     "Gruft (Level 25)": 10,
     "Saphir-Truhe": 10,
     "Epische Gruft (Level 20)": 10,
-    "Truhe der Maya": 10,
     "Vergessene Truhe (Level 25)": 10,
     "Barbarentruhe (Level 25)": 10,
     "Gruft-Truhe (Level 20)": 10,
@@ -96,7 +89,6 @@
     "Schatzkammer der Ahnen (Level 40-44)": 10,
     "Truhe der Orks (Level 25)": 10,
     "Seltene Truhe (Seltene Gruft Level 30)": 10,
-    "Seltene Drachentruhe": 10,
     "Epische Truhe (Epische Gruft Level 30)": 10,
     "Steintruhe (Gruft Level 25)": 10
   },
@@ -104,9 +96,7 @@
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {
-        "Infernale Truhe (Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 615897675,
@@ -441,12 +431,7 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Kobra (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 2,
-        "Steintruhe (Gruft Level 25)": 2,
-        "Barbarentruhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "power": 95110582,
       "prevPower": 94927582,
@@ -522,9 +507,7 @@
     {
       "name": "Que",
       "rank": "Soldat",
-      "chests": {
-        "Knochentruhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 113076480,
@@ -812,5 +795,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-29T00:00:59.342Z"
+  "lastUpdated": "2026-10-29T00:10:16.156Z"
 }
