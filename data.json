@@ -120,7 +120,8 @@
     "Saphir-Truhe (Schatzkammer der Ahnen Level 40–44)": 10,
     "Jack-Reaper-Truhe": 10,
     "Barbarentruhe (Epische Gruft Level 30)": 10,
-    "Harpyien-Truhe (Epische Gruft Level 30)": 10
+    "Harpyien-Truhe (Epische Gruft Level 30)": 10,
+    "Infernale Truhe (Gruft Level 15)": 10
   },
   "clanData": [
     {
@@ -588,7 +589,8 @@
       "customGoal": null,
       "activeDays": 28,
       "chests": {
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1
+        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
+        "Infernale Truhe (Gruft Level 15)": 1
       },
       "growth": 0
     },
