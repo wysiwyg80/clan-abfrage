@@ -206,7 +206,9 @@
     {
       "name": "Kariel",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Kürbistruhe": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 295275445,
