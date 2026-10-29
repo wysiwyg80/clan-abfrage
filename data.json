@@ -115,7 +115,8 @@
     "Gewöhnliche Truhe des Clan-Wohlstand": 10,
     "Ungewöhnliche Truhe des Clan-Wohlstand": 10,
     "Seltene Truhe des Wohlstands": 10,
-    "Epische Truhe des Wohlstands": 10
+    "Epische Truhe des Wohlstands": 10,
+    "Truhe der Kobra (Gruft Level 15)": 10
   },
   "clanData": [
     {
@@ -764,7 +765,8 @@
       "rank": "Offizier",
       "chests": {
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1,
-        "Truhe der Maya (Gruft Level 15)": 1
+        "Truhe der Maya (Gruft Level 15)": 1,
+        "Truhe der Kobra (Gruft Level 15)": 1
       },
       "tower": 0,
       "silver": 0,
