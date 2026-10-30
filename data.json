@@ -122,7 +122,8 @@
     "Epische Truhe des Goldenen Wächters": 0,
     "Kürbistruhe (Kürbis)": 0,
     "Turmbau": 0,
-    "Kobalt-Truhe (Epische Gruft Level 25)": 50
+    "Kobalt-Truhe (Epische Gruft Level 25)": 50,
+    "Vergessene Truhe (Gruft Level 15)": 0
   },
   "clanData": [
     {
@@ -714,7 +715,8 @@
       "activeDays": 28,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 1,
-        "Truhe der Kobra (Gruft Level 15)": 1
+        "Truhe der Kobra (Gruft Level 15)": 1,
+        "Vergessene Truhe (Gruft Level 15)": 1
       },
       "growth": 0
     },
