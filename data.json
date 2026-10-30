@@ -463,7 +463,8 @@
       "chests": {
         "Epische Truhe des Goldenen": 18,
         "Seltene Gruft (Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 3
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 3,
+        "Seltene Gruft Level 25": 1
       },
       "tower": 0,
       "power": 95110582,
