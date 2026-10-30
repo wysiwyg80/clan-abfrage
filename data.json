@@ -714,7 +714,8 @@
       "customGoal": null,
       "activeDays": 28,
       "chests": {
-        "Sandtruhe (Gruft Level 15)": 1
+        "Sandtruhe (Gruft Level 15)": 1,
+        "Truhe der Kobra (Gruft Level 15)": 1
       },
       "growth": 0
     },
