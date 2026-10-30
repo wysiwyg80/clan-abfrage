@@ -713,7 +713,9 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Sandtruhe (Gruft Level 15)": 1
+      },
       "growth": 0
     },
     {
