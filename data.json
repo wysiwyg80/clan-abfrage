@@ -121,7 +121,8 @@
     "Turmbau": 0,
     "Epische Truhe des Goldenen Wächters": 0,
     "Epische Truhe des Goldenen": 0,
-    "Ahnentruhe": 0
+    "Ahnentruhe": 0,
+    "Blitzmarsch-Truhe": 0
   },
   "clanData": [
     {
@@ -524,7 +525,8 @@
       "customGoal": null,
       "activeDays": 28,
       "chests": {
-        "Ahnentruhe": 4
+        "Ahnentruhe": 4,
+        "Blitzmarsch-Truhe": 1
       },
       "growth": 0
     },
