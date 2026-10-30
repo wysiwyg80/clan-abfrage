@@ -801,10 +801,10 @@
                         ${towerVal} <span class="text-[10px] text-slate-400">(${towerPts}P)</span>
                     </td>
                     <td class="p-3 text-right data-col-chests">
-                        <div class="flex flex-col items-end gap-1.5">
+                        <div class="flex items-center justify-end gap-2">
                             <span class="print-silver-val text-cyan-400 font-bold text-sm">${formatSilver(Number(p.silver || 0))}</span>
                             <div class="no-print">
-                                <input type="number" value="${p.silver || 0}" step="1000000" onchange="quickUpdateSilver(${originalIndex}, this.value)" class="w-28 bg-slate-950 border border-slate-700 rounded px-2 py-1 text-right text-xs text-cyan-300 font-bold focus:outline-none focus:border-cyan-500 shadow-inner">
+                                <input type="number" placeholder="+ Silber" onchange="quickUpdateSilver(${originalIndex}, this.value); this.value='';" class="w-24 bg-slate-950 border border-slate-700 rounded px-2 py-1 text-right text-xs text-cyan-300 font-bold focus:outline-none focus:border-cyan-500 shadow-inner" title="Gibt hier einen Wert ein, der automatisch addiert wird">
                             </div>
                         </div>
                     </td>
@@ -908,8 +908,13 @@
             }
         }
 
+        // AUTOMATISCHE TASCHENRECHNER-ADDITION FÜR MANUELLE EINGABEN
         function quickUpdateSilver(index, val) {
-            clanData[index].silver = parseInt(val) || 0;
+            let addedVal = parseInt(val) || 0;
+            if (addedVal === 0) return;
+
+            let currentVal = Number(clanData[index].silver) || 0;
+            clanData[index].silver = currentVal + addedVal;
             saveData();
         }
 
