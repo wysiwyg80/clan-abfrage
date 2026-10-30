@@ -451,7 +451,9 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Epische Truhe des Goldenen": 1
+      },
       "tower": 0,
       "power": 95110582,
       "prevPower": 94927582,
