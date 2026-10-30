@@ -475,7 +475,9 @@
     {
       "name": "AyBars",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Sandtruhe (Gruft Level 15)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 108827936,
