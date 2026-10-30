@@ -17,7 +17,7 @@
     "Truhe der Kobra (Gruft Level 20)": 0,
     "Schöne Truhe (Gruft Level 20)": 0,
     "Sandtruhe (Gruft Level 20)": 0,
-    "Feuertruhe (Gruft Level 20)": 0,
+    "Feuertruhe (Gruft Level 20)": 20,
     "Knochentruhe (Gruft Level 20)": 0,
     "Truhe der Orks (Gruft Level 20)": 20,
     "Infernale Truhe (Gruft Level 20)": 0,
@@ -326,7 +326,8 @@
       "rank": "Veteran",
       "chests": {
         "Truhe der Orks (Gruft Level 20)": 1,
-        "Steintruhe (Gruft Level 20)": 1
+        "Steintruhe (Gruft Level 20)": 1,
+        "Feuertruhe (Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
