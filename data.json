@@ -131,7 +131,8 @@
     "Seltene Drachentruhe (Level 25)": 0,
     "Seltene Gruft (Level 30)": 0,
     "Gladiatorentruhe": 0,
-    "Truhe des Händlers": 0
+    "Truhe des Händlers": 0,
+    "Kürbistruhe (Kürbis)": 0
   },
   "clanData": [
     {
@@ -759,7 +760,8 @@
         "Epische Truhe des Goldenen Wächters": 1,
         "Epische Truhe des Goldenen": 14,
         "Ahnentruhe": 4,
-        "Gladiatorentruhe": 1
+        "Gladiatorentruhe": 1,
+        "Kürbistruhe (Kürbis)": 1
       },
       "growth": 0
     },
