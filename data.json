@@ -32,7 +32,7 @@
     "Gruft-Truhe (Level 20)": 0,
     "Schöne Truhe (Level 20)": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 20)": 0,
-    "Aufgegebene Truhe (Epische Gruft Level 20)": 0,
+    "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
     "Truhe der Festung der Elfen (Festung Level 20)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 0,
     "Steintruhe (Gruft Level 20)": 0,
@@ -819,7 +819,9 @@
     {
       "name": "Furya",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Aufgegebene Truhe (Epische Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 280724451,
