@@ -125,7 +125,8 @@
     "Kobalt-Truhe (Epische Gruft Level 25)": 50,
     "Vergessene Truhe (Gruft Level 15)": 0,
     "Aufgegebene Truhe (Epische Gruft Level 25)": 50,
-    "Truhe der Orks (Gruft Level 15)": 0
+    "Truhe der Orks (Gruft Level 15)": 0,
+    "Truhe der Festung der Verfluchten (Festung Level 20)": 40
   },
   "clanData": [
     {
@@ -733,7 +734,8 @@
         "Truhe der Festung der Elfen (Festung Level 15)": 1,
         "Truhe der Maya (Gruft Level 15)": 1,
         "Truhe der Orks (Gruft Level 15)": 1,
-        "Steintruhe (Gruft Level 15)": 1
+        "Steintruhe (Gruft Level 15)": 1,
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 1
       },
       "growth": 0
     },
