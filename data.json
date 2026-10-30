@@ -122,11 +122,7 @@
     "Epische Truhe des Goldenen Wächters": 0,
     "Kürbistruhe (Kürbis)": 0,
     "Turmbau": 0,
-    "Kobalt-Truhe (Epische Gruft Level 25)": 50,
-    "Vergessene Truhe (Gruft Level 15)": 0,
-    "Aufgegebene Truhe (Epische Gruft Level 25)": 50,
-    "Truhe der Orks (Gruft Level 15)": 0,
-    "Truhe der Festung der Verfluchten (Festung Level 20)": 40
+    "Kobalt-Truhe (Epische Gruft Level 25)": 50
   },
   "clanData": [
     {
@@ -175,14 +171,7 @@
     {
       "name": "DRACULA",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Kobra (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 3,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 2,
-        "Knochentruhe (Gruft Level 25)": 1,
-        "Vergessene Truhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 373562075,
@@ -323,9 +312,7 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Orks (Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 212471521,
@@ -574,10 +561,7 @@
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
-      "chests": {
-        "Truhe der Festung der Elfen (Festung Level 30)": 27,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 8
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 759664191,
@@ -599,12 +583,7 @@
     {
       "name": "Miss Dire",
       "rank": "Vorgesetzter",
-      "chests": {
-        "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1,
-        "Truhe der Kobra (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 447252685,
@@ -673,9 +652,7 @@
     {
       "name": "Delalen",
       "rank": "Offizier",
-      "chests": {
-        "Kürbistruhe (Kürbis)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 339362999,
@@ -736,16 +713,8 @@
       "customGoal": null,
       "activeDays": 28,
       "chests": {
-        "Sandtruhe (Gruft Level 15)": 2,
-        "Truhe der Kobra (Gruft Level 15)": 1,
-        "Vergessene Truhe (Gruft Level 15)": 2,
-        "Feuertruhe (Gruft Level 15)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Truhe der Festung der Elfen (Festung Level 15)": 1,
-        "Truhe der Maya (Gruft Level 15)": 1,
-        "Truhe der Orks (Gruft Level 15)": 2,
-        "Steintruhe (Gruft Level 15)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 1
+        "Sandtruhe (Gruft Level 15)": 1,
+        "Truhe der Kobra (Gruft Level 15)": 1
       },
       "growth": 0
     },
@@ -840,9 +809,7 @@
     {
       "name": "Furya",
       "rank": "Offizier",
-      "chests": {
-        "Aufgegebene Truhe (Epische Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 280724451,
@@ -855,5 +822,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-30T20:26:21.130Z"
+  "lastUpdated": "2026-10-30T20:38:56.618Z"
 }
