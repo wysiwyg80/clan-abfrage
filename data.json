@@ -13,13 +13,13 @@
     "Barbarentruhe (Gruft Level 15)": 0,
     "Truhe der Untoten (Heldenhafte Monster Level 16)": 0,
     "Truhe der Elfen (Heldenhafte Monster Level 17)": 0,
-    "Truhe der Maya (Gruft Level 20)": 20,
+    "Truhe der Maya (Gruft Level 20)": 0,
     "Truhe der Kobra (Gruft Level 20)": 0,
     "Schöne Truhe (Gruft Level 20)": 0,
     "Sandtruhe (Gruft Level 20)": 0,
-    "Feuertruhe (Gruft Level 20)": 20,
+    "Feuertruhe (Gruft Level 20)": 0,
     "Knochentruhe (Gruft Level 20)": 0,
-    "Truhe der Orks (Gruft Level 20)": 20,
+    "Truhe der Orks (Gruft Level 20)": 0,
     "Infernale Truhe (Gruft Level 20)": 0,
     "Vergessene Truhe (Gruft Level 20)": 0,
     "Harpyien-Truhe (Epische Gruft Level 20)": 0,
@@ -35,7 +35,7 @@
     "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
     "Truhe der Festung der Elfen (Festung Level 20)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 0,
-    "Steintruhe (Gruft Level 20)": 20,
+    "Steintruhe (Gruft Level 20)": 0,
     "Skorpion-Truhe (Epische Gruft Level 20)": 0,
     "Skarabäus-Truhe (Epische Gruft Level 20)": 0,
     "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 0,
@@ -49,7 +49,7 @@
     "Truhe der Maya (Gruft Level 25)": 0,
     "Infernale Truhe (Gruft Level 25)": 25,
     "Feuertruhe (Gruft Level 25)": 25,
-    "Knochentruhe (Gruft Level 25)": 25,
+    "Knochentruhe (Gruft Level 25)": 0,
     "Infernotruhe (Heldenhafte Monster Level 25)": 0,
     "Truhe der Kobra (Gruft Level 25)": 25,
     "Truhe der Orks (Gruft Level 25)": 0,
@@ -62,7 +62,7 @@
     "Drachentruhe (Gruft Level 25)": 0,
     "Alte Truhe (Gruft Level 25)": 0,
     "Schöne Truhe (Gruft Level 25)": 25,
-    "Barbarentruhe (Gruft Level 25)": 25,
+    "Barbarentruhe (Gruft Level 25)": 0,
     "Skorpion-Truhe (Epische Gruft Level 25)": 0,
     "Harpyien-Truhe (Epische Gruft Level 25)": 50,
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0,
@@ -177,12 +177,9 @@
       "rank": "Veteran",
       "chests": {
         "Truhe der Kobra (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 4,
+        "Sandtruhe (Gruft Level 25)": 2,
         "Infernale Truhe (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 2,
-        "Knochentruhe (Gruft Level 25)": 1,
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1
+        "Feuertruhe (Gruft Level 25)": 2
       },
       "tower": 0,
       "silver": 0,
@@ -324,12 +321,7 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Orks (Gruft Level 20)": 1,
-        "Steintruhe (Gruft Level 20)": 1,
-        "Feuertruhe (Gruft Level 20)": 1,
-        "Truhe der Maya (Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 212471521,
@@ -580,7 +572,7 @@
       "rank": "Anführer",
       "chests": {
         "Truhe der Festung der Elfen (Festung Level 30)": 18,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 8
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 4
       },
       "tower": 0,
       "silver": 0,
@@ -592,29 +584,29 @@
     {
       "name": "man of war",
       "rank": "Vorgesetzter",
-      "chests": {},
+      "power": 1460838131,
       "tower": 0,
       "silver": 0,
-      "power": 1460838131,
-      "prevPower": 1460506831,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Miss Dire",
-      "rank": "Vorgesetzter",
+      "rank": "Anführer",
+      "power": 447252685,
+      "tower": 0,
+      "silver": 0,
+      "customGoal": null,
+      "activeDays": 28,
       "chests": {
         "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
         "Harpyien-Truhe (Epische Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1
       },
-      "tower": 0,
-      "silver": 0,
-      "power": 447252685,
-      "prevPower": 446408785,
-      "activeDays": 28,
-      "customGoal": null
+      "growth": 0
     },
     {
       "name": "Cologne am Rhein",
@@ -747,7 +739,7 @@
         "Feuertruhe (Gruft Level 15)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
         "Truhe der Festung der Elfen (Festung Level 15)": 1,
-        "Truhe der Orks (Gruft Level 15)": 2,
+        "Truhe der Orks (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 15)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 20)": 1
       },
@@ -859,5 +851,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-30T20:56:47.566Z"
+  "lastUpdated": "2026-10-30T22:05:39.639Z"
 }
