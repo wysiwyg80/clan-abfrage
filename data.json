@@ -647,7 +647,9 @@
     {
       "name": "Cologne am Rhein",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Kürbistruhe (Kürbis)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 417332905,
