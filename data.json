@@ -594,10 +594,7 @@
     {
       "name": "Cologne am Rhein",
       "rank": "Soldat",
-      "chests": {
-        "Kobalt-Truhe (Epische Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 417332905,
@@ -712,10 +709,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {
-        "Sandtruhe (Gruft Level 15)": 1,
-        "Truhe der Kobra (Gruft Level 15)": 1
-      },
+      "chests": {},
       "growth": 0
     },
     {
@@ -818,9 +812,9 @@
       "customGoal": null
     }
   ],
-  "cycleStartDate": "2026-10-01",
+  "cycleStartDate": "2026-10-30",
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-30T20:41:22.483Z"
+  "lastUpdated": "2026-10-30T20:56:47.566Z"
 }
