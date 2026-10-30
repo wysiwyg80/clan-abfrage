@@ -476,7 +476,8 @@
       "name": "AyBars",
       "rank": "Veteran",
       "chests": {
-        "Sandtruhe (Gruft Level 15)": 1
+        "Sandtruhe (Gruft Level 15)": 1,
+        "Kürbistruhe (Kürbis)": 1
       },
       "tower": 0,
       "silver": 0,
