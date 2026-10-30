@@ -61,7 +61,7 @@
     "Vergessene Truhe (Gruft Level 25)": 25,
     "Drachentruhe (Gruft Level 25)": 0,
     "Alte Truhe (Gruft Level 25)": 0,
-    "Schöne Truhe (Gruft Level 25)": 0,
+    "Schöne Truhe (Gruft Level 25)": 25,
     "Barbarentruhe (Gruft Level 25)": 0,
     "Skorpion-Truhe (Epische Gruft Level 25)": 0,
     "Harpyien-Truhe (Epische Gruft Level 25)": 50,
@@ -587,7 +587,8 @@
       "rank": "Vorgesetzter",
       "chests": {
         "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 25)": 1
+        "Harpyien-Truhe (Epische Gruft Level 25)": 1,
+        "Schöne Truhe (Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
