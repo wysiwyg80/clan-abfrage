@@ -818,7 +818,9 @@
     {
       "name": "Furya",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Aufgegebene Truhe (Epische Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 280724451,
