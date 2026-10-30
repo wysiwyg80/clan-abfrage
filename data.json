@@ -53,7 +53,7 @@
     "Infernotruhe (Heldenhafte Monster Level 25)": 0,
     "Truhe der Kobra (Gruft Level 25)": 25,
     "Truhe der Orks (Gruft Level 25)": 0,
-    "Sandtruhe (Gruft Level 25)": 0,
+    "Sandtruhe (Gruft Level 25)": 25,
     "Seltene Drachentruhe (Seltene Gruft Level 25)": 50,
     "Epische Gruft Level 25 (Epische Gruft Level 25)": 0,
     "Seltene Gruft Level 25 (Seltene Gruft Level 25)": 0,
@@ -176,7 +176,8 @@
       "name": "DRACULA",
       "rank": "Veteran",
       "chests": {
-        "Truhe der Kobra (Gruft Level 25)": 1
+        "Truhe der Kobra (Gruft Level 25)": 1,
+        "Sandtruhe (Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
