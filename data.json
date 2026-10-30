@@ -127,7 +127,8 @@
     "Seltene Gruft (Level 25)": 0,
     "Seltene Gruft Level 25": 0,
     "Gruft Level 25": 0,
-    "Gruft (Level 25)": 0
+    "Gruft (Level 25)": 0,
+    "Seltene Drachentruhe (Level 25)": 0
   },
   "clanData": [
     {
@@ -472,7 +473,8 @@
         "Epische Truhe des Goldenen": 18,
         "Seltene Gruft (Level 25)": 4,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 3,
-        "Seltene Gruft Level 25": 3
+        "Seltene Gruft Level 25": 3,
+        "Seltene Drachentruhe (Level 25)": 1
       },
       "tower": 0,
       "power": 95110582,
