@@ -83,10 +83,6 @@
     "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 0,
     "Truhe der Festung der Verfluchten (Festung Level 25)": 0,
-    "Seltene Gruft (Level 25)": 0,
-    "Seltene Gruft Level 25": 0,
-    "Gruft Level 25": 0,
-    "Gruft (Level 25)": 0,
     "Seltene Drachentruhe (Level 25)": 0,
     "Truhe der Verfluchten (Epische Gruft Level 25)": 50,
     "Truhe der Untoten (Heldenhafte Monster Level 26)": 0,
@@ -98,7 +94,6 @@
     "Geflochtene Truhe (Epische Gruft Level 30)": 0,
     "Schildkröten-Truhe (Epische Gruft Level 30)": 0,
     "Seltene Drachentruhe (Level 30)": 0,
-    "Schildkröten-Truhe (Level 30)": 0,
     "Schatzkammer der Ahnen (Level 30-34)": 0,
     "Seltene Truhe (Seltene Gruft Level 30)": 0,
     "Epische Truhe (Epische Gruft Level 30)": 0,
@@ -108,8 +103,6 @@
     "Kobalt-Truhe (Epische Gruft Level 30)": 0,
     "Barbarentruhe (Epische Gruft Level 30)": 0,
     "Harpyien-Truhe (Epische Gruft Level 30)": 0,
-    "Seltene Gruft Level 30": 0,
-    "Seltene Gruft (Level 30)": 0,
     "Aufgegebene Truhe (Epische Gruft Level 35)": 0,
     "Harpyien-Truhe (Epische Gruft Level 35)": 0,
     "Truhe des Priesters (Epische Gruft Level 35)": 0,
@@ -127,11 +120,6 @@
     "Seltene Truhe des Wohlstands": 0,
     "Epische Truhe des Wohlstands": 0,
     "Epische Truhe des Goldenen Wächters": 0,
-    "Epische Truhe des Goldenen": 0,
-    "Ahnentruhe": 0,
-    "Blitzmarsch-Truhe": 0,
-    "Gladiatorentruhe": 0,
-    "Truhe des Händlers": 0,
     "Kürbistruhe (Kürbis)": 0,
     "Turmbau": 0
   },
@@ -236,16 +224,7 @@
     {
       "name": "Elginan",
       "rank": "Offizier",
-      "chests": {
-        "Seltene Gruft Level 30": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 30)": 1,
-        "Gruft Level 25": 3,
-        "Gruft (Level 25)": 2,
-        "Knochentruhe (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 297155446,
@@ -376,9 +355,7 @@
     {
       "name": "UNVSU",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Verfluchten (Epische Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 203887765,
@@ -442,14 +419,7 @@
     {
       "name": "Jamaman",
       "rank": "Veteran",
-      "chests": {
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Seltene Gruft (Level 25)": 2,
-        "Seltene Gruft Level 25": 3,
-        "Seltene Gruft (Level 30)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
-        "Seltene Gruft Level 30": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 146017683,
@@ -481,14 +451,7 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "chests": {
-        "Epische Truhe des Goldenen": 18,
-        "Seltene Gruft (Level 25)": 5,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 3,
-        "Seltene Gruft Level 25": 3,
-        "Seltene Drachentruhe (Level 25)": 1,
-        "Truhe des Händlers": 1
-      },
+      "chests": {},
       "tower": 0,
       "power": 95110582,
       "prevPower": 94927582,
@@ -514,12 +477,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {
-        "Seltene Gruft Level 25": 5,
-        "Seltene Gruft (Level 25)": 2,
-        "Seltene Gruft Level 30": 1,
-        "Truhe des Priesters (Epische Gruft Level 20)": 1
-      },
+      "chests": {},
       "growth": 0
     },
     {
@@ -563,10 +521,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {
-        "Ahnentruhe": 12,
-        "Blitzmarsch-Truhe": 1
-      },
+      "chests": {},
       "growth": 0
     },
     {
@@ -577,9 +532,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {
-        "Truhe der Kobra (Gruft Level 25)": 7
-      },
+      "chests": {},
       "growth": 0
     },
     {
@@ -629,11 +582,7 @@
     {
       "name": "Miss Dire",
       "rank": "Vorgesetzter",
-      "chests": {
-        "Seltene Gruft Level 30": 1,
-        "Truhe der Kobra (Gruft Level 25)": 2,
-        "Feuertruhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 447252685,
@@ -666,9 +615,7 @@
     {
       "name": "kikito",
       "rank": "Vorgesetzter",
-      "chests": {
-        "Kürbistruhe (Kürbis)": 2
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 276063661,
@@ -761,13 +708,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {
-        "Epische Truhe des Goldenen Wächters": 1,
-        "Epische Truhe des Goldenen": 14,
-        "Ahnentruhe": 4,
-        "Gladiatorentruhe": 1,
-        "Kürbistruhe (Kürbis)": 1
-      },
+      "chests": {},
       "growth": 0
     },
     {
@@ -854,9 +795,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {
-        "Kürbistruhe (Kürbis)": 1
-      },
+      "chests": {},
       "growth": 0,
       "prevPower": 169122215
     },
@@ -876,5 +815,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-30T18:32:03.239Z"
+  "lastUpdated": "2026-10-30T20:24:27.163Z"
 }
