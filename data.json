@@ -130,7 +130,8 @@
     "Gruft (Level 25)": 0,
     "Seltene Drachentruhe (Level 25)": 0,
     "Seltene Gruft (Level 30)": 0,
-    "Gladiatorentruhe": 0
+    "Gladiatorentruhe": 0,
+    "Truhe des Händlers": 0
   },
   "clanData": [
     {
@@ -481,7 +482,8 @@
         "Seltene Gruft (Level 25)": 5,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 3,
         "Seltene Gruft Level 25": 3,
-        "Seltene Drachentruhe (Level 25)": 1
+        "Seltene Drachentruhe (Level 25)": 1,
+        "Truhe des Händlers": 1
       },
       "tower": 0,
       "power": 95110582,
