@@ -124,7 +124,8 @@
     "Ahnentruhe": 0,
     "Blitzmarsch-Truhe": 0,
     "Seltene Gruft Level 30": 0,
-    "Seltene Gruft (Level 25)": 0
+    "Seltene Gruft (Level 25)": 0,
+    "Seltene Gruft Level 25": 0
   },
   "clanData": [
     {
@@ -485,7 +486,9 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Seltene Gruft Level 25": 1
+      },
       "growth": 0
     },
     {
