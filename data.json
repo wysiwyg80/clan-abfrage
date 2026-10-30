@@ -121,8 +121,7 @@
     "Epische Truhe des Wohlstands": 0,
     "Epische Truhe des Goldenen Wächters": 0,
     "Kürbistruhe (Kürbis)": 0,
-    "Turmbau": 0,
-    "Kobalt-Truhe (Epische Gruft Level 25)": 50
+    "Turmbau": 0
   },
   "clanData": [
     {
@@ -594,9 +593,7 @@
     {
       "name": "Cologne am Rhein",
       "rank": "Soldat",
-      "chests": {
-        "Kobalt-Truhe (Epische Gruft Level 25)": 3
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 417332905,
@@ -818,5 +815,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-30T20:24:27.163Z"
+  "lastUpdated": "2026-10-30T20:26:21.130Z"
 }
