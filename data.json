@@ -595,7 +595,8 @@
       "name": "Cologne am Rhein",
       "rank": "Soldat",
       "chests": {
-        "Kobalt-Truhe (Epische Gruft Level 25)": 1
+        "Kobalt-Truhe (Epische Gruft Level 25)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
