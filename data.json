@@ -426,7 +426,9 @@
     {
       "name": "Jamaman",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Infernale Truhe (Gruft Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 146017683,
