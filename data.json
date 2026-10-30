@@ -123,7 +123,8 @@
     "Epische Truhe des Goldenen": 0,
     "Ahnentruhe": 0,
     "Blitzmarsch-Truhe": 0,
-    "Seltene Gruft Level 30": 0
+    "Seltene Gruft Level 30": 0,
+    "Seltene Gruft (Level 25)": 0
   },
   "clanData": [
     {
@@ -456,7 +457,8 @@
       "name": "Orodrafin",
       "rank": "Veteran",
       "chests": {
-        "Epische Truhe des Goldenen": 18
+        "Epische Truhe des Goldenen": 18,
+        "Seltene Gruft (Level 25)": 1
       },
       "tower": 0,
       "power": 95110582,
