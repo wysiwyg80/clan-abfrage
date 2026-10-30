@@ -851,7 +851,9 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Kürbistruhe (Kürbis)": 1
+      },
       "growth": 0,
       "prevPower": 169122215
     },
