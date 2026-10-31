@@ -25,10 +25,7 @@
     "Harpyien-Truhe (Epische Gruft Level 20)": 0,
     "Barbarentruhe (Gruft Level 20)": 0,
     "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 0,
-    "Truhe der Kobra (Level 20)": 0,
     "Seltene Gruft (Level 20)": 0,
-    "Sandtruhe (Level 20)": 0,
-    "Epische Gruft (Level 20)": 0,
     "Gruft-Truhe (Level 20)": 0,
     "Schöne Truhe (Level 20)": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 20)": 0,
@@ -827,5 +824,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-31T16:11:05.334Z"
+  "lastUpdated": "2026-10-31T16:26:11.422Z"
 }
