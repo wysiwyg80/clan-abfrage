@@ -770,7 +770,9 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 28,
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe (Gruft Level 25)": 1
+      },
       "growth": 0
     },
     {
