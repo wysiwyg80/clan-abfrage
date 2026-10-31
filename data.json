@@ -132,7 +132,8 @@
     "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 50,
     "Truhe des Priesters (Epische Gruft Level 25)": 50,
     "Geflochtene Truhe (Epische Gruft Level 25)": 50,
-    "Weiße Holztruhe (Epische Gruft Level 25)": 50
+    "Weiße Holztruhe (Epische Gruft Level 25)": 50,
+    "Gewöhnliche Truhe des (Clan-Wohlstand)": 0
   },
   "clanData": [
     {
@@ -612,7 +613,8 @@
         "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
         "Harpyien-Truhe (Epische Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 1,
-        "Truhe der Kobra (Gruft Level 25)": 1
+        "Truhe der Kobra (Gruft Level 25)": 1,
+        "Gewöhnliche Truhe des (Clan-Wohlstand)": 1
       },
       "growth": 0
     },
