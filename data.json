@@ -130,7 +130,8 @@
     "Trillium-Truhe (Epische Gruft Level 25)": 50,
     "Titanstahl-Truhe (Epische Gruft Level 25)": 50,
     "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 50,
-    "Truhe des Priesters (Epische Gruft Level 25)": 50
+    "Truhe des Priesters (Epische Gruft Level 25)": 50,
+    "Geflochtene Truhe (Epische Gruft Level 25)": 50
   },
   "clanData": [
     {
@@ -837,7 +838,8 @@
         "Trillium-Truhe (Epische Gruft Level 25)": 3,
         "Titanstahl-Truhe (Epische Gruft Level 25)": 3,
         "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 3,
-        "Truhe des Priesters (Epische Gruft Level 25)": 3
+        "Truhe des Priesters (Epische Gruft Level 25)": 3,
+        "Geflochtene Truhe (Epische Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
