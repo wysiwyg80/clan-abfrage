@@ -811,7 +811,9 @@
     {
       "name": "Riyash",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe (Gruft Level 25)": 1
+      },
       "tower": 0,
       "power": 671205971,
       "prevPower": 660458681,
