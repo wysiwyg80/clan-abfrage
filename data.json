@@ -140,7 +140,8 @@
     "Skorpion-Truhe (Epische Gruft Level 35)": 100,
     "Seltene Drachentruhe (Seltene Gruft Level 15)": 15,
     "Geflochtene Truhe (Epische Gruft Level 20)": 40,
-    "Epische Truhe des Wohlstands (Clan-Wohlstand)": 0
+    "Epische Truhe des Wohlstands (Clan-Wohlstand)": 0,
+    "Minotaurus-Truhe (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -824,7 +825,8 @@
         "Truhe der Festung der Verfluchten (Festung Level 20)": 4,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 4,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 1,
-        "Kürbistruhe (Kürbis)": 1
+        "Kürbistruhe (Kürbis)": 1,
+        "Minotaurus-Truhe (Epische Gruft Level 15)": 1
       },
       "growth": 0
     },
