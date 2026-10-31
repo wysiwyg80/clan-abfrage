@@ -516,7 +516,9 @@
     {
       "name": "AyBars",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Kürbistruhe (Kürbis)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 108827936,
