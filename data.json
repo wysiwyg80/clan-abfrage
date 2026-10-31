@@ -14,7 +14,7 @@
     "Truhe der Untoten (Heldenhafte Monster Level 16)": 0,
     "Truhe der Elfen (Heldenhafte Monster Level 17)": 0,
     "Truhe der Maya (Gruft Level 20)": 0,
-    "Truhe der Kobra (Gruft Level 20)": 0,
+    "Truhe der Kobra (Gruft Level 20)": 20,
     "Schöne Truhe (Gruft Level 20)": 0,
     "Sandtruhe (Gruft Level 20)": 0,
     "Feuertruhe (Gruft Level 20)": 0,
@@ -402,7 +402,8 @@
       "name": "Angelina38",
       "rank": "Veteran",
       "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
+        "Truhe der Kobra (Gruft Level 20)": 1
       },
       "tower": 0,
       "power": 181613611,
