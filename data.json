@@ -168,7 +168,9 @@
     {
       "name": "Explorer",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe (Gruft Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 401058355,
