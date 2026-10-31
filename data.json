@@ -14,7 +14,7 @@
     "Truhe der Untoten (Heldenhafte Monster Level 16)": 0,
     "Truhe der Elfen (Heldenhafte Monster Level 17)": 0,
     "Truhe der Maya (Gruft Level 20)": 0,
-    "Truhe der Kobra (Gruft Level 20)": 20,
+    "Truhe der Kobra (Gruft Level 20)": 0,
     "Schöne Truhe (Gruft Level 20)": 0,
     "Sandtruhe (Gruft Level 20)": 0,
     "Feuertruhe (Gruft Level 20)": 0,
@@ -46,23 +46,23 @@
     "Truhe der alten Bastion (Epische Gruft Level 20)": 0,
     "Weiße Holztruhe (Epische Gruft Level 20)": 0,
     "Barbarentruhe (Heldenhafte Monster Level 24)": 0,
-    "Truhe der Maya (Gruft Level 25)": 25,
+    "Truhe der Maya (Gruft Level 25)": 0,
     "Infernale Truhe (Gruft Level 25)": 25,
     "Feuertruhe (Gruft Level 25)": 25,
-    "Knochentruhe (Gruft Level 25)": 25,
+    "Knochentruhe (Gruft Level 25)": 0,
     "Infernotruhe (Heldenhafte Monster Level 25)": 0,
     "Truhe der Kobra (Gruft Level 25)": 25,
-    "Truhe der Orks (Gruft Level 25)": 25,
+    "Truhe der Orks (Gruft Level 25)": 0,
     "Sandtruhe (Gruft Level 25)": 25,
     "Seltene Drachentruhe (Seltene Gruft Level 25)": 50,
     "Epische Gruft Level 25 (Epische Gruft Level 25)": 0,
     "Seltene Gruft Level 25 (Seltene Gruft Level 25)": 0,
-    "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 25,
+    "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 0,
     "Vergessene Truhe (Gruft Level 25)": 25,
     "Drachentruhe (Gruft Level 25)": 0,
     "Alte Truhe (Gruft Level 25)": 0,
     "Schöne Truhe (Gruft Level 25)": 25,
-    "Barbarentruhe (Gruft Level 25)": 25,
+    "Barbarentruhe (Gruft Level 25)": 0,
     "Skorpion-Truhe (Epische Gruft Level 25)": 0,
     "Harpyien-Truhe (Epische Gruft Level 25)": 50,
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0,
@@ -91,7 +91,7 @@
     "Truhe der Festung der Elfen (Festung Level 30)": 60,
     "Epische Gruft Level 30 (Epische Gruft Level 30)": 0,
     "Truhe des Priesters (Epische Gruft Level 30)": 0,
-    "Geflochtene Truhe (Epische Gruft Level 30)": 75,
+    "Geflochtene Truhe (Epische Gruft Level 30)": 0,
     "Schildkröten-Truhe (Epische Gruft Level 30)": 0,
     "Seltene Drachentruhe (Level 30)": 0,
     "Schatzkammer der Ahnen (Level 30-34)": 0,
@@ -126,8 +126,7 @@
     "Vergessene Truhe (Gruft Level 15)": 0,
     "Aufgegebene Truhe (Epische Gruft Level 25)": 50,
     "Truhe der Orks (Gruft Level 15)": 0,
-    "Truhe der Festung der Verfluchten (Festung Level 20)": 40,
-    "Seltene Drachentruhe (Seltene Gruft Level 15)": 15
+    "Truhe der Festung der Verfluchten (Festung Level 20)": 40
   },
   "clanData": [
     {
@@ -154,11 +153,7 @@
     {
       "name": "Magellan",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Kobra (Gruft Level 25)": 1,
-        "Truhe der Maya (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 444829445,
@@ -169,12 +164,7 @@
     {
       "name": "Explorer",
       "rank": "Veteran",
-      "chests": {
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 15)": 1,
-        "Truhe der Maya (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 401058355,
@@ -187,14 +177,9 @@
       "rank": "Veteran",
       "chests": {
         "Truhe der Kobra (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 3,
-        "Infernale Truhe (Gruft Level 25)": 2,
-        "Feuertruhe (Gruft Level 25)": 3,
-        "Geflochtene Truhe (Epische Gruft Level 30)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1,
-        "Truhe der Maya (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1,
-        "Vergessene Truhe (Gruft Level 25)": 1
+        "Sandtruhe (Gruft Level 25)": 2,
+        "Infernale Truhe (Gruft Level 25)": 1,
+        "Feuertruhe (Gruft Level 25)": 2
       },
       "tower": 0,
       "silver": 0,
@@ -401,10 +386,7 @@
     {
       "name": "Angelina38",
       "rank": "Veteran",
-      "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
-        "Truhe der Kobra (Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "power": 181613611,
       "prevPower": 181613611,
@@ -567,8 +549,8 @@
       "name": "LegatusLabienus",
       "rank": "Anführer",
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 30)": 36,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 11
+        "Truhe der Festung der Elfen (Festung Level 30)": 18,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 4
       },
       "tower": 0,
       "silver": 0,
@@ -655,9 +637,7 @@
     {
       "name": "Goll",
       "rank": "Offizier",
-      "chests": {
-        "Truhe der Kobra (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 353239806,
@@ -725,7 +705,7 @@
         "Vergessene Truhe (Gruft Level 15)": 2,
         "Feuertruhe (Gruft Level 15)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Truhe der Festung der Elfen (Festung Level 15)": 2,
+        "Truhe der Festung der Elfen (Festung Level 15)": 1,
         "Truhe der Orks (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 15)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 20)": 1
@@ -757,17 +737,7 @@
     {
       "name": "BAD Guo II",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Maya (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 3,
-        "Barbarentruhe (Gruft Level 25)": 2,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 4,
-        "Truhe der Orks (Gruft Level 25)": 2,
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Truhe der Kobra (Gruft Level 25)": 1,
-        "Knochentruhe (Gruft Level 25)": 2
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 754399259,
@@ -844,26 +814,10 @@
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Truhe der Kobra (Gruft Level 15)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 26598429,
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
-      "name": "Furya",
-      "rank": "Soldat",
-      "chests": {
-        "Barbarentruhe (Gruft Level 25)": 1
-      },
-      "tower": 0,
-      "silver": 0,
-      "power": 0,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
@@ -873,5 +827,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-31T16:51:12.135Z"
+  "lastUpdated": "2026-10-31T17:03:52.952Z"
 }
