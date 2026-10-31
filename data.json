@@ -135,7 +135,8 @@
     "Weiße Holztruhe (Epische Gruft Level 25)": 50,
     "Gewöhnliche Truhe des (Clan-Wohlstand)": 0,
     "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0,
-    "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 0
+    "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 0,
+    "Minotaurus-Truhe (Epische Gruft Level 25)": 50
   },
   "clanData": [
     {
@@ -256,7 +257,8 @@
         "Infernale Truhe (Gruft Level 25)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 1
+        "Feuertruhe (Gruft Level 25)": 1,
+        "Minotaurus-Truhe (Epische Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
