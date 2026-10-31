@@ -139,7 +139,8 @@
     "Minotaurus-Truhe (Epische Gruft Level 25)": 50,
     "Skorpion-Truhe (Epische Gruft Level 35)": 100,
     "Seltene Drachentruhe (Seltene Gruft Level 15)": 15,
-    "Geflochtene Truhe (Epische Gruft Level 20)": 40
+    "Geflochtene Truhe (Epische Gruft Level 20)": 40,
+    "Epische Truhe des Wohlstands (Clan-Wohlstand)": 0
   },
   "clanData": [
     {
@@ -631,7 +632,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 17,
         "Gewöhnliche Truhe des (Clan-Wohlstand)": 1,
         "Ungewöhnliche Truhe des (Clan-Wohlstand)": 1,
-        "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 1
+        "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 1,
+        "Epische Truhe des Wohlstands (Clan-Wohlstand)": 1
       },
       "tower": 0,
       "silver": 0,
