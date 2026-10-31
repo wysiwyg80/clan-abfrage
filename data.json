@@ -44,7 +44,7 @@
     "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 0,
     "Barbarentruhe (Epische Gruft Level 20)": 0,
     "Truhe der alten Bastion (Epische Gruft Level 20)": 0,
-    "Weiße Holztruhe (Epische Gruft Level 20)": 0,
+    "Weiße Holztruhe (Epische Gruft Level 20)": 40,
     "Barbarentruhe (Heldenhafte Monster Level 24)": 0,
     "Truhe der Maya (Gruft Level 25)": 0,
     "Infernale Truhe (Gruft Level 25)": 25,
@@ -277,7 +277,8 @@
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Infernale Truhe (Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1
+        "Schöne Truhe (Gruft Level 25)": 1,
+        "Weiße Holztruhe (Epische Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
