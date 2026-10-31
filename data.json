@@ -750,7 +750,9 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 225618041,
