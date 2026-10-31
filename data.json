@@ -49,7 +49,7 @@
     "Truhe der Maya (Gruft Level 25)": 0,
     "Infernale Truhe (Gruft Level 25)": 25,
     "Feuertruhe (Gruft Level 25)": 25,
-    "Knochentruhe (Gruft Level 25)": 0,
+    "Knochentruhe (Gruft Level 25)": 25,
     "Infernotruhe (Heldenhafte Monster Level 25)": 0,
     "Truhe der Kobra (Gruft Level 25)": 25,
     "Truhe der Orks (Gruft Level 25)": 0,
@@ -499,7 +499,8 @@
       "customGoal": null,
       "activeDays": 28,
       "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 11
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 11,
+        "Knochentruhe (Gruft Level 25)": 1
       },
       "growth": 0
     },
