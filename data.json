@@ -452,7 +452,9 @@
     {
       "name": "Vudor SK6",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Kürbistruhe (Kürbis)": 1
+      },
       "tower": 0,
       "power": 199465145,
       "prevPower": 197059645,
