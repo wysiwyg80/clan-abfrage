@@ -15,7 +15,7 @@
     "Truhe der Elfen (Heldenhafte Monster Level 17)": 0,
     "Truhe der Maya (Gruft Level 20)": 0,
     "Truhe der Kobra (Gruft Level 20)": 0,
-    "Schöne Truhe (Gruft Level 20)": 0,
+    "Schöne Truhe (Gruft Level 20)": 20,
     "Sandtruhe (Gruft Level 20)": 0,
     "Feuertruhe (Gruft Level 20)": 20,
     "Knochentruhe (Gruft Level 20)": 0,
@@ -791,7 +791,8 @@
         "Truhe der Festung der Elfen (Festung Level 25)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 4,
         "Kürbistruhe (Kürbis)": 1,
-        "Barbarentruhe (Gruft Level 20)": 1
+        "Barbarentruhe (Gruft Level 20)": 1,
+        "Schöne Truhe (Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
