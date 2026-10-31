@@ -62,7 +62,7 @@
     "Drachentruhe (Gruft Level 25)": 0,
     "Alte Truhe (Gruft Level 25)": 0,
     "Schöne Truhe (Gruft Level 25)": 25,
-    "Barbarentruhe (Gruft Level 25)": 0,
+    "Barbarentruhe (Gruft Level 25)": 25,
     "Skorpion-Truhe (Epische Gruft Level 25)": 0,
     "Harpyien-Truhe (Epische Gruft Level 25)": 50,
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0,
@@ -818,6 +818,19 @@
       "tower": 0,
       "silver": 0,
       "power": 26598429,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Furya",
+      "rank": "Soldat",
+      "chests": {
+        "Barbarentruhe (Gruft Level 25)": 1
+      },
+      "tower": 0,
+      "silver": 0,
+      "power": 0,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
