@@ -134,7 +134,8 @@
     "Geflochtene Truhe (Epische Gruft Level 25)": 50,
     "Weiße Holztruhe (Epische Gruft Level 25)": 50,
     "Gewöhnliche Truhe des (Clan-Wohlstand)": 0,
-    "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0
+    "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0,
+    "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 0
   },
   "clanData": [
     {
@@ -616,7 +617,8 @@
         "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Gewöhnliche Truhe des (Clan-Wohlstand)": 1,
-        "Ungewöhnliche Truhe des (Clan-Wohlstand)": 1
+        "Ungewöhnliche Truhe des (Clan-Wohlstand)": 1,
+        "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 1
       },
       "growth": 0
     },
