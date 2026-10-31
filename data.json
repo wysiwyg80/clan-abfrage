@@ -100,7 +100,7 @@
     "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 0,
     "Minotaurus-Truhe (Epische Gruft Level 30)": 0,
-    "Kobalt-Truhe (Epische Gruft Level 30)": 0,
+    "Kobalt-Truhe (Epische Gruft Level 30)": 75,
     "Barbarentruhe (Epische Gruft Level 30)": 0,
     "Harpyien-Truhe (Epische Gruft Level 30)": 0,
     "Aufgegebene Truhe (Epische Gruft Level 35)": 0,
@@ -142,7 +142,8 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
         "Barbarentruhe (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 20)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
+        "Kobalt-Truhe (Epische Gruft Level 30)": 1
       },
       "tower": 0,
       "silver": 0,
