@@ -33,7 +33,7 @@
     "Schöne Truhe (Level 20)": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 20)": 0,
     "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
-    "Truhe der Festung der Elfen (Festung Level 20)": 0,
+    "Truhe der Festung der Elfen (Festung Level 20)": 40,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 0,
     "Steintruhe (Gruft Level 20)": 20,
     "Skorpion-Truhe (Epische Gruft Level 20)": 0,
@@ -692,7 +692,8 @@
       "name": "kikito",
       "rank": "Vorgesetzter",
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 25)": 2
+        "Truhe der Festung der Elfen (Festung Level 25)": 2,
+        "Truhe der Festung der Elfen (Festung Level 20)": 1
       },
       "tower": 0,
       "silver": 9830000,
