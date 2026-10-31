@@ -401,7 +401,9 @@
     {
       "name": "Angelina38",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
+      },
       "tower": 0,
       "power": 181613611,
       "prevPower": 181613611,
