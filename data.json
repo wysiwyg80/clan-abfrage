@@ -31,7 +31,7 @@
     "Epische Gruft (Level 20)": 0,
     "Gruft-Truhe (Level 20)": 0,
     "Schöne Truhe (Level 20)": 0,
-    "Seltene Drachentruhe (Seltene Gruft Level 20)": 0,
+    "Seltene Drachentruhe (Seltene Gruft Level 20)": 40,
     "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
     "Truhe der Festung der Elfen (Festung Level 20)": 40,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 0,
@@ -803,7 +803,8 @@
         "Truhe der Orks (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 15)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 20)": 4,
-        "Seltene Drachentruhe (Seltene Gruft Level 15)": 4
+        "Seltene Drachentruhe (Seltene Gruft Level 15)": 4,
+        "Seltene Drachentruhe (Seltene Gruft Level 20)": 1
       },
       "growth": 0
     },
