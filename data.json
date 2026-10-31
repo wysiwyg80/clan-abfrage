@@ -913,32 +913,11 @@
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
-    },
-    {
-      "name": "Furya",
-      "rank": "Soldat",
-      "chests": {
-        "Barbarentruhe (Gruft Level 25)": 14,
-        "Schöne Truhe (Gruft Level 25)": 14,
-        "Truhe der Kobra (Gruft Level 25)": 15,
-        "Steintruhe (Gruft Level 25)": 15,
-        "Trillium-Truhe (Epische Gruft Level 25)": 3,
-        "Titanstahl-Truhe (Epische Gruft Level 25)": 3,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 3,
-        "Truhe des Priesters (Epische Gruft Level 25)": 3,
-        "Geflochtene Truhe (Epische Gruft Level 25)": 2
-      },
-      "tower": 0,
-      "silver": 0,
-      "power": 0,
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null
     }
   ],
   "cycleStartDate": "2026-10-30",
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-31T17:03:52.952Z"
+  "lastUpdated": "2026-10-31T20:19:26.084Z"
 }
