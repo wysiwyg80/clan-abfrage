@@ -137,7 +137,8 @@
     "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0,
     "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 0,
     "Minotaurus-Truhe (Epische Gruft Level 25)": 50,
-    "Skorpion-Truhe (Epische Gruft Level 35)": 100
+    "Skorpion-Truhe (Epische Gruft Level 35)": 100,
+    "Seltene Drachentruhe (Seltene Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -542,7 +543,8 @@
       "customGoal": null,
       "activeDays": 28,
       "chests": {
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1
+        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 15)": 1
       },
       "growth": 0
     },
