@@ -7,7 +7,7 @@
     "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 0,
     "Sandtruhe (Gruft Level 15)": 0,
     "Truhe der Festung der Elfen (Level 15)": 0,
-    "Truhe der Festung der Elfen (Festung Level 15)": 0,
+    "Truhe der Festung der Elfen (Festung Level 15)": 15,
     "Truhe der Kobra (Gruft Level 15)": 0,
     "Infernale Truhe (Gruft Level 15)": 0,
     "Barbarentruhe (Gruft Level 15)": 0,
@@ -26,10 +26,7 @@
     "Barbarentruhe (Gruft Level 20)": 20,
     "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 20,
     "Truhe der Kobra (Level 20)": 0,
-    "Seltene Gruft (Level 20)": 0,
     "Sandtruhe (Level 20)": 0,
-    "Epische Gruft (Level 20)": 0,
-    "Gruft-Truhe (Level 20)": 0,
     "Schöne Truhe (Level 20)": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 20)": 40,
     "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
@@ -89,7 +86,6 @@
     "Heldenhafte Monster Level 26": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 30)": 60,
     "Truhe der Festung der Elfen (Festung Level 30)": 60,
-    "Epische Gruft Level 30 (Epische Gruft Level 30)": 0,
     "Truhe des Priesters (Epische Gruft Level 30)": 0,
     "Geflochtene Truhe (Epische Gruft Level 30)": 0,
     "Schildkröten-Truhe (Epische Gruft Level 30)": 0,
@@ -744,7 +740,7 @@
         "Truhe der Festung der Elfen (Festung Level 15)": 1
       },
       "tower": 0,
-      "silver": 9830000,
+      "silver": 0,
       "power": 276063661,
       "prevPower": 274164761,
       "activeDays": 28,
@@ -1019,5 +1015,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-31T22:12:40.520Z"
+  "lastUpdated": "2026-10-31T22:14:34.421Z"
 }
