@@ -949,7 +949,9 @@
     {
       "name": "Aurora",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Kürbistruhe (Kürbis)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 65056815,
