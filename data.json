@@ -18,7 +18,7 @@
     "Schöne Truhe (Gruft Level 20)": 20,
     "Sandtruhe (Gruft Level 20)": 0,
     "Feuertruhe (Gruft Level 20)": 20,
-    "Knochentruhe (Gruft Level 20)": 0,
+    "Knochentruhe (Gruft Level 20)": 20,
     "Truhe der Orks (Gruft Level 20)": 20,
     "Infernale Truhe (Gruft Level 20)": 0,
     "Vergessene Truhe (Gruft Level 20)": 20,
@@ -583,7 +583,8 @@
         "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1,
         "Barbarentruhe (Gruft Level 15)": 1,
         "Truhe der Orks (Gruft Level 15)": 1,
-        "Vergessene Truhe (Gruft Level 15)": 1
+        "Vergessene Truhe (Gruft Level 15)": 1,
+        "Knochentruhe (Gruft Level 20)": 1
       },
       "growth": 0
     },
