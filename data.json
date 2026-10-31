@@ -36,7 +36,7 @@
     "Truhe der Festung der Elfen (Festung Level 20)": 40,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 0,
     "Steintruhe (Gruft Level 20)": 20,
-    "Skorpion-Truhe (Epische Gruft Level 20)": 0,
+    "Skorpion-Truhe (Epische Gruft Level 20)": 40,
     "Skarabäus-Truhe (Epische Gruft Level 20)": 0,
     "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 0,
     "Kobalt-Truhe (Epische Gruft Level 20)": 0,
@@ -792,7 +792,8 @@
       "rank": "Offizier",
       "chests": {
         "Kürbistruhe (Kürbis)": 2,
-        "Schöne Truhe (Gruft Level 25)": 1
+        "Schöne Truhe (Gruft Level 25)": 1,
+        "Skorpion-Truhe (Epische Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
