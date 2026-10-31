@@ -19,7 +19,7 @@
     "Sandtruhe (Gruft Level 20)": 0,
     "Feuertruhe (Gruft Level 20)": 0,
     "Knochentruhe (Gruft Level 20)": 0,
-    "Truhe der Orks (Gruft Level 20)": 0,
+    "Truhe der Orks (Gruft Level 20)": 20,
     "Infernale Truhe (Gruft Level 20)": 0,
     "Vergessene Truhe (Gruft Level 20)": 0,
     "Harpyien-Truhe (Epische Gruft Level 20)": 40,
@@ -140,7 +140,8 @@
       "rank": "Veteran",
       "chests": {
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
-        "Barbarentruhe (Gruft Level 20)": 1
+        "Barbarentruhe (Gruft Level 20)": 1,
+        "Truhe der Orks (Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
