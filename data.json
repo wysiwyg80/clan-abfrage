@@ -142,7 +142,8 @@
     "Geflochtene Truhe (Epische Gruft Level 20)": 40,
     "Epische Truhe des Wohlstands (Clan-Wohlstand)": 0,
     "Minotaurus-Truhe (Epische Gruft Level 15)": 15,
-    "Knochentruhe (Gruft Level 15)": 0
+    "Knochentruhe (Gruft Level 15)": 0,
+    "Gladiatorentruhe (Arena)": 0
   },
   "clanData": [
     {
@@ -968,7 +969,8 @@
         "Feuertruhe (Gruft Level 20)": 1,
         "Truhe der Kobra (Gruft Level 15)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Knochentruhe (Gruft Level 15)": 1
+        "Knochentruhe (Gruft Level 15)": 1,
+        "Gladiatorentruhe (Arena)": 1
       },
       "tower": 0,
       "silver": 0,
