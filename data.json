@@ -52,7 +52,7 @@
     "Knochentruhe (Gruft Level 25)": 25,
     "Infernotruhe (Heldenhafte Monster Level 25)": 0,
     "Truhe der Kobra (Gruft Level 25)": 25,
-    "Truhe der Orks (Gruft Level 25)": 0,
+    "Truhe der Orks (Gruft Level 25)": 25,
     "Sandtruhe (Gruft Level 25)": 25,
     "Seltene Drachentruhe (Seltene Gruft Level 25)": 50,
     "Epische Gruft Level 25 (Epische Gruft Level 25)": 0,
@@ -167,7 +167,8 @@
         "Sandtruhe (Gruft Level 25)": 2,
         "Infernale Truhe (Gruft Level 25)": 1,
         "Truhe der Maya (Gruft Level 25)": 2,
-        "Vergessene Truhe (Gruft Level 25)": 1
+        "Vergessene Truhe (Gruft Level 25)": 1,
+        "Truhe der Orks (Gruft Level 25)": 1
       },
       "tower": 0,
       "power": 479661600,
