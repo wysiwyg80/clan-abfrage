@@ -416,28 +416,6 @@
       "customGoal": null
     },
     {
-      "name": "invisible",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 156126850,
-      "prevPower": 156126850,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
-      "name": "Jamaman",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 146017683,
-      "prevPower": 146017683,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
       "name": "Maginad",
       "rank": "Veteran",
       "chests": {},
@@ -703,17 +681,6 @@
       "customGoal": null
     },
     {
-      "name": "TECH",
-      "rank": "Offizier",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 199973135,
-      "prevPower": 199715135,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
       "name": "Son Of Algéri",
       "rank": "Offizier",
       "chests": {},
@@ -726,7 +693,7 @@
     },
     {
       "name": "PABLUS",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "power": 105383231,
       "tower": 0,
       "silver": 0,
@@ -834,19 +801,6 @@
       "prevPower": 169122215
     },
     {
-      "name": "Furya",
-      "rank": "Offizier",
-      "chests": {
-        "Aufgegebene Truhe (Epische Gruft Level 20)": 1
-      },
-      "tower": 0,
-      "silver": 0,
-      "power": 280724451,
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null
-    },
-    {
       "name": "Asliddin7",
       "rank": "Veteran",
       "chests": {},
@@ -873,5 +827,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-10-30T22:09:59.936Z"
+  "lastUpdated": "2026-10-31T15:40:35.110Z"
 }
