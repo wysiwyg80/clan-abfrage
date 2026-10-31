@@ -24,7 +24,7 @@
     "Vergessene Truhe (Gruft Level 20)": 0,
     "Harpyien-Truhe (Epische Gruft Level 20)": 40,
     "Barbarentruhe (Gruft Level 20)": 0,
-    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 0,
+    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 20,
     "Truhe der Kobra (Level 20)": 0,
     "Seltene Gruft (Level 20)": 0,
     "Sandtruhe (Level 20)": 0,
@@ -138,7 +138,9 @@
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 615897675,
