@@ -482,7 +482,7 @@
     {
       "name": "Burigas",
       "rank": "Veteran",
-      "power": 81780025,
+      "power": 83682925,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -493,7 +493,7 @@
     {
       "name": "Vudorr",
       "rank": "Veteran",
-      "power": 28530049,
+      "power": 29502549,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -504,7 +504,7 @@
     {
       "name": "Greynelf",
       "rank": "Veteran",
-      "power": 12341183,
+      "power": 12373183,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -842,6 +842,28 @@
       "tower": 0,
       "silver": 0,
       "power": 280724451,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Asliddin7",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 31166148,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "LORD MOSQUITÉ",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 26598429,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
