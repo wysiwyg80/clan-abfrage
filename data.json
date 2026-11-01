@@ -932,8 +932,8 @@
   ],
   "evalStartDate": "2026-11-01",
   "evalEndDate": "2026-11-07",
-  "cycleTotalDays": 7,
+  "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T20:01:27.998Z"
+  "lastUpdated": "2026-11-01T20:06:51.043Z"
 }
