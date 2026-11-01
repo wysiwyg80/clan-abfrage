@@ -147,7 +147,8 @@
     "Weiße Holztruhe (Epische Gruft Level 35)": 100,
     "Schildkröten-Truhe (Epische Gruft Level 20)": 40,
     "Minotaurus-Truhe (Epische Gruft Level 20)": 40,
-    "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0
+    "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0,
+    "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 0
   },
   "clanData": [
     {
@@ -177,7 +178,8 @@
       "name": "Magellan",
       "rank": "Veteran",
       "chests": {
-        "Chimären-Truhe (Epische-Chimäre-Trupp)": 2
+        "Chimären-Truhe (Epische-Chimäre-Trupp)": 2,
+        "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 1
       },
       "tower": 0,
       "silver": 0,
