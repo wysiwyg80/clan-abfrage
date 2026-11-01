@@ -464,7 +464,7 @@
       "rank": "Veteran",
       "chests": {},
       "tower": 0,
-      "power": 181613611,
+      "power": 181677611,
       "prevPower": 181613611,
       "activeDays": 28,
       "silver": 0
@@ -475,7 +475,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 176643591,
+      "power": 178356291,
       "prevPower": 175490091,
       "activeDays": 28,
       "customGoal": null
@@ -498,7 +498,7 @@
       },
       "tower": 0,
       "silver": 0,
-      "power": 160682688,
+      "power": 161103858,
       "prevPower": 160682688,
       "activeDays": 28,
       "customGoal": null
@@ -508,7 +508,7 @@
       "rank": "Veteran",
       "chests": {},
       "tower": 0,
-      "power": 140163133,
+      "power": 140317033,
       "prevPower": 140126133,
       "activeDays": 28,
       "silver": 0
@@ -954,7 +954,7 @@
     {
       "name": "Şivanê dîn",
       "rank": "Veteran",
-      "power": 169122215,
+      "power": 169138715,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -1028,6 +1028,17 @@
       "tower": 0,
       "silver": 0,
       "power": 894164390,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Arik",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 118435431,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
