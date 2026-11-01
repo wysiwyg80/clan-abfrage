@@ -14,7 +14,7 @@
     "Truhe der Untoten (Heldenhafte Monster Level 16)": 0,
     "Truhe der Elfen (Heldenhafte Monster Level 17)": 0,
     "Truhe der Maya (Gruft Level 20)": 20,
-    "Truhe der Kobra (Gruft Level 20)": 0,
+    "Truhe der Kobra (Gruft Level 20)": 20,
     "Schöne Truhe (Gruft Level 20)": 20,
     "Sandtruhe (Gruft Level 20)": 20,
     "Feuertruhe (Gruft Level 20)": 20,
@@ -759,7 +759,9 @@
     {
       "name": "Loki",
       "rank": "Offizier",
-      "chests": {},
+      "chests": {
+        "Truhe der Kobra (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 260142706,
