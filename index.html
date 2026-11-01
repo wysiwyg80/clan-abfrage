@@ -1268,3 +1268,59 @@
             if(topChart) topChart.destroy();
             topChart = new Chart(topCtx, {
                 type: 'bar',
+                data: {
+                    labels: top10.map(x => x.name),
+                    datasets: [{
+                        label: 'Gesamtpunkte',
+                        data: top10.map(x => x.points),
+                        backgroundColor: 'rgba(217, 119, 6, 0.7)',
+                        borderColor: 'rgba(245, 158, 11, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
+                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+                    }
+                }
+            });
+
+            scoredList.sort((a, b) => b.growth - a.growth);
+            let topGrowth = scoredList.slice(0, 10);
+
+            if(growthChart) growthChart.destroy();
+            growthChart = new Chart(growthCtx, {
+                type: 'bar',
+                data: {
+                    labels: topGrowth.map(x => x.name),
+                    datasets: [{
+                        label: 'Macht-Zuwachs',
+                        data: topGrowth.map(x => x.growth),
+                        backgroundColor: 'rgba(13, 148, 136, 0.7)',
+                        borderColor: 'rgba(20, 184, 166, 1)',
+                        borderWidth: 1}
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
+                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        window.onload = async () => {
+            await loadFromGitHub();
+            refreshUI();
+        };
+    </script>
+</body>
+</html>
