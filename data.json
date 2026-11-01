@@ -148,7 +148,8 @@
     "Schildkröten-Truhe (Epische Gruft Level 20)": 40,
     "Minotaurus-Truhe (Epische Gruft Level 20)": 40,
     "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0,
-    "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 0
+    "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 0,
+    "Weiße Holztruhe (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -221,7 +222,9 @@
     {
       "name": "Biin",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Weiße Holztruhe (Epische Gruft Level 15)": 1
+      },
       "tower": 0,
       "power": 297121451,
       "prevPower": 297109251,
