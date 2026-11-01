@@ -623,7 +623,8 @@
       "joinDate": "2026-11-01",
       "chests": {
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 1,
-        "Gewöhnliche Truhe des (Clan-Wohlstand)": 1
+        "Gewöhnliche Truhe des (Clan-Wohlstand)": 1,
+        "Ungewöhnliche Truhe des (Clan-Wohlstand)": 1
       },
       "growth": 0
     },
