@@ -589,7 +589,9 @@
       "silver": 0,
       "customGoal": null,
       "joinDate": "2026-11-01",
-      "chests": {},
+      "chests": {
+        "Truhe der Festung der Elfen (Festung Level 30)": 1
+      },
       "growth": 0
     },
     {
