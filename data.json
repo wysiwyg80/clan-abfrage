@@ -619,8 +619,8 @@
     },
     {
       "name": "Que",
-      "rank": "Veteran",
-      "power": 114753140,
+      "rank": "Soldat",
+      "power": 114918040,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -648,7 +648,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 64930666,
+      "power": 65007686,
       "prevPower": 64930666,
       "activeDays": 28,
       "customGoal": null
@@ -715,7 +715,7 @@
       },
       "tower": 0,
       "silver": 0,
-      "power": 417332905,
+      "power": 417378415,
       "prevPower": 417332905,
       "activeDays": 28,
       "customGoal": null
@@ -1061,6 +1061,28 @@
       "tower": 0,
       "silver": 0,
       "power": 52726,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Akinohn",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 707502617,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Eldriel",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 190092336,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
