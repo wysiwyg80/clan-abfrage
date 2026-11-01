@@ -144,7 +144,8 @@
     "Chimären-Truhe (Epische-Chimäre-Trupp)": 0,
     "Runentruhe (Lvl. 45 Überfallender Runen-Trupp)": 0,
     "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 0,
-    "Weiße Holztruhe (Epische Gruft Level 35)": 100
+    "Weiße Holztruhe (Epische Gruft Level 35)": 100,
+    "Schildkröten-Truhe (Epische Gruft Level 20)": 40
   },
   "clanData": [
     {
@@ -440,7 +441,8 @@
       "name": "AyBars",
       "rank": "Veteran",
       "chests": {
-        "Vergessene Truhe (Gruft Level 15)": 1
+        "Vergessene Truhe (Gruft Level 15)": 1,
+        "Schildkröten-Truhe (Epische Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
