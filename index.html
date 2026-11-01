@@ -86,8 +86,11 @@
                         <input type="date" id="evalEndDateInput" onchange="onEndDateManualChanged()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="text-[10px] text-amber-300 uppercase font-bold">Zyklus-Länge (Tage):</label>
-                        <input type="number" id="cycleDaysInput" value="28" min="1" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400" title="Standard: 28 Tage">
+                        <div class="flex justify-between items-center">
+                            <label class="text-[10px] text-amber-300 uppercase font-bold">Zyklus-Länge:</label>
+                            <button onclick="resetCycleDaysToDefault()" class="text-[9px] text-cyan-400 hover:text-cyan-300 underline cursor-pointer" title="Setzt Zyklus-Länge auf Standard (28 Tage)">Standard (28T)</button>
+                        </div>
+                        <input type="number" id="cycleDaysInput" value="28" min="1" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400 mt-1" title="Standard: 28 Tage">
                     </div>
                     <div>
                         <label class="text-[10px] text-slate-400 uppercase font-bold">Ziel &lt; 100M (Voller Zyklus):</label>
@@ -418,7 +421,7 @@
             evalEndDate = document.getElementById('evalEndDateInput').value;
             
             let cycleDaysInputVal = parseInt(document.getElementById('cycleDaysInput').value);
-            if(!isNaN(cycleDaysInputVal)) cycleTotalDays = cycleDaysInputVal;
+            if(!isNaN(cycleDaysInputVal) && cycleDaysInputVal > 0) cycleTotalDays = cycleDaysInputVal;
 
             let gLowInput = parseInt(document.getElementById('goalLowInput').value);
             let gHighInput = parseInt(document.getElementById('goalHighInput').value);
@@ -441,6 +444,12 @@
             localStorage.setItem('legio_custom_days_count', activeDays);
 
             refreshUI();
+        }
+
+        function resetCycleDaysToDefault() {
+            cycleTotalDays = 28;
+            document.getElementById('cycleDaysInput').value = 28;
+            saveCycleSettings();
         }
 
         function onDaysCountChanged() {
