@@ -679,7 +679,8 @@
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
         "Truhe der Orks (Gruft Level 25)": 2,
-        "Schöne Truhe (Gruft Level 25)": 1
+        "Schöne Truhe (Gruft Level 25)": 1,
+        "Feuertruhe (Gruft Level 25)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
