@@ -335,8 +335,8 @@
                         <input type="number" id="editCustomGoal" placeholder="z.B. 20000" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
                     </div>
                     <div>
-                        <label class="text-[10px] uppercase font-bold text-slate-400">Aktive Tage (optional überschreiben)</label>
-                        <input type="number" id="editActiveDays" min="1" placeholder="z.B. 10" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
+                        <label class="text-[10px] uppercase font-bold text-slate-400">Beitrittsdatum / Aktiv seit</label>
+                        <input type="date" id="editJoinDate" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                 </div>
             </div>
@@ -365,7 +365,7 @@
             "Turmbau": 1
         };
 
-        let cycleStartDate = localStorage.getItem('legio_cycle_start') || '2026-10-01';
+        let cycleStartDate = localStorage.getItem('legio_cycle_start') || new Date().toISOString().split('T')[0];
         let cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28;
         let goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
         let goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
@@ -408,8 +408,16 @@
             let todayIso = new Date().toISOString().split('T')[0];
             cycleStartDate = todayIso;
             document.getElementById('cycleStartDateInput').value = todayIso;
+            
+            // Alle bestehenden Mitglieder an den neuen Zyklus-Start anpassen
+            clanData.forEach(p => {
+                p.joinDate = todayIso;
+                p.activeDays = 1;
+            });
+
             saveCycleSettings();
-            alert("Zyklus-Startdatum wurde auf heute (" + todayIso + ") zurückgesetzt (Tag 1 aktiv).");
+            saveData();
+            alert("Zyklus-Startdatum wurde auf heute (" + todayIso + ") zurückgesetzt (Tag 1 aktiv für alle Mitglieder).");
         }
 
         function saveGitHubSettings() {
@@ -431,6 +439,25 @@
             let days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
             if (days < 1) return 1;
             if (days > cycleTotalDays) return cycleTotalDays;
+            return days;
+        }
+
+        function calculateMemberActiveDays(member) {
+            let cycleStart = new Date(cycleStartDate);
+            let today = new Date();
+            
+            let effectiveStart = cycleStart;
+            if(member.joinDate) {
+                let memberJoin = new Date(member.joinDate);
+                if(!isNaN(memberJoin.getTime()) && memberJoin > cycleStart) {
+                    effectiveStart = memberJoin;
+                }
+            }
+
+            let diffTime = today - effectiveStart;
+            let days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
+            if(days < 1) return 1;
+            if(days > cycleTotalDays) return cycleTotalDays;
             return days;
         }
 
@@ -741,7 +768,6 @@
                 return (Number(b.power) || 0) - (Number(a.power) || 0);
             });
 
-            let activeDays = getAutomaticActiveDays();
             let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
 
             sorted.forEach((p, index) => {
@@ -775,14 +801,17 @@
                     ? Number(p.customGoal) 
                     : (pMacht < limitMacht ? goalLow : goalHigh);
                 
-                let pActiveDays = (p.activeDays && !isNaN(Number(p.activeDays))) ? Number(p.activeDays) : activeDays;
+                // Berechnung der tagesgenauen Zielpunkte (Berücksichtigt Eintrittsdatum für neue Mitglieder)
+                let pActiveDays = calculateMemberActiveDays(p);
                 let validTotalDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
                 let dailyTarget = requiredGoal / validTotalDays;
                 let targetSoFar = Math.round(dailyTarget * pActiveDays);
 
                 let pointsNeeded = targetSoFar - totalPts;
                 let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-amber-950/40 border-amber-800";
-                let statusText = totalPts >= targetSoFar ? `✅ Soll erfüllt` : `⚠️ Noch ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt`;
+                let statusText = totalPts >= targetSoFar 
+                    ? `✅ Soll erfüllt (${pActiveDays}T)` 
+                    : `⚠️ Noch ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt (${pActiveDays}T)`;
 
                 let growthVal = Number(p.growth || 0);
 
@@ -908,7 +937,6 @@
             }
         }
 
-        // AUTOMATISCHE TASCHENRECHNER-ADDITION FÜR MANUELLE EINGABEN
         function quickUpdateSilver(index, val) {
             let addedVal = parseInt(val) || 0;
             if (addedVal === 0) return;
@@ -952,6 +980,7 @@
         }
 
         function openAddModal() {
+            let todayIso = new Date().toISOString().split('T')[0];
             document.getElementById('modalTitle').innerHTML = `<i class="fa-solid fa-user-plus"></i> Mitglied hinzufügen`;
             document.getElementById('editIndex').value = "-1";
             document.getElementById('editName').value = "";
@@ -960,13 +989,14 @@
             document.getElementById('editTower').value = "0";
             document.getElementById('editSilver').value = "0";
             document.getElementById('editCustomGoal').value = "";
-            document.getElementById('editActiveDays').value = "";
+            document.getElementById('editJoinDate').value = todayIso;
             document.getElementById('btnResetSingle').classList.add('hidden');
             document.getElementById('editModal').classList.remove('hidden');
         }
 
         function openEditModal(index) {
             let p = clanData[index];
+            let todayIso = new Date().toISOString().split('T')[0];
             document.getElementById('modalTitle').innerHTML = `<i class="fa-solid fa-user-pen"></i> Mitglied bearbeiten: ${p.name}`;
             document.getElementById('editIndex').value = index;
             document.getElementById('editName').value = p.name || '';
@@ -975,7 +1005,7 @@
             document.getElementById('editTower').value = p.tower || 0;
             document.getElementById('editSilver').value = p.silver || 0;
             document.getElementById('editCustomGoal').value = p.customGoal || '';
-            document.getElementById('editActiveDays').value = p.activeDays || '';
+            document.getElementById('editJoinDate').value = p.joinDate || cycleStartDate || todayIso;
             document.getElementById('btnResetSingle').classList.remove('hidden');
             document.getElementById('editModal').classList.remove('hidden');
         }
@@ -989,6 +1019,9 @@
             let name = document.getElementById('editName').value.trim();
             if(!name) return alert("Name darf nicht leer sein!");
 
+            let todayIso = new Date().toISOString().split('T')[0];
+            let joinDateVal = document.getElementById('editJoinDate').value || todayIso;
+
             let memberObj = {
                 name: name,
                 rank: document.getElementById('editRank').value,
@@ -996,7 +1029,7 @@
                 tower: parseInt(document.getElementById('editTower').value) || 0,
                 silver: parseInt(document.getElementById('editSilver').value) || 0,
                 customGoal: parseInt(document.getElementById('editCustomGoal').value) || null,
-                activeDays: parseInt(document.getElementById('editActiveDays').value) || null
+                joinDate: joinDateVal
             };
 
             if(index === -1) {
@@ -1084,6 +1117,7 @@
             try {
                 let imported = JSON.parse(raw);
                 if(!Array.isArray(imported)) imported = [imported];
+                let todayIso = new Date().toISOString().split('T')[0];
 
                 imported.forEach(imp => {
                     let existing = clanData.find(p => p.name.toLowerCase() === imp.name.toLowerCase());
@@ -1108,7 +1142,8 @@
                             growth: 0,
                             tower: Number(imp.tower) || 0,
                             silver: Number(imp.silver) || 0,
-                            chests: imp.chests || {}
+                            chests: imp.chests || {},
+                            joinDate: todayIso
                         });
                     }
                 });
