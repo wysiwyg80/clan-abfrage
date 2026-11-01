@@ -1077,9 +1077,9 @@
       "customGoal": null
     }
   ],
-  "cycleStartDate": "2026-10-30",
-  "cycleTotalDays": 28,
+  "cycleStartDate": "2026-11-01",
+  "cycleTotalDays": 7,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T10:50:26.195Z"
+  "lastUpdated": "2026-11-01T10:52:36.459Z"
 }
