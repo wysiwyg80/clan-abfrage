@@ -85,11 +85,11 @@
                         <input type="number" id="customDaysCountInput" value="7" min="1" onchange="onDaysCountChanged()" class="w-full bg-slate-900 border border-amber-500/80 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400" title="Trage hier ein, für wie viele Tage das Soll berechnet werden soll">
                     </div>
                     <div>
-                        <label class="text-[10px] text-slate-300 uppercase font-bold">Von Datum:</label>
+                        <label class="text-[10px] text-amber-300 uppercase font-bold">Von Datum:</label>
                         <input type="date" id="evalStartDateInput" onchange="onDateChanged()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="text-[10px] text-slate-300 uppercase font-bold">Bis Datum (Auto):</label>
+                        <label class="text-[10px] text-amber-300 uppercase font-bold">Bis Datum (Auto):</label>
                         <input type="date" id="evalEndDateInput" onchange="onEndDateManualChanged()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
@@ -263,7 +263,7 @@
                             <th class="p-3 text-right data-col-chests">Turmbau-Pkt</th>
                             <th class="p-3 text-right data-col-chests text-cyan-400">Silber / Bank</th>
                             <th class="p-3 text-right data-col-chests">Gesamt-Pkt</th>
-                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status & Tages-Soll</th>
+                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status & Ziel</th>
                             <th class="p-3 text-center data-col-power hidden">Helden-Lvl</th>
                             <th class="p-3 text-right data-col-power hidden">Macht</th>
                             <th class="p-3 text-right data-col-power hidden">Zuwachs</th>
@@ -385,7 +385,6 @@
         let evalStartDate = localStorage.getItem('legio_eval_start_date') || todayIso;
         let cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28;
 
-        // Berechne initiales Enddatum anhand der gespeicherten Tage oder Standard 7 Tage
         let savedDaysCount = parseInt(localStorage.getItem('legio_custom_days_count')) || 7;
         let initialEndDate = addDaysToDateStr(evalStartDate, savedDaysCount - 1);
         let evalEndDate = localStorage.getItem('legio_eval_end_date') || initialEndDate;
@@ -424,13 +423,9 @@
         function saveCycleSettings() {
             evalStartDate = document.getElementById('evalStartDateInput').value;
             evalEndDate = document.getElementById('evalEndDateInput').value;
-            cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28; // bleibt stabil oder aus Input
             
             let cycleDaysInputVal = parseInt(document.getElementById('cycleDaysInput').value);
             if(!isNaN(cycleDaysInputVal)) cycleTotalDays = cycleDaysInputVal;
-
-            goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
-            goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
 
             let gLowInput = parseInt(document.getElementById('goalLowInput').value);
             let gHighInput = parseInt(document.getElementById('goalHighInput').value);
@@ -442,7 +437,6 @@
                 document.getElementById('evalEndDateInput').value = evalEndDate;
             }
 
-            // Aktualisiere das direkte Tage-Eingabefeld passend zum aktuellen Zeitraum
             let activeDays = calculateDaysBetween(evalStartDate, evalEndDate);
             document.getElementById('customDaysCountInput').value = activeDays;
 
@@ -456,31 +450,26 @@
             refreshUI();
         }
 
-        // Wenn der Nutzer direkt die Anzahl der Tage einträgt (z.B. "7")
         function onDaysCountChanged() {
             let days = parseInt(document.getElementById('customDaysCountInput').value) || 1;
             if (days < 1) days = 1;
 
             evalStartDate = document.getElementById('evalStartDateInput').value || todayIso;
-            // Berechne Enddatum automatisch (Startdatum + Tage - 1)
             evalEndDate = addDaysToDateStr(evalStartDate, days - 1);
             document.getElementById('evalEndDateInput').value = evalEndDate;
 
             saveCycleSettings();
         }
 
-        // Wenn das Startdatum geändert wird
         function onDateChanged() {
             evalStartDate = document.getElementById('evalStartDateInput').value;
             let currentDaysCount = parseInt(document.getElementById('customDaysCountInput').value) || 7;
-            // Passe Enddatum automatisch an basierend auf den eingetragenen Tagen
             evalEndDate = addDaysToDateStr(evalStartDate, currentDaysCount - 1);
             document.getElementById('evalEndDateInput').value = evalEndDate;
 
             saveCycleSettings();
         }
 
-        // Wenn das Bis-Datum manuell geändert wird
         function onEndDateManualChanged() {
             evalEndDate = document.getElementById('evalEndDateInput').value;
             evalStartDate = document.getElementById('evalStartDateInput').value;
@@ -874,7 +863,6 @@
                 let heroLvl = (p.hero_level !== undefined && p.hero_level !== null && !isNaN(Number(p.hero_level))) ? Number(p.hero_level) : 0;
                 let limitMacht = 100000000;
                 
-                // Basis-Ziel für den VOLLEN Zyklus (z.B. 15.000)
                 let baseGoalFullCycle = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
                     ? Number(p.customGoal) 
                     : (pMacht < limitMacht ? goalLow : goalHigh);
@@ -884,12 +872,10 @@
                 let targetSoFar = Math.round(dailyTarget * activeDaysCount);
 
                 let pointsNeeded = targetSoFar - totalPts;
-                let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-emerald-950/40 border-amber-800";
+                let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-amber-950/40 border-amber-800";
                 let statusText = totalPts >= targetSoFar 
-                    ? `✅ Soll erfüllt (${activeDaysCount}T)` 
-                    : `⚠️ Noch ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt (${activeDaysCount}T)`;
-
-                let growthVal = Number(p.growth || 0);
+                    ? `✅ Soll erfüllt` 
+                    : `⚠️ Fehlen: ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt`;
 
                 row.innerHTML = `
                     <td class="p-3">
@@ -917,11 +903,12 @@
                         ${totalPts.toLocaleString()}
                     </td>
                     <td class="p-3 text-center data-col-chests">
-                        <div class="flex flex-col items-center gap-1">
+                        <div class="flex flex-col items-center gap-0.5">
                             <span class="inline-block px-2 py-0.5 rounded border text-[11px] font-bold ${statusColor}">${statusText}</span>
-                            <span class="text-[10px] text-slate-400 font-semibold" title="Anteiliges Ziel für ${activeDaysCount} von ${totalCycleDays} Tagen">
-                                Ziel (${activeDaysCount}T): <strong class="text-amber-300">${targetSoFar.toLocaleString()}</strong> Pkt <span class="text-[9px] text-slate-400">(${dailyTarget} Pkt/Tag)</span>
+                            <span class="text-[10px] text-amber-400/90 font-bold" title="Anteiliges Ziel für diesen Zeitraum">
+                                Ziel (${activeDaysCount}T): ${targetSoFar.toLocaleString()} Pkt
                             </span>
+                            <span class="text-[9px] text-slate-400">(${dailyTarget} Pkt/Tag | Voll: ${baseGoalFullCycle.toLocaleString()})</span>
                         </div>
                     </td>
                     <td class="p-3 text-center data-col-power hidden font-bold text-amber-300">
