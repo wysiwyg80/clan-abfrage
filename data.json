@@ -153,7 +153,8 @@
     "Titanstahl-Truhe (Epische Gruft Level 20)": 40,
     "Truhe des Priesters (Epische Gruft Level 15)": 15,
     "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 0,
-    "Aufgegebene Truhe (Epische Gruft Level 15)": 15
+    "Aufgegebene Truhe (Epische Gruft Level 15)": 15,
+    "Barbarentruhe (Heldenhafte Monster Level 19)": 0
   },
   "clanData": [
     {
@@ -388,7 +389,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 7,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 4,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
-        "Knochentruhe (Gruft Level 20)": 1
+        "Knochentruhe (Gruft Level 20)": 1,
+        "Barbarentruhe (Heldenhafte Monster Level 19)": 1
       },
       "tower": 0,
       "silver": 0,
