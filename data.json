@@ -117,7 +117,7 @@
     "Epische Truhe des Wohlstands": 0,
     "Epische Truhe des Goldenen Wächters": 0,
     "Kürbistruhe (Kürbis)": 0,
-    "Turmbau": 0,
+    "Turmbau": 50,
     "Kobalt-Truhe (Epische Gruft Level 25)": 50,
     "Vergessene Truhe (Gruft Level 15)": 0,
     "Aufgegebene Truhe (Epische Gruft Level 25)": 50,
@@ -583,14 +583,15 @@
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
+      "hero_level": 0,
       "power": 759967191,
-      "prevPower": 759664191,
-      "activeDays": 1,
+      "tower": 1,
+      "silver": 0,
       "customGoal": null,
-      "joinDate": "2026-11-01"
+      "joinDate": "2026-11-01",
+      "chests": {},
+      "growth": 0,
+      "activeDays": 1
     },
     {
       "name": "man of war",
@@ -960,13 +961,14 @@
       "silver": 0,
       "power": 1282443335,
       "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null
+      "activeDays": 1,
+      "customGoal": null,
+      "joinDate": "2026-11-01"
     }
   ],
   "cycleStartDate": "2026-11-01",
   "cycleTotalDays": 7,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T12:49:18.292Z"
+  "lastUpdated": "2026-11-01T12:52:02.709Z"
 }
