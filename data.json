@@ -156,7 +156,7 @@
       },
       "tower": 0,
       "silver": 0,
-      "power": 615897675,
+      "power": 624559145,
       "prevPower": 615897675,
       "activeDays": 28,
       "customGoal": null
@@ -177,7 +177,7 @@
         "Schöne Truhe (Gruft Level 25)": 1
       },
       "tower": 0,
-      "power": 479661600,
+      "power": 479740600,
       "prevPower": 479641500,
       "activeDays": 28,
       "silver": 0
@@ -188,7 +188,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 444829445,
+      "power": 447586685,
       "prevPower": 444829445,
       "activeDays": 28,
       "customGoal": null
@@ -199,7 +199,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 401058355,
+      "power": 408425675,
       "prevPower": 400582555,
       "activeDays": 28,
       "customGoal": null
@@ -915,7 +915,7 @@
     {
       "name": "Sir Charles",
       "rank": "Veteran",
-      "power": 621331471,
+      "power": 622522271,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -943,7 +943,7 @@
     {
       "name": "Ajji",
       "rank": "Veteran",
-      "power": 384327063,
+      "power": 384861043,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
