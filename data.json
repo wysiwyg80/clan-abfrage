@@ -849,7 +849,9 @@
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Vergessene Truhe (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 26652619,
