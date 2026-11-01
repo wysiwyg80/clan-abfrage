@@ -229,7 +229,8 @@
       "name": "Biin",
       "rank": "Veteran",
       "chests": {
-        "Weiße Holztruhe (Epische Gruft Level 15)": 1
+        "Weiße Holztruhe (Epische Gruft Level 15)": 1,
+        "Barbarentruhe (Gruft Level 20)": 1
       },
       "tower": 0,
       "power": 297121451,
