@@ -1053,6 +1053,17 @@
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
+    },
+    {
+      "name": "td",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 52726,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
     }
   ],
   "cycleStartDate": "2026-10-30",
