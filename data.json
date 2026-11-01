@@ -146,14 +146,7 @@
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
-        "Barbarentruhe (Gruft Level 20)": 2,
-        "Truhe der Orks (Gruft Level 20)": 2,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
-        "Kobalt-Truhe (Epische Gruft Level 30)": 1,
-        "Vergessene Truhe (Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 624559145,
@@ -165,18 +158,7 @@
     {
       "name": "Riyash CP CITY",
       "rank": "Veteran",
-      "chests": {
-        "Barbarentruhe (Gruft Level 25)": 3,
-        "Feuertruhe (Gruft Level 25)": 3,
-        "Sandtruhe (Gruft Level 25)": 3,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Truhe der Maya (Gruft Level 25)": 2,
-        "Vergessene Truhe (Gruft Level 25)": 4,
-        "Truhe der Orks (Gruft Level 25)": 2,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2,
-        "Truhe der Kobra (Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "power": 479740600,
       "prevPower": 479641500,
@@ -211,12 +193,7 @@
     {
       "name": "DRACULA",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Kobra (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 2,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 2
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 376541175,
@@ -251,9 +228,7 @@
     {
       "name": "Auzar",
       "rank": "Veteran",
-      "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 294961175,
@@ -265,15 +240,7 @@
     {
       "name": "Elginan",
       "rank": "Offizier",
-      "chests": {
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 1,
-        "Minotaurus-Truhe (Epische Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 3,
-        "Skorpion-Truhe (Epische Gruft Level 35)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 306252596,
@@ -285,9 +252,7 @@
     {
       "name": "Dalas",
       "rank": "Veteran",
-      "chests": {
-        "Kürbistruhe (Kürbis)": 2
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 256516475,
@@ -311,16 +276,7 @@
     {
       "name": "Carruggi 5r",
       "rank": "Veteran",
-      "chests": {
-        "Sandtruhe (Gruft Level 25)": 1,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1,
-        "Weiße Holztruhe (Epische Gruft Level 20)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 25)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 20)": 2,
-        "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
-        "Weiße Holztruhe (Epische Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 238713385,
@@ -344,11 +300,7 @@
     {
       "name": "Lee the Ugly",
       "rank": "Veteran",
-      "chests": {
-        "Sandtruhe (Gruft Level 25)": 2,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2,
-        "Infernale Truhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 235685731,
@@ -371,17 +323,7 @@
     {
       "name": "Ajax",
       "rank": "Veteran",
-      "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
-        "Vergessene Truhe (Gruft Level 25)": 2,
-        "Knochentruhe (Gruft Level 25)": 2,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2,
-        "Steintruhe (Gruft Level 25)": 4,
-        "Feuertruhe (Gruft Level 25)": 2,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Truhe der Maya (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 219844135,
@@ -393,9 +335,7 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Festung der Elfen (Festung Level 15)": 4
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 213843481,
@@ -407,12 +347,7 @@
     {
       "name": "BELEN",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Maya (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 1,
-        "Truhe der Verfluchten (Epische Gruft Level 25)": 1,
-        "Kürbistruhe (Kürbis)": 3
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 210978881,
@@ -460,9 +395,7 @@
     {
       "name": "Vudor SK6",
       "rank": "Veteran",
-      "chests": {
-        "Kürbistruhe (Kürbis)": 2
-      },
+      "chests": {},
       "tower": 0,
       "power": 199466425,
       "prevPower": 197059645,
@@ -496,19 +429,7 @@
     {
       "name": "King Slayer",
       "rank": "Veteran",
-      "chests": {
-        "Truhe der Orks (Gruft Level 25)": 2,
-        "Truhe der Maya (Gruft Level 25)": 5,
-        "Truhe der Kobra (Gruft Level 25)": 1,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 3,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 3,
-        "Steintruhe (Gruft Level 25)": 1,
-        "Knochentruhe (Gruft Level 25)": 2,
-        "Feuertruhe (Gruft Level 25)": 1,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 1,
-        "Vergessene Truhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 161103858,
@@ -531,9 +452,7 @@
     {
       "name": "AyBars",
       "rank": "Veteran",
-      "chests": {
-        "Kürbistruhe (Kürbis)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 111471886,
@@ -573,13 +492,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 11,
-        "Knochentruhe (Gruft Level 25)": 1,
-        "Kürbistruhe (Kürbis)": 3,
-        "Truhe der Festung der Elfen (Festung Level 25)": 4,
-        "Truhe der Festung der Elfen (Festung Level 15)": 14
-      },
+      "chests": {},
       "growth": 0,
       "joinDate": "2026-11-01"
     },
@@ -591,16 +504,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 15)": 2,
-        "Geflochtene Truhe (Epische Gruft Level 20)": 1,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1,
-        "Barbarentruhe (Gruft Level 15)": 1,
-        "Truhe der Orks (Gruft Level 15)": 1,
-        "Vergessene Truhe (Gruft Level 15)": 1,
-        "Knochentruhe (Gruft Level 20)": 1
-      },
+      "chests": {},
       "growth": 0,
       "joinDate": "2026-11-01"
     },
@@ -648,10 +552,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {
-        "Truhe der Kobra (Gruft Level 25)": 3,
-        "Kürbistruhe (Kürbis)": 2
-      },
+      "chests": {},
       "growth": 0,
       "joinDate": "2026-11-01"
     },
@@ -682,15 +583,7 @@
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
-      "chests": {
-        "Truhe der Festung der Elfen (Festung Level 30)": 114,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 27,
-        "Gewöhnliche Truhe des (Clan-Wohlstand)": 1,
-        "Ungewöhnliche Truhe des (Clan-Wohlstand)": 1,
-        "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 1,
-        "Epische Truhe des Wohlstands (Clan-Wohlstand)": 1,
-        "Kürbistruhe (Kürbis)": 3
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 759967191,
@@ -719,29 +612,14 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {
-        "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1,
-        "Truhe der Kobra (Gruft Level 25)": 2,
-        "Gewöhnliche Truhe des (Clan-Wohlstand)": 1,
-        "Ungewöhnliche Truhe des (Clan-Wohlstand)": 1,
-        "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 1,
-        "Truhe der Festung der Elfen (Festung Level 25)": 9,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1
-      },
+      "chests": {},
       "growth": 0,
       "joinDate": "2026-11-01"
     },
     {
       "name": "Cologne am Rhein",
       "rank": "Soldat",
-      "chests": {
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Kobalt-Truhe (Epische Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 417378415,
@@ -765,11 +643,7 @@
     {
       "name": "kikito",
       "rank": "Vorgesetzter",
-      "chests": {
-        "Truhe der Festung der Elfen (Festung Level 25)": 3,
-        "Truhe der Festung der Elfen (Festung Level 20)": 3,
-        "Truhe der Festung der Elfen (Festung Level 15)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 276856401,
@@ -786,9 +660,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {
-        "Kürbistruhe (Kürbis)": 1
-      },
+      "chests": {},
       "growth": 0,
       "joinDate": "2026-11-01"
     },
@@ -807,9 +679,7 @@
     {
       "name": "Delalen",
       "rank": "Offizier",
-      "chests": {
-        "Kürbistruhe (Kürbis)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 339380599,
@@ -821,11 +691,7 @@
     {
       "name": "Loki",
       "rank": "Offizier",
-      "chests": {
-        "Kürbistruhe (Kürbis)": 2,
-        "Schöne Truhe (Gruft Level 25)": 1,
-        "Skorpion-Truhe (Epische Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 260142706,
@@ -837,14 +703,7 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
-      "chests": {
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 2,
-        "Truhe des Priesters (Epische Gruft Level 25)": 1,
-        "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
-        "Sandtruhe (Gruft Level 25)": 1,
-        "Steintruhe (Gruft Level 20)": 1,
-        "Feuertruhe (Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 225887841,
@@ -856,16 +715,7 @@
     {
       "name": "Son Of Algéri",
       "rank": "Offizier",
-      "chests": {
-        "Truhe der Festung der Elfen (Festung Level 25)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 4,
-        "Kürbistruhe (Kürbis)": 1,
-        "Barbarentruhe (Gruft Level 20)": 1,
-        "Schöne Truhe (Gruft Level 20)": 1,
-        "Truhe der Kobra (Gruft Level 15)": 1,
-        "Minotaurus-Truhe (Epische Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 20)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 183654080,
@@ -882,23 +732,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {
-        "Sandtruhe (Gruft Level 15)": 2,
-        "Truhe der Kobra (Gruft Level 15)": 1,
-        "Vergessene Truhe (Gruft Level 15)": 2,
-        "Feuertruhe (Gruft Level 15)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Truhe der Festung der Elfen (Festung Level 15)": 3,
-        "Truhe der Orks (Gruft Level 15)": 1,
-        "Steintruhe (Gruft Level 15)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 5,
-        "Seltene Drachentruhe (Seltene Gruft Level 15)": 4,
-        "Seltene Drachentruhe (Seltene Gruft Level 20)": 1,
-        "Kürbistruhe (Kürbis)": 1,
-        "Minotaurus-Truhe (Epische Gruft Level 15)": 1,
-        "Gladiatorentruhe (Arena)": 1,
-        "Feuertruhe (Gruft Level 20)": 1
-      },
+      "chests": {},
       "growth": 0,
       "joinDate": "2026-11-01"
     },
@@ -941,13 +775,7 @@
     {
       "name": "Riyash",
       "rank": "Veteran",
-      "chests": {
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Knochentruhe (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1,
-        "Truhe der Maya (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3
-      },
+      "chests": {},
       "tower": 0,
       "power": 671335971,
       "prevPower": 660458681,
@@ -963,13 +791,7 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 2,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3
-      },
+      "chests": {},
       "growth": 0,
       "joinDate": "2026-11-01"
     },
@@ -1025,13 +847,7 @@
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
-      "chests": {
-        "Infernale Truhe (Gruft Level 15)": 1,
-        "Feuertruhe (Gruft Level 20)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Schöne Truhe (Gruft Level 15)": 1,
-        "Skorpion-Truhe (Epische Gruft Level 25)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 26652619,
@@ -1043,15 +859,7 @@
     {
       "name": "Aurora",
       "rank": "Veteran",
-      "chests": {
-        "Kürbistruhe (Kürbis)": 1,
-        "Vergessene Truhe (Gruft Level 20)": 1,
-        "Feuertruhe (Gruft Level 20)": 1,
-        "Truhe der Kobra (Gruft Level 15)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Knochentruhe (Gruft Level 15)": 1,
-        "Gladiatorentruhe (Arena)": 1
-      },
+      "chests": {},
       "tower": 0,
       "silver": 0,
       "power": 65056815,
@@ -1157,8 +965,8 @@
     }
   ],
   "cycleStartDate": "2026-11-01",
-  "cycleTotalDays": 28,
+  "cycleTotalDays": 7,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T11:18:21.058Z"
+  "lastUpdated": "2026-11-01T11:42:54.210Z"
 }
