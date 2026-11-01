@@ -540,7 +540,9 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {},
+      "chests": {
+        "Minotaurus-Truhe (Epische Gruft Level 20)": 1
+      },
       "growth": 0,
       "joinDate": "2026-11-01"
     },
