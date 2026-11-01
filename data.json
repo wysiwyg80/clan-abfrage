@@ -869,7 +869,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 1095026005,
+      "power": 1095030005,
       "prevPower": 1095026005,
       "activeDays": 28,
       "customGoal": null
@@ -880,7 +880,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 783379255,
+      "power": 783383255,
       "prevPower": 783379255,
       "activeDays": 28,
       "customGoal": null
@@ -891,7 +891,7 @@
       "chests": {},
       "tower": 0,
       "silver": 0,
-      "power": 754399259,
+      "power": 754733459,
       "prevPower": 753964259,
       "activeDays": 28,
       "customGoal": null
@@ -907,7 +907,7 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 3
       },
       "tower": 0,
-      "power": 671205971,
+      "power": 671335971,
       "prevPower": 660458681,
       "activeDays": 28,
       "silver": 0
@@ -1006,6 +1006,28 @@
       "tower": 0,
       "silver": 0,
       "power": 65056815,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Xetlac",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 991194175,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Akasha",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 894164390,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
