@@ -34,7 +34,7 @@
     "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 0,
     "Steintruhe (Gruft Level 20)": 20,
     "Skorpion-Truhe (Epische Gruft Level 20)": 40,
-    "Skarabäus-Truhe (Epische Gruft Level 20)": 0,
+    "Skarabäus-Truhe (Epische Gruft Level 20)": 40,
     "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 0,
     "Kobalt-Truhe (Epische Gruft Level 20)": 0,
     "Truhe des Priesters (Epische Gruft Level 20)": 0,
@@ -848,7 +848,8 @@
       "customGoal": null,
       "activeDays": 1,
       "chests": {
-        "Truhe der Maya (Gruft Level 20)": 1
+        "Truhe der Maya (Gruft Level 20)": 1,
+        "Skarabäus-Truhe (Epische Gruft Level 20)": 1
       },
       "growth": 0,
       "prevPower": 169122215,
