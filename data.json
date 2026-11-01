@@ -585,13 +585,12 @@
       "rank": "Anführer",
       "hero_level": 0,
       "power": 759967191,
-      "tower": 1,
+      "tower": 0,
       "silver": 0,
       "customGoal": null,
       "joinDate": "2026-11-01",
       "chests": {},
-      "growth": 0,
-      "activeDays": 1
+      "growth": 0
     },
     {
       "name": "man of war",
@@ -970,5 +969,5 @@
   "cycleTotalDays": 7,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T12:52:02.709Z"
+  "lastUpdated": "2026-11-01T12:58:35.791Z"
 }
