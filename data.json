@@ -808,7 +808,8 @@
       "customGoal": null,
       "activeDays": 1,
       "chests": {
-        "Weiße Holztruhe (Epische Gruft Level 35)": 1
+        "Weiße Holztruhe (Epische Gruft Level 35)": 1,
+        "Feuertruhe (Gruft Level 25)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
