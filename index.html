@@ -50,7 +50,7 @@
                 <button onclick="window.print()" class="bg-cyan-700 hover:bg-cyan-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
                     <i class="fa-solid fa-print"></i> Auswertung drucken / PDF
                 </button>
-                <button onclick="toggleAdminPanel()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
+                <button onclick="checkAdminPassword()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
                     <i class="fa-solid fa-sliders"></i> Admin & GitHub API
                 </button>
             </div>
@@ -70,27 +70,31 @@
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <div class="flex justify-between items-center">
                     <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
-                        <i class="fa-solid fa-calendar-days"></i> Zyklus & Standard-Gesamtziel
+                        <i class="fa-solid fa-calendar-days"></i> Auswertungs-Zeitraum & Zyklus-Konfiguration
                     </h3>
-                    <button onclick="resetCycleDateToToday()" class="bg-slate-700 hover:bg-slate-600 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
-                        <i class="fa-solid fa-rotate-right"></i> Zyklus auf heute zurücksetzen (Tag 1)
+                    <button onclick="setQuickDates(7)" class="bg-slate-700 hover:bg-slate-600 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
+                        <i class="fa-solid fa-bolt"></i> +7 Tage ab Heute
                     </button>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
                     <div>
-                        <label class="text-[10px] text-slate-400 uppercase font-bold">Startdatum:</label>
-                        <input type="date" id="cycleStartDateInput" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
+                        <label class="text-[10px] text-amber-300 uppercase font-bold">Von Datum:</label>
+                        <input type="date" id="evalStartDateInput" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="text-[10px] text-slate-400 uppercase font-bold">Zyklus Dauer (Tage):</label>
-                        <input type="number" id="cycleTotalDaysInput" min="1" value="28" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
+                        <label class="text-[10px] text-amber-300 uppercase font-bold">Bis Datum:</label>
+                        <input type="date" id="evalEndDateInput" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="text-[10px] text-slate-400 uppercase font-bold">Gesamtziel &lt; 100M Macht:</label>
+                        <label class="text-[10px] text-amber-300 uppercase font-bold">Zyklus-Dauer (Tage):</label>
+                        <input type="number" id="cycleDaysInput" value="28" min="1" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400" title="Gesamtlänge eines Zyklus für die Anteils-Berechnung">
+                    </div>
+                    <div>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Basis-Ziel &lt; 100M Macht:</label>
                         <input type="number" id="goalLowInput" value="12500" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                     <div>
-                        <label class="text-[10px] text-slate-400 uppercase font-bold">Gesamtziel &gt; 100M Macht:</label>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Basis-Ziel &gt; 100M Macht:</label>
                         <input type="number" id="goalHighInput" value="15000" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                 </div>
@@ -252,7 +256,7 @@
                             <th class="p-3 text-right data-col-chests">Turmbau-Pkt</th>
                             <th class="p-3 text-right data-col-chests text-cyan-400">Silber / Bank</th>
                             <th class="p-3 text-right data-col-chests">Gesamt-Pkt</th>
-                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status</th>
+                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status & Tages-Soll</th>
                             <th class="p-3 text-center data-col-power hidden">Helden-Lvl</th>
                             <th class="p-3 text-right data-col-power hidden">Macht</th>
                             <th class="p-3 text-right data-col-power hidden">Zuwachs</th>
@@ -370,8 +374,15 @@
             "Turmbau": 1
         };
 
-        let cycleStartDate = localStorage.getItem('legio_cycle_start') || new Date().toISOString().split('T')[0];
+        let todayIso = new Date().toISOString().split('T')[0];
+        let defaultPlus7 = new Date();
+        defaultPlus7.setDate(defaultPlus7.getDate() + 6);
+        let defaultPlus7Iso = defaultPlus7.toISOString().split('T')[0];
+
+        let evalStartDate = localStorage.getItem('legio_eval_start_date') || todayIso;
+        let evalEndDate = localStorage.getItem('legio_eval_end_date') || defaultPlus7Iso;
         let cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28;
+
         let goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
         let goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
 
@@ -390,6 +401,15 @@
             "Soldat": 5
         };
 
+        function checkAdminPassword() {
+            let password = prompt("Bitte gib das Admin-Passwort ein:");
+            if (password === "mein_geheimes_passwort") {
+                toggleAdminPanel();
+            } else if (password !== null) {
+                alert("Falsches Passwort!");
+            }
+        }
+
         function saveData() {
             localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
             localStorage.setItem('legio_chest_type_values', JSON.stringify(chestTypeValues));
@@ -397,31 +417,52 @@
         }
 
         function saveCycleSettings() {
-            cycleStartDate = document.getElementById('cycleStartDateInput').value;
-            cycleTotalDays = parseInt(document.getElementById('cycleTotalDaysInput').value) || 28;
+            evalStartDate = document.getElementById('evalStartDateInput').value;
+            evalEndDate = document.getElementById('evalEndDateInput').value;
+            cycleTotalDays = parseInt(document.getElementById('cycleDaysInput').value) || 28;
             goalLow = parseInt(document.getElementById('goalLowInput').value) || 12500;
             goalHigh = parseInt(document.getElementById('goalHighInput').value) || 15000;
 
-            localStorage.setItem('legio_cycle_start', cycleStartDate);
+            if (new Date(evalStartDate) > new Date(evalEndDate)) {
+                evalEndDate = evalStartDate;
+                document.getElementById('evalEndDateInput').value = evalEndDate;
+            }
+
+            localStorage.setItem('legio_eval_start_date', evalStartDate);
+            localStorage.setItem('legio_eval_end_date', evalEndDate);
             localStorage.setItem('legio_cycle_total_days', cycleTotalDays);
             localStorage.setItem('legio_goal_low', goalLow);
             localStorage.setItem('legio_goal_high', goalHigh);
             refreshUI();
         }
 
-        function resetCycleDateToToday() {
-            let todayIso = new Date().toISOString().split('T')[0];
-            cycleStartDate = todayIso;
-            document.getElementById('cycleStartDateInput').value = todayIso;
-            
-            clanData.forEach(p => {
-                p.joinDate = todayIso;
-                p.activeDays = 1;
-            });
+        function setQuickDates(daysAdd) {
+            let start = new Date();
+            let end = new Date();
+            end.setDate(start.getDate() + (daysAdd - 1));
 
+            evalStartDate = start.toISOString().split('T')[0];
+            evalEndDate = end.toISOString().split('T')[0];
+
+            document.getElementById('evalStartDateInput').value = evalStartDate;
+            document.getElementById('evalEndDateInput').value = evalEndDate;
             saveCycleSettings();
-            saveData();
-            alert("Zyklus-Startdatum wurde auf heute (" + todayIso + ") zurückgesetzt (Tag 1 aktiv für alle Mitglieder).");
+        }
+
+        function calculateDaysBetween(startDateStr, endDateStr) {
+            let d1 = new Date(startDateStr);
+            let d2 = new Date(endDateStr);
+            if (isNaN(d1.getTime()) || isNaN(d2.getTime())) return 1;
+            let diffTime = d2 - d1;
+            let days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
+            return days < 1 ? 1 : days;
+        }
+
+        function formatDateGerman(isoStr) {
+            if(!isoStr) return "";
+            let parts = isoStr.split("-");
+            if(parts.length === 3) return `${parts[2]}.${parts[1]}.${parts[0]}`;
+            return isoStr;
         }
 
         function saveGitHubSettings() {
@@ -433,36 +474,6 @@
             localStorage.setItem('legio_gh_branch', ghBranch);
             localStorage.setItem('legio_gh_token', ghToken);
             alert("GitHub-Einstellungen erfolgreich gespeichert!");
-        }
-
-        function getAutomaticActiveDays() {
-            let start = new Date(cycleStartDate);
-            let today = new Date();
-            if(isNaN(start.getTime())) return 1;
-            let diffTime = today - start;
-            let days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
-            if (days < 1) return 1;
-            if (days > cycleTotalDays) return cycleTotalDays;
-            return days;
-        }
-
-        function calculateMemberActiveDays(member) {
-            let cycleStart = new Date(cycleStartDate);
-            let today = new Date();
-            
-            let effectiveStart = cycleStart;
-            if(member.joinDate) {
-                let memberJoin = new Date(member.joinDate);
-                if(!isNaN(memberJoin.getTime()) && memberJoin > cycleStart) {
-                    effectiveStart = memberJoin;
-                }
-            }
-
-            let diffTime = today - effectiveStart;
-            let days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
-            if(days < 1) return 1;
-            if(days > cycleTotalDays) return cycleTotalDays;
-            return days;
         }
 
         function printChestTypesList() {
@@ -531,7 +542,8 @@
             let payload = {
                 chestTypeValues: chestTypeValues,
                 clanData: clanData,
-                cycleStartDate: cycleStartDate,
+                evalStartDate: evalStartDate,
+                evalEndDate: evalEndDate,
                 cycleTotalDays: cycleTotalDays,
                 goalLow: goalLow,
                 goalHigh: goalHigh,
@@ -604,9 +616,13 @@
                     localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
                 }
                 if(fetchedData.chestTypeValues) chestTypeValues = fetchedData.chestTypeValues;
-                if(fetchedData.cycleStartDate) {
-                    cycleStartDate = fetchedData.cycleStartDate;
-                    localStorage.setItem('legio_cycle_start', cycleStartDate);
+                if(fetchedData.evalStartDate) {
+                    evalStartDate = fetchedData.evalStartDate;
+                    localStorage.setItem('legio_eval_start_date', evalStartDate);
+                }
+                if(fetchedData.evalEndDate) {
+                    evalEndDate = fetchedData.evalEndDate;
+                    localStorage.setItem('legio_eval_end_date', evalEndDate);
                 }
                 if(fetchedData.cycleTotalDays) {
                     cycleTotalDays = fetchedData.cycleTotalDays;
@@ -628,14 +644,16 @@
             document.getElementById('ghRepo').value = ghRepo;
             document.getElementById('ghBranch').value = ghBranch;
             document.getElementById('ghToken').value = ghToken;
-            document.getElementById('cycleStartDateInput').value = cycleStartDate;
-            document.getElementById('cycleTotalDaysInput').value = cycleTotalDays;
+            document.getElementById('evalStartDateInput').value = evalStartDate;
+            document.getElementById('evalEndDateInput').value = evalEndDate;
+            document.getElementById('cycleDaysInput').value = cycleTotalDays;
             document.getElementById('goalLowInput').value = goalLow;
             document.getElementById('goalHighInput').value = goalHigh;
 
+            let activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
             let headerElem = document.getElementById('th-soll-header');
             if(headerElem) {
-                headerElem.innerText = `Soll-Status (<100M: ${goalLow.toLocaleString()} | >100M: ${goalHigh.toLocaleString()} / ${cycleTotalDays}T)`;
+                headerElem.innerText = `Soll-Status (<100M: ${goalLow.toLocaleString()} | >100M: ${goalHigh.toLocaleString()} / ${formatDateGerman(evalStartDate)} - ${formatDateGerman(evalEndDate)} [${activeDaysCount}T])`;
             }
 
             renderChestTypeConfig();
@@ -773,6 +791,8 @@
             });
 
             let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
+            let activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
+            let totalCycleDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
 
             sorted.forEach((p, index) => {
                 let originalIndex = clanData.indexOf(p);
@@ -802,20 +822,19 @@
                 let heroLvl = (p.hero_level !== undefined && p.hero_level !== null && !isNaN(Number(p.hero_level))) ? Number(p.hero_level) : 0;
                 let limitMacht = 100000000;
                 
-                let requiredGoal = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
+                let baseGoal = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
                     ? Number(p.customGoal) 
                     : (pMacht < limitMacht ? goalLow : goalHigh);
                 
-                let pActiveDays = calculateMemberActiveDays(p);
-                let validTotalDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
-                let dailyTarget = requiredGoal / validTotalDays;
-                let targetSoFar = Math.round(dailyTarget * pActiveDays);
+                // Berechnung Tages-Soll & anteiliges Ziel
+                let dailyTarget = Math.round(baseGoal / totalCycleDays);
+                let targetSoFar = Math.round(dailyTarget * activeDaysCount);
 
                 let pointsNeeded = targetSoFar - totalPts;
                 let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-amber-950/40 border-amber-800";
                 let statusText = totalPts >= targetSoFar 
-                    ? `✅ Soll erfüllt (${pActiveDays}T)` 
-                    : `⚠️ Noch ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt (${pActiveDays}T)`;
+                    ? `✅ Soll erfüllt (${activeDaysCount}T)` 
+                    : `⚠️ Noch ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt (${activeDaysCount}T)`;
 
                 let growthVal = Number(p.growth || 0);
 
@@ -845,7 +864,12 @@
                         ${totalPts.toLocaleString()}
                     </td>
                     <td class="p-3 text-center data-col-chests">
-                        <span class="inline-block px-2 py-1 rounded border text-[11px] font-bold ${statusColor}">${statusText}</span>
+                        <div class="flex flex-col items-center gap-1">
+                            <span class="inline-block px-2 py-0.5 rounded border text-[11px] font-bold ${statusColor}">${statusText}</span>
+                            <span class="text-[10px] text-slate-400 font-semibold" title="Täglich benötigte Punkte im Zyklus">
+                                Tag-Soll: <strong class="text-amber-300">${dailyTarget.toLocaleString()}</strong> Pkt/Tag
+                            </span>
+                        </div>
                     </td>
                     <td class="p-3 text-center data-col-power hidden font-bold text-amber-300">
                         ${heroLvl > 0 ? `<span class="bg-amber-950/60 border border-amber-600/50 px-2 py-0.5 rounded">Lvl ${heroLvl}</span>` : '-'}
@@ -1014,7 +1038,7 @@
             document.getElementById('editTower').value = p.tower || 0;
             document.getElementById('editSilver').value = p.silver || 0;
             document.getElementById('editCustomGoal').value = p.customGoal || '';
-            document.getElementById('editJoinDate').value = p.joinDate || cycleStartDate || todayIso;
+            document.getElementById('editJoinDate').value = p.joinDate || todayIso;
             document.getElementById('btnResetSingle').classList.remove('hidden');
             document.getElementById('editModal').classList.remove('hidden');
         }
