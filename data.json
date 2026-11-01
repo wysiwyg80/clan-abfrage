@@ -381,35 +381,12 @@
       "joinDate": "2026-11-01"
     },
     {
-      "name": "UNVSU",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 204268005,
-      "prevPower": 203115305,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
-    },
-    {
       "name": "Vudor SK6",
       "rank": "Veteran",
       "chests": {},
       "tower": 0,
       "power": 199466425,
       "prevPower": 197059645,
-      "activeDays": 1,
-      "silver": 0,
-      "joinDate": "2026-11-01"
-    },
-    {
-      "name": "Angelina38",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "power": 181677611,
-      "prevPower": 181613611,
       "activeDays": 1,
       "silver": 0,
       "joinDate": "2026-11-01"
@@ -921,18 +898,6 @@
       "joinDate": "2026-11-01"
     },
     {
-      "name": "td",
-      "rank": "Soldat",
-      "power": 52726,
-      "tower": 0,
-      "silver": 0,
-      "customGoal": null,
-      "activeDays": 1,
-      "chests": {},
-      "growth": 0,
-      "joinDate": "2026-11-01"
-    },
-    {
       "name": "Akinohn",
       "rank": "Veteran",
       "power": 707502617,
@@ -979,5 +944,5 @@
   "cycleTotalDays": 7,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T13:00:04.822Z"
+  "lastUpdated": "2026-11-01T13:53:30.462Z"
 }
