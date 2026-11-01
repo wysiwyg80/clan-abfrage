@@ -613,7 +613,8 @@
       "name": "SaturdayNightFever",
       "rank": "Soldat",
       "chests": {
-        "Steintruhe (Gruft Level 20)": 1
+        "Steintruhe (Gruft Level 20)": 1,
+        "Truhe der Kobra (Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
