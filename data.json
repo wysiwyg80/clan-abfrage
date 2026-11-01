@@ -1045,25 +1045,25 @@
     },
     {
       "name": "td",
-      "rank": "Veteran",
-      "chests": {},
+      "rank": "Soldat",
+      "power": 52726,
       "tower": 0,
       "silver": 0,
-      "power": 52726,
-      "prevPower": 0,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Akinohn",
-      "rank": "Soldat",
-      "chests": {},
+      "rank": "Veteran",
+      "power": 707502617,
       "tower": 0,
       "silver": 0,
-      "power": 707502617,
-      "prevPower": 0,
+      "customGoal": null,
       "activeDays": 28,
-      "customGoal": null
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Eldriel",
@@ -1081,5 +1081,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T10:48:39.394Z"
+  "lastUpdated": "2026-11-01T10:50:26.195Z"
 }
