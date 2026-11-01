@@ -155,7 +155,7 @@
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-file-import"></i> JSON / KI Massen-Import (Addierend)
                 </h3>
-                <textarea id="bulkImportText" rows="4" placeholder='[{"name":"SirLancelot","rank":"Offizier","chests":{"Krypta-Truhe":2},"tower":5,"silver":15000000,"power":125000000}]' class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
+                <textarea id="bulkImportText" rows="4" placeholder='[{"name":"SirLancelot","rank":"Offizier","chests":{"Krypta-Truhe":2},"tower":5,"silver":15000000,"power":125000000,"hero_level":409}]' class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 focus:outline-none focus:border-amber-500 font-mono"></textarea>
                 <div class="flex flex-wrap gap-2">
                     <button onclick="processJSONImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
                         <i class="fa-solid fa-upload"></i> Daten Addieren & Sync
@@ -253,6 +253,7 @@
                             <th class="p-3 text-right data-col-chests text-cyan-400">Silber / Bank</th>
                             <th class="p-3 text-right data-col-chests">Gesamt-Pkt</th>
                             <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status</th>
+                            <th class="p-3 text-center data-col-power hidden">Helden-Lvl</th>
                             <th class="p-3 text-right data-col-power hidden">Macht</th>
                             <th class="p-3 text-right data-col-power hidden">Zuwachs</th>
                             <th class="p-3 text-center no-print">Aktionen</th>
@@ -315,7 +316,11 @@
                         <option value="Soldat">Soldat</option>
                     </select>
                 </div>
-                <div class="grid grid-cols-3 gap-2">
+                <div class="grid grid-cols-4 gap-2">
+                    <div>
+                        <label class="text-[10px] uppercase font-bold text-amber-300">Helden-Lvl</label>
+                        <input type="number" id="editHeroLevel" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-amber-300 font-bold">
+                    </div>
                     <div>
                         <label class="text-[10px] uppercase font-bold text-slate-400">Macht</label>
                         <input type="number" id="editPower" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
@@ -409,7 +414,6 @@
             cycleStartDate = todayIso;
             document.getElementById('cycleStartDateInput').value = todayIso;
             
-            // Alle bestehenden Mitglieder an den neuen Zyklus-Start anpassen
             clanData.forEach(p => {
                 p.joinDate = todayIso;
                 p.activeDays = 1;
@@ -795,13 +799,13 @@
                 let totalPts = chestPtsTotal + towerPts;
 
                 let pMacht = (p.power !== undefined && p.power !== null && !isNaN(Number(p.power))) ? Number(p.power) : 0;
+                let heroLvl = (p.hero_level !== undefined && p.hero_level !== null && !isNaN(Number(p.hero_level))) ? Number(p.hero_level) : 0;
                 let limitMacht = 100000000;
                 
                 let requiredGoal = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
                     ? Number(p.customGoal) 
                     : (pMacht < limitMacht ? goalLow : goalHigh);
                 
-                // Berechnung der tagesgenauen Zielpunkte (Berücksichtigt Eintrittsdatum für neue Mitglieder)
                 let pActiveDays = calculateMemberActiveDays(p);
                 let validTotalDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
                 let dailyTarget = requiredGoal / validTotalDays;
@@ -842,6 +846,9 @@
                     </td>
                     <td class="p-3 text-center data-col-chests">
                         <span class="inline-block px-2 py-1 rounded border text-[11px] font-bold ${statusColor}">${statusText}</span>
+                    </td>
+                    <td class="p-3 text-center data-col-power hidden font-bold text-amber-300">
+                        ${heroLvl > 0 ? `<span class="bg-amber-950/60 border border-amber-600/50 px-2 py-0.5 rounded">Lvl ${heroLvl}</span>` : '-'}
                     </td>
                     <td class="p-3 text-right data-col-power hidden font-bold text-slate-200">
                         ${formatPower(pMacht)}
@@ -985,6 +992,7 @@
             document.getElementById('editIndex').value = "-1";
             document.getElementById('editName').value = "";
             document.getElementById('editRank').value = "Soldat";
+            document.getElementById('editHeroLevel').value = "1";
             document.getElementById('editPower').value = "50000000";
             document.getElementById('editTower').value = "0";
             document.getElementById('editSilver').value = "0";
@@ -1001,6 +1009,7 @@
             document.getElementById('editIndex').value = index;
             document.getElementById('editName').value = p.name || '';
             document.getElementById('editRank').value = p.rank || 'Soldat';
+            document.getElementById('editHeroLevel').value = p.hero_level || 0;
             document.getElementById('editPower').value = p.power || 0;
             document.getElementById('editTower').value = p.tower || 0;
             document.getElementById('editSilver').value = p.silver || 0;
@@ -1025,6 +1034,7 @@
             let memberObj = {
                 name: name,
                 rank: document.getElementById('editRank').value,
+                hero_level: parseInt(document.getElementById('editHeroLevel').value) || 0,
                 power: parseInt(document.getElementById('editPower').value) || 0,
                 tower: parseInt(document.getElementById('editTower').value) || 0,
                 silver: parseInt(document.getElementById('editSilver').value) || 0,
@@ -1123,6 +1133,7 @@
                     let existing = clanData.find(p => p.name.toLowerCase() === imp.name.toLowerCase());
                     if(existing) {
                         if(imp.rank) existing.rank = imp.rank;
+                        if(imp.hero_level) existing.hero_level = Number(imp.hero_level);
                         if(imp.power) existing.growth = Number(imp.power) - (Number(existing.power) || Number(imp.power));
                         if(imp.power) existing.power = Number(imp.power);
                         if(imp.silver) existing.silver = (Number(existing.silver) || 0) + Number(imp.silver);
@@ -1138,6 +1149,7 @@
                         clanData.push({
                             name: imp.name,
                             rank: imp.rank || "Soldat",
+                            hero_level: Number(imp.hero_level) || 0,
                             power: Number(imp.power) || 0,
                             growth: 0,
                             tower: Number(imp.tower) || 0,
