@@ -796,7 +796,8 @@
       "name": "Noli",
       "rank": "Veteran",
       "chests": {
-        "Truhe der Orks (Gruft Level 25)": 2
+        "Truhe der Orks (Gruft Level 25)": 2,
+        "Feuertruhe (Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
