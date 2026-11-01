@@ -521,7 +521,7 @@
       },
       "tower": 0,
       "silver": 0,
-      "power": 108827936,
+      "power": 111471886,
       "prevPower": 108735016,
       "activeDays": 28,
       "customGoal": null
@@ -531,7 +531,7 @@
       "rank": "Veteran",
       "chests": {},
       "tower": 0,
-      "power": 95110582,
+      "power": 95267482,
       "prevPower": 94927582,
       "activeDays": 28,
       "silver": 0
@@ -539,7 +539,7 @@
     {
       "name": "Itachi",
       "rank": "Veteran",
-      "power": 87141009,
+      "power": 87554109,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -550,7 +550,7 @@
     {
       "name": "Burigas",
       "rank": "Veteran",
-      "power": 83682925,
+      "power": 100299705,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -839,7 +839,7 @@
     {
       "name": "PABLUS",
       "rank": "Veteran",
-      "power": 105383231,
+      "power": 107359431,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
