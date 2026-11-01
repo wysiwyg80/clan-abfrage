@@ -140,7 +140,8 @@
     "Minotaurus-Truhe (Epische Gruft Level 15)": 15,
     "Knochentruhe (Gruft Level 15)": 0,
     "Gladiatorentruhe (Arena)": 0,
-    "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 75
+    "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 75,
+    "Chimären-Truhe (Epische-Chimäre-Trupp)": 0
   },
   "clanData": [
     {
@@ -383,7 +384,9 @@
     {
       "name": "Vudor SK6",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Chimären-Truhe (Epische-Chimäre-Trupp)": 1
+      },
       "tower": 0,
       "power": 199466425,
       "prevPower": 197059645,
