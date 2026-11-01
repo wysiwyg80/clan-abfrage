@@ -143,7 +143,8 @@
     "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 75,
     "Chimären-Truhe (Epische-Chimäre-Trupp)": 0,
     "Runentruhe (Lvl. 45 Überfallender Runen-Trupp)": 0,
-    "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 0
+    "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 0,
+    "Weiße Holztruhe (Epische Gruft Level 35)": 100
   },
   "clanData": [
     {
@@ -806,7 +807,9 @@
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
-      "chests": {},
+      "chests": {
+        "Weiße Holztruhe (Epische Gruft Level 35)": 1
+      },
       "growth": 0,
       "joinDate": "2026-11-01"
     },
