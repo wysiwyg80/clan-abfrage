@@ -150,7 +150,8 @@
     "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0,
     "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 0,
     "Weiße Holztruhe (Epische Gruft Level 15)": 15,
-    "Titanstahl-Truhe (Epische Gruft Level 20)": 40
+    "Titanstahl-Truhe (Epische Gruft Level 20)": 40,
+    "Truhe des Priesters (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -891,7 +892,9 @@
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe des Priesters (Epische Gruft Level 15)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 26652619,
