@@ -708,7 +708,8 @@
       "name": "Son Of Algéri",
       "rank": "Offizier",
       "chests": {
-        "Infernale Truhe (Gruft Level 25)": 2
+        "Infernale Truhe (Gruft Level 25)": 2,
+        "Knochentruhe (Gruft Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
