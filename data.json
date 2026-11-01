@@ -875,27 +875,6 @@
       "joinDate": "2026-11-01"
     },
     {
-      "name": "Şivanê dîn",
-      "rank": "Veteran",
-      "power": 169138715,
-      "tower": 0,
-      "silver": 0,
-      "customGoal": null,
-      "activeDays": 1,
-      "chests": {
-        "Truhe der Maya (Gruft Level 20)": 4,
-        "Skarabäus-Truhe (Epische Gruft Level 20)": 1,
-        "Steintruhe (Gruft Level 20)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 2,
-        "Knochentruhe (Gruft Level 20)": 1,
-        "Feuertruhe (Gruft Level 20)": 1,
-        "Geflochtene Truhe (Epische Gruft Level 20)": 1
-      },
-      "growth": 0,
-      "prevPower": 169122215,
-      "joinDate": "2026-11-01"
-    },
-    {
       "name": "Asliddin7",
       "rank": "Veteran",
       "chests": {},
@@ -1029,5 +1008,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T21:43:11.201Z"
+  "lastUpdated": "2026-11-01T21:56:37.527Z"
 }
