@@ -870,6 +870,8 @@
                     ? `✅ Soll erfüllt` 
                     : `⚠️ Fehlen: ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt`;
 
+                let growthVal = Number(p.growth || 0);
+
                 row.innerHTML = `
                     <td class="p-3">
                         <div class="font-bold text-amber-300 text-sm mb-1">${p.name || 'Unbekannt'}</div>
