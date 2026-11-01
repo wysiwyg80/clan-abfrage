@@ -152,7 +152,8 @@
     "Weiße Holztruhe (Epische Gruft Level 15)": 15,
     "Titanstahl-Truhe (Epische Gruft Level 20)": 40,
     "Truhe des Priesters (Epische Gruft Level 15)": 15,
-    "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 0
+    "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 0,
+    "Aufgegebene Truhe (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -733,7 +734,8 @@
       "name": "Delalen",
       "rank": "Offizier",
       "chests": {
-        "Skorpion-Truhe (Epische Gruft Level 20)": 1
+        "Skorpion-Truhe (Epische Gruft Level 20)": 1,
+        "Aufgegebene Truhe (Epische Gruft Level 15)": 1
       },
       "tower": 0,
       "silver": 0,
