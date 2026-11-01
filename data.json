@@ -567,7 +567,7 @@
     {
       "name": "Vudorr",
       "rank": "Veteran",
-      "power": 29502549,
+      "power": 29531255,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -598,7 +598,7 @@
     {
       "name": "Ayanin",
       "rank": "Veteran",
-      "power": 12011030,
+      "power": 12011430,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -609,7 +609,7 @@
     {
       "name": "Ria",
       "rank": "Veteran",
-      "power": 777998,
+      "power": 874303,
       "tower": 0,
       "silver": 0,
       "customGoal": null,
@@ -986,7 +986,7 @@
       },
       "tower": 0,
       "silver": 0,
-      "power": 26598429,
+      "power": 26652619,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
@@ -1039,6 +1039,17 @@
       "tower": 0,
       "silver": 0,
       "power": 118435431,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null
+    },
+    {
+      "name": "Arashigore",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 320384,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null
