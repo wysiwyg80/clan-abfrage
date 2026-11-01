@@ -50,7 +50,7 @@
                 <button onclick="window.print()" class="bg-cyan-700 hover:bg-cyan-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
                     <i class="fa-solid fa-print"></i> Auswertung drucken / PDF
                 </button>
-                <button onclick="checkAdminPassword()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
+                <button onclick="toggleAdminPanel()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
                     <i class="fa-solid fa-sliders"></i> Admin & GitHub API
                 </button>
             </div>
@@ -401,15 +401,6 @@
             "Soldat": 5
         };
 
-        function checkAdminPassword() {
-            let password = prompt("Bitte gib das Admin-Passwort ein:");
-            if (password === "mein_geheimes_passwort") {
-                toggleAdminPanel();
-            } else if (password !== null) {
-                alert("Falsches Passwort!");
-            }
-        }
-
         function saveData() {
             localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
             localStorage.setItem('legio_chest_type_values', JSON.stringify(chestTypeValues));
@@ -453,8 +444,8 @@
             let d1 = new Date(startDateStr);
             let d2 = new Date(endDateStr);
             if (isNaN(d1.getTime()) || isNaN(d2.getTime())) return 1;
-            let diffTime = d2 - d1;
-            let days = Math.floor(diffTime / (1000 * 60 * 60 * 24)) + 1;
+            let diffTime = d2.getTime() - d1.getTime();
+            let days = Math.round(diffTime / (1000 * 60 * 60 * 24)) + 1;
             return days < 1 ? 1 : days;
         }
 
@@ -826,12 +817,11 @@
                     ? Number(p.customGoal) 
                     : (pMacht < limitMacht ? goalLow : goalHigh);
                 
-                // Berechnung Tages-Soll & anteiliges Ziel
                 let dailyTarget = Math.round(baseGoal / totalCycleDays);
-                let targetSoFar = Math.round(dailyTarget * activeDaysCount);
+                let targetSoFar = Math.round((baseGoal / totalCycleDays) * activeDaysCount);
 
                 let pointsNeeded = targetSoFar - totalPts;
-                let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-amber-950/40 border-amber-800";
+                let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-emerald-950/40 border-amber-800";
                 let statusText = totalPts >= targetSoFar 
                     ? `✅ Soll erfüllt (${activeDaysCount}T)` 
                     : `⚠️ Noch ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt (${activeDaysCount}T)`;
