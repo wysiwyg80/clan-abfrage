@@ -878,7 +878,9 @@
     {
       "name": "Akasha",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Chimären-Truhe (Epische-Chimäre-Trupp)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 894164390,
