@@ -67,34 +67,41 @@
                 <button onclick="toggleAdminPanel()" class="text-slate-300 hover:text-white text-sm cursor-pointer"><i class="fa-solid fa-xmark"></i> Schließen</button>
             </div>
 
+            <!-- ZEITRAUM & ANTEILIGE TAGE -->
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <div class="flex justify-between items-center">
                     <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
-                        <i class="fa-solid fa-calendar-days"></i> Auswertungs-Zeitraum & Zyklus-Konfiguration
+                        <i class="fa-solid fa-calendar-days"></i> Auswertungs-Zeitraum & Anteils-Berechnung
                     </h3>
-                    <button onclick="setQuickDates(7)" class="bg-slate-700 hover:bg-slate-600 text-amber-300 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
-                        <i class="fa-solid fa-bolt"></i> +7 Tage ab Heute
-                    </button>
+                    <div class="flex gap-1.5">
+                        <button onclick="setQuickDaysCount(7)" class="bg-slate-700 hover:bg-slate-600 text-amber-300 text-[11px] font-bold px-2 py-1 rounded transition cursor-pointer">7 Tage</button>
+                        <button onclick="setQuickDaysCount(14)" class="bg-slate-700 hover:bg-slate-600 text-amber-300 text-[11px] font-bold px-2 py-1 rounded transition cursor-pointer">14 Tage</button>
+                        <button onclick="setQuickDaysCount(28)" class="bg-slate-700 hover:bg-slate-600 text-amber-300 text-[11px] font-bold px-2 py-1 rounded transition cursor-pointer">28 Tage (Voll)</button>
+                    </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-3">
                     <div>
-                        <label class="text-[10px] text-amber-300 uppercase font-bold">Von Datum:</label>
-                        <input type="date" id="evalStartDateInput" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
+                        <label class="text-[10px] text-amber-300 uppercase font-bold">Gewünschte Tage:</label>
+                        <input type="number" id="customDaysCountInput" value="7" min="1" onchange="onDaysCountChanged()" class="w-full bg-slate-900 border border-amber-500/80 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400" title="Trage hier ein, für wie viele Tage das Soll berechnet werden soll">
                     </div>
                     <div>
-                        <label class="text-[10px] text-amber-300 uppercase font-bold">Bis Datum:</label>
-                        <input type="date" id="evalEndDateInput" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
+                        <label class="text-[10px] text-slate-300 uppercase font-bold">Von Datum:</label>
+                        <input type="date" id="evalStartDateInput" onchange="onDateChanged()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="text-[10px] text-amber-300 uppercase font-bold">Zyklus-Dauer (Tage):</label>
-                        <input type="number" id="cycleDaysInput" value="28" min="1" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400" title="Gesamtlänge eines Zyklus für die Anteils-Berechnung (Standard: 28)">
+                        <label class="text-[10px] text-slate-300 uppercase font-bold">Bis Datum (Auto):</label>
+                        <input type="date" id="evalEndDateInput" onchange="onEndDateManualChanged()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
                     </div>
                     <div>
-                        <label class="text-[10px] text-slate-400 uppercase font-bold">Basis-Ziel &lt; 100M Macht (Voller Zyklus):</label>
+                        <label class="text-[10px] text-amber-300 uppercase font-bold">Zyklus-Länge (Tage):</label>
+                        <input type="number" id="cycleDaysInput" value="28" min="1" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-amber-500/60 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400" title="Standard: 28 Tage">
+                    </div>
+                    <div>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Ziel &lt; 100M (Voller Zyklus):</label>
                         <input type="number" id="goalLowInput" value="12500" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                     <div>
-                        <label class="text-[10px] text-slate-400 uppercase font-bold">Basis-Ziel &gt; 100M Macht (Voller Zyklus):</label>
+                        <label class="text-[10px] text-slate-400 uppercase font-bold">Ziel &gt; 100M (Voller Zyklus):</label>
                         <input type="number" id="goalHighInput" value="15000" onchange="saveCycleSettings()" class="w-full bg-slate-900 border border-slate-700 rounded px-2.5 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                 </div>
@@ -135,13 +142,13 @@
                         <i class="fa-solid fa-tags"></i> Truhen-Bezeichnungen & Punktwerte
                     </h3>
                     <div class="flex flex-wrap items-center gap-2 no-print">
-                        <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Sortiert alle Truhen aufsteigend nach Level">
+                        <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
                             <i class="fa-solid fa-arrow-down-1-9"></i> Nach Level sortieren
                         </button>
-                        <button onclick="resetAllChestPointValuesToZero()" class="bg-amber-900/80 hover:bg-amber-800 text-amber-200 border border-amber-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Setzt die Punktewerte aller Truhenarten auf 0">
+                        <button onclick="resetAllChestPointValuesToZero()" class="bg-amber-900/80 hover:bg-amber-800 text-amber-200 border border-amber-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
                             <i class="fa-solid fa-rotate-left"></i> Alle Punktewerte auf 0
                         </button>
-                        <button onclick="resetOnlyChestsPoints()" class="bg-red-950 hover:bg-red-900 text-red-200 border border-red-800 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Setzt die geholten Truhen der Mitglieder auf 0">
+                        <button onclick="resetOnlyChestsPoints()" class="bg-red-950 hover:bg-red-900 text-red-200 border border-red-800 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
                             <i class="fa-solid fa-trash-can"></i> Truhen-Punkte auf 0
                         </button>
                         <button onclick="printChestTypesList()" class="bg-cyan-900/80 hover:bg-cyan-800 text-cyan-200 border border-cyan-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
@@ -375,13 +382,13 @@
         };
 
         let todayIso = new Date().toISOString().split('T')[0];
-        let defaultPlus7 = new Date();
-        defaultPlus7.setDate(defaultPlus7.getDate() + 6);
-        let defaultPlus7Iso = defaultPlus7.toISOString().split('T')[0];
-
         let evalStartDate = localStorage.getItem('legio_eval_start_date') || todayIso;
-        let evalEndDate = localStorage.getItem('legio_eval_end_date') || defaultPlus7Iso;
         let cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28;
+
+        // Berechne initiales Enddatum anhand der gespeicherten Tage oder Standard 7 Tage
+        let savedDaysCount = parseInt(localStorage.getItem('legio_custom_days_count')) || 7;
+        let initialEndDate = addDaysToDateStr(evalStartDate, savedDaysCount - 1);
+        let evalEndDate = localStorage.getItem('legio_eval_end_date') || initialEndDate;
 
         let goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
         let goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
@@ -401,6 +408,13 @@
             "Soldat": 5
         };
 
+        function addDaysToDateStr(dateStr, days) {
+            let d = new Date(dateStr);
+            if (isNaN(d.getTime())) d = new Date();
+            d.setDate(d.getDate() + days);
+            return d.toISOString().split('T')[0];
+        }
+
         function saveData() {
             localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
             localStorage.setItem('legio_chest_type_values', JSON.stringify(chestTypeValues));
@@ -410,32 +424,77 @@
         function saveCycleSettings() {
             evalStartDate = document.getElementById('evalStartDateInput').value;
             evalEndDate = document.getElementById('evalEndDateInput').value;
-            cycleTotalDays = parseInt(document.getElementById('cycleDaysInput').value) || 28;
-            goalLow = parseInt(document.getElementById('goalLowInput').value) || 12500;
-            goalHigh = parseInt(document.getElementById('goalHighInput').value) || 15000;
+            cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28; // bleibt stabil oder aus Input
+            
+            let cycleDaysInputVal = parseInt(document.getElementById('cycleDaysInput').value);
+            if(!isNaN(cycleDaysInputVal)) cycleTotalDays = cycleDaysInputVal;
+
+            goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
+            goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
+
+            let gLowInput = parseInt(document.getElementById('goalLowInput').value);
+            let gHighInput = parseInt(document.getElementById('goalHighInput').value);
+            if(!isNaN(gLowInput)) goalLow = gLowInput;
+            if(!isNaN(gHighInput)) goalHigh = gHighInput;
 
             if (new Date(evalStartDate) > new Date(evalEndDate)) {
                 evalEndDate = evalStartDate;
                 document.getElementById('evalEndDateInput').value = evalEndDate;
             }
 
+            // Aktualisiere das direkte Tage-Eingabefeld passend zum aktuellen Zeitraum
+            let activeDays = calculateDaysBetween(evalStartDate, evalEndDate);
+            document.getElementById('customDaysCountInput').value = activeDays;
+
             localStorage.setItem('legio_eval_start_date', evalStartDate);
             localStorage.setItem('legio_eval_end_date', evalEndDate);
             localStorage.setItem('legio_cycle_total_days', cycleTotalDays);
             localStorage.setItem('legio_goal_low', goalLow);
             localStorage.setItem('legio_goal_high', goalHigh);
+            localStorage.setItem('legio_custom_days_count', activeDays);
+
             refreshUI();
         }
 
-        function setQuickDates(daysAdd) {
-            let start = new Date();
-            let end = new Date();
-            end.setDate(start.getDate() + (daysAdd - 1));
+        // Wenn der Nutzer direkt die Anzahl der Tage einträgt (z.B. "7")
+        function onDaysCountChanged() {
+            let days = parseInt(document.getElementById('customDaysCountInput').value) || 1;
+            if (days < 1) days = 1;
 
-            evalStartDate = start.toISOString().split('T')[0];
-            evalEndDate = end.toISOString().split('T')[0];
+            evalStartDate = document.getElementById('evalStartDateInput').value || todayIso;
+            // Berechne Enddatum automatisch (Startdatum + Tage - 1)
+            evalEndDate = addDaysToDateStr(evalStartDate, days - 1);
+            document.getElementById('evalEndDateInput').value = evalEndDate;
 
-            document.getElementById('evalStartDateInput').value = evalStartDate;
+            saveCycleSettings();
+        }
+
+        // Wenn das Startdatum geändert wird
+        function onDateChanged() {
+            evalStartDate = document.getElementById('evalStartDateInput').value;
+            let currentDaysCount = parseInt(document.getElementById('customDaysCountInput').value) || 7;
+            // Passe Enddatum automatisch an basierend auf den eingetragenen Tagen
+            evalEndDate = addDaysToDateStr(evalStartDate, currentDaysCount - 1);
+            document.getElementById('evalEndDateInput').value = evalEndDate;
+
+            saveCycleSettings();
+        }
+
+        // Wenn das Bis-Datum manuell geändert wird
+        function onEndDateManualChanged() {
+            evalEndDate = document.getElementById('evalEndDateInput').value;
+            evalStartDate = document.getElementById('evalStartDateInput').value;
+            
+            let calculatedDays = calculateDaysBetween(evalStartDate, evalEndDate);
+            document.getElementById('customDaysCountInput').value = calculatedDays;
+
+            saveCycleSettings();
+        }
+
+        function setQuickDaysCount(days) {
+            document.getElementById('customDaysCountInput').value = days;
+            evalStartDate = document.getElementById('evalStartDateInput').value || todayIso;
+            evalEndDate = addDaysToDateStr(evalStartDate, days - 1);
             document.getElementById('evalEndDateInput').value = evalEndDate;
             saveCycleSettings();
         }
@@ -642,9 +701,11 @@
             document.getElementById('goalHighInput').value = goalHigh;
 
             let activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
+            document.getElementById('customDaysCountInput').value = activeDaysCount;
+
             let headerElem = document.getElementById('th-soll-header');
             if(headerElem) {
-                headerElem.innerText = `Soll-Status (<100M: ${goalLow.toLocaleString()} | >100M: ${goalHigh.toLocaleString()} / ${formatDateGerman(evalStartDate)} - ${formatDateGerman(evalEndDate)} [${activeDaysCount}T])`;
+                headerElem.innerText = `Soll-Status (<100M: ${goalLow.toLocaleString()} | >100M: ${goalHigh.toLocaleString()} / ${formatDateGerman(evalStartDate)} - ${formatDateGerman(evalEndDate)} [${activeDaysCount}T von ${cycleTotalDays}T])`;
             }
 
             renderChestTypeConfig();
@@ -813,12 +874,14 @@
                 let heroLvl = (p.hero_level !== undefined && p.hero_level !== null && !isNaN(Number(p.hero_level))) ? Number(p.hero_level) : 0;
                 let limitMacht = 100000000;
                 
-                let baseGoal = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
+                // Basis-Ziel für den VOLLEN Zyklus (z.B. 15.000)
+                let baseGoalFullCycle = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
                     ? Number(p.customGoal) 
                     : (pMacht < limitMacht ? goalLow : goalHigh);
                 
-                let dailyTarget = Math.round(baseGoal / totalCycleDays);
-                let targetSoFar = Math.round((baseGoal / totalCycleDays) * activeDaysCount);
+                // Exakte anteilige Berechnung für die gewählten Tage
+                let dailyTarget = Math.round(baseGoalFullCycle / totalCycleDays);
+                let targetSoFar = Math.round(dailyTarget * activeDaysCount);
 
                 let pointsNeeded = targetSoFar - totalPts;
                 let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-emerald-950/40 border-amber-800";
@@ -856,8 +919,8 @@
                     <td class="p-3 text-center data-col-chests">
                         <div class="flex flex-col items-center gap-1">
                             <span class="inline-block px-2 py-0.5 rounded border text-[11px] font-bold ${statusColor}">${statusText}</span>
-                            <span class="text-[10px] text-slate-400 font-semibold" title="Täglich benötigte Punkte im Zyklus">
-                                Tag-Soll: <strong class="text-amber-300">${dailyTarget.toLocaleString()}</strong> Pkt/Tag
+                            <span class="text-[10px] text-slate-400 font-semibold" title="Anteiliges Ziel für ${activeDaysCount} von ${totalCycleDays} Tagen">
+                                Ziel (${activeDaysCount}T): <strong class="text-amber-300">${targetSoFar.toLocaleString()}</strong> Pkt <span class="text-[9px] text-slate-400">(${dailyTarget} Pkt/Tag)</span>
                             </span>
                         </div>
                     </td>
@@ -1205,59 +1268,3 @@
             if(topChart) topChart.destroy();
             topChart = new Chart(topCtx, {
                 type: 'bar',
-                data: {
-                    labels: top10.map(x => x.name),
-                    datasets: [{
-                        label: 'Gesamtpunkte',
-                        data: top10.map(x => x.points),
-                        backgroundColor: 'rgba(217, 119, 6, 0.7)',
-                        borderColor: 'rgba(245, 158, 11, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
-                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
-                    }
-                }
-            });
-
-            scoredList.sort((a, b) => b.growth - a.growth);
-            let topGrowth = scoredList.slice(0, 10);
-
-            if(growthChart) growthChart.destroy();
-            growthChart = new Chart(growthCtx, {
-                type: 'bar',
-                data: {
-                    labels: topGrowth.map(x => x.name),
-                    datasets: [{
-                        label: 'Macht-Zuwachs',
-                        data: topGrowth.map(x => x.growth),
-                        backgroundColor: 'rgba(13, 148, 136, 0.7)',
-                        borderColor: 'rgba(20, 184, 166, 1)',
-                        borderWidth: 1}
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
-                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
-                    }
-                }
-            });
-        }
-
-        window.onload = async () => {
-            await loadFromGitHub();
-            refreshUI();
-        };
-    </script>
-</body>
-</html>
