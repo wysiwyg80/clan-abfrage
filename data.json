@@ -141,7 +141,7 @@
     "Knochentruhe (Gruft Level 15)": 0,
     "Gladiatorentruhe (Arena)": 0,
     "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 75,
-    "Chimären-Truhe (Epische-Chimäre-Trupp)": 0,
+    "Chimären-Truhe (Epische-Chimäre-Trupp)": 125,
     "Runentruhe (Lvl. 45 Überfallender Runen-Trupp)": 0,
     "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 0,
     "Weiße Holztruhe (Epische Gruft Level 35)": 100,
@@ -1029,5 +1029,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-01T20:12:02.976Z"
+  "lastUpdated": "2026-11-01T21:01:02.913Z"
 }
