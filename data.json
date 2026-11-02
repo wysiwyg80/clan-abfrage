@@ -36,7 +36,6 @@
     "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 20,
     "Truhe der Kobra (Level 20)": 0,
     "Sandtruhe (Level 20)": 0,
-    "Schöne Truhe (Level 20)": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 20)": 40,
     "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
     "Truhe der Festung der Elfen (Festung Level 20)": 40,
@@ -79,10 +78,6 @@
     "Harpyien-Truhe (Epische Gruft Level 25)": 50,
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0,
     "Truhe der Festung der Elfen (Festung Level 25)": 50,
-    "Truhe der Festung der Elfen (Level 25)": 0,
-    "Truhe der Maya (Level 25)": 0,
-    "Sandtruhe (Level 25)": 0,
-    "Truhe der Orks (Level 25)": 0,
     "Steintruhe (Gruft Level 25)": 25,
     "Barbarentruhe (Epische Gruft Level 25)": 50,
     "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 0,
@@ -143,7 +138,6 @@
     "Seltene Truhe des Wohlstands": 0,
     "Epische Truhe des Wohlstands": 0,
     "Epische Truhe des Goldenen Wächters": 0,
-    "Kürbistruhe (Kürbis)": 0,
     "Gewöhnliche Truhe des (Clan-Wohlstand)": 0,
     "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0,
     "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 0,
@@ -1228,5 +1222,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-02T20:30:54.326Z"
+  "lastUpdated": "2026-11-02T21:08:11.851Z"
 }
