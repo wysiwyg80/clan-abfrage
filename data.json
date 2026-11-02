@@ -993,7 +993,8 @@
       "customGoal": null,
       "activeDays": 1,
       "chests": {
-        "Chimären-Truhe (Epische-Chimäre-Trupp)": 7
+        "Chimären-Truhe (Epische-Chimäre-Trupp)": 7,
+        "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
