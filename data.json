@@ -479,7 +479,9 @@
     {
       "name": "Maginad",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Knochentruhe (Gruft Level 25)": 1
+      },
       "tower": 0,
       "power": 140317033,
       "prevPower": 140126133,
