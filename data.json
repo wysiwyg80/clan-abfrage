@@ -1013,7 +1013,8 @@
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
       "chests": {
-        "Truhe des Priesters (Epische Gruft Level 15)": 1
+        "Truhe des Priesters (Epische Gruft Level 15)": 1,
+        "Feuertruhe (Gruft Level 15)": 1
       },
       "tower": 0,
       "silver": 0,
