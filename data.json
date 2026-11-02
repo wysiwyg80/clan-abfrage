@@ -161,7 +161,7 @@
     "Skorpion-Truhe (Epische Gruft Level 15)": 15,
     "Goldene Truhe (Bank)": 100,
     "Trillium-Truhe (Epische Gruft Level 35)": 100,
-    "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 0,
+    "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
     "Skarabäus-Truhe (Epische Gruft Level 30)": 75
   },
   "clanData": [
@@ -400,10 +400,7 @@
       "name": "Granidred",
       "rank": "Veteran",
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 25)": 12,
-        "Schöne Truhe (Gruft Level 20)": 1,
-        "Vergessene Truhe (Gruft Level 20)": 1,
-        "Infernale Truhe (Gruft Level 20)": 1
+        "Truhe der Festung der Elfen (Festung Level 25)": 12
       },
       "tower": 0,
       "silver": 0,
@@ -423,8 +420,7 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
         "Knochentruhe (Gruft Level 20)": 1,
         "Barbarentruhe (Heldenhafte Monster Level 19)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 1
       },
       "tower": 0,
       "silver": 0,
@@ -597,9 +593,8 @@
         "Vergessene Truhe (Gruft Level 15)": 1,
         "Truhe der Orks (Gruft Level 15)": 1,
         "Knochentruhe (Gruft Level 20)": 1,
-        "Sandtruhe (Gruft Level 15)": 2,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Vergessene Truhe (Gruft Level 20)": 1
+        "Sandtruhe (Gruft Level 15)": 1,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
@@ -703,8 +698,7 @@
         "Ungewöhnliche Truhe des (Clan-Wohlstand)": 2,
         "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 2,
         "Epische Truhe des Wohlstands (Clan-Wohlstand)": 2,
-        "Truhe der Festung der Elfen (Festung Level 30)": 95,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 12
+        "Truhe der Festung der Elfen (Festung Level 30)": 89
       },
       "growth": 0
     },
@@ -830,7 +824,7 @@
         "Trillium-Truhe (Epische Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 6,
-        "Sandtruhe (Gruft Level 25)": 4,
+        "Sandtruhe (Gruft Level 25)": 2,
         "Infernale Truhe (Gruft Level 25)": 1
       },
       "tower": 0,
@@ -937,10 +931,10 @@
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 15)": 1,
         "Feuertruhe (Gruft Level 15)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 5,
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 3,
         "Truhe der Festung der Elfen (Festung Level 20)": 14,
         "Gladiatorentruhe (Arena)": 2,
-        "Seltene Drachentruhe (Seltene Gruft Level 20)": 8,
+        "Seltene Drachentruhe (Seltene Gruft Level 20)": 7,
         "Sandtruhe (Gruft Level 15)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1
       },
@@ -978,11 +972,7 @@
       "name": "BAD Guo II",
       "rank": "Veteran",
       "chests": {
-        "Truhe der Orks (Gruft Level 25)": 1,
-        "Truhe der Kobra (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 4,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 6,
-        "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 1
+        "Truhe der Orks (Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
@@ -1222,7 +1212,7 @@
         "Feuertruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
         "Trillium-Truhe (Epische Gruft Level 35)": 1,
-        "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 7
+        "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 4
       },
       "tower": 0,
       "silver": 0,
@@ -1238,5 +1228,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-02T19:58:23.960Z"
+  "lastUpdated": "2026-11-02T20:30:54.326Z"
 }
