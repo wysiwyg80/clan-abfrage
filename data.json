@@ -157,7 +157,8 @@
     "Minotaurus-Truhe (Epische Gruft Level 35)": 100,
     "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 100,
     "Runentruhe (Lvl. 40-44 Überfallender Runen-Trupp)": 0,
-    "Trillium-Truhe (Epische Gruft Level 20)": 40
+    "Trillium-Truhe (Epische Gruft Level 20)": 40,
+    "Skorpion-Truhe (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -249,7 +250,8 @@
         "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 20)": 2,
         "Truhe der Kobra (Gruft Level 20)": 1,
-        "Truhe der Festung der Elfen (Festung Level 15)": 1
+        "Truhe der Festung der Elfen (Festung Level 15)": 1,
+        "Skorpion-Truhe (Epische Gruft Level 15)": 1
       },
       "tower": 0,
       "power": 297121451,
