@@ -971,7 +971,9 @@
     {
       "name": "BAD Guo II",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Orks (Gruft Level 25)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 754733459,
