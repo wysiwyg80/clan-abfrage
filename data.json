@@ -29,7 +29,7 @@
     "Feuertruhe (Gruft Level 20)": 20,
     "Knochentruhe (Gruft Level 20)": 20,
     "Truhe der Orks (Gruft Level 20)": 20,
-    "Infernale Truhe (Gruft Level 20)": 0,
+    "Infernale Truhe (Gruft Level 20)": 20,
     "Vergessene Truhe (Gruft Level 20)": 20,
     "Harpyien-Truhe (Epische Gruft Level 20)": 40,
     "Barbarentruhe (Gruft Level 20)": 20,
@@ -858,7 +858,8 @@
         "Aufgegebene Truhe (Epische Gruft Level 20)": 1,
         "Infernale Truhe (Gruft Level 25)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1
+        "Schöne Truhe (Gruft Level 25)": 1,
+        "Infernale Truhe (Gruft Level 20)": 1
       },
       "growth": 0
     },
