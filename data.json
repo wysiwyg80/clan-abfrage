@@ -154,7 +154,8 @@
     "Truhe des Priesters (Epische Gruft Level 15)": 15,
     "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 0,
     "Aufgegebene Truhe (Epische Gruft Level 15)": 15,
-    "Barbarentruhe (Heldenhafte Monster Level 19)": 0
+    "Barbarentruhe (Heldenhafte Monster Level 19)": 0,
+    "Truhe der epischen Monster (Epischer Trupp der Untoten)": 0
   },
   "clanData": [
     {
@@ -778,7 +779,8 @@
       "rank": "Offizier",
       "chests": {
         "Skorpion-Truhe (Epische Gruft Level 20)": 1,
-        "Aufgegebene Truhe (Epische Gruft Level 15)": 1
+        "Aufgegebene Truhe (Epische Gruft Level 15)": 1,
+        "Truhe der epischen Monster (Epischer Trupp der Untoten)": 1
       },
       "tower": 0,
       "silver": 0,
