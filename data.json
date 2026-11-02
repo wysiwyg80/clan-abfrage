@@ -159,7 +159,7 @@
     "Runentruhe (Lvl. 40-44 Überfallender Runen-Trupp)": 0,
     "Trillium-Truhe (Epische Gruft Level 20)": 40,
     "Skorpion-Truhe (Epische Gruft Level 15)": 15,
-    "Goldene Truhe (Bank)": 0
+    "Goldene Truhe (Bank)": 100
   },
   "clanData": [
     {
@@ -732,7 +732,7 @@
         "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 1,
         "Epische Truhe des Wohlstands (Clan-Wohlstand)": 1,
         "Truhe der Festung der Elfen (Festung Level 25)": 5,
-        "Goldene Truhe (Bank)": 3
+        "Goldene Truhe (Bank)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
@@ -1197,5 +1197,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-02T17:43:24.486Z"
+  "lastUpdated": "2026-11-02T19:57:40.794Z"
 }
