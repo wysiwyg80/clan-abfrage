@@ -1146,7 +1146,8 @@
       "name": "Eldriel",
       "rank": "Soldat",
       "chests": {
-        "Kobalt-Truhe (Epische Gruft Level 25)": 1
+        "Kobalt-Truhe (Epische Gruft Level 25)": 1,
+        "Barbarentruhe (Epische Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
