@@ -843,22 +843,24 @@
       "joinDate": "2026-11-01"
     },
     {
-      "name": "Son Of Algéri",
+      "name": "Farés Dz",
       "rank": "Offizier",
-      "chests": {
-        "Infernale Truhe (Gruft Level 25)": 2,
-        "Knochentruhe (Gruft Level 20)": 1,
-        "Schöne Truhe (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
-        "Aufgegebene Truhe (Epische Gruft Level 20)": 1
-      },
+      "hero_level": 0,
+      "power": 183654080,
       "tower": 0,
       "silver": 0,
-      "power": 183654080,
-      "prevPower": 182695460,
-      "activeDays": 1,
       "customGoal": null,
-      "joinDate": "2026-11-01"
+      "joinDate": "2026-11-01",
+      "chests": {
+        "Knochentruhe (Gruft Level 20)": 1,
+        "Barbarentruhe (Gruft Level 20)": 1,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
+        "Aufgegebene Truhe (Epische Gruft Level 20)": 1,
+        "Infernale Truhe (Gruft Level 25)": 2,
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
+        "Schöne Truhe (Gruft Level 25)": 1
+      },
+      "growth": 0
     },
     {
       "name": "PABLUS",
@@ -1140,5 +1142,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-02T17:03:57.239Z"
+  "lastUpdated": "2026-11-02T17:40:35.309Z"
 }
