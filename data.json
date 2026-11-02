@@ -1001,7 +1001,9 @@
     {
       "name": "Arik",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Orks (Gruft Level 20)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 118435431,
