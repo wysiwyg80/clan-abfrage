@@ -152,7 +152,8 @@
     "Chimären-Truhe (Epische-Chimäre-Trupp)": 125,
     "Truhe der epischen Monster (Epischer Trupp der Untoten)": 125,
     "Turmbau": 50,
-    "Schildkröten-Truhe (Epische Gruft Level 35)": 100
+    "Schildkröten-Truhe (Epische Gruft Level 35)": 100,
+    "Barbarentruhe (Epische Gruft Level 35)": 100
   },
   "clanData": [
     {
@@ -1019,7 +1020,8 @@
         "Vergessene Truhe (Gruft Level 25)": 3,
         "Schöne Truhe (Gruft Level 25)": 1,
         "Runentruhe (Lvl. 30-34 Überfallender Runen-Trupp)": 1,
-        "Schildkröten-Truhe (Epische Gruft Level 35)": 1
+        "Schildkröten-Truhe (Epische Gruft Level 35)": 1,
+        "Barbarentruhe (Epische Gruft Level 35)": 1
       },
       "tower": 0,
       "silver": 0,
