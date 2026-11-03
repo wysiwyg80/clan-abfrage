@@ -161,7 +161,8 @@
     "Titanstahl-Truhe (Epische Gruft Level 15)": 15,
     "Holztruhe (Bank)": 15,
     "Barbarentruhe (Epische Gruft Level 15)": 15,
-    "Titanstahl-Truhe (Epische Gruft Level 30)": 75
+    "Titanstahl-Truhe (Epische Gruft Level 30)": 75,
+    "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 0
   },
   "clanData": [
     {
@@ -869,7 +870,8 @@
         "Infernal Chest (Level 25 Crypt)": 1,
         "Mayan Chest (Level 25 Crypt)": 1,
         "Rare Dragon Chest (Level 25 rare Crypt)": 1,
-        "Minotaur Chest (Level 25 epic Crypt)": 1
+        "Minotaur Chest (Level 25 epic Crypt)": 1,
+        "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 1
       },
       "growth": 0
     },
