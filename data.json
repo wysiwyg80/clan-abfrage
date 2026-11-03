@@ -157,7 +157,8 @@
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
     "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
     "Kobalt-Truhe (Epische Gruft Level 15)": 15,
-    "Titanstahl-Truhe (Epische Gruft Level 35)": 100
+    "Titanstahl-Truhe (Epische Gruft Level 35)": 100,
+    "Truhe der Verfluchten (Epische Gruft Level 20)": 40
   },
   "clanData": [
     {
@@ -585,7 +586,8 @@
       "chests": {
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 1,
         "Harpyien-Truhe (Epische Gruft Level 20)": 3,
-        "Truhe des Priesters (Epische Gruft Level 20)": 1
+        "Truhe des Priesters (Epische Gruft Level 20)": 1,
+        "Truhe der Verfluchten (Epische Gruft Level 20)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
