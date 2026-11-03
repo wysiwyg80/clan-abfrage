@@ -176,7 +176,8 @@
     "Basilisk Chest (Epic Basilisk squad)": 0,
     "Cobra Chest (Level 25 Crypt)": 0,
     "Bone Chest (Level 25 Crypt)": 0,
-    "Forgotten Chest (Level 25 Crypt)": 0
+    "Forgotten Chest (Level 25 Crypt)": 0,
+    "Trillium Chest (Level 20 epic Crypt)": 0
   },
   "clanData": [
     {
@@ -414,7 +415,8 @@
       "name": "Granidred",
       "rank": "Veteran",
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 25)": 12
+        "Truhe der Festung der Elfen (Festung Level 25)": 12,
+        "Trillium Chest (Level 20 epic Crypt)": 1
       },
       "tower": 0,
       "silver": 0,
