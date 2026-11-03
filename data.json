@@ -585,7 +585,9 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Autorität (Turnier Triumph der Autorität)": 1
+      },
       "tower": 0,
       "power": 95267482,
       "prevPower": 94927582,
