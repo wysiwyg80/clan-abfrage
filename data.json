@@ -161,7 +161,8 @@
     "Truhe der Verfluchten (Epische Gruft Level 20)": 40,
     "Kobalt-Truhe (Epische Gruft Level 35)": 100,
     "Trillium-Truhe (Epische Gruft Level 30)": 75,
-    "Titanstahl-Truhe (Epische Gruft Level 15)": 15
+    "Titanstahl-Truhe (Epische Gruft Level 15)": 15,
+    "Holztruhe (Bank)": 0
   },
   "clanData": [
     {
@@ -191,7 +192,8 @@
         "Knochentruhe (Gruft Level 20)": 1,
         "Truhe der Maya (Gruft Level 20)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 3,
-        "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 1
+        "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 1,
+        "Holztruhe (Bank)": 1
       },
       "growth": 0
     },
