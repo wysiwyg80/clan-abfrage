@@ -681,7 +681,8 @@
       "joinDate": "2026-11-01",
       "chests": {
         "Steintruhe (Gruft Level 25)": 20,
-        "Vergessene Truhe (Gruft Level 20)": 1
+        "Vergessene Truhe (Gruft Level 20)": 1,
+        "Truhe der Maya (Gruft Level 20)": 1
       },
       "growth": 0
     },
