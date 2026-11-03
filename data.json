@@ -304,7 +304,8 @@
       "name": "Elginan",
       "rank": "Offizier",
       "chests": {
-        "Chimären-Truhe (Epische-Chimäre-Trupp)": 2
+        "Chimären-Truhe (Epische-Chimäre-Trupp)": 2,
+        "Truhe der Autorität (Turnier Triumph der Autorität)": 1
       },
       "tower": 0,
       "silver": 0,
