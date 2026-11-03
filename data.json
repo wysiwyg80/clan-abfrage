@@ -35,7 +35,6 @@
     "Harpyien-Truhe (Epische Gruft Level 20)": 40,
     "Barbarentruhe (Gruft Level 20)": 20,
     "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 20,
-    "Truhe der Kobra (Level 20)": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 20)": 40,
     "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
     "Truhe der Festung der Elfen (Festung Level 20)": 40,
@@ -68,7 +67,6 @@
     "Sandtruhe (Gruft Level 25)": 25,
     "Seltene Drachentruhe (Seltene Gruft Level 25)": 50,
     "Epische Gruft Level 25 (Epische Gruft Level 25)": 0,
-    "Seltene Gruft Level 25 (Seltene Gruft Level 25)": 0,
     "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 25,
     "Vergessene Truhe (Gruft Level 25)": 25,
     "Drachentruhe (Gruft Level 25)": 0,
@@ -97,7 +95,6 @@
     "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0,
     "Ancient Warrior's Chest (Level 25 epic Crypt)": 0,
     "Truhe der Untoten (Heldenhafte Monster Level 26)": 0,
-    "Heldenhafte Monster Level 26": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 30)": 60,
     "Truhe der Festung der Elfen (Festung Level 30)": 60,
     "Truhe des Priesters (Epische Gruft Level 30)": 0,
@@ -162,7 +159,7 @@
     "Kobalt-Truhe (Epische Gruft Level 35)": 100,
     "Trillium-Truhe (Epische Gruft Level 30)": 75,
     "Titanstahl-Truhe (Epische Gruft Level 15)": 15,
-    "Holztruhe (Bank)": 0,
+    "Holztruhe (Bank)": 15,
     "Barbarentruhe (Epische Gruft Level 15)": 15,
     "Titanstahl-Truhe (Epische Gruft Level 30)": 75
   },
@@ -1432,5 +1429,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-03T21:51:09.261Z"
+  "lastUpdated": "2026-11-03T22:59:31.712Z"
 }
