@@ -178,7 +178,8 @@
     "Bone Chest (Level 25 Crypt)": 0,
     "Forgotten Chest (Level 25 Crypt)": 0,
     "Trillium Chest (Level 20 epic Crypt)": 0,
-    "Fire Chest (Level 25 Crypt)": 0
+    "Fire Chest (Level 25 Crypt)": 0,
+    "Barbarian Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -1245,7 +1246,8 @@
         "Trillium Chest (Level 35 epic Crypt)": 1,
         "Basilisk Chest (Epic Basilisk squad)": 1,
         "Fire Chest (Level 25 Crypt)": 1,
-        "Gnome Workshop Chest (Level 25 Crypt)": 2
+        "Gnome Workshop Chest (Level 25 Crypt)": 2,
+        "Barbarian Chest (Level 25 Crypt)": 1
       },
       "tower": 0,
       "silver": 0,
