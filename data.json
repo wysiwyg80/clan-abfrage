@@ -156,7 +156,8 @@
     "Turmbau": 50,
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
     "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
-    "Kobalt-Truhe (Epische Gruft Level 15)": 15
+    "Kobalt-Truhe (Epische Gruft Level 15)": 15,
+    "Titanstahl-Truhe (Epische Gruft Level 35)": 100
   },
   "clanData": [
     {
@@ -1050,7 +1051,8 @@
         "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 2,
-        "Truhe des Priesters (Epische Gruft Level 35)": 1
+        "Truhe des Priesters (Epische Gruft Level 35)": 1,
+        "Titanstahl-Truhe (Epische Gruft Level 35)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
