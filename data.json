@@ -155,7 +155,8 @@
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
     "Turmbau": 50,
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
-    "Schildkröten-Truhe (Epische Gruft Level 25)": 50
+    "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
+    "Kobalt-Truhe (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -963,7 +964,8 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
         "Infernale Truhe (Gruft Level 20)": 1,
         "Feuertruhe (Gruft Level 20)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1
+        "Barbarentruhe (Gruft Level 25)": 1,
+        "Kobalt-Truhe (Epische Gruft Level 15)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
