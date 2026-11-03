@@ -156,7 +156,8 @@
     "Goldene Truhe (Bank)": 100,
     "Trillium-Truhe (Epische Gruft Level 35)": 100,
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
-    "Skarabäus-Truhe (Epische Gruft Level 30)": 75
+    "Skarabäus-Truhe (Epische Gruft Level 30)": 75,
+    "Sand Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -774,7 +775,8 @@
         "Vergessene Truhe (Gruft Level 25)": 1,
         "Truhe der Orks (Gruft Level 25)": 1,
         "Truhe der Maya (Gruft Level 25)": 1,
-        "Skarabäus-Truhe (Epische Gruft Level 30)": 1
+        "Skarabäus-Truhe (Epische Gruft Level 30)": 1,
+        "Sand Chest (Level 25 Crypt)": 1
       },
       "tower": 0,
       "silver": 0,
