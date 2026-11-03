@@ -160,7 +160,8 @@
     "Titanstahl-Truhe (Epische Gruft Level 35)": 100,
     "Truhe der Verfluchten (Epische Gruft Level 20)": 40,
     "Kobalt-Truhe (Epische Gruft Level 35)": 100,
-    "Trillium-Truhe (Epische Gruft Level 30)": 75
+    "Trillium-Truhe (Epische Gruft Level 30)": 75,
+    "Titanstahl-Truhe (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -628,7 +629,8 @@
       "activeDays": 1,
       "chests": {
         "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
-        "Titanstahl-Truhe (Epische Gruft Level 20)": 2
+        "Titanstahl-Truhe (Epische Gruft Level 20)": 2,
+        "Titanstahl-Truhe (Epische Gruft Level 15)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
