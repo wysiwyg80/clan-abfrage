@@ -163,7 +163,8 @@
     "Barbarentruhe (Epische Gruft Level 15)": 15,
     "Titanstahl-Truhe (Epische Gruft Level 30)": 75,
     "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 0,
-    "Skorpion-Truhe (Epische Gruft Level 30)": 75
+    "Skorpion-Truhe (Epische Gruft Level 30)": 75,
+    "Legendäre Aschentruhe (Epischer Aschentrupp)": 0
   },
   "clanData": [
     {
@@ -1300,7 +1301,8 @@
         "Sandtruhe (Gruft Level 25)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 1,
         "Truhe der Verfluchten (Epische Gruft Level 35)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1,
+        "Legendäre Aschentruhe (Epischer Aschentrupp)": 1
       },
       "growth": 0
     },
