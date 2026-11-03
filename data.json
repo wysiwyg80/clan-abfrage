@@ -159,7 +159,8 @@
     "Skarabäus-Truhe (Epische Gruft Level 30)": 75,
     "Sand Chest (Level 25 Crypt)": 0,
     "Gnome Workshop Chest (Level 25 Crypt)": 0,
-    "Infernal Chest (Level 25 Crypt)": 0
+    "Infernal Chest (Level 25 Crypt)": 0,
+    "Scorpion Chest (Level 35 epic Crypt)": 0
   },
   "clanData": [
     {
@@ -1200,7 +1201,8 @@
         "Feuertruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
         "Trillium-Truhe (Epische Gruft Level 35)": 1,
-        "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 4
+        "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 4,
+        "Scorpion Chest (Level 35 epic Crypt)": 1
       },
       "tower": 0,
       "silver": 0,
