@@ -167,7 +167,8 @@
     "Ancient Warrior's Chest (Level 30 epic Crypt)": 0,
     "Barbarian Chest (Level 35 epic Crypt)": 0,
     "Rare Dragon Chest (Level 30 rare Crypt)": 0,
-    "Elven Citadel Chest (Level 30 Citadel)": 0
+    "Elven Citadel Chest (Level 30 Citadel)": 0,
+    "Minotaur Chest (Level 30 epic Crypt)": 0
   },
   "clanData": [
     {
@@ -987,7 +988,8 @@
         "Ancient Warrior's Chest (Level 30 epic Crypt)": 1,
         "Rare Dragon Chest (Level 30 rare Crypt)": 3,
         "Rare Dragon Chest (Level 25 rare Crypt)": 1,
-        "Elven Citadel Chest (Level 30 Citadel)": 1
+        "Elven Citadel Chest (Level 30 Citadel)": 1,
+        "Minotaur Chest (Level 30 epic Crypt)": 1
       },
       "tower": 0,
       "silver": 0,
