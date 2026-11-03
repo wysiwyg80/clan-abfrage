@@ -532,7 +532,8 @@
       "joinDate": "2026-11-01",
       "chests": {
         "Barbarentruhe (Gruft Level 15)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 15)": 2
+        "Seltene Drachentruhe (Seltene Gruft Level 15)": 2,
+        "Sandtruhe (Gruft Level 25)": 1
       },
       "growth": 0
     },
