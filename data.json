@@ -180,7 +180,8 @@
     "Truhe der Autorität (Turnier Triumph der Autorität)": 0,
     "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
     "Truhe der alten Bastion (Epische Gruft Level 25)": 50,
-    "Skarabäus-Truhe (Epische Gruft Level 25)": 50
+    "Skarabäus-Truhe (Epische Gruft Level 25)": 50,
+    "Truhe der Verfluchten (Epische Gruft Level 20)": 40
   },
   "clanData": [
     {
@@ -617,7 +618,8 @@
         "Harpyien-Truhe (Epische Gruft Level 25)": 1,
         "Truhe des Priesters (Epische Gruft Level 20)": 1,
         "Weiße Holztruhe (Epische Gruft Level 20)": 1,
-        "Skorpion-Truhe (Epische Gruft Level 20)": 1
+        "Skorpion-Truhe (Epische Gruft Level 20)": 1,
+        "Truhe der Verfluchten (Epische Gruft Level 20)": 1
       },
       "growth": 0,
       "joinDate": "2026-11-01"
