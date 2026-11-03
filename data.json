@@ -174,7 +174,8 @@
     "Ancient Warrior's Chest (Level 25 epic Crypt)": 0,
     "House of Horrors Chest (Level 25 epic Crypt)": 0,
     "Basilisk Chest (Epic Basilisk squad)": 0,
-    "Cobra Chest (Level 25 Crypt)": 0
+    "Cobra Chest (Level 25 Crypt)": 0,
+    "Bone Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -1002,7 +1003,8 @@
         "Ancient Warrior's Chest (Level 25 epic Crypt)": 1,
         "House of Horrors Chest (Level 25 epic Crypt)": 1,
         "Mayan Chest (Level 25 Crypt)": 1,
-        "Cobra Chest (Level 25 Crypt)": 1
+        "Cobra Chest (Level 25 Crypt)": 1,
+        "Bone Chest (Level 25 Crypt)": 1
       },
       "tower": 0,
       "silver": 0,
