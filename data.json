@@ -179,7 +179,8 @@
     "Turmbau": 50,
     "Truhe der Autorität (Turnier Triumph der Autorität)": 0,
     "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
-    "Truhe der alten Bastion (Epische Gruft Level 25)": 50
+    "Truhe der alten Bastion (Epische Gruft Level 25)": 50,
+    "Skarabäus-Truhe (Epische Gruft Level 25)": 50
   },
   "clanData": [
     {
@@ -1292,7 +1293,8 @@
         "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
         "Truhe der alten Bastion (Epische Gruft Level 25)": 1,
         "Barbarentruhe (Epische Gruft Level 25)": 2,
-        "Truhe der Verfluchten (Epische Gruft Level 25)": 1
+        "Truhe der Verfluchten (Epische Gruft Level 25)": 1,
+        "Skarabäus-Truhe (Epische Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
