@@ -132,8 +132,6 @@
     "Minotaurus-Truhe (Epische Gruft Level 35)": 100,
     "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 100,
     "Trillium-Truhe (Epische Gruft Level 35)": 100,
-    "Scorpion Chest (Level 35 epic Crypt)": 0,
-    "Barbarian Chest (Level 35 epic Crypt)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 40–44)": 0,
     "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 0,
@@ -156,7 +154,7 @@
     "Goldene Truhe (Bank)": 100,
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
     "Turmbau": 50,
-    "Truhe der Autorität (Turnier Triumph der Autorität)": 0,
+    "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
     "Schildkröten-Truhe (Epische Gruft Level 25)": 50
   },
   "clanData": [
@@ -1281,5 +1279,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-03T16:57:50.478Z"
+  "lastUpdated": "2026-11-03T17:00:52.908Z"
 }
