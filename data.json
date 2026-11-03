@@ -1036,18 +1036,6 @@
       "joinDate": "2026-11-01"
     },
     {
-      "name": "Asliddin7",
-      "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 31166148,
-      "prevPower": 0,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
-    },
-    {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
       "chests": {
@@ -1222,5 +1210,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-02T21:08:11.851Z"
+  "lastUpdated": "2026-11-03T14:45:32.011Z"
 }
