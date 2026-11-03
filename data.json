@@ -311,7 +311,9 @@
     {
       "name": "Auzar",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Truhe der Autorität (Turnier Triumph der Autorität)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 294961175,
