@@ -162,7 +162,8 @@
     "Infernal Chest (Level 25 Crypt)": 0,
     "Scorpion Chest (Level 35 epic Crypt)": 0,
     "Mayan Chest (Level 25 Crypt)": 0,
-    "Rare Dragon Chest (Level 25 rare Crypt)": 0
+    "Rare Dragon Chest (Level 25 rare Crypt)": 0,
+    "Minotaur Chest (Level 25 epic Crypt)": 0
   },
   "clanData": [
     {
@@ -785,7 +786,8 @@
         "Gnome Workshop Chest (Level 25 Crypt)": 1,
         "Infernal Chest (Level 25 Crypt)": 1,
         "Mayan Chest (Level 25 Crypt)": 1,
-        "Rare Dragon Chest (Level 25 rare Crypt)": 1
+        "Rare Dragon Chest (Level 25 rare Crypt)": 1,
+        "Minotaur Chest (Level 25 epic Crypt)": 1
       },
       "tower": 0,
       "silver": 0,
