@@ -842,7 +842,9 @@
       "silver": 0,
       "customGoal": null,
       "joinDate": "2026-11-01",
-      "chests": {},
+      "chests": {
+        "Barbarentruhe (Epische Gruft Level 25)": 1
+      },
       "growth": 0
     },
     {
