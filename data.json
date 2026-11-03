@@ -939,7 +939,8 @@
         "Barbarentruhe (Gruft Level 25)": 1,
         "Infernale Truhe (Gruft Level 25)": 2,
         "Truhe der Autorität (Turnier Triumph der Autorität)": 5,
-        "Infernale Truhe (Gruft Level 20)": 6
+        "Infernale Truhe (Gruft Level 20)": 6,
+        "Gladiatorentruhe (Arena)": 1
       },
       "growth": 0
     },
