@@ -1299,6 +1299,19 @@
       "activeDays": 1,
       "customGoal": null,
       "joinDate": "2026-11-01"
+    },
+    {
+      "name": "MSB",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 88173384,
+      "hero_level": 150,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-03"
     }
   ],
   "evalStartDate": "2026-11-01",
