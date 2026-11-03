@@ -178,7 +178,8 @@
     "Basilisk Chest (Epic Basilisk squad)": 0,
     "Turmbau": 50,
     "Truhe der Autorität (Turnier Triumph der Autorität)": 0,
-    "Schildkröten-Truhe (Epische Gruft Level 25)": 50
+    "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
+    "Truhe der alten Bastion (Epische Gruft Level 25)": 50
   },
   "clanData": [
     {
@@ -1288,7 +1289,8 @@
         "Weiße Holztruhe (Epische Gruft Level 25)": 1,
         "Skorpion-Truhe (Epische Gruft Level 25)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 1,
-        "Aufgegebene Truhe (Epische Gruft Level 25)": 1
+        "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
+        "Truhe der alten Bastion (Epische Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
