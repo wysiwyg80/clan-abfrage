@@ -330,7 +330,8 @@
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 19,
         "Holztruhe (Bank)": 3,
         "Bronzetruhe (Bank)": 3,
-        "Silberne Truhe (Bank)": 3
+        "Silberne Truhe (Bank)": 3,
+        "Goldene Truhe (Bank)": 1
       },
       "tower": 1,
       "silver": 0,
