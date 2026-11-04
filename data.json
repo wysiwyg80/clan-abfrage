@@ -699,7 +699,8 @@
       "customGoal": null,
       "joinDate": "2026-11-01",
       "chests": {
-        "Knochentruhe (Gruft Level 15)": 1
+        "Knochentruhe (Gruft Level 15)": 1,
+        "Steintruhe (Gruft Level 15)": 1
       },
       "growth": 0
     },
