@@ -678,24 +678,6 @@
       "joinDate": "2026-11-01"
     },
     {
-      "name": "Greynelf",
-      "rank": "Soldat",
-      "hero_level": 0,
-      "power": 12373183,
-      "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
-      "chests": {
-        "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
-        "Titanstahl-Truhe (Epische Gruft Level 20)": 2,
-        "Titanstahl-Truhe (Epische Gruft Level 15)": 1,
-        "Schöne Truhe (Gruft Level 15)": 1,
-        "Feuertruhe (Gruft Level 15)": 1
-      },
-      "growth": 0
-    },
-    {
       "name": "Ayanin",
       "rank": "Veteran",
       "power": 12011430,
@@ -717,25 +699,6 @@
       "customGoal": null,
       "joinDate": "2026-11-01",
       "chests": {},
-      "growth": 0
-    },
-    {
-      "name": "Que",
-      "rank": "Soldat",
-      "hero_level": 0,
-      "power": 114918040,
-      "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
-      "chests": {
-        "Steintruhe (Gruft Level 25)": 20,
-        "Vergessene Truhe (Gruft Level 20)": 1,
-        "Truhe der Maya (Gruft Level 20)": 1,
-        "Barbarentruhe (Gruft Level 20)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Sandtruhe (Gruft Level 15)": 1
-      },
       "growth": 0
     },
     {
@@ -1387,20 +1350,20 @@
     },
     {
       "name": "Eldriel",
-      "rank": "Soldat",
+      "rank": "Veteran",
+      "hero_level": 0,
+      "power": 190092336,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Kobalt-Truhe (Epische Gruft Level 25)": 1,
         "Barbarentruhe (Epische Gruft Level 25)": 1,
         "Skorpion-Truhe (Epische Gruft Level 25)": 1,
         "Sandtruhe (Gruft Level 15)": 1
       },
-      "tower": 1,
-      "silver": 0,
-      "power": 190092336,
-      "prevPower": 0,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "Rysiek121",
@@ -1465,16 +1428,15 @@
     },
     {
       "name": "MSB",
-      "rank": "Soldat",
-      "chests": {},
+      "rank": "Veteran",
+      "hero_level": 150,
+      "power": 88173384,
       "tower": 0,
       "silver": 0,
-      "power": 88173384,
-      "hero_level": 150,
-      "prevPower": 0,
-      "activeDays": 28,
       "customGoal": null,
-      "joinDate": "2026-11-03"
+      "joinDate": "2026-11-03",
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Metilar",
@@ -1495,5 +1457,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-04T18:28:39.880Z"
+  "lastUpdated": "2026-11-04T19:07:56.901Z"
 }
