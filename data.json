@@ -6,6 +6,7 @@
     "Feuertruhe (Gruft Level 15)": 0,
     "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 0,
     "Sandtruhe (Gruft Level 15)": 0,
+    "Truhe der Festung der Elfen (Level 15)": 0,
     "Truhe der Festung der Elfen (Festung Level 15)": 15,
     "Truhe der Kobra (Gruft Level 15)": 0,
     "Infernale Truhe (Gruft Level 15)": 0,
@@ -1496,5 +1497,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-04T17:41:20.698Z"
+  "lastUpdated": "2026-11-04T17:50:45.071Z"
 }
