@@ -20,9 +20,6 @@
     "Truhe des Priesters (Epische Gruft Level 15)": 15,
     "Aufgegebene Truhe (Epische Gruft Level 15)": 15,
     "Skorpion-Truhe (Epische Gruft Level 15)": 15,
-    "Kobalt-Truhe (Epische Gruft Level 15)": 15,
-    "Titanstahl-Truhe (Epische Gruft Level 15)": 15,
-    "Barbarentruhe (Epische Gruft Level 15)": 15,
     "Truhe der Untoten (Heldenhafte Monster Level 16)": 0,
     "Truhe der Elfen (Heldenhafte Monster Level 17)": 0,
     "Barbarentruhe (Heldenhafte Monster Level 19)": 0,
@@ -52,13 +49,13 @@
     "Barbarentruhe (Epische Gruft Level 20)": 40,
     "Truhe der alten Bastion (Epische Gruft Level 20)": 0,
     "Weiße Holztruhe (Epische Gruft Level 20)": 40,
+    "Truhe der Festung der Verfluchten (Festung Level 20)": 40,
     "Geflochtene Truhe (Epische Gruft Level 20)": 40,
     "Schildkröten-Truhe (Epische Gruft Level 20)": 40,
     "Minotaurus-Truhe (Epische Gruft Level 20)": 40,
     "Titanstahl-Truhe (Epische Gruft Level 20)": 40,
     "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 0,
     "Trillium-Truhe (Epische Gruft Level 20)": 40,
-    "Truhe der Verfluchten (Epische Gruft Level 20)": 40,
     "Barbarentruhe (Heldenhafte Monster Level 24)": 0,
     "Truhe der Maya (Gruft Level 25)": 25,
     "Infernale Truhe (Gruft Level 25)": 25,
@@ -96,7 +93,6 @@
     "Minotaurus-Truhe (Epische Gruft Level 25)": 50,
     "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0,
     "Ancient Warrior's Chest (Level 25 epic Crypt)": 0,
-    "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
     "Truhe der Untoten (Heldenhafte Monster Level 26)": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 30)": 60,
     "Truhe der Festung der Elfen (Festung Level 30)": 60,
@@ -104,6 +100,8 @@
     "Geflochtene Truhe (Epische Gruft Level 30)": 75,
     "Schildkröten-Truhe (Epische Gruft Level 30)": 75,
     "Schatzkammer der Ahnen (Level 30-34)": 0,
+    "Seltene Truhe (Seltene Gruft Level 30)": 0,
+    "Epische Truhe (Epische Gruft Level 30)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 0,
     "Minotaurus-Truhe (Epische Gruft Level 30)": 75,
@@ -114,9 +112,6 @@
     "Runentruhe (Lvl. 30-34 Überfallender Runen-Trupp)": 0,
     "Skarabäus-Truhe (Epische Gruft Level 30)": 75,
     "Ancient Warrior's Chest (Level 30 epic Crypt)": 0,
-    "Trillium-Truhe (Epische Gruft Level 30)": 75,
-    "Titanstahl-Truhe (Epische Gruft Level 30)": 75,
-    "Skorpion-Truhe (Epische Gruft Level 30)": 75,
     "Aufgegebene Truhe (Epische Gruft Level 35)": 100,
     "Harpyien-Truhe (Epische Gruft Level 35)": 100,
     "Truhe des Priesters (Epische Gruft Level 35)": 100,
@@ -133,8 +128,6 @@
     "Minotaurus-Truhe (Epische Gruft Level 35)": 100,
     "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 100,
     "Trillium-Truhe (Epische Gruft Level 35)": 100,
-    "Titanstahl-Truhe (Epische Gruft Level 35)": 100,
-    "Kobalt-Truhe (Epische Gruft Level 35)": 100,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 40–44)": 0,
     "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 0,
@@ -144,8 +137,11 @@
     "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 0,
     "Jack-Reaper-Truhe (Kürbis)": 0,
     "Kürbistruhe (Quelle: Kürbis)": 0,
+    "Gewöhnliche Truhe des Clan-Wohlstand": 0,
+    "Ungewöhnliche Truhe des Clan-Wohlstand": 0,
     "Epische Truhe des Goldenen Wächters": 0,
     "Gewöhnliche Truhe des (Clan-Wohlstand)": 0,
+    "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0,
     "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 0,
     "Epische Truhe des Wohlstands (Clan-Wohlstand)": 0,
     "Gladiatorentruhe (Arena)": 0,
@@ -153,11 +149,21 @@
     "Truhe der epischen Monster (Epischer Trupp der Untoten)": 125,
     "Goldene Truhe (Bank)": 100,
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
+    "Turmbau": 50,
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
+    "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
+    "Kobalt-Truhe (Epische Gruft Level 15)": 15,
+    "Titanstahl-Truhe (Epische Gruft Level 35)": 100,
+    "Truhe der Verfluchten (Epische Gruft Level 20)": 40,
+    "Kobalt-Truhe (Epische Gruft Level 35)": 100,
+    "Trillium-Truhe (Epische Gruft Level 30)": 75,
+    "Titanstahl-Truhe (Epische Gruft Level 15)": 15,
     "Holztruhe (Bank)": 15,
+    "Barbarentruhe (Epische Gruft Level 15)": 15,
+    "Titanstahl-Truhe (Epische Gruft Level 30)": 75,
     "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 0,
-    "Legendäre Aschentruhe (Epischer Aschentrupp)": 50,
-    "Turmbau": 50
+    "Skorpion-Truhe (Epische Gruft Level 30)": 75,
+    "Legendäre Aschentruhe (Epischer Aschentrupp)": 50
   },
   "clanData": [
     {
@@ -272,6 +278,7 @@
         "Weiße Holztruhe (Epische Gruft Level 15)": 1,
         "Vergessene Truhe (Gruft Level 20)": 3,
         "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 1,
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 2,
         "Truhe der Kobra (Gruft Level 20)": 1,
         "Truhe der Festung der Elfen (Festung Level 15)": 2,
         "Skorpion-Truhe (Epische Gruft Level 15)": 1,
@@ -312,19 +319,19 @@
     {
       "name": "Auzar",
       "rank": "Veteran",
-      "hero_level": 0,
-      "power": 294961175,
-      "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
         "Gladiatorentruhe (Arena)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2,
         "Truhe der Orks (Gruft Level 25)": 1
       },
-      "growth": 0
+      "tower": 0,
+      "silver": 0,
+      "power": 294961175,
+      "prevPower": 293537875,
+      "activeDays": 1,
+      "customGoal": null,
+      "joinDate": "2026-11-01"
     },
     {
       "name": "Elginan",
@@ -495,6 +502,7 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 2,
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 1,
         "Truhe der Orks (Gruft Level 25)": 1
       },
       "growth": 0
@@ -712,14 +720,14 @@
     {
       "name": "Ria",
       "rank": "Veteran",
-      "hero_level": 0,
       "power": 874303,
-      "tower": 1,
+      "tower": 0,
       "silver": 0,
       "customGoal": null,
-      "joinDate": "2026-11-01",
+      "activeDays": 1,
       "chests": {},
-      "growth": 0
+      "growth": 0,
+      "joinDate": "2026-11-01"
     },
     {
       "name": "Que",
@@ -784,6 +792,7 @@
       "chests": {
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 1,
         "Gewöhnliche Truhe des (Clan-Wohlstand)": 3,
+        "Ungewöhnliche Truhe des (Clan-Wohlstand)": 3,
         "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 3,
         "Epische Truhe des Wohlstands (Clan-Wohlstand)": 3,
         "Truhe der Festung der Elfen (Festung Level 30)": 147,
@@ -840,6 +849,7 @@
         "Barbarentruhe (Gruft Level 25)": 2,
         "Truhe der Festung der Elfen (Festung Level 25)": 5,
         "Gewöhnliche Truhe des (Clan-Wohlstand)": 1,
+        "Ungewöhnliche Truhe des (Clan-Wohlstand)": 1,
         "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 1,
         "Epische Truhe des Wohlstands (Clan-Wohlstand)": 1,
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 2,
@@ -1073,6 +1083,7 @@
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 15)": 1,
         "Feuertruhe (Gruft Level 15)": 2,
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 7,
         "Truhe der Festung der Elfen (Festung Level 20)": 14,
         "Gladiatorentruhe (Arena)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 7,
@@ -1109,12 +1120,6 @@
     {
       "name": "Sir spanksALot",
       "rank": "Veteran",
-      "hero_level": 0,
-      "power": 783383255,
-      "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 2,
         "Harpyien-Truhe (Epische Gruft Level 20)": 1,
@@ -1130,7 +1135,13 @@
         "Infernale Truhe (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 1
       },
-      "growth": 0
+      "tower": 0,
+      "silver": 0,
+      "power": 783383255,
+      "prevPower": 783379255,
+      "activeDays": 1,
+      "customGoal": null,
+      "joinDate": "2026-11-01"
     },
     {
       "name": "BAD Guo II",
@@ -1496,5 +1507,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-04T15:56:45.795Z"
+  "lastUpdated": "2026-11-04T16:07:15.217Z"
 }
