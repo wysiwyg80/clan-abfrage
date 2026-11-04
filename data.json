@@ -204,17 +204,24 @@
     {
       "name": "Riyash CP CITY",
       "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
+      "hero_level": 0,
       "power": 479740600,
-      "prevPower": 479641500,
-      "activeDays": 1,
+      "tower": 1,
       "silver": 0,
-      "joinDate": "2026-11-01"
+      "customGoal": null,
+      "joinDate": "2026-11-01",
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Magellan",
       "rank": "Veteran",
+      "hero_level": 0,
+      "power": 447586685,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 2,
         "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 1,
@@ -223,30 +230,24 @@
         "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 1,
         "Truhe der Autorität (Turnier Triumph der Autorität)": 2
       },
-      "tower": 0,
-      "silver": 0,
-      "power": 447586685,
-      "prevPower": 444829445,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "Explorer",
       "rank": "Veteran",
+      "hero_level": 0,
+      "power": 408425675,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Infernale Truhe (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 2,
         "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 1,
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 1
       },
-      "tower": 0,
-      "silver": 0,
-      "power": 408425675,
-      "prevPower": 400582555,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "DRACULA",
@@ -294,7 +295,7 @@
       "rank": "Veteran",
       "hero_level": 0,
       "power": 294671699,
-      "tower": 2,
+      "tower": 1,
       "silver": 0,
       "customGoal": null,
       "joinDate": "2026-11-01",
@@ -380,7 +381,7 @@
       "rank": "Veteran",
       "hero_level": 0,
       "power": 238713385,
-      "tower": 0,
+      "tower": 1,
       "silver": 0,
       "customGoal": null,
       "joinDate": "2026-11-01",
@@ -395,28 +396,28 @@
     {
       "name": "ICHNOS",
       "rank": "Veteran",
+      "hero_level": 0,
+      "power": 236337775,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 1
       },
-      "tower": 0,
-      "silver": 0,
-      "power": 236337775,
-      "prevPower": 234760925,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "Lee the Ugly",
       "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
+      "hero_level": 0,
       "power": 235685731,
-      "prevPower": 229346491,
-      "activeDays": 1,
+      "tower": 1,
+      "silver": 0,
       "customGoal": null,
-      "joinDate": "2026-11-01"
+      "joinDate": "2026-11-01",
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "kordy",
@@ -432,14 +433,14 @@
     {
       "name": "Ajax",
       "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
+      "hero_level": 0,
       "power": 219844135,
-      "prevPower": 217496435,
-      "activeDays": 1,
+      "tower": 1,
+      "silver": 0,
       "customGoal": null,
-      "joinDate": "2026-11-01"
+      "joinDate": "2026-11-01",
+      "chests": {},
+      "growth": 0
     },
     {
       "name": "Granidred",
@@ -566,17 +567,18 @@
     {
       "name": "Maginad",
       "rank": "Veteran",
+      "hero_level": 0,
+      "power": 140317033,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Knochentruhe (Gruft Level 25)": 2,
         "Sandtruhe (Gruft Level 25)": 1,
         "Truhe der Autorität (Turnier Triumph der Autorität)": 1
       },
-      "tower": 0,
-      "power": 140317033,
-      "prevPower": 140126133,
-      "activeDays": 1,
-      "silver": 0,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "AyBars",
@@ -716,14 +718,14 @@
     {
       "name": "Ria",
       "rank": "Veteran",
+      "hero_level": 0,
       "power": 874303,
-      "tower": 0,
+      "tower": 1,
       "silver": 0,
       "customGoal": null,
-      "activeDays": 1,
+      "joinDate": "2026-11-01",
       "chests": {},
-      "growth": 0,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "Que",
@@ -1018,6 +1020,12 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
+      "hero_level": 0,
+      "power": 225887841,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 2,
@@ -1026,13 +1034,7 @@
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
         "Truhe der Orks (Gruft Level 20)": 2
       },
-      "tower": 0,
-      "silver": 0,
-      "power": 225887841,
-      "prevPower": 224975841,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "Farés Dz",
@@ -1116,6 +1118,12 @@
     {
       "name": "Sir spanksALot",
       "rank": "Veteran",
+      "hero_level": 0,
+      "power": 783383255,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 2,
         "Harpyien-Truhe (Epische Gruft Level 20)": 1,
@@ -1131,13 +1139,7 @@
         "Infernale Truhe (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 1
       },
-      "tower": 0,
-      "silver": 0,
-      "power": 783383255,
-      "prevPower": 783379255,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "BAD Guo II",
@@ -1215,19 +1217,19 @@
     {
       "name": "Noli",
       "rank": "Veteran",
+      "hero_level": 0,
+      "power": 235431265,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Orks (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Weiße Holztruhe (Epische Gruft Level 25)": 3
       },
-      "tower": 0,
-      "silver": 0,
-      "power": 235431265,
-      "prevPower": 235429605,
-      "activeDays": 1,
-      "customGoal": null,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "Ajji",
@@ -1502,5 +1504,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-04T16:48:12.209Z"
+  "lastUpdated": "2026-11-04T17:03:55.254Z"
 }
