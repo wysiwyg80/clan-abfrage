@@ -169,7 +169,8 @@
     "Tartaros-Truhe (Gruft von Tartaros Level 25)": 25,
     "Tartaros-Truhe (Gruft von Tartaros Level 30)": 0,
     "Tartaros-Truhe (Gruft von Tartaros Level 35)": 0,
-    "Tartaros-Truhe (Gruft von Tartaros Level 20)": 20
+    "Tartaros-Truhe (Gruft von Tartaros Level 20)": 20,
+    "Tartaros-Truhe (Gruft von Tartaros Level 15)": 0
   },
   "clanData": [
     {
@@ -1371,7 +1372,8 @@
       "rank": "Veteran",
       "chests": {
         "Infernale Truhe (Gruft Level 15)": 1,
-        "Tartaros-Truhe (Gruft von Tartaros Level 20)": 16
+        "Tartaros-Truhe (Gruft von Tartaros Level 20)": 16,
+        "Tartaros-Truhe (Gruft von Tartaros Level 15)": 1
       },
       "tower": 1,
       "silver": 0,
