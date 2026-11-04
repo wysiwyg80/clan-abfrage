@@ -617,7 +617,7 @@
         "Knochentruhe (Gruft Level 25)": 2,
         "Barbarentruhe (Gruft Level 25)": 1
       },
-      "tower": 0,
+      "tower": 1,
       "power": 95267482,
       "prevPower": 94927582,
       "activeDays": 1,
@@ -811,7 +811,7 @@
       "name": "man of war",
       "rank": "Vorgesetzter",
       "power": 1461375131,
-      "tower": 0,
+      "tower": 1,
       "silver": 0,
       "customGoal": null,
       "activeDays": 1,
@@ -1401,7 +1401,7 @@
         "Skorpion-Truhe (Epische Gruft Level 25)": 1,
         "Sandtruhe (Gruft Level 15)": 1
       },
-      "tower": 0,
+      "tower": 1,
       "silver": 0,
       "power": 190092336,
       "prevPower": 0,
