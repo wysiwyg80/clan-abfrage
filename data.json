@@ -1239,7 +1239,9 @@
     {
       "name": "Aurora",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Infernale Truhe (Gruft Level 15)": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 65056815,
