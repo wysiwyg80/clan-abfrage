@@ -1464,7 +1464,9 @@
       "silver": 0,
       "customGoal": null,
       "joinDate": "2026-11-03",
-      "chests": {},
+      "chests": {
+        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1
+      },
       "growth": 0
     },
     {
