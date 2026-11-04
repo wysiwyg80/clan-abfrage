@@ -1445,7 +1445,9 @@
     {
       "name": "Arashigore",
       "rank": "Veteran",
-      "chests": {},
+      "chests": {
+        "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 1
+      },
       "tower": 1,
       "silver": 0,
       "power": 320384,
