@@ -157,7 +157,8 @@
     "Holztruhe (Bank)": 15,
     "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 0,
     "Legendäre Aschentruhe (Epischer Aschentrupp)": 50,
-    "Turmbau": 50
+    "Turmbau": 50,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 0
   },
   "clanData": [
     {
@@ -883,7 +884,8 @@
       "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Festung der Elfen (Festung Level 25)": 16,
-        "Truhe der Festung der Elfen (Festung Level 30)": 1
+        "Truhe der Festung der Elfen (Festung Level 30)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1
       },
       "growth": 0
     },
