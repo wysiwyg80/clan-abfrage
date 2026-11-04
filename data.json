@@ -158,7 +158,7 @@
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
     "Holztruhe (Bank)": 15,
     "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 50,
-    "Legendäre Aschentruhe (Epischer Aschentrupp)": 60,
+    "Legendäre Aschentruhe (Epischer Aschentrupp)": 75,
     "Turmbau": 50
   },
   "clanData": [
@@ -1497,5 +1497,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-04T17:31:43.304Z"
+  "lastUpdated": "2026-11-04T17:34:38.285Z"
 }
