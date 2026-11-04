@@ -164,7 +164,8 @@
     "Truhe der Festung der Verfluchten (Festung Level 20)": 40,
     "Bronzetruhe (Bank)": 0,
     "Silberne Truhe (Bank)": 0,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 25–29)": 0
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 25–29)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 20–24)": 0
   },
   "clanData": [
     {
@@ -916,7 +917,8 @@
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 20)": 1,
         "Knochentruhe (Gruft Level 20)": 1,
-        "Truhe der Kobra (Gruft Level 20)": 1
+        "Truhe der Kobra (Gruft Level 20)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 20–24)": 1
       },
       "growth": 0
     },
