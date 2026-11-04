@@ -1240,7 +1240,8 @@
       "name": "Aurora",
       "rank": "Veteran",
       "chests": {
-        "Infernale Truhe (Gruft Level 15)": 1
+        "Infernale Truhe (Gruft Level 15)": 1,
+        "Truhe der Maya (Gruft Level 15)": 1
       },
       "tower": 1,
       "silver": 0,
