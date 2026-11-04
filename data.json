@@ -159,7 +159,8 @@
     "Legendäre Aschentruhe (Epischer Aschentrupp)": 50,
     "Turmbau": 50,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 0,
-    "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 75
+    "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 75,
+    "Truhe der Verfluchten (Heldenhafte Monster Level 18)": 0
   },
   "clanData": [
     {
@@ -1045,7 +1046,8 @@
         "Sandtruhe (Gruft Level 20)": 2,
         "Truhe der Orks (Gruft Level 20)": 2,
         "Vergessene Truhe (Gruft Level 25)": 1,
-        "Truhe der Elfen (Heldenhafte Monster Level 17)": 2
+        "Truhe der Elfen (Heldenhafte Monster Level 17)": 2,
+        "Truhe der Verfluchten (Heldenhafte Monster Level 18)": 1
       },
       "growth": 0
     },
