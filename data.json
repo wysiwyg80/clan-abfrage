@@ -686,11 +686,12 @@
     {
       "name": "Greynelf",
       "rank": "Soldat",
+      "hero_level": 0,
       "power": 12373183,
-      "tower": 0,
+      "tower": 1,
       "silver": 0,
       "customGoal": null,
-      "activeDays": 1,
+      "joinDate": "2026-11-01",
       "chests": {
         "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 20)": 2,
@@ -698,8 +699,7 @@
         "Schöne Truhe (Gruft Level 15)": 1,
         "Feuertruhe (Gruft Level 15)": 1
       },
-      "growth": 0,
-      "joinDate": "2026-11-01"
+      "growth": 0
     },
     {
       "name": "Ayanin",
@@ -1502,5 +1502,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-04T16:16:13.288Z"
+  "lastUpdated": "2026-11-04T16:20:58.242Z"
 }
