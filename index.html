@@ -536,7 +536,7 @@
             return isoStr;
         }
 
-        // GITHUB API EINSTELLUNGEN SPEICHERN & PUSH
+        // GITHUB API EINSTELLUNGEN SPEICHERN & PUSH (KORRIGIERT FÜR AUTHORIZATION BEARER)
         function saveGitHubSettings() {
             ghRepo = document.getElementById('ghRepo').value.trim() || 'wysiwyg80/clan-abfrage';
             ghBranch = document.getElementById('ghBranch').value.trim() || 'main';
@@ -572,10 +572,15 @@
             let filePath = "data.json";
             let apiUrl = `https://api.github.com/repos/${ghRepo}/contents/${filePath}`;
 
+            // Korrekte Auth-Header Kombination (Bearer & token Support)
+            let authHeader = ghToken.startsWith('bearer ') || ghToken.startsWith('Bearer ') 
+                ? ghToken 
+                : (ghToken.startsWith('ghp_') || ghToken.startsWith('github_pat_') ? `Bearer ${ghToken}` : `token ${ghToken}`);
+
             try {
                 let sha = null;
                 let getResp = await fetch(apiUrl, {
-                    headers: { 'Authorization': `token ${ghToken}`, 'Accept': 'application/vnd.github.v3+json' }
+                    headers: { 'Authorization': authHeader, 'Accept': 'application/vnd.github.v3+json' }
                 });
                 if(getResp.ok) {
                     let fileData = await getResp.json();
@@ -592,7 +597,7 @@
                 let putResp = await fetch(apiUrl, {
                     method: 'PUT',
                     headers: {
-                        'Authorization': `token ${ghToken}`,
+                        'Authorization': authHeader,
                         'Accept': 'application/vnd.github.v3+json',
                         'Content-Type': 'application/json'
                     },
