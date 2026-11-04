@@ -162,7 +162,8 @@
     "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 75,
     "Truhe der Verfluchten (Heldenhafte Monster Level 18)": 0,
     "Truhe der Festung der Verfluchten (Festung Level 20)": 40,
-    "Bronzetruhe (Bank)": 0
+    "Bronzetruhe (Bank)": 0,
+    "Silberne Truhe (Bank)": 0
   },
   "clanData": [
     {
@@ -328,7 +329,8 @@
         "Truhe der Orks (Gruft Level 25)": 1,
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 19,
         "Holztruhe (Bank)": 3,
-        "Bronzetruhe (Bank)": 3
+        "Bronzetruhe (Bank)": 3,
+        "Silberne Truhe (Bank)": 1
       },
       "tower": 1,
       "silver": 0,
