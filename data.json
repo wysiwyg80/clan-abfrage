@@ -157,7 +157,8 @@
     "Holztruhe (Bank)": 15,
     "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 0,
     "Legendäre Aschentruhe (Epischer Aschentrupp)": 50,
-    "Turmbau": 50
+    "Turmbau": 50,
+    "Truhe der Festung der Verfluchten (Festung Level 20)": 40
   },
   "clanData": [
     {
@@ -292,7 +293,8 @@
         "Truhe der Maya (Gruft Level 20)": 2,
         "Trillium-Truhe (Epische Gruft Level 20)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
-        "Minotaurus-Truhe (Epische Gruft Level 25)": 2
+        "Minotaurus-Truhe (Epische Gruft Level 25)": 2,
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 1
       },
       "tower": 1,
       "power": 297121451,
