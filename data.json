@@ -157,8 +157,8 @@
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
     "Holztruhe (Bank)": 15,
-    "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 0,
-    "Legendäre Aschentruhe (Epischer Aschentrupp)": 50,
+    "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 50,
+    "Legendäre Aschentruhe (Epischer Aschentrupp)": 60,
     "Turmbau": 50
   },
   "clanData": [
@@ -1497,5 +1497,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-04T17:28:40.378Z"
+  "lastUpdated": "2026-11-04T17:31:43.304Z"
 }
