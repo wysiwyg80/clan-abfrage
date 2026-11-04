@@ -348,7 +348,8 @@
         "Holztruhe (Bank)": 3,
         "Bronzetruhe (Bank)": 3,
         "Silberne Truhe (Bank)": 3,
-        "Goldene Truhe (Bank)": 3
+        "Goldene Truhe (Bank)": 3,
+        "Knochentruhe (Gruft Level 25)": 1
       },
       "tower": 1,
       "silver": 0,
