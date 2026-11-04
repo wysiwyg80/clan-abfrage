@@ -163,7 +163,8 @@
     "Truhe der Verfluchten (Heldenhafte Monster Level 18)": 0,
     "Truhe der Festung der Verfluchten (Festung Level 20)": 40,
     "Bronzetruhe (Bank)": 0,
-    "Silberne Truhe (Bank)": 0
+    "Silberne Truhe (Bank)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 25–29)": 0
   },
   "clanData": [
     {
@@ -530,7 +531,8 @@
         "Weiße Holztruhe (Epische Gruft Level 20)": 1,
         "Trillium-Truhe (Epische Gruft Level 20)": 1,
         "Harpyien-Truhe (Epische Gruft Level 20)": 1,
-        "Aufgegebene Truhe (Epische Gruft Level 20)": 1
+        "Aufgegebene Truhe (Epische Gruft Level 20)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 25–29)": 1
       },
       "growth": 0
     },
