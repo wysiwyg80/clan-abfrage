@@ -158,7 +158,8 @@
     "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 0,
     "Legendäre Aschentruhe (Epischer Aschentrupp)": 50,
     "Turmbau": 50,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 0
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 0,
+    "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 75
   },
   "clanData": [
     {
@@ -305,7 +306,8 @@
         "Schöne Truhe (Gruft Level 25)": 2,
         "Barbarentruhe (Gruft Level 25)": 5,
         "Sandtruhe (Gruft Level 25)": 1,
-        "Skorpion-Truhe (Epische Gruft Level 30)": 1
+        "Skorpion-Truhe (Epische Gruft Level 30)": 1,
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 1
       },
       "growth": 0
     },
