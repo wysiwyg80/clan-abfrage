@@ -44,7 +44,7 @@
     "Skorpion-Truhe (Epische Gruft Level 20)": 40,
     "Skarabäus-Truhe (Epische Gruft Level 20)": 40,
     "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 40,
-    "Kobalt-Truhe (Epische Gruft Level 20)": 0,
+    "Kobalt-Truhe (Epische Gruft Level 20)": 40,
     "Truhe des Priesters (Epische Gruft Level 20)": 40,
     "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 40,
     "Barbarentruhe (Epische Gruft Level 20)": 40,
@@ -435,7 +435,8 @@
         "Truhe des Priesters (Epische Gruft Level 20)": 1,
         "Geflochtene Truhe (Epische Gruft Level 20)": 1,
         "Schildkröten-Truhe (Epische Gruft Level 20)": 2,
-        "Trillium-Truhe (Epische Gruft Level 20)": 1
+        "Trillium-Truhe (Epische Gruft Level 20)": 1,
+        "Kobalt-Truhe (Epische Gruft Level 20)": 1
       },
       "growth": 0
     },
