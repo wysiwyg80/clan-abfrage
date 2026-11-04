@@ -94,6 +94,7 @@
     "Weiße Holztruhe (Epische Gruft Level 25)": 50,
     "Minotaurus-Truhe (Epische Gruft Level 25)": 50,
     "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0,
+    "Ancient Warrior's Chest (Level 25 epic Crypt)": 0,
     "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
     "Truhe der Untoten (Heldenhafte Monster Level 26)": 0,
     "Seltene Drachentruhe (Seltene Gruft Level 30)": 60,
@@ -111,6 +112,7 @@
     "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 75,
     "Runentruhe (Lvl. 30-34 Überfallender Runen-Trupp)": 0,
     "Skarabäus-Truhe (Epische Gruft Level 30)": 75,
+    "Ancient Warrior's Chest (Level 30 epic Crypt)": 0,
     "Trillium-Truhe (Epische Gruft Level 30)": 75,
     "Titanstahl-Truhe (Epische Gruft Level 30)": 75,
     "Skorpion-Truhe (Epische Gruft Level 30)": 75,
@@ -155,8 +157,8 @@
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
     "Holztruhe (Bank)": 15,
-    "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 50,
-    "Legendäre Aschentruhe (Epischer Aschentrupp)": 75,
+    "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 0,
+    "Legendäre Aschentruhe (Epischer Aschentrupp)": 50,
     "Turmbau": 50
   },
   "clanData": [
@@ -1495,5 +1497,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-04T17:34:38.285Z"
+  "lastUpdated": "2026-11-04T17:41:20.698Z"
 }
