@@ -165,7 +165,8 @@
     "Bronzetruhe (Bank)": 0,
     "Silberne Truhe (Bank)": 0,
     "Saphir-Truhe (Schatzkammer der Ahnen Level 25–29)": 0,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 20–24)": 0
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 20–24)": 0,
+    "Tartaros-Truhe (Gruft von Tartaros Level 25)": 25
   },
   "clanData": [
     {
@@ -1166,7 +1167,8 @@
         "Feuertruhe (Gruft Level 20)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
         "Kobalt-Truhe (Epische Gruft Level 15)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 5
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 5,
+        "Tartaros-Truhe (Gruft von Tartaros Level 25)": 1
       },
       "growth": 0
     },
