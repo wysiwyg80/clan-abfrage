@@ -246,11 +246,16 @@
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
                 <div>
                     <h3 class="text-xs font-bold text-amber-400 uppercase"><i class="fa-solid fa-chess-rook"></i> Turmbau-Kontrolle</h3>
-                    <p class="text-xs text-slate-300 mt-0.5">Ermittle sofort alle Spieler, die noch keine Türme gebaut haben.</p>
+                    <p class="text-xs text-slate-300 mt-0.5">Ermittle sofort alle Spieler, die noch keine Türme gebaut haben oder setze die Türme zurück.</p>
                 </div>
-                <button onclick="zeigeSpielerOhneTuermeText()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
-                    <i class="fa-solid fa-triangle-exclamation"></i> Spieler ohne Türme anzeigen
-                </button>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="resetOnlyTowerPoints()" class="bg-red-950 hover:bg-red-900 text-red-200 border border-red-800 font-bold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-rotate-left"></i> Alle Türme auf 0
+                    </button>
+                    <button onclick="zeigeSpielerOhneTuermeText()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Spieler ohne Türme anzeigen
+                    </button>
+                </div>
             </div>
 
             <div id="ohneTuermeContainer" class="hidden mt-4 pt-4 border-t border-slate-700 space-y-3">
@@ -899,6 +904,14 @@
             container.classList.remove('hidden');
         }
 
+        function resetOnlyTowerPoints() {
+            if(confirm("Möchtest du wirklich die Turmbau-Punkte ALLER Mitglieder auf 0 zurücksetzen?")) {
+                clanData.forEach(p => { p.tower = 0; });
+                saveData();
+                alert("Alle Turmbau-Punkte wurden auf 0 zurückgesetzt.");
+            }
+        }
+
         function kopiereText() {
             const text = document.getElementById('ohneTuermeText').textContent;
             navigator.clipboard.writeText(text).then(() => {
@@ -951,7 +964,6 @@
             return val.toLocaleString('de-DE');
         }
 
-        // AKTUALLISIERTE TABELLEN-BERECHNUNG (INKLUSIVE ANTEILIGEM BEITRITTSDATUM)
         function renderTable() {
             let tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
@@ -1011,7 +1023,7 @@
                     // Falls Beitritt NACH Auswertungs-Start liegt:
                     if (!isNaN(joinD.getTime()) && joinD > startD) {
                         if (joinD > endD) {
-                            playerActiveDays = 0; // Erst nach dem Zeitraum beigetreten
+                            playerActiveDays = 0;
                         } else {
                             playerActiveDays = calculateDaysBetween(p.joinDate, evalEndDate);
                         }
