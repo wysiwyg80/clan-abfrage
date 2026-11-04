@@ -536,7 +536,7 @@
             return isoStr;
         }
 
-        // GITHUB API EINSTELLUNGEN SPEICHERN & PUSH (KORRIGIERT FÜR AUTHORIZATION BEARER)
+        // GITHUB API EINSTELLUNGEN SPEICHERN & PUSH (KORRIGIERT FÜR BEARER AUTH)
         function saveGitHubSettings() {
             ghRepo = document.getElementById('ghRepo').value.trim() || 'wysiwyg80/clan-abfrage';
             ghBranch = document.getElementById('ghBranch').value.trim() || 'main';
@@ -572,7 +572,6 @@
             let filePath = "data.json";
             let apiUrl = `https://api.github.com/repos/${ghRepo}/contents/${filePath}`;
 
-            // Korrekte Auth-Header Kombination (Bearer & token Support)
             let authHeader = ghToken.startsWith('bearer ') || ghToken.startsWith('Bearer ') 
                 ? ghToken 
                 : (ghToken.startsWith('ghp_') || ghToken.startsWith('github_pat_') ? `Bearer ${ghToken}` : `token ${ghToken}`);
@@ -824,7 +823,7 @@
             document.getElementById('adminPanel').classList.toggle('hidden');
         }
 
-        // OPTIMIERTE TRUHEN-VERWALTUNG MIT LÖSCH-BUTTON & BEREINIGUNG
+        // KORRIGIERTE TRUHEN-VERWALTUNG (SAUBERE DEUTSCHE SCHLÜSSEL-ERKENNUNG)
         function renderChestTypeConfig() {
             let container = document.getElementById('chestTypesContainer');
             container.innerHTML = '';
@@ -834,19 +833,19 @@
                 return;
             }
 
-            Object.keys(chestTypeValues).forEach(typeName => {
+            Object.entries(chestTypeValues).forEach(([typeName, typeValue]) => {
                 let card = document.createElement('div');
                 card.className = "bg-slate-900/80 p-2.5 rounded border border-slate-700 flex flex-col justify-between gap-1.5 shadow-sm";
                 card.innerHTML = `
                     <div class="flex justify-between items-center">
                         <span class="text-xs font-bold text-amber-300 truncate" title="${typeName}">${typeName}</span>
-                        <button onclick="removeChestType('${typeName}')" class="bg-red-950/80 hover:bg-red-900 text-red-300 px-2 py-0.5 rounded text-[10px] transition cursor-pointer flex items-center gap-1" title="Truhen-Art komplett löschen">
+                        <button onclick="removeChestType('${typeName.replace(/'/g, "\\'")}')" class="bg-red-950/80 hover:bg-red-900 text-red-300 px-2 py-0.5 rounded text-[10px] transition cursor-pointer flex items-center gap-1" title="Truhen-Art komplett löschen">
                             <i class="fa-solid fa-trash"></i> Löschen
                         </button>
                     </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-[10px] text-slate-400">Punkte:</span>
-                        <input type="number" value="${chestTypeValues[typeName]}" min="0" onchange="updateChestTypeValue('${typeName}', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-0.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
+                        <input type="number" value="${typeValue}" min="0" onchange="updateChestTypeValue('${typeName.replace(/'/g, "\\'")}', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-0.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                 `;
                 container.appendChild(card);
@@ -1004,7 +1003,7 @@
                 let targetSoFar = Math.round(dailyTarget * activeDaysCount);
 
                 let pointsNeeded = targetSoFar - totalPts;
-                let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-emerald-950/40 border-amber-800";
+                let statusColor = totalPts >= targetSoFar ? "text-emerald-400 bg-emerald-950/40 border-emerald-800" : "text-amber-400 bg-emerald-950/40 border-emerald-800";
                 let statusText = totalPts >= targetSoFar 
                     ? `✅ Soll erfüllt` 
                     : `⚠️ Fehlen: ${pointsNeeded > 0 ? pointsNeeded.toLocaleString() : 0} Pkt`;
