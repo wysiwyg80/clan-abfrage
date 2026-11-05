@@ -6,21 +6,19 @@
     <title>BAD LegioXEquentris - Cloud Dashboard (Supabase & GitHub)</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- Supabase JS Client -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .font-cinzel { font-family: 'Cinzel', serif; }
-
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #b45309; border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #d97706; }
 
         @media print {
-            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, .p-3 input[type="number"], #searchInput, th:last-child, td:last-child {
+            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, .p-3 input[type="number"], #searchInput, th:last-child, td:last-child, #paginationControls {
                 display: none !important;
             }
             body { background-color: #ffffff !important; color: #000000 !important; padding: 0 !important; }
@@ -49,6 +47,9 @@
                 </div>
             </div>
             <div class="flex items-center gap-2">
+                <button onclick="exportToCSV()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print" title="Daten als Excel-kompatible CSV-Datei herunterladen">
+                    <i class="fa-solid fa-file-csv"></i> CSV Export
+                </button>
                 <button onclick="window.print()" class="bg-cyan-700 hover:bg-cyan-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
                     <i class="fa-solid fa-print"></i> Auswertung drucken / PDF
                 </button>
@@ -196,6 +197,22 @@
                 <div id="chestTypesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-64 overflow-y-auto custom-scrollbar pr-1"></div>
             </div>
 
+            <!-- HISTORIE / SNAPSHOT VERWALTUNG -->
+            <div class="bg-slate-800 border border-purple-500/30 rounded-xl p-4 space-y-3">
+                <h3 class="text-xs font-bold uppercase text-purple-400 flex items-center gap-2">
+                    <i class="fa-solid fa-clock-rotate-left"></i> Zyklus-Verlauf & Historie (Snapshot-Archiv)
+                </h3>
+                <p class="text-xs text-slate-300">Speichere den aktuellen Stand als historischen Punkt ab oder vergleiche mit früheren Zyklen.</p>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="saveSnapshotToHistory()" class="bg-purple-900 hover:bg-purple-800 text-purple-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                        <i class="fa-solid fa-camera"></i> Aktuellen Stand als Historie sichern
+                    </button>
+                    <button onclick="viewHistorySnapshots()" class="bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                        <i class="fa-solid fa-list"></i> Historie anzeigen / vergleichen
+                    </button>
+                </div>
+            </div>
+
             <div class="bg-slate-800 border border-amber-500/40 rounded-xl p-4 space-y-3 shadow-inner">
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-file-import"></i> JSON / KI Massen-Import (Addierend)
@@ -321,9 +338,20 @@
                         <i class="fa-solid fa-user-plus"></i> + Mitglied hinzufügen
                     </button>
                 </div>
-                <div class="flex gap-2">
-                    <button onclick="switchTab('chests')" id="btn-tab-chests" class="bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer">Punkte & Soll</button>
-                    <button onclick="switchTab('power')" id="btn-tab-power" class="bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer">Macht-Entwicklung</button>
+                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-1.5 text-xs text-slate-300">
+                        <span>Zeilen/Seite:</span>
+                        <select id="pageSizeSelect" onchange="changePageSize()" class="bg-slate-900 border border-slate-700 rounded px-2 py-1 text-xs text-amber-300 font-bold focus:outline-none">
+                            <option value="20">20</option>
+                            <option value="25" selected>25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+                    </div>
+                    <div class="flex gap-2">
+                        <button onclick="switchTab('chests')" id="btn-tab-chests" class="bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer">Punkte & Soll</button>
+                        <button onclick="switchTab('power')" id="btn-tab-power" class="bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer">Macht-Entwicklung</button>
+                    </div>
                 </div>
             </div>
 
@@ -345,6 +373,16 @@
                     </thead>
                     <tbody class="divide-y divide-slate-700/60 text-xs" id="tableBody"></tbody>
                 </table>
+            </div>
+
+            <!-- PAGINIERUNGS-LEISTE -->
+            <div id="paginationControls" class="p-3 bg-slate-900/80 border-t border-slate-700 flex justify-between items-center text-xs text-slate-300 no-print">
+                <span id="pageInfoText">Zeige 0 bis 0 von 0 Mitgliedern</span>
+                <div class="flex gap-1.5">
+                    <button onclick="changePage(-1)" id="prevPageBtn" class="bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded font-bold cursor-pointer transition disabled:opacity-40 disabled:cursor-not-allowed">Zurück</button>
+                    <span id="currentPageIndicator" class="px-3 py-1 bg-slate-950 border border-slate-700 rounded font-bold text-amber-300">1 / 1</span>
+                    <button onclick="changePage(1)" id="nextPageBtn" class="bg-slate-800 hover:bg-slate-700 px-3 py-1 rounded font-bold cursor-pointer transition disabled:opacity-40 disabled:cursor-not-allowed">Weiter</button>
+                </div>
             </div>
         </div>
 
@@ -465,12 +503,10 @@
         let goalLow = parseInt(localStorage.getItem('legio_goal_low')) || 12500;
         let goalHigh = parseInt(localStorage.getItem('legio_goal_high')) || 15000;
 
-        // GitHub API Konfiguration
         let ghRepo = localStorage.getItem('legio_gh_repo') || 'wysiwyg80/clan-abfrage';
         let ghBranch = localStorage.getItem('legio_gh_branch') || 'main';
         let ghToken = localStorage.getItem('legio_gh_token') || '';
 
-        // Supabase Konfiguration
         let sbUrl = localStorage.getItem('legio_sb_url') || '';
         let sbKey = localStorage.getItem('legio_sb_key') || '';
         let supabaseClient = null;
@@ -481,6 +517,10 @@
 
         let activeTab = 'chests';
         let topChart = null, growthChart = null, distributionChart = null;
+
+        // Paginierung State
+        let currentPage = 1;
+        let pageSize = 25;
 
         const RANK_ORDER = {
             "Anführer": 1,
@@ -583,6 +623,62 @@
             let parts = isoStr.split("-");
             if(parts.length === 3) return `${parts[2]}.${parts[1]}.${parts[0]}`;
             return isoStr;
+        }
+
+        /* --- CSV EXPORT FUNKTION --- */
+        function exportToCSV() {
+            if(clanData.length === 0) return alert("Keine Mitglieder zum Exportieren vorhanden.");
+            let csvRows = [];
+            csvRows.push(["Name", "Rang", "Helden-Lvl", "Macht", "Turmbau", "Silber", "Beitrittsdatum"].join(";"));
+            
+            clanData.forEach(p => {
+                csvRows.push([
+                    `"${p.name || ''}"`,
+                    `"${p.rank || 'Soldat'}"`,
+                    p.hero_level || 0,
+                    p.power || 0,
+                    p.tower || 0,
+                    p.silver || 0,
+                    `"${p.joinDate || ''}"`
+                ].join(";"));
+            });
+
+            let blob = new Blob(["\ufeff" + csvRows.join("\n")], { type: 'text/csv;charset=utf-8;' });
+            let url = URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = `BAD_LegioXEquentris_Roster_${todayIso}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+
+        /* --- HISTORIE / SNAPSHOT FUNKTIONEN --- */
+        function saveSnapshotToHistory() {
+            let history = JSON.parse(localStorage.getItem('legio_history_snapshots')) || [];
+            let snapshot = {
+                date: new Date().toISOString(),
+                label: `Stand vom ${new Date().toLocaleDateString('de-DE')}`,
+                data: JSON.parse(JSON.stringify(clanData))
+            };
+            history.unshift(snapshot);
+            if(history.length > 10) history = history.slice(0, 10); // max 10 behalten
+            localStorage.setItem('legio_history_snapshots', JSON.stringify(history));
+            alert("Historischer Snapshot erfolgreich im Browser gespeichert!");
+        }
+
+        function viewHistorySnapshots() {
+            let history = JSON.parse(localStorage.getItem('legio_history_snapshots')) || [];
+            if(history.length === 0) return alert("Keine gespeicherten Historien-Snapshots vorhanden.");
+            
+            let listText = history.map((h, i) => `${i + 1}. ${h.label} (${h.data.length} Mitglieder)`).join("\n");
+            let choice = prompt(`Gespeicherte Snapshots:\n\n${listText}\n\nGib die Nummer ein, deren Details angezeigt werden sollen (oder Abbrechen):`);
+            if(choice) {
+                let idx = parseInt(choice) - 1;
+                if(!isNaN(idx) && history[idx]) {
+                    alert(`Snapshot: ${history[idx].label}\nMitgliederanzahl: ${history[idx].data.length}`);
+                }
+            }
         }
 
         function saveGitHubSettings() {
@@ -1035,22 +1131,55 @@
             return val.toLocaleString('de-DE');
         }
 
+        /* --- PAGINIERUNGS-LOGIK --- */
+        function changePageSize() {
+            pageSize = parseInt(document.getElementById('pageSizeSelect').value) || 25;
+            currentPage = 1;
+            renderTable();
+        }
+
+        function changePage(direction) {
+            currentPage += direction;
+            renderTable();
+        }
+
         function renderTable() {
             let tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
 
-            let sorted = [...clanData].sort((a, b) => {
+            let searchQuery = document.getElementById('searchInput')?.value.toLowerCase() || '';
+            let filteredList = clanData.filter(p => (p.name || '').toLowerCase().includes(searchQuery));
+
+            let sorted = filteredList.sort((a, b) => {
                 let rA = RANK_ORDER[a.rank] || 99;
                 let rB = RANK_ORDER[b.rank] || 99;
                 if(rA !== rB) return rA - rB;
                 return (Number(b.power) || 0) - (Number(a.power) || 0);
             });
 
+            // Paginierung Berechnungen
+            let totalItems = sorted.length;
+            let totalPages = Math.ceil(totalItems / pageSize) || 1;
+            if(currentPage > totalPages) currentPage = totalPages;
+            if(currentPage < 1) currentPage = 1;
+
+            let startIndex = (currentPage - 1) * pageSize;
+            let endIndex = startIndex + pageSize;
+            let paginatedItems = sorted.slice(startIndex, endIndex);
+
+            // Steuerelemente aktualisieren
+            document.getElementById('pageInfoText').innerText = totalItems === 0 
+                ? "Keine Mitglieder gefunden" 
+                : `Zeige ${startIndex + 1} bis ${Math.min(endIndex, totalItems)} von ${totalItems} Mitgliedern`;
+            document.getElementById('currentPageIndicator').innerText = `${currentPage} / ${totalPages}`;
+            document.getElementById('prevPageBtn').disabled = currentPage === 1;
+            document.getElementById('nextPageBtn').disabled = currentPage === totalPages || totalPages === 0;
+
             let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
             let activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
             let totalCycleDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
 
-            sorted.forEach((p, index) => {
+            paginatedItems.forEach((p) => {
                 let originalIndex = clanData.indexOf(p);
                 let row = document.createElement('tr');
                 row.className = "hover:bg-slate-700/40 transition";
@@ -1369,15 +1498,8 @@
         }
 
         function filterTable() {
-            let query = document.getElementById('searchInput').value.toLowerCase();
-            let rows = document.querySelectorAll('#tableBody tr');
-            rows.forEach(r => {
-                let nameElement = r.querySelector('div.font-bold');
-                if(nameElement) {
-                    let name = nameElement.innerText.toLowerCase();
-                    r.style.display = name.includes(query) ? '' : 'none';
-                }
-            });
+            currentPage = 1;
+            renderTable();
         }
 
         function openAddModal() {
@@ -1622,7 +1744,6 @@
                 }
             });
 
-            // Truhen-Gesamtverteilung berechnen
             let chestCounts = {};
             clanData.forEach(p => {
                 if(p.chests) {
