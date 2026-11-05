@@ -181,21 +181,27 @@
                         <i class="fa-solid fa-tags"></i> Truhen-Bezeichnungen & Punktwerte
                     </h3>
                     <div class="flex flex-wrap items-center gap-2 no-print">
-                        <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer">Nach Level sortieren</button>
-                        <button onclick="resetAllChestPointValuesToZero()" class="bg-amber-900/80 hover:bg-amber-800 text-amber-200 border border-amber-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer">Punkte auf 0</button>
+                        <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1"><i class="fa-solid fa-arrow-down-1-9"></i> Nach Level sortieren</button>
+                        <button onclick="resetAllChestPointValuesToZero()" class="bg-amber-900/80 hover:bg-amber-800 text-amber-200 border border-amber-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1"><i class="fa-solid fa-rotate-left"></i> Alle Punktewerte auf 0</button>
+                        <button onclick="resetOnlyChestsPoints()" class="bg-red-950 hover:bg-red-900 text-red-200 border border-red-800 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1"><i class="fa-solid fa-trash-can"></i> Truhen-Punkte auf 0</button>
                         <button onclick="addNewChestTypePrompt()" class="bg-amber-600/80 hover:bg-amber-500 text-slate-950 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer">+ Neue Truhen-Art</button>
                     </div>
                 </div>
                 <div id="chestTypesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-64 overflow-y-auto custom-scrollbar pr-1"></div>
             </div>
 
-            <!-- MASSEN IMPORT -->
+            <!-- MASSEN IMPORT & RESET-AKTIONEN -->
             <div class="bg-slate-800 border border-amber-500/40 rounded-xl p-4 space-y-3 shadow-inner">
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
-                    <i class="fa-solid fa-file-import"></i> JSON / KI Massen-Import (Addierend)
+                    <i class="fa-solid fa-file-import"></i> JSON / KI Massen-Import & Zurücksetzen
                 </h3>
                 <textarea id="bulkImportText" rows="3" placeholder='[{"name":"SirLancelot","chests":{"Krypta-Truhe":2}}]' class="w-full bg-slate-900 border border-slate-700 rounded p-2.5 text-xs text-slate-200 font-mono focus:outline-none"></textarea>
-                <button onclick="processJSONImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer">Daten Addieren & Sync</button>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="processJSONImport()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-upload"></i> Daten Addieren & Sync</button>
+                    <button onclick="resetPointsExceptSilver()" class="bg-amber-950 hover:bg-amber-900 text-amber-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-rotate-left"></i> Punkte auf Null (OHNE Silber)</button>
+                    <button onclick="resetOnlySilver()" class="bg-cyan-950 hover:bg-cyan-900 text-cyan-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5"><i class="fa-solid fa-coins"></i> Nur Silber auf Null</button>
+                    <button onclick="clearAllData()" class="bg-red-900/80 hover:bg-red-800 text-red-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 ml-auto"><i class="fa-solid fa-trash-can"></i> Alle Mitglieder löschen</button>
+                </div>
             </div>
         </div>
 
@@ -317,9 +323,14 @@
             </div>
             <input type="hidden" id="chestModalMemberIndex">
             <div id="chestModalListContainer" class="space-y-2 max-h-60 overflow-y-auto custom-scrollbar pr-1 bg-slate-950/60 p-3 rounded border border-slate-800"></div>
-            <div class="flex justify-end gap-2 pt-2 border-t border-slate-700">
-                <button onclick="closeChestDetailsModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">Schließen</button>
-                <button onclick="saveChestDetailsChanges()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-4 py-1.5 rounded text-xs font-bold cursor-pointer">Speichern</button>
+            <div class="flex justify-between items-center pt-2 border-t border-slate-700">
+                <button onclick="resetThisMemberChestsFromModal()" class="bg-red-900/60 hover:bg-red-800 text-red-200 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">
+                    <i class="fa-solid fa-trash-can"></i> Alle Truhen auf 0
+                </button>
+                <div class="flex gap-2">
+                    <button onclick="closeChestDetailsModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">Schließen</button>
+                    <button onclick="saveChestDetailsChanges()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-4 py-1.5 rounded text-xs font-bold cursor-pointer">Speichern</button>
+                </div>
             </div>
         </div>
     </div>
@@ -365,9 +376,19 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-end gap-2 pt-2 border-t border-slate-700">
-                <button onclick="closeEditModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">Abbrechen</button>
-                <button onclick="saveMemberEdit()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-4 py-1.5 rounded text-xs font-bold cursor-pointer">Speichern</button>
+            <div class="flex flex-wrap justify-between items-center gap-2 pt-2 border-t border-slate-700">
+                <div class="flex gap-1.5">
+                    <button type="button" onclick="resetSingleMemberChests()" class="bg-amber-800/80 hover:bg-amber-700 text-amber-100 px-2.5 py-1.5 rounded text-[11px] font-semibold cursor-pointer">
+                        <i class="fa-solid fa-box-archive"></i> Nur Truhen 0
+                    </button>
+                    <button type="button" onclick="resetSingleMemberPoints()" id="btnResetSingle" class="bg-amber-950 hover:bg-amber-900 text-amber-200 px-2.5 py-1.5 rounded text-[11px] font-semibold cursor-pointer">
+                        <i class="fa-solid fa-rotate-left"></i> Punkte 0
+                    </button>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="closeEditModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded text-xs font-semibold cursor-pointer">Abbrechen</button>
+                    <button onclick="saveMemberEdit()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-4 py-1.5 rounded text-xs font-bold cursor-pointer">Speichern</button>
+                </div>
             </div>
         </div>
     </div>
@@ -403,7 +424,6 @@
         let topChart = null, growthChart = null, distributionChart = null;
         const RANK_ORDER = { "Anführer": 1, "Vorgesetzter": 2, "Offizier": 3, "Veteran": 4, "Soldat": 5 };
 
-        // Kompakt-Ansicht Status beim Start laden
         if(localStorage.getItem('legio_compact_mode') === 'true') {
             document.body.classList.add('compact-mode');
         }
@@ -618,8 +638,8 @@
                 let card = document.createElement('div');
                 card.className = "bg-slate-900/80 p-2.5 rounded border border-slate-700 flex flex-col justify-between gap-1.5";
                 card.innerHTML = `
-                    <div class="flex justify-between items-center"><span class="text-xs font-bold text-amber-300 truncate">${name}</span><button onclick="removeChestType('${name}')" class="text-red-400 text-[10px] cursor-pointer"><i class="fa-solid fa-trash"></i></button></div>
-                    <input type="number" value="${val}" min="0" onchange="updateChestTypeValue('${name}', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-0.5 text-xs text-amber-300 font-bold">
+                    <div class="flex justify-between items-center"><span class="text-xs font-bold text-amber-300 truncate">${name}</span><button onclick="removeChestType('${name}')" class="text-red-400 text-[10px] cursor-pointer"><i class="fa-solid fa-trash"></i> Löschen</button></div>
+                    <div class="flex items-center gap-2"><span class="text-[10px] text-slate-400">Punkte:</span><input type="number" value="${val}" min="0" onchange="updateChestTypeValue('${name}', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-0.5 text-xs text-amber-300 font-bold"></div>
                 `;
                 container.appendChild(card);
             });
@@ -637,7 +657,19 @@
             chestTypeValues = sorted; saveData();
         }
         function resetAllChestPointValuesToZero() {
-            if(confirm("Alle Truhenpunkte auf 0?")) { Object.keys(chestTypeValues).forEach(k => chestTypeValues[k] = 0); saveData(); }
+            if(confirm("Alle Punktewerte ALLER Truhenarten auf 0 setzen?")) { Object.keys(chestTypeValues).forEach(k => chestTypeValues[k] = 0); saveData(); }
+        }
+        function resetOnlyChestsPoints() {
+            if(confirm("Wirklich die Truhen-Punkte aller Mitglieder auf 0 setzen?")) { clanData.forEach(p => p.chests = {}); saveData(); }
+        }
+        function resetPointsExceptSilver() {
+            if(confirm("Wirklich alle Truhen- und Turm-Punkte auf 0 zurücksetzen? (Silber bleibt erhalten)")) { clanData.forEach(p => { p.tower = 0; p.chests = {}; }); saveData(); }
+        }
+        function resetOnlySilver() {
+            if(confirm("Nur die Silber-Werte aller Mitglieder auf 0 zurücksetzen?")) { clanData.forEach(p => p.silver = 0); saveData(); }
+        }
+        function clearAllData() {
+            if(confirm("ACHTUNG: Alle Mitglieder komplett löschen?")) { clanData = []; saveData(); }
         }
 
         function renderMetrics() {
@@ -748,6 +780,15 @@
             closeChestDetailsModal();
         }
 
+        function resetThisMemberChestsFromModal() {
+            let idx = parseInt(document.getElementById('chestModalMemberIndex').value);
+            if(idx >= 0 && confirm("Alle Truhen für dieses Mitglied auf 0 zurücksetzen?")) {
+                clanData[idx].chests = {};
+                saveData();
+                closeChestDetailsModal();
+            }
+        }
+
         function switchTab(tab) {
             document.getElementById('btn-tab-chests').className = tab === 'chests' ? "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer" : "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
             document.getElementById('btn-tab-power').className = tab === 'power' ? "bg-red-950 text-amber-300 border border-red-800 px-3 py-1 rounded text-xs font-bold cursor-pointer" : "bg-slate-900 text-slate-300 border border-slate-700 px-3 py-1 rounded text-xs font-bold cursor-pointer";
@@ -802,6 +843,16 @@
             else { obj.chests = clanData[idx].chests || {}; clanData[idx] = obj; }
             saveData();
             closeEditModal();
+        }
+
+        function resetSingleMemberChests() {
+            let idx = parseInt(document.getElementById('editIndex').value);
+            if(idx >= 0) { clanData[idx].chests = {}; saveData(); closeEditModal(); }
+        }
+
+        function resetSingleMemberPoints() {
+            let idx = parseInt(document.getElementById('editIndex').value);
+            if(idx >= 0) { clanData[idx].tower = 0; clanData[idx].chests = {}; saveData(); closeEditModal(); }
         }
 
         function processJSONImport() {
