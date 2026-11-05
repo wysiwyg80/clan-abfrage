@@ -152,13 +152,13 @@
     "Goldene Truhe (Bank)": 100,
     "Silberne Truhe (Bank)": 50,
     "Gladiatorentruhe (Arena)": 0,
-    "Jack-Reaper-Truhe (Kürbis)": 100,
+    "Jack-Reaper-Truhe (Kürbis)": 125,
     "Kürbistruhe (Quelle: Kürbis)": 0,
     "Epische Truhe des Goldenen Wächters": 0,
     "Gewöhnliche Truhe des Clan-Wohlstand": 0,
     "Truhe des Händlers (Söldner-Börse)": 25,
     "Gewöhnliche Truhe des (Clan-Wohlstand)": 0,
-    "Jörmungandrs Truhe (Jörmungandr-Shop)": 0,
+    "Jörmungandrs Truhe (Jörmungandr-Shop)": 125,
     "Chimären-Truhe (Epische-Chimäre-Trupp)": 125,
     "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0,
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
@@ -1724,5 +1724,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-05T09:37:55.288Z"
+  "lastUpdated": "2026-11-05T09:40:12.444Z"
 }
