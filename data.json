@@ -183,7 +183,8 @@
     "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 25,
     "Turmbau": 50,
     "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 0,
-    "Ahnentruhe (Event \"Aufstieg der Ahnen\")": 0
+    "Ahnentruhe (Event \"Aufstieg der Ahnen\")": 0,
+    "Blitzmarsch-Truhe (Event \"Aufstieg der Ahnen\")": 0
   },
   "clanData": [
     {
@@ -769,7 +770,8 @@
         "Tartaros-Truhe (Gruft von Tartaros Level 25)": 10,
         "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
         "Epische Truhe des Goldenen (Epischer Ahnentrupp)": 23,
-        "Ahnentruhe (Event \"Aufstieg der Ahnen\")": 4
+        "Ahnentruhe (Event \"Aufstieg der Ahnen\")": 4,
+        "Blitzmarsch-Truhe (Event \"Aufstieg der Ahnen\")": 1
       },
       "growth": 0,
       "silver": 0,
