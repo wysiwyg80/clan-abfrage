@@ -177,7 +177,8 @@
     "Infernal Chest (Level 25 Crypt)": 0,
     "Rare Dragon Chest (Level 30 rare Crypt)": 0,
     "Mayan Chest (Level 25 Crypt)": 0,
-    "Orc Chest (Level 25 Crypt)": 0
+    "Orc Chest (Level 25 Crypt)": 0,
+    "Bone Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -754,7 +755,8 @@
         "Tartaros-Truhe (Gruft von Tartaros Level 25)": 10,
         "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
         "Tartaros Chest (Tartaros Crypt level 25)": 16,
-        "Orc Chest (Level 25 Crypt)": 1
+        "Orc Chest (Level 25 Crypt)": 1,
+        "Bone Chest (Level 25 Crypt)": 1
       },
       "growth": 0,
       "silver": 0,
