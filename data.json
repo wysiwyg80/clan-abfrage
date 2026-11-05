@@ -1399,7 +1399,9 @@
       "rank": "Veteran",
       "power": 671335971,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Truhe des Händlers (Söldner-Börse)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-01",
       "prevPower": 660458681,
