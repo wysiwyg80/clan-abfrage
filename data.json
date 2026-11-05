@@ -169,7 +169,8 @@
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0,
     "Truhe der Kobra (Gruft Level 15)": 0,
     "Epische Truhe des Goldenen (Epischer Ahnentrupp)": 0,
-    "Truhe des Händlers (Söldner-Börse)": 0
+    "Truhe des Händlers (Söldner-Börse)": 0,
+    "Jörmungandrs Truhe (Jörmungandr-Shop)": 0
   },
   "clanData": [
     {
@@ -852,7 +853,8 @@
         "Schöne Truhe (Gruft Level 20)": 3,
         "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Orks (Gruft Level 20)": 2,
-        "Truhe der Kobra (Gruft Level 20)": 2
+        "Truhe der Kobra (Gruft Level 20)": 2,
+        "Jörmungandrs Truhe (Jörmungandr-Shop)": 1
       },
       "growth": 0,
       "silver": 0,
