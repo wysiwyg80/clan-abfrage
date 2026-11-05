@@ -178,7 +178,8 @@
     "Rare Dragon Chest (Level 30 rare Crypt)": 0,
     "Mayan Chest (Level 25 Crypt)": 0,
     "Orc Chest (Level 25 Crypt)": 0,
-    "Bone Chest (Level 25 Crypt)": 0
+    "Bone Chest (Level 25 Crypt)": 0,
+    "Tartaros Chest (Tartaros Crypt level 35)": 0
   },
   "clanData": [
     {
@@ -1498,7 +1499,8 @@
         "Truhe der Kobra (Gruft Level 25)": 3,
         "Vergessene Truhe (Gruft Level 25)": 3,
         "Weiße Holztruhe (Epische Gruft Level 35)": 5,
-        "Tartaros-Truhe (Gruft von Tartaros Level 35)": 3
+        "Tartaros-Truhe (Gruft von Tartaros Level 35)": 3,
+        "Tartaros Chest (Tartaros Crypt level 35)": 1
       },
       "growth": 0,
       "silver": 0,
