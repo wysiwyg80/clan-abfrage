@@ -311,7 +311,7 @@
                 </div>
                 <div class="flex flex-wrap gap-2">
                     <button onclick="resetOnlyTowerPoints()" class="bg-red-950 hover:bg-red-900 text-red-200 border border-red-800 font-bold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
-                        <i class="fa-solid fa-rotate-left"></i> Alle Türme auf 0
+                        <i class="fa-solid fa-rotate-left"></i> Türme auf 0 (Punkte in Bank sichern)
                     </button>
                     <button onclick="zeigeSpielerOhneTuermeText()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap">
                         <i class="fa-solid fa-triangle-exclamation"></i> Spieler ohne Türme anzeigen
@@ -518,7 +518,6 @@
         let activeTab = 'chests';
         let topChart = null, growthChart = null, distributionChart = null;
 
-        // Paginierung State
         let currentPage = 1;
         let pageSize = 25;
 
@@ -625,7 +624,6 @@
             return isoStr;
         }
 
-        /* --- CSV EXPORT FUNKTION --- */
         function exportToCSV() {
             if(clanData.length === 0) return alert("Keine Mitglieder zum Exportieren vorhanden.");
             let csvRows = [];
@@ -653,7 +651,6 @@
             document.body.removeChild(a);
         }
 
-        /* --- HISTORIE / SNAPSHOT FUNKTIONEN --- */
         function saveSnapshotToHistory() {
             let history = JSON.parse(localStorage.getItem('legio_history_snapshots')) || [];
             let snapshot = {
@@ -662,7 +659,7 @@
                 data: JSON.parse(JSON.stringify(clanData))
             };
             history.unshift(snapshot);
-            if(history.length > 10) history = history.slice(0, 10); // max 10 behalten
+            if(history.length > 10) history = history.slice(0, 10);
             localStorage.setItem('legio_history_snapshots', JSON.stringify(history));
             alert("Historischer Snapshot erfolgreich im Browser gespeichert!");
         }
@@ -1071,11 +1068,17 @@
             container.classList.remove('hidden');
         }
 
+        /* --- TURM-ZÄHLER ZURÜCKSETZEN (PUNKTE IN BANK SICHERN) --- */
         function resetOnlyTowerPoints() {
-            if(confirm("Möchtest du wirklich die Turmbau-Punkte ALLER Mitglieder auf 0 zurücksetzen?")) {
-                clanData.forEach(p => { p.tower = 0; });
+            if(confirm("Möchtest du die Turm-Zähler auf 0 setzen, aber die bisherigen Turm-Punkte fest für die Gesamtbewertung sichern?")) {
+                let tVal = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
+                clanData.forEach(p => {
+                    let currentTowerPts = (Number(p.tower) || 0) * tVal;
+                    p.bankedTowerPoints = (Number(p.bankedTowerPoints) || 0) + currentTowerPts;
+                    p.tower = 0;
+                });
                 saveData();
-                alert("Alle Turmbau-Punkte wurden auf 0 zurückgesetzt.");
+                alert("Turm-Zähler auf 0 zurückgesetzt – die bisherigen Punkte wurden in der Gesamtbewertung fest verankert!");
             }
         }
 
@@ -1106,7 +1109,8 @@
                     });
                 }
                 totalChestsPts += cPts;
-                totalTowerPts += Number(p.tower || 0) * towerPointValue;
+                // Inklusive gesicherter Bank-Punkte
+                totalTowerPts += (Number(p.tower || 0) * towerPointValue) + Number(p.bankedTowerPoints || 0);
                 totalSilver += Number(p.silver || 0);
                 totalPower += Number(p.power || 0);
             });
@@ -1131,7 +1135,6 @@
             return val.toLocaleString('de-DE');
         }
 
-        /* --- PAGINIERUNGS-LOGIK --- */
         function changePageSize() {
             pageSize = parseInt(document.getElementById('pageSizeSelect').value) || 25;
             currentPage = 1;
@@ -1157,7 +1160,6 @@
                 return (Number(b.power) || 0) - (Number(a.power) || 0);
             });
 
-            // Paginierung Berechnungen
             let totalItems = sorted.length;
             let totalPages = Math.ceil(totalItems / pageSize) || 1;
             if(currentPage > totalPages) currentPage = totalPages;
@@ -1167,7 +1169,6 @@
             let endIndex = startIndex + pageSize;
             let paginatedItems = sorted.slice(startIndex, endIndex);
 
-            // Steuerelemente aktualisieren
             document.getElementById('pageInfoText').innerText = totalItems === 0 
                 ? "Keine Mitglieder gefunden" 
                 : `Zeige ${startIndex + 1} bis ${Math.min(endIndex, totalItems)} von ${totalItems} Mitgliedern`;
@@ -1200,7 +1201,7 @@
                 }
 
                 let towerVal = Number(p.tower || 0);
-                let towerPts = towerVal * towerPointValue;
+                let towerPts = (towerVal * towerPointValue) + Number(p.bankedTowerPoints || 0);
                 let totalPts = chestPtsTotal + towerPts;
 
                 let pMacht = (p.power !== undefined && p.power !== null && !isNaN(Number(p.power))) ? Number(p.power) : 0;
@@ -1242,6 +1243,8 @@
                     ? `<span class="text-[9px] text-cyan-400 font-semibold block">(Beigetreten: ${formatDateGerman(p.joinDate)})</span>`
                     : '';
 
+                let bankedNote = (p.bankedTowerPoints && p.bankedTowerPoints > 0) ? ` (+${p.bankedTowerPoints} gesichert)` : '';
+
                 row.innerHTML = `
                     <td class="p-3">
                         <div class="font-bold text-amber-300 text-sm mb-1">${p.name || 'Unbekannt'}</div>
@@ -1255,7 +1258,7 @@
                         </div>
                     </td>
                     <td class="p-3 text-right data-col-chests font-bold text-amber-200">
-                        ${towerVal} <span class="text-[10px] text-slate-400">(${towerPts}P)</span>
+                        ${towerVal} <span class="text-[10px] text-slate-400">(${towerPts}P${bankedNote})</span>
                     </td>
                     <td class="p-3 text-right data-col-chests">
                         <div class="flex items-center justify-end gap-2">
@@ -1560,9 +1563,11 @@
 
             if(index === -1) {
                 memberObj.chests = {};
+                memberObj.bankedTowerPoints = 0;
                 clanData.push(memberObj);
             } else {
                 memberObj.chests = clanData[index].chests || {};
+                memberObj.bankedTowerPoints = clanData[index].bankedTowerPoints || 0;
                 memberObj.growth = clanData[index].growth || 0;
                 clanData[index] = memberObj;
             }
@@ -1657,6 +1662,7 @@
                             power: Number(imp.power) || 0,
                             growth: 0,
                             tower: Number(imp.tower) || 0,
+                            bankedTowerPoints: 0,
                             silver: Number(imp.silver) || 0,
                             chests: imp.chests || {},
                             joinDate: todayIso
@@ -1686,7 +1692,7 @@
                         pts += (Number(p.chests[cName]) || 0) * (Number(chestTypeValues[cName]) || 0);
                     });
                 }
-                pts += Number(p.tower || 0) * towerPointValue;
+                pts += (Number(p.tower || 0) * towerPointValue) + Number(p.bankedTowerPoints || 0);
                 return { name: p.name, points: pts, growth: Number(p.growth) || 0 };
             });
 
