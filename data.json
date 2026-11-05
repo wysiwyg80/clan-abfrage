@@ -181,7 +181,8 @@
     "Bone Chest (Level 25 Crypt)": 0,
     "Tartaros Chest (Tartaros Crypt level 35)": 0,
     "Elven Citadel Chest (Level 30 Citadel)": 0,
-    "Elven Citadel Chest (Level 25 Citadel)": 0
+    "Elven Citadel Chest (Level 25 Citadel)": 0,
+    "Tartaros Chest (Tartaros Crypt level 20)": 0
   },
   "clanData": [
     {
@@ -643,7 +644,8 @@
         "Truhe der Untoten (Heldenhafte Monster Level 16)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 20)": 2,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
-        "Truhe der Autorität (Turnier Triumph der Autorität)": 1
+        "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
+        "Tartaros Chest (Tartaros Crypt level 20)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
