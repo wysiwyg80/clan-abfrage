@@ -184,7 +184,8 @@
     "Turmbau": 50,
     "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 0,
     "Ahnentruhe (Event \"Aufstieg der Ahnen\")": 0,
-    "Blitzmarsch-Truhe (Event \"Aufstieg der Ahnen\")": 0
+    "Blitzmarsch-Truhe (Event \"Aufstieg der Ahnen\")": 0,
+    "Briareus-Truhe (Epischer-Briareus-Trupp)": 0
   },
   "clanData": [
     {
@@ -413,7 +414,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 2,
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 19,
         "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
-        "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 3
+        "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 3,
+        "Briareus-Truhe (Epischer-Briareus-Trupp)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
