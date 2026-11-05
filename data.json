@@ -1844,7 +1844,9 @@
     {
       "name": "nomad",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Gruft Level 15)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 141768125,
