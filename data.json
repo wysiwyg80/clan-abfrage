@@ -1840,6 +1840,19 @@
       "activeDays": 28,
       "customGoal": null,
       "hero_level": 204
+    },
+    {
+      "name": "nomad",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 141768125,
+      "hero_level": 148,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-05"
     }
   ],
   "evalStartDate": "2026-11-01",
