@@ -1035,7 +1035,9 @@
       "rank": "Vorgesetzter",
       "power": 125954066,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Tartaros-Truhe (Gruft von Tartaros Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
