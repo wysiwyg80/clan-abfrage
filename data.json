@@ -174,7 +174,8 @@
     "Truhe der alten Bastion (Epische Gruft Level 25)": 50,
     "Tartaros Chest (Tartaros Crypt level 25)": 0,
     "Tartaros Chest (Tartaros Crypt level 30)": 0,
-    "Infernal Chest (Level 25 Crypt)": 0
+    "Infernal Chest (Level 25 Crypt)": 0,
+    "Rare Dragon Chest (Level 30 rare Crypt)": 0
   },
   "clanData": [
     {
@@ -398,7 +399,8 @@
         "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
         "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 3,
         "Tartaros Chest (Tartaros Crypt level 30)": 4,
-        "Infernal Chest (Level 25 Crypt)": 1
+        "Infernal Chest (Level 25 Crypt)": 1,
+        "Rare Dragon Chest (Level 30 rare Crypt)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
