@@ -168,7 +168,8 @@
     "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 100,
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0,
     "Truhe der Kobra (Gruft Level 15)": 0,
-    "Epische Truhe des Goldenen (Epischer Ahnentrupp)": 0
+    "Epische Truhe des Goldenen (Epischer Ahnentrupp)": 0,
+    "Truhe des Händlers (Söldner-Börse)": 0
   },
   "clanData": [
     {
@@ -1084,7 +1085,8 @@
         "Aufgegebene Truhe (Epische Gruft Level 15)": 1,
         "Truhe der Autorität (Turnier Triumph der Autorität)": 5,
         "Truhe der epischen Monster (Epischer Trupp der Untoten)": 1,
-        "Tartaros-Truhe (Gruft von Tartaros Level 25)": 1
+        "Tartaros-Truhe (Gruft von Tartaros Level 25)": 1,
+        "Truhe des Händlers (Söldner-Börse)": 1
       },
       "growth": 0,
       "silver": 0,
