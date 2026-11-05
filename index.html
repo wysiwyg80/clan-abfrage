@@ -17,6 +17,17 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #b45309; border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #d97706; }
 
+        /* NEU: Kleinere Schrift und automatisches Umbrechen für lange Truhennamen im Admin-Panel */
+        #chestTypesContainer span {
+            font-size: 11px !important;
+            white-space: normal !important;
+            word-break: break-word;
+            line-height: 1.2;
+        }
+        #chestTypesContainer .bg-slate-900\/80 {
+            padding: 8px !important;
+        }
+
         @media print {
             button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, #visitorChestModal, .p-3 input[type="number"], #searchInput, th:last-child, td:last-child, #paginationControls {
                 display: none !important;
