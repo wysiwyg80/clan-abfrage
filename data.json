@@ -1734,7 +1734,9 @@
       "rank": "Soldat",
       "power": 116255455,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Steintruhe (Gruft Level 25)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-04",
       "prevPower": 0,
