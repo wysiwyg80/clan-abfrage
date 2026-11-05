@@ -1846,7 +1846,8 @@
       "name": "nomad",
       "rank": "Soldat",
       "chests": {
-        "Truhe der Maya (Gruft Level 15)": 1
+        "Truhe der Maya (Gruft Level 15)": 1,
+        "Feuertruhe (Gruft Level 15)": 1
       },
       "tower": 0,
       "silver": 0,
