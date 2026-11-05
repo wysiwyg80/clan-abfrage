@@ -58,10 +58,10 @@
     "Barbarentruhe (Epische Gruft Level 15)": 15,
     "Barbarentruhe (Epische Gruft Level 20)": 40,
     "Barbarentruhe (Epische Gruft Level 25)": 50,
-    "Barbarentruhe (Epische Gruft Level 30)": 0,
+    "Barbarentruhe (Epische Gruft Level 30)": 75,
     "Barbarentruhe (Epische Gruft Level 35)": 100,
     "Elven Citadel Chest (Level 25 Citadel)": 50,
-    "Elven Citadel Chest (Level 30 Citadel)": 59,
+    "Elven Citadel Chest (Level 30 Citadel)": 60,
     "Gewöhnliche Truhe des (Clan-Wohlstand)": 0,
     "Harpyien-Truhe (Epische Gruft Level 20)": 40,
     "Harpyien-Truhe (Epische Gruft Level 25)": 50,
@@ -1818,5 +1818,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-05T17:05:25.150Z"
+  "lastUpdated": "2026-11-05T17:12:06.677Z"
 }
