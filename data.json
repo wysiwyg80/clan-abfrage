@@ -181,7 +181,8 @@
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
     "Truhe der epischen Monster (Epischer Trupp der Untoten)": 125,
     "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 25,
-    "Turmbau": 50
+    "Turmbau": 50,
+    "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 0
   },
   "clanData": [
     {
@@ -1339,7 +1340,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 7,
         "Truhe der Festung der Elfen (Festung Level 15)": 7,
         "Truhe der Festung der Elfen (Festung Level 20)": 14,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 9
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 9,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1
       },
       "growth": 0,
       "silver": 0,
