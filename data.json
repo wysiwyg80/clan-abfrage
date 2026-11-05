@@ -803,7 +803,9 @@
       "rank": "Veteran",
       "power": 12011430,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Tartaros-Truhe (Gruft von Tartaros Level 15)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
