@@ -176,7 +176,8 @@
     "Tartaros Chest (Tartaros Crypt level 30)": 0,
     "Infernal Chest (Level 25 Crypt)": 0,
     "Rare Dragon Chest (Level 30 rare Crypt)": 0,
-    "Mayan Chest (Level 25 Crypt)": 0
+    "Mayan Chest (Level 25 Crypt)": 0,
+    "Orc Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -402,7 +403,8 @@
         "Tartaros Chest (Tartaros Crypt level 30)": 4,
         "Infernal Chest (Level 25 Crypt)": 1,
         "Rare Dragon Chest (Level 30 rare Crypt)": 1,
-        "Mayan Chest (Level 25 Crypt)": 1
+        "Mayan Chest (Level 25 Crypt)": 1,
+        "Orc Chest (Level 25 Crypt)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
