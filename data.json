@@ -194,7 +194,8 @@
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0,
     "Skarabäus-Truhe (Epische Gruft Level 25)": 50,
     "Holztruhe (Turnier Kampf um den Thron)": 0,
-    "Jörmangandrs Truhe (Epischer Jörmangandr-Trupp)": 0
+    "Jörmangandrs Truhe (Epischer Jörmangandr-Trupp)": 0,
+    "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 0
   },
   "clanData": [
     {
@@ -1106,7 +1107,8 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 3,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 7,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
-        "Jörmungandrs Truhe (Jörmungandr-Shop)": 5
+        "Jörmungandrs Truhe (Jörmungandr-Shop)": 5,
+        "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 1
       },
       "growth": 0,
       "silver": 0,
