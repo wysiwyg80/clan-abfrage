@@ -29,7 +29,7 @@
         }
 
         @media print {
-            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, #visitorChestModal, .p-3 input[type="number"], #searchInput, th:last-child, td:last-child, #paginationControls {
+            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, #visitorChestModal, .p-3 input[type="number"], #searchInput, #chestSearchInput, th:last-child, td:last-child, #paginationControls {
                 display: none !important;
             }
             body { background-color: #ffffff !important; color: #000000 !important; padding: 0 !important; }
@@ -295,12 +295,21 @@
                     <h3 class="text-xs font-bold text-amber-400 uppercase flex items-center gap-2">
                         <i class="fa-solid fa-boxes-stacked"></i> Truhen-Statistik per Mitglied (Wer hat was geholt?)
                     </h3>
-                    <p class="text-xs text-slate-300 mt-0.5">Filtere nach einer bestimmten Truhe, um sofort zu sehen, wer wie viele davon erbeutet hat.</p>
+                    <p class="text-xs text-slate-300 mt-0.5">Filtere nach einer bestimmten Truhe und/oder suche direkt nach einem Spieler.</p>
                 </div>
-                <div class="w-full sm:w-72 no-print">
-                    <select id="chestFilterSelect" onchange="renderChestBreakdownTable()" class="w-full bg-slate-900 border border-amber-500/50 rounded px-3 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
-                        <option value="ALL">-- Alle Truhentypen anzeigen --</option>
-                    </select>
+                <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto no-print">
+                    <!-- NEU: Nach Spieler suchen Button/Eingabefeld -->
+                    <div class="relative w-full sm:w-56">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400 text-xs">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" id="chestSearchInput" placeholder="Nach Spieler suchen..." onkeyup="renderChestBreakdownTable()" class="w-full bg-slate-900 border border-amber-500/50 rounded pl-8 pr-3 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
+                    </div>
+                    <div class="w-full sm:w-64">
+                        <select id="chestFilterSelect" onchange="renderChestBreakdownTable()" class="w-full bg-slate-900 border border-amber-500/50 rounded px-3 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-400">
+                            <option value="ALL">-- Alle Truhentypen anzeigen --</option>
+                        </select>
+                    </div>
                 </div>
             </div>
 
@@ -1404,6 +1413,7 @@
         function renderChestBreakdownTable() {
             let tbody = document.getElementById('chestBreakdownBody');
             let selectedType = document.getElementById('chestFilterSelect')?.value || "ALL";
+            let searchQuery = document.getElementById('chestSearchInput')?.value.toLowerCase() || "";
             if(!tbody) return;
 
             tbody.innerHTML = '';
@@ -1435,12 +1445,12 @@
                     totalCount: totalCount,
                     details: details
                 };
-            }).filter(p => p.totalCount > 0);
+            }).filter(p => p.totalCount > 0 && (searchQuery === "" || p.name.toLowerCase().includes(searchQuery)));
 
             filteredList.sort((a, b) => b.totalCount - a.totalCount);
 
             if(filteredList.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="3" class="p-4 text-center text-slate-400">Keine Eintragsdaten für die gewählte Truhe gefunden.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="3" class="p-4 text-center text-slate-400">Keine Eintragsdaten für die gewählte Suche / Truhe gefunden.</td></tr>`;
                 return;
             }
 
