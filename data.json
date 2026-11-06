@@ -1049,7 +1049,9 @@
       "rank": "Soldat",
       "power": 65007686,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Gruft Level 15)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-01",
       "prevPower": 64930666,
