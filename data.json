@@ -1066,8 +1066,10 @@
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
+        "Feuertruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 2,
         "Knochentruhe (Gruft Level 25)": 3,
+        "Barbarentruhe (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 3,
         "Truhe der Maya (Gruft Level 25)": 1,
         "Truhe der Orks (Gruft Level 25)": 3,
@@ -1087,9 +1089,7 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 3,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 7,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
-        "Feuertruhe (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1492,15 +1492,15 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
+        "Truhe des Priesters (Epische Gruft Level 20)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 7,
         "Truhe der Festung der Elfen (Festung Level 15)": 8,
         "Truhe der Festung der Elfen (Festung Level 20)": 14,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 13,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1,
         "Truhe der alten Bastion (Epische Gruft Level 20)": 1,
-        "Truhe des Priesters (Epische Gruft Level 20)": 2,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1
+        "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 13,
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1520,10 +1520,10 @@
         "Truhe der Maya (Gruft Level 25)": 1,
         "Tartaros-Truhe (Gruft von Tartaros Level 25)": 1,
         "Tartaros-Truhe (Gruft von Tartaros Level 35)": 35,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 49,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 1,
         "Epische Truhe des Goldenen (Epischer Ahnentrupp)": 19,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 49
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2050,29 +2050,29 @@
     },
     {
       "name": "Optimus Prime IV",
-      "rank": "Soldat",
-      "chests": {},
+      "rank": "Veteran",
+      "hero_level": 277,
+      "power": 372011855,
       "tower": 0,
       "silver": 0,
-      "power": 372011855,
-      "hero_level": 277,
-      "prevPower": 0,
-      "activeDays": 28,
       "customGoal": null,
-      "joinDate": "2026-11-06"
+      "joinDate": "2026-11-06",
+      "chests": {},
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Spartakus",
-      "rank": "Veteran",
-      "chests": {},
+      "rank": "Offizier",
+      "hero_level": 417,
+      "power": 1554846031,
       "tower": 0,
       "silver": 0,
-      "power": 1554846031,
-      "hero_level": 417,
-      "prevPower": 0,
-      "activeDays": 28,
       "customGoal": null,
-      "joinDate": "2026-11-06"
+      "joinDate": "2026-11-06",
+      "chests": {},
+      "bankedTowerPoints": 0,
+      "growth": 0
     }
   ],
   "evalStartDate": "2026-11-01",
@@ -2080,5 +2080,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-06T11:17:16.722Z"
+  "lastUpdated": "2026-11-06T18:24:14.969Z"
 }
