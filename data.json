@@ -175,7 +175,7 @@
     "Jack-Reaper-Truhe (Kürbis)": 125,
     "Kürbistruhe (Quelle: Kürbis)": 0,
     "Epische Truhe des Goldenen Wächters": 0,
-    "Fenrirs Truhe (Epischer Fenrir-Trupp)": 0,
+    "Fenrirs Truhe (Epischer Fenrir-Trupp)": 125,
     "Truhe des Händlers (Söldner-Börse)": 25,
     "Holztruhe (Turnier Kampf um den Thron)": 0,
     "Ahnentruhe (Event \"Aufstieg der Ahnen\")": 0,
@@ -183,7 +183,7 @@
     "Jörmungandrs Truhe (Jörmungandr-Shop)": 125,
     "Briareus-Truhe (Epischer-Briareus-Trupp)": 0,
     "Chimären-Truhe (Epische-Chimäre-Trupp)": 125,
-    "Jörmungandrs Truhe (Jörmungandrs-Shop)": 0,
+    "Jörmungandrs Truhe (Jörmungandrs-Shop)": 125,
     "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0,
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
     "Epische Truhe des Wohlstands (Clan-Wohlstand)": 0,
@@ -2148,5 +2148,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-06T20:37:46.185Z"
+  "lastUpdated": "2026-11-06T20:41:15.064Z"
 }
