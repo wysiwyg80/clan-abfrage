@@ -195,7 +195,8 @@
     "Skarabäus-Truhe (Epische Gruft Level 25)": 50,
     "Holztruhe (Turnier Kampf um den Thron)": 0,
     "Jörmangandrs Truhe (Epischer Jörmangandr-Trupp)": 0,
-    "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 0
+    "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 0,
+    "Fenrirs Truhe (Epischer Fenrir-Trupp)": 0
   },
   "clanData": [
     {
@@ -459,7 +460,8 @@
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 19,
         "Truhe der Festung der Verfluchten (Festung Level 20)": 1,
         "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
-        "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 6
+        "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 6,
+        "Fenrirs Truhe (Epischer Fenrir-Trupp)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
