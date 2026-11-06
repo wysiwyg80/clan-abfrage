@@ -196,7 +196,8 @@
     "Holztruhe (Turnier Kampf um den Thron)": 0,
     "Jörmangandrs Truhe (Epischer Jörmangandr-Trupp)": 0,
     "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 0,
-    "Fenrirs Truhe (Epischer Fenrir-Trupp)": 0
+    "Fenrirs Truhe (Epischer Fenrir-Trupp)": 0,
+    "Jörmungandrs Truhe (Jörmungandrs-Shop)": 0
   },
   "clanData": [
     {
@@ -462,7 +463,8 @@
         "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
         "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 6,
         "Fenrirs Truhe (Epischer Fenrir-Trupp)": 1,
-        "Jörmungandrs Truhe (Jörmungandr-Shop)": 2
+        "Jörmungandrs Truhe (Jörmungandr-Shop)": 2,
+        "Jörmungandrs Truhe (Jörmungandrs-Shop)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
