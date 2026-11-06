@@ -198,7 +198,8 @@
     "Truhe der epischen Monster (Epischer Trupp der Untoten)": 125,
     "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 25,
     "Olympus-Elite-Truhe (Event „Prüfungen von Olympus“)": 0,
-    "Turmbau": 50
+    "Turmbau": 50,
+    "Olympus-Elite-Truhe (Event Prüfungen von Olympus)": 0
   },
   "clanData": [
     {
@@ -1119,7 +1120,8 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 3,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 7,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
-        "Olympus-Elite-Truhe (Event „Prüfungen von Olympus“)": 74
+        "Olympus-Elite-Truhe (Event „Prüfungen von Olympus“)": 74,
+        "Olympus-Elite-Truhe (Event Prüfungen von Olympus)": 1
       },
       "growth": 0,
       "silver": 0,
