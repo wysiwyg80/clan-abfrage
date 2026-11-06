@@ -197,7 +197,8 @@
     "Jörmangandrs Truhe (Epischer Jörmangandr-Trupp)": 0,
     "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 0,
     "Fenrirs Truhe (Epischer Fenrir-Trupp)": 0,
-    "Jörmungandrs Truhe (Jörmungandrs-Shop)": 0
+    "Jörmungandrs Truhe (Jörmungandrs-Shop)": 0,
+    "Olympus-Elite-Truhe (Event „Prüfungen von Olympus“)": 0
   },
   "clanData": [
     {
@@ -1117,7 +1118,8 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 7,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
         "Jörmungandrs Truhe (Jörmungandr-Shop)": 5,
-        "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 1
+        "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 1,
+        "Olympus-Elite-Truhe (Event „Prüfungen von Olympus“)": 1
       },
       "growth": 0,
       "silver": 0,
