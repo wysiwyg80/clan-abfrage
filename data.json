@@ -2137,7 +2137,9 @@
       "rank": "Offizier",
       "power": 1554846031,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Skarabäus-Truhe (Epische Gruft Level 35)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-06",
