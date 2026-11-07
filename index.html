@@ -527,6 +527,37 @@
             }
         }
 
+        function renderMetrics() {
+            document.getElementById('stat-members').innerText = clanData.length;
+            
+            let totalChestsPts = 0;
+            let totalTowerPts = 0;
+            let totalSilver = 0;
+            let totalPower = 0;
+
+            let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
+
+            clanData.forEach(p => {
+                let cPts = 0;
+                if(p.chests) {
+                    Object.keys(p.chests).forEach(cName => {
+                        let count = p.chests[cName] || 0;
+                        let val = chestTypeValues[cName] || 0;
+                        cPts += count * val;
+                    });
+                }
+                totalChestsPts += cPts;
+                totalTowerPts += (Number(p.tower || 0) * towerPointValue) + Number(p.bankedTowerPoints || 0);
+                totalSilver += Number(p.silver || 0);
+                totalPower += Number(p.power || 0);
+            });
+
+            document.getElementById('stat-chests').innerText = totalChestsPts.toLocaleString();
+            document.getElementById('stat-tower').innerText = totalTowerPts.toLocaleString();
+            document.getElementById('stat-silver').innerText = totalSilver.toLocaleString();
+            document.getElementById('stat-power').innerText = totalPower.toLocaleString();
+        }
+
         function refreshUI() {
             document.getElementById('ghRepo').value = ghRepo;
             document.getElementById('ghBranch').value = ghBranch;
@@ -576,7 +607,6 @@
 
                 let towerPts = (Number(p.tower || 0) * towerPointValue) + Number(p.bankedTowerPoints || 0);
                 
-                // EVENT-PUNKTE WURDEN HIER SEPARAT EINGEBAUT
                 let eventPts = Number(p.eventPoints || 0);
                 let totalPts = chestPtsTotal + towerPts + eventPts;
 
