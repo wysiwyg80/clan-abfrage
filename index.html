@@ -1883,11 +1883,24 @@
                 .sort((a, b) => b[1] - a[1])
                 .slice(0, 7);
 
+            // Automatischer Zeilenumbruch bei Trennstrich (-) oder langer Länge
+            let labelsFormatted = sortedChestDistribution.map(x => {
+                let name = x[0];
+                if (name.includes('-')) {
+                    let parts = name.split('-');
+                    return [parts[0].trim() + '-', parts.slice(1).join('-').trim()];
+                }
+                if (name.length > 14) {
+                    return [name.substring(0, 12) + '-', name.substring(12)];
+                }
+                return name;
+            });
+
             if(distributionChart) distributionChart.destroy();
             distributionChart = new Chart(distCtx, {
                 type: 'doughnut',
                 data: {
-                    labels: sortedChestDistribution.map(x => x[0]),
+                    labels: labelsFormatted,
                     datasets: [{
                         data: sortedChestDistribution.map(x => x[1]),
                         backgroundColor: [
@@ -1909,7 +1922,21 @@
                         legend: {
                             display: true,
                             position: 'right',
-                            labels: { color: '#94a3b8', font: { size: 9 } }
+                            labels: { 
+                                color: '#94a3b8', 
+                                font: { size: 8 },
+                                boxWidth: 10,
+                                padding: 6
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let originalName = sortedChestDistribution[context.dataIndex][0];
+                                    let val = context.raw;
+                                    return ` ${originalName}: ${val} Stk`;
+                                }
+                            }
                         }
                     }
                 }
