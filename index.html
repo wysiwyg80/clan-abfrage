@@ -7,8 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <!-- html2canvas für den echten Bild-Druck von Statistiken -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap');
@@ -60,7 +58,7 @@
                 </div>
             </div>
             <div class="flex flex-wrap items-center gap-2">
-                <!-- NEUER ANPASSBARER EVENT BUTTON -->
+                <!-- ANPASSBARER EVENT BUTTON -->
                 <button onclick="triggerEventAction()" id="customEventBtn" class="bg-purple-900/80 hover:bg-purple-800 text-purple-200 border border-purple-600/50 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print" title="Aktuelles Event aufrufen oder ausführen">
                     <i class="fa-solid fa-calendar-star"></i> <span id="eventBtnLabel">Event-Aktion</span>
                 </button>
@@ -307,8 +305,8 @@
             </div>
         </div>
 
-        <!-- TRUHEN-STATISTIK PER MITGLIED MIT ECHTEM BILD-DRUCK BUTTON -->
-        <div id="chestBreakdownSection" class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 shadow space-y-4">
+        <!-- TRUHEN-STATISTIK PER MITGLIED -->
+        <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 shadow space-y-4">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-700 pb-3">
                 <div>
                     <h3 class="text-xs font-bold text-amber-400 uppercase flex items-center gap-2">
@@ -317,10 +315,6 @@
                     <p class="text-xs text-slate-300 mt-0.5">Filtere nach einer bestimmten Truhe und/oder suche direkt nach einem Spieler.</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto no-print">
-                    <!-- DRUCK-BUTTON FÜR ECHTE BILD-ERZEUGUNG -->
-                    <button onclick="downloadChestStatsAsImage()" class="bg-cyan-700 hover:bg-cyan-600 text-white px-3 py-1.5 rounded text-xs font-bold transition flex items-center gap-1.5 cursor-pointer" title="Statistik als echtes Bild (PNG) herunterladen oder drucken">
-                        <i class="fa-solid fa-camera"></i> Als Bild drucken / speichern
-                    </button>
                     <!-- Nach Spieler suchen Button/Eingabefeld -->
                     <div class="relative w-full sm:w-56">
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400 text-xs">
@@ -613,32 +607,6 @@
                 document.getElementById('eventBtnLabel').innerText = eventButtonName;
                 alert("Event-Button Name erfolgreich aktualisiert!");
             }
-        }
-
-        // FUNKTION ZUM HERUNTERLADEN DER TRUHEN-STATISTIK ALS ECHTES BILD
-        function downloadChestStatsAsImage() {
-            let section = document.getElementById('chestBreakdownSection');
-            if(!section) return;
-
-            // Bedienelemente temporär ausblenden für das saubere Bild
-            let noPrintElements = section.querySelectorAll('.no-print');
-            noPrintElements.forEach(el => el.style.display = 'none');
-
-            html2canvas(section, {
-                backgroundColor: '#1e293b', // slate-800 Hintergrund
-                scale: 2 // Erhöhte Schärfe
-            }).then(canvas => {
-                // Elemente wieder einblenden
-                noPrintElements.forEach(el => el.style.display = '');
-
-                let imageLink = document.createElement('a');
-                imageLink.download = `Truhen_Statistik_${new Date().toISOString().split('T')[0]}.png`;
-                imageLink.href = canvas.toDataURL('image/png');
-                imageLink.click();
-            }).catch(err => {
-                noPrintElements.forEach(el => el.style.display = '');
-                alert("Fehler beim Erstellen des Bildes: " + err.message);
-            });
         }
 
         function addDaysToDateStr(dateStr, days) {
