@@ -2413,7 +2413,9 @@
       "rank": "Soldat",
       "power": 56562286,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Schöne Truhe (Gruft Level 15)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-08",
       "prevPower": 0,
