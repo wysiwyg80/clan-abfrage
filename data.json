@@ -76,9 +76,6 @@
     "Trillium-Truhe (Epische Gruft Level 35)": 100,
     "Briareus-Truhe (Epischer-Briareus-Trupp)": 0,
     "Chimären-Truhe (Epische-Chimäre-Trupp)": 125,
-    "Tartaros Chest (Tartaros Crypt level 20)": 40,
-    "Tartaros Chest (Tartaros Crypt level 25)": 50,
-    "Tartaros Chest (Tartaros Crypt level 35)": 100,
     "Minotaurus-Truhe (Epische Gruft Level 15)": 15,
     "Minotaurus-Truhe (Epische Gruft Level 20)": 40,
     "Minotaurus-Truhe (Epische Gruft Level 25)": 50,
@@ -1024,5 +1021,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-08T18:57:43.907Z"
+  "lastUpdated": "2026-11-08T19:05:52.645Z"
 }
