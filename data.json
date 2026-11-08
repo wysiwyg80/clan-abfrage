@@ -1116,7 +1116,7 @@
     {
       "name": "Vudorr",
       "rank": "Veteran",
-      "power": 29531255,
+      "power": 37146298,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 2,
@@ -1150,12 +1150,13 @@
       "joinDate": "2026-11-01",
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 90
     },
     {
       "name": "Ayanin",
       "rank": "Veteran",
-      "power": 12011430,
+      "power": 13220780,
       "tower": 0,
       "chests": {
         "Tartaros-Truhe (Gruft von Tartaros Level 15)": 7
@@ -1165,12 +1166,13 @@
       "joinDate": "2026-11-01",
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "hero_level": 56
     },
     {
       "name": "Ria",
       "rank": "Veteran",
-      "power": 874303,
+      "power": 929368,
       "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 15)": 1,
@@ -1180,7 +1182,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 31,
       "bankedTowerPoints": 50
     },
     {
@@ -1984,7 +1986,7 @@
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
-      "power": 26652619,
+      "power": 31358181,
       "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 15)": 3,
@@ -2003,7 +2005,8 @@
       "prevPower": 0,
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 125
     },
     {
       "name": "Aurora",
@@ -2154,7 +2157,7 @@
     {
       "name": "Arashigore",
       "rank": "Veteran",
-      "power": 320384,
+      "power": 812592,
       "tower": 0,
       "chests": {
         "Truhe der Maya (Gruft Level 15)": 1,
@@ -2168,7 +2171,8 @@
       "prevPower": 0,
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 35
     },
     {
       "name": "Akinohn",
