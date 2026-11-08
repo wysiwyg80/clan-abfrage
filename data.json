@@ -1063,7 +1063,9 @@
       "rank": "Offizier",
       "power": 1556072281,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Barbarentruhe (Epische Gruft Level 35)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-06",
