@@ -1287,7 +1287,7 @@
     {
       "name": "Miss Dire",
       "rank": "Anführer",
-      "power": 447444785,
+      "power": 449536035,
       "tower": 0,
       "chests": {
         "Goldene Truhe (Bank)": 3,
@@ -1336,7 +1336,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 271,
       "bankedTowerPoints": 50
     },
     {
