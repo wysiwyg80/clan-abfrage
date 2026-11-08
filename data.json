@@ -849,7 +849,7 @@
     {
       "name": "Roula",
       "rank": "Veteran",
-      "power": 206443641,
+      "power": 209162691,
       "tower": 0,
       "chests": {
         "Truhe der Orks (Gruft Level 20)": 12,
@@ -877,7 +877,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 208,
       "bankedTowerPoints": 50
     },
     {
@@ -931,7 +931,7 @@
     {
       "name": "King Slayer",
       "rank": "Veteran",
-      "power": 161103858,
+      "power": 166500878,
       "tower": 0,
       "chests": {
         "Vergessene Truhe (Gruft Level 25)": 2,
@@ -954,13 +954,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 207,
       "bankedTowerPoints": 50
     },
     {
       "name": "Maginad",
       "rank": "Veteran",
-      "power": 140317033,
+      "power": 141831133,
       "tower": 0,
       "chests": {
         "Orc Chest (Level 25 Crypt)": 1,
@@ -982,7 +982,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 217,
       "bankedTowerPoints": 50
     },
     {
@@ -1676,7 +1676,7 @@
     {
       "name": "PABLUS",
       "rank": "Veteran",
-      "power": 107359431,
+      "power": 119586751,
       "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 5,
@@ -1742,7 +1742,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 177,
       "bankedTowerPoints": 50
     },
     {
@@ -2111,7 +2111,7 @@
     {
       "name": "Arik",
       "rank": "Veteran",
-      "power": 118435431,
+      "power": 124614871,
       "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
@@ -2145,7 +2145,8 @@
       "prevPower": 0,
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 133
     },
     {
       "name": "Arashigore",
@@ -2201,7 +2202,7 @@
     {
       "name": "Eldriel",
       "rank": "Veteran",
-      "power": 190092336,
+      "power": 190506636,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 1,
@@ -2227,7 +2228,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 228,
       "bankedTowerPoints": 50
     },
     {
