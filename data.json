@@ -209,7 +209,7 @@
     {
       "name": "Manador II",
       "rank": "Veteran",
-      "power": 624559145,
+      "power": 633226375,
       "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 12,
@@ -248,13 +248,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 319,
       "bankedTowerPoints": 50
     },
     {
       "name": "Riyash CP CITY",
       "rank": "Veteran",
-      "power": 479740600,
+      "power": 479857600,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
@@ -277,13 +277,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 290,
       "bankedTowerPoints": 50
     },
     {
       "name": "Magellan",
       "rank": "Veteran",
-      "power": 447586685,
+      "power": 449355045,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
@@ -316,13 +316,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 269,
       "bankedTowerPoints": 50
     },
     {
       "name": "Explorer",
       "rank": "Veteran",
-      "power": 408425675,
+      "power": 413974355,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
@@ -351,13 +351,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 258,
       "bankedTowerPoints": 50
     },
     {
       "name": "DRACULA",
       "rank": "Veteran",
-      "power": 376541175,
+      "power": 392947425,
       "tower": 0,
       "chests": {
         "Truhe der Maya (Gruft Level 25)": 4,
@@ -381,7 +381,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 254,
       "bankedTowerPoints": 50
     },
     {
@@ -1886,7 +1886,7 @@
     {
       "name": "Sir Charles",
       "rank": "Veteran",
-      "power": 622522271,
+      "power": 627857071,
       "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 3,
@@ -1920,7 +1920,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 284,
       "bankedTowerPoints": 50
     },
     {
