@@ -892,7 +892,9 @@
       "rank": "Veteran",
       "power": 992717645,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
