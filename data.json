@@ -734,7 +734,7 @@
     {
       "name": "Ajax",
       "rank": "Veteran",
-      "power": 219844135,
+      "power": 225351135,
       "tower": 0,
       "chests": {
         "Fenrirs Truhe (Epischer Fenrir-Trupp)": 2,
@@ -746,13 +746,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 217,
       "bankedTowerPoints": 50
     },
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "power": 213843481,
+      "power": 226136481,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 4,
@@ -795,13 +795,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 220,
       "bankedTowerPoints": 50
     },
     {
       "name": "BELEN",
       "rank": "Veteran",
-      "power": 210978881,
+      "power": 217959831,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
@@ -843,7 +843,8 @@
       "prevPower": 209779281,
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 208
     },
     {
       "name": "Roula",
@@ -901,7 +902,7 @@
     {
       "name": "Vudor SK6",
       "rank": "Veteran",
-      "power": 199466425,
+      "power": 211551525,
       "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 25)": 48,
@@ -924,7 +925,8 @@
       "joinDate": "2026-11-01",
       "prevPower": 197059645,
       "activeDays": 1,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "hero_level": 250
     },
     {
       "name": "King Slayer",
@@ -1929,7 +1931,7 @@
     {
       "name": "Noli",
       "rank": "Veteran",
-      "power": 235431265,
+      "power": 236301545,
       "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1947,7 +1949,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 251,
       "bankedTowerPoints": 50
     },
     {
