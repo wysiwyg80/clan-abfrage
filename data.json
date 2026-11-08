@@ -1178,7 +1178,7 @@
     {
       "name": "SaturdayNightFever",
       "rank": "Soldat",
-      "power": 105672693,
+      "power": 106786693,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 3,
@@ -1203,7 +1203,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 166,
       "bankedTowerPoints": 50
     },
     {
@@ -1342,7 +1342,7 @@
     {
       "name": "Cologne am Rhein",
       "rank": "Soldat",
-      "power": 417378415,
+      "power": 423882385,
       "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 25)": 2,
@@ -1356,7 +1356,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 252,
       "bankedTowerPoints": 50
     },
     {
@@ -2322,7 +2322,7 @@
     {
       "name": "Que",
       "rank": "Soldat",
-      "power": 116255455,
+      "power": 118097255,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
@@ -2340,13 +2340,13 @@
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null,
-      "hero_level": 204,
+      "hero_level": 205,
       "bankedTowerPoints": 0
     },
     {
       "name": "nomad",
       "rank": "Soldat",
-      "power": 141768125,
+      "power": 141805325,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 1,
@@ -2408,6 +2408,19 @@
       "customGoal": null,
       "hero_level": 417,
       "bankedTowerPoints": 0
+    },
+    {
+      "name": "Lordwar",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 56562286,
+      "hero_level": 95,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-08"
     }
   ],
   "evalStartDate": "2026-11-01",
