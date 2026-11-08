@@ -1252,7 +1252,7 @@
     {
       "name": "man of war",
       "rank": "Vorgesetzter",
-      "power": 1461375131,
+      "power": 1462887131,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
@@ -1282,7 +1282,8 @@
       "joinDate": "2026-11-01",
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 401
     },
     {
       "name": "Miss Dire",
@@ -2159,8 +2160,8 @@
     },
     {
       "name": "Akinohn",
-      "rank": "Veteran",
-      "power": 707502617,
+      "rank": "Vorgesetzter",
+      "power": 743768307,
       "tower": 0,
       "chests": {
         "Truhe des Händlers (Söldner-Börse)": 1,
@@ -2186,7 +2187,8 @@
       "joinDate": "2026-11-01",
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 327
     },
     {
       "name": "Eldriel",
