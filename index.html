@@ -189,8 +189,8 @@
                         <i class="fa-solid fa-tags"></i> Truhen-Bezeichnungen & Punktwerte
                     </h3>
                     <div class="flex flex-wrap items-center gap-2 no-print">
-                        <button onclick="checkForNewOrUnknownChests()" class="bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Prüfen, ob neue / unbekannte Truhen bei Mitgliedern eingetragen wurden">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i> Neue Truhen prüfen
+                        <button onclick="checkForNewOrUnknownChests()" class="bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Zeigt Truhen an, die von Python neu importiert wurden, aber noch nicht in der Haupt-Liste stehen">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> 🔍 Neue Truhen anzeigen
                         </button>
                         <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
                             <i class="fa-solid fa-arrow-down-1-9"></i> Nach Level sortieren
@@ -1190,19 +1190,19 @@
             });
 
             if (foundNewTypes.size === 0) {
-                alert("Alles aktuell! Es wurden keine neuen oder unbekannten Truhentypen bei den Mitgliedern gefunden.");
+                alert("Alles aktuell! Es wurden keine neuen oder unbekannten Truhentypen in den importierten Spielerdaten gefunden.");
             } else {
                 let listStr = Array.from(foundNewTypes).join("\n• ");
-                let addNow = confirm(`🔍 Es wurden neue Truhentypen bei Mitgliedern entdeckt:\n\n• ${listStr}\n\nMöchtest du diese neuen Truhen direkt zur Konfiguration hinzufügen (mit 0 Punkten vorbelegt)?`);
+                let addNow = confirm(`🔍 Folgende neue Truhe(n) wurden in den Spieldaten entdeckt:\n\n• ${listStr}\n\nMöchtest du diese neuen Truhen direkt zur Konfigurationsliste hinzufügen (mit 0 Punkten vorbelegt), um Punktewerte festzulegen?`);
                 
                 if (addNow) {
                     foundNewTypes.forEach(newChest => {
-                        if (!chestTypeValues[newChest]) {
+                        if (chestTypeValues[newChest] === undefined) {
                             chestTypeValues[newChest] = 0;
                         }
                     });
                     saveData();
-                    alert("Neue Truhen wurden zur Liste hinzugefügt! Du kannst ihnen jetzt ihre Punktewerte zuweisen.");
+                    alert("Neue Truhe(n) wurden zur Konfigurationsliste hinzugefügt! Du kannst ihnen jetzt Punktewerte zuweisen.");
                 }
             }
         }
