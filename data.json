@@ -988,7 +988,7 @@
     {
       "name": "AyBars",
       "rank": "Veteran",
-      "power": 111471886,
+      "power": 112358486,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 3,
@@ -1032,13 +1032,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 209,
       "bankedTowerPoints": 50
     },
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "power": 95267482,
+      "power": 95966982,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
@@ -1058,12 +1058,13 @@
       "joinDate": "2026-11-01",
       "prevPower": 94927582,
       "activeDays": 1,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 194
     },
     {
       "name": "Itachi",
       "rank": "Veteran",
-      "power": 87554109,
+      "power": 87572149,
       "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1076,12 +1077,13 @@
       "joinDate": "2026-11-01",
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "hero_level": 155
     },
     {
       "name": "Burigas",
       "rank": "Veteran",
-      "power": 100299705,
+      "power": 103614705,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
@@ -1108,7 +1110,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 186,
       "bankedTowerPoints": 50
     },
     {
@@ -2006,7 +2008,7 @@
     {
       "name": "Aurora",
       "rank": "Veteran",
-      "power": 65056815,
+      "power": 66564015,
       "tower": 0,
       "chests": {
         "Schöne Truhe (Gruft Level 15)": 1,
@@ -2022,7 +2024,8 @@
       "prevPower": 0,
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 136
     },
     {
       "name": "Xetlac",
@@ -2310,7 +2313,7 @@
     {
       "name": "MSB",
       "rank": "Veteran",
-      "power": 88173384,
+      "power": 88923384,
       "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 20)": 1,
@@ -2327,7 +2330,7 @@
       "silver": 0,
       "joinDate": "2026-11-03",
       "customGoal": null,
-      "hero_level": 150,
+      "hero_level": 152,
       "bankedTowerPoints": 0
     },
     {
