@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="flex flex-wrap items-center gap-2">
-                <!-- NEUER KI-CHECK BUTTON -->
+                <!-- KI-CHECK BUTTON -->
                 <button onclick="openAICheckModal()" class="bg-purple-900/90 hover:bg-purple-800 text-purple-200 border border-purple-600/60 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print shadow-md" title="KI-Einschätzung zur Aktivität und Entlassungs-Empfehlungen aufrufen">
                     <i class="fa-solid fa-robot"></i> KI-Check (Entlassungen)
                 </button>
@@ -716,21 +716,15 @@
             let contentDiv = document.getElementById('aiCheckContent');
             if(!contentDiv) return;
             
-            // Textversion für Zwischenablage erstellen
             let text = "🤖 KI-Aktivitäts- & Entlassungs-Analyse - BAD LegioXEquentris\n\n";
-            let items = contentDiv.querySelectorAll('li');
-            if(items.length === 0) {
-                text += "Keine Daten verfügbar.";
-            } else {
-                contentDiv.querySelectorAll('.bg-red-950\\/40, .bg-amber-950\\/40, .bg-emerald-950\\/40').forEach(section => {
-                    let title = section.querySelector('h4')?.innerText || "";
-                    text += `--- ${title} ---\n`;
-                    section.querySelectorAll('li').forEach(li => {
-                        text += `• ${li.innerText}\n`;
-                    });
-                    text += "\n";
+            contentDiv.querySelectorAll('.bg-red-950\\/40, .bg-amber-950\\/40, .bg-emerald-950\\/40').forEach(section => {
+                let title = section.querySelector('h4')?.innerText || "";
+                text += `--- ${title} ---\n`;
+                section.querySelectorAll('li').forEach(li => {
+                    text += `• ${li.innerText}\n`;
                 });
-            }
+                text += "\n";
+            });
 
             navigator.clipboard.writeText(text).then(() => {
                 alert("KI-Bericht in die Zwischenablage kopiert!");
@@ -1325,8 +1319,6 @@
             }
         }
 
-        // Setzt ausschließlich die bereits gesicherten Turmbau-Punkte (Bank) zurück.
-        // Die aktuellen Turm-Zähler der Mitglieder bleiben unverändert.
         function resetBankedTowerPoints() {
             if (confirm("Möchtest du die bereits in der Bank gesicherten Turmbau-Punkte aller Mitglieder wirklich auf 0 setzen? Die aktuellen Turm-Zähler bleiben unverändert.")) {
                 clanData.forEach(p => {
@@ -2045,8 +2037,6 @@
             let sortedChestDistribution = sortedAllChests.slice(0, 7);
             let otherChestCount = sortedAllChests.slice(7).reduce((sum, item) => sum + item[1], 0);
 
-            // Die übrigen Truhen werden zusammengefasst, damit die Prozentwerte
-            // den Anteil an ALLEN erfassten Truhen zeigen und zusammen 100 % ergeben.
             if (otherChestCount > 0) {
                 sortedChestDistribution.push(["Sonstige", otherChestCount]);
             }
