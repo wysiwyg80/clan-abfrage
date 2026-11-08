@@ -1,199 +1,199 @@
 {
   "chestTypeValues": {
-    "Sandtruhe (Gruft Level 15)": 0,
-    "Feuertruhe (Gruft Level 15)": 0,
-    "Steintruhe (Gruft Level 15)": 0,
-    "Knochentruhe (Gruft Level 15)": 0,
-    "Barbarentruhe (Gruft Level 15)": 0,
-    "Schöne Truhe (Gruft Level 15)": 0,
-    "Truhe der Maya (Gruft Level 15)": 0,
-    "Truhe der Orks (Gruft Level 15)": 0,
-    "Infernale Truhe (Gruft Level 15)": 0,
-    "Truhe der Kobra (Gruft Level 15)": 0,
-    "Vergessene Truhe (Gruft Level 15)": 0,
-    "Kobalt-Truhe (Epische Gruft Level 15)": 15,
-    "Barbarentruhe (Epische Gruft Level 15)": 15,
-    "Skorpion-Truhe (Epische Gruft Level 15)": 15,
-    "Minotaurus-Truhe (Epische Gruft Level 15)": 15,
-    "Skarabäus-Truhe (Epische Gruft Level 15)": 15,
-    "Titanstahl-Truhe (Epische Gruft Level 15)": 15,
-    "Weiße Holztruhe (Epische Gruft Level 15)": 15,
-    "Aufgegebene Truhe (Epische Gruft Level 15)": 15,
-    "Tartaros-Truhe (Gruft von Tartaros Level 15)": 20,
-    "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 0,
-    "Truhe des Priesters (Epische Gruft Level 15)": 15,
-    "Seltene Drachentruhe (Seltene Gruft Level 15)": 15,
-    "Truhe der Festung der Elfen (Festung Level 15)": 15,
-    "Truhe der Verfluchten (Epische Gruft Level 15)": 15,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 0,
-    "Truhe des Hauses des Schreckens (Epische Gruft Level 15)": 15,
-    "Truhe der Untoten (Heldenhafte Monster Level 16)": 0,
-    "Truhe der Elfen (Heldenhafte Monster Level 17)": 0,
-    "Truhe der Verfluchten (Heldenhafte Monster Level 18)": 0,
-    "Barbarentruhe (Heldenhafte Monster Level 19)": 0,
-    "Sandtruhe (Gruft Level 20)": 20,
-    "Feuertruhe (Gruft Level 20)": 20,
-    "Steintruhe (Gruft Level 20)": 20,
-    "Knochentruhe (Gruft Level 20)": 20,
-    "Barbarentruhe (Gruft Level 20)": 20,
-    "Schöne Truhe (Gruft Level 20)": 20,
-    "Truhe der Maya (Gruft Level 20)": 20,
-    "Truhe der Orks (Gruft Level 20)": 20,
-    "Infernale Truhe (Gruft Level 20)": 20,
-    "Truhe der Kobra (Gruft Level 20)": 20,
-    "Vergessene Truhe (Gruft Level 20)": 20,
-    "Kobalt-Truhe (Epische Gruft Level 20)": 40,
-    "Barbarentruhe (Epische Gruft Level 20)": 40,
-    "Harpyien-Truhe (Epische Gruft Level 20)": 40,
-    "Skorpion-Truhe (Epische Gruft Level 20)": 40,
-    "Trillium-Truhe (Epische Gruft Level 20)": 40,
-    "Tartaros Chest (Tartaros Crypt level 20)": 40,
-    "Minotaurus-Truhe (Epische Gruft Level 20)": 40,
-    "Skarabäus-Truhe (Epische Gruft Level 20)": 40,
-    "Titanstahl-Truhe (Epische Gruft Level 20)": 40,
-    "Weiße Holztruhe (Epische Gruft Level 20)": 40,
-    "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
-    "Geflochtene Truhe (Epische Gruft Level 20)": 40,
-    "Schildkröten-Truhe (Epische Gruft Level 20)": 40,
-    "Tartaros-Truhe (Gruft von Tartaros Level 20)": 40,
-    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 20,
-    "Truhe des Priesters (Epische Gruft Level 20)": 40,
-    "Seltene Drachentruhe (Seltene Gruft Level 20)": 40,
-    "Truhe der Festung der Elfen (Festung Level 20)": 40,
-    "Truhe der Verfluchten (Epische Gruft Level 20)": 40,
-    "Truhe der alten Bastion (Epische Gruft Level 20)": 40,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 0,
-    "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 40,
-    "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 0,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 20–24)": 0,
-    "Truhe der Festung der Verfluchten (Festung Level 20)": 40,
-    "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 40,
-    "Barbarentruhe (Heldenhafte Monster Level 24)": 0,
-    "Sandtruhe (Gruft Level 25)": 25,
-    "Alte Truhe (Gruft Level 25)": 25,
-    "Feuertruhe (Gruft Level 25)": 25,
-    "Steintruhe (Gruft Level 25)": 25,
-    "Knochentruhe (Gruft Level 25)": 25,
-    "Barbarentruhe (Gruft Level 25)": 25,
-    "Schöne Truhe (Gruft Level 25)": 25,
-    "Truhe der Maya (Gruft Level 25)": 25,
-    "Truhe der Orks (Gruft Level 25)": 25,
-    "Infernale Truhe (Gruft Level 25)": 25,
-    "Truhe der Kobra (Gruft Level 25)": 25,
-    "Vergessene Truhe (Gruft Level 25)": 25,
-    "Kobalt-Truhe (Epische Gruft Level 25)": 50,
-    "Barbarentruhe (Epische Gruft Level 25)": 50,
-    "Harpyien-Truhe (Epische Gruft Level 25)": 50,
-    "Skorpion-Truhe (Epische Gruft Level 25)": 50,
-    "Trillium-Truhe (Epische Gruft Level 25)": 50,
-    "Tartaros Chest (Tartaros Crypt level 25)": 50,
-    "Minotaurus-Truhe (Epische Gruft Level 25)": 50,
-    "Skarabäus-Truhe (Epische Gruft Level 25)": 50,
-    "Titanstahl-Truhe (Epische Gruft Level 25)": 50,
-    "Weiße Holztruhe (Epische Gruft Level 25)": 50,
-    "Aufgegebene Truhe (Epische Gruft Level 25)": 50,
-    "Geflochtene Truhe (Epische Gruft Level 25)": 50,
-    "Infernotruhe (Heldenhafte Monster Level 25)": 0,
-    "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
-    "Tartaros-Truhe (Gruft von Tartaros Level 25)": 50,
-    "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 25,
-    "Truhe des Priesters (Epische Gruft Level 25)": 50,
-    "Seltene Drachentruhe (Seltene Gruft Level 25)": 50,
-    "Truhe der Festung der Elfen (Festung Level 25)": 50,
-    "Truhe der Verfluchten (Epische Gruft Level 25)": 50,
-    "Truhe der alten Bastion (Epische Gruft Level 25)": 50,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 0,
-    "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 50,
-    "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 25–29)": 0,
-    "Truhe der Festung der Verfluchten (Festung Level 25)": 50,
-    "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 50,
-    "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0,
-    "Truhe der Untoten (Heldenhafte Monster Level 26)": 0,
-    "Schatzkammer der Ahnen (Level 30-34)": 0,
-    "Kobalt-Truhe (Epische Gruft Level 30)": 75,
-    "Barbarentruhe (Epische Gruft Level 30)": 75,
-    "Harpyien-Truhe (Epische Gruft Level 30)": 75,
-    "Skorpion-Truhe (Epische Gruft Level 30)": 75,
-    "Trillium-Truhe (Epische Gruft Level 30)": 75,
-    "Minotaurus-Truhe (Epische Gruft Level 30)": 75,
-    "Skarabäus-Truhe (Epische Gruft Level 30)": 75,
-    "Titanstahl-Truhe (Epische Gruft Level 30)": 75,
-    "Weiße Holztruhe (Epische Gruft Level 30)": 75,
-    "Aufgegebene Truhe (Epische Gruft Level 30)": 75,
-    "Geflochtene Truhe (Epische Gruft Level 30)": 75,
-    "Infernotruhe (Heldenhafte Monster Level 30)": 0,
-    "Schildkröten-Truhe (Epische Gruft Level 30)": 75,
-    "Tartaros-Truhe (Gruft von Tartaros Level 30)": 75,
-    "Truhe des Priesters (Epische Gruft Level 30)": 75,
-    "Seltene Drachentruhe (Seltene Gruft Level 30)": 60,
-    "Truhe der Festung der Elfen (Festung Level 30)": 60,
-    "Truhe der Verfluchten (Epische Gruft Level 30)": 75,
-    "Truhe der alten Bastion (Epische Gruft Level 30)": 75,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 0,
-    "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 75,
-    "Runentruhe (Lvl. 30-34 Überfallender Runen-Trupp)": 0,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 0,
-    "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 75,
-    "Truhe der Untoten (Heldenhafte Monster Level 31)": 0,
-    "Kobalt-Truhe (Epische Gruft Level 35)": 100,
-    "Barbarentruhe (Epische Gruft Level 35)": 100,
-    "Harpyien-Truhe (Epische Gruft Level 35)": 100,
-    "Skorpion-Truhe (Epische Gruft Level 35)": 100,
-    "Trillium-Truhe (Epische Gruft Level 35)": 100,
-    "Tartaros Chest (Tartaros Crypt level 35)": 100,
-    "Minotaurus-Truhe (Epische Gruft Level 35)": 100,
-    "Skarabäus-Truhe (Epische Gruft Level 35)": 100,
-    "Titanstahl-Truhe (Epische Gruft Level 35)": 100,
-    "Weiße Holztruhe (Epische Gruft Level 35)": 100,
-    "Aufgegebene Truhe (Epische Gruft Level 35)": 100,
-    "Geflochtene Truhe (Epische Gruft Level 35)": 100,
-    "Schildkröten-Truhe (Epische Gruft Level 35)": 100,
-    "Tartaros-Truhe (Gruft von Tartaros Level 35)": 100,
-    "Truhe des Priesters (Epische Gruft Level 35)": 100,
-    "Truhe der Verfluchten (Epische Gruft Level 35)": 100,
-    "Truhe der alten Bastion (Epische Gruft Level 35)": 100,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 0,
-    "Alte Truhe eines Kriegers (Epische Gruft Level 35)": 100,
-    "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 0,
-    "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 100,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 0,
-    "Runentruhe (Lvl. 40-44 Überfallender Runen-Trupp)": 0,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 40–44)": 0,
-    "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 0,
-    "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 0,
-    "Runentruhe (Lvl. 45 Überfallender Runen-Trupp)": 0,
+    "Turmbau": 50,
     "Holztruhe (Bank)": 15,
     "Bronzetruhe (Bank)": 25,
     "Goldene Truhe (Bank)": 100,
     "Silberne Truhe (Bank)": 50,
     "Gladiatorentruhe (Arena)": 0,
+    "Sandtruhe (Gruft Level 15)": 0,
+    "Sandtruhe (Gruft Level 20)": 20,
+    "Sandtruhe (Gruft Level 25)": 25,
+    "Alte Truhe (Gruft Level 25)": 25,
+    "Feuertruhe (Gruft Level 15)": 0,
+    "Feuertruhe (Gruft Level 20)": 20,
+    "Feuertruhe (Gruft Level 25)": 25,
     "Jack-Reaper-Truhe (Kürbis)": 125,
+    "Steintruhe (Gruft Level 15)": 0,
+    "Steintruhe (Gruft Level 20)": 20,
+    "Steintruhe (Gruft Level 25)": 25,
+    "Knochentruhe (Gruft Level 15)": 0,
+    "Knochentruhe (Gruft Level 20)": 20,
+    "Knochentruhe (Gruft Level 25)": 25,
+    "Barbarentruhe (Gruft Level 15)": 0,
+    "Barbarentruhe (Gruft Level 20)": 20,
+    "Barbarentruhe (Gruft Level 25)": 25,
     "Kürbistruhe (Quelle: Kürbis)": 0,
+    "Schöne Truhe (Gruft Level 15)": 0,
+    "Schöne Truhe (Gruft Level 20)": 20,
+    "Schöne Truhe (Gruft Level 25)": 25,
+    "Truhe der Maya (Gruft Level 15)": 0,
+    "Truhe der Maya (Gruft Level 20)": 20,
+    "Truhe der Maya (Gruft Level 25)": 25,
+    "Truhe der Orks (Gruft Level 15)": 0,
+    "Truhe der Orks (Gruft Level 20)": 20,
+    "Truhe der Orks (Gruft Level 25)": 25,
+    "Infernale Truhe (Gruft Level 15)": 0,
+    "Infernale Truhe (Gruft Level 20)": 20,
+    "Infernale Truhe (Gruft Level 25)": 25,
+    "Truhe der Kobra (Gruft Level 15)": 0,
+    "Truhe der Kobra (Gruft Level 20)": 20,
+    "Truhe der Kobra (Gruft Level 25)": 25,
+    "Vergessene Truhe (Gruft Level 15)": 0,
+    "Vergessene Truhe (Gruft Level 20)": 20,
+    "Vergessene Truhe (Gruft Level 25)": 25,
     "Truhe des Gouverneurs (Geschichte)": 25,
     "Epische Truhe des Goldenen Wächters": 0,
+    "Schatzkammer der Ahnen (Level 30-34)": 0,
     "Fenrirs Truhe (Epischer Fenrir-Trupp)": 125,
+    "Kobalt-Truhe (Epische Gruft Level 15)": 15,
+    "Kobalt-Truhe (Epische Gruft Level 20)": 40,
+    "Kobalt-Truhe (Epische Gruft Level 25)": 50,
+    "Kobalt-Truhe (Epische Gruft Level 30)": 75,
+    "Kobalt-Truhe (Epische Gruft Level 35)": 100,
     "Truhe des Händlers (Söldner-Börse)": 25,
+    "Barbarentruhe (Epische Gruft Level 15)": 15,
+    "Barbarentruhe (Epische Gruft Level 20)": 40,
+    "Barbarentruhe (Epische Gruft Level 25)": 50,
+    "Barbarentruhe (Epische Gruft Level 30)": 75,
+    "Barbarentruhe (Epische Gruft Level 35)": 100,
     "Holztruhe (Turnier Kampf um den Thron)": 0,
     "Ahnentruhe (Event \"Aufstieg der Ahnen\")": 0,
     "Gewöhnliche Truhe des (Clan-Wohlstand)": 0,
+    "Harpyien-Truhe (Epische Gruft Level 20)": 40,
+    "Harpyien-Truhe (Epische Gruft Level 25)": 50,
+    "Harpyien-Truhe (Epische Gruft Level 30)": 75,
+    "Harpyien-Truhe (Epische Gruft Level 35)": 100,
     "Jörmungandrs Truhe (Jörmungandr-Shop)": 125,
+    "Skorpion-Truhe (Epische Gruft Level 15)": 15,
+    "Skorpion-Truhe (Epische Gruft Level 20)": 40,
+    "Skorpion-Truhe (Epische Gruft Level 25)": 50,
+    "Skorpion-Truhe (Epische Gruft Level 30)": 75,
+    "Skorpion-Truhe (Epische Gruft Level 35)": 100,
+    "Trillium-Truhe (Epische Gruft Level 20)": 40,
+    "Trillium-Truhe (Epische Gruft Level 25)": 50,
+    "Trillium-Truhe (Epische Gruft Level 30)": 75,
+    "Trillium-Truhe (Epische Gruft Level 35)": 100,
     "Briareus-Truhe (Epischer-Briareus-Trupp)": 0,
     "Chimären-Truhe (Epische-Chimäre-Trupp)": 125,
+    "Tartaros Chest (Tartaros Crypt level 20)": 40,
+    "Tartaros Chest (Tartaros Crypt level 25)": 50,
+    "Tartaros Chest (Tartaros Crypt level 35)": 100,
+    "Minotaurus-Truhe (Epische Gruft Level 15)": 15,
+    "Minotaurus-Truhe (Epische Gruft Level 20)": 40,
+    "Minotaurus-Truhe (Epische Gruft Level 25)": 50,
+    "Minotaurus-Truhe (Epische Gruft Level 30)": 75,
+    "Minotaurus-Truhe (Epische Gruft Level 35)": 100,
+    "Skarabäus-Truhe (Epische Gruft Level 15)": 15,
+    "Skarabäus-Truhe (Epische Gruft Level 20)": 40,
+    "Skarabäus-Truhe (Epische Gruft Level 25)": 50,
+    "Skarabäus-Truhe (Epische Gruft Level 30)": 75,
+    "Skarabäus-Truhe (Epische Gruft Level 35)": 100,
+    "Titanstahl-Truhe (Epische Gruft Level 15)": 15,
+    "Titanstahl-Truhe (Epische Gruft Level 20)": 40,
+    "Titanstahl-Truhe (Epische Gruft Level 25)": 50,
+    "Titanstahl-Truhe (Epische Gruft Level 30)": 75,
+    "Titanstahl-Truhe (Epische Gruft Level 35)": 100,
     "Ungewöhnliche Truhe des (Clan-Wohlstand)": 0,
+    "Weiße Holztruhe (Epische Gruft Level 15)": 15,
+    "Weiße Holztruhe (Epische Gruft Level 20)": 40,
+    "Weiße Holztruhe (Epische Gruft Level 25)": 50,
+    "Weiße Holztruhe (Epische Gruft Level 30)": 75,
+    "Weiße Holztruhe (Epische Gruft Level 35)": 100,
+    "Aufgegebene Truhe (Epische Gruft Level 15)": 15,
+    "Aufgegebene Truhe (Epische Gruft Level 20)": 40,
+    "Aufgegebene Truhe (Epische Gruft Level 25)": 50,
+    "Aufgegebene Truhe (Epische Gruft Level 30)": 75,
+    "Aufgegebene Truhe (Epische Gruft Level 35)": 100,
     "Basilisken-Truhe (Epischer-Basilisk-Trupp)": 125,
+    "Geflochtene Truhe (Epische Gruft Level 20)": 40,
+    "Geflochtene Truhe (Epische Gruft Level 25)": 50,
+    "Geflochtene Truhe (Epische Gruft Level 30)": 75,
+    "Geflochtene Truhe (Epische Gruft Level 35)": 100,
+    "Infernotruhe (Heldenhafte Monster Level 25)": 0,
+    "Infernotruhe (Heldenhafte Monster Level 30)": 0,
+    "Barbarentruhe (Heldenhafte Monster Level 19)": 0,
+    "Barbarentruhe (Heldenhafte Monster Level 24)": 0,
+    "Schildkröten-Truhe (Epische Gruft Level 20)": 40,
+    "Schildkröten-Truhe (Epische Gruft Level 25)": 50,
+    "Schildkröten-Truhe (Epische Gruft Level 30)": 75,
+    "Schildkröten-Truhe (Epische Gruft Level 35)": 100,
+    "Tartaros-Truhe (Gruft von Tartaros Level 15)": 20,
+    "Tartaros-Truhe (Gruft von Tartaros Level 20)": 40,
+    "Tartaros-Truhe (Gruft von Tartaros Level 25)": 50,
+    "Tartaros-Truhe (Gruft von Tartaros Level 30)": 75,
+    "Tartaros-Truhe (Gruft von Tartaros Level 35)": 100,
+    "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 0,
+    "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 20,
+    "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 25,
+    "Truhe des Priesters (Epische Gruft Level 15)": 15,
+    "Truhe des Priesters (Epische Gruft Level 20)": 40,
+    "Truhe des Priesters (Epische Gruft Level 25)": 50,
+    "Truhe des Priesters (Epische Gruft Level 30)": 75,
+    "Truhe des Priesters (Epische Gruft Level 35)": 100,
     "Epische Truhe des Wohlstands (Clan-Wohlstand)": 0,
     "Legendäre Aschentruhe (Epischer Aschentrupp)": 75,
+    "Seltene Drachentruhe (Seltene Gruft Level 15)": 15,
+    "Seltene Drachentruhe (Seltene Gruft Level 20)": 40,
+    "Seltene Drachentruhe (Seltene Gruft Level 25)": 50,
+    "Seltene Drachentruhe (Seltene Gruft Level 30)": 60,
     "Seltene Truhe des Wohlstands (Clan-Wohlstand)": 0,
     "Blitzmarsch-Truhe (Event \"Aufstieg der Ahnen\")": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 0,
+    "Truhe der Elfen (Heldenhafte Monster Level 17)": 0,
+    "Truhe der Festung der Elfen (Festung Level 15)": 15,
+    "Truhe der Festung der Elfen (Festung Level 20)": 40,
+    "Truhe der Festung der Elfen (Festung Level 25)": 50,
+    "Truhe der Festung der Elfen (Festung Level 30)": 60,
+    "Truhe der Verfluchten (Epische Gruft Level 15)": 15,
+    "Truhe der Verfluchten (Epische Gruft Level 20)": 40,
+    "Truhe der Verfluchten (Epische Gruft Level 25)": 50,
+    "Truhe der Verfluchten (Epische Gruft Level 30)": 75,
+    "Truhe der Verfluchten (Epische Gruft Level 35)": 100,
     "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 50,
+    "Runentruhe (Lvl. 45 Überfallender Runen-Trupp)": 0,
     "Epische Truhe des Goldenen (Epischer Ahnentrupp)": 0,
+    "Truhe der Untoten (Heldenhafte Monster Level 16)": 0,
+    "Truhe der Untoten (Heldenhafte Monster Level 26)": 0,
+    "Truhe der Untoten (Heldenhafte Monster Level 31)": 0,
+    "Truhe der alten Bastion (Epische Gruft Level 20)": 40,
+    "Truhe der alten Bastion (Epische Gruft Level 25)": 50,
+    "Truhe der alten Bastion (Epische Gruft Level 30)": 75,
+    "Truhe der alten Bastion (Epische Gruft Level 35)": 100,
     "Jörmungandrs Truhe (Epischer Jörmungandr-Trupp)": 125,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 0,
+    "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 40,
+    "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 50,
+    "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 75,
+    "Alte Truhe eines Kriegers (Epische Gruft Level 35)": 100,
     "Olympus-Elite-Truhe (Event Prüfungen von Olympus)": 0,
+    "Runentruhe (Lvl. 20-24 Überfallender Runen-Trupp)": 0,
+    "Runentruhe (Lvl. 25-29 Überfallender Runen-Trupp)": 0,
+    "Runentruhe (Lvl. 30-34 Überfallender Runen-Trupp)": 0,
+    "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 0,
+    "Runentruhe (Lvl. 40-44 Überfallender Runen-Trupp)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 20–24)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 25–29)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 30–34)": 0,
+    "Saphir-Truhe (Schatzkammer der Ahnen Level 40–44)": 0,
+    "Runentruhe (Lvl. 40–44 Überfallender Runen-Trupp)": 0,
+    "Truhe der Festung der Verfluchten (Festung Level 20)": 40,
+    "Truhe der Festung der Verfluchten (Festung Level 25)": 50,
+    "Truhe der Verfluchten (Heldenhafte Monster Level 18)": 0,
     "Truhe der Autorität (Turnier Triumph der Autorität)": 50,
     "Truhe der epischen Monster (Epischer Trupp der Untoten)": 125,
     "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 25,
-    "Turmbau": 50
+    "Truhe des Hauses des Schreckens (Epische Gruft Level 15)": 15,
+    "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 40,
+    "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 50,
+    "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 75,
+    "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 100,
+    "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": 0
   },
   "clanData": [
     {
@@ -207,7 +207,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 319,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Riyash CP CITY",
@@ -220,7 +220,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 290,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Magellan",
@@ -233,7 +233,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 269,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Explorer",
@@ -246,7 +246,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 258,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "DRACULA",
@@ -259,7 +259,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 254,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Biin",
@@ -272,7 +272,7 @@
       "prevPower": 297109251,
       "activeDays": 1,
       "hero_level": 235,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Maem",
@@ -285,7 +285,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 246,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Auzar",
@@ -299,7 +299,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 234,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Elginan",
@@ -326,7 +326,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 234,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Carruggi 5r",
@@ -339,7 +339,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 222,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "ICHNOS",
@@ -352,7 +352,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 231,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Lee the Ugly",
@@ -365,7 +365,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 232,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "kordy",
@@ -391,7 +391,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 217,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Granidred",
@@ -404,7 +404,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 220,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "BELEN",
@@ -418,7 +418,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 208,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Roula",
@@ -431,7 +431,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 208,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Vudor SK6",
@@ -457,7 +457,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 207,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Maginad",
@@ -470,7 +470,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 217,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "AyBars",
@@ -483,7 +483,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 209,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Orodrafin",
@@ -496,7 +496,7 @@
       "prevPower": 94927582,
       "activeDays": 1,
       "hero_level": 194,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Itachi",
@@ -523,7 +523,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 186,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Vudorr",
@@ -537,7 +537,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 90,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Ayanin",
@@ -564,7 +564,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 31,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "SaturdayNightFever",
@@ -577,7 +577,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 166,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "LegatusLabienus",
@@ -590,7 +590,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 355,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "man of war",
@@ -604,7 +604,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 401,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Miss Dire",
@@ -617,7 +617,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 271,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Cologne am Rhein",
@@ -630,7 +630,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 252,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "WYSIWYG",
@@ -643,7 +643,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 249,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "kikito",
@@ -656,7 +656,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 209,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Frederico Freitas",
@@ -670,7 +670,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 195,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Delalen",
@@ -683,7 +683,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 270,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Gran Rex",
@@ -696,7 +696,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 236,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Farés Dz",
@@ -709,7 +709,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 219,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "PABLUS",
@@ -722,7 +722,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 177,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Tanmisis",
@@ -735,7 +735,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 361,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Sir spanksALot",
@@ -748,7 +748,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 333,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "BAD Guo II",
@@ -761,7 +761,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 340,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Riyash",
@@ -774,7 +774,7 @@
       "prevPower": 660458681,
       "activeDays": 1,
       "hero_level": 295,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Noli",
@@ -787,7 +787,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 251,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Ajji",
@@ -800,7 +800,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 263,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "LORD MOSQUITÉ",
@@ -814,7 +814,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 125,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Aurora",
@@ -828,7 +828,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 136,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Xetlac",
@@ -841,7 +841,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 376,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Akasha",
@@ -854,7 +854,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 360,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Arik",
@@ -868,7 +868,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 133,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Arashigore",
@@ -882,7 +882,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 35,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Akinohn",
@@ -896,7 +896,7 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 327,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Eldriel",
@@ -909,7 +909,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 228,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "Rysiek121",
@@ -922,7 +922,7 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 409,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 0
     },
     {
       "name": "MSB",
@@ -1024,5 +1024,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-08T18:17:02.825Z"
+  "lastUpdated": "2026-11-08T18:57:43.907Z"
 }
