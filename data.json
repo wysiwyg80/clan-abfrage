@@ -387,7 +387,7 @@
     {
       "name": "Biin",
       "rank": "Veteran",
-      "power": 297121451,
+      "power": 302472181,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 3,
@@ -433,12 +433,13 @@
       "joinDate": "2026-11-01",
       "prevPower": 297109251,
       "activeDays": 1,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 235
     },
     {
       "name": "Maem",
       "rank": "Veteran",
-      "power": 294671699,
+      "power": 296808699,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
@@ -466,13 +467,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 246,
       "bankedTowerPoints": 50
     },
     {
       "name": "Auzar",
       "rank": "Veteran",
-      "power": 294961175,
+      "power": 308765825,
       "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 15,
@@ -519,7 +520,8 @@
       "prevPower": 293537875,
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 234
     },
     {
       "name": "Elginan",
@@ -1460,8 +1462,8 @@
     },
     {
       "name": "Goll",
-      "rank": "Offizier",
-      "power": 353542806,
+      "rank": "Veteran",
+      "power": 382697801,
       "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
@@ -1492,7 +1494,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 247,
       "bankedTowerPoints": 50
     },
     {
@@ -1950,7 +1952,7 @@
     {
       "name": "Ajji",
       "rank": "Veteran",
-      "power": 384861043,
+      "power": 386077573,
       "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1971,7 +1973,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 263,
       "bankedTowerPoints": 50
     },
     {
