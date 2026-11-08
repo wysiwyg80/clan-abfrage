@@ -17,7 +17,6 @@
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #b45309; border-radius: 4px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #d97706; }
 
-        /* Kleinere Schrift und automatisches Umbrechen für lange Truhennamen im Admin-Panel */
         #chestTypesContainer span {
             font-size: 11px !important;
             white-space: normal !important;
@@ -58,11 +57,9 @@
                 </div>
             </div>
             <div class="flex flex-wrap items-center gap-2">
-                <!-- KI-CHECK BUTTON -->
                 <button onclick="openAICheckModal()" class="bg-purple-900/90 hover:bg-purple-800 text-purple-200 border border-purple-600/60 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print shadow-md" title="KI-Einschätzung zur Aktivität und Entlassungs-Empfehlungen aufrufen">
                     <i class="fa-solid fa-robot"></i> KI-Check (Entlassungen)
                 </button>
-                <!-- BESUCHER BUTTON -->
                 <button onclick="openVisitorChestModal()" class="bg-amber-900/70 hover:bg-amber-800 text-amber-200 border border-amber-600/50 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print" title="Truhen-Übersicht & Punktewerte für Besucher anzeigen">
                     <i class="fa-solid fa-gift"></i> Truhen-Info (Besucher)
                 </button>
@@ -89,7 +86,6 @@
                 <button onclick="toggleAdminPanel()" class="text-slate-300 hover:text-white text-sm cursor-pointer"><i class="fa-solid fa-xmark"></i> Schließen</button>
             </div>
 
-            <!-- ZEITRAUM & ANTEILIGE TAGE -->
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
                     <i class="fa-solid fa-calendar-days"></i> Auswertungs-Zeitraum & Anteils-Berechnung
@@ -125,7 +121,6 @@
                 </div>
             </div>
 
-            <!-- GITHUB API VERBINDUNG -->
             <div class="bg-slate-800 border border-indigo-500/30 rounded-xl p-4 space-y-3">
                 <h3 class="text-xs font-bold uppercase text-indigo-400 flex items-center gap-2">
                     <i class="fa-brands fa-github"></i> GitHub API Verbindung (Cloud Sync & Abfrage)
@@ -159,7 +154,6 @@
                 </div>
             </div>
 
-            <!-- SUPABASE CLOUD VERBINDUNG -->
             <div class="bg-slate-800 border border-emerald-500/30 rounded-xl p-4 space-y-3">
                 <h3 class="text-xs font-bold uppercase text-emerald-400 flex items-center gap-2">
                     <i class="fa-solid fa-database"></i> Supabase Cloud Verbindung
@@ -189,7 +183,6 @@
                 </div>
             </div>
 
-            <!-- TRUHEN-EINSTELLUNGEN & PUNKTWERTE -->
             <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 space-y-3">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-700/60 pb-2 mb-3 gap-2">
                     <h3 class="text-xs font-bold uppercase text-amber-400 flex items-center gap-2">
@@ -216,7 +209,6 @@
                 <div id="chestTypesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-64 overflow-y-auto custom-scrollbar pr-1"></div>
             </div>
 
-            <!-- HISTORIE / SNAPSHOT VERWALTUNG -->
             <div class="bg-slate-800 border border-purple-500/30 rounded-xl p-4 space-y-3">
                 <h3 class="text-xs font-bold uppercase text-purple-400 flex items-center gap-2">
                     <i class="fa-solid fa-clock-rotate-left"></i> Zyklus-Verlauf & Historie (Snapshot-Archiv)
@@ -294,7 +286,6 @@
             </div>
         </div>
 
-        <!-- TRUHEN-STATISTIK PER MITGLIED -->
         <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 shadow space-y-4">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-700 pb-3">
                 <div>
@@ -304,7 +295,6 @@
                     <p class="text-xs text-slate-300 mt-0.5">Filtere nach einer bestimmten Truhe und/oder suche direkt nach einem Spieler.</p>
                 </div>
                 <div class="flex flex-wrap items-center gap-2 w-full sm:w-auto no-print">
-                    <!-- Nach Spieler suchen Button/Eingabefeld -->
                     <div class="relative w-full sm:w-56">
                         <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400 text-xs">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -408,7 +398,6 @@
                 </table>
             </div>
 
-            <!-- PAGINIERUNGS-LEISTE -->
             <div id="paginationControls" class="p-3 bg-slate-900/80 border-t border-slate-700 flex justify-between items-center text-xs text-slate-300 no-print">
                 <span id="pageInfoText">Zeige 0 bis 0 von 0 Mitgliedern</span>
                 <div class="flex gap-1.5">
@@ -421,7 +410,6 @@
 
     </main>
 
-    <!-- KI-CHECK EINSCHÄTZUNGS MODAL -->
     <div id="aiCheckModal" class="hidden fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-purple-500/50 rounded-xl p-5 w-full max-w-2xl space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
@@ -432,9 +420,7 @@
             </div>
             <p class="text-xs text-slate-300">Automatische Auswertung des aktuellen Zyklus basierend auf Soll-Erfüllung, Truhen und Türmen:</p>
             
-            <div id="aiCheckContent" class="space-y-3 max-h-96 overflow-y-auto custom-scrollbar pr-1 bg-slate-950/70 p-3.5 rounded border border-slate-800 text-xs">
-                <!-- Dynamischer Inhalt -->
-            </div>
+            <div id="aiCheckContent" class="space-y-3 max-h-96 overflow-y-auto custom-scrollbar pr-1 bg-slate-950/70 p-3.5 rounded border border-slate-800 text-xs"></div>
 
             <div class="flex justify-between items-center pt-2 border-t border-slate-700">
                 <button onclick="copyAICheckReport()" class="bg-purple-950 hover:bg-purple-900 text-purple-200 border border-purple-700 text-xs font-bold px-3 py-1.5 rounded transition cursor-pointer flex items-center gap-1.5">
@@ -445,12 +431,11 @@
         </div>
     </div>
 
-    <!-- BESUCHER TRUHEN-INFO MODAL -->
     <div id="visitorChestModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-lg space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
                 <h3 class="font-cinzel font-bold text-amber-400 text-base flex items-center gap-2">
-                    <i class="fa-solid fa-gift"></i> Truhen-Bezeichnungen & Punktewerte
+                    <i class="fa-solid fa-gift"></i> Truhen-Bezeichnungen & Punktwerte
                 </h3>
                 <button onclick="closeVisitorChestModal()" class="text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
@@ -467,7 +452,6 @@
         </div>
     </div>
 
-    <!-- TRUHEN-DETAILS & ADMIN-BEWERTUNGS-MODAL -->
     <div id="chestDetailsModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-lg space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
@@ -608,7 +592,6 @@
             "Soldat": 5
         };
 
-        // KI-CHECK FUNKTIONEN
         function openAICheckModal() {
             let container = document.getElementById('aiCheckContent');
             container.innerHTML = '';
@@ -1940,7 +1923,7 @@
                     });
                 }
                 pts += (Number(p.tower || 0) * towerPointValue) + Number(p.bankedTowerPoints || 0);
-                return { name: p.name, points: pts, growth: Number(p.growth) || 0 };
+                return { name: p.name, points: pts, growth: Number(p.growth) || 0, power: Number(p.power) || 0 };
             });
 
             scoredList.sort((a, b) => b.points - a.points);
@@ -1970,9 +1953,16 @@
                 }
             });
 
-            // Machtzuwachs: horizontales Ranking, positive und negative Entwicklung getrennt
+            // Machtzuwachs / Fallback auf Gesamtmacht, falls noch kein Zuwachs gemessen wurde
             scoredList.sort((a, b) => b.growth - a.growth);
             let topGrowth = scoredList.filter(x => x.growth !== 0).slice(0, 10);
+            let isFallback = false;
+
+            if (topGrowth.length === 0) {
+                isFallback = true;
+                let powerList = [...scoredList].sort((a, b) => b.power - a.power);
+                topGrowth = powerList.slice(0, 10).map(x => ({ name: x.name, growth: x.power }));
+            }
 
             if(growthChart) growthChart.destroy();
             growthChart = new Chart(growthCtx, {
@@ -1980,12 +1970,12 @@
                 data: {
                     labels: topGrowth.map(x => x.name),
                     datasets: [{
-                        label: 'Machtveränderung',
+                        label: isFallback ? 'Gesamtmacht' : 'Machtveränderung',
                         data: topGrowth.map(x => x.growth),
-                        backgroundColor: topGrowth.map(x => x.growth >= 0
+                        backgroundColor: topGrowth.map(x => isFallback || x.growth >= 0
                             ? 'rgba(16, 185, 129, 0.78)'
                             : 'rgba(239, 68, 68, 0.78)'),
-                        borderColor: topGrowth.map(x => x.growth >= 0
+                        borderColor: topGrowth.map(x => isFallback || x.growth >= 0
                             ? 'rgba(52, 211, 153, 1)'
                             : 'rgba(248, 113, 113, 1)'),
                         borderWidth: 1,
@@ -2000,7 +1990,7 @@
                         legend: { display: false },
                         tooltip: {
                             callbacks: {
-                                label: context => ` ${context.raw >= 0 ? '+' : ''}${formatPower(context.raw)} Macht`
+                                label: context => ` ${isFallback ? '' : (context.raw >= 0 ? '+' : '')}${formatPower(context.raw)} Macht`
                             }
                         }
                     },
