@@ -1743,7 +1743,7 @@
     {
       "name": "Tanmisis",
       "rank": "Veteran",
-      "power": 1095030005,
+      "power": 1120156855,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
@@ -1768,13 +1768,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 361,
       "bankedTowerPoints": 50
     },
     {
       "name": "Sir spanksALot",
       "rank": "Veteran",
-      "power": 783383255,
+      "power": 783971955,
       "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 2,
@@ -1806,13 +1806,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 333,
       "bankedTowerPoints": 50
     },
     {
       "name": "BAD Guo II",
       "rank": "Veteran",
-      "power": 754733459,
+      "power": 761938809,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
@@ -1852,13 +1852,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 340,
       "bankedTowerPoints": 50
     },
     {
       "name": "Riyash",
       "rank": "Veteran",
-      "power": 671335971,
+      "power": 689443971,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
@@ -1880,7 +1880,8 @@
       "joinDate": "2026-11-01",
       "prevPower": 660458681,
       "activeDays": 1,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 295
     },
     {
       "name": "Sir Charles",
@@ -2021,7 +2022,7 @@
     {
       "name": "Xetlac",
       "rank": "Veteran",
-      "power": 991194175,
+      "power": 992717645,
       "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 6,
@@ -2074,13 +2075,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 376,
       "bankedTowerPoints": 50
     },
     {
       "name": "Akasha",
       "rank": "Veteran",
-      "power": 894164390,
+      "power": 894262310,
       "tower": 0,
       "chests": {
         "Barbarentruhe (Gruft Level 15)": 1,
@@ -2099,7 +2100,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 360,
       "bankedTowerPoints": 50
     },
     {
