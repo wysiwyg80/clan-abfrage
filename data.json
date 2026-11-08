@@ -2423,16 +2423,16 @@
     },
     {
       "name": "EzeCABJ",
-      "rank": "Soldat",
-      "chests": {},
+      "rank": "Veteran",
+      "hero_level": 381,
+      "power": 1190015621,
       "tower": 0,
       "silver": 0,
-      "power": 1190015621,
-      "hero_level": 381,
-      "prevPower": 0,
-      "activeDays": 28,
       "customGoal": null,
-      "joinDate": "2026-11-08"
+      "joinDate": "2026-11-08",
+      "chests": {},
+      "bankedTowerPoints": 0,
+      "growth": 0
     }
   ],
   "evalStartDate": "2026-11-01",
@@ -2440,5 +2440,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-08T13:31:44.657Z"
+  "lastUpdated": "2026-11-08T13:35:42.300Z"
 }
