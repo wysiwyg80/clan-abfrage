@@ -1577,7 +1577,7 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
-      "power": 225887841,
+      "power": 227039151,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
@@ -1612,13 +1612,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 236,
       "bankedTowerPoints": 50
     },
     {
       "name": "Farés Dz",
       "rank": "Offizier",
-      "power": 183654080,
+      "power": 190655983,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
@@ -1665,7 +1665,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 219,
       "bankedTowerPoints": 50
     },
     {
