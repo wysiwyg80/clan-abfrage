@@ -524,7 +524,7 @@
     {
       "name": "Elginan",
       "rank": "Offizier",
-      "power": 306252596,
+      "power": 312395806,
       "tower": 0,
       "chests": {
         "Knochentruhe (Gruft Level 25)": 1,
@@ -559,7 +559,8 @@
       "prevPower": 293038296,
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "hero_level": 237
     },
     {
       "name": "Dalas",
@@ -1497,7 +1498,7 @@
     {
       "name": "Delalen",
       "rank": "Offizier",
-      "power": 339380599,
+      "power": 358172069,
       "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 3,
@@ -1528,13 +1529,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 270,
       "bankedTowerPoints": 50
     },
     {
       "name": "Loki",
       "rank": "Offizier",
-      "power": 260142706,
+      "power": 262375156,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 3,
@@ -1570,7 +1571,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 233,
       "bankedTowerPoints": 50
     },
     {
@@ -2226,7 +2227,7 @@
     {
       "name": "Rysiek121",
       "rank": "Offizier",
-      "power": 1282443335,
+      "power": 1319490025,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
@@ -2296,7 +2297,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 409,
       "bankedTowerPoints": 50
     },
     {
@@ -2385,7 +2386,7 @@
     {
       "name": "Spartakus",
       "rank": "Offizier",
-      "power": 1554846031,
+      "power": 1556072281,
       "tower": 0,
       "chests": {
         "Fenrirs Truhe (Epischer Fenrir-Trupp)": 20,
