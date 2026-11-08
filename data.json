@@ -202,7 +202,8 @@
     "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 25,
     "Olympus-Elite-Truhe (Event „Prüfungen von Olympus“)": 0,
     "Turmbau": 50,
-    "Aufgegebene Truhe (Epische Gruft Level 30)": 75
+    "Aufgegebene Truhe (Epische Gruft Level 30)": 75,
+    "Truhe der Verfluchten (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -1726,7 +1727,8 @@
         "Sandtruhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Sandtruhe (Gruft Level 20)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 1
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
+        "Truhe der Verfluchten (Epische Gruft Level 15)": 1
       },
       "growth": 0,
       "silver": 0,
