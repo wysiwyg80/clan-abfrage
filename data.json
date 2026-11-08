@@ -567,7 +567,7 @@
     {
       "name": "Dalas",
       "rank": "Veteran",
-      "power": 256516475,
+      "power": 265435735,
       "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 13,
@@ -590,7 +590,7 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 234,
       "bankedTowerPoints": 50
     },
     {
@@ -603,13 +603,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 222,
       "bankedTowerPoints": 0
     },
     {
       "name": "Carruggi 5r",
       "rank": "Veteran",
-      "power": 238713385,
+      "power": 239786835,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
@@ -645,13 +645,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 222,
       "bankedTowerPoints": 50
     },
     {
       "name": "ICHNOS",
       "rank": "Veteran",
-      "power": 236337775,
+      "power": 241039155,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 3,
@@ -689,13 +689,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 231,
       "bankedTowerPoints": 50
     },
     {
       "name": "Lee the Ugly",
       "rank": "Veteran",
-      "power": 235685731,
+      "power": 246728601,
       "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
@@ -710,13 +710,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 232,
       "bankedTowerPoints": 50
     },
     {
       "name": "kordy",
       "rank": "Veteran",
-      "power": 227596441,
+      "power": 236544591,
       "tower": 0,
       "chests": {
         "Fenrirs Truhe (Epischer Fenrir-Trupp)": 1,
@@ -728,7 +728,8 @@
       "joinDate": "2026-11-01",
       "prevPower": 226896441,
       "activeDays": 1,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "hero_level": 222
     },
     {
       "name": "Ajax",
