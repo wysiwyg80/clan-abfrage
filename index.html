@@ -189,7 +189,7 @@
                         <i class="fa-solid fa-tags"></i> Truhen-Bezeichnungen & Punktwerte
                     </h3>
                     <div class="flex flex-wrap items-center gap-2 no-print">
-                        <button onclick="checkForNewOrUnknownChests()" class="bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Zeigt Truhen an, die von Python neu importiert wurden, aber noch nicht in der Haupt-Liste stehen">
+                        <button onclick="checkForNewOrUnknownChests()" class="bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Zeigt Truhen an, die aktuell noch 0 Punkte haben">
                             <i class="fa-solid fa-magnifying-glass-plus"></i> 🔍 Neue Truhen anzeigen
                         </button>
                         <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
@@ -1175,35 +1175,19 @@
         }
 
         function checkForNewOrUnknownChests() {
-            let knownTypes = Object.keys(chestTypeValues);
-            let foundNewTypes = new Set();
-
-            clanData.forEach(p => {
-                if (p.chests) {
-                    Object.keys(p.chests).forEach(cName => {
-                        let count = Number(p.chests[cName]) || 0;
-                        if (count > 0 && !knownTypes.includes(cName)) {
-                            foundNewTypes.add(cName);
-                        }
-                    });
+            let zeroPointChests = [];
+            
+            Object.entries(chestTypeValues).forEach(([cName, cVal]) => {
+                if (Number(cVal) === 0 && cName !== "Turmbau") {
+                    zeroPointChests.push(cName);
                 }
             });
 
-            if (foundNewTypes.size === 0) {
-                alert("Alles aktuell! Es wurden keine neuen oder unbekannten Truhentypen in den importierten Spielerdaten gefunden.");
+            if (zeroPointChests.length === 0) {
+                alert("Alles aktuell! Es gibt aktuell keine Truhen mit 0 Punkten in deiner Konfiguration.");
             } else {
-                let listStr = Array.from(foundNewTypes).join("\n• ");
-                let addNow = confirm(`🔍 Folgende neue Truhe(n) wurden in den Spieldaten entdeckt:\n\n• ${listStr}\n\nMöchtest du diese neuen Truhen direkt zur Konfigurationsliste hinzufügen (mit 0 Punkten vorbelegt), um Punktewerte festzulegen?`);
-                
-                if (addNow) {
-                    foundNewTypes.forEach(newChest => {
-                        if (chestTypeValues[newChest] === undefined) {
-                            chestTypeValues[newChest] = 0;
-                        }
-                    });
-                    saveData();
-                    alert("Neue Truhe(n) wurden zur Konfigurationsliste hinzugefügt! Du kannst ihnen jetzt Punktewerte zuweisen.");
-                }
+                let listStr = zeroPointChests.join("\n• ");
+                alert(`🔍 Folgende Truhe(n) stehen aktuell noch auf 0 Punkten:\n\n• ${listStr}\n\nDu kannst ihnen jetzt oben in der Liste direkt den passenden Punktewert zuweisen!`);
             }
         }
 
