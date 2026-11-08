@@ -1363,7 +1363,7 @@
     {
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
-      "power": 398731880,
+      "power": 406240935,
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
@@ -1395,13 +1395,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 249,
       "bankedTowerPoints": 50
     },
     {
       "name": "kikito",
       "rank": "Vorgesetzter",
-      "power": 276856401,
+      "power": 293139021,
       "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 12,
@@ -1431,13 +1431,13 @@
       "silver": 0,
       "joinDate": "2026-11-01",
       "customGoal": null,
-      "hero_level": 0,
+      "hero_level": 209,
       "bankedTowerPoints": 50
     },
     {
       "name": "Frederico Freitas",
       "rank": "Vorgesetzter",
-      "power": 125954066,
+      "power": 128566016,
       "tower": 0,
       "chests": {
         "Schöne Truhe (Gruft Level 25)": 1,
@@ -1454,7 +1454,8 @@
       "joinDate": "2026-11-01",
       "activeDays": 1,
       "customGoal": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "hero_level": 195
     },
     {
       "name": "Goll",
