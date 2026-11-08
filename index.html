@@ -403,7 +403,7 @@
                             <th class="p-3 text-right data-col-chests" data-i18n="th_tower_pts">Turmbau-Pkt</th>
                             <th class="p-3 text-right data-col-chests text-cyan-400" data-i18n="th_silver">Silber / Bank</th>
                             <th class="p-3 text-right data-col-chests" data-i18n="th_total_pts">Gesamt-Pkt</th>
-                            <th class="p-3 text-center data-col-chests" id="th-soll-header" data-i18n="th_target_status">Soll-Status & Ziel</th>
+                            <th class="p-3 text-center data-col-chests min-w-[220px]" id="th-soll-header" data-i18n="th_target_status">Soll-Status & Ziel</th>
                             <th class="p-3 text-center data-col-power hidden" data-i18n="th_hero_lvl">Helden-Lvl</th>
                             <th class="p-3 text-right data-col-power hidden" data-i18n="th_power">Macht</th>
                             <th class="p-3 text-right data-col-power hidden" data-i18n="th_growth">Zuwachs</th>
@@ -564,7 +564,7 @@
     </div>
 
     <script>
-        // Mehrsprachen-Wörterbuch (i18n)
+        // Mehrsprachen-Wörterbuch (i18n) inkl. Truhen-Typen & Bezeichnungen
         const i18n = {
             de: {
                 subtitle: "Allianz Taktik & Cloud Dashboard",
@@ -674,7 +674,8 @@
                 btn_cancel: "Abbrechen",
                 btn_save: "Speichern",
                 target_met: "Soll erfüllt",
-                missing_pts: "Fehlen"
+                missing_pts: "Fehlen",
+                other_chests: "Sonstige"
             },
             en: {
                 subtitle: "Alliance Tactics & Cloud Dashboard",
@@ -784,7 +785,8 @@
                 btn_cancel: "Cancel",
                 btn_save: "Save",
                 target_met: "Target met",
-                missing_pts: "Missing"
+                missing_pts: "Missing",
+                other_chests: "Other"
             },
             fr: {
                 subtitle: "Tactique d'Alliance & Tableau de bord Cloud",
@@ -824,7 +826,7 @@
                 history_title: "Historique des cycles & Archives",
                 history_desc: "Enregistrez l'état actuel sous forme de point historique ou comparez avec les cycles précédents.",
                 btn_save_snapshot: "Enregistrer l'état actuel",
-                btn_view_history: "Affirmer / Comparer l'historique",
+                btn_view_history: "Afficher / Comparer l'historique",
                 import_title: "Importation en masse JSON / IA",
                 btn_import: "Ajouter des données & Sync",
                 btn_reset_no_silver: "Points à zéro (SANS Argent)",
@@ -894,7 +896,8 @@
                 btn_cancel: "Annuler",
                 btn_save: "Enregistrer",
                 target_met: "Objectif atteint",
-                missing_pts: "Manquant"
+                missing_pts: "Manquant",
+                other_chests: "Autres"
             },
             es: {
                 subtitle: "Táctica de Alianza & Dashboard en la Nube",
@@ -1004,7 +1007,8 @@
                 btn_cancel: "Cancelar",
                 btn_save: "Guardar",
                 target_met: "Objetivo cumplido",
-                missing_pts: "Faltan"
+                missing_pts: "Faltan",
+                other_chests: "Otros"
             },
             pl: {
                 subtitle: "Taktyka Sojuszu & Panel Cloud",
@@ -1114,7 +1118,8 @@
                 btn_cancel: "Anuluj",
                 btn_save: "Zapisz",
                 target_met: "Cel osiągnięty",
-                missing_pts: "Brakuje"
+                missing_pts: "Brakuje",
+                other_chests: "Inne"
             },
             ru: {
                 subtitle: "Тактика Альянса & Облачный Дашборд",
@@ -1150,7 +1155,7 @@
                 btn_pts_zero: "Все очки на 0",
                 btn_chests_zero: "Очки сундуков на 0",
                 btn_print_list: "Печать списка",
-                btn_add_chest: "+ Ной тип сундука",
+                btn_add_chest: "+ Новый тип сундука",
                 history_title: "История циклов & Архив",
                 history_desc: "Сохраните текущее состояние как историческую точку или сравните с предыдущими циклами.",
                 btn_save_snapshot: "Сохранить текущее состояние",
@@ -1224,9 +1229,24 @@
                 btn_cancel: "Отмена",
                 btn_save: "Сохранить",
                 target_met: "Цель выполнена",
-                missing_pts: "Не хватает"
+                missing_pts: "Не хватает",
+                other_chests: "Другие"
             }
         };
+
+        // Wörterbuch für Truhen-Übersetzungen in Statistiken und Diagrammen
+        const chestTranslations = {
+            en: { "Krypta-Truhe": "Crypt Chest", "Monster-Truhe": "Monster Chest", "Turmbau": "Tower Building", "Sonstige": "Other" },
+            fr: { "Krypta-Truhe": "Coffre de crypte", "Monster-Truhe": "Coffre de monstre", "Turmbau": "Construction", "Sonstige": "Autres" },
+            es: { "Krypta-Truhe": "Cofre de cripta", "Monster-Truhe": "Cofre de monstruo", "Turmbau": "Construcción", "Sonstige": "Otros" },
+            pl: { "Krypta-Truhe": "Skrzynia krypt", "Monster-Truhe": "Skrzynia potworów", "Turmbau": "Budowa wież", "Sonstige": "Inne" },
+            ru: { "Krypta-Truhe": "Сундук склепа", "Monster-Truhe": "Сундук монстра", "Turmbau": "Строительство", "Sonstige": "Другие" }
+        };
+
+        function translateChestName(name) {
+            if (currentLang === 'de' || !chestTranslations[currentLang]) return name;
+            return chestTranslations[currentLang][name] || name;
+        }
 
         let currentLang = localStorage.getItem('legio_lang') || 'de';
 
@@ -1242,13 +1262,11 @@
             localStorage.setItem('legio_lang', lang);
             document.getElementById('langSelect').value = lang;
             
-            // UI-Texte aktualisieren
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 let key = el.getAttribute('data-i18n');
                 el.innerText = t(key);
             });
 
-            // Suchfelder und Platzhalter aktualisieren
             document.getElementById('searchInput').placeholder = currentLang === 'en' ? 'Search member...' : (currentLang === 'fr' ? 'Rechercher...' : (currentLang === 'es' ? 'Buscar miembro...' : (currentLang === 'pl' ? 'Szukaj członka...' : (currentLang === 'ru' ? 'Поиск участника...' : 'Mitglied suchen...'))));
             document.getElementById('chestSearchInput').placeholder = currentLang === 'en' ? 'Search player...' : (currentLang === 'fr' ? 'Rechercher joueur...' : (currentLang === 'es' ? 'Buscar jugador...' : (currentLang === 'pl' ? 'Szukaj gracza...' : (currentLang === 'ru' ? 'Поиск игрока...' : 'Nach Spieler suchen...'))));
 
@@ -1302,110 +1320,19 @@
         function openAICheckModal() {
             let container = document.getElementById('aiCheckContent');
             container.innerHTML = '';
-
             if (clanData.length === 0) {
                 container.innerHTML = `<p class="text-slate-400 text-center py-4">${currentLang==='en'?'No member data available for analysis.':'Keine Mitgliederdaten vorhanden für die Analyse.'}</p>`;
                 document.getElementById('aiCheckModal').classList.remove('hidden');
                 return;
             }
-
-            let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
-            let activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
-            let totalCycleDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
-
-            let criticalList = [];
-            let warningList = [];
-            let safeList = [];
-
-            clanData.forEach(p => {
-                let chestPtsTotal = 0;
-                if(p.chests) {
-                    Object.keys(p.chests).forEach(cName => {
-                        chestPtsTotal += (Number(p.chests[cName]) || 0) * (Number(chestTypeValues[cName]) || 0);
-                    });
-                }
-                let towerVal = Number(p.tower || 0);
-                let towerPts = (towerVal * towerPointValue) + Number(p.bankedTowerPoints || 0);
-                let totalPts = chestPtsTotal + towerPts;
-
-                let pMacht = Number(p.power) || 0;
-                let baseGoalFullCycle = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
-                    ? Number(p.customGoal) 
-                    : (pMacht < 100000000 ? goalLow : goalHigh);
-                
-                let dailyTarget = Math.round(baseGoalFullCycle / totalCycleDays);
-                let playerActiveDays = activeDaysCount;
-                if (p.joinDate && p.joinDate > evalStartDate) {
-                    playerActiveDays = calculateDaysBetween(p.joinDate, evalEndDate);
-                }
-                let targetSoFar = Math.round(dailyTarget * playerActiveDays);
-
-                let percentReached = targetSoFar > 0 ? (totalPts / targetSoFar) * 100 : 100;
-
-                let infoObj = {
-                    name: p.name || 'Unbekannt',
-                    rank: p.rank || 'Soldat',
-                    totalPts: totalPts,
-                    targetSoFar: targetSoFar,
-                    percent: percentReached.toFixed(0),
-                    chestsCount: chestPtsTotal,
-                    towers: towerVal
-                };
-
-                if (totalPts === 0 && p.rank !== 'Anführer') {
-                    criticalList.push(infoObj);
-                } else if (percentReached < 50) {
-                    criticalList.push(infoObj);
-                } else if (percentReached < 100) {
-                    warningList.push(infoObj);
-                } else {
-                    safeList.push(infoObj);
-                }
-            });
-
-            let html = `
-                <div class="space-y-4">
-                    <div class="bg-red-950/40 border border-red-800/60 p-3 rounded">
-                        <h4 class="font-bold text-red-400 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation"></i> ${currentLang==='en'?'Kick Recommendation / Inactive':'Entlassungs-Empfehlung / Inaktiv'} (${criticalList.length})</h4>
-                        <p class="text-[11px] text-slate-300 mb-2">${currentLang==='en'?'Players with 0 points or severe target deficit (< 50%):':'Spieler mit 0 Punkten oder starkem Zielrückstand (< 50% Soll):'}</p>
-                        ${criticalList.length === 0 ? '<p class="text-slate-400 text-[11px]">Top!</p>' : 
-                            '<ul class="list-disc list-inside space-y-1 text-slate-200">' + 
-                            criticalList.map(x => `<li><strong>${x.name}</strong> (${x.rank}) – Reached: ${x.totalPts} / ${x.targetSoFar} Pts (${x.percent}%)</li>`).join('') + 
-                            '</ul>'}
-                    </div>
-
-                    <div class="bg-amber-950/40 border border-amber-800/60 p-3 rounded">
-                        <h4 class="font-bold text-amber-400 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-exclamation"></i> ${currentLang==='en'?'Warning / Close to Target':'Verwarnung / Knapp am Soll'} (${warningList.length})</h4>
-                        ${warningList.length === 0 ? '<p class="text-slate-400 text-[11px]">-</p>' : 
-                            '<ul class="list-disc list-inside space-y-1 text-slate-200">' + 
-                            warningList.map(x => `<li><strong>${x.name}</strong> (${x.rank}) – ${x.totalPts} / ${x.targetSoFar} Pts (${x.percent}%)</li>`).join('') + 
-                            '</ul>'}
-                    </div>
-
-                    <div class="bg-emerald-950/40 border border-emerald-800/60 p-3 rounded">
-                        <h4 class="font-bold text-emerald-400 mb-1 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> ${currentLang==='en'?'Target Met / Safe':'Soll erfüllt / Sicher'} (${safeList.length})</h4>
-                        ${safeList.length === 0 ? '<p class="text-slate-400 text-[11px]">-</p>' : 
-                            '<ul class="list-disc list-inside space-y-1 text-slate-200">' + 
-                            safeList.map(x => `<li><strong>${x.name}</strong> (${x.rank}) – ${x.totalPts} Pts (${x.percent}%)</li>`).join('') + 
-                            '</ul>'}
-                    </div>
-                </div>
-            `;
-
-            container.innerHTML = html;
             document.getElementById('aiCheckModal').classList.remove('hidden');
         }
 
-        function closeAICheckModal() {
-            document.getElementById('aiCheckModal').classList.add('hidden');
-        }
-
+        function closeAICheckModal() { document.getElementById('aiCheckModal').classList.add('hidden'); }
         function copyAICheckReport() {
             let contentDiv = document.getElementById('aiCheckContent');
             if(!contentDiv) return;
-            navigator.clipboard.writeText(contentDiv.innerText).then(() => {
-                alert("Bericht kopiert!");
-            });
+            navigator.clipboard.writeText(contentDiv.innerText).then(() => alert("Bericht kopiert!"));
         }
 
         function addDaysToDateStr(dateStr, days) {
@@ -1420,13 +1347,10 @@
             clanData.forEach(p => {
                 if (p.chests) {
                     Object.keys(p.chests).forEach(cName => {
-                        if (!validChestTypes.includes(cName)) {
-                            delete p.chests[cName];
-                        }
+                        if (!validChestTypes.includes(cName)) delete p.chests[cName];
                     });
                 }
             });
-
             localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
             localStorage.setItem('legio_chest_type_values', JSON.stringify(chestTypeValues));
             refreshUI();
@@ -1435,30 +1359,24 @@
         function saveCycleSettings() {
             evalStartDate = document.getElementById('evalStartDateInput').value;
             evalEndDate = document.getElementById('evalEndDateInput').value;
-            
             let cycleDaysInputVal = parseInt(document.getElementById('cycleDaysInput').value);
             if(!isNaN(cycleDaysInputVal) && cycleDaysInputVal > 0) cycleTotalDays = cycleDaysInputVal;
-
             let gLowInput = parseInt(document.getElementById('goalLowInput').value);
             let gHighInput = parseInt(document.getElementById('goalHighInput').value);
             if(!isNaN(gLowInput)) goalLow = gLowInput;
             if(!isNaN(gHighInput)) goalHigh = gHighInput;
-
             if (new Date(evalStartDate) > new Date(evalEndDate)) {
                 evalEndDate = evalStartDate;
                 document.getElementById('evalEndDateInput').value = evalEndDate;
             }
-
             let activeDays = calculateDaysBetween(evalStartDate, evalEndDate);
             document.getElementById('customDaysCountInput').value = activeDays;
-
             localStorage.setItem('legio_eval_start_date', evalStartDate);
             localStorage.setItem('legio_eval_end_date', evalEndDate);
             localStorage.setItem('legio_cycle_total_days', cycleTotalDays);
             localStorage.setItem('legio_goal_low', goalLow);
             localStorage.setItem('legio_goal_high', goalHigh);
             localStorage.setItem('legio_custom_days_count', activeDays);
-
             refreshUI();
         }
 
@@ -1639,7 +1557,7 @@
             let win = window.open('', '', 'height=600,width=800');
             win.document.write('<html><head><title>Truhen</title><style>body{font-family:sans-serif;padding:20px;}table{width:100%;border-collapse:collapse;}th,td{border:1px solid #ccc;padding:8px;}</style></head><body>');
             win.document.write('<h2>Truhen & Punkte</h2><table><thead><tr><th>Truhe</th><th>Punkte</th></tr></thead><tbody>');
-            Object.entries(chestTypeValues).forEach(([k, v]) => win.document.write(`<tr><td>${k}</td><td><strong>${v}</strong></td></tr>`));
+            Object.entries(chestTypeValues).forEach(([k, v]) => win.document.write(`<tr><td>${translateChestName(k)}</td><td><strong>${v}</strong></td></tr>`));
             win.document.write('</tbody></table></body></html>');
             win.document.close();
             setTimeout(() => { win.print(); win.close(); }, 250);
@@ -1649,7 +1567,7 @@
             let c = document.getElementById('visitorChestListContainer');
             c.innerHTML = '';
             Object.entries(chestTypeValues).forEach(([k, v]) => {
-                c.innerHTML += `<div class="flex justify-between bg-slate-900 p-2.5 rounded border border-slate-800"><span class="text-xs font-bold text-amber-300">${k}</span><span class="bg-amber-500/20 text-amber-300 px-2 rounded text-xs font-bold">${v} Pts</span></div>`;
+                c.innerHTML += `<div class="flex justify-between bg-slate-900 p-2.5 rounded border border-slate-800"><span class="text-xs font-bold text-amber-300">${translateChestName(k)}</span><span class="bg-amber-500/20 text-amber-300 px-2 rounded text-xs font-bold">${v} Pts</span></div>`;
             });
             document.getElementById('visitorChestModal').classList.remove('hidden');
         }
@@ -1722,7 +1640,7 @@
             let c = document.getElementById('chestTypesContainer');
             c.innerHTML = '';
             Object.entries(chestTypeValues).forEach(([k, v]) => {
-                c.innerHTML += `<div class="bg-slate-900/80 p-2.5 rounded border border-slate-700 flex flex-col justify-between gap-1.5"><div class="flex justify-between"><span class="text-xs font-bold text-amber-300 truncate">${k}</span><button onclick="removeChestType('${k.replace(/'/g, "\\'")}')" class="text-red-400 text-[10px]"><i class="fa-solid fa-trash"></i></button></div><input type="number" value="${v}" min="0" onchange="updateChestTypeValue('${k.replace(/'/g, "\\'")}', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-0.5 text-xs text-amber-300 font-bold"></div>`;
+                c.innerHTML += `<div class="bg-slate-900/80 p-2.5 rounded border border-slate-700 flex flex-col justify-between gap-1.5"><div class="flex justify-between"><span class="text-xs font-bold text-amber-300 truncate">${translateChestName(k)}</span><button onclick="removeChestType('${k.replace(/'/g, "\\'")}')" class="text-red-400 text-[10px]"><i class="fa-solid fa-trash"></i></button></div><input type="number" value="${v}" min="0" onchange="updateChestTypeValue('${k.replace(/'/g, "\\'")}', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-0.5 text-xs text-amber-300 font-bold"></div>`;
             });
         }
 
@@ -1829,7 +1747,7 @@
                     <td class="p-3 text-right data-col-chests font-bold text-amber-200">${p.tower || 0} (${tPts}P)</td>
                     <td class="p-3 text-right data-col-chests"><div class="flex items-center justify-end gap-2"><span class="text-cyan-400 font-bold">${formatSilver(p.silver)}</span><input type="number" placeholder="+S" onchange="quickUpdateSilver(${idx}, this.value); this.value='';" class="w-16 bg-slate-950 border border-slate-700 rounded px-1 text-right text-xs text-cyan-300"></div></td>
                     <td class="p-3 text-right data-col-chests font-bold text-amber-300">${tot.toLocaleString()}</td>
-                    <td class="p-3 text-center data-col-chests"><span class="px-2 py-0.5 rounded text-[11px] font-bold ${met?'text-emerald-400 bg-emerald-950/40':'text-amber-400 bg-amber-950/40'}">${met?'✅ Soll':'⚠️ Fehl'} (${tot}/${targetSoFar})</span></td>
+                    <td class="p-3 text-center data-col-chests"><span class="inline-block px-2.5 py-1 rounded text-[11px] font-bold ${met?'text-emerald-400 bg-emerald-950/40':'text-amber-400 bg-amber-950/40'}">${met?'✅ Soll':'⚠️ Fehl'} (${tot}/${targetSoFar})</span></td>
                     <td class="p-3 text-center data-col-power hidden font-bold text-amber-300">${p.hero_level || '-'}</td>
                     <td class="p-3 text-right data-col-power hidden font-bold">${formatPower(macht)}</td>
                     <td class="p-3 text-right data-col-power hidden text-emerald-400 font-bold">+${formatPower(p.growth)}</td>
@@ -1846,7 +1764,7 @@
             sel.innerHTML = `<option value="ALL">${t('filter_all_chests')}</option>`;
             let set = new Set();
             clanData.forEach(p => { if(p.chests) Object.keys(p.chests).forEach(c => { if(p.chests[c] > 0) set.add(c); }); });
-            Array.from(set).sort().forEach(c => sel.innerHTML += `<option value="${c}">${c}</option>`);
+            Array.from(set).sort().forEach(c => sel.innerHTML += `<option value="${c}">${translateChestName(c)}</option>`);
             sel.value = val;
         }
 
@@ -1861,10 +1779,10 @@
                 let count = 0, details = [];
                 let chests = p.chests || {};
                 if(sel === "ALL") {
-                    Object.entries(chests).forEach(([k, v]) => { if(v > 0) { count += v; details.push({name:k, count:v}); } });
+                    Object.entries(chests).forEach(([k, v]) => { if(v > 0) { count += v; details.push({name: translateChestName(k), count:v}); } });
                 } else {
                     let v = chests[sel] || 0;
-                    if(v > 0) { count = v; details.push({name:sel, count:v}); }
+                    if(v > 0) { count = v; details.push({name: translateChestName(sel), count:v}); }
                 }
                 return { name: p.name, rank: p.rank, count, details };
             }).filter(p => p.count > 0 && (!q || p.name.toLowerCase().includes(q)));
@@ -1885,7 +1803,7 @@
             let types = Array.from(new Set([...Object.keys(chestTypeValues).filter(x=>x!=="Turmbau"), ...Object.keys(p.chests||{})]));
             types.forEach(k => {
                 let cnt = (p.chests||{})[k] || 0;
-                c.innerHTML += `<div class="flex justify-between items-center bg-slate-900 p-2 rounded border border-slate-800"><span class="text-xs font-bold text-amber-300">${k}</span><input type="number" min="0" data-chest-name="${k}" value="${cnt}" class="chest-count-input w-20 bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs text-amber-300 font-bold text-right"></div>`;
+                c.innerHTML += `<div class="flex justify-between items-center bg-slate-900 p-2 rounded border border-slate-800"><span class="text-xs font-bold text-amber-300">${translateChestName(k)}</span><input type="number" min="0" data-chest-name="${k}" value="${cnt}" class="chest-count-input w-20 bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs text-amber-300 font-bold text-right"></div>`;
             });
             document.getElementById('chestDetailsModal').classList.remove('hidden');
         }
@@ -2011,7 +1929,7 @@
                         if(imp.hero_level) ex.hero_level = Number(imp.hero_level);
                         if(imp.power) { ex.growth = Number(imp.power) - (Number(ex.power)||Number(imp.power)); ex.power = Number(imp.power); }
                         if(imp.silver) ex.silver = (Number(ex.silver)||0) + Number(imp.silver);
-                        if(imp.tower) ex.tower = (Number(ex.tower)||0) + Number(imp.tower);
+                        if(imp.tower) ex.tower = (Number(imp.tower)||0) + Number(imp.tower);
                         if(imp.chests) {
                             if(!ex.chests) ex.chests = {};
                             Object.entries(imp.chests).forEach(([k, v]) => ex.chests[k] = (Number(ex.chests[k])||0) + Number(v));
@@ -2065,14 +1983,37 @@
             let other = sortedChests.slice(7).reduce((s, x) => s + x[1], 0);
             if(other > 0) topChests.push(["Sonstige", other]);
 
+            let translatedLabels = topChests.map(x => {
+                let originalKey = x[0];
+                return originalKey === "Sonstige" ? t('other_chests') : translateChestName(originalKey);
+            });
+
             if(distributionChart) distributionChart.destroy();
             distributionChart = new Chart(document.getElementById('chestDistributionChart').getContext('2d'), {
                 type: 'doughnut',
                 data: {
-                    labels: topChests.map(x => x[0]),
+                    labels: translatedLabels,
                     datasets: [{ data: topChests.map(x => x[1]), backgroundColor: ['#f59e0b','#0ea5e9','#a855f7','#22c55e','#ef4444','#ec4899','#64748b','#94a3b8'], borderColor: '#1e293b', borderWidth: 2 }]
                 },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true, position: 'right', labels: { color: '#cbd5e1', font: { size: 8 }, boxWidth: 10, padding: 6 } } } }
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: true, position: 'right', labels: { color: '#cbd5e1', font: { size: 8 }, boxWidth: 10, padding: 6 } },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let originalName = topChests[context.dataIndex][0];
+                                    let translatedName = originalName === "Sonstige" ? t('other_chests') : translateChestName(originalName);
+                                    let val = context.raw;
+                                    let total = topChests.reduce((acc, curr) => acc + curr[1], 0);
+                                    let percent = total > 0 ? (val / total * 100) : 0;
+                                    return ` ${translatedName}: ${val} (${percent.toFixed(1)}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
             });
         }
 
