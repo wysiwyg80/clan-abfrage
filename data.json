@@ -686,7 +686,9 @@
       "rank": "Offizier",
       "power": 358172069,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Barbarentruhe (Gruft Level 20)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
