@@ -2414,7 +2414,8 @@
       "power": 56562286,
       "tower": 0,
       "chests": {
-        "Schöne Truhe (Gruft Level 15)": 1
+        "Schöne Truhe (Gruft Level 15)": 1,
+        "Steintruhe (Gruft Level 15)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-08",
