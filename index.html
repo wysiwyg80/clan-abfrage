@@ -189,6 +189,9 @@
                         <i class="fa-solid fa-tags"></i> Truhen-Bezeichnungen & Punktwerte
                     </h3>
                     <div class="flex flex-wrap items-center gap-2 no-print">
+                        <button onclick="checkForNewOrUnknownChests()" class="bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Prüfen, ob neue / unbekannte Truhen bei Mitgliedern eingetragen wurden">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i> Neue Truhen prüfen
+                        </button>
                         <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
                             <i class="fa-solid fa-arrow-down-1-9"></i> Nach Level sortieren
                         </button>
@@ -276,7 +279,7 @@
             </div>
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
                 <h3 class="text-xs font-bold text-amber-400 uppercase mb-1"><i class="fa-solid fa-chart-line"></i> Macht-Zuwachs</h3>
-                <p class="text-[10px] text-slate-400 mb-2">Top 10 · Gewinne und Verluste im Vergleich</p>
+                <p class="text-[10px] text-slate-400 mb-2">Top 10</p>
                 <div class="h-56"><canvas id="powerGrowthChart"></canvas></div>
             </div>
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
@@ -1171,6 +1174,39 @@
             alert("Truhen wurden erfolgreich nach Level / Stufe sortiert angezeigt!");
         }
 
+        function checkForNewOrUnknownChests() {
+            let knownTypes = Object.keys(chestTypeValues);
+            let foundNewTypes = new Set();
+
+            clanData.forEach(p => {
+                if (p.chests) {
+                    Object.keys(p.chests).forEach(cName => {
+                        let count = Number(p.chests[cName]) || 0;
+                        if (count > 0 && !knownTypes.includes(cName)) {
+                            foundNewTypes.add(cName);
+                        }
+                    });
+                }
+            });
+
+            if (foundNewTypes.size === 0) {
+                alert("Alles aktuell! Es wurden keine neuen oder unbekannten Truhentypen bei den Mitgliedern gefunden.");
+            } else {
+                let listStr = Array.from(foundNewTypes).join("\n• ");
+                let addNow = confirm(`🔍 Es wurden neue Truhentypen bei Mitgliedern entdeckt:\n\n• ${listStr}\n\nMöchtest du diese neuen Truhen direkt zur Konfiguration hinzufügen (mit 0 Punkten vorbelegt)?`);
+                
+                if (addNow) {
+                    foundNewTypes.forEach(newChest => {
+                        if (!chestTypeValues[newChest]) {
+                            chestTypeValues[newChest] = 0;
+                        }
+                    });
+                    saveData();
+                    alert("Neue Truhen wurden zur Liste hinzugefügt! Du kannst ihnen jetzt ihre Punktewerte zuweisen.");
+                }
+            }
+        }
+
         function resetAllChestPointValuesToZero() {
             if(confirm("Möchtest du wirklich die Punktewerte ALLER Truhenarten auf 0 zurücksetzen?")) {
                 Object.keys(chestTypeValues).forEach(k => {
@@ -1928,6 +1964,7 @@
 
             scoredList.sort((a, b) => b.points - a.points);
             let top10 = scoredList.slice(0, 10);
+            top10.reverse();
 
             if(topChart) topChart.destroy();
             topChart = new Chart(topCtx, {
@@ -1937,23 +1974,40 @@
                     datasets: [{
                         label: 'Gesamtpunkte',
                         data: top10.map(x => x.points),
-                        backgroundColor: 'rgba(217, 119, 6, 0.7)',
+                        backgroundColor: 'rgba(217, 119, 6, 0.78)',
                         borderColor: 'rgba(245, 158, 11, 1)',
-                        borderWidth: 1
+                        borderWidth: 1,
+                        borderRadius: 4
                     }]
                 },
                 options: {
+                    indexAxis: 'y',
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
+                    plugins: { 
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: context => ` ${context.raw.toLocaleString()} Pkt`
+                            }
+                        }
+                    },
                     scales: {
-                        y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } },
-                        x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+                        x: { 
+                            ticks: { 
+                                color: '#94a3b8',
+                                callback: value => value.toLocaleString()
+                            }, 
+                            grid: { color: '#334155' } 
+                        },
+                        y: { 
+                            ticks: { color: '#cbd5e1', font: { size: 9 } }, 
+                            grid: { display: false } 
+                        }
                     }
                 }
             });
 
-            // Machtzuwachs / Fallback auf Gesamtmacht, falls noch kein Zuwachs gemessen wurde
             scoredList.sort((a, b) => b.growth - a.growth);
             let topGrowth = scoredList.filter(x => x.growth !== 0).slice(0, 10);
             let isFallback = false;
@@ -1963,6 +2017,7 @@
                 let powerList = [...scoredList].sort((a, b) => b.power - a.power);
                 topGrowth = powerList.slice(0, 10).map(x => ({ name: x.name, growth: x.power }));
             }
+            topGrowth.reverse();
 
             if(growthChart) growthChart.destroy();
             growthChart = new Chart(growthCtx, {
@@ -2103,10 +2158,10 @@
                         ctx.fillStyle = '#ffffff';
 
                         meta.data.forEach((arc, index) => {
-                            const value = Number(dataset.data[index]) || 0;
-                            const percent = allChestTotal > 0 ? value / allChestTotal * 100 : 0;
+                            let value = Number(dataset.data[index]) || 0;
+                            let percent = allChestTotal > 0 ? value / allChestTotal * 100 : 0;
                             if (percent < 4) return;
-                            const point = arc.tooltipPosition();
+                            let point = arc.tooltipPosition();
                             ctx.shadowColor = 'rgba(0,0,0,0.8)';
                             ctx.shadowBlur = 3;
                             ctx.fillText(`${percent.toFixed(0)}%`, point.x, point.y);
