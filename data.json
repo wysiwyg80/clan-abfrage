@@ -194,7 +194,8 @@
     "Turmbau": 50,
     "Rare Dragon Chest (Level 20 rare Crypt)": 0,
     "Turtle Chest (Level 35 epic Crypt)": 0,
-    "Barbarian Chest (Level 35 epic Crypt)": 0
+    "Barbarian Chest (Level 35 epic Crypt)": 0,
+    "Scorpion Chest (Level 35 epic Crypt)": 0
   },
   "clanData": [
     {
@@ -1140,7 +1141,8 @@
       "tower": 0,
       "chests": {
         "Turtle Chest (Level 35 epic Crypt)": 1,
-        "Barbarian Chest (Level 35 epic Crypt)": 1
+        "Barbarian Chest (Level 35 epic Crypt)": 1,
+        "Scorpion Chest (Level 35 epic Crypt)": 1
       },
       "growth": 0,
       "silver": 0,
