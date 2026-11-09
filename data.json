@@ -212,7 +212,8 @@
     "Ancient Bastion Chest (Level 35 epic Crypt)": 0,
     "Gnome Workshop Chest (Level 25 Crypt)": 0,
     "Fire Chest (Level 25 Crypt)": 0,
-    "Stone Chest (Level 25 Crypt)": 0
+    "Stone Chest (Level 25 Crypt)": 0,
+    "Stone Chest (Level 20 Crypt)": 0
   },
   "clanData": [
     {
@@ -931,7 +932,8 @@
         "Scorpion Chest (Level 20 epic Crypt)": 1,
         "Titansteel Chest (Level 25 epic Crypt)": 1,
         "Infernal Chest (Level 20 Crypt)": 1,
-        "Mayan Chest (Level 20 Crypt)": 1
+        "Mayan Chest (Level 20 Crypt)": 1,
+        "Stone Chest (Level 20 Crypt)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
