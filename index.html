@@ -28,7 +28,7 @@
         }
 
         @media print {
-            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, #visitorChestModal, #aiCheckModal, .p-3 input[type="number"], #searchInput, #chestSearchInput, th:last-child, td:last-child, #paginationControls {
+            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, #visitorChestModal, #aiCheckModal, #newChestsModal, .p-3 input[type="number"], #searchInput, #chestSearchInput, th:last-child, td:last-child, #paginationControls {
                 display: none !important;
             }
             body { background-color: #ffffff !important; color: #000000 !important; padding: 0 !important; }
@@ -189,8 +189,8 @@
                         <i class="fa-solid fa-tags"></i> Truhen-Bezeichnungen & Punktwerte
                     </h3>
                     <div class="flex flex-wrap items-center gap-2 no-print">
-                        <button onclick="checkForNewOrUnknownChests()" class="bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Zeigt Truhen an, die von Python neu importiert wurden, aber noch nicht in der Haupt-Liste stehen">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i> 🔍 Neue Truhen anzeigen
+                        <button onclick="openNewChestsModal()" class="bg-emerald-900/80 hover:bg-emerald-800 text-emerald-200 border border-emerald-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1" title="Zeigt alle Truhen chronologisch nach Datums-Eingang an">
+                            <i class="fa-solid fa-calendar-check"></i> 🔍 Neue Truhen anzeigen
                         </button>
                         <button onclick="sortChestTypesByLevel()" class="bg-indigo-900/80 hover:bg-indigo-800 text-indigo-200 border border-indigo-700/60 text-[11px] font-bold px-2.5 py-1 rounded transition cursor-pointer flex items-center gap-1">
                             <i class="fa-solid fa-arrow-down-1-9"></i> Nach Level sortieren
@@ -424,6 +424,7 @@
 
     </main>
 
+    <!-- Modal für KI Check -->
     <div id="aiCheckModal" class="hidden fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-purple-500/50 rounded-xl p-5 w-full max-w-2xl space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
@@ -445,6 +446,29 @@
         </div>
     </div>
 
+    <!-- Modal für Neue Truhen mit Datum -->
+    <div id="newChestsModal" class="hidden fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-emerald-500/50 rounded-xl p-5 w-full max-w-xl space-y-4 shadow-2xl">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+                <h3 class="font-cinzel font-bold text-emerald-400 text-base flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-plus"></i> Chronologische Truhen-Eingänge (Nach Datum)
+                </h3>
+                <button onclick="closeNewChestsModal()" class="text-slate-400 hover:text-white cursor-pointer"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+            <p class="text-xs text-slate-300">Hier siehst du alle Truhen, sortiert nach dem Datum ihres ersten Auftauchens im System:</p>
+            
+            <div id="newChestsListContainer" class="space-y-2 max-h-80 overflow-y-auto custom-scrollbar pr-1 bg-slate-950/70 p-3 rounded border border-slate-800 text-xs"></div>
+
+            <div class="flex justify-between items-center pt-2 border-t border-slate-700">
+                <button onclick="addNewChestTypePrompt()" class="bg-emerald-600 hover:bg-emerald-500 text-slate-950 text-xs font-bold px-3 py-1.5 rounded transition cursor-pointer">
+                    + Neue Truhen-Art hinzufügen
+                </button>
+                <button onclick="closeNewChestsModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-4 py-1.5 rounded text-xs font-semibold cursor-pointer">Schließen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal für Besucher Truhen-Info -->
     <div id="visitorChestModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-lg space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
@@ -466,6 +490,7 @@
         </div>
     </div>
 
+    <!-- Modal für Truhen-Details -->
     <div id="chestDetailsModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-lg space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
@@ -491,6 +516,7 @@
         </div>
     </div>
 
+    <!-- Modal für Mitglied Bearbeiten -->
     <div id="editModal" class="hidden fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-amber-500/50 rounded-xl p-5 w-full max-w-md space-y-4 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
@@ -563,13 +589,29 @@
 
     <script>
         let clanData = JSON.parse(localStorage.getItem('legio_clan_data')) || [];
-        let chestTypeValues = JSON.parse(localStorage.getItem('legio_chest_type_values')) || {
-            "Krypta-Truhe": 10,
-            "Monster-Truhe": 5,
-            "Turmbau": 1
+        
+        let todayIso = new Date().toISOString().split('T')[0];
+
+        // Strukturierte Punktewerte mit Datums-Erfassung (firstSeen)
+        let rawChestTypeValues = JSON.parse(localStorage.getItem('legio_chest_type_values')) || {
+            "Krypta-Truhe": { points: 10, firstSeen: todayIso },
+            "Monster-Truhe": { points: 5, firstSeen: todayIso },
+            "Turmbau": { points: 1, firstSeen: todayIso }
         };
 
-        let todayIso = new Date().toISOString().split('T')[0];
+        // Normalisierungs-Logik: Falls noch alte Daten ohne firstSeen existieren
+        let chestTypeValues = {};
+        Object.keys(rawChestTypeValues).forEach(key => {
+            if (typeof rawChestTypeValues[key] === 'number') {
+                chestTypeValues[key] = { points: rawChestTypeValues[key], firstSeen: todayIso };
+            } else {
+                chestTypeValues[key] = {
+                    points: rawChestTypeValues[key].points !== undefined ? rawChestTypeValues[key].points : 0,
+                    firstSeen: rawChestTypeValues[key].firstSeen || todayIso
+                };
+            }
+        });
+
         let evalStartDate = localStorage.getItem('legio_eval_start_date') || todayIso;
         let cycleTotalDays = parseInt(localStorage.getItem('legio_cycle_total_days')) || 28;
 
@@ -606,6 +648,13 @@
             "Soldat": 5
         };
 
+        function getChestPoints(typeName) {
+            if (chestTypeValues[typeName] !== undefined) {
+                return Number(chestTypeValues[typeName].points) || 0;
+            }
+            return 0;
+        }
+
         function openAICheckModal() {
             let container = document.getElementById('aiCheckContent');
             container.innerHTML = '';
@@ -616,7 +665,7 @@
                 return;
             }
 
-            let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
+            let towerPointValue = getChestPoints("Turmbau") || 1;
             let activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
             let totalCycleDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
 
@@ -628,7 +677,7 @@
                 let chestPtsTotal = 0;
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
-                        chestPtsTotal += (Number(p.chests[cName]) || 0) * (Number(chestTypeValues[cName]) || 0);
+                        chestPtsTotal += (Number(p.chests[cName]) || 0) * getChestPoints(cName);
                     });
                 }
                 let towerVal = Number(p.tower || 0);
@@ -726,6 +775,45 @@
             navigator.clipboard.writeText(text).then(() => {
                 alert("KI-Bericht in die Zwischenablage kopiert!");
             });
+        }
+
+        function openNewChestsModal() {
+            let container = document.getElementById('newChestsListContainer');
+            container.innerHTML = '';
+
+            let entries = Object.entries(chestTypeValues).map(([name, data]) => ({
+                name: name,
+                points: data.points,
+                firstSeen: data.firstSeen || todayIso
+            }));
+
+            // Chronologisch nach Datum sortieren (neueste zuerst)
+            entries.sort((a, b) => new Date(b.firstSeen) - new Date(a.firstSeen));
+
+            if (entries.length === 0) {
+                container.innerHTML = `<p class="text-slate-400 text-center py-4">Keine Truhen vorhanden.</p>`;
+            } else {
+                entries.forEach(item => {
+                    let card = document.createElement('div');
+                    card.className = "flex items-center justify-between gap-3 bg-slate-900 p-2.5 rounded border border-slate-800";
+                    card.innerHTML = `
+                        <div class="flex flex-col min-w-0">
+                            <span class="font-bold text-amber-300 truncate">${item.name}</span>
+                            <span class="text-[10px] text-cyan-400 font-medium">Erstmals entdeckt am: ${formatDateGerman(item.firstSeen)}</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="bg-amber-500/20 text-amber-300 px-2 py-1 rounded text-xs font-bold border border-amber-500/30">${item.points} Pkt</span>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+
+            document.getElementById('newChestsModal').classList.remove('hidden');
+        }
+
+        function closeNewChestsModal() {
+            document.getElementById('newChestsModal').classList.add('hidden');
         }
 
         function addDaysToDateStr(dateStr, days) {
@@ -1092,7 +1180,20 @@
                 clanData = fetchedData.clanData;
                 localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
             }
-            if(fetchedData.chestTypeValues) chestTypeValues = fetchedData.chestTypeValues;
+            if(fetchedData.chestTypeValues) {
+                let importedTypes = fetchedData.chestTypeValues;
+                chestTypeValues = {};
+                Object.keys(importedTypes).forEach(key => {
+                    if (typeof importedTypes[key] === 'number') {
+                        chestTypeValues[key] = { points: importedTypes[key], firstSeen: todayIso };
+                    } else {
+                        chestTypeValues[key] = {
+                            points: importedTypes[key].points !== undefined ? importedTypes[key].points : 0,
+                            firstSeen: importedTypes[key].firstSeen || todayIso
+                        };
+                    }
+                });
+            }
             if(fetchedData.evalStartDate) {
                 evalStartDate = fetchedData.evalStartDate;
                 localStorage.setItem('legio_eval_start_date', evalStartDate);
@@ -1122,10 +1223,11 @@
             printWindow.document.write('<style>body{font-family:sans-serif;padding:20px;} table{width:100%;border-collapse:collapse;margin-top:10px;} th,td{border:1px solid #ccc;padding:8px;text-align:left;} th{background:#f4f4f4;}</style>');
             printWindow.document.write('</head><body>');
             printWindow.document.write('<h2>🛡️ BAD LegioXEquentris - Truhen-Bezeichnungen & Punktwerte</h2>');
-            printWindow.document.write('<table><thead><tr><th>Truhen-Bezeichnung</th><th>Punktwert</th></tr></thead><tbody>');
+            printWindow.document.write('<table><thead><tr><th>Truhen-Bezeichnung</th><th>Punktwert</th><th>Entdeckt am</th></tr></thead><tbody>');
             
             Object.keys(chestTypeValues).forEach(typeName => {
-                printWindow.document.write(`<tr><td>${typeName}</td><td><strong>${chestTypeValues[typeName]} Pkt</strong></td></tr>`);
+                let data = chestTypeValues[typeName];
+                printWindow.document.write(`<tr><td>${typeName}</td><td><strong>${data.points} Pkt</strong></td><td>${formatDateGerman(data.firstSeen)}</td></tr>`);
             });
             
             printWindow.document.write('</tbody></table></body></html>');
@@ -1141,12 +1243,12 @@
             if(Object.keys(chestTypeValues).length === 0) {
                 container.innerHTML = `<p class="text-xs text-slate-400 text-center py-4">Keine Truhen-Arten konfiguriert.</p>`;
             } else {
-                Object.entries(chestTypeValues).forEach(([typeName, typeValue]) => {
+                Object.entries(chestTypeValues).forEach(([typeName, typeData]) => {
                     let rowDiv = document.createElement('div');
                     rowDiv.className = "flex items-center justify-between gap-3 bg-slate-900 p-2.5 rounded border border-slate-800";
                     rowDiv.innerHTML = `
                         <span class="text-xs font-bold text-amber-300 truncate">${typeName}</span>
-                        <span class="bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded text-xs font-bold whitespace-nowrap border border-amber-500/30">${typeValue} Pkt</span>
+                        <span class="bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded text-xs font-bold whitespace-nowrap border border-amber-500/30">${typeData.points} Pkt</span>
                     `;
                     container.appendChild(rowDiv);
                 });
@@ -1182,46 +1284,13 @@
 
             chestTypeValues = sortedObj;
             saveData();
-            alert("Truhen wurden erfolgreich nach Level / Stufe sortiert angezeigt!");
-        }
-
-        function checkForNewOrUnknownChests() {
-            let knownTypes = Object.keys(chestTypeValues);
-            let foundNewTypes = new Set();
-
-            clanData.forEach(p => {
-                if (p.chests) {
-                    Object.keys(p.chests).forEach(cName => {
-                        let count = Number(p.chests[cName]) || 0;
-                        if (count > 0 && !knownTypes.includes(cName)) {
-                            foundNewTypes.add(cName);
-                        }
-                    });
-                }
-            });
-
-            if (foundNewTypes.size === 0) {
-                alert("Alles aktuell! Es wurden keine neuen oder unbekannten Truhentypen in den importierten Spielerdaten gefunden.");
-            } else {
-                let listStr = Array.from(foundNewTypes).join("\n• ");
-                let addNow = confirm(`🔍 Folgende neue Truhe(n) wurden in den Spieldaten entdeckt:\n\n• ${listStr}\n\nMöchtest du diese neuen Truhen direkt zur Konfigurationsliste hinzufügen (mit 0 Punkten vorbelegt), um Punktewerte festzulegen?`);
-                
-                if (addNow) {
-                    foundNewTypes.forEach(newChest => {
-                        if (chestTypeValues[newChest] === undefined) {
-                            chestTypeValues[newChest] = 0;
-                        }
-                    });
-                    saveData();
-                    alert("Neue Truhe(n) wurden zur Konfigurationsliste hinzugefügt! Du kannst ihnen jetzt Punktewerte zuweisen.");
-                }
-            }
+            alert("Truhen wurden erfolgreich nach Level / Stufe sortiert!");
         }
 
         function resetAllChestPointValuesToZero() {
             if(confirm("Möchtest du wirklich die Punktewerte ALLER Truhenarten auf 0 zurücksetzen?")) {
                 Object.keys(chestTypeValues).forEach(k => {
-                    chestTypeValues[k] = 0;
+                    chestTypeValues[k].points = 0;
                 });
                 saveData();
                 alert("Alle Truhen-Punktewerte wurden auf 0 gesetzt.");
@@ -1269,7 +1338,7 @@
                 return;
             }
 
-            Object.entries(chestTypeValues).forEach(([typeName, typeValue]) => {
+            Object.entries(chestTypeValues).forEach(([typeName, typeData]) => {
                 let card = document.createElement('div');
                 card.className = "bg-slate-900/80 p-2.5 rounded border border-slate-700 flex flex-col justify-between gap-1.5 shadow-sm";
                 card.innerHTML = `
@@ -1281,7 +1350,7 @@
                     </div>
                     <div class="flex items-center gap-2 pt-1">
                         <span class="text-[10px] text-slate-400">Punkte:</span>
-                        <input type="number" value="${typeValue}" min="0" onchange="updateChestTypeValue('${typeName.replace(/'/g, "\\'")}', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-0.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
+                        <input type="number" value="${typeData.points}" min="0" onchange="updateChestTypeValue('${typeName.replace(/'/g, "\\'")}', this.value)" class="w-full bg-slate-800 border border-slate-700 rounded px-2 py-0.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                     </div>
                 `;
                 container.appendChild(card);
@@ -1289,8 +1358,10 @@
         }
 
         function updateChestTypeValue(typeName, val) {
-            chestTypeValues[typeName] = parseInt(val) || 0;
-            saveData();
+            if (chestTypeValues[typeName]) {
+                chestTypeValues[typeName].points = parseInt(val) || 0;
+                saveData();
+            }
         }
 
         function removeChestType(typeName) {
@@ -1312,8 +1383,9 @@
             let name = prompt("Name der neuen Truhe (z.B. Event-Truhe Level 20):");
             if(name && name.trim() !== "") {
                 let pts = parseInt(prompt(`Wie viele Punkte gibt eine "${name}"?`, "5")) || 0;
-                chestTypeValues[name.trim()] = pts;
+                chestTypeValues[name.trim()] = { points: pts, firstSeen: todayIso };
                 saveData();
+                openNewChestsModal();
             }
         }
 
@@ -1338,7 +1410,7 @@
 
         function resetOnlyTowerPoints() {
             if(confirm("Möchtest du die Turm-Zähler auf 0 setzen, aber die bisherigen Turm-Punkte fest für die Gesamtbewertung sichern?")) {
-                let tVal = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
+                let tVal = getChestPoints("Turmbau") || 1;
                 clanData.forEach(p => {
                     let currentTowerPts = (Number(p.tower) || 0) * tVal;
                     p.bankedTowerPoints = (Number(p.bankedTowerPoints) || 0) + currentTowerPts;
@@ -1374,14 +1446,14 @@
             let totalSilver = 0;
             let totalPower = 0;
 
-            let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
+            let towerPointValue = getChestPoints("Turmbau") || 1;
 
             clanData.forEach(p => {
                 let cPts = 0;
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
                         let count = p.chests[cName] || 0;
-                        let val = chestTypeValues[cName] || 0;
+                        let val = getChestPoints(cName);
                         cPts += count * val;
                     });
                 }
@@ -1452,7 +1524,7 @@
             document.getElementById('prevPageBtn').disabled = currentPage === 1;
             document.getElementById('nextPageBtn').disabled = currentPage === totalPages || totalPages === 0;
 
-            let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
+            let towerPointValue = getChestPoints("Turmbau") || 1;
             let activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
             let totalCycleDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
 
@@ -1471,7 +1543,7 @@
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
                         let cnt = Number(p.chests[cName]) || 0;
-                        let val = Number(chestTypeValues[cName]) || 0;
+                        let val = getChestPoints(cName);
                         chestPtsTotal += cnt * val;
                     });
                 }
@@ -1692,7 +1764,7 @@
             } else {
                 combinedTypes.forEach(cName => {
                     let count = chests[cName] || 0;
-                    let val = chestTypeValues[cName] || 0;
+                    let val = getChestPoints(cName);
                     let rowDiv = document.createElement('div');
                     rowDiv.className = "flex items-center justify-between gap-3 bg-slate-900 p-2 rounded border border-slate-800";
                     rowDiv.innerHTML = `
@@ -1929,9 +2001,21 @@
                             if(!existing.chests) existing.chests = {};
                             Object.keys(imp.chests).forEach(cKey => {
                                 existing.chests[cKey] = (Number(existing.chests[cKey]) || 0) + Number(imp.chests[cKey]);
+                                
+                                // Automatische Datums-Erfassung für neuentdeckte Truhen
+                                if (cKey && cKey !== "Turmbau" && chestTypeValues[cKey] === undefined) {
+                                    chestTypeValues[cKey] = { points: 0, firstSeen: todayIso };
+                                }
                             });
                         }
                     } else {
+                        let newChestsObj = imp.chests || {};
+                        Object.keys(newChestsObj).forEach(cKey => {
+                            if (cKey && cKey !== "Turmbau" && chestTypeValues[cKey] === undefined) {
+                                chestTypeValues[cKey] = { points: 0, firstSeen: todayIso };
+                            }
+                        });
+
                         clanData.push({
                             name: imp.name,
                             rank: imp.rank || "Soldat",
@@ -1941,7 +2025,7 @@
                             tower: Number(imp.tower) || 0,
                             bankedTowerPoints: 0,
                             silver: Number(imp.silver) || 0,
-                            chests: imp.chests || {},
+                            chests: newChestsObj,
                             joinDate: todayIso
                         });
                     }
@@ -1949,7 +2033,7 @@
 
                 saveData();
                 document.getElementById('bulkImportText').value = '';
-                alert("Massen-Import erfolgreich!");
+                alert("Massen-Import erfolgreich! Neue Truhentypen wurden mit dem heutigen Datum registriert.");
             } catch(e) {
                 alert("Fehler beim Parsen des JSON: " + e.message);
             }
@@ -1960,13 +2044,13 @@
             let growthCtx = document.getElementById('powerGrowthChart').getContext('2d');
             let distCtx = document.getElementById('chestDistributionChart').getContext('2d');
 
-            let towerPointValue = chestTypeValues["Turmbau"] !== undefined ? Number(chestTypeValues["Turmbau"]) : 1;
+            let towerPointValue = getChestPoints("Turmbau") || 1;
 
             let scoredList = clanData.map(p => {
                 let pts = 0;
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
-                        pts += (Number(p.chests[cName]) || 0) * (Number(chestTypeValues[cName]) || 0);
+                        pts += (Number(p.chests[cName]) || 0) * getChestPoints(cName);
                     });
                 }
                 pts += (Number(p.tower || 0) * towerPointValue) + Number(p.bankedTowerPoints || 0);
@@ -2083,7 +2167,7 @@
                         let count = Number(p.chests[cName]) || 0;
                         if(count > 0) {
                             if(!chestDataMap[cName]) chestDataMap[cName] = 0;
-                            let valPerChest = Number(chestTypeValues[cName]) || 0;
+                            let valPerChest = getChestPoints(cName);
                             chestDataMap[cName] += count * valPerChest;
                         }
                     });
@@ -2158,11 +2242,9 @@
                                     let idx = tooltipItems[0].dataIndex;
                                     let fullName = sortedChestDistribution[idx] ? sortedChestDistribution[idx][0] : '';
                                     
-                                    // 100% dynamischer Zeilenumbruch basierend auf der Wortlänge und des Gesamttextes
                                     let words = fullName.split(' ');
                                     let lines = [];
                                     let currentLine = '';
-                                    // Dynamische Schwellenwert-Berechnung: Kurze Titel bleiben zusammen, lange teilen sich fließend auf
                                     let dynamicMax = fullName.length > 25 ? 14 : 18;
                                     
                                     words.forEach(word => {
