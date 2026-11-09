@@ -203,7 +203,8 @@
     "Mayan Chest (Level 25 Crypt)": 0,
     "Infernal Chest (Level 25 Crypt)": 0,
     "Mayan Chest (Level 20 Crypt)": 0,
-    "Elegant Chest (Level 25 Crypt)": 0
+    "Elegant Chest (Level 25 Crypt)": 0,
+    "Cobalt Chest (Level 35 epic Crypt)": 0
   },
   "clanData": [
     {
@@ -1158,7 +1159,8 @@
         "Turtle Chest (Level 35 epic Crypt)": 1,
         "Barbarian Chest (Level 35 epic Crypt)": 1,
         "Scorpion Chest (Level 35 epic Crypt)": 1,
-        "House of Horrors Chest (Level 35 epic Crypt)": 1
+        "House of Horrors Chest (Level 35 epic Crypt)": 1,
+        "Cobalt Chest (Level 35 epic Crypt)": 1
       },
       "growth": 0,
       "silver": 0,
