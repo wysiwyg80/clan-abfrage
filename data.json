@@ -193,7 +193,8 @@
     "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 25,
     "Turmbau": 50,
     "Rare Dragon Chest (Level 20 rare Crypt)": 0,
-    "Turtle Chest (Level 35 epic Crypt)": 0
+    "Turtle Chest (Level 35 epic Crypt)": 0,
+    "Barbarian Chest (Level 35 epic Crypt)": 0
   },
   "clanData": [
     {
@@ -1138,7 +1139,8 @@
       "power": 1190015621,
       "tower": 0,
       "chests": {
-        "Turtle Chest (Level 35 epic Crypt)": 1
+        "Turtle Chest (Level 35 epic Crypt)": 1,
+        "Barbarian Chest (Level 35 epic Crypt)": 1
       },
       "growth": 0,
       "silver": 0,
