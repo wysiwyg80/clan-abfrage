@@ -1178,7 +1178,9 @@
       "rank": "Veteran",
       "power": 166500878,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
