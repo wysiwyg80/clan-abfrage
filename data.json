@@ -1141,6 +1141,19 @@
       "customGoal": null,
       "hero_level": 381,
       "bankedTowerPoints": 0
+    },
+    {
+      "name": "ANZ",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 91131943,
+      "hero_level": 157,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-09"
     }
   ],
   "evalStartDate": "2026-11-08",
