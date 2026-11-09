@@ -479,7 +479,9 @@
       "rank": "Veteran",
       "power": 209162691,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe der Orks (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
