@@ -1045,7 +1045,9 @@
       "rank": "Veteran",
       "power": 812592,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe des Gouverneurs (Geschichte)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-01",
       "prevPower": 0,
