@@ -1010,7 +1010,9 @@
       "rank": "Offizier",
       "power": 312395806,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-01",
       "prevPower": 293038296,
