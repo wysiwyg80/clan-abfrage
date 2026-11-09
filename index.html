@@ -57,6 +57,9 @@
                 </div>
             </div>
             <div class="flex flex-wrap items-center gap-2">
+                <button onclick="toggleChartLang()" id="btnToggleLang" class="bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-600/40 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print" title="Diagramm-Beschriftung zwischen Deutsch und Englisch umschalten">
+                    🌐 Chart EN
+                </button>
                 <button onclick="openAICheckModal()" class="bg-purple-900/90 hover:bg-purple-800 text-purple-200 border border-purple-600/60 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print shadow-md" title="KI-Einschätzung zur Aktivität und Entlassungs-Empfehlungen aufrufen">
                     <i class="fa-solid fa-robot"></i> KI-Check (Entlassungen)
                 </button>
@@ -282,10 +285,15 @@
                 <p class="text-[10px] text-slate-400 mb-2">Top 10</p>
                 <div class="h-56"><canvas id="powerGrowthChart"></canvas></div>
             </div>
-            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
-                <h3 class="text-xs font-bold text-amber-400 uppercase mb-1"><i class="fa-solid fa-pie-chart"></i> Truhen-Verteilung</h3>
-                <p class="text-[10px] text-slate-400 mb-2">Anteil an allen erfassten Truhen</p>
-                <div class="h-56"><canvas id="chestDistributionChart"></canvas></div>
+            <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center mb-1">
+                        <h3 class="text-xs font-bold text-amber-400 uppercase"><i class="fa-solid fa-pie-chart"></i> Truhen-Verteilung</h3>
+
+                    </div>
+                    <p class="text-[10px] text-slate-400 mb-2" id="chestDistSubtitle">Anteil an allen erfassten Truhen nach Gesamtpunkten</p>
+                </div>
+                <div class="h-52 relative"><canvas id="chestDistributionChart"></canvas></div>
             </div>
         </div>
 
@@ -583,6 +591,27 @@
 
         let activeTab = 'chests';
         let topChart = null, growthChart = null, distributionChart = null;
+        
+        let chartLang = 'de';
+
+        const chestTranslations = {
+            "Krypta-Truhe": "Crypt Chest",
+            "Monster-Truhe": "Monster Chest",
+            "Turmbau": "Tower Building",
+            "Sonstige": "Other",
+            "Event-Truhe": "Event Chest"
+        };
+
+        function toggleChartLang() {
+            chartLang = chartLang === 'de' ? 'en' : 'de';
+            let btn = document.getElementById('btnToggleLang');
+            if(btn) {
+                btn.innerText = chartLang === 'de' ? '🌐 Chart EN' : '🌐 Chart DE';
+            }
+            renderCharts();
+        }
+
+
 
         let currentPage = 1;
         let pageSize = 25;
@@ -703,7 +732,7 @@
             if(!contentDiv) return;
             
             let text = "🤖 KI-Aktivitäts- & Entlassungs-Analyse - BAD LegioXEquentris\n\n";
-            contentDiv.querySelectorAll('.bg-red-950\\/40, .bg-amber-950\\/40, .bg-emerald-950\\/40').forEach(section => {
+            contentDiv.querySelectorAll('.bg-red-950\/40, .bg-amber-950\/40, .bg-emerald-950\/40').forEach(section => {
                 let title = section.querySelector('h4')?.innerText || "";
                 text += `--- ${title} ---\n`;
                 section.querySelectorAll('li').forEach(li => {
@@ -830,13 +859,13 @@
             
             clanData.forEach(p => {
                 csvRows.push([
-                    `"${p.name || ''}"`,
-                    `"${p.rank || 'Soldat'}"`,
+                    `\"${p.name || ''}\"`,
+                    `\"${p.rank || 'Soldat'}\"`,
                     p.hero_level || 0,
                     p.power || 0,
                     p.tower || 0,
                     p.silver || 0,
-                    `"${p.joinDate || ''}"`
+                    `\"${p.joinDate || ''}\"`
                 ].join(";"));
             });
 
@@ -2065,35 +2094,44 @@
                 }
             });
 
-            let chestCounts = {};
+            let chestDataMap = {};
             clanData.forEach(p => {
                 if(p.chests) {
                     Object.keys(p.chests).forEach(cName => {
                         let count = Number(p.chests[cName]) || 0;
                         if(count > 0) {
-                            chestCounts[cName] = (chestCounts[cName] || 0) + count;
+                            if(!chestDataMap[cName]) chestDataMap[cName] = { count: 0, points: 0 };
+                            chestDataMap[cName].count += count;
+                            let valPerChest = Number(chestTypeValues[cName]) || 0;
+                            chestDataMap[cName].points += count * valPerChest;
                         }
                     });
                 }
             });
 
-            let allChestTotal = Object.values(chestCounts).reduce((sum, count) => sum + count, 0);
-            let sortedAllChests = Object.entries(chestCounts).sort((a, b) => b[1] - a[1]);
-            let sortedChestDistribution = sortedAllChests.slice(0, 7);
-            let otherChestCount = sortedAllChests.slice(7).reduce((sum, item) => sum + item[1], 0);
+            let entriesArr = Object.entries(chestDataMap).map(([name, obj]) => {
+                return [name, obj.points];
+            });
 
-            if (otherChestCount > 0) {
-                sortedChestDistribution.push(["Sonstige", otherChestCount]);
+            entriesArr.sort((a, b) => b[1] - a[1]);
+            let sortedChestDistribution = entriesArr.slice(0, 6);
+            let otherVal = entriesArr.slice(6).reduce((sum, item) => sum + item[1], 0);
+
+            if (otherVal > 0) {
+                sortedChestDistribution.push(["Sonstige", otherVal]);
             }
 
+            let allChestTotal = sortedChestDistribution.reduce((sum, item) => sum + item[1], 0);
+
             let labelsFormatted = sortedChestDistribution.map(x => {
-                let name = x[0];
+                let rawName = x[0];
+                let name = (chartLang === 'en' && chestTranslations[rawName]) ? chestTranslations[rawName] : rawName;
                 if (name.includes('-')) {
                     let parts = name.split('-');
                     return [parts[0].trim() + '-', parts.slice(1).join('-').trim()];
                 }
-                if (name.length > 14) {
-                    return [name.substring(0, 12) + '-', name.substring(12)];
+                if (name.length > 16) {
+                    return [name.substring(0, 14) + '-', name.substring(14)];
                 }
                 return name;
             });
@@ -2106,14 +2144,13 @@
                     datasets: [{
                         data: sortedChestDistribution.map(x => x[1]),
                         backgroundColor: [
-                            'rgba(245, 158, 11, 0.85)',
-                            'rgba(14, 165, 233, 0.85)',
-                            'rgba(168, 85, 247, 0.85)',
-                            'rgba(34, 197, 94, 0.85)',
-                            'rgba(239, 68, 68, 0.85)',
-                            'rgba(236, 72, 153, 0.85)',
-                            'rgba(100, 116, 139, 0.85)',
-                            'rgba(148, 163, 184, 0.85)'
+                            'rgba(245, 158, 11, 0.88)',
+                            'rgba(14, 165, 233, 0.88)',
+                            'rgba(168, 85, 247, 0.88)',
+                            'rgba(34, 197, 94, 0.88)',
+                            'rgba(239, 68, 68, 0.88)',
+                            'rgba(236, 72, 153, 0.88)',
+                            'rgba(100, 116, 139, 0.88)'
                         ],
                         borderColor: '#1e293b',
                         borderWidth: 2
@@ -2128,18 +2165,41 @@
                             position: 'right',
                             labels: {
                                 color: '#cbd5e1',
-                                font: { size: 8 },
+                                font: { size: 9 },
                                 boxWidth: 10,
-                                padding: 6
+                                padding: 6,
+                                generateLabels: function(chart) {
+                                    let data = chart.data;
+                                    if (data.labels.length && data.datasets.length) {
+                                        return data.labels.map((label, i) => {
+                                            let meta = chart.getDatasetMeta(0);
+                                            let style = meta.controller.getStyle(i);
+                                            let val = data.datasets[0].data[i];
+                                            let percentage = allChestTotal > 0 ? ((val / allChestTotal) * 100).toFixed(1).replace('.', ',') + '%' : '0%';
+                                            let labelStr = Array.isArray(label) ? label.join(' ') : label;
+                                            return {
+                                                text: `${labelStr}: ${val.toLocaleString()} (${percentage})`,
+                                                fillStyle: style.backgroundColor,
+                                                strokeStyle: style.borderColor,
+                                                lineWidth: style.borderWidth,
+                                                hidden: isNaN(data.datasets[0].data[i]) || meta.data[i].hidden,
+                                                index: i
+                                            };
+                                        });
+                                    }
+                                    return [];
+                                }
                             }
                         },
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
-                                    let originalName = sortedChestDistribution[context.dataIndex][0];
+                                    let rawName = sortedChestDistribution[context.dataIndex][0];
+                                    let originalName = (chartLang === 'en' && chestTranslations[rawName]) ? chestTranslations[rawName] : rawName;
                                     let val = context.raw;
                                     let percent = allChestTotal > 0 ? (val / allChestTotal * 100) : 0;
-                                    return ` ${originalName}: ${val} Stück (${percent.toFixed(1).replace('.', ',')} %)`;
+                                    let unitLabel = (chartLang === 'en' ? 'Points' : 'Punkte');
+                                    return ` ${originalName}: ${val.toLocaleString()} ${unitLabel} (${percent.toFixed(1).replace('.', ',')} %)`;
                                 }
                             }
                         }
@@ -2160,7 +2220,7 @@
                         meta.data.forEach((arc, index) => {
                             let value = Number(dataset.data[index]) || 0;
                             let percent = allChestTotal > 0 ? value / allChestTotal * 100 : 0;
-                            if (percent < 4) return;
+                            if (percent < 5) return;
                             let point = arc.tooltipPosition();
                             ctx.shadowColor = 'rgba(0,0,0,0.8)';
                             ctx.shadowBlur = 3;
