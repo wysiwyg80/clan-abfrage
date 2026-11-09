@@ -1344,7 +1344,8 @@
         "Barbarentruhe (Gruft Level 25)": 1,
         "Infernale Truhe (Gruft Level 25)": 1,
         "Kobalt-Truhe (Epische Gruft Level 30)": 2,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
+        "Gewöhnliche Truhe des (Clan-Wohlstand)": 1
       },
       "growth": 0,
       "silver": 0,
