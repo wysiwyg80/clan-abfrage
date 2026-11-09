@@ -199,7 +199,8 @@
     "Scorpion Chest (Level 20 epic Crypt)": 0,
     "House of Horrors Chest (Level 35 epic Crypt)": 0,
     "Titansteel Chest (Level 25 epic Crypt)": 0,
-    "Infernal Chest (Level 20 Crypt)": 0
+    "Infernal Chest (Level 20 Crypt)": 0,
+    "Mayan Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -930,7 +931,8 @@
       "power": 992717645,
       "tower": 0,
       "chests": {
-        "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1
+        "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1,
+        "Mayan Chest (Level 25 Crypt)": 1
       },
       "growth": 0,
       "silver": 0,
