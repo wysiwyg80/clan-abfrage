@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -561,13 +562,17 @@
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
+                        <label class="text-[10px] uppercase font-bold text-slate-400">Start-Macht (Zyklus-Basis)</label>
+                        <input type="number" id="editStartPower" placeholder="z.B. 95000000" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-cyan-300 font-bold">
+                    </div>
+                    <div>
                         <label class="text-[10px] uppercase font-bold text-slate-400">Individuelles Gesamtziel (optional)</label>
                         <input type="number" id="editCustomGoal" placeholder="z.B. 20000" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-white">
                     </div>
-                    <div>
-                        <label class="text-[10px] uppercase font-bold text-slate-400">Beitrittsdatum</label>
-                        <input type="date" id="editJoinDate" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
-                    </div>
+                </div>
+                <div>
+                    <label class="text-[10px] uppercase font-bold text-slate-400">Beitrittsdatum</label>
+                    <input type="date" id="editJoinDate" class="w-full bg-slate-800 border border-slate-700 rounded px-3 py-1.5 text-xs text-amber-300 font-bold focus:outline-none focus:border-amber-500">
                 </div>
             </div>
             <div class="flex flex-wrap justify-between items-center gap-2 pt-2 border-t border-slate-700">
@@ -609,6 +614,13 @@
                     points: rawChestTypeValues[key].points !== undefined ? rawChestTypeValues[key].points : 0,
                     firstSeen: rawChestTypeValues[key].firstSeen || todayIso
                 };
+            }
+        });
+
+        // Automatische Initialisierung für startPower bei älteren Daten
+        clanData.forEach(p => {
+            if (p.startPower === undefined || p.startPower === null) {
+                p.startPower = Number(p.power) || 0;
             }
         });
 
@@ -684,10 +696,10 @@
                 let towerPts = (towerVal * towerPointValue) + Number(p.bankedTowerPoints || 0);
                 let totalPts = chestPtsTotal + towerPts;
 
-                let pMacht = Number(p.power) || 0;
+                let pStartMacht = (p.startPower !== undefined && p.startPower !== null && !isNaN(Number(p.startPower))) ? Number(p.startPower) : (Number(p.power) || 0);
                 let baseGoalFullCycle = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
                     ? Number(p.customGoal) 
-                    : (pMacht < 100000000 ? goalLow : goalHigh);
+                    : (pStartMacht < 100000000 ? goalLow : goalHigh);
                 
                 let dailyTarget = Math.round(baseGoalFullCycle / totalCycleDays);
                 let playerActiveDays = activeDaysCount;
@@ -925,7 +937,7 @@
         function exportToCSV() {
             if(clanData.length === 0) return alert("Keine Mitglieder zum Exportieren vorhanden.");
             let csvRows = [];
-            csvRows.push(["Name", "Rang", "Helden-Lvl", "Macht", "Turmbau", "Silber", "Beitrittsdatum"].join(";"));
+            csvRows.push(["Name", "Rang", "Helden-Lvl", "Macht", "Start-Macht", "Turmbau", "Silber", "Beitrittsdatum"].join(";"));
             
             clanData.forEach(p => {
                 csvRows.push([
@@ -933,6 +945,7 @@
                     `\"${p.rank || 'Soldat'}\"`,
                     p.hero_level || 0,
                     p.power || 0,
+                    p.startPower || 0,
                     p.tower || 0,
                     p.silver || 0,
                     `\"${p.joinDate || ''}\"`
@@ -1178,6 +1191,11 @@
         function applyLoadedData(fetchedData) {
             if(fetchedData.clanData && fetchedData.clanData.length > 0) {
                 clanData = fetchedData.clanData;
+                clanData.forEach(p => {
+                    if (p.startPower === undefined || p.startPower === null) {
+                        p.startPower = Number(p.power) || 0;
+                    }
+                });
                 localStorage.setItem('legio_clan_data', JSON.stringify(clanData));
             }
             if(fetchedData.chestTypeValues) {
@@ -1553,12 +1571,14 @@
                 let totalPts = chestPtsTotal + towerPts;
 
                 let pMacht = (p.power !== undefined && p.power !== null && !isNaN(Number(p.power))) ? Number(p.power) : 0;
+                let pStartMacht = (p.startPower !== undefined && p.startPower !== null && !isNaN(Number(p.startPower))) ? Number(p.startPower) : pMacht;
                 let heroLvl = (p.hero_level !== undefined && p.hero_level !== null && !isNaN(Number(p.hero_level))) ? Number(p.hero_level) : 0;
                 let limitMacht = 100000000;
                 
+                // FAIRS ZIEL BASIEREND AUF START-MACHT
                 let baseGoalFullCycle = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
                     ? Number(p.customGoal) 
-                    : (pMacht < limitMacht ? goalLow : goalHigh);
+                    : (pStartMacht < limitMacht ? goalLow : goalHigh);
                 
                 let dailyTarget = Math.round(baseGoalFullCycle / totalCycleDays);
 
@@ -1632,7 +1652,7 @@
                         ${heroLvl > 0 ? `<span class="bg-amber-950/60 border border-amber-600/50 px-2 py-0.5 rounded">Lvl ${heroLvl}</span>` : '-'}
                     </td>
                     <td class="p-3 text-right data-col-power hidden font-bold text-slate-200">
-                        ${formatPower(pMacht)}
+                        ${formatPower(pMacht)} <span class="text-[10px] text-slate-400 block font-normal">(Start: ${formatPower(pStartMacht)})</span>
                     </td>
                     <td class="p-3 text-right data-col-power hidden text-emerald-400 font-bold">
                         +${formatPower(growthVal)}
@@ -1862,6 +1882,7 @@
             document.getElementById('editRank').value = "Soldat";
             document.getElementById('editHeroLevel').value = "1";
             document.getElementById('editPower').value = "50000000";
+            document.getElementById('editStartPower').value = "50000000";
             document.getElementById('editTower').value = "0";
             document.getElementById('editSilver').value = "0";
             document.getElementById('editCustomGoal').value = "";
@@ -1873,12 +1894,15 @@
         function openEditModal(index) {
             let p = clanData[index];
             let todayIso = new Date().toISOString().split('T')[0];
+            let pStartMacht = (p.startPower !== undefined && p.startPower !== null) ? p.startPower : (p.power || 0);
+
             document.getElementById('modalTitle').innerHTML = `<i class="fa-solid fa-user-pen"></i> Mitglied bearbeiten: ${p.name}`;
             document.getElementById('editIndex').value = index;
             document.getElementById('editName').value = p.name || '';
             document.getElementById('editRank').value = p.rank || 'Soldat';
             document.getElementById('editHeroLevel').value = p.hero_level || 0;
             document.getElementById('editPower').value = p.power || 0;
+            document.getElementById('editStartPower').value = pStartMacht;
             document.getElementById('editTower').value = p.tower || 0;
             document.getElementById('editSilver').value = p.silver || 0;
             document.getElementById('editCustomGoal').value = p.customGoal || '';
@@ -1904,6 +1928,7 @@
                 rank: document.getElementById('editRank').value,
                 hero_level: parseInt(document.getElementById('editHeroLevel').value) || 0,
                 power: parseInt(document.getElementById('editPower').value) || 0,
+                startPower: parseInt(document.getElementById('editStartPower').value) || 0,
                 tower: parseInt(document.getElementById('editTower').value) || 0,
                 silver: parseInt(document.getElementById('editSilver').value) || 0,
                 customGoal: parseInt(document.getElementById('editCustomGoal').value) || null,
@@ -1992,8 +2017,16 @@
                     if(existing) {
                         if(imp.rank) existing.rank = imp.rank;
                         if(imp.hero_level) existing.hero_level = Number(imp.hero_level);
-                        if(imp.power) existing.growth = Number(imp.power) - (Number(existing.power) || Number(imp.power));
-                        if(imp.power) existing.power = Number(imp.power);
+                        
+                        let newPower = imp.power !== undefined ? Number(imp.power) : (existing.power || 0);
+                        existing.growth = newPower - (Number(existing.power) || newPower);
+                        existing.power = newPower;
+
+                        // Wenn noch keine startPower existiert, wird sie beim Import initial gesetzt
+                        if (existing.startPower === undefined || existing.startPower === null) {
+                            existing.startPower = newPower;
+                        }
+
                         if(imp.silver) existing.silver = (Number(existing.silver) || 0) + Number(imp.silver);
                         if(imp.tower) existing.tower = (Number(existing.tower) || 0) + Number(imp.tower);
                         
@@ -2016,11 +2049,14 @@
                             }
                         });
 
+                        let initPower = Number(imp.power) || 0;
+
                         clanData.push({
                             name: imp.name,
                             rank: imp.rank || "Soldat",
                             hero_level: Number(imp.hero_level) || 0,
-                            power: Number(imp.power) || 0,
+                            power: initPower,
+                            startPower: initPower, // Start-Macht wird beim ersten Erfassen gesetzt
                             growth: 0,
                             tower: Number(imp.tower) || 0,
                             bankedTowerPoints: 0,
@@ -2033,7 +2069,7 @@
 
                 saveData();
                 document.getElementById('bulkImportText').value = '';
-                alert("Massen-Import erfolgreich! Neue Truhentypen wurden mit dem heutigen Datum registriert.");
+                alert("Massen-Import erfolgreich! Start-Mächte und neue Truhentypen wurden aktualisiert.");
             } catch(e) {
                 alert("Fehler beim Parsen des JSON: " + e.message);
             }
