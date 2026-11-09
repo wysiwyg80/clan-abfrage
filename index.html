@@ -287,13 +287,13 @@
                     <div class="flex justify-between items-center mb-1">
                         <h3 class="text-xs font-bold text-amber-400 uppercase"><i class="fa-solid fa-pie-chart"></i> Truhen-Verteilung</h3>
                     </div>
-                    <p class="text-[10px] text-slate-400 mb-2" id="chestDistSubtitle">Top 10 der Truhen die zur Gesamtpunktzahl beitragen</p>
+                    <p class="text-[10px] text-slate-400 mb-2" id="chestDistSubtitle">Top 10 & Sonstige</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
                     <div class="sm:col-span-5 h-52 relative">
                         <canvas id="chestDistributionChart"></canvas>
                     </div>
-                    <div class="sm:col-span-7 max-h-52 overflow-y-auto custom-scrollbar pr-1 space-y-1.5" id="chestLegendContainer">
+                    <div class="sm:col-span-7 max-h-40 sm:max-h-52 overflow-y-auto custom-scrollbar pr-1 space-y-1.5" id="chestLegendContainer">
                         <!-- Dynamic HTML Legend Box -->
                     </div>
                 </div>
@@ -2082,20 +2082,28 @@
                     Object.keys(p.chests).forEach(cName => {
                         let count = Number(p.chests[cName]) || 0;
                         if(count > 0) {
-                            if(!chestDataMap[cName]) chestDataMap[cName] = { points: 0 };
+                            if(!chestDataMap[cName]) chestDataMap[cName] = 0;
                             let valPerChest = Number(chestTypeValues[cName]) || 0;
-                            chestDataMap[cName].points += count * valPerChest;
+                            chestDataMap[cName] += count * valPerChest;
                         }
                     });
                 }
             });
 
-            let entriesArr = Object.entries(chestDataMap).map(([name, obj]) => {
-                return [name, obj.points];
-            });
-
+            let entriesArr = Object.entries(chestDataMap).map(([name, pts]) => [name, pts]);
             entriesArr.sort((a, b) => b[1] - a[1]);
-            let sortedChestDistribution = entriesArr.slice(0, 10); // Nur Top 10 Truhen anzeigen
+
+            let sortedChestDistribution = [];
+            if (entriesArr.length > 10) {
+                let top10Chests = entriesArr.slice(0, 10);
+                let restPoints = entriesArr.slice(10).reduce((sum, item) => sum + item[1], 0);
+                sortedChestDistribution = top10Chests;
+                if (restPoints > 0) {
+                    sortedChestDistribution.push(["Sonstige", restPoints]);
+                }
+            } else {
+                sortedChestDistribution = entriesArr;
+            }
 
             let allChestTotal = sortedChestDistribution.reduce((sum, item) => sum + item[1], 0);
 
@@ -2109,7 +2117,8 @@
                 'rgba(59, 130, 246, 0.88)',
                 'rgba(20, 184, 166, 0.88)',
                 'rgba(217, 70, 239, 0.88)',
-                'rgba(251, 146, 60, 0.88)'
+                'rgba(234, 179, 8, 0.88)',
+                'rgba(100, 116, 139, 0.88)'
             ];
 
             let bgColors = sortedChestDistribution.map((_, i) => dynamicColors[i % dynamicColors.length]);
@@ -2148,14 +2157,25 @@
                                     if (!tooltipItems.length) return '';
                                     let idx = tooltipItems[0].dataIndex;
                                     let fullName = sortedChestDistribution[idx] ? sortedChestDistribution[idx][0] : '';
-                                    // Automatisch in mehreren Zeilen umbrechen bei langen Namen im Tooltip
+                                    
+                                    // 100% dynamischer Zeilenumbruch basierend auf der Wortlänge und des Gesamttextes
                                     let words = fullName.split(' ');
                                     let lines = [];
                                     let currentLine = '';
+                                    // Dynamische Schwellenwert-Berechnung: Kurze Titel bleiben zusammen, lange teilen sich fließend auf
+                                    let dynamicMax = fullName.length > 25 ? 14 : 18;
+                                    
                                     words.forEach(word => {
-                                        if ((currentLine + ' ' + word).trim().length > 35) {
+                                        if ((currentLine + ' ' + word).trim().length > dynamicMax) {
                                             if (currentLine) lines.push(currentLine.trim());
-                                            currentLine = word;
+                                            if (word.length > dynamicMax) {
+                                                for (let i = 0; i < word.length; i += dynamicMax) {
+                                                    lines.push(word.substring(i, i + dynamicMax));
+                                                }
+                                                currentLine = '';
+                                            } else {
+                                                currentLine = word;
+                                            }
                                         } else {
                                             currentLine += (currentLine ? ' ' : '') + word;
                                         }
@@ -2198,7 +2218,6 @@
                 }]
             });
 
-            // Render Custom HTML Scrollable Legend Box
             let legendContainer = document.getElementById('chestLegendContainer');
             if (legendContainer) {
                 legendContainer.innerHTML = '';
@@ -2222,7 +2241,6 @@
                             </div>
                         `;
 
-                        // Hover effect: Highlight Slice im Kreisdiagramm
                         div.onmouseenter = () => {
                             if (distributionChart) {
                                 distributionChart.setActiveElements([{ datasetIndex: 0, index: idx }]);
