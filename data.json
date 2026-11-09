@@ -1973,7 +1973,9 @@
       "rank": "Soldat",
       "power": 118097255,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-04",
       "prevPower": 0,
