@@ -994,21 +994,21 @@
     {
       "name": "Maem",
       "rank": "Veteran",
+      "hero_level": 246,
       "power": 296808699,
-      "tower": 0,
+      "startPower": 296808699,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Orks (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 1
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 246,
       "bankedTowerPoints": 0,
-      "startPower": 296808699
+      "growth": 0
     },
     {
       "name": "Auzar",
@@ -1399,16 +1399,16 @@
     {
       "name": "SaturdayNightFever",
       "rank": "Soldat",
-      "power": 106786693,
-      "tower": 0,
-      "chests": {},
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
       "hero_level": 166,
+      "power": 106786693,
+      "startPower": 106786693,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
+      "chests": {},
       "bankedTowerPoints": 0,
-      "startPower": 106786693
+      "growth": 0
     },
     {
       "name": "LegatusLabienus",
@@ -2177,5 +2177,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-09T22:37:25.079Z"
+  "lastUpdated": "2026-11-09T22:45:44.442Z"
 }
