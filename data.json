@@ -1034,7 +1034,9 @@
       "rank": "Veteran",
       "power": 190506636,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Cobra Chest (Level 25 Crypt)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
