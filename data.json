@@ -206,7 +206,8 @@
     "Elegant Chest (Level 25 Crypt)": 0,
     "Cobalt Chest (Level 35 epic Crypt)": 0,
     "Titansteel Chest (Level 35 epic Crypt)": 0,
-    "Bone Chest (Level 25 Crypt)": 0
+    "Bone Chest (Level 25 Crypt)": 0,
+    "Elven Citadel Chest (Level 25 Citadel)": 0
   },
   "clanData": [
     {
@@ -707,7 +708,8 @@
       "power": 293139021,
       "tower": 0,
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 25)": 5
+        "Truhe der Festung der Elfen (Festung Level 25)": 5,
+        "Elven Citadel Chest (Level 25 Citadel)": 1
       },
       "growth": 0,
       "silver": 0,
