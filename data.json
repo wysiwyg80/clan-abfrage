@@ -1015,7 +1015,9 @@
       "rank": "Veteran",
       "power": 124614871,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe der Kobra (Gruft Level 20)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-01",
       "prevPower": 0,
