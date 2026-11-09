@@ -195,7 +195,8 @@
     "Rare Dragon Chest (Level 20 rare Crypt)": 0,
     "Turtle Chest (Level 35 epic Crypt)": 0,
     "Barbarian Chest (Level 35 epic Crypt)": 0,
-    "Scorpion Chest (Level 35 epic Crypt)": 0
+    "Scorpion Chest (Level 35 epic Crypt)": 0,
+    "Scorpion Chest (Level 20 epic Crypt)": 0
   },
   "clanData": [
     {
@@ -907,7 +908,8 @@
         "Trillium-Truhe (Epische Gruft Level 25)": 1,
         "Sandtruhe (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 20)": 1,
-        "Rare Dragon Chest (Level 20 rare Crypt)": 4
+        "Rare Dragon Chest (Level 20 rare Crypt)": 4,
+        "Scorpion Chest (Level 20 epic Crypt)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
