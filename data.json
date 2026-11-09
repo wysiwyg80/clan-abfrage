@@ -209,7 +209,8 @@
     "Bone Chest (Level 25 Crypt)": 0,
     "Elven Citadel Chest (Level 25 Citadel)": 0,
     "Cobra Chest (Level 25 Crypt)": 0,
-    "Ancient Bastion Chest (Level 35 epic Crypt)": 0
+    "Ancient Bastion Chest (Level 35 epic Crypt)": 0,
+    "Gnome Workshop Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -949,7 +950,8 @@
         "Infernal Chest (Level 25 Crypt)": 1,
         "Elegant Chest (Level 25 Crypt)": 2,
         "Bone Chest (Level 25 Crypt)": 1,
-        "Cobra Chest (Level 25 Crypt)": 1
+        "Cobra Chest (Level 25 Crypt)": 1,
+        "Gnome Workshop Chest (Level 25 Crypt)": 1
       },
       "growth": 0,
       "silver": 0,
