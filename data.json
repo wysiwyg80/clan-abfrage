@@ -94,7 +94,7 @@
     "Infernale Truhe (Gruft Level 25)": 25,
     "Truhe der Kobra (Gruft Level 25)": 25,
     "Vergessene Truhe (Gruft Level 25)": 25,
-    "Gnome Workshop Chest (Level 25 Crypt)": 24,
+    "Gnome Workshop Chest (Level 25 Crypt)": 25,
     "Kobalt-Truhe (Epische Gruft Level 25)": 50,
     "Barbarentruhe (Epische Gruft Level 25)": 50,
     "Elven Citadel Chest (Level 25 Citadel)": 50,
@@ -1209,5 +1209,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-09T09:16:56.489Z"
+  "lastUpdated": "2026-11-09T09:31:30.460Z"
 }
