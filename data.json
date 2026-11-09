@@ -1825,7 +1825,9 @@
       "rank": "Soldat",
       "power": 141805325,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Feuertruhe (Gruft Level 15)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-05",
       "prevPower": 0,
