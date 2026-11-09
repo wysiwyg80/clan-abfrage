@@ -202,7 +202,8 @@
     "Infernal Chest (Level 20 Crypt)": 0,
     "Mayan Chest (Level 25 Crypt)": 0,
     "Infernal Chest (Level 25 Crypt)": 0,
-    "Mayan Chest (Level 20 Crypt)": 0
+    "Mayan Chest (Level 20 Crypt)": 0,
+    "Elegant Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -936,7 +937,8 @@
       "chests": {
         "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1,
         "Mayan Chest (Level 25 Crypt)": 1,
-        "Infernal Chest (Level 25 Crypt)": 1
+        "Infernal Chest (Level 25 Crypt)": 1,
+        "Elegant Chest (Level 25 Crypt)": 1
       },
       "growth": 0,
       "silver": 0,
