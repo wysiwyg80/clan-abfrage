@@ -214,7 +214,8 @@
     "Fire Chest (Level 25 Crypt)": 0,
     "Stone Chest (Level 25 Crypt)": 0,
     "Stone Chest (Level 20 Crypt)": 0,
-    "Sand Chest (Level 25 Crypt)": 0
+    "Sand Chest (Level 25 Crypt)": 0,
+    "Barbarian Chest (Level 25 Crypt)": 0
   },
   "clanData": [
     {
@@ -959,7 +960,8 @@
         "Gnome Workshop Chest (Level 25 Crypt)": 1,
         "Fire Chest (Level 25 Crypt)": 1,
         "Stone Chest (Level 25 Crypt)": 1,
-        "Sand Chest (Level 25 Crypt)": 1
+        "Sand Chest (Level 25 Crypt)": 1,
+        "Barbarian Chest (Level 25 Crypt)": 1
       },
       "growth": 0,
       "silver": 0,
