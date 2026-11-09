@@ -201,7 +201,8 @@
     "Titansteel Chest (Level 25 epic Crypt)": 0,
     "Infernal Chest (Level 20 Crypt)": 0,
     "Mayan Chest (Level 25 Crypt)": 0,
-    "Infernal Chest (Level 25 Crypt)": 0
+    "Infernal Chest (Level 25 Crypt)": 0,
+    "Mayan Chest (Level 20 Crypt)": 0
   },
   "clanData": [
     {
@@ -916,7 +917,8 @@
         "Rare Dragon Chest (Level 20 rare Crypt)": 4,
         "Scorpion Chest (Level 20 epic Crypt)": 1,
         "Titansteel Chest (Level 25 epic Crypt)": 1,
-        "Infernal Chest (Level 20 Crypt)": 1
+        "Infernal Chest (Level 20 Crypt)": 1,
+        "Mayan Chest (Level 20 Crypt)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
