@@ -2099,18 +2099,6 @@
 
             let allChestTotal = sortedChestDistribution.reduce((sum, item) => sum + item[1], 0);
 
-            let labelsFormatted = sortedChestDistribution.map(x => {
-                let name = x[0];
-                if (name.includes('-')) {
-                    let parts = name.split('-');
-                    return [parts[0].trim() + '-', parts.slice(1).join('-').trim()];
-                }
-                if (name.length > 16) {
-                    return [name.substring(0, 14) + '-', name.substring(14)];
-                }
-                return name;
-            });
-
             let dynamicColors = [
                 'rgba(245, 158, 11, 0.88)',
                 'rgba(14, 165, 233, 0.88)',
@@ -2159,10 +2147,23 @@
                                 title: function(tooltipItems) {
                                     if (!tooltipItems.length) return '';
                                     let idx = tooltipItems[0].dataIndex;
-                                    return sortedChestDistribution[idx] ? sortedChestDistribution[idx][0] : '';
+                                    let fullName = sortedChestDistribution[idx] ? sortedChestDistribution[idx][0] : '';
+                                    // Automatisch in mehreren Zeilen umbrechen bei langen Namen im Tooltip
+                                    let words = fullName.split(' ');
+                                    let lines = [];
+                                    let currentLine = '';
+                                    words.forEach(word => {
+                                        if ((currentLine + ' ' + word).trim().length > 35) {
+                                            if (currentLine) lines.push(currentLine.trim());
+                                            currentLine = word;
+                                        } else {
+                                            currentLine += (currentLine ? ' ' : '') + word;
+                                        }
+                                    });
+                                    if (currentLine) lines.push(currentLine.trim());
+                                    return lines.length > 0 ? lines : fullName;
                                 },
                                 label: function(context) {
-                                    let rawName = sortedChestDistribution[context.dataIndex][0];
                                     let val = context.raw;
                                     let percent = allChestTotal > 0 ? (val / allChestTotal * 100) : 0;
                                     return ` ${val.toLocaleString()} Punkte (${percent.toFixed(1).replace('.', ',')} %)`;
@@ -2196,6 +2197,7 @@
                     }
                 }]
             });
+
             // Render Custom HTML Scrollable Legend Box
             let legendContainer = document.getElementById('chestLegendContainer');
             if (legendContainer) {
@@ -2220,7 +2222,7 @@
                             </div>
                         `;
 
-                        // Hover effect: highlight slice in doughnut chart
+                        // Hover effect: Highlight Slice im Kreisdiagramm
                         div.onmouseenter = () => {
                             if (distributionChart) {
                                 distributionChart.setActiveElements([{ datasetIndex: 0, index: idx }]);
