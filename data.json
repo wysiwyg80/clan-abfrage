@@ -1803,7 +1803,9 @@
       "rank": "Veteran",
       "power": 31358181,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-01",
       "prevPower": 0,
