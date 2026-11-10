@@ -848,7 +848,8 @@
       "points": 0,
       "firstSeen": "2026-11-09"
     },
-    "Truhe der Elfen (Heldenhafte Monster Level 32)": 0
+    "Truhe der Elfen (Heldenhafte Monster Level 32)": 0,
+    "Truhe der Verfluchten (Heldenhafte Monster Level 33)": 0
   },
   "clanData": [
     {
@@ -1960,7 +1961,8 @@
         "Weiße Holztruhe (Epische Gruft Level 35)": 1,
         "Schöne Truhe (Gruft Level 20)": 1,
         "Truhe der Untoten (Heldenhafte Monster Level 31)": 1,
-        "Truhe der Elfen (Heldenhafte Monster Level 32)": 1
+        "Truhe der Elfen (Heldenhafte Monster Level 32)": 1,
+        "Truhe der Verfluchten (Heldenhafte Monster Level 33)": 1
       },
       "growth": 0,
       "silver": 0,
