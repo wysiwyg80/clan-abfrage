@@ -2285,6 +2285,19 @@
       "hero_level": 157,
       "startPower": 91131943,
       "bankedTowerPoints": 0
+    },
+    {
+      "name": "Viking",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 192459681,
+      "hero_level": 210,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-10"
     }
   ],
   "evalStartDate": "2026-11-08",
