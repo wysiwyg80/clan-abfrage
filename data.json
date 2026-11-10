@@ -854,7 +854,7 @@
       "name": "Manador II",
       "rank": "Veteran",
       "power": 633226375,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Truhe der Maya (Gruft Level 25)": 1,
         "Infernale Truhe (Gruft Level 25)": 2
@@ -1039,7 +1039,7 @@
       "name": "Elginan",
       "rank": "Offizier",
       "power": 312395806,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Steintruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 2,
@@ -1345,7 +1345,7 @@
       "name": "Burigas",
       "rank": "Veteran",
       "power": 103614705,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Harpyien-Truhe (Epische Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 1,
@@ -1435,7 +1435,7 @@
       "name": "man of war",
       "rank": "Vorgesetzter",
       "power": 1462887131,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Scorpion Chest (Level 35 epic Crypt)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 35)": 1,
@@ -1602,7 +1602,7 @@
       "name": "Gran Rex",
       "rank": "Offizier",
       "power": 227039151,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
@@ -1691,7 +1691,7 @@
       "name": "Sir spanksALot",
       "rank": "Veteran",
       "power": 783971955,
-      "tower": 0,
+      "tower": 1,
       "chests": {},
       "growth": 0,
       "silver": 0,
@@ -1944,7 +1944,7 @@
       "name": "Eldriel",
       "rank": "Veteran",
       "power": 190506636,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
         "Cobra Chest (Level 25 Crypt)": 1,
