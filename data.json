@@ -1123,8 +1123,13 @@
     {
       "name": "Lee the Ugly",
       "rank": "Veteran",
+      "hero_level": 232,
       "power": 246728601,
-      "tower": 0,
+      "startPower": 246728601,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Maya (Gruft Level 25)": 1,
@@ -1132,13 +1137,8 @@
         "Vergessene Truhe (Gruft Level 25)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 1
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 232,
-      "startPower": 246728601,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "kordy",
@@ -1526,13 +1526,8 @@
     {
       "name": "kikito",
       "rank": "Vorgesetzter",
-      "hero_level": 209,
       "power": 293139021,
-      "startPower": 293139021,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Steintruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
@@ -1544,8 +1539,13 @@
         "Truhe der Festung der Elfen (Festung Level 20)": 1,
         "Truhe der Festung der Elfen (Festung Level 25)": 17
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 209,
+      "startPower": 293139021,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Frederico Freitas",
@@ -2177,5 +2177,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-10T16:18:56.028Z"
+  "lastUpdated": "2026-11-10T16:23:38.585Z"
 }
