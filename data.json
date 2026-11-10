@@ -850,7 +850,8 @@
     },
     "Truhe der Elfen (Heldenhafte Monster Level 32)": 0,
     "Truhe der Verfluchten (Heldenhafte Monster Level 33)": 0,
-    "Truhe der Untoten (Heldenhafte Monster Level 21)": 0
+    "Truhe der Untoten (Heldenhafte Monster Level 21)": 0,
+    "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 0
   },
   "clanData": [
     {
@@ -1725,7 +1726,8 @@
         "Truhe der Festung der Verfluchten (Festung Level 25)": 5,
         "Truhe der Festung der Elfen (Festung Level 30)": 9,
         "Knochentruhe (Gruft Level 25)": 1,
-        "Truhe der Untoten (Heldenhafte Monster Level 21)": 1
+        "Truhe der Untoten (Heldenhafte Monster Level 21)": 1,
+        "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 1
       },
       "growth": 0,
       "silver": 0,
