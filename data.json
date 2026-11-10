@@ -864,8 +864,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 319,
-      "bankedTowerPoints": 0,
-      "startPower": 633226375
+      "startPower": 633226375,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Riyash CP CITY",
@@ -888,8 +888,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 290,
-      "bankedTowerPoints": 0,
-      "startPower": 479857600
+      "startPower": 479857600,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Magellan",
@@ -911,8 +911,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 269,
-      "bankedTowerPoints": 0,
-      "startPower": 449355045
+      "startPower": 449355045,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Explorer",
@@ -932,8 +932,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 258,
-      "bankedTowerPoints": 0,
-      "startPower": 413974355
+      "startPower": 413974355,
+      "bankedTowerPoints": 0
     },
     {
       "name": "DRACULA",
@@ -960,8 +960,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 254,
-      "bankedTowerPoints": 0,
-      "startPower": 392947425
+      "startPower": 392947425,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Biin",
@@ -988,27 +988,27 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 235,
-      "bankedTowerPoints": 0,
-      "startPower": 302472181
+      "startPower": 302472181,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Maem",
       "rank": "Veteran",
-      "hero_level": 246,
       "power": 296808699,
-      "startPower": 296808699,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Orks (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 246,
+      "startPower": 296808699,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Auzar",
@@ -1032,8 +1032,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 234,
-      "bankedTowerPoints": 0,
-      "startPower": 308765825
+      "startPower": 308765825,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Elginan",
@@ -1053,8 +1053,8 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 237,
-      "bankedTowerPoints": 0,
-      "startPower": 312395806
+      "startPower": 312395806,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Dalas",
@@ -1078,8 +1078,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 234,
-      "bankedTowerPoints": 0,
-      "startPower": 265435735
+      "startPower": 265435735,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Carruggi 5r",
@@ -1100,8 +1100,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 222,
-      "bankedTowerPoints": 0,
-      "startPower": 239786835
+      "startPower": 239786835,
+      "bankedTowerPoints": 0
     },
     {
       "name": "ICHNOS",
@@ -1117,8 +1117,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 231,
-      "bankedTowerPoints": 0,
-      "startPower": 241039155
+      "startPower": 241039155,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Lee the Ugly",
@@ -1137,8 +1137,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 232,
-      "bankedTowerPoints": 0,
-      "startPower": 246728601
+      "startPower": 246728601,
+      "bankedTowerPoints": 0
     },
     {
       "name": "kordy",
@@ -1151,8 +1151,8 @@
       "prevPower": 226896441,
       "activeDays": 1,
       "hero_level": 222,
-      "bankedTowerPoints": 0,
-      "startPower": 236544591
+      "startPower": 236544591,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Ajax",
@@ -1165,8 +1165,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 217,
-      "bankedTowerPoints": 0,
-      "startPower": 225351135
+      "startPower": 225351135,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Granidred",
@@ -1191,25 +1191,25 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 220,
-      "bankedTowerPoints": 0,
-      "startPower": 226136481
+      "startPower": 226136481,
+      "bankedTowerPoints": 0
     },
     {
       "name": "BELEN",
       "rank": "Veteran",
-      "hero_level": 208,
       "power": 217959831,
-      "startPower": 217959831,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Kobra (Gruft Level 20)": 1,
         "Vergessene Truhe (Gruft Level 20)": 2
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 208,
+      "startPower": 217959831,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Roula",
@@ -1231,8 +1231,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 208,
-      "bankedTowerPoints": 0,
-      "startPower": 209162691
+      "startPower": 209162691,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Vudor SK6",
@@ -1248,8 +1248,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 250,
-      "bankedTowerPoints": 0,
-      "startPower": 211551525
+      "startPower": 211551525,
+      "bankedTowerPoints": 0
     },
     {
       "name": "King Slayer",
@@ -1274,8 +1274,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 207,
-      "bankedTowerPoints": 0,
-      "startPower": 166500878
+      "startPower": 166500878,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Maginad",
@@ -1297,8 +1297,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 217,
-      "bankedTowerPoints": 0,
-      "startPower": 141831133
+      "startPower": 141831133,
+      "bankedTowerPoints": 0
     },
     {
       "name": "AyBars",
@@ -1324,8 +1324,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 209,
-      "bankedTowerPoints": 0,
-      "startPower": 112358486
+      "startPower": 112358486,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Orodrafin",
@@ -1338,8 +1338,8 @@
       "prevPower": 94927582,
       "activeDays": 1,
       "hero_level": 194,
-      "bankedTowerPoints": 0,
-      "startPower": 95966982
+      "startPower": 95966982,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Burigas",
@@ -1356,8 +1356,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 186,
-      "bankedTowerPoints": 0,
-      "startPower": 103614705
+      "startPower": 103614705,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Vudorr",
@@ -1379,8 +1379,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 90,
-      "bankedTowerPoints": 0,
-      "startPower": 37146298
+      "startPower": 37146298,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Ria",
@@ -1393,22 +1393,22 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 31,
-      "bankedTowerPoints": 0,
-      "startPower": 929368
+      "startPower": 929368,
+      "bankedTowerPoints": 0
     },
     {
       "name": "SaturdayNightFever",
       "rank": "Soldat",
-      "hero_level": 166,
       "power": 106786693,
-      "startPower": 106786693,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {},
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 166,
+      "startPower": 106786693,
+      "bankedTowerPoints": 0
     },
     {
       "name": "LegatusLabienus",
@@ -1428,8 +1428,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 355,
-      "bankedTowerPoints": 0,
-      "startPower": 760936191
+      "startPower": 760936191,
+      "bankedTowerPoints": 0
     },
     {
       "name": "man of war",
@@ -1449,8 +1449,8 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 401,
-      "bankedTowerPoints": 0,
-      "startPower": 1462887131
+      "startPower": 1462887131,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Miss Dire",
@@ -1480,38 +1480,33 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 271,
-      "bankedTowerPoints": 0,
-      "startPower": 449536035
+      "startPower": 449536035,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Cologne am Rhein",
       "rank": "Soldat",
-      "hero_level": 252,
       "power": 423882385,
-      "startPower": 423882385,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Knochentruhe (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 1,
         "Infernale Truhe (Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 252,
+      "startPower": 423882385,
+      "bankedTowerPoints": 0
     },
     {
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
-      "hero_level": 249,
       "power": 406240935,
-      "startPower": 406240935,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Schöne Truhe (Gruft Level 25)": 5,
         "Truhe der Maya (Gruft Level 25)": 1,
@@ -1520,8 +1515,13 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 2
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 249,
+      "startPower": 406240935,
+      "bankedTowerPoints": 0
     },
     {
       "name": "kikito",
@@ -1544,8 +1544,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 209,
-      "bankedTowerPoints": 0,
-      "startPower": 293139021
+      "startPower": 293139021,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Frederico Freitas",
@@ -1566,8 +1566,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 195,
-      "bankedTowerPoints": 0,
-      "startPower": 128566016
+      "startPower": 128566016,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Delalen",
@@ -1595,8 +1595,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 270,
-      "bankedTowerPoints": 0,
-      "startPower": 358172069
+      "startPower": 358172069,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Gran Rex",
@@ -1616,8 +1616,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 236,
-      "bankedTowerPoints": 0,
-      "startPower": 227039151
+      "startPower": 227039151,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Farés Dz",
@@ -1642,8 +1642,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 219,
-      "bankedTowerPoints": 0,
-      "startPower": 190655983
+      "startPower": 190655983,
+      "bankedTowerPoints": 0
     },
     {
       "name": "PABLUS",
@@ -1666,8 +1666,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 177,
-      "bankedTowerPoints": 0,
-      "startPower": 119586751
+      "startPower": 119586751,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Tanmisis",
@@ -1684,8 +1684,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 361,
-      "bankedTowerPoints": 0,
-      "startPower": 1120156855
+      "startPower": 1120156855,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Sir spanksALot",
@@ -1698,8 +1698,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 333,
-      "bankedTowerPoints": 0,
-      "startPower": 783971955
+      "startPower": 783971955,
+      "bankedTowerPoints": 0
     },
     {
       "name": "BAD Guo II",
@@ -1712,8 +1712,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 340,
-      "bankedTowerPoints": 0,
-      "startPower": 761938809
+      "startPower": 761938809,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Riyash",
@@ -1726,8 +1726,8 @@
       "prevPower": 660458681,
       "activeDays": 1,
       "hero_level": 295,
-      "bankedTowerPoints": 0,
-      "startPower": 689443971
+      "startPower": 689443971,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Ajji",
@@ -1748,8 +1748,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 263,
-      "bankedTowerPoints": 0,
-      "startPower": 386077573
+      "startPower": 386077573,
+      "bankedTowerPoints": 0
     },
     {
       "name": "LORD MOSQUITÉ",
@@ -1763,8 +1763,8 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 125,
-      "bankedTowerPoints": 0,
-      "startPower": 31358181
+      "startPower": 31358181,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Aurora",
@@ -1809,8 +1809,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 136,
-      "bankedTowerPoints": 0,
-      "startPower": 66564015
+      "startPower": 66564015,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Xetlac",
@@ -1856,8 +1856,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 376,
-      "bankedTowerPoints": 0,
-      "startPower": 992717645
+      "startPower": 992717645,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Akasha",
@@ -1876,8 +1876,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 360,
-      "bankedTowerPoints": 0,
-      "startPower": 894262310
+      "startPower": 894262310,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Arik",
@@ -1899,8 +1899,8 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 133,
-      "bankedTowerPoints": 0,
-      "startPower": 124614871
+      "startPower": 124614871,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Arashigore",
@@ -1916,8 +1916,8 @@
       "activeDays": 1,
       "customGoal": null,
       "hero_level": 35,
-      "bankedTowerPoints": 0,
-      "startPower": 812592
+      "startPower": 812592,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Akinohn",
@@ -1937,8 +1937,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 327,
-      "bankedTowerPoints": 0,
-      "startPower": 743768307
+      "startPower": 743768307,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Eldriel",
@@ -1958,8 +1958,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 228,
-      "bankedTowerPoints": 0,
-      "startPower": 190506636
+      "startPower": 190506636,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Rysiek121",
@@ -2006,8 +2006,8 @@
       "joinDate": "2026-11-01",
       "customGoal": null,
       "hero_level": 409,
-      "bankedTowerPoints": 0,
-      "startPower": 1319490025
+      "startPower": 1319490025,
+      "bankedTowerPoints": 0
     },
     {
       "name": "MSB",
@@ -2020,8 +2020,8 @@
       "joinDate": "2026-11-03",
       "customGoal": null,
       "hero_level": 152,
-      "bankedTowerPoints": 0,
-      "startPower": 88923384
+      "startPower": 88923384,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Que",
@@ -2036,8 +2036,8 @@
       "joinDate": "2026-11-04",
       "customGoal": null,
       "hero_level": 205,
-      "bankedTowerPoints": 0,
-      "startPower": 118097255
+      "startPower": 118097255,
+      "bankedTowerPoints": 0
     },
     {
       "name": "nomad",
@@ -2055,8 +2055,8 @@
       "activeDays": 28,
       "customGoal": null,
       "hero_level": 148,
-      "bankedTowerPoints": 0,
-      "startPower": 141805325
+      "startPower": 141805325,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Optimus Prime IV",
@@ -2069,14 +2069,19 @@
       "joinDate": "2026-11-06",
       "customGoal": null,
       "hero_level": 277,
-      "bankedTowerPoints": 0,
-      "startPower": 372011855
+      "startPower": 372011855,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Spartakus",
       "rank": "Offizier",
+      "hero_level": 417,
       "power": 1556072281,
-      "tower": 0,
+      "startPower": 1556072281,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-06",
       "chests": {
         "Steintruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
@@ -2093,13 +2098,8 @@
         "Alte Truhe eines Kriegers (Epische Gruft Level 35)": 1,
         "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 2
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-06",
-      "customGoal": null,
-      "hero_level": 417,
       "bankedTowerPoints": 0,
-      "startPower": 1556072281
+      "growth": 0
     },
     {
       "name": "Lordwar",
@@ -2113,8 +2113,8 @@
       "activeDays": 28,
       "customGoal": null,
       "hero_level": 95,
-      "bankedTowerPoints": 0,
-      "startPower": 56562286
+      "startPower": 56562286,
+      "bankedTowerPoints": 0
     },
     {
       "name": "EzeCABJ",
@@ -2144,8 +2144,8 @@
       "joinDate": "2026-11-08",
       "customGoal": null,
       "hero_level": 381,
-      "bankedTowerPoints": 0,
-      "startPower": 1190015621
+      "startPower": 1190015621,
+      "bankedTowerPoints": 0
     },
     {
       "name": "ANZ",
@@ -2168,8 +2168,8 @@
       "joinDate": "2026-11-09",
       "customGoal": null,
       "hero_level": 157,
-      "bankedTowerPoints": 0,
-      "startPower": 91131943
+      "startPower": 91131943,
+      "bankedTowerPoints": 0
     }
   ],
   "evalStartDate": "2026-11-08",
@@ -2177,5 +2177,5 @@
   "cycleTotalDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-09T23:04:52.759Z"
+  "lastUpdated": "2026-11-10T16:07:37.744Z"
 }
