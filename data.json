@@ -875,7 +875,8 @@
     "Turmbau": {
       "points": 50,
       "firstSeen": "2026-11-09"
-    }
+    },
+    "Truhe des Händlers (Söldner-Böse)": 0
   },
   "clanData": [
     {
@@ -1192,7 +1193,8 @@
       "tower": 1,
       "chests": {
         "Barbarentruhe (Gruft Level 25)": 2,
-        "Schöne Truhe (Gruft Level 25)": 1
+        "Schöne Truhe (Gruft Level 25)": 1,
+        "Truhe des Händlers (Söldner-Böse)": 1
       },
       "growth": 0,
       "silver": 0,
