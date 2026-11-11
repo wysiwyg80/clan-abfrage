@@ -1020,7 +1020,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 7,
         "Truhe der Festung der Elfen (Festung Level 30)": 9,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 30
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 30,
+        "Ahnentruhe (Event Aufstieg der Ahnen)": 1
       },
       "growth": 0,
       "silver": 0,
