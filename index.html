@@ -396,15 +396,15 @@
                 <table class="w-full text-left border-collapse" id="rosterTable">
                     <thead>
                         <tr class="bg-slate-900 text-slate-300 text-xs uppercase border-b border-slate-700 font-cinzel">
-                            <th class="p-3">Rang / Name</th>
-                            <th class="p-3 text-right data-col-chests">Truhen (Details & Pkt)</th>
-                            <th class="p-3 text-right data-col-chests">Turmbau-Pkt</th>
-                            <th class="p-3 text-right data-col-chests text-cyan-400">Silber / Bank</th>
-                            <th class="p-3 text-right data-col-chests">Gesamt-Pkt</th>
-                            <th class="p-3 text-center data-col-chests" id="th-soll-header">Soll-Status & Ziel</th>
-                            <th class="p-3 text-center data-col-power hidden">Helden-Lvl</th>
-                            <th class="p-3 text-right data-col-power hidden">Macht</th>
-                            <th class="p-3 text-right data-col-power hidden">Zuwachs</th>
+                            <th class="p-3 cursor-help" title="Hierarchischer Rang und Spielername im Clan">Rang / Name</th>
+                            <th class="p-3 text-right data-col-chests cursor-help" title="Summe aller gesammelten Truhen und deren Punktewert">Truhen (Details & Pkt)</th>
+                            <th class="p-3 text-right data-col-chests cursor-help" title="Anzahl gebauter Türme und gesicherte Punkte in der Bank">Turmbau-Pkt</th>
+                            <th class="p-3 text-right data-col-chests text-cyan-400 cursor-help" title="An die Allianz geliefertes Silber">Silber / Bank</th>
+                            <th class="p-3 text-right data-col-chests cursor-help" title="Gesamtpunktzahl aus Truhen und Türmen">Gesamt-Pkt</th>
+                            <th class="p-3 text-center data-col-chests cursor-help" id="th-soll-header" title="Fortschritt gegenüber dem bereinigten Aktivitätsziel">Soll-Status & Ziel</th>
+                            <th class="p-3 text-center data-col-power hidden cursor-help" title="Aktuelles Level des Helden">Helden-Lvl</th>
+                            <th class="p-3 text-right data-col-power hidden cursor-help" title="Aktuelle Macht des Spielers">Macht</th>
+                            <th class="p-3 text-right data-col-power hidden cursor-help" title="Macht-Zuwachs im aktuellen Zyklus">Zuwachs</th>
                             <th class="p-3 text-center no-print">Aktionen</th>
                         </tr>
                     </thead>
@@ -1570,8 +1570,13 @@
                     });
                 }
 
-                let chestTooltipText = chestTooltipList.length > 0 
-                    ? `Erfasste Truhen:\n• ` + chestTooltipList.join('\n• ') 
+                // Intelligente Begrenzung auf max. 5 Truhentypen im Tooltip, Rest zusammenfassen
+                let maxDisplay = 5;
+                let displayedChests = chestTooltipList.slice(0, maxDisplay);
+                let remainingCount = chestTooltipList.length - maxDisplay;
+
+                let chestTooltipText = displayedChests.length > 0 
+                    ? `Erfasste Truhen:\n• ` + displayedChests.join('\n• ') + (remainingCount > 0 ? `\n... und ${remainingCount} weitere Typen` : '')
                     : 'Keine Truhen erfasst';
 
                 let towerVal = Number(p.tower || 0);
