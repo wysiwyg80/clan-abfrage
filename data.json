@@ -1649,7 +1649,8 @@
         "Truhe der Festung der Elfen (Festung Level 30)": 2,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
         "Barbarentruhe (Gruft Level 20)": 2,
-        "Truhe der Orks (Gruft Level 20)": 1
+        "Truhe der Orks (Gruft Level 20)": 1,
+        "Gewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 1
       },
       "growth": 0,
       "silver": 0,
