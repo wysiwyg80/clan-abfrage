@@ -28,7 +28,7 @@
         }
 
         @media print {
-            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, #visitorChestModal, #aiCheckModal, #newChestsModal, .p-3 input[type="number"], #searchInput, #chestSearchInput, th:last-child, td:last-child, #paginationControls {
+            button, .no-print, header button, #adminPanel, #editModal, #chestDetailsModal, #visitorChestModal, #aiCheckModal, #newChestsModal, #mobileTooltipModal, .p-3 input[type="number"], #searchInput, #chestSearchInput, th:last-child, td:last-child, #paginationControls {
                 display: none !important;
             }
             body { background-color: #ffffff !important; color: #000000 !important; padding: 0 !important; }
@@ -232,13 +232,16 @@
                 <h3 class="text-xs font-bold uppercase text-purple-400 flex items-center gap-2">
                     <i class="fa-solid fa-clock-rotate-left"></i> Zyklus-Verlauf & Historie (Snapshot-Archiv)
                 </h3>
-                <p class="text-xs text-slate-300">Speichere den aktuellen Stand als historischen Punkt ab oder vergleiche mit früheren Zyklen.</p>
+                <p class="text-xs text-slate-300">Speichere den aktuellen Stand als historischen Punkt ab, vergleiche ihn mit früheren Zyklen oder lösche alte Snapshots.</p>
                 <div class="flex flex-wrap gap-2">
                     <button onclick="saveSnapshotToHistory()" class="bg-purple-900 hover:bg-purple-800 text-purple-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
                         <i class="fa-solid fa-camera"></i> Aktuellen Stand als Historie sichern
                     </button>
                     <button onclick="viewHistorySnapshots()" class="bg-slate-700 hover:bg-slate-600 text-slate-200 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
                         <i class="fa-solid fa-list"></i> Historie anzeigen / vergleichen
+                    </button>
+                    <button onclick="clearHistorySnapshots()" class="bg-red-900/80 hover:bg-red-800 text-red-200 border border-red-700/60 font-semibold px-3 py-2 rounded text-xs transition cursor-pointer flex items-center gap-1.5">
+                        <i class="fa-solid fa-trash-can"></i> Historie löschen
                     </button>
                 </div>
             </div>
@@ -303,7 +306,7 @@
                     <div class="flex justify-between items-center mb-1">
                         <h3 class="text-xs font-bold text-amber-400 uppercase"><i class="fa-solid fa-pie-chart"></i> Truhen-Verteilung</h3>
                     </div>
-                    <p class="text-[10px] text-slate-400 mb-2" id="chestDistSubtitle">Top 10 & Sonstige</p>
+                    <p class="text-[10px] text-slate-400 mb-2" id="chestDistSubtitle">Top 10 & Sonstige (Antippen für Details)</p>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-12 gap-3 items-center">
                     <div class="sm:col-span-5 h-52 relative">
@@ -412,15 +415,15 @@
                 <table class="w-full text-left border-collapse" id="rosterTable">
                     <thead>
                         <tr class="bg-slate-900 text-slate-300 text-xs uppercase border-b border-slate-700 font-cinzel">
-                            <th class="p-3 cursor-help" title="Hierarchischer Rang und Spielername im Clan">Rang / Name</th>
-                            <th class="p-3 text-right data-col-chests cursor-help" title="Summe aller gesammelten Truhen und deren Punktewert">Truhen (Details & Pkt)</th>
-                            <th class="p-3 text-right data-col-chests cursor-help" title="Anzahl gebauter Türme und gesicherte Punkte in der Bank">Turmbau-Pkt</th>
-                            <th class="p-3 text-right data-col-chests text-cyan-400 cursor-help" title="An die Allianz geliefertes Silber">Silber / Bank</th>
-                            <th class="p-3 text-right data-col-chests cursor-help" title="Gesamtpunktzahl aus Truhen und Türmen">Gesamt-Pkt</th>
-                            <th class="p-3 text-center data-col-chests cursor-help" id="th-soll-header" title="Fortschritt gegenüber dem bereinigten Aktivitätsziel">Soll-Status & Ziel</th>
-                            <th class="p-3 text-center data-col-power hidden cursor-help" title="Aktuelles Level des Helden">Helden-Lvl</th>
-                            <th class="p-3 text-right data-col-power hidden cursor-help" title="Aktuelle Macht des Spielers">Macht</th>
-                            <th class="p-3 text-right data-col-power hidden cursor-help" title="Macht-Zuwachs im aktuellen Zyklus">Zuwachs</th>
+                            <th onclick="showMobileTooltip('Rang / Name', 'Hierarchischer Rang (Anführer, Vorgesetzter, Offizier, Veteran, Soldat) und Spielername im Clan.')" class="p-3 cursor-pointer hover:text-amber-300 transition" title="Hierarchischer Rang und Spielername im Clan">Rang / Name <i class="fa-solid fa-circle-info text-[10px] text-slate-400"></i></th>
+                            <th onclick="showMobileTooltip('Truhen (Details & Pkt)', 'Summe aller gesammelten Truhen und deren berechneter Punktewert. Tippe auf das gelbe Feld eines Spielers, um Details einzusehen.')" class="p-3 text-right data-col-chests cursor-pointer hover:text-amber-300 transition" title="Summe aller gesammelten Truhen und deren Punktewert">Truhen (Details & Pkt) <i class="fa-solid fa-circle-info text-[10px] text-slate-400"></i></th>
+                            <th onclick="showMobileTooltip('Turmbau-Pkt', 'Anzahl der im aktuellen Zyklus gebauten Türme plus bereits in der Bank gesicherte Turmbau-Punkte.')" class="p-3 text-right data-col-chests cursor-pointer hover:text-amber-300 transition" title="Anzahl gebauter Türme und gesicherte Punkte in der Bank">Turmbau-Pkt <i class="fa-solid fa-circle-info text-[10px] text-slate-400"></i></th>
+                            <th onclick="showMobileTooltip('Silber / Bank', 'Gesamtmenge des an die Allianz gelieferten Silbers. Über das Eingabefeld daneben kann Silber direkt addiert werden.')" class="p-3 text-right data-col-chests text-cyan-400 cursor-pointer hover:text-cyan-300 transition" title="An die Allianz geliefertes Silber">Silber / Bank <i class="fa-solid fa-circle-info text-[10px] text-cyan-500"></i></th>
+                            <th onclick="showMobileTooltip('Gesamt-Pkt', 'Summe aus Truhen-Punkten und Turmbau-Punkten im aktuellen Zeitraum.')" class="p-3 text-right data-col-chests cursor-pointer hover:text-amber-300 transition" title="Gesamtpunktzahl aus Truhen und Türmen">Gesamt-Pkt <i class="fa-solid fa-circle-info text-[10px] text-slate-400"></i></th>
+                            <th onclick="showMobileTooltip('Soll-Status & Ziel', 'Fortschritt gegenüber dem tagesgenauen Aktivitätsziel (unter 100M Macht gilt das niedrigere Ziel, darüber das höhere Ziel, anteilig nach Zyklustagen und Beitrittsdatum).')" class="p-3 text-center data-col-chests cursor-pointer hover:text-amber-300 transition" id="th-soll-header" title="Fortschritt gegenüber dem bereinigten Aktivitätsziel">Soll-Status & Ziel</th>
+                            <th onclick="showMobileTooltip('Helden-Lvl', 'Aktuelles Level des Haupthelden.')" class="p-3 text-center data-col-power hidden cursor-pointer hover:text-amber-300 transition" title="Aktuelles Level des Helden">Helden-Lvl <i class="fa-solid fa-circle-info text-[10px] text-slate-400"></i></th>
+                            <th onclick="showMobileTooltip('Macht', 'Aktuelle Gesamt-Macht des Spielers im Vergleich zur Start-Macht zu Beginn des Zyklus.')" class="p-3 text-right data-col-power hidden cursor-pointer hover:text-amber-300 transition" title="Aktuelle Macht des Spielers">Macht <i class="fa-solid fa-circle-info text-[10px] text-slate-400"></i></th>
+                            <th onclick="showMobileTooltip('Zuwachs', 'Machtveränderung seit dem letzten Import oder Zyklus-Start.')" class="p-3 text-right data-col-power hidden cursor-pointer hover:text-amber-300 transition" title="Macht-Zuwachs im aktuellen Zyklus">Zuwachs <i class="fa-solid fa-circle-info text-[10px] text-slate-400"></i></th>
                             <th class="p-3 text-center no-print">Aktionen</th>
                         </tr>
                     </thead>
@@ -439,6 +442,22 @@
         </div>
 
     </main>
+
+    <!-- Mobiles Info-Popup (Tooltip-Ersatz für Touch-Geräte & Smartphones) -->
+    <div id="mobileTooltipModal" onclick="closeMobileTooltip()" class="hidden fixed inset-0 bg-slate-950/75 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+        <div onclick="event.stopPropagation()" class="bg-slate-900 border border-amber-500/60 rounded-xl p-4 w-full max-w-sm space-y-3 shadow-2xl">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+                <h4 id="mobileTooltipTitle" class="font-cinzel font-bold text-amber-400 text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info"></i> Info
+                </h4>
+                <button onclick="closeMobileTooltip()" class="text-slate-400 hover:text-white cursor-pointer p-1"><i class="fa-solid fa-xmark text-base"></i></button>
+            </div>
+            <p id="mobileTooltipText" class="text-xs text-slate-200 whitespace-pre-line leading-relaxed max-h-60 overflow-y-auto custom-scrollbar"></p>
+            <div class="pt-1 flex justify-end">
+                <button onclick="closeMobileTooltip()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-4 py-1.5 rounded text-xs transition cursor-pointer">OK</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal für KI Check -->
     <div id="aiCheckModal" class="hidden fixed inset-0 bg-slate-950/85 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -674,6 +693,17 @@
             "Veteran": 4,
             "Soldat": 5
         };
+
+        // Funktion für Mobile-Popups (Tooltip-Ersatz auf Touch-Geräten)
+        function showMobileTooltip(title, text) {
+            document.getElementById('mobileTooltipTitle').innerHTML = `<i class="fa-solid fa-circle-info"></i> ${title}`;
+            document.getElementById('mobileTooltipText').textContent = text;
+            document.getElementById('mobileTooltipModal').classList.remove('hidden');
+        }
+
+        function closeMobileTooltip() {
+            document.getElementById('mobileTooltipModal').classList.add('hidden');
+        }
 
         function getChestPoints(typeName) {
             if (chestTypeValues[typeName] !== undefined) {
@@ -1001,6 +1031,17 @@
                 if(!isNaN(idx) && history[idx]) {
                     alert(`Snapshot: ${history[idx].label}\nMitgliederanzahl: ${history[idx].data.length}`);
                 }
+            }
+        }
+
+        function clearHistorySnapshots() {
+            let history = JSON.parse(localStorage.getItem('legio_history_snapshots')) || [];
+            if (history.length === 0) {
+                return alert("Es sind aktuell keine gespeicherten Snapshots in der Historie vorhanden.");
+            }
+            if (confirm(`Möchtest du wirklich alle ${history.length} gespeicherten Snapshots aus der Historie endgültig löschen?`)) {
+                localStorage.removeItem('legio_history_snapshots');
+                alert("Die gesamte Historie (alle Snapshots) wurde erfolgreich gelöscht!");
             }
         }
 
@@ -1355,7 +1396,7 @@
 
             let headerElem = document.getElementById('th-soll-header');
             if(headerElem) {
-                headerElem.innerText = `Soll-Status (<100M: ${goalLow.toLocaleString()} | >100M: ${goalHigh.toLocaleString()} / ${formatDateGerman(evalStartDate)} - ${formatDateGerman(evalEndDate)} [${activeDaysCount}T von ${cycleTotalDays}T])`;
+                headerElem.innerHTML = `Soll-Status (<100M: ${goalLow.toLocaleString()} | >100M: ${goalHigh.toLocaleString()} / ${formatDateGerman(evalStartDate)} - ${formatDateGerman(evalEndDate)} [${activeDaysCount}T von ${cycleTotalDays}T]) <i class="fa-solid fa-circle-info text-[10px] text-slate-400"></i>`;
             }
 
             renderChestTypeConfig();
@@ -2395,6 +2436,11 @@
                                 <div class="text-[10px] text-amber-400 font-bold mt-0.5">${val.toLocaleString()} Pkt <span class="text-slate-400 font-normal">(${percent}%)</span></div>
                             </div>
                         `;
+
+                        // Mobile Touch-Popup beim Antippen der Legende
+                        div.onclick = () => {
+                            showMobileTooltip(fullName, `Gesamtpunkte: ${val.toLocaleString()} Pkt\nAnteil an allen Truhen: ${percent} %`);
+                        };
 
                         div.onmouseenter = () => {
                             if (distributionChart) {
