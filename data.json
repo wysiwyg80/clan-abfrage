@@ -880,7 +880,8 @@
       "points": 0,
       "firstSeen": "2026-11-09"
     },
-    "Truhe der Feuer-Hydra (Epischer Inferno-Trupp)": 0
+    "Truhe der Feuer-Hydra (Epischer Inferno-Trupp)": 0,
+    "Infernotruhe (Heldenhafte Monster Level 35)": 0
   },
   "clanData": [
     {
@@ -2141,7 +2142,8 @@
         "Truhe der Verfluchten (Heldenhafte Monster Level 33)": 1,
         "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1,
         "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 2,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 27
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 27,
+        "Infernotruhe (Heldenhafte Monster Level 35)": 1
       },
       "growth": 0,
       "silver": 0,
