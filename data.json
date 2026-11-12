@@ -2546,6 +2546,19 @@
       "hero_level": 210,
       "startPower": 192459681,
       "bankedTowerPoints": 0
+    },
+    {
+      "name": "travelling wilburys",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 75042565,
+      "hero_level": 114,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-12"
     }
   ],
   "evalStartDate": "2026-11-08",
