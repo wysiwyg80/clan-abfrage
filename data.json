@@ -887,7 +887,8 @@
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": {
       "points": 0,
       "firstSeen": "2026-11-09"
-    }
+    },
+    "Alte Truhe eines Kriegers (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -2147,7 +2148,8 @@
         "Weiße Holztruhe (Epische Gruft Level 20)": 1,
         "Skarabäus-Truhe (Epische Gruft Level 20)": 1,
         "Truhe der Kobra (Gruft Level 15)": 1,
-        "Weiße Holztruhe (Epische Gruft Level 25)": 1
+        "Weiße Holztruhe (Epische Gruft Level 25)": 1,
+        "Alte Truhe eines Kriegers (Epische Gruft Level 15)": 1
       },
       "growth": 0,
       "silver": 0,
