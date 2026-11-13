@@ -2598,7 +2598,9 @@
     {
       "name": "travelling wilburys",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Truhe der Orks (Gruft Level 15)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 75042565,
