@@ -40,6 +40,16 @@
             td { border-bottom: 1px solid #e2e8f0 !important; color: #000000 !important; }
             .print-silver-val { display: inline !important; font-weight: bold; color: #0891b2 !important; }
             canvas { max-height: 180px !important; }
+
+            /* Gezielte Steuerung der Druckansichten */
+            body.print-mode-stats .print-section-chests,
+            body.print-mode-stats .print-section-roster { display: none !important; }
+
+            body.print-mode-chests .print-section-stats,
+            body.print-mode-chests .print-section-roster { display: none !important; }
+
+            body.print-mode-roster .print-section-stats,
+            body.print-mode-roster .print-section-chests { display: none !important; }
         }
     </style>
 </head>
@@ -66,9 +76,18 @@
                 <button onclick="exportToCSV()" class="bg-emerald-800 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print" title="Daten als Excel-kompatible CSV-Datei herunterladen">
                     <i class="fa-solid fa-file-csv"></i> CSV Export
                 </button>
-                <button onclick="window.print()" class="bg-cyan-700 hover:bg-cyan-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
-                    <i class="fa-solid fa-print"></i> Auswertung drucken / PDF
+                
+                <!-- Neue Druck-Buttons -->
+                <button onclick="printStatsEvaluation()" class="bg-cyan-700 hover:bg-cyan-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print" title="Statistik & Top 10 drucken">
+                    <i class="fa-solid fa-print"></i> Auswertung (Top 10)
                 </button>
+                <button onclick="printChestsEvaluation()" class="bg-amber-700 hover:bg-amber-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print" title="Detaillierte Truhenauswertung drucken">
+                    <i class="fa-solid fa-file-invoice"></i> Truhen-Tabelle
+                </button>
+                <button onclick="printRosterEvaluation()" class="bg-indigo-700 hover:bg-indigo-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print" title="Haupt-Rangliste drucken">
+                    <i class="fa-solid fa-address-book"></i> Rangliste drucken
+                </button>
+
                 <button onclick="toggleAdminPanel()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5 cursor-pointer no-print">
                     <i class="fa-solid fa-sliders"></i> Admin & Cloud Sync
                 </button>
@@ -294,7 +313,8 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- 1. Statistik / Top 10 Sektion (print-section-stats) -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 print-section-stats">
             <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow">
                 <h3 class="text-xs font-bold text-amber-400 uppercase mb-3"><i class="fa-solid fa-trophy"></i> Top 10 Gesamtpunkte</h3>
                 <div class="h-56"><canvas id="topChestsChart"></canvas></div>
@@ -322,7 +342,8 @@
             </div>
         </div>
 
-        <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 shadow space-y-4">
+        <!-- 2. Detaillierte Truhen-Tabelle unten (print-section-chests) -->
+        <div class="bg-slate-800 border border-amber-500/30 rounded-xl p-4 shadow space-y-4 print-section-chests">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-700 pb-3">
                 <div>
                     <h3 class="text-xs font-bold text-amber-400 uppercase flex items-center gap-2">
@@ -389,7 +410,8 @@
             </div>
         </div>
 
-        <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow">
+        <!-- 3. Haupt-Rangliste / Roster-Tabelle (print-section-roster) -->
+        <div class="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow print-section-roster">
             <div class="p-4 border-b border-slate-700 flex flex-col sm:flex-row justify-between items-center gap-4 no-print">
                 <div class="flex items-center gap-2 w-full sm:w-auto">
                     <input type="text" id="searchInput" placeholder="Mitglied suchen..." onkeyup="filterTable()" class="bg-slate-900 border border-slate-700 rounded px-3 py-1.5 text-xs text-slate-200 w-full sm:w-60">
@@ -464,7 +486,7 @@
 
     </main>
 
-    <!-- Mobiles Info-Popup (Tooltip-Ersatz für Touch-Geräte & Smartphones) -->
+    <!-- Modals (wie gehabt) -->
     <div id="mobileTooltipModal" onclick="closeMobileTooltip()" class="hidden fixed inset-0 bg-slate-950/75 backdrop-blur-xs z-50 flex items-center justify-center p-4">
         <div onclick="event.stopPropagation()" class="bg-slate-900 border border-amber-500/60 rounded-xl p-4 w-full max-w-sm space-y-3 shadow-2xl">
             <div class="flex justify-between items-center border-b border-slate-700 pb-2">
@@ -652,14 +674,12 @@
         
         let todayIso = new Date().toISOString().split('T')[0];
 
-        // Strukturierte Punktewerte mit Datums-Erfassung (firstSeen)
         let rawChestTypeValues = JSON.parse(localStorage.getItem('legio_chest_type_values')) || {
             "Krypta-Truhe": { points: 10, firstSeen: todayIso },
             "Monster-Truhe": { points: 5, firstSeen: todayIso },
             "Turmbau": { points: 1, firstSeen: todayIso }
         };
 
-        // Normalisierungs-Logik: Falls noch alte Daten ohne firstSeen existieren
         let chestTypeValues = {};
         Object.keys(rawChestTypeValues).forEach(key => {
             if (typeof rawChestTypeValues[key] === 'number') {
@@ -672,7 +692,6 @@
             }
         });
 
-        // Automatische Initialisierung für startPower bei älteren Daten
         clanData.forEach(p => {
             if (p.startPower === undefined || p.startPower === null) {
                 p.startPower = Number(p.power) || 0;
@@ -716,7 +735,22 @@
             "Soldat": 5
         };
 
-        // Funktion für Mobile-Popups (Tooltip-Ersatz auf Touch-Geräten)
+        // Druck-Steuerungsfunktionen
+        function printStatsEvaluation() {
+            document.body.className = "bg-slate-900 text-slate-100 min-h-screen pb-12 print-mode-stats";
+            window.print();
+        }
+
+        function printChestsEvaluation() {
+            document.body.className = "bg-slate-900 text-slate-100 min-h-screen pb-12 print-mode-chests";
+            window.print();
+        }
+
+        function printRosterEvaluation() {
+            document.body.className = "bg-slate-900 text-slate-100 min-h-screen pb-12 print-mode-roster";
+            window.print();
+        }
+
         function showMobileTooltip(title, text) {
             document.getElementById('mobileTooltipTitle').innerHTML = `<i class="fa-solid fa-circle-info"></i> ${title}`;
             document.getElementById('mobileTooltipText').textContent = text;
@@ -875,7 +909,6 @@
                 firstSeen: data.firstSeen || todayIso
             }));
 
-            // Chronologisch nach Datum sortieren (neueste zuerst)
             entries.sort((a, b) => new Date(b.firstSeen) - new Date(a.firstSeen));
 
             if (entries.length === 0) {
@@ -1441,7 +1474,6 @@
             let activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
             document.getElementById('customDaysCountInput').value = activeDaysCount;
 
-            // Öffentliche Zyklus-Leiste oben aktualisieren
             let visitorCycleText = document.getElementById('visitorCycleInfoText');
             let visitorCycleBadge = document.getElementById('visitorCycleDaysBadge');
             if (visitorCycleText && visitorCycleBadge) {
@@ -1690,7 +1722,6 @@
                     });
                 }
 
-                // Intelligente Begrenzung auf max. 5 Truhentypen im Tooltip, Rest zusammenfassen
                 let maxDisplay = 5;
                 let displayedChests = chestTooltipList.slice(0, maxDisplay);
                 let remainingCount = chestTooltipList.length - maxDisplay;
@@ -1708,7 +1739,6 @@
                 let heroLvl = (p.hero_level !== undefined && p.hero_level !== null && !isNaN(Number(p.hero_level))) ? Number(p.hero_level) : 0;
                 let limitMacht = 100000000;
                 
-                // FAIRS ZIEL BASIEREND AUF START-MACHT
                 let baseGoalFullCycle = (p.customGoal && !isNaN(Number(p.customGoal)) && Number(p.customGoal) > 0) 
                     ? Number(p.customGoal) 
                     : (pStartMacht < limitMacht ? goalLow : goalHigh);
@@ -2158,7 +2188,6 @@
                         existing.growth = newPower - (Number(existing.power) || newPower);
                         existing.power = newPower;
 
-                        // Wenn noch keine startPower existiert, wird sie beim Import initial gesetzt
                         if (existing.startPower === undefined || existing.startPower === null) {
                             existing.startPower = newPower;
                         }
@@ -2171,7 +2200,6 @@
                             Object.keys(imp.chests).forEach(cKey => {
                                 existing.chests[cKey] = (Number(existing.chests[cKey]) || 0) + Number(imp.chests[cKey]);
                                 
-                                // Automatische Datums-Erfassung für neuentdeckte Truhen
                                 if (cKey && cKey !== "Turmbau" && chestTypeValues[cKey] === undefined) {
                                     chestTypeValues[cKey] = { points: 0, firstSeen: todayIso };
                                 }
@@ -2192,7 +2220,7 @@
                             rank: imp.rank || "Soldat",
                             hero_level: Number(imp.hero_level) || 0,
                             power: initPower,
-                            startPower: initPower, // Start-Macht wird beim ersten Erfassen gesetzt
+                            startPower: initPower,
                             growth: 0,
                             tower: Number(imp.tower) || 0,
                             bankedTowerPoints: 0,
@@ -2495,7 +2523,6 @@
                             </div>
                         `;
 
-                        // Mobile Touch-Popup beim Antippen der Legende
                         div.onclick = () => {
                             showMobileTooltip(fullName, `Gesamtpunkte: ${val.toLocaleString()} Pkt\nAnteil an allen Truhen: ${percent} %`);
                         };
