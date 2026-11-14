@@ -1804,7 +1804,8 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 3,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 4,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 2,
-        "Truhe der Festung der Elfen (Festung Level 30)": 10
+        "Truhe der Festung der Elfen (Festung Level 30)": 10,
+        "Barbarentruhe (Gruft Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
