@@ -1609,7 +1609,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 2,
         "Truhe der Festung der Elfen (Festung Level 25)": 18,
-        "Sandtruhe (Gruft Level 25)": 1
+        "Sandtruhe (Gruft Level 25)": 1,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
