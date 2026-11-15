@@ -1220,7 +1220,7 @@
       "name": "Dalas",
       "rank": "Veteran",
       "power": 265435735,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 2,
         "Feuertruhe (Gruft Level 25)": 13,
@@ -1827,7 +1827,7 @@
       "name": "Cologne am Rhein",
       "rank": "Soldat",
       "power": 423882385,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 2,
@@ -1859,7 +1859,7 @@
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
       "power": 406240935,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1889,7 +1889,7 @@
       "name": "kikito",
       "rank": "Vorgesetzter",
       "power": 293139021,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 2,
@@ -1923,7 +1923,7 @@
       "name": "Frederico Freitas",
       "rank": "Vorgesetzter",
       "power": 128566016,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Steintruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
@@ -2031,7 +2031,7 @@
       "name": "PABLUS",
       "rank": "Veteran",
       "power": 119586751,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Feuertruhe (Gruft Level 20)": 1,
