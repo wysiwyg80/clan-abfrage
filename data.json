@@ -2799,6 +2799,19 @@
       "customGoal": null,
       "hero_level": 226,
       "startPower": 307454262
+    },
+    {
+      "name": "Legolas",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 1165295946,
+      "hero_level": 371,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-15"
     }
   ],
   "evalStartDate": "2026-11-08",
