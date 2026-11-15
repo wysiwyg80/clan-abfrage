@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Battle Kachel-Rechner</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e24;
+            color: #f5f5f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #2a2a35;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            max-width: 450px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #ffcc00;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #bbb;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #ffcc00;
+            color: #1e1e24;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #e6b800;
+        }
+        .result-box {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #20202a;
+            border-left: 5px solid #ffcc00;
+            border-radius: 4px;
+            display: none;
+        }
+        .result-title {
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 8px;
+        }
+        .coordinates {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fff;
+            background: #2d2d3d;
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .explanation {
+            font-size: 14px;
+            color: #aaa;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Total Battle Rechner</h2>
+    
+    <div class="form-group">
+        <label for="startX">Start X-Koordinate:</label>
+        <input type="number" id="startX" value="414" placeholder="z.B. 414">
+    </div>
+    
+    <div class="form-group">
+        <label for="startY">Start Y-Koordinate:</label>
+        <input type="number" id="startY" value="704" placeholder="z.B. 704">
+    </div>
+    
+    <div class="form-group">
+        <label for="distance">Gewünschte Kacheln:</label>
+        <input type="number" id="distance" value="24" min="1" placeholder="z.B. 24">
+    </div>
+    
+    <div class="form-group">
+        <label for="direction">Richtung (Uhrzeit):</label>
+        <select id="direction">
+            <option value="12">12 Uhr (Gerade nach oben)</option>
+            <option value="2">2 Uhr (Schräg rechts-oben)</option>
+            <option value="3">3 Uhr (Gerade nach rechts)</option>
+            <option value="4">4 Uhr (Schräg rechts-unten)</option>
+            <option value="6">6 Uhr (Gerade nach unten)</option>
+            <option value="8" selected>8 Uhr (Schräg links-unten)</option>
+            <option value="9">9 Uhr (Gerade nach links)</option>
+            <option value="10">10 Uhr (Schräg links-oben)</option>
+        </select>
+    </div>
+    
+    <button onclick="calculateCoordinates()">Ziel berechnen</button>
+    
+    <div id="resultBox" class="result-box">
+        <div class="result-title">📍 Dein Zielpunkt:</div>
+        <div class="coordinates" id="targetCoords">X: --- | Y: ---</div>
+        <div class="explanation" id="calcExpl"></div>
+    </div>
+</div>
+
+<script>
+function calculateCoordinates() {
+    const x1 = parseInt(document.getElementById('startX').value);
+    const y1 = parseInt(document.getElementById('startY').value);
+    const dist = parseInt(document.getElementById('distance').value);
+    const dir = document.getElementById('direction').value;
+    
+    if (isNaN(x1) || isNaN(y1) || isNaN(dist)) {
+        alert("Bitte fülle alle Felder mit gültigen Zahlen aus!");
+        return;
+    }
+
+    let stepsX = 0;
+    let stepsY = 0;
+    let signX = 0;
+    let signY = 0;
+    
+    // Determine mathematical sign based on clock directions (Y+ is down!)
+    switch(dir) {
+        case "12": signX = 0;  signY = -1; break;
+        case "2":  signX = 1;  signY = -1; break;
+        case "3":  signX = 1;  signY = 0;  break;
+        case "4":  signX = 1;  signY = 1;  break;
+        case "6":  signX = 0;  signY = 1;  break;
+        case "8":  signX = -1; signY = 1;  break;
+        case "9":  signX = -1; signY = 0;  break;
+        case "10": signX = -1; signY = -1; break;
+    }
+    
+    const targetSquare = dist * dist;
+    
+    if (signX === 0 || signY === 0) {
+        // Straight line directions
+        stepsX = signX === 0 ? 0 : dist;
+        stepsY = signY === 0 ? 0 : dist;
+    } else {
+        // Diagonal directions: find best combination matching the flat angle
+        let bestDiff = Infinity;
+        
+        // For flat angles (2, 4, 8, 10 o'clock), X is larger. For sharp ones it swaps.
+        // We look for a pair where x_step^2 + y_step^2 is close to targetSquare
+        // Since we are targeting flat angles (2, 4, 8, 10), X > Y.
+        for (let x = Math.floor(dist * 0.7); x <= dist; x++) {
+            for (let y = 1; y <= x; y++) {
+                let sumSq = (x * x) + (y * y);
+                let diff = Math.abs(sumSq - targetSquare);
+                if (diff < bestDiff) {
+                    bestDiff = diff;
+                    stepsX = x;
+                    stepsY = y;
+                }
+            }
+        }
+    }
+    
+    // Calculate final target coordinates
+    const targetX = x1 + (stepsX * signX);
+    const targetY = y1 + (stepsY * signY);
+    
+    // Display result
+    document.getElementById('targetCoords').innerText = `X: ${targetX} | Y: ${targetY}`;
+    
+    let explText = `<b>Rezept für diese Strecke:</b><br>`;
+    if (stepsX > 0) explText += `• ${stepsX} Kacheln auf der X-Achse (${signX > 0 ? 'rechts' : 'links'})<br>`;
+    if (stepsY > 0) explText += `• ${stepsY} Kacheln auf der Y-Achse (${signY > 0 ? 'unten' : 'oben'})<br>`;
+    explText += `<br><i>Hintergrund: ${stepsX}*${stepsX} + ${stepsY}*${stepsY} = ${(stepsX*stepsX) + (stepsY*stepsY)} (Ziel-Zahl: ${targetSquare})</i>`;
+    
+    document.getElementById('calcExpl').innerHTML = explText;
+    document.getElementById('resultBox').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
