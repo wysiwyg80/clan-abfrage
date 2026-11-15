@@ -1371,8 +1371,13 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
+      "hero_level": 220,
       "power": 226136481,
-      "tower": 0,
+      "startPower": 226136481,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Feuertruhe (Gruft Level 20)": 3,
         "Steintruhe (Gruft Level 15)": 1,
@@ -1395,13 +1400,8 @@
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 3
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 220,
-      "startPower": 226136481,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "BELEN",
@@ -1585,13 +1585,8 @@
     {
       "name": "Orodrafin",
       "rank": "Veteran",
-      "hero_level": 194,
       "power": 95966982,
-      "startPower": 95966982,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 25)": 4,
@@ -1610,8 +1605,13 @@
         "Truhe der Festung der Elfen (Festung Level 15)": 2,
         "Truhe der Festung der Elfen (Festung Level 20)": 1
       },
-      "bankedTowerPoints": 50,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 194,
+      "startPower": 95966982,
+      "bankedTowerPoints": 50
     },
     {
       "name": "Burigas",
@@ -2872,15 +2872,16 @@
     {
       "name": "Bayernbua",
       "rank": "Veteran",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
       "power": 143296861,
-      "hero_level": 123,
+      "tower": 0,
+      "chests": {},
+      "silver": 0,
+      "joinDate": "2026-11-16",
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null,
-      "joinDate": "2026-11-16"
+      "hero_level": 123,
+      "startPower": 143296861
     }
   ],
   "evalStartDate": "2026-11-08",
@@ -2889,5 +2890,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-15T23:09:15.890Z"
+  "lastUpdated": "2026-11-15T23:48:50.684Z"
 }
