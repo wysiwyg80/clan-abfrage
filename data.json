@@ -898,7 +898,7 @@
       "name": "Manador II",
       "rank": "Veteran",
       "power": 633226375,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Feuertruhe (Gruft Level 20)": 1,
@@ -929,13 +929,13 @@
       "customGoal": null,
       "hero_level": 319,
       "startPower": 633226375,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Riyash IV",
       "rank": "Veteran",
       "power": 479857600,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 4,
@@ -955,15 +955,16 @@
       "customGoal": null,
       "hero_level": 290,
       "startPower": 479857600,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Magellan",
       "rank": "Veteran",
       "power": 449355045,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
+        "Feuertruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 20,
         "Knochentruhe (Gruft Level 25)": 2,
         "Barbarentruhe (Gruft Level 25)": 9,
@@ -974,14 +975,13 @@
         "Truhe der Kobra (Gruft Level 25)": 3,
         "Vergessene Truhe (Gruft Level 25)": 2,
         "Harpyien-Truhe (Epische Gruft Level 25)": 8,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 2,
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 1
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -989,13 +989,13 @@
       "customGoal": null,
       "hero_level": 269,
       "startPower": 449355045,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Explorer",
       "rank": "Veteran",
       "power": 413974355,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 2,
         "Steintruhe (Gruft Level 25)": 24,
@@ -1007,6 +1007,7 @@
         "Infernale Truhe (Gruft Level 25)": 3,
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 11,
+        "Harpyien-Truhe (Epische Gruft Level 20)": 1,
         "Harpyien-Truhe (Epische Gruft Level 25)": 2,
         "Harpyien-Truhe (Epische Gruft Level 30)": 3,
         "Weiße Holztruhe (Epische Gruft Level 25)": 2,
@@ -1019,8 +1020,7 @@
         "Truhe der Festung der Elfen (Festung Level 30)": 3,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 1,
         "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 1,
-        "Runentruhe (Lvl. 40-44 Überfallender Runen-Trupp)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 20)": 1
+        "Runentruhe (Lvl. 40-44 Überfallender Runen-Trupp)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1028,13 +1028,13 @@
       "customGoal": null,
       "hero_level": 258,
       "startPower": 413974355,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "DRACULA",
       "rank": "Veteran",
       "power": 392947425,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1065,13 +1065,13 @@
       "customGoal": null,
       "hero_level": 254,
       "startPower": 392947425,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Biin",
       "rank": "Veteran",
       "power": 302472181,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 3,
         "Sandtruhe (Gruft Level 20)": 5,
@@ -1108,13 +1108,13 @@
       "customGoal": null,
       "hero_level": 235,
       "startPower": 302472181,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Maem",
       "rank": "Veteran",
       "power": 296808699,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 25)": 2,
@@ -1142,13 +1142,13 @@
       "customGoal": null,
       "hero_level": 246,
       "startPower": 296808699,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Auzar",
       "rank": "Veteran",
       "power": 308765825,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 3,
         "Goldene Truhe (Bank)": 9,
@@ -1184,13 +1184,13 @@
       "customGoal": null,
       "hero_level": 234,
       "startPower": 308765825,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Elginan",
       "rank": "Offizier",
       "power": 312395806,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -1205,6 +1205,7 @@
         "Vergessene Truhe (Gruft Level 25)": 1,
         "Skorpion-Truhe (Epische Gruft Level 25)": 1,
         "Skorpion-Truhe (Epische Gruft Level 30)": 1,
+        "Weiße Holztruhe (Epische Gruft Level 20)": 1,
         "Geflochtene Truhe (Epische Gruft Level 25)": 1,
         "Geflochtene Truhe (Epische Gruft Level 30)": 1,
         "Barbarentruhe (Heldenhafte Monster Level 24)": 1,
@@ -1213,8 +1214,7 @@
         "Truhe der Feuer-Hydra (Epischer Inferno-Trupp)": 1,
         "Truhe der Verfluchten (Epische Gruft Level 25)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
-        "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 1,
-        "Weiße Holztruhe (Epische Gruft Level 20)": 1
+        "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1222,13 +1222,13 @@
       "customGoal": null,
       "hero_level": 237,
       "startPower": 312395806,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Dalas",
       "rank": "Veteran",
       "power": 265435735,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 2,
         "Feuertruhe (Gruft Level 20)": 3,
@@ -1253,13 +1253,13 @@
       "customGoal": null,
       "hero_level": 234,
       "startPower": 265435735,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Carruggi 5r",
       "rank": "Veteran",
       "power": 239786835,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Sandtruhe (Gruft Level 25)": 2,
@@ -1289,13 +1289,13 @@
       "customGoal": null,
       "hero_level": 222,
       "startPower": 239786835,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "ICHNOS",
       "rank": "Veteran",
       "power": 241039155,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 25)": 4,
@@ -1312,6 +1312,7 @@
         "Vergessene Truhe (Gruft Level 20)": 1,
         "Vergessene Truhe (Gruft Level 25)": 2,
         "Truhe des Händlers (Söldner-Böse)": 1,
+        "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
         "Kobalt-Truhe (Epische Gruft Level 20)": 3,
         "Barbarentruhe (Epische Gruft Level 20)": 1,
         "Harpyien-Truhe (Epische Gruft Level 20)": 1,
@@ -1326,8 +1327,7 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 6,
         "Truhe der Verfluchten (Epische Gruft Level 20)": 3,
         "Truhe der alten Bastion (Epische Gruft Level 20)": 2,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1,
-        "Ahnentruhe (Event Aufstieg der Ahnen)": 4
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1335,13 +1335,13 @@
       "customGoal": null,
       "hero_level": 231,
       "startPower": 241039155,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Lee the Ugly",
       "rank": "Veteran",
       "power": 246728601,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 2,
         "Schöne Truhe (Gruft Level 25)": 2,
@@ -1350,10 +1350,10 @@
         "Infernale Truhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 3,
         "Truhe der Festung der Elfen (Festung Level 15)": 1,
-        "Truhe der Festung der Elfen (Festung Level 25)": 1
+        "Truhe der Festung der Elfen (Festung Level 25)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 1,
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 3
       },
       "growth": 0,
       "silver": 0,
@@ -1361,32 +1361,32 @@
       "customGoal": null,
       "hero_level": 232,
       "startPower": 246728601,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "kordy",
       "rank": "Veteran",
-      "hero_level": 222,
       "power": 236544591,
-      "startPower": 236544591,
-      "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
+      "tower": 0,
       "chests": {
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
-        "Truhe der Festung der Elfen (Festung Level 25)": 2,
         "Knochentruhe (Gruft Level 15)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1
+        "Truhe der Festung der Elfen (Festung Level 25)": 2,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1,
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 222,
+      "startPower": 236544591,
+      "bankedTowerPoints": 50
     },
     {
       "name": "Granidred",
       "rank": "Veteran",
       "power": 226136481,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 20)": 3,
         "Steintruhe (Gruft Level 15)": 1,
@@ -1415,13 +1415,13 @@
       "customGoal": null,
       "hero_level": 220,
       "startPower": 226136481,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "BELEN",
       "rank": "Veteran",
       "power": 217959831,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Knochentruhe (Gruft Level 20)": 1,
@@ -1430,12 +1430,12 @@
         "Truhe der Orks (Gruft Level 20)": 1,
         "Truhe der Kobra (Gruft Level 20)": 2,
         "Vergessene Truhe (Gruft Level 20)": 4,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 20)": 2,
         "Truhe der Festung der Elfen (Festung Level 20)": 19,
         "Truhe der Festung der Elfen (Festung Level 25)": 3,
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 4,
-        "Seltene Drachentruhe (Seltene Gruft Level 20)": 2,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 4
       },
       "growth": 0,
       "silver": 0,
@@ -1443,13 +1443,13 @@
       "customGoal": null,
       "hero_level": 208,
       "startPower": 217959831,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Roula",
       "rank": "Veteran",
       "power": 209162691,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 7,
         "Steintruhe (Gruft Level 25)": 14,
@@ -1470,13 +1470,13 @@
       "customGoal": null,
       "hero_level": 208,
       "startPower": 209162691,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Vudor SK6",
       "rank": "Veteran",
       "power": 211551525,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Knochentruhe (Gruft Level 20)": 2,
         "Barbarentruhe (Gruft Level 15)": 1,
@@ -1489,13 +1489,13 @@
       "customGoal": null,
       "hero_level": 250,
       "startPower": 211551525,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "King Slayer",
       "rank": "Veteran",
       "power": 166500878,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
@@ -1517,13 +1517,13 @@
       "customGoal": null,
       "hero_level": 207,
       "startPower": 166500878,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Maginad",
       "rank": "Veteran",
       "power": 141831133,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1533,15 +1533,15 @@
         "Infernale Truhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 2,
         "Vergessene Truhe (Gruft Level 25)": 2,
+        "Ahnentruhe (Event Aufstieg der Ahnen)": 12,
         "Kobalt-Truhe (Epische Gruft Level 25)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 25)": 1,
         "Skarabäus-Truhe (Epische Gruft Level 25)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 25)": 1,
+        "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
         "Schildkröten-Truhe (Epische Gruft Level 25)": 1,
         "Truhe der Festung der Elfen (Festung Level 15)": 4,
         "Truhe der Festung der Elfen (Festung Level 20)": 3,
-        "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
-        "Ahnentruhe (Event Aufstieg der Ahnen)": 12,
         "Truhe der Festung der Elfen (Festung Level 25)": 3
       },
       "growth": 0,
@@ -1550,17 +1550,18 @@
       "customGoal": null,
       "hero_level": 217,
       "startPower": 141831133,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "AyBars",
       "rank": "Veteran",
       "power": 112358486,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Sandtruhe (Gruft Level 25)": 3,
         "Feuertruhe (Gruft Level 20)": 2,
+        "Feuertruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 20)": 3,
         "Knochentruhe (Gruft Level 20)": 3,
         "Knochentruhe (Gruft Level 25)": 3,
@@ -1591,8 +1592,7 @@
         "Truhe der Festung der Elfen (Festung Level 20)": 1,
         "Truhe der Festung der Elfen (Festung Level 30)": 3,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1600,13 +1600,13 @@
       "customGoal": null,
       "hero_level": 209,
       "startPower": 112358486,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Orodrafin",
       "rank": "Veteran",
       "power": 95966982,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 25)": 4,
@@ -1631,13 +1631,13 @@
       "customGoal": null,
       "hero_level": 194,
       "startPower": 95966982,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Burigas",
       "rank": "Veteran",
       "power": 103614705,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -1661,13 +1661,13 @@
       "customGoal": null,
       "hero_level": 186,
       "startPower": 103614705,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Vudorr",
       "rank": "Veteran",
       "power": 37146298,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 20)": 6,
@@ -1702,13 +1702,13 @@
       "customGoal": null,
       "hero_level": 90,
       "startPower": 37146298,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Ria",
       "rank": "Veteran",
       "power": 929368,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 15)": 5,
         "Knochentruhe (Gruft Level 15)": 5,
@@ -1723,13 +1723,13 @@
       "customGoal": null,
       "hero_level": 31,
       "startPower": 929368,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "SaturdayNightFever",
       "rank": "Soldat",
       "power": 106786693,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 3,
         "Steintruhe (Gruft Level 20)": 3,
@@ -1750,13 +1750,13 @@
       "customGoal": null,
       "hero_level": 166,
       "startPower": 106786693,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
       "power": 760936191,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
@@ -1783,13 +1783,13 @@
       "customGoal": null,
       "hero_level": 355,
       "startPower": 760936191,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "man of war",
       "rank": "Vorgesetzter",
       "power": 1462887131,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 20)": 1,
         "Steintruhe (Gruft Level 25)": 2,
@@ -1821,13 +1821,13 @@
       "customGoal": null,
       "hero_level": 401,
       "startPower": 1462887131,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Miss Dire",
       "rank": "Anführer",
       "power": 449536035,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 20)": 1,
@@ -1843,6 +1843,7 @@
         "Truhe der Orks (Gruft Level 20)": 2,
         "Truhe der Orks (Gruft Level 25)": 2,
         "Infernale Truhe (Gruft Level 25)": 4,
+        "Truhe der Kobra (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 20)": 1,
         "Kobalt-Truhe (Epische Gruft Level 30)": 2,
         "Harpyien-Truhe (Epische Gruft Level 20)": 2,
@@ -1857,8 +1858,7 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
         "Gewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 5,
         "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 2,
-        "Ungewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 5,
-        "Truhe der Kobra (Gruft Level 25)": 1
+        "Ungewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 5
       },
       "growth": 0,
       "silver": 0,
@@ -1866,13 +1866,13 @@
       "customGoal": null,
       "hero_level": 271,
       "startPower": 449536035,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Cologne am Rhein",
       "rank": "Soldat",
       "power": 423882385,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 2,
@@ -1898,13 +1898,13 @@
       "customGoal": null,
       "hero_level": 252,
       "startPower": 423882385,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
       "power": 406240935,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -1929,17 +1929,18 @@
       "customGoal": null,
       "hero_level": 249,
       "startPower": 406240935,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "kikito",
       "rank": "Vorgesetzter",
       "power": 293139021,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 3,
+        "Steintruhe (Gruft Level 20)": 1,
         "Steintruhe (Gruft Level 25)": 2,
         "Knochentruhe (Gruft Level 20)": 2,
         "Knochentruhe (Gruft Level 25)": 3,
@@ -1959,8 +1960,7 @@
         "Truhe der Festung der Elfen (Festung Level 30)": 1,
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 3,
         "Truhe der alten Bastion (Epische Gruft Level 25)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 2,
-        "Steintruhe (Gruft Level 20)": 1
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 2
       },
       "growth": 0,
       "silver": 0,
@@ -1968,13 +1968,13 @@
       "customGoal": null,
       "hero_level": 209,
       "startPower": 293139021,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Frederico Freitas",
       "rank": "Vorgesetzter",
       "power": 128566016,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -2001,13 +2001,13 @@
       "customGoal": null,
       "hero_level": 195,
       "startPower": 128566016,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Gran Rex",
       "rank": "Offizier",
       "power": 227039151,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Sandtruhe (Gruft Level 25)": 3,
@@ -2037,13 +2037,13 @@
       "customGoal": null,
       "hero_level": 236,
       "startPower": 227039151,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Farés Dz",
       "rank": "Offizier",
       "power": 190655983,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 20)": 2,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -2082,13 +2082,13 @@
       "customGoal": null,
       "hero_level": 219,
       "startPower": 190655983,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "PABLUS",
       "rank": "Veteran",
       "power": 119586751,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Feuertruhe (Gruft Level 20)": 1,
@@ -2128,13 +2128,13 @@
       "customGoal": null,
       "hero_level": 177,
       "startPower": 119586751,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Tanmisis",
       "rank": "Veteran",
       "power": 1120156855,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 20)": 1,
         "Knochentruhe (Gruft Level 20)": 1,
@@ -2146,7 +2146,7 @@
       "customGoal": null,
       "hero_level": 361,
       "startPower": 1120156855,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Sir spanksALot",
@@ -2178,7 +2178,7 @@
       "name": "BAD Guo II",
       "rank": "Veteran",
       "power": 761938809,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 6,
         "Feuertruhe (Gruft Level 25)": 10,
@@ -2209,13 +2209,13 @@
       "customGoal": null,
       "hero_level": 340,
       "startPower": 761938809,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Riyash",
       "rank": "Veteran",
       "power": 689443971,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Barbarentruhe (Gruft Level 25)": 1,
@@ -2230,13 +2230,13 @@
       "customGoal": null,
       "hero_level": 295,
       "startPower": 689443971,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Ajji",
       "rank": "Soldat",
       "power": 386077573,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -2264,13 +2264,13 @@
       "customGoal": null,
       "hero_level": 263,
       "startPower": 386077573,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
       "power": 31358181,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Knochentruhe (Gruft Level 15)": 1,
         "Barbarentruhe (Gruft Level 15)": 1,
@@ -2290,13 +2290,13 @@
       "customGoal": null,
       "hero_level": 125,
       "startPower": 31358181,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Aurora",
       "rank": "Veteran",
       "power": 66564015,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 3,
         "Sandtruhe (Gruft Level 20)": 4,
@@ -2374,13 +2374,13 @@
       "customGoal": null,
       "hero_level": 136,
       "startPower": 66564015,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Xetlac",
       "rank": "Veteran",
       "power": 992717645,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 6,
         "Bronzetruhe (Bank)": 3,
@@ -2441,15 +2441,16 @@
       "customGoal": null,
       "hero_level": 376,
       "startPower": 992717645,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Akasha",
       "rank": "Veteran",
       "power": 894262310,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
+        "Knochentruhe (Gruft Level 15)": 1,
         "Schöne Truhe (Gruft Level 20)": 1,
         "Truhe der Maya (Gruft Level 20)": 1,
         "Truhe der Maya (Gruft Level 25)": 1,
@@ -2460,16 +2461,15 @@
         "Skorpion-Truhe (Epische Gruft Level 30)": 1,
         "Skorpion-Truhe (Epische Gruft Level 35)": 1,
         "Geflochtene Truhe (Epische Gruft Level 35)": 1,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
         "Truhe des Priesters (Epische Gruft Level 35)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 1,
         "Truhe der Verfluchten (Epische Gruft Level 35)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 35)": 1,
         "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 1,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Knochentruhe (Gruft Level 15)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2477,13 +2477,13 @@
       "customGoal": null,
       "hero_level": 360,
       "startPower": 894262310,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Arik",
       "rank": "Veteran",
       "power": 124614871,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Feuertruhe (Gruft Level 20)": 2,
@@ -2510,20 +2510,20 @@
       "customGoal": null,
       "hero_level": 133,
       "startPower": 124614871,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Arashigore",
       "rank": "Veteran",
       "power": 812592,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 15)": 1,
         "Infernale Truhe (Gruft Level 15)": 1,
         "Truhe des Gouverneurs (Geschichte)": 5,
-        "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 4,
-        "Ahnentruhe (Event Aufstieg der Ahnen)": 4
+        "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
+        "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 4
       },
       "silver": 0,
       "joinDate": "2026-11-01",
@@ -2532,13 +2532,13 @@
       "customGoal": null,
       "hero_level": 35,
       "startPower": 812592,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Akinohn",
       "rank": "Vorgesetzter",
       "power": 743768307,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 25)": 3,
         "Barbarentruhe (Gruft Level 20)": 1,
@@ -2559,13 +2559,13 @@
       "customGoal": null,
       "hero_level": 327,
       "startPower": 743768307,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Eldriel",
       "rank": "Veteran",
       "power": 190506636,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -2593,13 +2593,13 @@
       "customGoal": null,
       "hero_level": 228,
       "startPower": 190506636,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Rysiek121",
       "rank": "Offizier",
       "power": 1319490025,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 14,
         "Feuertruhe (Gruft Level 25)": 15,
@@ -2648,26 +2648,26 @@
       "customGoal": null,
       "hero_level": 409,
       "startPower": 1319490025,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "Que",
       "rank": "Soldat",
       "power": 118097255,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Goldene Truhe (Bank)": 6,
         "Sandtruhe (Gruft Level 20)": 1,
+        "Feuertruhe (Gruft Level 20)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 20)": 1,
         "Truhe der Maya (Gruft Level 20)": 3,
         "Truhe der Maya (Gruft Level 25)": 1,
+        "Truhe der Orks (Gruft Level 20)": 1,
         "Infernale Truhe (Gruft Level 20)": 2,
         "Kobalt-Truhe (Epische Gruft Level 20)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2,
-        "Truhe der Festung der Elfen (Festung Level 20)": 1,
-        "Truhe der Orks (Gruft Level 20)": 1,
-        "Feuertruhe (Gruft Level 20)": 1
+        "Truhe der Festung der Elfen (Festung Level 20)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2675,16 +2675,17 @@
       "customGoal": null,
       "hero_level": 205,
       "startPower": 118097255,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "nomad",
       "rank": "Soldat",
       "power": 141805325,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 15)": 3,
+        "Steintruhe (Gruft Level 20)": 1,
         "Knochentruhe (Gruft Level 15)": 3,
         "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Maya (Gruft Level 15)": 1,
@@ -2694,8 +2695,7 @@
         "Ahnentruhe (Event Aufstieg der Ahnen)": 8,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 2,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 26,
-        "Steintruhe (Gruft Level 20)": 1
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 26
       },
       "growth": 0,
       "silver": 0,
@@ -2703,13 +2703,13 @@
       "customGoal": null,
       "hero_level": 148,
       "startPower": 141805325,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Spartakus",
       "rank": "Offizier",
       "power": 1556072281,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 1,
@@ -2735,13 +2735,13 @@
         "Truhe der Feuer-Hydra (Epischer Inferno-Trupp)": 6,
         "Truhe der Verfluchten (Epische Gruft Level 35)": 6,
         "Runentruhe (Lvl. 45 Überfallender Runen-Trupp)": 2,
+        "Truhe der alten Bastion (Epische Gruft Level 30)": 1,
         "Truhe der alten Bastion (Epische Gruft Level 35)": 4,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 2,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 35)": 7,
         "Truhe der epischen Monster (Epischer Trupp der Untoten)": 3,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 6,
-        "Truhe der alten Bastion (Epische Gruft Level 30)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 6
       },
       "growth": 0,
       "silver": 0,
@@ -2749,13 +2749,13 @@
       "customGoal": null,
       "hero_level": 417,
       "startPower": 1556072281,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "EzeCABJ",
       "rank": "Veteran",
       "power": 1190015621,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 3,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -2803,13 +2803,13 @@
       "customGoal": null,
       "hero_level": 381,
       "startPower": 1190015621,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "ANZ",
       "rank": "Soldat",
       "power": 91131943,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Goldene Truhe (Bank)": 3,
         "Steintruhe (Gruft Level 25)": 1,
@@ -2827,20 +2827,20 @@
       "customGoal": null,
       "hero_level": 157,
       "startPower": 91131943,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 100
     },
     {
       "name": "travelling wilburys",
       "rank": "Soldat",
       "power": 75042565,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Knochentruhe (Gruft Level 15)": 1,
         "Truhe der Maya (Gruft Level 15)": 2,
         "Truhe der Orks (Gruft Level 15)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 12,
-        "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1
+        "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2848,7 +2848,7 @@
       "customGoal": null,
       "hero_level": 114,
       "startPower": 75042565,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "433",
@@ -2868,7 +2868,7 @@
       "name": "Riyash III",
       "rank": "Veteran",
       "power": 307454262,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Schöne Truhe (Gruft Level 25)": 3,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 2
@@ -2879,7 +2879,7 @@
       "customGoal": null,
       "hero_level": 226,
       "startPower": 307454262,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Legolas",
@@ -2888,15 +2888,15 @@
       "tower": 0,
       "chests": {
         "Knochentruhe (Gruft Level 25)": 1,
+        "Barbarentruhe (Gruft Level 25)": 3,
         "Schöne Truhe (Gruft Level 25)": 2,
+        "Truhe der Maya (Gruft Level 25)": 3,
+        "Truhe der Orks (Gruft Level 25)": 2,
+        "Infernale Truhe (Gruft Level 25)": 2,
         "Skorpion-Truhe (Epische Gruft Level 35)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 35)": 1,
         "Weiße Holztruhe (Epische Gruft Level 35)": 3,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 14,
-        "Barbarentruhe (Gruft Level 25)": 3,
-        "Truhe der Maya (Gruft Level 25)": 3,
-        "Truhe der Orks (Gruft Level 25)": 2,
-        "Infernale Truhe (Gruft Level 25)": 2
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 14
       },
       "silver": 0,
       "joinDate": "2026-11-15",
@@ -2904,7 +2904,8 @@
       "activeDays": 28,
       "customGoal": null,
       "hero_level": 371,
-      "startPower": 1165295946
+      "startPower": 1165295946,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Bayernbua",
@@ -2920,7 +2921,8 @@
       "activeDays": 28,
       "customGoal": null,
       "hero_level": 123,
-      "startPower": 143296861
+      "startPower": 143296861,
+      "bankedTowerPoints": 0
     }
   ],
   "evalStartDate": "2026-11-08",
@@ -2929,5 +2931,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-16T16:21:02.854Z"
+  "lastUpdated": "2026-11-16T20:27:25.167Z"
 }
