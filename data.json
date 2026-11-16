@@ -2874,7 +2874,9 @@
       "rank": "Veteran",
       "power": 143296861,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Holztruhe (Bank)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-16",
       "prevPower": 0,
