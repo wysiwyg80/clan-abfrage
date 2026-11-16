@@ -1358,18 +1358,18 @@
     {
       "name": "kordy",
       "rank": "Veteran",
+      "hero_level": 222,
       "power": 236544591,
-      "tower": 0,
+      "startPower": 236544591,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1
       },
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "prevPower": 226896441,
-      "activeDays": 1,
-      "hero_level": 222,
-      "startPower": 236544591,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Granidred",
@@ -2627,13 +2627,8 @@
     {
       "name": "Que",
       "rank": "Soldat",
-      "hero_level": 205,
       "power": 118097255,
-      "startPower": 118097255,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-04",
       "chests": {
         "Goldene Truhe (Bank)": 6,
         "Sandtruhe (Gruft Level 20)": 1,
@@ -2646,8 +2641,13 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2,
         "Truhe der Festung der Elfen (Festung Level 20)": 1
       },
-      "bankedTowerPoints": 50,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-04",
+      "customGoal": null,
+      "hero_level": 205,
+      "startPower": 118097255,
+      "bankedTowerPoints": 50
     },
     {
       "name": "nomad",
@@ -2893,5 +2893,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-16T16:12:47.706Z"
+  "lastUpdated": "2026-11-16T16:21:02.854Z"
 }
