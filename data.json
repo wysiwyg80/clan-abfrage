@@ -1334,13 +1334,8 @@
     {
       "name": "Lee the Ugly",
       "rank": "Veteran",
-      "hero_level": 232,
       "power": 246728601,
-      "startPower": 246728601,
       "tower": 1,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Feuertruhe (Gruft Level 25)": 2,
         "Schöne Truhe (Gruft Level 25)": 2,
@@ -1351,8 +1346,13 @@
         "Vergessene Truhe (Gruft Level 25)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 1
       },
-      "bankedTowerPoints": 50,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 232,
+      "startPower": 246728601,
+      "bankedTowerPoints": 50
     },
     {
       "name": "kordy",
@@ -1687,21 +1687,21 @@
     {
       "name": "Ria",
       "rank": "Veteran",
+      "hero_level": 31,
       "power": 929368,
-      "tower": 0,
+      "startPower": 929368,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Steintruhe (Gruft Level 15)": 5,
         "Knochentruhe (Gruft Level 15)": 5,
         "Truhe der Orks (Gruft Level 15)": 2,
         "Vergessene Truhe (Gruft Level 15)": 2
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 31,
-      "startPower": 929368,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "SaturdayNightFever",
@@ -1982,8 +1982,13 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
+      "hero_level": 236,
       "power": 227039151,
-      "tower": 0,
+      "startPower": 227039151,
+      "tower": 1,
+      "silver": 0,
+      "customGoal": null,
+      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Sandtruhe (Gruft Level 25)": 3,
@@ -2007,13 +2012,8 @@
         "Truhe der Verfluchten (Epische Gruft Level 25)": 1,
         "Truhe der alten Bastion (Epische Gruft Level 25)": 1
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 236,
-      "startPower": 227039151,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "Farés Dz",
@@ -2888,5 +2888,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-16T12:34:57.496Z"
+  "lastUpdated": "2026-11-16T13:27:43.691Z"
 }
