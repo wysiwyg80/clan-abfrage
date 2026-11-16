@@ -1110,7 +1110,7 @@
       "name": "Maem",
       "rank": "Veteran",
       "power": 296808699,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 25)": 2,
@@ -1374,7 +1374,7 @@
       "hero_level": 220,
       "power": 226136481,
       "startPower": 226136481,
-      "tower": 1,
+      "tower": 2,
       "silver": 0,
       "customGoal": null,
       "joinDate": "2026-11-01",
@@ -1707,7 +1707,7 @@
       "name": "SaturdayNightFever",
       "rank": "Soldat",
       "power": 106786693,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 3,
         "Steintruhe (Gruft Level 20)": 3,
@@ -2111,7 +2111,7 @@
       "name": "Tanmisis",
       "rank": "Veteran",
       "power": 1120156855,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 20)": 1,
         "Knochentruhe (Gruft Level 20)": 1,
@@ -2457,7 +2457,7 @@
       "name": "Arik",
       "rank": "Veteran",
       "power": 124614871,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Feuertruhe (Gruft Level 20)": 2,
