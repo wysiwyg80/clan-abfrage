@@ -961,7 +961,7 @@
       "name": "Magellan",
       "rank": "Veteran",
       "power": 449355045,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 20,
@@ -993,7 +993,7 @@
       "name": "Explorer",
       "rank": "Veteran",
       "power": 413974355,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 2,
         "Steintruhe (Gruft Level 25)": 21,
@@ -1068,7 +1068,7 @@
       "name": "Biin",
       "rank": "Veteran",
       "power": 302472181,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 5,
         "Feuertruhe (Gruft Level 20)": 2,
@@ -1647,7 +1647,7 @@
       "name": "Vudorr",
       "rank": "Veteran",
       "power": 37146298,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 20)": 6,
@@ -2213,7 +2213,7 @@
       "name": "Ajji",
       "rank": "Soldat",
       "power": 386077573,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -2490,7 +2490,7 @@
       "name": "Arashigore",
       "rank": "Veteran",
       "power": 812592,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 15)": 1,
@@ -2778,7 +2778,7 @@
       "name": "ANZ",
       "rank": "Soldat",
       "power": 91131943,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Goldene Truhe (Bank)": 3,
         "Steintruhe (Gruft Level 25)": 1,
