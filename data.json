@@ -1359,7 +1359,9 @@
       "rank": "Veteran",
       "power": 236544591,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-01",
       "prevPower": 226896441,
