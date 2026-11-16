@@ -1367,7 +1367,8 @@
       "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
-        "Truhe der Festung der Elfen (Festung Level 25)": 2
+        "Truhe der Festung der Elfen (Festung Level 25)": 2,
+        "Knochentruhe (Gruft Level 15)": 1
       },
       "bankedTowerPoints": 0,
       "growth": 0
