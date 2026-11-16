@@ -1371,13 +1371,8 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "hero_level": 220,
       "power": 226136481,
-      "startPower": 226136481,
       "tower": 2,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-01",
       "chests": {
         "Feuertruhe (Gruft Level 20)": 3,
         "Steintruhe (Gruft Level 15)": 1,
@@ -1400,8 +1395,13 @@
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 3
       },
-      "bankedTowerPoints": 50,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 220,
+      "startPower": 226136481,
+      "bankedTowerPoints": 50
     },
     {
       "name": "BELEN",
@@ -2890,5 +2890,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-15T23:48:50.684Z"
+  "lastUpdated": "2026-11-16T11:37:49.597Z"
 }
