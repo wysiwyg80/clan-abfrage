@@ -280,6 +280,10 @@
       "points": 100,
       "firstSeen": "2026-11-09"
     },
+    "Truhe des Händlers (Söldner-Börse)": {
+      "points": 0,
+      "firstSeen": "2026-11-17"
+    },
     "Barbarentruhe (Epische Gruft Level 15)": {
       "points": 15,
       "firstSeen": "2026-11-09"
@@ -539,6 +543,10 @@
     "House of Horrors Chest (Level 35 epic Crypt)": {
       "points": 100,
       "firstSeen": "2026-11-09"
+    },
+    "Schildkröten-Truhe (Epische Gruft Level 15)": {
+      "points": 15,
+      "firstSeen": "2026-11-17"
     },
     "Schildkröten-Truhe (Epische Gruft Level 20)": {
       "points": 40,
@@ -891,9 +899,7 @@
     "Heldenhafte Monster Level 25 (Heldenhafte Monster Level 25)": {
       "points": 0,
       "firstSeen": "2026-11-09"
-    },
-    "Truhe des Händlers (Söldner-Börse)": 0,
-    "Schildkröten-Truhe (Epische Gruft Level 15)": 15
+    }
   },
   "clanData": [
     {
@@ -903,6 +909,7 @@
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
+        "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 20)": 1,
         "Knochentruhe (Gruft Level 20)": 2,
         "Barbarentruhe (Gruft Level 20)": 1,
@@ -913,6 +920,7 @@
         "Infernale Truhe (Gruft Level 25)": 4,
         "Truhe der Kobra (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 2,
+        "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
         "Kobalt-Truhe (Epische Gruft Level 20)": 1,
         "Trillium-Truhe (Epische Gruft Level 20)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
@@ -924,9 +932,7 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 11,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 2,
         "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 1,
-        "Sandtruhe (Gruft Level 25)": 1,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 33,
-        "Ahnentruhe (Event Aufstieg der Ahnen)": 4
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 33
       },
       "growth": 0,
       "silver": 0,
@@ -948,13 +954,13 @@
         "Knochentruhe (Gruft Level 25)": 4,
         "Barbarentruhe (Gruft Level 25)": 9,
         "Schöne Truhe (Gruft Level 25)": 4,
+        "Truhe der Maya (Gruft Level 25)": 6,
+        "Truhe der Orks (Gruft Level 25)": 4,
         "Infernale Truhe (Gruft Level 25)": 8,
         "Truhe der Kobra (Gruft Level 25)": 4,
         "Vergessene Truhe (Gruft Level 25)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 6,
-        "Truhe des Priesters (Epische Gruft Level 35)": 2,
-        "Truhe der Orks (Gruft Level 25)": 4,
-        "Truhe der Maya (Gruft Level 25)": 6
+        "Truhe des Priesters (Epische Gruft Level 35)": 2
       },
       "growth": 0,
       "silver": 0,
@@ -981,6 +987,7 @@
         "Infernale Truhe (Gruft Level 25)": 2,
         "Truhe der Kobra (Gruft Level 25)": 3,
         "Vergessene Truhe (Gruft Level 25)": 2,
+        "Truhe des Händlers (Söldner-Börse)": 1,
         "Harpyien-Truhe (Epische Gruft Level 25)": 8,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
@@ -988,8 +995,7 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 2,
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
-        "Truhe des Händlers (Söldner-Börse)": 1
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1005,6 +1011,7 @@
       "power": 413974355,
       "tower": 0,
       "chests": {
+        "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 2,
         "Steintruhe (Gruft Level 25)": 24,
         "Knochentruhe (Gruft Level 25)": 2,
@@ -1028,8 +1035,7 @@
         "Truhe der Festung der Elfen (Festung Level 30)": 3,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 1,
         "Runentruhe (Lvl. 35-39 Überfallender Runen-Trupp)": 1,
-        "Runentruhe (Lvl. 40-44 Überfallender Runen-Trupp)": 1,
-        "Sandtruhe (Gruft Level 25)": 1
+        "Runentruhe (Lvl. 40-44 Überfallender Runen-Trupp)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1324,24 +1330,24 @@
         "Truhe des Händlers (Söldner-Böse)": 1,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
         "Kobalt-Truhe (Epische Gruft Level 20)": 4,
+        "Truhe des Händlers (Söldner-Börse)": 1,
         "Barbarentruhe (Epische Gruft Level 20)": 2,
         "Harpyien-Truhe (Epische Gruft Level 20)": 3,
         "Skorpion-Truhe (Epische Gruft Level 20)": 1,
         "Trillium-Truhe (Epische Gruft Level 20)": 3,
+        "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
         "Skarabäus-Truhe (Epische Gruft Level 20)": 3,
         "Titanstahl-Truhe (Epische Gruft Level 20)": 1,
         "Weiße Holztruhe (Epische Gruft Level 20)": 3,
         "Aufgegebene Truhe (Epische Gruft Level 20)": 2,
         "Geflochtene Truhe (Epische Gruft Level 20)": 3,
+        "Schildkröten-Truhe (Epische Gruft Level 20)": 3,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 6,
         "Truhe der Verfluchten (Epische Gruft Level 20)": 3,
         "Truhe der alten Bastion (Epische Gruft Level 20)": 3,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1,
-        "Truhe des Händlers (Söldner-Börse)": 1,
-        "Schildkröten-Truhe (Epische Gruft Level 20)": 3,
-        "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1
+        "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1439,6 +1445,7 @@
       "chests": {
         "Sandtruhe (Gruft Level 20)": 3,
         "Knochentruhe (Gruft Level 20)": 1,
+        "Barbarentruhe (Gruft Level 20)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
         "Truhe der Maya (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 20)": 1,
@@ -1449,8 +1456,7 @@
         "Truhe der Festung der Elfen (Festung Level 20)": 19,
         "Truhe der Festung der Elfen (Festung Level 25)": 3,
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 4,
-        "Barbarentruhe (Gruft Level 20)": 1
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 4
       },
       "growth": 0,
       "silver": 0,
@@ -1466,9 +1472,12 @@
       "power": 209162691,
       "tower": 0,
       "chests": {
+        "Sandtruhe (Gruft Level 20)": 1,
         "Sandtruhe (Gruft Level 25)": 10,
+        "Steintruhe (Gruft Level 20)": 2,
         "Steintruhe (Gruft Level 25)": 18,
         "Knochentruhe (Gruft Level 25)": 16,
+        "Truhe der Orks (Gruft Level 20)": 4,
         "Truhe der Orks (Gruft Level 25)": 14,
         "Vergessene Truhe (Gruft Level 25)": 2,
         "Harpyien-Truhe (Epische Gruft Level 30)": 1,
@@ -1477,10 +1486,7 @@
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 2,
         "Truhe der Festung der Elfen (Festung Level 20)": 2,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 1,
-        "Steintruhe (Gruft Level 20)": 2,
-        "Sandtruhe (Gruft Level 20)": 1,
-        "Truhe der Orks (Gruft Level 20)": 4
+        "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1522,14 +1528,14 @@
         "Infernale Truhe (Gruft Level 20)": 1,
         "Infernale Truhe (Gruft Level 25)": 23,
         "Truhe der Kobra (Gruft Level 25)": 2,
+        "Vergessene Truhe (Gruft Level 25)": 1,
         "Barbarentruhe (Epische Gruft Level 30)": 3,
         "Harpyien-Truhe (Epische Gruft Level 30)": 2,
         "Skorpion-Truhe (Epische Gruft Level 30)": 3,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 5,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 2,
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 2
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 2,
+        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 2
       },
       "growth": 0,
       "silver": 0,
@@ -1609,11 +1615,11 @@
         "Truhe des Priesters (Epische Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 1,
         "Truhe der Festung der Elfen (Festung Level 20)": 1,
         "Truhe der Festung der Elfen (Festung Level 30)": 3,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1641,11 +1647,11 @@
         "Truhe der Kobra (Gruft Level 25)": 4,
         "Vergessene Truhe (Gruft Level 25)": 2,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 24,
+        "Truhe des Händlers (Söldner-Börse)": 1,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 1,
         "Truhe der Festung der Elfen (Festung Level 15)": 2,
-        "Truhe der Festung der Elfen (Festung Level 20)": 1,
-        "Truhe des Händlers (Söldner-Börse)": 1
+        "Truhe der Festung der Elfen (Festung Level 20)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1671,13 +1677,13 @@
         "Truhe der Orks (Gruft Level 25)": 2,
         "Infernale Truhe (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 4,
+        "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
         "Harpyien-Truhe (Epische Gruft Level 25)": 1,
+        "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 4,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 2,
-        "Truhe der Festung der Elfen (Festung Level 25)": 18,
-        "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
-        "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1
+        "Truhe der Festung der Elfen (Festung Level 25)": 18
       },
       "growth": 0,
       "silver": 0,
@@ -2039,9 +2045,12 @@
         "Steintruhe (Gruft Level 20)": 1,
         "Steintruhe (Gruft Level 25)": 2,
         "Knochentruhe (Gruft Level 25)": 1,
+        "Barbarentruhe (Gruft Level 20)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 2,
+        "Truhe der Maya (Gruft Level 20)": 1,
         "Truhe der Maya (Gruft Level 25)": 3,
+        "Truhe der Orks (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 25)": 2,
         "Infernale Truhe (Gruft Level 25)": 3,
         "Truhe der Kobra (Gruft Level 25)": 2,
@@ -2053,10 +2062,7 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 1,
         "Truhe der Festung der Elfen (Festung Level 25)": 3,
         "Truhe der Verfluchten (Epische Gruft Level 25)": 1,
-        "Truhe der alten Bastion (Epische Gruft Level 25)": 1,
-        "Truhe der Orks (Gruft Level 20)": 1,
-        "Truhe der Maya (Gruft Level 20)": 1,
-        "Barbarentruhe (Gruft Level 20)": 1
+        "Truhe der alten Bastion (Epische Gruft Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2076,6 +2082,7 @@
         "Feuertruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 2,
         "Barbarentruhe (Gruft Level 20)": 2,
+        "Schöne Truhe (Gruft Level 20)": 1,
         "Schöne Truhe (Gruft Level 25)": 3,
         "Truhe der Maya (Gruft Level 20)": 2,
         "Truhe der Maya (Gruft Level 25)": 1,
@@ -2101,8 +2108,7 @@
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 4,
         "Truhe der Untoten (Heldenhafte Monster Level 21)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 5,
-        "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 1,
-        "Schöne Truhe (Gruft Level 20)": 1
+        "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2143,14 +2149,14 @@
         "Truhe des Priesters (Epische Gruft Level 15)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 27,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 12,
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
         "Truhe der Elfen (Heldenhafte Monster Level 17)": 1,
         "Truhe der Festung der Elfen (Festung Level 15)": 20,
         "Truhe der Festung der Elfen (Festung Level 20)": 11,
+        "Truhe der Festung der Elfen (Festung Level 25)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 20)": 18,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 33,
-        "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1,
-        "Truhe der Festung der Elfen (Festung Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1
+        "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2184,19 +2190,19 @@
       "power": 783971955,
       "tower": 0,
       "chests": {
+        "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 2,
         "Barbarentruhe (Gruft Level 25)": 4,
         "Schöne Truhe (Gruft Level 25)": 2,
+        "Truhe der Maya (Gruft Level 25)": 1,
         "Truhe der Orks (Gruft Level 25)": 1,
         "Infernale Truhe (Gruft Level 25)": 1,
         "Vergessene Truhe (Gruft Level 25)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 5,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 3,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1,
-        "Sandtruhe (Gruft Level 25)": 1,
-        "Truhe der Maya (Gruft Level 25)": 1
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2231,10 +2237,10 @@
         "Weiße Holztruhe (Epische Gruft Level 25)": 3,
         "Aufgegebene Truhe (Epische Gruft Level 25)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 17,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 7,
         "Truhe der Festung der Elfen (Festung Level 30)": 12,
         "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 3,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 2,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 7
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 2
       },
       "growth": 0,
       "silver": 0,
@@ -2251,14 +2257,14 @@
       "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 3,
+        "Knochentruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 2,
         "Infernale Truhe (Gruft Level 25)": 1,
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
         "Truhe der Kobra (Gruft Level 25)": 1,
-        "Knochentruhe (Gruft Level 25)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 35)": 2
+        "Vergessene Truhe (Gruft Level 25)": 1,
+        "Harpyien-Truhe (Epische Gruft Level 35)": 2,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 3
       },
       "growth": 0,
       "silver": 0,
@@ -2310,6 +2316,7 @@
       "chests": {
         "Knochentruhe (Gruft Level 15)": 1,
         "Barbarentruhe (Gruft Level 15)": 1,
+        "Barbarentruhe (Gruft Level 20)": 1,
         "Truhe der Kobra (Gruft Level 15)": 1,
         "Barbarentruhe (Epische Gruft Level 15)": 1,
         "Skarabäus-Truhe (Epische Gruft Level 15)": 1,
@@ -2318,8 +2325,7 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 1,
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 3,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 15)": 1,
-        "Barbarentruhe (Gruft Level 20)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 15)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2560,9 +2566,9 @@
         "Infernale Truhe (Gruft Level 15)": 1,
         "Truhe des Gouverneurs (Geschichte)": 6,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
-        "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 4,
+        "Skarabäus-Truhe (Epische Gruft Level 15)": 1,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
-        "Skarabäus-Truhe (Epische Gruft Level 15)": 1
+        "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 4
       },
       "silver": 0,
       "joinDate": "2026-11-01",
@@ -2733,9 +2739,9 @@
         "Infernale Truhe (Gruft Level 20)": 1,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 8,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 2,
+        "Schildkröten-Truhe (Epische Gruft Level 15)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 2,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 26,
-        "Schildkröten-Truhe (Epische Gruft Level 15)": 1
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 26
       },
       "growth": 0,
       "silver": 0,
@@ -2756,6 +2762,7 @@
         "Barbarentruhe (Gruft Level 25)": 2,
         "Truhe der Orks (Gruft Level 25)": 2,
         "Kobalt-Truhe (Epische Gruft Level 35)": 1,
+        "Truhe des Händlers (Söldner-Börse)": 1,
         "Barbarentruhe (Epische Gruft Level 35)": 8,
         "Harpyien-Truhe (Epische Gruft Level 35)": 6,
         "Skorpion-Truhe (Epische Gruft Level 35)": 4,
@@ -2781,8 +2788,7 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 35)": 7,
         "Truhe der epischen Monster (Epischer Trupp der Untoten)": 3,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 6,
-        "Truhe des Händlers (Söldner-Börse)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 6
       },
       "growth": 0,
       "silver": 0,
@@ -2790,61 +2796,6 @@
       "customGoal": null,
       "hero_level": 417,
       "startPower": 1556072281,
-      "bankedTowerPoints": 100
-    },
-    {
-      "name": "EzeCABJ",
-      "rank": "Veteran",
-      "power": 1190015621,
-      "tower": 0,
-      "chests": {
-        "Sandtruhe (Gruft Level 25)": 3,
-        "Feuertruhe (Gruft Level 25)": 1,
-        "Steintruhe (Gruft Level 25)": 8,
-        "Knochentruhe (Gruft Level 25)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 15)": 1,
-        "Schöne Truhe (Gruft Level 25)": 2,
-        "Truhe der Maya (Gruft Level 15)": 1,
-        "Truhe der Maya (Gruft Level 25)": 1,
-        "Truhe der Orks (Gruft Level 25)": 2,
-        "Infernale Truhe (Gruft Level 15)": 1,
-        "Infernale Truhe (Gruft Level 25)": 1,
-        "Truhe der Kobra (Gruft Level 25)": 2,
-        "Vergessene Truhe (Gruft Level 25)": 1,
-        "Cobalt Chest (Level 35 epic Crypt)": 1,
-        "Turtle Chest (Level 35 epic Crypt)": 1,
-        "Scorpion Chest (Level 35 epic Crypt)": 1,
-        "Barbarian Chest (Level 35 epic Crypt)": 1,
-        "Kobalt-Truhe (Epische Gruft Level 30)": 1,
-        "Kobalt-Truhe (Epische Gruft Level 35)": 1,
-        "Titansteel Chest (Level 35 epic Crypt)": 1,
-        "Harpyien-Truhe (Epische Gruft Level 35)": 4,
-        "Weiße Holztruhe (Epische Gruft Level 35)": 2,
-        "House of Horrors Chest (Level 35 epic Crypt)": 1,
-        "Schildkröten-Truhe (Epische Gruft Level 35)": 6,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
-        "Legendäre Aschentruhe (Epischer Aschentrupp)": 2,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 9,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 26,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 1,
-        "Truhe der Festung der Elfen (Festung Level 30)": 13,
-        "Truhe der Feuer-Hydra (Epischer Inferno-Trupp)": 5,
-        "Runentruhe (Lvl. 45 Überfallender Runen-Trupp)": 3,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1,
-        "Truhe der epischen Monster (Epischer Trupp der Untoten)": 4,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 1,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 1,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 27,
-        "Truhe des Händlers (Söldner-Börse)": 1
-      },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-08",
-      "customGoal": null,
-      "hero_level": 381,
-      "startPower": 1190015621,
       "bankedTowerPoints": 100
     },
     {
@@ -2912,11 +2863,11 @@
       "power": 307454262,
       "tower": 0,
       "chests": {
-        "Schöne Truhe (Gruft Level 25)": 5,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 4,
         "Sandtruhe (Gruft Level 25)": 1,
-        "Truhe der Verfluchten (Epische Gruft Level 25)": 1,
-        "Truhe des Priesters (Epische Gruft Level 25)": 1
+        "Schöne Truhe (Gruft Level 25)": 5,
+        "Truhe des Priesters (Epische Gruft Level 25)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 4,
+        "Truhe der Verfluchten (Epische Gruft Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -2959,8 +2910,8 @@
       "tower": 0,
       "chests": {
         "Holztruhe (Bank)": 3,
-        "Truhe der Festung der Elfen (Festung Level 20)": 10,
-        "Truhe der Festung der Elfen (Festung Level 15)": 3
+        "Truhe der Festung der Elfen (Festung Level 15)": 3,
+        "Truhe der Festung der Elfen (Festung Level 20)": 10
       },
       "silver": 0,
       "joinDate": "2026-11-16",
@@ -2974,41 +2925,44 @@
     {
       "name": "Heisenberg",
       "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
       "power": 148064351,
-      "hero_level": 159,
+      "tower": 0,
+      "chests": {},
+      "silver": 0,
+      "joinDate": "2026-11-17",
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null,
-      "joinDate": "2026-11-17"
+      "hero_level": 159,
+      "startPower": 148064351
     },
     {
       "name": "Naughty Maria",
       "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
       "power": 323520620,
-      "hero_level": 249,
+      "tower": 0,
+      "chests": {},
+      "silver": 0,
+      "joinDate": "2026-11-17",
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null,
-      "joinDate": "2026-11-17"
+      "hero_level": 249,
+      "startPower": 323520620
     },
     {
       "name": "Nanour",
       "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
       "power": 37106152,
-      "hero_level": 117,
+      "tower": 0,
+      "chests": {},
+      "silver": 0,
+      "joinDate": "2026-11-17",
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null,
-      "joinDate": "2026-11-17"
+      "hero_level": 117,
+      "startPower": 37106152
     }
   ],
   "evalStartDate": "2026-11-08",
@@ -3017,5 +2971,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-16T20:27:25.167Z"
+  "lastUpdated": "2026-11-17T17:37:16.874Z"
 }
