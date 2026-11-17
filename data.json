@@ -2976,20 +2976,6 @@
       "customGoal": null,
       "hero_level": 159,
       "startPower": 148064351
-    },
-    {
-      "name": "Naughty Maria",
-      "rank": "Soldat",
-      "power": 323520620,
-      "tower": 0,
-      "chests": {},
-      "silver": 0,
-      "joinDate": "2026-11-17",
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null,
-      "hero_level": 249,
-      "startPower": 323520620
     }
   ],
   "evalStartDate": "2026-11-08",
@@ -2998,5 +2984,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-17T20:59:44.638Z"
+  "lastUpdated": "2026-11-17T21:32:42.228Z"
 }
