@@ -892,7 +892,8 @@
       "points": 0,
       "firstSeen": "2026-11-09"
     },
-    "Truhe des Händlers (Söldner-Börse)": 0
+    "Truhe des Händlers (Söldner-Börse)": 0,
+    "Schildkröten-Truhe (Epische Gruft Level 15)": 15
   },
   "clanData": [
     {
@@ -2730,7 +2731,8 @@
         "Ahnentruhe (Event Aufstieg der Ahnen)": 8,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 2,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 26
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 26,
+        "Schildkröten-Truhe (Epische Gruft Level 15)": 1
       },
       "growth": 0,
       "silver": 0,
