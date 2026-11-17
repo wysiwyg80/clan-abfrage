@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#0f172a">
+    <title>BAD LegioXEquentris - Punkte-Abfrage</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #b45309; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between pb-8">
+
+    <!-- Header -->
+    <header class="bg-slate-950/90 border-b border-red-900/50 sticky top-0 z-40 shadow-lg backdrop-blur-sm">
+        <div class="max-w-xl mx-auto px-4 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-red-800 to-amber-700 flex items-center justify-center border border-amber-500/40 shrink-0">
+                    <i class="fa-solid fa-shield-halved text-amber-300 text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-cinzel font-bold text-amber-400 leading-tight">BAD LegioXEquentris</h1>
+                    <p class="text-[11px] text-slate-400">Mitglieder Punkte-Abfrage</p>
+                </div>
+            </div>
+            <button onclick="loadLiveData()" class="bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-600/40 px-2.5 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center gap-1.5" title="Daten neu laden">
+                <i class="fa-solid fa-rotate" id="refreshIcon"></i>
+                <span class="hidden sm:inline">Aktualisieren</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-xl w-full mx-auto px-4 pt-5 space-y-5 flex-1">
+
+        <!-- Zyklus-Info -->
+        <div class="bg-slate-800/90 border border-amber-500/30 rounded-xl p-3.5 shadow flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-calendar-days text-amber-400 text-base"></i>
+                <div>
+                    <div class="text-[10px] uppercase tracking-wider font-bold text-amber-400">Aktueller Zyklus</div>
+                    <div class="text-xs text-slate-200 font-medium" id="cyclePeriodText">Lade Daten...</div>
+                </div>
+            </div>
+            <span class="bg-slate-900 border border-slate-700 text-cyan-300 px-2.5 py-1 rounded-lg text-[11px] font-bold shrink-0" id="cycleDaysBadge">-- Tage</span>
+        </div>
+
+        <!-- Suchfeld -->
+        <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-lg space-y-3">
+            <label for="playerSearch" class="block text-xs font-bold uppercase tracking-wider text-amber-400">
+                <i class="fa-solid fa-magnifying-glass mr-1"></i> Deinen Spielernamen eingeben
+            </label>
+            <div class="relative">
+                <input type="text" id="playerSearch" placeholder="Name eintippen (z. B. SirLancelot)..." autocomplete="off"
+                    oninput="handleSearch()"
+                    class="w-full bg-slate-950 border border-amber-500/50 focus:border-amber-400 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none shadow-inner">
+                <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white p-1 cursor-pointer">
+                    <i class="fa-solid fa-circle-xmark text-base"></i>
+                </button>
+            </div>
+            <div id="quickSelectContainer" class="flex flex-wrap gap-1.5 pt-1"></div>
+        </div>
+
+        <!-- Ergebnis-Bereich -->
+        <div id="resultContainer" class="space-y-4">
+            <div class="text-center py-10 text-slate-400 text-xs bg-slate-800/40 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-spinner fa-spin text-amber-400 text-xl mb-2 block"></i>
+                Lade aktuelle Clan-Daten...
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-xl w-full mx-auto px-4 pt-6 text-center text-[11px] text-slate-500 space-y-1">
+        <p id="lastUpdatedText">Stand: --</p>
+        <p>Tipp: Im Browser über das Menü <strong class="text-slate-400">„Zum Startbildschirm hinzufügen“</strong> speichern.</p>
+    </footer>
+
+    <script>
+        const GH_REPO = 'wysiwyg80/clan-abfrage';
+        const GH_BRANCH = 'main';
+
+        const RANK_ORDER = {
+            "Anführer": 1,
+            "Vorgesetzter": 2,
+            "Offizier": 3,
+            "Veteran": 4,
+            "Soldat": 5
+        };
+
+        let clanData = [];
+        let chestTypeValues = {};
+        let evalStartDate = '';
+        let evalEndDate = '';
+        let cycleTotalDays = 28;
+        let goalLow = 12500;
+        let goalHigh = 15000;
+
+        function formatSilver(val) {
+            val = Number(val) || 0;
+            if (val >= 1000000000000) return (val / 1000000000000).toFixed(2) + 'T';
+            if (val >= 1000000000) return (val / 1000000000).toFixed(2) + 'B';
+            if (val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+            if (val >= 1000) return (val / 1000).toFixed(0) + 'K';
+            return val.toLocaleString('de-DE');
+        }
+
+        function formatPower(val) {
+            val = Number(val) || 0;
+            return val.toLocaleString('de-DE');
+        }
+
+        function formatDateGerman(isoStr) {
+            if (!isoStr) return '';
+            const parts = isoStr.split('-');
+            if (parts.length === 3) return `${parts[2]}.${parts[1]}.${parts[0]}`;
+            return isoStr;
+        }
+
+        function calculateDaysBetween(startDateStr, endDateStr) {
+            const d1 = new Date(startDateStr);
+            const d2 = new Date(endDateStr);
+            if (isNaN(d1.getTime()) || isNaN(d2.getTime())) return 1;
+            const diffTime = d2.getTime() - d1.getTime();
+            const days = Math.round(diffTime / (1000 * 60 * 60 * 24)) + 1;
+            return days < 1 ? 1 : days;
+        }
+
+        function getChestPoints(typeName) {
+            const entry = chestTypeValues[typeName];
+            if (entry === undefined) return 0;
+            if (typeof entry === 'number') return entry;
+            return Number(entry.points) || 0;
+        }
+
+        function getRankBadgeClass(rank) {
+            if (rank === 'Anführer') return 'bg-red-950 text-amber-300 border-red-700';
+            if (rank === 'Vorgesetzter') return 'bg-amber-950/80 text-amber-200 border-amber-600/60';
+            if (rank === 'Offizier') return 'bg-indigo-950 text-indigo-200 border-indigo-800';
+            if (rank === 'Veteran') return 'bg-emerald-950 text-emerald-200 border-emerald-800';
+            return 'bg-slate-800 text-slate-300 border-slate-700';
+        }
+
+        async function loadLiveData() {
+            const icon = document.getElementById('refreshIcon');
+            if (icon) icon.classList.add('fa-spin');
+
+            let fetched = null;
+            const cacheBuster = '?t=' + new Date().getTime();
+
+            try {
+                const resp = await fetch('data.json' + cacheBuster, { cache: 'no-store' });
+                if (resp.ok) fetched = await resp.json();
+            } catch (e) {}
+
+            if (!fetched) {
+                try {
+                    const resp = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/${GH_BRANCH}/data.json${cacheBuster}`, { cache: 'no-store' });
+                    if (resp.ok) fetched = await resp.json();
+                } catch (e) {}
+            }
+
+            if (icon) setTimeout(() => icon.classList.remove('fa-spin'), 400);
+
+            if (!fetched) {
+                document.getElementById('resultContainer').innerHTML = `
+                    <div class="bg-red-950/50 border border-red-800 rounded-xl p-4 text-center text-xs text-red-200">
+                        <i class="fa-solid fa-triangle-exclamation text-lg mb-1 block"></i>
+                        Daten konnten nicht geladen werden. Bitte prüfe deine Internetverbindung.
+                    </div>`;
+                return;
+            }
+
+            clanData = fetched.clanData || [];
+            chestTypeValues = fetched.chestTypeValues || {};
+            evalStartDate = fetched.evalStartDate || new Date().toISOString().split('T')[0];
+            evalEndDate = fetched.evalEndDate || evalStartDate;
+            cycleTotalDays = Number(fetched.cycleTotalDays) || 28;
+            goalLow = Number(fetched.goalLow) || 12500;
+            goalHigh = Number(fetched.goalHigh) || 15000;
+
+            const activeDays = calculateDaysBetween(evalStartDate, evalEndDate);
+            document.getElementById('cyclePeriodText').innerText = `${formatDateGerman(evalStartDate)} – ${formatDateGerman(evalEndDate)}`;
+            document.getElementById('cycleDaysBadge').innerText = `${activeDays} / ${cycleTotalDays} Tage`;
+
+            if (fetched.lastUpdated) {
+                const d = new Date(fetched.lastUpdated);
+                if (!isNaN(d.getTime())) {
+                    document.getElementById('lastUpdatedText').innerText = `Letztes Update: ${d.toLocaleDateString('de-DE')} um ${d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })} Uhr`;
+                }
+            }
+
+            // Gespeicherten Spielernamen wiederherstellen
+            const savedName = localStorage.getItem('legio_saved_player_name');
+            const searchInput = document.getElementById('playerSearch');
+            if (savedName && !searchInput.value) {
+                searchInput.value = savedName;
+            }
+
+            handleSearch();
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('playerSearch');
+            input.value = '';
+            localStorage.removeItem('legio_saved_player_name');
+            handleSearch();
+            input.focus();
+        }
+
+        function selectPlayer(name) {
+            const input = document.getElementById('playerSearch');
+            input.value = name;
+            localStorage.setItem('legio_saved_player_name', name);
+            handleSearch();
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('playerSearch').value.trim();
+            const clearBtn = document.getElementById('clearSearchBtn');
+            const quickContainer = document.getElementById('quickSelectContainer');
+            const resultContainer = document.getElementById('resultContainer');
+
+            if (query.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+
+            // Sortierung nach Rang & Macht
+            const sortedMembers = [...clanData].sort((a, b) => {
+                const rA = RANK_ORDER[a.rank] || 99;
+                const rB = RANK_ORDER[b.rank] || 99;
+                if (rA !== rB) return rA - rB;
+                return (Number(b.power) || 0) - (Number(a.power) || 0);
+            });
+
+            if (!query) {
+                quickContainer.innerHTML = '';
+                resultContainer.innerHTML = `
+                    <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 space-y-3">
+                        <div class="flex justify-between items-center border-b border-slate-700 pb-2">
+                            <span class="text-xs font-bold uppercase text-amber-400 font-cinzel">Mitglieder-Übersicht (${sortedMembers.length})</span>
+                            <span class="text-[11px] text-slate-400">Namen antippen</span>
+                        </div>
+                        <div class="divide-y divide-slate-700/50 max-h-96 overflow-y-auto custom-scrollbar pr-1">
+                            ${sortedMembers.map(p => {
+                                const stats = calculatePlayerStats(p);
+                                return `
+                                    <button onclick="selectPlayer('${(p.name || '').replace(/'/g, "\'")}')" class="w-full py-2.5 px-2 flex items-center justify-between hover:bg-slate-700/50 rounded-lg transition text-left cursor-pointer">
+                                        <div>
+                                            <div class="text-xs font-bold text-amber-300">${p.name}</div>
+                                            <div class="text-[10px] text-slate-400">${p.rank || 'Soldat'}</div>
+                                        </div>
+                                        <div class="text-right">
+                                            <div class="text-xs font-bold text-white">${stats.totalPts.toLocaleString('de-DE')} Pkt</div>
+                                            <div class="text-[10px] ${stats.fulfilled ? 'text-emerald-400' : 'text-amber-400'}">
+                                                ${stats.fulfilled ? '✅ Soll erfüllt' : `⚠️ -${stats.missingPts.toLocaleString('de-DE')} Pkt`}
+                                            </div>
+                                        </div>
+                                    </button>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>`;
+                return;
+            }
+
+            const matches = sortedMembers.filter(p => (p.name || '').toLowerCase().includes(query.toLowerCase()));
+
+            // Schnellwahl-Chips falls mehrere Treffer
+            if (matches.length > 1 && matches.length <= 8) {
+                quickContainer.innerHTML = matches.map(m => `
+                    <button onclick="selectPlayer('${(m.name || '').replace(/'/g, "\'")}')" class="bg-slate-900 hover:bg-amber-900/40 text-amber-300 border border-amber-500/40 px-2.5 py-1 rounded-full text-xs font-medium transition cursor-pointer">
+                        ${m.name}
+                    </button>
+                `).join('');
+            } else {
+                quickContainer.innerHTML = '';
+            }
+
+            if (matches.length === 0) {
+                resultContainer.innerHTML = `
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center space-y-2">
+                        <i class="fa-solid fa-user-slash text-slate-500 text-2xl"></i>
+                        <p class="text-xs text-slate-300">Kein Mitglied mit dem Namen <strong class="text-amber-300">„${query}“</strong> gefunden.</p>
+                    </div>`;
+                return;
+            }
+
+            // Exakten Treffer speichern
+            const exact = matches.find(m => (m.name || '').toLowerCase() === query.toLowerCase());
+            if (exact) {
+                localStorage.setItem('legio_saved_player_name', exact.name);
+            }
+
+            const playersToRender = exact ? [exact] : matches.slice(0, 5);
+            resultContainer.innerHTML = playersToRender.map(p => renderPlayerCard(p)).join('');
+        }
+
+        function calculatePlayerStats(p) {
+            const towerPointValue = getChestPoints('Turmbau') || 1;
+            const activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
+            const totalCycle = cycleTotalDays > 0 ? cycleTotalDays : 28;
+
+            let chestPtsTotal = 0;
+            let totalChestsCount = 0;
+            const chestList = [];
+
+            if (p.chests) {
+                Object.keys(p.chests).forEach(cName => {
+                    const cnt = Number(p.chests[cName]) || 0;
+                    if (cnt > 0) {
+                        const val = getChestPoints(cName);
+                        const pts = cnt * val;
+                        chestPtsTotal += pts;
+                        totalChestsCount += cnt;
+                        chestList.push({ name: cName, count: cnt, points: pts, perItem: val });
+                    }
+                });
+            }
+            chestList.sort((a, b) => b.points - a.points);
+
+            const towerCount = Number(p.tower || 0);
+            const bankedTowerPts = Number(p.bankedTowerPoints || 0);
+            const towerPts = (towerCount * towerPointValue) + bankedTowerPts;
+            const totalPts = chestPtsTotal + towerPts;
+
+            const pPower = Number(p.power) || 0;
+            const pStartPower = (p.startPower !== undefined && p.startPower !== null) ? Number(p.startPower) : pPower;
+
+            const baseGoalFullCycle = (p.customGoal && Number(p.customGoal) > 0)
+                ? Number(p.customGoal)
+                : (pStartPower < 100000000 ? goalLow : goalHigh);
+
+            const dailyTarget = Math.round(baseGoalFullCycle / totalCycle);
+
+            let playerActiveDays = activeDaysCount;
+            if (p.joinDate) {
+                const joinD = new Date(p.joinDate);
+                const startD = new Date(evalStartDate);
+                const endD = new Date(evalEndDate);
+                if (!isNaN(joinD.getTime()) && joinD > startD) {
+                    playerActiveDays = joinD > endD ? 0 : calculateDaysBetween(p.joinDate, evalEndDate);
+                }
+            }
+
+            const targetSoFar = Math.round(dailyTarget * playerActiveDays);
+            const missingPts = Math.max(0, targetSoFar - totalPts);
+            const fulfilled = totalPts >= targetSoFar;
+            const percent = targetSoFar > 0 ? Math.min(100, Math.round((totalPts / targetSoFar) * 100)) : 100;
+
+            return {
+                chestPtsTotal,
+                totalChestsCount,
+                chestList,
+                towerCount,
+                bankedTowerPts,
+                towerPts,
+                totalPts,
+                pPower,
+                baseGoalFullCycle,
+                targetSoFar,
+                missingPts,
+                fulfilled,
+                percent,
+                playerActiveDays
+            };
+        }
+
+        function renderPlayerCard(p) {
+            const s = calculatePlayerStats(p);
+            const rankClass = getRankBadgeClass(p.rank || 'Soldat');
+            const statusBg = s.fulfilled
+                ? 'bg-emerald-950/60 border-emerald-700/80 text-emerald-300'
+                : 'bg-amber-950/60 border-amber-700/80 text-amber-300';
+            const barColor = s.fulfilled ? 'bg-emerald-500' : 'bg-amber-500';
+
+            const chestsHtml = s.chestList.length > 0
+                ? s.chestList.map(c => `
+                    <div class="flex justify-between items-center py-1.5 border-b border-slate-800/80 last:border-0 text-xs">
+                        <span class="text-slate-200 truncate pr-2"><strong>${c.count}x</strong> ${c.name}</span>
+                        <span class="text-amber-300 font-bold whitespace-nowrap">${c.points.toLocaleString('de-DE')} Pkt</span>
+                    </div>`).join('')
+                : `<p class="text-xs text-slate-400 py-2 text-center">Noch keine Truhen erfasst.</p>`;
+
+            return `
+                <div class="bg-slate-800 border border-amber-500/40 rounded-2xl p-4 shadow-xl space-y-4">
+                    <!-- Kopfzeile Spieler -->
+                    <div class="flex justify-between items-start gap-2 border-b border-slate-700 pb-3">
+                        <div>
+                            <h2 class="text-lg font-cinzel font-bold text-amber-300">${p.name}</h2>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-[10px] px-2.5 py-0.5 rounded-md border font-bold uppercase tracking-wider ${rankClass}">${p.rank || 'Soldat'}</span>
+                                <span class="text-[11px] text-slate-400">Macht: <strong class="text-slate-200">${formatPower(s.pPower)}</strong></span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-[10px] uppercase text-slate-400 font-bold">Gesamt-Punkte</div>
+                            <div class="text-xl font-cinzel font-bold text-white">${s.totalPts.toLocaleString('de-DE')}</div>
+                        </div>
+                    </div>
+
+                    <!-- Soll-Status Balken -->
+                    <div class="rounded-xl border p-3 space-y-2 ${statusBg}">
+                        <div class="flex justify-between items-center text-xs font-bold">
+                            <span>${s.fulfilled ? '✅ Aktuelles Soll erfüllt!' : `⚠️ Es fehlen noch ${s.missingPts.toLocaleString('de-DE')} Pkt`}</span>
+                            <span>${s.percent}%</span>
+                        </div>
+                        <div class="w-full bg-slate-950/80 rounded-full h-2.5 overflow-hidden">
+                            <div class="${barColor} h-2.5 rounded-full transition-all duration-500" style="width: ${s.percent}%"></div>
+                        </div>
+                        <div class="flex justify-between text-[11px] opacity-90">
+                            <span>Soll (${s.playerActiveDays} Tage): <strong>${s.targetSoFar.toLocaleString('de-DE')} Pkt</strong></span>
+                            <span>Zyklus-Ziel: <strong>${s.baseGoalFullCycle.toLocaleString('de-DE')} Pkt</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- 3er KPI-Grid -->
+                    <div class="grid grid-cols-3 gap-2.5 text-center">
+                        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5">
+                            <div class="text-[10px] text-slate-400 uppercase font-bold">Truhen</div>
+                            <div class="text-sm font-bold text-amber-300 mt-0.5">${s.chestPtsTotal.toLocaleString('de-DE')} Pkt</div>
+                            <div class="text-[10px] text-slate-400">${s.totalChestsCount} Stück</div>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5">
+                            <div class="text-[10px] text-slate-400 uppercase font-bold">Turmbau</div>
+                            <div class="text-sm font-bold text-amber-300 mt-0.5">${s.towerPts.toLocaleString('de-DE')} Pkt</div>
+                            <div class="text-[10px] text-slate-400">${s.towerCount} Türme${s.bankedTowerPts > 0 ? ` (+${s.bankedTowerPts} Bank)` : ''}</div>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-2.5">
+                            <div class="text-[10px] text-slate-400 uppercase font-bold">Silber</div>
+                            <div class="text-sm font-bold text-cyan-300 mt-0.5">${formatSilver(p.silver)}</div>
+                            <div class="text-[10px] text-slate-400">Geliefert</div>
+                        </div>
+                    </div>
+
+                    <!-- Truhen-Aufschlüsselung -->
+                    <div class="bg-slate-950/60 border border-slate-800 rounded-xl p-3">
+                        <div class="text-[11px] font-bold uppercase text-amber-400 mb-1.5 flex items-center gap-1.5">
+                            <i class="fa-solid fa-box-open"></i> Deine gesammelten Truhen
+                        </div>
+                        <div class="max-h-48 overflow-y-auto custom-scrollbar pr-1">
+                            ${chestsHtml}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        window.onload = loadLiveData;
+    </script>
+</body>
+</html>
