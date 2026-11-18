@@ -798,7 +798,7 @@
       "firstSeen": "2026-11-09"
     },
     "Schattentruhe (Schattenstadt)": {
-      "points": 128,
+      "points": 125,
       "firstSeen": "2026-11-18"
     },
     "Kürbistruhe (Quelle: Kürbis)": {
@@ -3060,5 +3060,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-18T19:43:30.155Z"
+  "lastUpdated": "2026-11-18T20:10:12.884Z"
 }
