@@ -1479,38 +1479,6 @@
       "bankedTowerPoints": 100
     },
     {
-      "name": "BELEN",
-      "rank": "Veteran",
-      "power": 217959831,
-      "tower": 0,
-      "chests": {
-        "Sandtruhe (Gruft Level 20)": 3,
-        "Feuertruhe (Gruft Level 20)": 1,
-        "Knochentruhe (Gruft Level 20)": 2,
-        "Barbarentruhe (Gruft Level 20)": 1,
-        "Barbarentruhe (Gruft Level 25)": 1,
-        "Schöne Truhe (Gruft Level 20)": 1,
-        "Truhe der Maya (Gruft Level 20)": 1,
-        "Truhe der Orks (Gruft Level 20)": 2,
-        "Truhe der Kobra (Gruft Level 20)": 3,
-        "Vergessene Truhe (Gruft Level 20)": 5,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 20)": 3,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
-        "Truhe der Festung der Elfen (Festung Level 20)": 19,
-        "Truhe der Festung der Elfen (Festung Level 25)": 3,
-        "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 4
-      },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 208,
-      "startPower": 217959831,
-      "bankedTowerPoints": 100
-    },
-    {
       "name": "Roula",
       "rank": "Veteran",
       "power": 209162691,
@@ -3073,5 +3041,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-19T12:04:56.567Z"
+  "lastUpdated": "2026-11-19T13:19:20.282Z"
 }
