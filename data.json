@@ -3038,20 +3038,6 @@
       "hero_level": 123,
       "startPower": 143296861,
       "bankedTowerPoints": 0
-    },
-    {
-      "name": "Heisenberg",
-      "rank": "Soldat",
-      "power": 148064351,
-      "tower": 0,
-      "chests": {},
-      "silver": 0,
-      "joinDate": "2026-11-17",
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null,
-      "hero_level": 159,
-      "startPower": 148064351
     }
   ],
   "evalStartDate": "2026-11-08",
@@ -3060,5 +3046,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-18T20:18:51.099Z"
+  "lastUpdated": "2026-11-19T09:24:25.119Z"
 }
