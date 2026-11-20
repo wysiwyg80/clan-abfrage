@@ -3044,6 +3044,19 @@
       "hero_level": 123,
       "startPower": 143296861,
       "bankedTowerPoints": 0
+    },
+    {
+      "name": "Tyrion",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 2024301,
+      "hero_level": 32,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-20"
     }
   ],
   "evalStartDate": "2026-11-08",
