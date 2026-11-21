@@ -1363,7 +1363,9 @@
       "rank": "Vorgesetzter",
       "power": 134215526,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Schöne Truhe (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
