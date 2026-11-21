@@ -1733,14 +1733,14 @@
     {
       "name": "travelling wilburys",
       "rank": "Soldat",
-      "power": 75042565,
+      "power": 75509455,
       "tower": 0,
       "chests": {},
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-12",
       "customGoal": null,
-      "hero_level": 114,
+      "hero_level": 115,
       "startPower": 75042565,
       "goalCyclesLeft": 0,
       "individualGoal": null,
@@ -1749,7 +1749,7 @@
     },
     {
       "name": "433",
-      "rank": "Veteran",
+      "rank": "Soldat",
       "power": 38670831,
       "tower": 0,
       "chests": {},
@@ -1851,6 +1851,19 @@
       "individualGoal": null,
       "penaltyPercent": null,
       "bankedTowerPoints": 0
+    },
+    {
+      "name": "Fogin",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 17125691,
+      "hero_level": 88,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-21"
     }
   ],
   "evalStartDate": "2026-11-21",
