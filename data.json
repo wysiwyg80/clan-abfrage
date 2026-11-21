@@ -968,7 +968,9 @@
       "customGoal": null,
       "hero_level": 319,
       "startPower": 633226375,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Riyash IV",
@@ -997,7 +999,9 @@
       "customGoal": null,
       "hero_level": 290,
       "startPower": 479857600,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Magellan",
@@ -1032,7 +1036,9 @@
       "customGoal": null,
       "hero_level": 269,
       "startPower": 449355045,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Explorer",
@@ -1072,7 +1078,9 @@
       "customGoal": null,
       "hero_level": 258,
       "startPower": 413974355,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "DRACULA",
@@ -1110,7 +1118,9 @@
       "customGoal": null,
       "hero_level": 254,
       "startPower": 392947425,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Biin",
@@ -1159,7 +1169,9 @@
       "customGoal": null,
       "hero_level": 235,
       "startPower": 302472181,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Maem",
@@ -1195,7 +1207,9 @@
       "customGoal": null,
       "hero_level": 246,
       "startPower": 296808699,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Auzar",
@@ -1241,7 +1255,9 @@
       "customGoal": null,
       "hero_level": 234,
       "startPower": 308765825,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Elginan",
@@ -1263,6 +1279,7 @@
         "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
         "Skorpion-Truhe (Epische Gruft Level 25)": 2,
         "Skorpion-Truhe (Epische Gruft Level 30)": 1,
+        "Trillium-Truhe (Epische Gruft Level 30)": 1,
         "Weiße Holztruhe (Epische Gruft Level 20)": 1,
         "Geflochtene Truhe (Epische Gruft Level 25)": 1,
         "Geflochtene Truhe (Epische Gruft Level 30)": 1,
@@ -1272,13 +1289,12 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 14,
         "Truhe der Feuer-Hydra (Epischer Inferno-Trupp)": 1,
         "Truhe der Verfluchten (Epische Gruft Level 25)": 1,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
-        "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 1,
-        "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
-        "Truhe der alten Bastion (Epische Gruft Level 30)": 1,
         "Truhe der Verfluchten (Epische Gruft Level 30)": 1,
-        "Trillium-Truhe (Epische Gruft Level 30)": 1,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 1
+        "Truhe der alten Bastion (Epische Gruft Level 30)": 1,
+        "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
+        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 1,
+        "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 1,
+        "Truhe der Autorität (Turnier Triumph der Autorität)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1286,7 +1302,9 @@
       "customGoal": null,
       "hero_level": 237,
       "startPower": 312395806,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Dalas",
@@ -1318,7 +1336,9 @@
       "customGoal": null,
       "hero_level": 234,
       "startPower": 265435735,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Carruggi 5r",
@@ -1359,7 +1379,9 @@
       "customGoal": null,
       "hero_level": 222,
       "startPower": 239786835,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "ICHNOS",
@@ -1412,7 +1434,9 @@
       "customGoal": null,
       "hero_level": 231,
       "startPower": 241039155,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Lee the Ugly",
@@ -1443,7 +1467,9 @@
       "customGoal": null,
       "hero_level": 232,
       "startPower": 246728601,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "kordy",
@@ -1462,7 +1488,9 @@
       "customGoal": null,
       "hero_level": 222,
       "startPower": 236544591,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Granidred",
@@ -1499,7 +1527,9 @@
       "customGoal": null,
       "hero_level": 220,
       "startPower": 226136481,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Roula",
@@ -1535,7 +1565,9 @@
       "customGoal": null,
       "hero_level": 208,
       "startPower": 209162691,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Vudor SK6",
@@ -1556,7 +1588,9 @@
       "customGoal": null,
       "hero_level": 250,
       "startPower": 211551525,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "King Slayer",
@@ -1586,7 +1620,9 @@
       "customGoal": null,
       "hero_level": 207,
       "startPower": 166500878,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Maginad",
@@ -1622,7 +1658,9 @@
       "customGoal": null,
       "hero_level": 217,
       "startPower": 141831133,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "AyBars",
@@ -1641,6 +1679,7 @@
         "Barbarentruhe (Gruft Level 20)": 7,
         "Barbarentruhe (Gruft Level 25)": 3,
         "Schöne Truhe (Gruft Level 20)": 3,
+        "Truhe der Maya (Gruft Level 15)": 1,
         "Truhe der Maya (Gruft Level 20)": 8,
         "Truhe der Maya (Gruft Level 25)": 4,
         "Truhe der Orks (Gruft Level 20)": 9,
@@ -1658,6 +1697,7 @@
         "Trillium-Truhe (Epische Gruft Level 20)": 1,
         "Trillium-Truhe (Epische Gruft Level 25)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
+        "Titanstahl-Truhe (Epische Gruft Level 25)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 30)": 1,
         "Geflochtene Truhe (Epische Gruft Level 25)": 1,
         "Geflochtene Truhe (Epische Gruft Level 30)": 1,
@@ -1672,12 +1712,10 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 5,
         "Truhe der Festung der Elfen (Festung Level 20)": 1,
         "Truhe der Festung der Elfen (Festung Level 30)": 6,
+        "Truhe der Verfluchten (Epische Gruft Level 20)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
         "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 1,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 1,
-        "Titanstahl-Truhe (Epische Gruft Level 25)": 1,
-        "Truhe der Verfluchten (Epische Gruft Level 20)": 1,
-        "Truhe der Maya (Gruft Level 15)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1685,7 +1723,9 @@
       "customGoal": null,
       "hero_level": 209,
       "startPower": 112358486,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Orodrafin",
@@ -1717,7 +1757,9 @@
       "customGoal": null,
       "hero_level": 194,
       "startPower": 95966982,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Burigas",
@@ -1750,7 +1792,9 @@
       "customGoal": null,
       "hero_level": 186,
       "startPower": 103614705,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Vudorr",
@@ -1792,7 +1836,9 @@
       "customGoal": null,
       "hero_level": 90,
       "startPower": 37146298,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Ria",
@@ -1813,7 +1859,9 @@
       "customGoal": null,
       "hero_level": 31,
       "startPower": 929368,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "SaturdayNightFever",
@@ -1842,7 +1890,9 @@
       "customGoal": null,
       "hero_level": 166,
       "startPower": 106786693,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "LegatusLabienus",
@@ -1875,7 +1925,9 @@
       "customGoal": null,
       "hero_level": 355,
       "startPower": 760936191,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "man of war",
@@ -1914,7 +1966,9 @@
       "customGoal": null,
       "hero_level": 401,
       "startPower": 1462887131,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Miss Dire",
@@ -1959,7 +2013,9 @@
       "customGoal": null,
       "hero_level": 271,
       "startPower": 449536035,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Cologne am Rhein",
@@ -1995,7 +2051,9 @@
       "customGoal": null,
       "hero_level": 252,
       "startPower": 423882385,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "WYSIWYG",
@@ -2032,7 +2090,9 @@
       "customGoal": null,
       "hero_level": 249,
       "startPower": 406240935,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "kikito",
@@ -2071,7 +2131,9 @@
       "customGoal": null,
       "hero_level": 209,
       "startPower": 293139021,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Frederico Freitas",
@@ -2104,7 +2166,9 @@
       "customGoal": null,
       "hero_level": 195,
       "startPower": 128566016,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Gran Rex",
@@ -2145,7 +2209,9 @@
       "customGoal": null,
       "hero_level": 236,
       "startPower": 227039151,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Farés Dz",
@@ -2198,7 +2264,9 @@
       "customGoal": null,
       "hero_level": 219,
       "startPower": 190655983,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "PABLUS",
@@ -2257,7 +2325,9 @@
       "customGoal": null,
       "hero_level": 177,
       "startPower": 119586751,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Tanmisis",
@@ -2275,7 +2345,9 @@
       "customGoal": null,
       "hero_level": 361,
       "startPower": 1120156855,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Sir spanksALot",
@@ -2303,7 +2375,9 @@
       "customGoal": null,
       "hero_level": 333,
       "startPower": 783971955,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "BAD Guo II",
@@ -2347,7 +2421,9 @@
       "customGoal": null,
       "hero_level": 340,
       "startPower": 761938809,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Riyash",
@@ -2373,7 +2449,9 @@
       "customGoal": null,
       "hero_level": 295,
       "startPower": 689443971,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Ajji",
@@ -2409,7 +2487,9 @@
       "customGoal": null,
       "hero_level": 263,
       "startPower": 386077573,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "LORD MOSQUITÉ",
@@ -2440,7 +2520,9 @@
       "customGoal": null,
       "hero_level": 125,
       "startPower": 31358181,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Aurora",
@@ -2529,7 +2611,9 @@
       "customGoal": null,
       "hero_level": 136,
       "startPower": 66564015,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Xetlac",
@@ -2567,6 +2651,7 @@
         "Skorpion-Truhe (Epische Gruft Level 35)": 1,
         "Trillium-Truhe (Epische Gruft Level 35)": 17,
         "Minotaurus-Truhe (Epische Gruft Level 35)": 2,
+        "Skarabäus-Truhe (Epische Gruft Level 35)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 35)": 3,
         "Weiße Holztruhe (Epische Gruft Level 35)": 4,
         "Aufgegebene Truhe (Epische Gruft Level 35)": 2,
@@ -2590,8 +2675,7 @@
         "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1,
         "Truhe der epischen Monster (Epischer Trupp der Untoten)": 1,
         "Truhe des Hauses des Schreckens (Epische Gruft Level 35)": 5,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 27,
-        "Skarabäus-Truhe (Epische Gruft Level 35)": 1
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 27
       },
       "growth": 0,
       "silver": 0,
@@ -2599,7 +2683,9 @@
       "customGoal": null,
       "hero_level": 376,
       "startPower": 992717645,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Akasha",
@@ -2635,7 +2721,9 @@
       "customGoal": null,
       "hero_level": 360,
       "startPower": 894262310,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Arik",
@@ -2672,7 +2760,9 @@
       "customGoal": null,
       "hero_level": 133,
       "startPower": 124614871,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Arashigore",
@@ -2696,7 +2786,9 @@
       "customGoal": null,
       "hero_level": 35,
       "startPower": 812592,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Akinohn",
@@ -2725,7 +2817,9 @@
       "customGoal": null,
       "hero_level": 327,
       "startPower": 743768307,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Eldriel",
@@ -2759,7 +2853,9 @@
       "customGoal": null,
       "hero_level": 228,
       "startPower": 190506636,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Rysiek121",
@@ -2821,7 +2917,9 @@
       "customGoal": null,
       "hero_level": 409,
       "startPower": 1319490025,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Que",
@@ -2852,7 +2950,9 @@
       "customGoal": null,
       "hero_level": 205,
       "startPower": 118097255,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "nomad",
@@ -2890,7 +2990,9 @@
       "customGoal": null,
       "hero_level": 148,
       "startPower": 141805325,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Spartakus",
@@ -2941,7 +3043,9 @@
       "customGoal": null,
       "hero_level": 417,
       "startPower": 1556072281,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "ANZ",
@@ -2967,7 +3071,9 @@
       "customGoal": null,
       "hero_level": 157,
       "startPower": 91131943,
-      "bankedTowerPoints": 100
+      "bankedTowerPoints": 100,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "travelling wilburys",
@@ -2993,7 +3099,9 @@
       "customGoal": null,
       "hero_level": 114,
       "startPower": 75042565,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "433",
@@ -3007,7 +3115,9 @@
       "customGoal": null,
       "hero_level": 93,
       "startPower": 38670831,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Riyash III",
@@ -3029,7 +3139,9 @@
       "customGoal": null,
       "hero_level": 226,
       "startPower": 307454262,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Legolas",
@@ -3064,7 +3176,9 @@
       "customGoal": null,
       "hero_level": 371,
       "startPower": 1165295946,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Bayernbua",
@@ -3094,21 +3208,25 @@
       "customGoal": null,
       "hero_level": 123,
       "startPower": 143296861,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     },
     {
       "name": "Tyrion",
       "rank": "Veteran",
-      "hero_level": 32,
       "power": 2024301,
-      "startPower": 2024301,
       "tower": 0,
-      "silver": 0,
-      "customGoal": null,
-      "joinDate": "2026-11-20",
       "chests": {},
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-20",
+      "customGoal": null,
+      "hero_level": 32,
+      "startPower": 2024301,
       "bankedTowerPoints": 0,
-      "growth": 0
+      "penaltyPercent": null,
+      "goalCyclesLeft": 0
     }
   ],
   "evalStartDate": "2026-11-08",
@@ -3117,5 +3235,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-20T18:55:07.195Z"
+  "lastUpdated": "2026-11-21T01:17:22.710Z"
 }
