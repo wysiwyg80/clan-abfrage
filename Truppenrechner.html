@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taktischer Truppenrechner</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        tactical: {
+                            50: '#f4f7fa',
+                            100: '#e5edf4',
+                            200: '#cce3e5',
+                            300: '#a3c3d9',
+                            400: '#729fc5',
+                            500: '#4e7eb0',
+                            600: '#3a6394',
+                            700: '#305079',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#080d1a',
+                        },
+                        amber: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans flex flex-col antialiased selection:bg-amber-500/30 selection:text-amber-300">
+
+    <!-- Header Section -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="p-2.5 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl shadow-lg shadow-amber-500/20 text-slate-950">
+                    <i data-lucide="shield-alert" class="w-7 h-7 stroke-[2.5]"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide text-slate-50 flex items-center gap-2">
+                        <span id="headerTitleDisplay">Taktischer Truppenrechner</span>
+                    </h1>
+                    <p class="text-xs text-slate-400">Präzise Armeeberechnung & Einheitenverteilung</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                <button id="toggleEditNamesBtn" class="flex items-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg border border-slate-700 text-xs font-semibold transition shadow-sm">
+                    <i data-lucide="edit-3" class="w-4 h-4"></i>
+                    <span>Bezeichnungen & Reihen</span>
+                </button>
+                <button id="resetDefaultsBtn" class="flex items-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-red-900/40 text-slate-300 hover:text-red-300 rounded-lg border border-slate-700 hover:border-red-800/50 text-xs font-semibold transition">
+                    <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+                    <span class="hidden md:inline">Zurücksetzen</span>
+                </button>
+                <button id="copyResultsBtn" class="flex items-center gap-2 px-3.5 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 rounded-lg text-xs font-bold transition shadow-md shadow-amber-500/10">
+                    <i data-lucide="copy" class="w-4 h-4"></i>
+                    <span>Kopieren</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 ease-out flex items-center gap-2 px-4 py-3 bg-amber-500 text-slate-950 rounded-xl shadow-xl font-medium text-sm">
+        <i data-lucide="check-circle" class="w-5 h-5"></i>
+        <span id="toastMsg">Kopiert!</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+        <!-- Top Input & Quick Settings Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Target Capacity Card -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl relative overflow-hidden group">
+                <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-amber-500/5 rounded-full blur-xl group-hover:bg-amber-500/10 transition-all"></div>
+                <div class="flex items-center justify-between mb-3">
+                    <label for="totalPower" class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                        <i data-lucide="swords" class="w-4 h-4"></i> Gesamtwertigkeit / Köpfe
+                    </label>
+                    <span class="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded border border-slate-700">Hauptwert</span>
+                </div>
+                <div class="relative">
+                    <input type="number" id="totalPower" value="12000" min="0" step="1"
+                        class="w-full bg-slate-950 border-2 border-slate-700 focus:border-amber-500 rounded-xl px-4 py-3 text-2xl font-black text-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500/20 transition">
+                </div>
+                <p class="text-xs text-slate-400 mt-2">Die Ziel-Gesamtkapazität deiner gesamten Streitmacht.</p>
+            </div>
+
+            <!-- Specialist Count Card (Editable Label!) -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl relative overflow-hidden group">
+                <div class="flex items-center justify-between mb-3">
+                    <label for="specCount" class="text-xs font-bold uppercase tracking-wider text-sky-400 flex items-center gap-1.5">
+                        <i data-lucide="star" class="w-4 h-4 shrink-0"></i>
+                        <span id="dispSpecLabelCard">Spezialisten (pro Gattung)</span>
+                    </label>
+                    <button onclick="openSettingsAndFocusSpec()" title="Bezeichnung ändern" class="text-[10px] text-sky-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-2 py-0.5 rounded border border-slate-700 flex items-center gap-1 transition">
+                        <i data-lucide="pencil" class="w-2.5 h-2.5"></i> Fester Abzug
+                    </button>
+                </div>
+                <div class="relative">
+                    <input type="number" id="specCount" value="2" min="0" step="1"
+                        class="w-full bg-slate-950 border-2 border-slate-700 focus:border-sky-500 rounded-xl px-4 py-3 text-2xl font-black text-slate-50 focus:outline-none focus:ring-2 focus:ring-sky-500/20 transition">
+                </div>
+                <p class="text-xs text-slate-400 mt-2">Feste Anzahl je Gattung (für alle Zusatz-Reihen).</p>
+            </div>
+
+            <!-- Parameters Overview Card -->
+            <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-xl flex flex-col justify-between">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+                        <i data-lucide="sliders" class="w-4 h-4"></i> Berechnungsparameter
+                    </span>
+                    <button id="toggleAdvancedBtn" class="text-[11px] text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-2">
+                        Details / Reihen & Verhältnis
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <div class="bg-slate-950/60 p-2 rounded-lg border border-slate-800/80">
+                        <span class="text-slate-400 block text-[10px]">Aufteilung Gattungen</span>
+                        <span class="font-bold text-slate-200">4 × 25 %</span>
+                    </div>
+                    <div class="bg-slate-950/60 p-2 rounded-lg border border-slate-800/80 cursor-pointer hover:border-amber-500/50 transition" onclick="document.getElementById('settingsPanel').classList.remove('hidden')">
+                        <span class="text-slate-400 block text-[10px]" id="ratioSummaryLabel">Verhältnis Hauptreihen</span>
+                        <span class="font-bold text-amber-400" id="ratioSummaryValue">1 : 2</span>
+                    </div>
+                </div>
+
+                <div class="text-[11px] text-slate-400 mt-2 flex items-center gap-1">
+                    <i data-lucide="info" class="w-3.5 h-3.5 text-slate-400 shrink-0"></i>
+                    <span>100% korrekte Rekonstruktion der Zielgesamtsumme.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collapsible Custom Names, Rows & Ratio Settings Drawer -->
+        <div id="settingsPanel" class="hidden bg-slate-900/95 border border-amber-500/30 rounded-2xl p-6 shadow-2xl space-y-6 backdrop-blur">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="settings" class="w-5 h-5 text-amber-400"></i>
+                    <h2 class="text-base font-bold text-slate-100">Bezeichnungen, Reihenanzahl, Verhältnis & Wertigkeiten</h2>
+                </div>
+                <button id="closeSettingsBtn" class="p-1 text-slate-400 hover:text-slate-200 rounded-lg hover:bg-slate-800">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- 1. General Labels & Category Names -->
+            <div class="space-y-4">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-amber-400">1. Allgemeine Bezeichnungen & Gattungen</h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-slate-950/50 p-3.5 rounded-xl border border-slate-800">
+                    <div>
+                        <label class="block text-xs text-emerald-400 font-semibold mb-1">Bezeichnung Hauptreihen (Basis)</label>
+                        <input type="text" id="mainRowTypeNameInput" value="Gardisten" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:border-emerald-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-sky-400 font-semibold mb-1">Bezeichnung Zusatzreihen (Fester Abzug)</label>
+                        <input type="text" id="specLabelInput" value="Spezialisten (pro Gattung)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:border-sky-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-amber-400 font-semibold mb-1">Titel des Rechners</label>
+                        <input type="text" id="titleLabelInput" value="Taktischer Truppenrechner" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:border-amber-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Gattung 1</label>
+                        <input type="text" id="nameCat1" value="Nahkämpfer" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Gattung 2</label>
+                        <input type="text" id="nameCat2" value="Schützen" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Gattung 3</label>
+                        <input type="text" id="nameCat3" value="Reiter" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:border-amber-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-slate-400 mb-1">Gattung 4</label>
+                        <input type="text" id="nameCat4" value="Fliegende" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:border-amber-500 focus:outline-none">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Dynamic Rows & Ratio Controls -->
+            <div class="space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                        <h3 class="text-xs font-bold uppercase tracking-wider text-amber-400">2. Reihen verwalten, Verhältnis & Wertigkeiten festlegen</h3>
+                        <p class="text-[11px] text-slate-400">Füge Haupt- oder Zusatzreihen hinzu und passe die Bezeichnungen sowie Verhältnisse frei an.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" onclick="addRow('main')" id="btnAddMainRow" class="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 rounded-lg text-xs font-semibold transition">
+                            <i data-lucide="plus" class="w-3.5 h-3.5"></i> <span id="btnMainText">+ Hauptreihe (Gardisten)</span>
+                        </button>
+                        <button type="button" onclick="addRow('spec')" id="btnAddSpecRow" class="flex items-center gap-1.5 px-3 py-1.5 bg-sky-600/20 hover:bg-sky-600/30 text-sky-300 border border-sky-500/40 rounded-lg text-xs font-semibold transition">
+                            <i data-lucide="plus" class="w-3.5 h-3.5"></i> <span id="btnSpecText">+ Zusatzreihe (Spezialisten)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Settings Container -->
+                <div id="dynamicRowsSettingsContainer" class="space-y-3"></div>
+            </div>
+        </div>
+
+        <!-- Main Results Table Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="p-4 sm:p-5 border-b border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-slate-900/50">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
+                        <i data-lucide="table" class="w-5 h-5 text-amber-400"></i>
+                        <span>Berechneter Truppenaufstellungsplan</span>
+                    </h2>
+                    <p class="text-xs text-slate-400">Automatischer Echtzeitabgleich aller Gattungen & Stufen</p>
+                </div>
+
+                <!-- Display Unit Toggle -->
+                <div class="flex items-center bg-slate-950 p-1 rounded-xl border border-slate-800 text-xs">
+                    <button id="viewKopfBtn" class="px-3 py-1.5 rounded-lg font-semibold transition bg-amber-500 text-slate-950 shadow">
+                        Kopfanzahl
+                    </button>
+                    <button id="viewPowerBtn" class="px-3 py-1.5 rounded-lg font-semibold transition text-slate-400 hover:text-slate-200">
+                        Äquivalentwert
+                    </button>
+                </div>
+            </div>
+
+            <!-- Table Wrapper for Scroll -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[640px]">
+                    <thead>
+                        <tr class="bg-slate-950/80 border-b border-slate-800 text-[11px] font-bold uppercase tracking-wider text-slate-400">
+                            <th class="p-4 pl-6 w-1/3">Kategorie / Rang</th>
+                            <th class="p-4 text-right"><span class="dispCat1">Nahkämpfer</span></th>
+                            <th class="p-4 text-right"><span class="dispCat2">Schützen</span></th>
+                            <th class="p-4 text-right"><span class="dispCat3">Reiter</span></th>
+                            <th class="p-4 text-right"><span class="dispCat4">Fliegende</span></th>
+                            <th class="p-4 text-right pr-6 bg-slate-950/40 text-amber-400">Gesamt</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTableBody" class="divide-y divide-slate-800/60 text-sm font-medium">
+                        <!-- Dynamically populated -->
+                    </tbody>
+
+                    <!-- Table Footer: Totals -->
+                    <tfoot>
+                        <!-- Total Heads -->
+                        <tr class="bg-slate-950/90 border-t-2 border-slate-800 text-sm font-bold">
+                            <td class="p-4 pl-6 text-slate-300">Summe Köpfe (Einheiten)</td>
+                            <td class="p-4 text-right font-mono text-slate-200" id="total_heads_c1">0</td>
+                            <td class="p-4 text-right font-mono text-slate-200" id="total_heads_c2">0</td>
+                            <td class="p-4 text-right font-mono text-slate-200" id="total_heads_c3">0</td>
+                            <td class="p-4 text-right font-mono text-slate-200" id="total_heads_c4">0</td>
+                            <td class="p-4 text-right pr-6 font-mono text-slate-100 bg-slate-950" id="total_heads_grand">0</td>
+                        </tr>
+
+                        <!-- Total Value / Power -->
+                        <tr class="bg-amber-500/10 border-t border-amber-500/30 text-base font-extrabold">
+                            <td class="p-4 pl-6 text-amber-400 flex items-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-400"></i>
+                                <span>Gesamtwertigkeit (Punkte)</span>
+                            </td>
+                            <td class="p-4 text-right font-mono text-amber-300" id="total_power_c1">0</td>
+                            <td class="p-4 text-right font-mono text-amber-300" id="total_power_c2">0</td>
+                            <td class="p-4 text-right font-mono text-amber-300" id="total_power_c3">0</td>
+                            <td class="p-4 text-right font-mono text-amber-300" id="total_power_c4">0</td>
+                            <td class="p-4 text-right pr-6 font-mono text-amber-400 text-lg bg-amber-500/20" id="total_power_grand">0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <!-- Calculation Info Box -->
+        <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 text-xs text-slate-400 space-y-3">
+            <h4 class="font-bold text-slate-200 text-sm flex items-center gap-2">
+                <i data-lucide="calculator" class="w-4 h-4 text-amber-400"></i>
+                <span>Berechnungsgrundlage & Mathematische Logik</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-slate-400">
+                <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/60">
+                    <strong class="text-slate-200 block mb-1">1. Fester Spezialisten-Abzug</strong>
+                    Alle Zusatzreihen werden als feste Kopfanzahl je Gattung reserviert und direkt von der Gesamtwertigkeit abgezogen.
+                </div>
+                <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/60">
+                    <strong class="text-slate-200 block mb-1">2. 25 % Gattungs-Anteil</strong>
+                    Die verbleibende Restwertigkeit wird exakt gleichmäßig auf die 4 Truppengattungen aufgeteilt (jeweils 25 %).
+                </div>
+                <div class="bg-slate-950/40 p-3 rounded-xl border border-slate-800/60">
+                    <strong class="text-slate-200 block mb-1">3. Individuelles Reihen-Verhältnis</strong>
+                    Die Hauptreihen werden gemäß ihren eingestellten Verhältnis-Faktoren und Einzelwertigkeiten exakt aufgeteilt.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-400 mt-6">
+        <p>© Taktischer Truppenrechner • Bereitgestellt für Strategie & Clan-Gefechte</p>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- Default Configuration ---
+        const getDefaultRows = () => [
+            {
+                id: 'r1',
+                type: 'main',
+                name: 'Gardisten Stufe hoch',
+                ratio: 1,
+                weights: [1, 1, 2, 20],
+                color: 'emerald'
+            },
+            {
+                id: 'r2',
+                type: 'spec',
+                name: 'Spezialisten Stufe hoch',
+                ratio: 0,
+                weights: [1, 1, 1, 1],
+                color: 'sky'
+            },
+            {
+                id: 'r3',
+                type: 'main',
+                name: 'Gardisten Stufe mittel',
+                ratio: 2,
+                weights: [1, 1, 2, 20],
+                color: 'amber'
+            },
+            {
+                id: 'r4',
+                type: 'spec',
+                name: 'Spezialisten mittel',
+                ratio: 0,
+                weights: [1, 1, 1, 1],
+                color: 'purple'
+            }
+        ];
+
+        // --- State Management ---
+        const state = {
+            viewMode: 'heads', // 'heads' or 'power'
+            rows: getDefaultRows()
+        };
+
+        const rowColors = ['emerald', 'amber', 'rose', 'indigo', 'sky', 'purple', 'teal', 'orange'];
+
+        // --- DOM Elements ---
+        const totalPowerInput = document.getElementById('totalPower');
+        const specCountInput = document.getElementById('specCount');
+        const specLabelInput = document.getElementById('specLabelInput');
+        const mainRowTypeNameInput = document.getElementById('mainRowTypeNameInput');
+        const titleLabelInput = document.getElementById('titleLabelInput');
+
+        const nameCat1 = document.getElementById('nameCat1');
+        const nameCat2 = document.getElementById('nameCat2');
+        const nameCat3 = document.getElementById('nameCat3');
+        const nameCat4 = document.getElementById('nameCat4');
+
+        const settingsPanel = document.getElementById('settingsPanel');
+        const toggleEditNamesBtn = document.getElementById('toggleEditNamesBtn');
+        const toggleAdvancedBtn = document.getElementById('toggleAdvancedBtn');
+        const closeSettingsBtn = document.getElementById('closeSettingsBtn');
+        const resetDefaultsBtn = document.getElementById('resetDefaultsBtn');
+        const copyResultsBtn = document.getElementById('copyResultsBtn');
+        const viewKopfBtn = document.getElementById('viewKopfBtn');
+        const viewPowerBtn = document.getElementById('viewPowerBtn');
+
+        let currentCalculatedData = null;
+
+        function openSettingsAndFocusSpec() {
+            settingsPanel.classList.remove('hidden');
+            specLabelInput.focus();
+            specLabelInput.select();
+        }
+
+        // --- Render Dynamic Settings Rows ---
+        function renderSettingsRows() {
+            const container = document.getElementById('dynamicRowsSettingsContainer');
+            container.innerHTML = '';
+
+            const mainRowsCount = state.rows.filter(r => r.type === 'main').length;
+            const specRowsCount = state.rows.filter(r => r.type === 'spec').length;
+
+            document.getElementById('btnAddMainRow').disabled = mainRowsCount >= 4;
+            document.getElementById('btnAddMainRow').classList.toggle('opacity-40', mainRowsCount >= 4);
+            document.getElementById('btnAddSpecRow').disabled = specRowsCount >= 4;
+            document.getElementById('btnAddSpecRow').classList.toggle('opacity-40', specRowsCount >= 4);
+
+            const mainBaseName = mainRowTypeNameInput.value.trim() || 'Gardisten';
+            const specBaseName = specLabelInput.value.split('(')[0].trim() || 'Spezialisten';
+
+            document.getElementById('btnMainText').textContent = `+ Hauptreihe (${mainBaseName})`;
+            document.getElementById('btnSpecText').textContent = `+ Zusatzreihe (${specBaseName})`;
+
+            state.rows.forEach((row, index) => {
+                const isMain = row.type === 'main';
+                const badgeClass = isMain 
+                    ? 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' 
+                    : 'bg-sky-500/15 text-sky-300 border-sky-500/30';
+                const badgeText = isMain ? `Hauptreihe (${mainBaseName})` : `Zusatzreihe (${specBaseName})`;
+
+                const canDelete = isMain ? mainRowsCount > 1 : specRowsCount > 0;
+
+                const div = document.createElement('div');
+                div.className = "bg-slate-950/60 p-4 rounded-xl border border-slate-800 space-y-3";
+                div.innerHTML = `
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div class="flex flex-wrap items-center gap-2 flex-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded border ${badgeClass}">${badgeText}</span>
+                            <input type="text" value="${row.name}" 
+                                oninput="updateRowName(${index}, this.value)"
+                                class="bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-sm font-semibold text-slate-100 focus:border-amber-500 focus:outline-none flex-1 min-w-[180px]" 
+                                placeholder="Bezeichnung der Reihe">
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            ${isMain ? `
+                                <div class="flex items-center gap-1.5 bg-slate-900 px-2.5 py-1 rounded-lg border border-amber-500/30">
+                                    <label class="text-[11px] text-amber-400 font-semibold whitespace-nowrap">Verhältnis-Faktor:</label>
+                                    <input type="number" value="${row.ratio}" min="0" step="0.1"
+                                        oninput="updateRowRatio(${index}, this.value)"
+                                        class="w-16 bg-slate-950 border border-slate-700 rounded px-2 py-1 text-xs font-bold text-amber-300 text-right focus:border-amber-500 focus:outline-none">
+                                </div>
+                            ` : `
+                                <span class="text-[11px] text-slate-400 italic">Nutzt festen Abzug (${specCountInput.value} Stk)</span>
+                            `}
+
+                            ${canDelete ? `
+                                <button type="button" onclick="removeRow(${index})" title="Reihe entfernen" class="p-1.5 text-slate-400 hover:text-red-400 hover:bg-red-950/40 rounded-lg transition">
+                                    <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                </button>
+                            ` : ''}
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+                        <div>
+                            <span class="block text-[10px] text-slate-400 mb-1 dispCat1">${nameCat1.value}</span>
+                            <input type="number" value="${row.weights[0]}" min="0" step="0.1"
+                                oninput="updateRowWeight(${index}, 0, this.value)"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-100 focus:border-amber-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-slate-400 mb-1 dispCat2">${nameCat2.value}</span>
+                            <input type="number" value="${row.weights[1]}" min="0" step="0.1"
+                                oninput="updateRowWeight(${index}, 1, this.value)"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-100 focus:border-amber-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-slate-400 mb-1 dispCat3">${nameCat3.value}</span>
+                            <input type="number" value="${row.weights[2]}" min="0" step="0.1"
+                                oninput="updateRowWeight(${index}, 2, this.value)"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-100 focus:border-amber-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <span class="block text-[10px] text-slate-400 mb-1 dispCat4">${nameCat4.value}</span>
+                            <input type="number" value="${row.weights[3]}" min="0" step="0.1"
+                                oninput="updateRowWeight(${index}, 3, this.value)"
+                                class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-100 focus:border-amber-500 focus:outline-none">
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+
+            lucide.createIcons();
+        }
+
+        function addRow(type) {
+            const countOfType = state.rows.filter(r => r.type === type).length;
+            if (countOfType >= 4) return;
+
+            const nextNum = countOfType + 1;
+            const color = rowColors[(state.rows.length) % rowColors.length];
+
+            const mainBaseName = mainRowTypeNameInput.value.trim() || 'Gardisten';
+            const specBaseName = specLabelInput.value.split('(')[0].trim() || 'Spezialisten';
+
+            if (type === 'main') {
+                state.rows.push({
+                    id: 'r_' + Date.now(),
+                    type: 'main',
+                    name: `${mainBaseName} Stufe ${nextNum}`,
+                    ratio: nextNum === 3 ? 4 : (nextNum === 4 ? 8 : 2),
+                    weights: [1, 1, 2, 20],
+                    color: color
+                });
+            } else {
+                state.rows.push({
+                    id: 'r_' + Date.now(),
+                    type: 'spec',
+                    name: `${specBaseName} Stufe ${nextNum}`,
+                    ratio: 0,
+                    weights: [1, 1, 1, 1],
+                    color: color
+                });
+            }
+
+            renderSettingsRows();
+            calculateArmy();
+            showToast(type === 'main' ? "Hauptreihe hinzugefügt" : "Zusatzreihe hinzugefügt");
+        }
+
+        function removeRow(index) {
+            state.rows.splice(index, 1);
+            renderSettingsRows();
+            calculateArmy();
+            showToast("Reihe entfernt");
+        }
+
+        function updateRowName(index, val) {
+            state.rows[index].name = val;
+            renderTable();
+        }
+
+        function updateRowRatio(index, val) {
+            state.rows[index].ratio = Math.max(0, parseFloat(val) || 0);
+            calculateArmy();
+        }
+
+        function updateRowWeight(rowIndex, colIndex, val) {
+            state.rows[rowIndex].weights[colIndex] = Math.max(0, parseFloat(val) || 0);
+            calculateArmy();
+        }
+
+        // --- Core Calculation Logic ---
+        function calculateArmy() {
+            const P = Math.max(0, parseFloat(totalPowerInput.value) || 0);
+            const S = Math.max(0, parseFloat(specCountInput.value) || 0);
+
+            // Calculate total fixed specialist power across all 'spec' rows
+            let specTotalPower = 0;
+            state.rows.forEach(row => {
+                if (row.type === 'spec') {
+                    for (let c = 0; c < 4; c++) {
+                        specTotalPower += S * (row.weights[c] || 0);
+                    }
+                }
+            });
+
+            // Remaining power divided equally among 4 categories (25% each)
+            const remainingPower = Math.max(0, P - specTotalPower);
+            const powerPerCat = remainingPower / 4;
+
+            const calculatedRows = state.rows.map(row => ({
+                ...row,
+                heads: [0, 0, 0, 0],
+                power: [0, 0, 0, 0]
+            }));
+
+            // For each category column (0..3), distribute powerPerCat across 'main' rows according to their ratios
+            for (let c = 0; c < 4; c++) {
+                let denominator = 0;
+                calculatedRows.forEach(r => {
+                    if (r.type === 'main') {
+                        denominator += (r.ratio || 0) * (r.weights[c] || 0);
+                    }
+                });
+
+                const baseUnit = denominator > 0 ? (powerPerCat / denominator) : 0;
+
+                calculatedRows.forEach(r => {
+                    if (r.type === 'main') {
+                        const h = Math.round(baseUnit * (r.ratio || 0));
+                        r.heads[c] = h;
+                        r.power[c] = h * (r.weights[c] || 0);
+                    } else {
+                        r.heads[c] = S;
+                        r.power[c] = S * (r.weights[c] || 0);
+                    }
+                });
+            }
+
+            currentCalculatedData = calculatedRows;
+            updateSummaryBadges();
+            renderTable();
+        }
+
+        function updateSummaryBadges() {
+            const specTitle = specLabelInput.value.trim() || "Spezialisten (pro Gattung)";
+            document.getElementById('dispSpecLabelCard').textContent = specTitle;
+            const shortSpecWord = specTitle.split('(')[0].trim() || "Spezialisten";
+            document.getElementById('dispSpecSubText').textContent = shortSpecWord;
+
+            document.getElementById('headerTitleDisplay').textContent = titleLabelInput.value.trim() || "Taktischer Truppenrechner";
+
+            const mainRows = state.rows.filter(r => r.type === 'main');
+            const ratios = mainRows.map(r => r.ratio);
+            document.getElementById('ratioSummaryLabel').textContent = `Verhältnis (${mainRows.length} Hauptreihen)`;
+            document.getElementById('ratioSummaryValue').textContent = ratios.length > 0 ? ratios.join(' : ') : '-';
+        }
+
+        // --- Render UI & Table ---
+        function renderTable() {
+            if (!currentCalculatedData) return;
+
+            document.querySelectorAll('.dispCat1').forEach(el => el.textContent = nameCat1.value);
+            document.querySelectorAll('.dispCat2').forEach(el => el.textContent = nameCat2.value);
+            document.querySelectorAll('.dispCat3').forEach(el => el.textContent = nameCat3.value);
+            document.querySelectorAll('.dispCat4').forEach(el => el.textContent = nameCat4.value);
+
+            const isHeads = state.viewMode === 'heads';
+            const tbody = document.getElementById('resultsTableBody');
+            tbody.innerHTML = '';
+
+            let colHeadsTotals = [0, 0, 0, 0];
+            let colPowerTotals = [0, 0, 0, 0];
+
+            const dotColorMap = {
+                emerald: 'bg-emerald-400',
+                sky: 'bg-sky-400',
+                amber: 'bg-amber-400',
+                purple: 'bg-purple-400',
+                rose: 'bg-rose-400',
+                indigo: 'bg-indigo-400',
+                teal: 'bg-teal-400',
+                orange: 'bg-orange-400'
+            };
+
+            const textColorMap = {
+                emerald: 'text-emerald-400',
+                sky: 'text-sky-400',
+                amber: 'text-amber-400',
+                purple: 'text-purple-400',
+                rose: 'text-rose-400',
+                indigo: 'text-indigo-400',
+                teal: 'text-teal-400',
+                orange: 'text-orange-400'
+            };
+
+            currentCalculatedData.forEach(row => {
+                const values = isHeads ? row.heads : row.power;
+                const rowSum = values.reduce((a, b) => a + b, 0);
+
+                for (let c = 0; c < 4; c++) {
+                    colHeadsTotals[c] += row.heads[c];
+                    colPowerTotals[c] += row.power[c];
+                }
+
+                const dotClass = dotColorMap[row.color] || 'bg-amber-400';
+                const totalTextClass = textColorMap[row.color] || 'text-amber-400';
+                const rowTextShade = row.type === 'main' ? 'text-slate-100' : 'text-slate-300';
+                const ratioBadge = row.type === 'main' 
+                    ? `<span class="text-[10px] text-slate-400 bg-slate-800/90 px-1.5 py-0.5 rounded ml-1">Anteil: ${row.ratio}</span>` 
+                    : `<span class="text-[10px] text-sky-400/80 bg-sky-950/60 px-1.5 py-0.5 rounded ml-1">Fix</span>`;
+
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-800/30 transition";
+                tr.innerHTML = `
+                    <td class="p-4 pl-6 text-slate-200 font-semibold flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full shrink-0 ${dotClass}"></span>
+                        <span>${row.name}</span>
+                        ${ratioBadge}
+                    </td>
+                    <td class="p-4 text-right font-mono ${rowTextShade}">${Math.round(values[0]).toLocaleString('de-DE')}</td>
+                    <td class="p-4 text-right font-mono ${rowTextShade}">${Math.round(values[1]).toLocaleString('de-DE')}</td>
+                    <td class="p-4 text-right font-mono ${rowTextShade}">${Math.round(values[2]).toLocaleString('de-DE')}</td>
+                    <td class="p-4 text-right font-mono ${rowTextShade}">${Math.round(values[3]).toLocaleString('de-DE')}</td>
+                    <td class="p-4 text-right pr-6 font-mono font-bold ${totalTextClass} bg-slate-950/20">${Math.round(rowSum).toLocaleString('de-DE')}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            for (let col = 0; col < 4; col++) {
+                document.getElementById(`total_heads_c${col+1}`).textContent = Math.round(colHeadsTotals[col]).toLocaleString('de-DE');
+                document.getElementById(`total_power_c${col+1}`).textContent = Math.round(colPowerTotals[col]).toLocaleString('de-DE');
+            }
+
+            const grandHeads = colHeadsTotals.reduce((a, b) => a + b, 0);
+            const grandPower = colPowerTotals.reduce((a, b) => a + b, 0);
+
+            document.getElementById('total_heads_grand').textContent = Math.round(grandHeads).toLocaleString('de-DE');
+            document.getElementById('total_power_grand').textContent = Math.round(grandPower).toLocaleString('de-DE');
+        }
+
+        // --- View Mode Toggle ---
+        function setViewMode(mode) {
+            state.viewMode = mode;
+            if (mode === 'heads') {
+                viewKopfBtn.className = "px-3 py-1.5 rounded-lg font-semibold transition bg-amber-500 text-slate-950 shadow";
+                viewPowerBtn.className = "px-3 py-1.5 rounded-lg font-semibold transition text-slate-400 hover:text-slate-200";
+            } else {
+                viewPowerBtn.className = "px-3 py-1.5 rounded-lg font-semibold transition bg-amber-500 text-slate-950 shadow";
+                viewKopfBtn.className = "px-3 py-1.5 rounded-lg font-semibold transition text-slate-400 hover:text-slate-200";
+            }
+            renderTable();
+        }
+
+        // --- Copy Results To Clipboard ---
+        function copyToClipboard() {
+            if (!currentCalculatedData) return;
+
+            const c1 = nameCat1.value;
+            const c2 = nameCat2.value;
+            const c3 = nameCat3.value;
+            const c4 = nameCat4.value;
+
+            const rowLines = currentCalculatedData.map(r => 
+                `- ${r.name}: ${c1}: ${r.heads[0]} | ${c2}: ${r.heads[1]} | ${c3}: ${r.heads[2]} | ${c4}: ${r.heads[3]}`
+            ).join('\n');
+
+            const text = 
+`=== ${titleLabelInput.value} ===
+Zielgesamtwertigkeit: ${totalPowerInput.value}
+${specLabelInput.value}: ${specCountInput.value}
+
+[Kopfanzahlen]
+${rowLines}
+
+Gesamtsumme Köpfe: ${document.getElementById('total_heads_grand').textContent}
+Gesamtsumme Wertigkeit: ${document.getElementById('total_power_grand').textContent}`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                showToast("Aufstellungsplan kopiert!");
+            }).catch(() => {
+                showToast("Fehler beim Kopieren!");
+            });
+        }
+
+        // --- Toast Notification ---
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // --- Reset To Defaults ---
+        function resetDefaults() {
+            totalPowerInput.value = 12000;
+            specCountInput.value = 2;
+            specLabelInput.value = "Spezialisten (pro Gattung)";
+            mainRowTypeNameInput.value = "Gardisten";
+            titleLabelInput.value = "Taktischer Truppenrechner";
+
+            nameCat1.value = "Nahkämpfer";
+            nameCat2.value = "Schützen";
+            nameCat3.value = "Reiter";
+            nameCat4.value = "Fliegende";
+
+            state.rows = getDefaultRows();
+
+            renderSettingsRows();
+            calculateArmy();
+            showToast("Standardwerte wiederhergestellt");
+        }
+
+        // --- Event Listeners Setup ---
+        function initEvents() {
+            [totalPowerInput, specCountInput, specLabelInput, mainRowTypeNameInput, titleLabelInput, nameCat1, nameCat2, nameCat3, nameCat4].forEach(el => {
+                el.addEventListener('input', () => {
+                    if (el === specCountInput || el === mainRowTypeNameInput || el === specLabelInput) renderSettingsRows();
+                    calculateArmy();
+                });
+            });
+
+            const togglePanel = () => settingsPanel.classList.toggle('hidden');
+            toggleEditNamesBtn.addEventListener('click', togglePanel);
+            toggleAdvancedBtn.addEventListener('click', togglePanel);
+            closeSettingsBtn.addEventListener('click', togglePanel);
+
+            resetDefaultsBtn.addEventListener('click', resetDefaults);
+            copyResultsBtn.addEventListener('click', copyToClipboard);
+
+            viewKopfBtn.addEventListener('click', () => setViewMode('heads'));
+            viewPowerBtn.addEventListener('click', () => setViewMode('power'));
+        }
+
+        // --- Initialization ---
+        window.addEventListener('DOMContentLoaded', () => {
+            renderSettingsRows();
+            initEvents();
+            calculateArmy();
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
