@@ -1671,7 +1671,9 @@
       "customGoal": null,
       "goalCyclesLeft": 0,
       "joinDate": "2026-11-01",
-      "chests": {},
+      "chests": {
+        "Truhe der Orks (Gruft Level 25)": 1
+      },
       "bankedTowerPoints": 0,
       "growth": 0
     },
