@@ -867,16 +867,16 @@
       "power": 453078870,
       "tower": 1,
       "chests": {
+        "Sandtruhe (Gruft Level 25)": 1,
+        "Feuertruhe (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 2,
         "Truhe der Maya (Gruft Level 25)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 2,
-        "Sandtruhe (Gruft Level 25)": 1,
         "Harpyien-Truhe (Epische Gruft Level 25)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
-        "Feuertruhe (Gruft Level 25)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 1
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 2,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 20-24)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -898,9 +898,9 @@
         "Feuertruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 2,
         "Truhe der Orks (Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 3,
+        "Infernale Truhe (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1,
-        "Infernale Truhe (Gruft Level 25)": 1
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 3
       },
       "growth": 0,
       "silver": 0,
@@ -938,12 +938,12 @@
       "power": 308133461,
       "tower": 0,
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 25)": 1,
-        "Skorpion-Truhe (Epische Gruft Level 20)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1,
         "Barbarentruhe (Gruft Level 20)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
+        "Skorpion-Truhe (Epische Gruft Level 20)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
+        "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
+        "Truhe der Festung der Elfen (Festung Level 25)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1
       },
       "growth": 0,
@@ -1106,24 +1106,24 @@
     {
       "name": "Granidred",
       "rank": "Veteran",
-      "hero_level": 223,
       "power": 234597871,
-      "startPower": 226136481,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
+        "Steintruhe (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 20)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
-        "Steintruhe (Gruft Level 20)": 1,
         "Truhe der Festung der Elfen (Festung Level 25)": 2
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 223,
+      "startPower": 226136481,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Roula",
@@ -1145,42 +1145,42 @@
     {
       "name": "Vudor SK6",
       "rank": "Veteran",
-      "hero_level": 250,
       "power": 214475865,
-      "startPower": 211551525,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Maya (Gruft Level 20)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 2
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 250,
+      "startPower": 211551525,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "King Slayer",
       "rank": "Veteran",
-      "hero_level": 207,
       "power": 169503688,
-      "startPower": 166500878,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Steintruhe (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 15)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 207,
+      "startPower": 166500878,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Maginad",
@@ -1270,19 +1270,19 @@
     {
       "name": "Ria",
       "rank": "Veteran",
-      "hero_level": 33,
       "power": 1155624,
-      "startPower": 929368,
       "tower": 1,
+      "chests": {},
+      "growth": 0,
       "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 33,
+      "startPower": 929368,
+      "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
-      "chests": {},
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "bankedTowerPoints": 0
     },
     {
       "name": "SaturdayNightFever",
@@ -1307,8 +1307,8 @@
       "power": 765297691,
       "tower": 1,
       "chests": {
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 5
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 5,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1468,8 +1468,8 @@
       "power": 130960571,
       "tower": 1,
       "chests": {
-        "Truhe der Festung der Verfluchten (Festung Level 20)": 5,
-        "Weiße Holztruhe (Epische Gruft Level 20)": 1
+        "Weiße Holztruhe (Epische Gruft Level 20)": 1,
+        "Truhe der Festung der Verfluchten (Festung Level 20)": 5
       },
       "growth": 0,
       "silver": 0,
@@ -1488,8 +1488,8 @@
       "power": 1137207755,
       "tower": 1,
       "chests": {
-        "Feuertruhe (Gruft Level 25)": 1,
         "Sandtruhe (Gruft Level 25)": 1,
+        "Feuertruhe (Gruft Level 25)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1
       },
       "growth": 0,
@@ -1678,22 +1678,22 @@
     {
       "name": "Akinohn",
       "rank": "Vorgesetzter",
-      "hero_level": 327,
       "power": 765581807,
-      "startPower": 743768307,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Orks (Gruft Level 25)": 3,
         "Truhe der Festung der Elfen (Festung Level 25)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 327,
+      "startPower": 743768307,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Eldriel",
@@ -1715,46 +1715,46 @@
     {
       "name": "Rysiek121",
       "rank": "Offizier",
+      "hero_level": 409,
       "power": 1319490075,
-      "tower": 0,
+      "startPower": 1319490025,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
-        "Truhe der Festung der Elfen (Festung Level 30)": 14,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 3,
         "Sandtruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
         "Truhe der Maya (Gruft Level 25)": 1,
-        "Truhe der Orks (Gruft Level 25)": 1
+        "Truhe der Orks (Gruft Level 25)": 1,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 3,
+        "Truhe der Festung der Elfen (Festung Level 30)": 14
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 409,
-      "startPower": 1319490025,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Que",
       "rank": "Soldat",
+      "hero_level": 205,
       "power": 120269715,
-      "tower": 0,
+      "startPower": 118097255,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-04",
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Infernale Truhe (Gruft Level 20)": 2
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-04",
-      "customGoal": null,
-      "hero_level": 205,
-      "startPower": 118097255,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "nomad",
@@ -1782,13 +1782,13 @@
       "power": 1562017781,
       "tower": 0,
       "chests": {
-        "Schöne Truhe (Gruft Level 25)": 1,
         "Sandtruhe (Gruft Level 25)": 2,
+        "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 2,
+        "Seltene Drachentruhe (Seltene Gruft Level 20)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 4,
-        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 2,
-        "Seltene Drachentruhe (Seltene Gruft Level 20)": 1
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 2,
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 2
       },
       "growth": 0,
       "silver": 0,
@@ -1955,9 +1955,9 @@
       "customGoal": null,
       "hero_level": 88,
       "startPower": 17125691,
+      "goalCyclesLeft": 0,
       "individualGoal": null,
-      "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "penaltyPercent": null
     }
   ],
   "evalStartDate": "2026-11-21",
@@ -1969,5 +1969,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-21T21:50:42.978Z"
+  "lastUpdated": "2026-11-21T22:10:54.045Z"
 }
