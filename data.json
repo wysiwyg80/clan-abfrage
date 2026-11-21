@@ -1750,7 +1750,9 @@
       "rank": "Offizier",
       "power": 1562017781,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Schöne Truhe (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-06",
