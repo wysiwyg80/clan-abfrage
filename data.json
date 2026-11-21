@@ -966,7 +966,9 @@
       "rank": "Veteran",
       "power": 316525525,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Knochentruhe (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
