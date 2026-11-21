@@ -3265,7 +3265,9 @@
     {
       "name": "Rosalinda",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Barbarentruhe (Gruft Level 15)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 109379065,
