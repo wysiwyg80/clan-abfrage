@@ -968,9 +968,9 @@
       "customGoal": null,
       "hero_level": 319,
       "startPower": 633226375,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Riyash IV",
@@ -999,9 +999,9 @@
       "customGoal": null,
       "hero_level": 290,
       "startPower": 479857600,
-      "bankedTowerPoints": 50,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Magellan",
@@ -1022,14 +1022,14 @@
         "Vergessene Truhe (Gruft Level 25)": 4,
         "Truhe des Händlers (Söldner-Börse)": 1,
         "Harpyien-Truhe (Epische Gruft Level 25)": 8,
+        "Weiße Holztruhe (Epische Gruft Level 25)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 4,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 5,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 25-29)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 2,
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
-        "Weiße Holztruhe (Epische Gruft Level 25)": 2
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1037,9 +1037,9 @@
       "customGoal": null,
       "hero_level": 269,
       "startPower": 449355045,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Explorer",
@@ -1079,9 +1079,9 @@
       "customGoal": null,
       "hero_level": 258,
       "startPower": 413974355,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "DRACULA",
@@ -1101,20 +1101,20 @@
         "Vergessene Truhe (Gruft Level 25)": 4,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
         "Kobalt-Truhe (Epische Gruft Level 25)": 1,
+        "Barbarentruhe (Epische Gruft Level 25)": 1,
         "Skorpion-Truhe (Epische Gruft Level 30)": 3,
         "Trillium-Truhe (Epische Gruft Level 30)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 30)": 1,
+        "Weiße Holztruhe (Epische Gruft Level 25)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 10,
         "Truhe der Festung der Elfen (Festung Level 30)": 12,
         "Truhe der Feuer-Hydra (Epischer Inferno-Trupp)": 1,
         "Truhe der alten Bastion (Epische Gruft Level 30)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1,
+        "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 1,
         "Arachnia-Truhe (Epischer Trupp aus Arachnias Schwarm)": 1,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 30,
-        "Barbarentruhe (Epische Gruft Level 25)": 1,
-        "Weiße Holztruhe (Epische Gruft Level 25)": 1,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 1
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 30
       },
       "growth": 0,
       "silver": 0,
@@ -1122,9 +1122,9 @@
       "customGoal": null,
       "hero_level": 254,
       "startPower": 392947425,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Biin",
@@ -1173,9 +1173,9 @@
       "customGoal": null,
       "hero_level": 235,
       "startPower": 302472181,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Maem",
@@ -1211,9 +1211,9 @@
       "customGoal": null,
       "hero_level": 246,
       "startPower": 296808699,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Auzar",
@@ -1259,9 +1259,9 @@
       "customGoal": null,
       "hero_level": 234,
       "startPower": 308765825,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Elginan",
@@ -1281,14 +1281,18 @@
         "Truhe der Kobra (Gruft Level 25)": 6,
         "Vergessene Truhe (Gruft Level 25)": 2,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 4,
+        "Kobalt-Truhe (Epische Gruft Level 25)": 1,
         "Skorpion-Truhe (Epische Gruft Level 25)": 2,
         "Skorpion-Truhe (Epische Gruft Level 30)": 1,
         "Trillium-Truhe (Epische Gruft Level 30)": 1,
+        "Minotaurus-Truhe (Epische Gruft Level 25)": 1,
         "Weiße Holztruhe (Epische Gruft Level 20)": 1,
         "Geflochtene Truhe (Epische Gruft Level 25)": 1,
         "Geflochtene Truhe (Epische Gruft Level 30)": 1,
         "Barbarentruhe (Heldenhafte Monster Level 24)": 1,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
+        "Schildkröten-Truhe (Epische Gruft Level 25)": 1,
+        "Truhe des Priesters (Epische Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 16,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 17,
         "Truhe der Feuer-Hydra (Epischer Inferno-Trupp)": 1,
@@ -1298,11 +1302,7 @@
         "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 1,
         "Truhe der Verfluchten (Heldenhafte Monster Level 23)": 1,
-        "Truhe der Autorität (Turnier Triumph der Autorität)": 1,
-        "Minotaurus-Truhe (Epische Gruft Level 25)": 1,
-        "Kobalt-Truhe (Epische Gruft Level 25)": 1,
-        "Schildkröten-Truhe (Epische Gruft Level 25)": 1,
-        "Truhe des Priesters (Epische Gruft Level 25)": 1
+        "Truhe der Autorität (Turnier Triumph der Autorität)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1310,9 +1310,9 @@
       "customGoal": null,
       "hero_level": 237,
       "startPower": 312395806,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Dalas",
@@ -1344,9 +1344,9 @@
       "customGoal": null,
       "hero_level": 234,
       "startPower": 265435735,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Carruggi 5r",
@@ -1366,6 +1366,7 @@
         "Schöne Truhe (Gruft Level 25)": 4,
         "Truhe der Orks (Gruft Level 25)": 2,
         "Infernale Truhe (Gruft Level 20)": 3,
+        "Truhe der Kobra (Gruft Level 20)": 1,
         "Truhe der Kobra (Gruft Level 25)": 2,
         "Vergessene Truhe (Gruft Level 20)": 2,
         "Vergessene Truhe (Gruft Level 25)": 3,
@@ -1379,8 +1380,7 @@
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 22,
         "Truhe der Festung der Elfen (Festung Level 15)": 1,
-        "Truhe der Festung der Elfen (Festung Level 30)": 26,
-        "Truhe der Kobra (Gruft Level 20)": 1
+        "Truhe der Festung der Elfen (Festung Level 30)": 26
       },
       "growth": 0,
       "silver": 0,
@@ -1388,9 +1388,9 @@
       "customGoal": null,
       "hero_level": 222,
       "startPower": 239786835,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "ICHNOS",
@@ -1443,9 +1443,9 @@
       "customGoal": null,
       "hero_level": 231,
       "startPower": 241039155,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Lee the Ugly",
@@ -1476,9 +1476,9 @@
       "customGoal": null,
       "hero_level": 232,
       "startPower": 246728601,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "kordy",
@@ -1497,9 +1497,9 @@
       "customGoal": null,
       "hero_level": 222,
       "startPower": 236544591,
-      "bankedTowerPoints": 50,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Granidred",
@@ -1536,9 +1536,9 @@
       "customGoal": null,
       "hero_level": 220,
       "startPower": 226136481,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Roula",
@@ -1574,9 +1574,9 @@
       "customGoal": null,
       "hero_level": 208,
       "startPower": 209162691,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Vudor SK6",
@@ -1597,9 +1597,9 @@
       "customGoal": null,
       "hero_level": 250,
       "startPower": 211551525,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "King Slayer",
@@ -1609,6 +1609,7 @@
       "chests": {
         "Steintruhe (Gruft Level 25)": 10,
         "Barbarentruhe (Gruft Level 25)": 1,
+        "Schöne Truhe (Gruft Level 25)": 1,
         "Truhe der Maya (Gruft Level 25)": 4,
         "Truhe der Orks (Gruft Level 25)": 18,
         "Infernale Truhe (Gruft Level 20)": 1,
@@ -1621,8 +1622,7 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 5,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 3,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 2,
-        "Schöne Truhe (Gruft Level 25)": 1
+        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 2
       },
       "growth": 0,
       "silver": 0,
@@ -1630,9 +1630,9 @@
       "customGoal": null,
       "hero_level": 207,
       "startPower": 166500878,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Maginad",
@@ -1654,17 +1654,17 @@
         "Minotaurus-Truhe (Epische Gruft Level 25)": 1,
         "Skarabäus-Truhe (Epische Gruft Level 25)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 25)": 1,
+        "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
         "Schildkröten-Truhe (Epische Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 6,
+        "Seltene Drachentruhe (Seltene Gruft Level 20)": 4,
         "Truhe der Festung der Elfen (Festung Level 15)": 4,
         "Truhe der Festung der Elfen (Festung Level 20)": 3,
         "Truhe der Festung der Elfen (Festung Level 25)": 8,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 71,
-        "Truhe der Autorität (Turnier Triumph der Autorität)": 3,
         "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 1,
-        "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
-        "Seltene Drachentruhe (Seltene Gruft Level 20)": 4
+        "Truhe der Autorität (Turnier Triumph der Autorität)": 3,
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 71
       },
       "growth": 0,
       "silver": 0,
@@ -1672,9 +1672,9 @@
       "customGoal": null,
       "hero_level": 217,
       "startPower": 141831133,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "AyBars",
@@ -1693,6 +1693,7 @@
         "Barbarentruhe (Gruft Level 20)": 8,
         "Barbarentruhe (Gruft Level 25)": 3,
         "Schöne Truhe (Gruft Level 20)": 4,
+        "Schöne Truhe (Gruft Level 25)": 2,
         "Truhe der Maya (Gruft Level 15)": 1,
         "Truhe der Maya (Gruft Level 20)": 8,
         "Truhe der Maya (Gruft Level 25)": 4,
@@ -1710,6 +1711,7 @@
         "Harpyien-Truhe (Epische Gruft Level 20)": 2,
         "Trillium-Truhe (Epische Gruft Level 20)": 1,
         "Trillium-Truhe (Epische Gruft Level 25)": 1,
+        "Trillium-Truhe (Epische Gruft Level 30)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 25)": 1,
         "Titanstahl-Truhe (Epische Gruft Level 30)": 1,
@@ -1729,9 +1731,7 @@
         "Truhe der Verfluchten (Epische Gruft Level 20)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1,
         "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 1,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 1,
-        "Trillium-Truhe (Epische Gruft Level 30)": 1,
-        "Schöne Truhe (Gruft Level 25)": 2
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1739,9 +1739,9 @@
       "customGoal": null,
       "hero_level": 209,
       "startPower": 112358486,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Orodrafin",
@@ -1773,9 +1773,9 @@
       "customGoal": null,
       "hero_level": 194,
       "startPower": 95966982,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Burigas",
@@ -1808,9 +1808,9 @@
       "customGoal": null,
       "hero_level": 186,
       "startPower": 103614705,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Vudorr",
@@ -1835,6 +1835,7 @@
         "Barbarentruhe (Epische Gruft Level 20)": 1,
         "Skorpion-Truhe (Epische Gruft Level 20)": 1,
         "Skarabäus-Truhe (Epische Gruft Level 20)": 1,
+        "Titanstahl-Truhe (Epische Gruft Level 20)": 1,
         "Weiße Holztruhe (Epische Gruft Level 20)": 1,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 2,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 5,
@@ -1844,8 +1845,7 @@
         "Truhe der Festung der Elfen (Festung Level 20)": 8,
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 5,
         "Truhe der alten Bastion (Epische Gruft Level 20)": 1,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1,
-        "Titanstahl-Truhe (Epische Gruft Level 20)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -1853,9 +1853,9 @@
       "customGoal": null,
       "hero_level": 90,
       "startPower": 37146298,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Ria",
@@ -1876,9 +1876,9 @@
       "customGoal": null,
       "hero_level": 31,
       "startPower": 929368,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "SaturdayNightFever",
@@ -1907,9 +1907,9 @@
       "customGoal": null,
       "hero_level": 166,
       "startPower": 106786693,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "LegatusLabienus",
@@ -1942,9 +1942,9 @@
       "customGoal": null,
       "hero_level": 355,
       "startPower": 760936191,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "man of war",
@@ -1983,9 +1983,9 @@
       "customGoal": null,
       "hero_level": 401,
       "startPower": 1462887131,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Miss Dire",
@@ -2030,9 +2030,9 @@
       "customGoal": null,
       "hero_level": 271,
       "startPower": 449536035,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Cologne am Rhein",
@@ -2068,9 +2068,9 @@
       "customGoal": null,
       "hero_level": 252,
       "startPower": 423882385,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "WYSIWYG",
@@ -2107,9 +2107,9 @@
       "customGoal": null,
       "hero_level": 249,
       "startPower": 406240935,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "kikito",
@@ -2135,13 +2135,13 @@
         "Elven Citadel Chest (Level 25 Citadel)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 8,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 8,
+        "Seltene Drachentruhe (Seltene Gruft Level 30)": 1,
         "Truhe der Festung der Elfen (Festung Level 20)": 7,
         "Truhe der Festung der Elfen (Festung Level 25)": 61,
         "Truhe der Festung der Elfen (Festung Level 30)": 4,
         "Aufsteigende Aschentruhe (Epischer Aschentrupp)": 3,
         "Truhe der alten Bastion (Epische Gruft Level 25)": 1,
-        "Truhe der Festung der Verfluchten (Festung Level 25)": 2,
-        "Seltene Drachentruhe (Seltene Gruft Level 30)": 1
+        "Truhe der Festung der Verfluchten (Festung Level 25)": 2
       },
       "growth": 0,
       "silver": 0,
@@ -2149,9 +2149,9 @@
       "customGoal": null,
       "hero_level": 209,
       "startPower": 293139021,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Frederico Freitas",
@@ -2184,9 +2184,9 @@
       "customGoal": null,
       "hero_level": 195,
       "startPower": 128566016,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Gran Rex",
@@ -2227,9 +2227,9 @@
       "customGoal": null,
       "hero_level": 236,
       "startPower": 227039151,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Farés Dz",
@@ -2282,9 +2282,9 @@
       "customGoal": null,
       "hero_level": 219,
       "startPower": 190655983,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "PABLUS",
@@ -2343,9 +2343,9 @@
       "customGoal": null,
       "hero_level": 177,
       "startPower": 119586751,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Tanmisis",
@@ -2363,9 +2363,9 @@
       "customGoal": null,
       "hero_level": 361,
       "startPower": 1120156855,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Sir spanksALot",
@@ -2393,9 +2393,9 @@
       "customGoal": null,
       "hero_level": 333,
       "startPower": 783971955,
-      "bankedTowerPoints": 50,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "BAD Guo II",
@@ -2414,31 +2414,31 @@
         "Infernale Truhe (Gruft Level 25)": 16,
         "Truhe der Kobra (Gruft Level 25)": 19,
         "Vergessene Truhe (Gruft Level 25)": 11,
+        "Kobalt-Truhe (Epische Gruft Level 20)": 1,
         "Kobalt-Truhe (Epische Gruft Level 25)": 2,
         "Skorpion-Truhe (Epische Gruft Level 25)": 4,
         "Trillium-Truhe (Epische Gruft Level 25)": 2,
         "Minotaurus-Truhe (Epische Gruft Level 20)": 1,
         "Minotaurus-Truhe (Epische Gruft Level 25)": 2,
         "Skarabäus-Truhe (Epische Gruft Level 25)": 3,
+        "Weiße Holztruhe (Epische Gruft Level 20)": 1,
         "Weiße Holztruhe (Epische Gruft Level 25)": 3,
         "Weiße Holztruhe (Epische Gruft Level 30)": 1,
         "Aufgegebene Truhe (Epische Gruft Level 25)": 3,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 21,
+        "Truhe des Priesters (Epische Gruft Level 20)": 1,
+        "Truhe des Priesters (Epische Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 5,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 16,
         "Truhe der Festung der Elfen (Festung Level 25)": 1,
         "Truhe der Festung der Elfen (Festung Level 30)": 29,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 4,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 2,
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 2,
-        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 2,
         "Truhe der Verfluchten (Epische Gruft Level 20)": 1,
-        "Weiße Holztruhe (Epische Gruft Level 20)": 1,
-        "Kobalt-Truhe (Epische Gruft Level 20)": 1,
-        "Truhe des Priesters (Epische Gruft Level 25)": 1,
+        "Alte Truhe eines Kriegers (Epische Gruft Level 25)": 4,
+        "Alte Truhe eines Kriegers (Epische Gruft Level 30)": 2,
         "Truhe des Hauses des Schreckens (Epische Gruft Level 20)": 2,
-        "Truhe des Priesters (Epische Gruft Level 20)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 2,
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 30)": 2
       },
       "growth": 0,
       "silver": 0,
@@ -2446,9 +2446,9 @@
       "customGoal": null,
       "hero_level": 340,
       "startPower": 761938809,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Riyash",
@@ -2474,9 +2474,9 @@
       "customGoal": null,
       "hero_level": 295,
       "startPower": 689443971,
-      "bankedTowerPoints": 50,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Ajji",
@@ -2512,9 +2512,9 @@
       "customGoal": null,
       "hero_level": 263,
       "startPower": 386077573,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "LORD MOSQUITÉ",
@@ -2545,9 +2545,9 @@
       "customGoal": null,
       "hero_level": 125,
       "startPower": 31358181,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Aurora",
@@ -2636,9 +2636,9 @@
       "customGoal": null,
       "hero_level": 136,
       "startPower": 66564015,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Xetlac",
@@ -2708,9 +2708,9 @@
       "customGoal": null,
       "hero_level": 376,
       "startPower": 992717645,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Akasha",
@@ -2746,9 +2746,9 @@
       "customGoal": null,
       "hero_level": 360,
       "startPower": 894262310,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Arik",
@@ -2785,9 +2785,9 @@
       "customGoal": null,
       "hero_level": 133,
       "startPower": 124614871,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Arashigore",
@@ -2811,9 +2811,9 @@
       "customGoal": null,
       "hero_level": 35,
       "startPower": 812592,
-      "bankedTowerPoints": 50,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Akinohn",
@@ -2842,9 +2842,9 @@
       "customGoal": null,
       "hero_level": 327,
       "startPower": 743768307,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Eldriel",
@@ -2878,9 +2878,9 @@
       "customGoal": null,
       "hero_level": 228,
       "startPower": 190506636,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Rysiek121",
@@ -2942,9 +2942,9 @@
       "customGoal": null,
       "hero_level": 409,
       "startPower": 1319490025,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "Que",
@@ -2975,9 +2975,9 @@
       "customGoal": null,
       "hero_level": 205,
       "startPower": 118097255,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "nomad",
@@ -3004,11 +3004,11 @@
         "Skorpion-Truhe (Epische Gruft Level 20)": 1,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 2,
         "Schildkröten-Truhe (Epische Gruft Level 15)": 1,
+        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 2,
         "Truhe der Festung der Elfen (Festung Level 15)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1,
-        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 26,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 1
+        "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 26
       },
       "growth": 0,
       "silver": 0,
@@ -3016,9 +3016,9 @@
       "customGoal": null,
       "hero_level": 148,
       "startPower": 141805325,
-      "bankedTowerPoints": 50,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Spartakus",
@@ -3069,9 +3069,9 @@
       "customGoal": null,
       "hero_level": 417,
       "startPower": 1556072281,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "ANZ",
@@ -3097,9 +3097,9 @@
       "customGoal": null,
       "hero_level": 157,
       "startPower": 91131943,
-      "bankedTowerPoints": 100,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 100
     },
     {
       "name": "travelling wilburys",
@@ -3110,6 +3110,7 @@
         "Sandtruhe (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 15)": 1,
         "Knochentruhe (Gruft Level 15)": 1,
+        "Schöne Truhe (Gruft Level 15)": 1,
         "Truhe der Maya (Gruft Level 15)": 3,
         "Truhe der Orks (Gruft Level 15)": 2,
         "Infernale Truhe (Gruft Level 15)": 1,
@@ -3117,8 +3118,7 @@
         "Vergessene Truhe (Gruft Level 15)": 1,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 12,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
-        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1,
-        "Schöne Truhe (Gruft Level 15)": 1
+        "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1
       },
       "growth": 0,
       "silver": 0,
@@ -3126,9 +3126,9 @@
       "customGoal": null,
       "hero_level": 114,
       "startPower": 75042565,
-      "bankedTowerPoints": 50,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "433",
@@ -3142,9 +3142,9 @@
       "customGoal": null,
       "hero_level": 93,
       "startPower": 38670831,
-      "bankedTowerPoints": 0,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 0
     },
     {
       "name": "Riyash III",
@@ -3166,9 +3166,9 @@
       "customGoal": null,
       "hero_level": 226,
       "startPower": 307454262,
-      "bankedTowerPoints": 50,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Legolas",
@@ -3203,9 +3203,9 @@
       "customGoal": null,
       "hero_level": 371,
       "startPower": 1165295946,
-      "bankedTowerPoints": 0,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 0
     },
     {
       "name": "Bayernbua",
@@ -3235,9 +3235,9 @@
       "customGoal": null,
       "hero_level": 123,
       "startPower": 143296861,
-      "bankedTowerPoints": 0,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 0
     },
     {
       "name": "Tyrion",
@@ -3251,9 +3251,9 @@
       "customGoal": null,
       "hero_level": 32,
       "startPower": 2024301,
-      "bankedTowerPoints": 0,
+      "goalCyclesLeft": 0,
       "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "bankedTowerPoints": 0
     }
   ],
   "evalStartDate": "2026-11-08",
@@ -3262,5 +3262,5 @@
   "defaultCycleDays": 28,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-21T01:17:22.710Z"
+  "lastUpdated": "2026-11-21T10:17:02.771Z"
 }
