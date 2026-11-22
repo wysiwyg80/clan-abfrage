@@ -848,6 +848,10 @@
     "Truhe der Elfen (Heldenhafte Monster Level 37)": {
       "points": 0,
       "firstSeen": "2026-11-22"
+    },
+    "Truhe der Verfluchten (Heldenhafte Monster Level 38)": {
+      "points": 0,
+      "firstSeen": "2026-11-22"
     }
   },
   "clanData": [
@@ -1967,7 +1971,8 @@
         "Truhe der Verfluchten (Heldenhafte Monster Level 33)": 1,
         "Barbarentruhe (Heldenhafte Monster Level 34)": 1,
         "Truhe der Untoten (Heldenhafte Monster Level 36)": 1,
-        "Truhe der Elfen (Heldenhafte Monster Level 37)": 1
+        "Truhe der Elfen (Heldenhafte Monster Level 37)": 1,
+        "Truhe der Verfluchten (Heldenhafte Monster Level 38)": 1
       },
       "growth": 0,
       "silver": 0,
