@@ -1450,7 +1450,9 @@
       "rank": "Offizier",
       "power": 203282528,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Truhe der Festung der Elfen (Festung Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
