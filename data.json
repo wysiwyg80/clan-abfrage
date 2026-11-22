@@ -1697,7 +1697,9 @@
       "rank": "Veteran",
       "power": 133522561,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe der Festung der Elfen (Festung Level 25)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-01",
       "prevPower": 0,
