@@ -1598,21 +1598,21 @@
     {
       "name": "kikito",
       "rank": "Vorgesetzter",
-      "hero_level": 212,
       "power": 301748191,
-      "startPower": 293139021,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Festung der Elfen (Festung Level 25)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 212,
+      "startPower": 293139021,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Frederico Freitas",
@@ -1637,19 +1637,19 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
-      "hero_level": 238,
       "power": 229667091,
-      "startPower": 227039151,
       "tower": 1,
+      "chests": {},
+      "growth": 0,
       "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 238,
+      "startPower": 227039151,
+      "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
-      "chests": {},
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "bankedTowerPoints": 0
     },
     {
       "name": "Farés Dz",
@@ -1807,21 +1807,21 @@
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
-      "hero_level": 137,
       "power": 37566326,
-      "startPower": 31358181,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Maya (Gruft Level 15)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 137,
+      "startPower": 31358181,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Aurora",
@@ -1968,19 +1968,19 @@
     {
       "name": "Eldriel",
       "rank": "Veteran",
-      "hero_level": 228,
       "power": 190719206,
-      "startPower": 190506636,
       "tower": 1,
+      "chests": {},
+      "growth": 0,
       "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 228,
+      "startPower": 190506636,
+      "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
-      "chests": {},
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "bankedTowerPoints": 0
     },
     {
       "name": "Rysiek121",
@@ -2133,19 +2133,19 @@
     {
       "name": "433",
       "rank": "Soldat",
-      "power": 38670831,
-      "tower": 0,
-      "chests": {},
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-13",
-      "customGoal": null,
       "hero_level": 93,
+      "power": 38670831,
       "startPower": 38670831,
-      "goalCyclesLeft": 0,
+      "tower": 1,
+      "silver": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-13",
+      "chests": {},
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Riyash III",
@@ -2281,5 +2281,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-22T15:59:27.693Z"
+  "lastUpdated": "2026-11-22T16:24:13.509Z"
 }
