@@ -1010,7 +1010,9 @@
       "rank": "Veteran",
       "power": 300554129,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Feuertruhe (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
