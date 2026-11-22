@@ -1246,7 +1246,9 @@
       "rank": "Veteran",
       "power": 114875266,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Truhe der Maya (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
