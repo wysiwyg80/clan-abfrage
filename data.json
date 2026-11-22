@@ -1699,7 +1699,8 @@
       "tower": 0,
       "chests": {
         "Truhe der Festung der Elfen (Festung Level 25)": 5,
-        "Truhe der Orks (Gruft Level 20)": 1
+        "Truhe der Orks (Gruft Level 20)": 1,
+        "Truhe der Maya (Gruft Level 20)": 1
       },
       "silver": 0,
       "joinDate": "2026-11-01",
