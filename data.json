@@ -1500,19 +1500,19 @@
     {
       "name": "man of war",
       "rank": "Vorgesetzter",
-      "hero_level": 401,
       "power": 1467156431,
-      "startPower": 1462887131,
       "tower": 1,
+      "chests": {},
+      "growth": 0,
       "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 401,
+      "startPower": 1462887131,
+      "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
-      "chests": {},
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "bankedTowerPoints": 0
     },
     {
       "name": "Miss Dire",
@@ -1598,21 +1598,21 @@
     {
       "name": "kikito",
       "rank": "Vorgesetzter",
+      "hero_level": 212,
       "power": 301748191,
-      "tower": 0,
+      "startPower": 293139021,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Festung der Elfen (Festung Level 25)": 1
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 212,
-      "startPower": 293139021,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Frederico Freitas",
@@ -1968,19 +1968,19 @@
     {
       "name": "Eldriel",
       "rank": "Veteran",
-      "power": 190719206,
-      "tower": 0,
-      "chests": {},
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
       "hero_level": 228,
+      "power": 190719206,
       "startPower": 190506636,
-      "goalCyclesLeft": 0,
+      "tower": 1,
+      "silver": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
+      "chests": {},
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Rysiek121",
@@ -2281,5 +2281,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-22T14:51:47.895Z"
+  "lastUpdated": "2026-11-22T15:32:13.188Z"
 }
