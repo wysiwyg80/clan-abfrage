@@ -1505,7 +1505,9 @@
       "rank": "Vorgesetzter",
       "power": 1467156431,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
