@@ -1071,7 +1071,9 @@
       "rank": "Veteran",
       "power": 243558685,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Sandtruhe (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
