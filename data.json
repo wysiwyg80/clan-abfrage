@@ -832,6 +832,10 @@
     "Truhe der Verfluchten (Heldenhafte Monster Level 28)": {
       "points": 0,
       "firstSeen": "2026-11-22"
+    },
+    "Barbarentruhe (Heldenhafte Monster Level 29)": {
+      "points": 0,
+      "firstSeen": "2026-11-22"
     }
   },
   "clanData": [
@@ -1939,7 +1943,8 @@
         "Infernotruhe (Heldenhafte Monster Level 25)": 1,
         "Truhe der Untoten (Heldenhafte Monster Level 26)": 1,
         "Truhe der Elfen (Heldenhafte Monster Level 27)": 1,
-        "Truhe der Verfluchten (Heldenhafte Monster Level 28)": 1
+        "Truhe der Verfluchten (Heldenhafte Monster Level 28)": 1,
+        "Barbarentruhe (Heldenhafte Monster Level 29)": 1
       },
       "growth": 0,
       "silver": 0,
