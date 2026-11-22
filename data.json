@@ -1807,21 +1807,21 @@
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
+      "hero_level": 137,
       "power": 37566326,
-      "tower": 0,
+      "startPower": 31358181,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Truhe der Maya (Gruft Level 15)": 1
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 137,
-      "startPower": 31358181,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Aurora",
@@ -2281,5 +2281,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-22T15:42:03.060Z"
+  "lastUpdated": "2026-11-22T15:59:27.693Z"
 }
