@@ -1637,19 +1637,19 @@
     {
       "name": "Gran Rex",
       "rank": "Offizier",
-      "power": 229667091,
-      "tower": 0,
-      "chests": {},
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
       "hero_level": 238,
+      "power": 229667091,
       "startPower": 227039151,
-      "goalCyclesLeft": 0,
+      "tower": 1,
+      "silver": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
+      "chests": {},
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Farés Dz",
@@ -2281,5 +2281,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-22T15:32:13.188Z"
+  "lastUpdated": "2026-11-22T15:42:03.060Z"
 }
