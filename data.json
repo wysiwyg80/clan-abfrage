@@ -1563,7 +1563,9 @@
       "rank": "Vorgesetzter",
       "power": 415110655,
       "tower": 1,
-      "chests": {},
+      "chests": {
+        "Geflochtene Truhe (Epische Gruft Level 20)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
