@@ -886,22 +886,22 @@
     {
       "name": "Manador II",
       "rank": "Veteran",
+      "hero_level": 319,
       "power": 636429255,
-      "tower": 0,
+      "startPower": 633226375,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Steintruhe (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 20)": 1
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 319,
-      "startPower": 633226375,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Riyash IV",
@@ -1000,16 +1000,8 @@
     {
       "name": "Biin",
       "rank": "Veteran",
-      "hero_level": 236,
       "power": 308133461,
-      "startPower": 302472181,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Steintruhe (Gruft Level 20)": 1,
@@ -1029,8 +1021,16 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 15-19)": 1,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 17
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 236,
+      "startPower": 302472181,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Maem",
@@ -1387,23 +1387,23 @@
     {
       "name": "Burigas",
       "rank": "Veteran",
-      "hero_level": 186,
       "power": 106960155,
-      "startPower": 103614705,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Truhe der Maya (Gruft Level 25)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 186,
+      "startPower": 103614705,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Vudorr",
@@ -2281,5 +2281,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-22T13:25:21.951Z"
+  "lastUpdated": "2026-11-22T13:36:45.328Z"
 }
