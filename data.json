@@ -876,6 +876,10 @@
     "Barbarentruhe (Heldenhafte Monster Level 44)": {
       "points": 0,
       "firstSeen": "2026-11-22"
+    },
+    "Infernotruhe (Heldenhafte Monster Level 45)": {
+      "points": 0,
+      "firstSeen": "2026-11-22"
     }
   },
   "clanData": [
@@ -2004,7 +2008,8 @@
         "Truhe der Untoten (Heldenhafte Monster Level 41)": 1,
         "Truhe der Elfen (Heldenhafte Monster Level 42)": 1,
         "Truhe der Verfluchten (Heldenhafte Monster Level 43)": 1,
-        "Barbarentruhe (Heldenhafte Monster Level 44)": 1
+        "Barbarentruhe (Heldenhafte Monster Level 44)": 1,
+        "Infernotruhe (Heldenhafte Monster Level 45)": 1
       },
       "growth": 0,
       "silver": 0,
