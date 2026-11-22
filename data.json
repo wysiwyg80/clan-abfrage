@@ -2349,7 +2349,8 @@
       "name": "MozGoLom",
       "rank": "Soldat",
       "chests": {
-        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 1
+        "Truhe des Hauses des Schreckens (Epische Gruft Level 25)": 1,
+        "Truhe der Orks (Gruft Level 25)": 1
       },
       "tower": 0,
       "silver": 0,
