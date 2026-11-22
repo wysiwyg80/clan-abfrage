@@ -2104,7 +2104,9 @@
       "rank": "Offizier",
       "power": 1165296361,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Sandtruhe (Gruft Level 25)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-15",
       "prevPower": 0,
