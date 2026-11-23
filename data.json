@@ -887,7 +887,7 @@
       "name": "Manador II",
       "rank": "Veteran",
       "power": 636429255,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 20)": 1,
@@ -903,7 +903,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Riyash IV",
@@ -926,7 +926,7 @@
       "name": "Magellan",
       "rank": "Veteran",
       "power": 453078870,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -953,13 +953,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Explorer",
       "rank": "Veteran",
       "power": 415616775,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 2,
         "Steintruhe (Gruft Level 25)": 3,
@@ -981,13 +981,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "DRACULA",
       "rank": "Veteran",
       "power": 398581425,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Truhe der Festung der Elfen (Festung Level 30)": 10
       },
@@ -1000,13 +1000,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Biin",
       "rank": "Veteran",
       "power": 308133461,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Steintruhe (Gruft Level 20)": 1,
@@ -1039,13 +1039,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Maem",
       "rank": "Veteran",
       "power": 300554129,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 5,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1
@@ -1059,7 +1059,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Auzar",
@@ -1099,7 +1099,7 @@
       "name": "Elginan",
       "rank": "Offizier",
       "power": 317598506,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 3,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -1125,13 +1125,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Dalas",
       "rank": "Veteran",
       "power": 276012665,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 2,
         "Truhe der Maya (Gruft Level 25)": 2,
@@ -1147,13 +1147,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Carruggi 5r",
       "rank": "Veteran",
       "power": 243445085,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Schöne Truhe (Gruft Level 20)": 1,
         "Truhe der Maya (Gruft Level 20)": 1,
@@ -1178,13 +1178,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "ICHNOS",
       "rank": "Veteran",
       "power": 243558685,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -1220,13 +1220,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Lee the Ugly",
       "rank": "Veteran",
       "power": 253750191,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Truhe der Maya (Gruft Level 25)": 1,
@@ -1242,7 +1242,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "kordy",
@@ -1265,7 +1265,7 @@
       "name": "Granidred",
       "rank": "Veteran",
       "power": 234597871,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 20)": 2,
         "Steintruhe (Gruft Level 25)": 1,
@@ -1284,7 +1284,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Roula",
@@ -1322,7 +1322,7 @@
       "name": "Vudor SK6",
       "rank": "Veteran",
       "power": 214475865,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Truhe der Maya (Gruft Level 20)": 1,
         "Truhe der Zwergen-Werkstatt (Gruft Level 20)": 2,
@@ -1337,13 +1337,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "King Slayer",
       "rank": "Veteran",
       "power": 169503688,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 15)": 1
@@ -1357,13 +1357,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Maginad",
       "rank": "Veteran",
       "power": 147207933,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
@@ -1388,13 +1388,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "AyBars",
       "rank": "Veteran",
       "power": 114875266,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Sandtruhe (Gruft Level 25)": 1,
@@ -1425,13 +1425,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Orodrafin",
       "rank": "Veteran",
       "power": 96963482,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
@@ -1449,13 +1449,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Burigas",
       "rank": "Veteran",
       "power": 106960155,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
@@ -1472,13 +1472,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Vudorr",
       "rank": "Veteran",
       "power": 40759388,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Steintruhe (Gruft Level 20)": 1,
@@ -1505,13 +1505,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Ria",
       "rank": "Veteran",
       "power": 1155624,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Ahnentruhe (Event Aufstieg der Ahnen)": 11,
         "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1
@@ -1525,13 +1525,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "SaturdayNightFever",
       "rank": "Soldat",
       "power": 107983843,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Steintruhe (Gruft Level 20)": 2,
@@ -1548,13 +1548,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
       "power": 765297691,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Knochentruhe (Gruft Level 25)": 1,
         "Barbarentruhe (Gruft Level 25)": 1,
@@ -1577,13 +1577,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "man of war",
       "rank": "Vorgesetzter",
       "power": 1467156431,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Saphir-Truhe (Schatzkammer der Ahnen Level 45)": 1,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 1
@@ -1597,13 +1597,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Miss Dire",
       "rank": "Anführer",
       "power": 460455135,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 1,
@@ -1632,13 +1632,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Cologne am Rhein",
       "rank": "Soldat",
       "power": 431065935,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Steintruhe (Gruft Level 25)": 1,
@@ -1665,13 +1665,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
       "power": 415110655,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 25)": 2,
         "Barbarentruhe (Gruft Level 25)": 3,
@@ -1698,13 +1698,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "kikito",
       "rank": "Vorgesetzter",
       "power": 301748191,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Knochentruhe (Gruft Level 20)": 1,
         "Barbarentruhe (Gruft Level 20)": 1,
@@ -1721,13 +1721,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Frederico Freitas",
       "rank": "Vorgesetzter",
       "power": 134215526,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Schöne Truhe (Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 20,
@@ -1742,13 +1742,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Gran Rex",
       "rank": "Offizier",
       "power": 229667091,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 20)": 1,
         "Truhe der Orks (Gruft Level 20)": 1,
@@ -1764,13 +1764,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Farés Dz",
       "rank": "Offizier",
       "power": 203282528,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Barbarentruhe (Heldenhafte Monster Level 19)": 1,
         "Truhe der Festung der Elfen (Festung Level 25)": 19,
@@ -1787,13 +1787,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "PABLUS",
       "rank": "Veteran",
       "power": 130960571,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Barbarentruhe (Gruft Level 15)": 1,
         "Truhe der Maya (Gruft Level 15)": 1,
@@ -1821,13 +1821,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Tanmisis",
       "rank": "Veteran",
       "power": 1137207755,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1842,7 +1842,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Sir spanksALot",
@@ -1867,7 +1867,7 @@
       "name": "BAD Guo II",
       "rank": "Veteran",
       "power": 764241009,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 3,
         "Feuertruhe (Gruft Level 25)": 2,
@@ -1895,7 +1895,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Riyash",
@@ -1918,7 +1918,7 @@
       "name": "Ajji",
       "rank": "Soldat",
       "power": 388608593,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Truhe der Orks (Gruft Level 25)": 1,
         "Truhe der Kobra (Gruft Level 25)": 1
@@ -1932,13 +1932,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
       "power": 37566326,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Truhe der Maya (Gruft Level 15)": 1,
         "Truhe der Festung der Elfen (Festung Level 15)": 9
@@ -1952,7 +1952,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Aurora",
@@ -1975,7 +1975,7 @@
       "name": "Xetlac",
       "rank": "Veteran",
       "power": 997516345,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 8,
         "Feuertruhe (Gruft Level 25)": 5,
@@ -2014,7 +2014,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Akasha",
@@ -2066,7 +2066,7 @@
       "name": "Arashigore",
       "rank": "Soldat",
       "power": 1845507,
-      "tower": 1,
+      "tower": 0,
       "chests": {},
       "silver": 0,
       "joinDate": "2026-11-01",
@@ -2078,13 +2078,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Akinohn",
       "rank": "Vorgesetzter",
       "power": 765581807,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Truhe der Orks (Gruft Level 25)": 3,
         "Truhe des Händlers (Söldner-Börse)": 2,
@@ -2108,13 +2108,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Eldriel",
       "rank": "Veteran",
       "power": 190719206,
-      "tower": 1,
+      "tower": 0,
       "chests": {},
       "growth": 0,
       "silver": 0,
@@ -2125,13 +2125,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Rysiek121",
       "rank": "Offizier",
       "power": 1319490075,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
@@ -2156,13 +2156,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Que",
       "rank": "Soldat",
       "power": 120269715,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Infernale Truhe (Gruft Level 20)": 2,
@@ -2178,13 +2178,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "nomad",
       "rank": "Soldat",
       "power": 143880065,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 15)": 1,
         "Barbarentruhe (Gruft Level 15)": 2,
@@ -2202,7 +2202,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Spartakus",
@@ -2254,7 +2254,7 @@
       "name": "ANZ",
       "rank": "Soldat",
       "power": 91842273,
-      "tower": 1,
+      "tower": 0,
       "chests": {},
       "growth": 0,
       "silver": 0,
@@ -2265,13 +2265,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "travelling wilburys",
       "rank": "Soldat",
       "power": 75509455,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Steintruhe (Gruft Level 15)": 1
       },
@@ -2284,13 +2284,13 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "433",
       "rank": "Soldat",
       "power": 38670831,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 1,
         "Feuertruhe (Gruft Level 15)": 1,
@@ -2305,7 +2305,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Riyash III",
@@ -2328,7 +2328,7 @@
       "name": "Legolas",
       "rank": "Offizier",
       "power": 1165296361,
-      "tower": 1,
+      "tower": 0,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 8,
         "Feuertruhe (Gruft Level 25)": 2,
@@ -2352,7 +2352,7 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Bayernbua",
@@ -2430,7 +2430,8 @@
       "startPower": 17125691,
       "goalCyclesLeft": 0,
       "individualGoal": null,
-      "penaltyPercent": null
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "MozGoLom",
@@ -2451,7 +2452,8 @@
       "startPower": 62041780,
       "goalCyclesLeft": 0,
       "individualGoal": null,
-      "penaltyPercent": null
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     }
   ],
   "evalStartDate": "2026-11-21",
@@ -2463,5 +2465,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-23T10:15:18.118Z"
+  "lastUpdated": "2026-11-23T10:26:26.164Z"
 }
