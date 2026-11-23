@@ -1460,7 +1460,8 @@
         "Aufgegebene Truhe (Epische Gruft Level 25)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 2,
         "Ahnentruhe (Event Aufstieg der Ahnen)": 12,
-        "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1
+        "Blitzmarsch-Truhe (Event Aufstieg der Ahnen)": 1,
+        "Infernale Truhe (Gruft Level 25)": 1
       },
       "growth": 0,
       "silver": 0,
