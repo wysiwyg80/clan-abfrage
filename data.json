@@ -2074,7 +2074,9 @@
       "rank": "Veteran",
       "power": 894421830,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Chimären-Truhe (Epische-Chimäre-Trupp)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
