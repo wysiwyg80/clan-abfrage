@@ -1913,7 +1913,9 @@
       "rank": "Vorgesetzter",
       "power": 691227971,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Truhe der Kobra (Gruft Level 25)": 1
+      },
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-01",
