@@ -2536,7 +2536,9 @@
       "rank": "Soldat",
       "power": 198157991,
       "tower": 0,
-      "chests": {},
+      "chests": {
+        "Knochentruhe (Gruft Level 20)": 1
+      },
       "silver": 0,
       "joinDate": "2026-11-23",
       "prevPower": 0,
