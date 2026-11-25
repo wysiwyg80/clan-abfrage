@@ -201,10 +201,6 @@
       "points": 40,
       "firstSeen": "2026-11-09"
     },
-    "Rare Dragon Chest (Level 20 rare Crypt)": {
-      "points": 40,
-      "firstSeen": "2026-11-09"
-    },
     "Skorpion-Truhe (Epische Gruft Level 20)": {
       "points": 40,
       "firstSeen": "2026-11-09"
@@ -830,7 +826,7 @@
       "firstSeen": "2026-11-23"
     },
     "Legendäre Aschentruhe (Epischer Aschentrupp)": {
-      "points": 125,
+      "points": 100,
       "firstSeen": "2026-11-09"
     },
     "Seltene Truhe des Wohlstands (Clan-Wohlstand)": {
@@ -2591,5 +2587,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-25T09:16:09.060Z"
+  "lastUpdated": "2026-11-25T09:19:12.740Z"
 }
