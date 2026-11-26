@@ -2673,6 +2673,20 @@
       "individualGoal": null,
       "penaltyPercent": null,
       "bankedTowerPoints": 0
+    },
+    {
+      "name": "Sinem",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 59616851,
+      "startPower": 59616851,
+      "hero_level": 135,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-26"
     }
   ],
   "evalStartDate": "2026-11-21",
