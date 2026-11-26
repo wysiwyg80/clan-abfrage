@@ -2716,5 +2716,11 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-26T21:28:15.909Z"
+  "bannerSettings": {
+    "enabled": true,
+    "type": "christmas",
+    "text": "Die Allianz BAD LegioXEquentris wünscht euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
+    "target": "2026-12-24T18:00"
+  },
+  "lastUpdated": "2026-11-26T22:20:47.841Z"
 }
