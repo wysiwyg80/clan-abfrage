@@ -2689,7 +2689,8 @@
       "name": "Sinem",
       "rank": "Soldat",
       "chests": {
-        "Tartaros-Truhe (Gruft von Tartaros Level 15)": 1
+        "Tartaros-Truhe (Gruft von Tartaros Level 15)": 1,
+        "Tartaros-Truhe (Gruft von Tartaros Level 20)": 1
       },
       "tower": 0,
       "silver": 0,
