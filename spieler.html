@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#0f172a">
+    <title id="pageTitle">BAD LegioXEquentris - Punkte-Abfrage</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0f172a; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #b45309; border-radius: 4px; }
+
+        @keyframes phoenixFloat {
+            0%, 100% { transform: translateY(0px) rotate(-1deg) scale(1); filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.75)); }
+            50% { transform: translateY(-3px) rotate(2deg) scale(1.05); filter: drop-shadow(0 0 10px rgba(249, 115, 22, 0.9)); }
+        }
+        @keyframes phoenixWing {
+            0%, 100% { transform: scaleX(1); }
+            50% { transform: scaleX(0.86); }
+        }
+        @keyframes emberDrift {
+            0% { transform: translateY(0) scale(1); opacity: 0.95; }
+            100% { transform: translateY(-12px) scale(0.3); opacity: 0; }
+        }
+        .phoenix-emblem {
+            animation: phoenixFloat 3.2s ease-in-out infinite;
+        }
+        .phoenix-wings {
+            transform-origin: center;
+            animation: phoenixWing 1.8s ease-in-out infinite;
+        }
+        .phoenix-ember-1 { animation: emberDrift 2.1s ease-out infinite; }
+        .phoenix-ember-2 { animation: emberDrift 2.6s ease-out 0.7s infinite; }
+        .phoenix-ember-3 { animation: emberDrift 2.3s ease-out 1.3s infinite; }
+        @keyframes snowFall {
+            0% { transform: translateY(-10px) translateX(0px); opacity: 0; }
+            20% { opacity: 0.85; }
+            80% { opacity: 0.85; }
+            100% { transform: translateY(42px) translateX(8px); opacity: 0; }
+        }
+        @keyframes rocketLaunch {
+            0% { transform: translateY(32px) translateX(0) scale(0.75) rotate(-12deg); opacity: 0; }
+            20% { opacity: 1; }
+            70% { transform: translateY(-6px) translateX(5px) scale(1.05) rotate(6deg); opacity: 1; }
+            100% { transform: translateY(-20px) translateX(10px) scale(1.45) rotate(12deg); opacity: 0; }
+        }
+        @keyframes fireworkBurst {
+            0% { transform: scale(0.3); opacity: 0; text-shadow: 0 0 0 transparent; }
+            35% { transform: scale(1.15); opacity: 1; text-shadow: 0 0 10px rgba(251, 191, 36, 0.9), 0 0 18px rgba(236, 72, 153, 0.8); }
+            100% { transform: scale(1.65); opacity: 0; text-shadow: 0 0 22px rgba(56, 189, 248, 0.9); }
+        }
+        .festive-flake {
+            position: absolute;
+            top: 0;
+            color: rgba(254, 243, 199, 0.8);
+            font-size: 11px;
+            pointer-events: none;
+            animation: snowFall linear infinite;
+        }
+        .festive-rocket {
+            position: absolute;
+            bottom: 2px;
+            font-size: 13px;
+            pointer-events: none;
+            animation: rocketLaunch linear infinite;
+        }
+        .festive-burst {
+            position: absolute;
+            top: 2px;
+            font-size: 12px;
+            pointer-events: none;
+            animation: fireworkBurst ease-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col justify-between pb-8">
+
+    <!-- Header -->
+    <header class="bg-slate-950/90 border-b border-red-900/50 sticky top-0 z-40 shadow-lg backdrop-blur-sm">
+        <div class="max-w-xl mx-auto px-4 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div id="clanEmblemBox" class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-red-800 to-amber-700 flex items-center justify-center border border-amber-500/40 shrink-0 overflow-hidden" title="BAD LegioXEquentris Clanzeichen"></div>
+                <div>
+                    <h1 id="allianceTitle" class="text-base sm:text-lg font-cinzel font-bold text-amber-400 leading-tight">BAD LegioXEquentris</h1>
+                    <p class="text-[11px] text-slate-400">Mitglieder Punkte-Abfrage</p>
+                </div>
+            </div>
+            <button onclick="loadLiveData()" class="bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-600/40 px-2.5 py-1.5 rounded-lg text-xs font-semibold transition cursor-pointer flex items-center gap-1.5" title="Daten neu laden">
+                <i class="fa-solid fa-rotate" id="refreshIcon"></i>
+                <span class="hidden sm:inline">Aktualisieren</span>
+            </button>
+        </div>
+        <div id="playerAnnouncementBanner" class="hidden relative overflow-hidden bg-gradient-to-r from-slate-900 via-amber-950/70 to-slate-900 border-t border-amber-500/30 py-2 px-4 text-center">
+            <div id="bannerEffectsLayer" class="pointer-events-none absolute inset-0" aria-hidden="true"></div>
+            <p id="playerAnnouncementText" class="relative z-10 text-xs sm:text-sm font-semibold text-amber-100 tracking-wide flex flex-wrap items-center justify-center gap-2"></p>
+            <p id="playerAnnouncementCountdown" class="relative z-10 mt-1 text-[11px] font-bold text-cyan-200 hidden"></p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-xl w-full mx-auto px-4 pt-5 space-y-5 flex-1">
+
+        <!-- Zyklus-Info -->
+        <div class="bg-slate-800/90 border border-amber-500/30 rounded-xl p-3.5 shadow flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+            <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-calendar-days text-amber-400 text-base shrink-0"></i>
+                <div>
+                    <div class="text-[10px] uppercase tracking-wider font-bold text-amber-400">Aktueller Zyklus</div>
+                    <div class="text-xs text-slate-200 font-medium" id="cyclePeriodText">Lade Daten...</div>
+                </div>
+            </div>
+            <span class="bg-slate-900 border border-slate-700 text-cyan-300 px-2.5 py-1 rounded-lg text-[11px] font-bold shrink-0 self-start sm:self-center" id="cycleDaysBadge">-- Tage</span>
+        </div>
+
+        <!-- Suchfeld -->
+        <div class="bg-slate-800 border border-slate-700 rounded-xl p-4 shadow-lg space-y-3">
+            <label for="playerSearch" class="block text-xs font-bold uppercase tracking-wider text-amber-400">
+                <i class="fa-solid fa-magnifying-glass mr-1"></i> Deinen Spielernamen eingeben
+            </label>
+            <div class="relative">
+                <input type="text" id="playerSearch" placeholder="Name eintippen (z. B. SirLancelot)..." autocomplete="off"
+                    oninput="handleSearch()"
+                    class="w-full bg-slate-950 border border-amber-500/50 focus:border-amber-400 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none shadow-inner">
+                <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white p-1 cursor-pointer">
+                    <i class="fa-solid fa-circle-xmark text-base"></i>
+                </button>
+            </div>
+            <div id="quickSelectContainer" class="flex flex-wrap gap-1.5 pt-1"></div>
+        </div>
+
+        <!-- Ergebnis-Bereich -->
+        <div id="resultContainer" class="space-y-4">
+            <div class="text-center py-10 text-slate-400 text-xs bg-slate-800/40 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-spinner fa-spin text-amber-400 text-xl mb-2 block"></i>
+                Lade aktuelle Clan-Daten...
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-xl w-full mx-auto px-4 pt-6 text-center text-[11px] text-slate-500 space-y-1">
+        <p id="lastUpdatedText">Stand: --</p>
+        <p>Tipp: Im Browser über das Menü <strong class="text-slate-400">„Zum Startbildschirm hinzufügen“</strong> speichern.</p>
+    </footer>
+
+    <script>
+        const GH_REPO = 'wysiwyg80/clan-abfrage';
+        const GH_BRANCH = 'main';
+
+        const RANK_ORDER = {
+            "Anführer": 1,
+            "Vorgesetzter": 2,
+            "Offizier": 3,
+            "Veteran": 4,
+            "Soldat": 5
+        };
+
+        let clanName = localStorage.getItem('legio_clan_name') || 'BAD LegioXEquentris';
+        let clanEmblem = (() => {
+            try {
+                return JSON.parse(localStorage.getItem('legio_clan_emblem')) || { type: 'phoenix', customUrl: '' };
+            } catch (e) {
+                return { type: 'phoenix', customUrl: '' };
+            }
+        })();
+        let clanData = [];
+        let chestTypeValues = {};
+        let evalStartDate = '';
+        let evalStartTime = '18:00';
+        let evalEndDate = '';
+        let evalEndTime = '18:00';
+        let evalTimeZone = 'Europe/Berlin';
+        let cycleTotalDays = 28;
+        let goalLow = 12500;
+        let goalHigh = 15000;
+
+        function escapeAttr(str) {
+            return String(str || '')
+                .replace(/&/g, '&amp;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        }
+
+        function escapeJsSingleQuote(str) {
+            return String(str || '')
+                .replace(/\\/g, '\\\\')
+                .replace(/'/g, "\\'");
+        }
+
+        function isSafeImageSrc(url) {
+            const val = String(url || '').trim();
+            if (!val) return false;
+            return /^https?:\/\//i.test(val) || /^data:image\/(png|jpe?g|gif|webp|svg\+xml);base64,/i.test(val) || /^\.{0,2}\//.test(val);
+        }
+
+        function renderClanEmblemMarkup(emblemObj, labelName = clanName) {
+            const emb = emblemObj || { type: 'phoenix', customUrl: '' };
+            const safeLabel = escapeAttr(labelName);
+            if (emb.type === 'custom_image' && isSafeImageSrc(emb.customUrl)) {
+                return `<img src="${escapeAttr(emb.customUrl.trim())}" alt="${safeLabel}" class="w-full h-full object-cover rounded-xl">`;
+            }
+            if (emb.type === 'shield') {
+                return `<i class="fa-solid fa-shield-halved text-amber-300 text-lg"></i>`;
+            }
+            if (emb.type === 'crown') {
+                return `<i class="fa-solid fa-crown text-amber-300 text-lg"></i>`;
+            }
+            if (emb.type === 'sword') {
+                return `<i class="fa-solid fa-khanda text-amber-300 text-lg"></i>`;
+            }
+            if (emb.type === 'flame') {
+                return `<i class="fa-solid fa-fire-flame-curved text-amber-300 text-lg"></i>`;
+            }
+            return `
+                <svg viewBox="0 0 64 64" class="w-7 h-7 phoenix-emblem" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Phoenix">
+                    <defs>
+                        <linearGradient id="phoenixGrad" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#FEF08A"/>
+                            <stop offset="45%" stop-color="#F59E0B"/>
+                            <stop offset="100%" stop-color="#DC2626"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="18" cy="18" r="1.6" fill="#FDE047" class="phoenix-ember-1"/>
+                    <circle cx="47" cy="16" r="1.4" fill="#FB923C" class="phoenix-ember-2"/>
+                    <circle cx="32" cy="10" r="1.5" fill="#FEF08A" class="phoenix-ember-3"/>
+                    <g class="phoenix-wings">
+                        <path d="M32 33C23 24 11 22 6 27C10 31 15 33 20 34C13 35 9 38 8 42C14 42 21 40 27 37" fill="url(#phoenixGrad)" opacity="0.92"/>
+                        <path d="M32 33C41 24 53 22 58 27C54 31 49 33 44 34C51 35 55 38 56 42C50 42 43 40 37 37" fill="url(#phoenixGrad)" opacity="0.92"/>
+                    </g>
+                    <path d="M32 14C34.5 14 36 16 35.5 18.5C37.5 19.5 38 22 36 24L34.5 38L38 52L32 46L26 52L29.5 38L28 24C26 22 26.5 19.5 28.5 18.5C28 16 29.5 14 32 14Z" fill="url(#phoenixGrad)"/>
+                    <path d="M30 14L27 9M32 13.5L32 8M34 14L37 9" stroke="#FEF08A" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+            `;
+        }
+
+        function applyClanHeaderBranding() {
+            document.getElementById('allianceTitle').textContent = clanName;
+            document.getElementById('pageTitle').textContent = `${clanName} - Punkte-Abfrage`;
+            const emblemBox = document.getElementById('clanEmblemBox');
+            if (emblemBox) {
+                emblemBox.innerHTML = renderClanEmblemMarkup(clanEmblem, clanName);
+                emblemBox.title = `${clanName} Clanzeichen`;
+            }
+        }
+        function getPlayerEffectsMarkup(type) {
+            if (type === 'newyear') {
+                return `
+                    <span class="festive-rocket" style="left: 10%; animation-duration: 2.8s; animation-delay: 0s;">🚀</span>
+                    <span class="festive-burst" style="left: 14%; animation-duration: 2.8s; animation-delay: 1.4s;">🎆</span>
+                    <span class="festive-rocket" style="left: 34%; animation-duration: 3.3s; animation-delay: 0.9s;">🎇</span>
+                    <span class="festive-burst" style="left: 38%; animation-duration: 3.3s; animation-delay: 2.1s;">✨</span>
+                    <span class="festive-rocket" style="left: 66%; animation-duration: 2.9s; animation-delay: 0.4s;">🚀</span>
+                    <span class="festive-burst" style="left: 70%; animation-duration: 2.9s; animation-delay: 1.6s;">🎆</span>
+                    <span class="festive-rocket" style="left: 88%; animation-duration: 3.4s; animation-delay: 1.2s;">🎇</span>
+                    <span class="festive-burst" style="left: 92%; animation-duration: 3.4s; animation-delay: 2.4s;">✨</span>
+                `;
+            }
+            if (type === 'christmas') {
+                return `
+                    <span class="festive-flake" style="left: 8%; animation-duration: 5.5s; animation-delay: 0s;">❄</span>
+                    <span class="festive-flake" style="left: 24%; animation-duration: 6.8s; animation-delay: 1.4s;">✦</span>
+                    <span class="festive-flake" style="left: 48%; animation-duration: 5.9s; animation-delay: 0.6s;">❄</span>
+                    <span class="festive-flake" style="left: 72%; animation-duration: 6.4s; animation-delay: 2.1s;">✦</span>
+                    <span class="festive-flake" style="left: 90%; animation-duration: 5.2s; animation-delay: 1.1s;">❄</span>
+                `;
+            }
+            if (type === 'birthday') {
+                return `
+                    <span class="festive-burst" style="left: 14%; animation-duration: 3.0s; animation-delay: 0.2s;">🎉</span>
+                    <span class="festive-burst" style="left: 86%; animation-duration: 3.2s; animation-delay: 1.1s;">🎈</span>
+                `;
+            }
+            return '';
+        }
+
+        let playerBannerTimer = null;
+        function renderPlayerAnnouncement(settings) {
+            const banner = document.getElementById('playerAnnouncementBanner');
+            const textEl = document.getElementById('playerAnnouncementText');
+            const countdownEl = document.getElementById('playerAnnouncementCountdown');
+            const effectsLayer = document.getElementById('bannerEffectsLayer');
+            if (!banner || !textEl || !countdownEl || !effectsLayer) return;
+
+            if (playerBannerTimer) {
+                clearInterval(playerBannerTimer);
+                playerBannerTimer = null;
+            }
+
+            if (!settings || typeof settings !== 'object' || settings.enabled === false) {
+                banner.classList.add('hidden');
+                effectsLayer.innerHTML = '';
+                textEl.innerHTML = '';
+                countdownEl.classList.add('hidden');
+                return;
+            }
+
+            const bannerType = settings.type || 'custom';
+            const customText = String(settings.text || '').trim();
+            if (!customText && !settings.target) {
+                banner.classList.add('hidden');
+                effectsLayer.innerHTML = '';
+                textEl.innerHTML = '';
+                countdownEl.classList.add('hidden');
+                return;
+            }
+
+            banner.classList.remove('hidden');
+            if (bannerType === 'newyear') {
+                banner.className = 'relative overflow-hidden bg-gradient-to-r from-indigo-950 via-purple-950 to-fuchsia-950 border-t border-amber-400/35 py-2 px-4 text-center';
+            } else if (bannerType === 'christmas') {
+                banner.className = 'relative overflow-hidden bg-gradient-to-r from-red-950/90 via-amber-950/80 to-emerald-950/90 border-t border-amber-500/30 py-2 px-4 text-center';
+            } else {
+                banner.className = 'relative overflow-hidden bg-gradient-to-r from-slate-900 via-amber-950/70 to-slate-900 border-t border-amber-500/30 py-2 px-4 text-center';
+            }
+
+            effectsLayer.innerHTML = getPlayerEffectsMarkup(bannerType);
+
+            const iconsByType = {
+                christmas: ['🔥', '🎄✨'],
+                newyear: ['🎆', '🚀✨'],
+                birthday: ['🎂', '🎉'],
+                custom: ['🛡️', '✨']
+            };
+            const [leftIcon, rightIcon] = iconsByType[bannerType] || iconsByType.custom;
+            const displayMessage = customText || `Die Allianz ${clanName} wünscht euch viel Erfolg und weiterhin gute Kämpfe!`;
+
+            textEl.innerHTML = `
+                <span>${leftIcon}</span>
+                <span><strong id="festiveClanName" class="text-amber-300 font-cinzel">${escapeAttr(clanName)}</strong>: ${escapeAttr(displayMessage)}</span>
+                <span>${rightIcon}</span>
+            `;
+
+            const updateCountdown = () => {
+                if (!settings.target) {
+                    countdownEl.classList.add('hidden');
+                    return;
+                }
+                const targetDate = new Date(settings.target);
+                if (isNaN(targetDate.getTime())) {
+                    countdownEl.classList.add('hidden');
+                    return;
+                }
+                let diff = targetDate.getTime() - Date.now();
+                if (diff <= 0) {
+                    countdownEl.textContent = bannerType === 'newyear' ? '🎉 Frohes neues Jahr!' : '🎉 Der große Moment ist da!';
+                    countdownEl.classList.remove('hidden');
+                    return;
+                }
+                const days = Math.floor(diff / 86400000); diff %= 86400000;
+                const hours = Math.floor(diff / 3600000); diff %= 3600000;
+                const minutes = Math.floor(diff / 60000); diff %= 60000;
+                const seconds = Math.floor(diff / 1000);
+                countdownEl.textContent = `⏳ Countdown: ${days} Tage · ${String(hours).padStart(2,'0')}:${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+                countdownEl.classList.remove('hidden');
+            };
+            updateCountdown();
+            if (settings.target) playerBannerTimer = setInterval(updateCountdown, 1000);
+        }
+
+        function formatDateGerman(isoStr) {
+            if (!isoStr) return '--';
+            const parts = String(isoStr).split('-');
+            if (parts.length === 3) return `${parts[2]}.${parts[1]}.${parts[0]}`;
+            return isoStr;
+        }
+
+        function normalizeTimeStr(rawTime, fallback = '18:00') {
+            if (!rawTime || typeof rawTime !== 'string') return fallback;
+            const trimmed = rawTime.trim();
+            const match = trimmed.match(/^(\d{1,2}):(\d{2})$/);
+            if (!match) return fallback;
+            const hh = Math.min(23, Math.max(0, parseInt(match[1], 10)));
+            const mm = Math.min(59, Math.max(0, parseInt(match[2], 10)));
+            return `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}`;
+        }
+
+        function normalizeTimeZoneStr(rawTz, fallback = 'Europe/Berlin') {
+            if (!rawTz || typeof rawTz !== 'string') return fallback;
+            const trimmed = rawTz.trim();
+            try {
+                Intl.DateTimeFormat('de-DE', { timeZone: trimmed });
+                return trimmed;
+            } catch (e) {
+                return fallback;
+            }
+        }
+
+        function getTimeZoneOffsetMs(dateObj, timeZone) {
+            try {
+                const parts = new Intl.DateTimeFormat('en-CA', {
+                    timeZone,
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                }).formatToParts(dateObj);
+                const map = {};
+                parts.forEach(p => {
+                    if (p.type !== 'literal') map[p.type] = p.value;
+                });
+                const hour = map.hour === '24' ? '00' : map.hour;
+                const asUtc = Date.UTC(
+                    Number(map.year),
+                    Number(map.month) - 1,
+                    Number(map.day),
+                    Number(hour),
+                    Number(map.minute),
+                    Number(map.second)
+                );
+                return asUtc - dateObj.getTime();
+            } catch (e) {
+                return 0;
+            }
+        }
+
+        function buildDateTimeInZone(dateStr, timeStr, sourceTimeZone = evalTimeZone) {
+            if (!dateStr || !/^\d{4}-\d{2}-\d{2}$/.test(String(dateStr).trim())) {
+                return new Date(NaN);
+            }
+            const safeDate = String(dateStr).trim();
+            const safeTime = normalizeTimeStr(timeStr, '18:00');
+            const safeTz = normalizeTimeZoneStr(sourceTimeZone, 'Europe/Berlin');
+            const [y, m, d] = safeDate.split('-').map(Number);
+            const [hh, mm] = safeTime.split(':').map(Number);
+
+            const utcGuess = new Date(Date.UTC(y, m - 1, d, hh, mm, 0, 0));
+            const offset1 = getTimeZoneOffsetMs(utcGuess, safeTz);
+            const adjusted1 = new Date(utcGuess.getTime() - offset1);
+            const offset2 = getTimeZoneOffsetMs(adjusted1, safeTz);
+            return new Date(utcGuess.getTime() - offset2);
+        }
+
+        function getBrowserTimeZoneLabel() {
+            try {
+                return Intl.DateTimeFormat().resolvedOptions().timeZone || 'Lokalzeit';
+            } catch (e) {
+                return 'Lokalzeit';
+            }
+        }
+
+        function formatDateTimeForVisitor(dateStr, timeStr) {
+            const dt = buildDateTimeInZone(dateStr, timeStr, evalTimeZone);
+            if (isNaN(dt.getTime())) {
+                return `${formatDateGerman(dateStr)}, ${normalizeTimeStr(timeStr, '18:00')} Uhr`;
+            }
+            const datePart = dt.toLocaleDateString('de-DE', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+            const timePart = dt.toLocaleTimeString('de-DE', {
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+            return `${datePart}, ${timePart} Uhr`;
+        }
+
+        function formatPeriodRangeHtml(startDateStr, startTimeStr, endDateStr, endTimeStr) {
+            const sFormatted = formatDateTimeForVisitor(startDateStr, startTimeStr);
+            const eFormatted = formatDateTimeForVisitor(endDateStr, endTimeStr);
+            const tzLabel = getBrowserTimeZoneLabel();
+            const srcTz = normalizeTimeZoneStr(evalTimeZone, 'Europe/Berlin');
+            const sourceHint = srcTz !== tzLabel ? ` · Basis: ${srcTz}` : '';
+            return `<strong class="text-amber-300">${sFormatted}</strong> bis <strong class="text-amber-300">${eFormatted}</strong> <span class="text-[11px] text-slate-400">(${tzLabel}${sourceHint})</span>`;
+        }
+
+        function calculateExactHoursBetween(startDateStr, startTimeStr, endDateStr, endTimeStr) {
+            const d1 = buildDateTimeInZone(startDateStr, startTimeStr, evalTimeZone);
+            const d2 = buildDateTimeInZone(endDateStr, endTimeStr, evalTimeZone);
+            if (isNaN(d1.getTime()) || isNaN(d2.getTime())) return 0;
+            const diffHours = (d2.getTime() - d1.getTime()) / (1000 * 60 * 60);
+            return diffHours < 0 ? 0 : Math.round(diffHours * 10) / 10;
+        }
+
+        function calculateDaysBetween(startStr, endStr) {
+            if (!startStr || !endStr) return 1;
+            const p1 = startStr.split('-').map(Number);
+            const p2 = endStr.split('-').map(Number);
+            if (p1.length !== 3 || p2.length !== 3) return 1;
+            const d1 = new Date(Date.UTC(p1[0], p1[1] - 1, p1[2]));
+            const d2 = new Date(Date.UTC(p2[0], p2[1] - 1, p2[2]));
+            const diffDays = Math.round((d2 - d1) / (1000 * 60 * 60 * 24));
+            return diffDays < 1 ? 1 : diffDays;
+        }
+
+        function formatSilver(val) {
+            val = Number(val) || 0;
+            if (val >= 1000000000000) return (val / 1000000000000).toFixed(2).replace('.', ',') + ' T';
+            if (val >= 1000000000) return (val / 1000000000).toFixed(2).replace('.', ',') + ' B';
+            if (val >= 1000000) return (val / 1000000).toFixed(1).replace('.', ',') + ' M';
+            if (val >= 1000) return (val / 1000).toFixed(0) + ' K';
+            return val.toLocaleString('de-DE');
+        }
+
+        function formatPower(val) {
+            return (Number(val) || 0).toLocaleString('de-DE');
+        }
+
+        function getChestPoints(typeName) {
+            const entry = chestTypeValues[typeName];
+            if (entry === undefined || entry === null) return 0;
+            if (typeof entry === 'number') return Number(entry) || 0;
+            return Number(entry.points) || 0;
+        }
+
+        function parsePercentInput(rawVal) {
+            if (rawVal === undefined || rawVal === null || rawVal === '') return null;
+            const normalized = String(rawVal).replace(',', '.').trim();
+            const num = parseFloat(normalized);
+            if (isNaN(num) || num < 0.1 || num > 100) return null;
+            return Math.round(num * 10) / 10;
+        }
+
+        function getMemberPenaltyBreakdown(p, referenceRegularPoints, limitMacht = 100000000) {
+            const pStartMacht = (p.startPower !== undefined && p.startPower !== null && !isNaN(Number(p.startPower)))
+                ? Number(p.startPower)
+                : (Number(p.power) || 0);
+            const parsedIndividual = Number(p.individualGoal);
+            const hasIndividualGoal = p.individualGoal !== undefined && p.individualGoal !== null && p.individualGoal !== '' && !isNaN(parsedIndividual) && parsedIndividual >= 0;
+            const regularFullCycleGoal = hasIndividualGoal ? parsedIndividual : (pStartMacht < limitMacht ? goalLow : goalHigh);
+            const percentRate = parsePercentInput(p.penaltyPercent) || 0;
+            const flatPenaltyPoints = (p.customGoal !== undefined && p.customGoal !== null && p.customGoal !== '' && Number(p.customGoal) > 0) ? Number(p.customGoal) : 0;
+            const baseForPercent = referenceRegularPoints !== undefined ? Number(referenceRegularPoints) : regularFullCycleGoal;
+            const percentPenaltyPoints = percentRate > 0 ? Math.round(baseForPercent * (percentRate / 100)) : 0;
+            const totalPenaltyPoints = percentPenaltyPoints + flatPenaltyPoints;
+            const cyclesLeft = (totalPenaltyPoints > 0 || percentRate > 0) ? (Number(p.goalCyclesLeft) || 0) : 0;
+
+            return {
+                regularFullCycleGoal,
+                hasIndividualGoal,
+                percentRate,
+                percentPenaltyPoints,
+                flatPenaltyPoints,
+                totalPenaltyPoints,
+                cyclesLeft,
+                hasPenalty: totalPenaltyPoints > 0 || percentRate > 0
+            };
+        }
+
+        function computePlayerStats(p) {
+            let chestPts = 0;
+            let totalChestsCount = 0;
+            const chestList = [];
+
+            if (p.chests && typeof p.chests === 'object') {
+                Object.keys(p.chests).forEach(cName => {
+                    const cnt = Number(p.chests[cName]) || 0;
+                    if (cnt > 0) {
+                        const ptsPerUnit = getChestPoints(cName);
+                        const subPts = cnt * ptsPerUnit;
+                        totalChestsCount += cnt;
+                        chestPts += subPts;
+                        chestList.push({
+                            name: cName,
+                            count: cnt,
+                            pointsPerUnit: ptsPerUnit,
+                            totalPoints: subPts
+                        });
+                    }
+                });
+            }
+
+            chestList.sort((a, b) => b.totalPoints - a.totalPoints || b.count - a.count);
+
+            const towerPointValue = getChestPoints("Turmbau") || 1;
+            const towerCount = Number(p.tower) || 0;
+            const bankedTowerPts = Number(p.bankedTowerPoints) || 0;
+            const towerPts = (towerCount * towerPointValue) + bankedTowerPts;
+            const totalPts = chestPts + towerPts;
+
+            const activeDaysCount = calculateDaysBetween(evalStartDate, evalEndDate);
+            const totalCycleDays = cycleTotalDays > 0 ? cycleTotalDays : 28;
+            const limitMacht = 100000000;
+            const baseGoalInfo = getMemberPenaltyBreakdown(p, undefined, limitMacht);
+            const dailyRegularTarget = Math.round(baseGoalInfo.regularFullCycleGoal / totalCycleDays);
+
+            let playerActiveDays = activeDaysCount;
+            if (p.joinDate && evalStartDate && p.joinDate > evalStartDate) {
+                if (evalEndDate && p.joinDate > evalEndDate) {
+                    playerActiveDays = 0;
+                } else if (evalEndDate) {
+                    playerActiveDays = calculateDaysBetween(p.joinDate, evalEndDate);
+                }
+            }
+
+            const regularTargetSoFar = Math.round(dailyRegularTarget * playerActiveDays);
+            const penaltyInfo = getMemberPenaltyBreakdown(p, regularTargetSoFar, limitMacht);
+            const targetSoFar = regularTargetSoFar + penaltyInfo.totalPenaltyPoints;
+            const fullCyclePenalty = getMemberPenaltyBreakdown(p, baseGoalInfo.regularFullCycleGoal, limitMacht);
+            const baseGoalFullCycle = baseGoalInfo.regularFullCycleGoal + fullCyclePenalty.totalPenaltyPoints;
+            const diff = totalPts - targetSoFar;
+            const progressPct = targetSoFar > 0 ? Math.min(100, Math.round((totalPts / targetSoFar) * 100)) : 100;
+
+            const currentPower = Number(p.power) || 0;
+            const startPower = (p.startPower !== undefined && p.startPower !== null && p.startPower !== '')
+                ? Number(p.startPower)
+                : currentPower;
+            const powerGrowth = currentPower - startPower;
+
+            return {
+                chestPts,
+                totalChestsCount,
+                chestList,
+                towerCount,
+                bankedTowerPts,
+                towerPts,
+                totalPts,
+                playerActiveDays,
+                dailyRegularTarget,
+                baseGoalFullCycle,
+                hasIndividualGoal: baseGoalInfo.hasIndividualGoal,
+                penaltyInfo,
+                targetSoFar,
+                diff,
+                progressPct,
+                isMet: totalPts >= targetSoFar,
+                currentPower,
+                startPower,
+                powerGrowth,
+                silver: Number(p.silver) || 0,
+                heroLevel: Number(p.hero_level) || 0
+            };
+        }
+
+        function applyPayload(data) {
+            if (!data) return;
+            if (data.clanName) clanName = data.clanName;
+            if (data.clanEmblem) {
+                clanEmblem = {
+                    type: data.clanEmblem.type || 'phoenix',
+                    customUrl: data.clanEmblem.customUrl || ''
+                };
+            }
+            applyClanHeaderBranding();
+            renderPlayerAnnouncement(data.bannerSettings);
+            clanData = Array.isArray(data.clanData) ? data.clanData : [];
+            chestTypeValues = data.chestTypeValues || {};
+            evalStartDate = data.evalStartDate || '';
+            evalStartTime = normalizeTimeStr(data.evalStartTime, '18:00');
+            evalEndDate = data.evalEndDate || '';
+            evalEndTime = normalizeTimeStr(data.evalEndTime, evalStartTime);
+            evalTimeZone = normalizeTimeZoneStr(data.evalTimeZone, 'Europe/Berlin');
+            cycleTotalDays = Number(data.cycleTotalDays) || 28;
+            goalLow = Number(data.goalLow) || 12500;
+            goalHigh = Number(data.goalHigh) || 15000;
+
+            const activeDays = calculateDaysBetween(evalStartDate, evalEndDate);
+            const exactHours = calculateExactHoursBetween(evalStartDate, evalStartTime, evalEndDate, evalEndTime);
+            document.getElementById('cyclePeriodText').innerHTML = evalStartDate && evalEndDate
+                ? formatPeriodRangeHtml(evalStartDate, evalStartTime, evalEndDate, evalEndTime)
+                : 'Kein Zeitraum hinterlegt';
+            document.getElementById('cycleDaysBadge').textContent = `${activeDays} Tage (${exactHours} Std. | Zyklus: ${cycleTotalDays}T)`;
+
+            if (data.lastUpdated) {
+                const dt = new Date(data.lastUpdated);
+                document.getElementById('lastUpdatedText').textContent = isNaN(dt.getTime())
+                    ? `Stand: ${data.lastUpdated}`
+                    : `Stand: ${dt.toLocaleDateString('de-DE')}, ${dt.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' })} Uhr`;
+            }
+
+            renderQuickSelect();
+            handleSearch();
+        }
+
+        async function loadLiveData() {
+            const icon = document.getElementById('refreshIcon');
+            if (icon) icon.classList.add('fa-spin');
+
+            let loaded = false;
+            try {
+                const resp = await fetch('data.json?t=' + Date.now(), { cache: 'no-store' });
+                if (resp.ok) {
+                    const json = await resp.json();
+                    applyPayload(json);
+                    loaded = true;
+                }
+            } catch (e) {}
+
+            if (!loaded) {
+                try {
+                    const resp = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/${GH_BRANCH}/data.json?t=` + Date.now(), { cache: 'no-store' });
+                    if (resp.ok) {
+                        const json = await resp.json();
+                        applyPayload(json);
+                        loaded = true;
+                    }
+                } catch (e) {}
+            }
+
+            if (!loaded) {
+                const cached = localStorage.getItem('legio_clan_data');
+                if (cached) {
+                    clanData = JSON.parse(cached);
+                    renderQuickSelect();
+                    handleSearch();
+                } else {
+                    document.getElementById('resultContainer').innerHTML = `
+                        <div class="bg-red-950/40 border border-red-800/60 rounded-xl p-5 text-center text-xs text-red-200">
+                            <i class="fa-solid fa-triangle-exclamation text-lg mb-2 block text-red-400"></i>
+                            Aktuelle Daten konnten nicht geladen werden. Bitte später erneut versuchen.
+                        </div>`;
+                }
+            }
+
+            if (icon) setTimeout(() => icon.classList.remove('fa-spin'), 400);
+        }
+
+        function renderQuickSelect() {
+            const container = document.getElementById('quickSelectContainer');
+            const savedName = (localStorage.getItem('legio_player_last_search') || '').trim();
+            const sorted = [...clanData].sort((a, b) => (a.name || '').localeCompare(b.name || '', 'de'));
+
+            if (!sorted.length) {
+                container.innerHTML = '';
+                return;
+            }
+
+            const topPicks = sorted.slice(0, 8);
+            container.innerHTML = topPicks.map(p => {
+                const safeName = escapeAttr(p.name);
+                const jsName = escapeJsSingleQuote(p.name);
+                const isSelected = savedName && savedName.toLowerCase() === String(p.name || '').toLowerCase();
+                return `<button type="button" onclick="selectPlayerName('${jsName}')"
+                    class="text-[11px] px-2.5 py-1 rounded-lg border transition cursor-pointer ${isSelected
+                        ? 'bg-amber-500/25 border-amber-400 text-amber-200 font-bold'
+                        : 'bg-slate-900/90 hover:bg-slate-700 border-slate-700 text-slate-300'}">${safeName}</button>`;
+            }).join('');
+        }
+
+        function selectPlayerName(name) {
+            const input = document.getElementById('playerSearch');
+            input.value = name;
+            localStorage.setItem('legio_player_last_search', name);
+            handleSearch();
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('playerSearch');
+            input.value = '';
+            localStorage.removeItem('legio_player_last_search');
+            handleSearch();
+            input.focus();
+        }
+
+        function handleSearch() {
+            const input = document.getElementById('playerSearch');
+            const clearBtn = document.getElementById('clearSearchBtn');
+            const query = (input.value || '').trim();
+
+            clearBtn.classList.toggle('hidden', query.length === 0);
+            if (query) {
+                localStorage.setItem('legio_player_last_search', query);
+            }
+
+            const container = document.getElementById('resultContainer');
+
+            if (!clanData.length) {
+                container.innerHTML = `
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center text-xs text-slate-400">
+                        Noch keine Spielerdaten vorhanden.
+                    </div>`;
+                return;
+            }
+
+            if (!query) {
+                container.innerHTML = `
+                    <div class="bg-slate-800/80 border border-slate-700/80 rounded-xl p-6 text-center space-y-2">
+                        <i class="fa-solid fa-user-shield text-2xl text-amber-400/80"></i>
+                        <p class="text-sm font-semibold text-slate-200">Gib deinen Spielernamen oben ein</p>
+                        <p class="text-xs text-slate-400">Du siehst sofort deine Gesamtpunkte, dein Soll, deine Truhen, Türme, Silber und Macht.</p>
+                    </div>`;
+                return;
+            }
+
+            const lowerQuery = query.toLowerCase();
+            const exactMatch = clanData.find(p => (p.name || '').toLowerCase() === lowerQuery);
+            const matches = exactMatch
+                ? [exactMatch]
+                : clanData.filter(p => (p.name || '').toLowerCase().includes(lowerQuery));
+
+            if (!matches.length) {
+                container.innerHTML = `
+                    <div class="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center space-y-1">
+                        <p class="text-sm font-bold text-amber-300">Kein Spieler gefunden für „${escapeAttr(query)}“</p>
+                        <p class="text-xs text-slate-400">Prüfe die Schreibweise oder wähle einen Namen aus der Liste.</p>
+                    </div>`;
+                return;
+            }
+
+            if (matches.length > 1) {
+                const listHtml = matches
+                    .sort((a, b) => (RANK_ORDER[a.rank] || 99) - (RANK_ORDER[b.rank] || 99))
+                    .map(p => {
+                        const s = computePlayerStats(p);
+                        return `
+                            <button type="button" onclick="selectPlayerName('${escapeJsSingleQuote(p.name)}')"
+                                class="w-full text-left bg-slate-800 hover:bg-slate-700/80 border border-slate-700 hover:border-amber-500/50 rounded-xl p-3.5 flex items-center justify-between transition cursor-pointer">
+                                <div>
+                                    <div class="font-bold text-sm text-amber-300">${escapeAttr(p.name)}</div>
+                                    <div class="text-[11px] text-slate-400">${escapeAttr(p.rank || 'Soldat')} · ${s.totalPts.toLocaleString('de-DE')} Pkt</div>
+                                </div>
+                                <span class="text-xs font-bold ${s.isMet ? 'text-emerald-400' : 'text-amber-400'}">
+                                    ${s.isMet ? '✅ Soll erfüllt' : `⚠️ Fehlen: ${Math.max(0, s.diff * -1).toLocaleString('de-DE')} Pkt`}
+                                </span>
+                            </button>`;
+                    }).join('');
+
+                container.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="text-xs text-slate-400 px-1">${matches.length} Treffer gefunden – bitte wählen:</div>
+                        ${listHtml}
+                    </div>`;
+                return;
+            }
+
+            container.innerHTML = renderPlayerCard(matches[0]);
+        }
+
+        function renderPlayerCard(p) {
+            const s = computePlayerStats(p);
+            const missingPts = Math.max(0, s.targetSoFar - s.totalPts);
+            const surplusPts = Math.max(0, s.totalPts - s.targetSoFar);
+
+            const statusBanner = s.isMet
+                ? `<div class="bg-emerald-950/60 border border-emerald-600/50 rounded-xl p-3.5 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
+                            <div>
+                                <div class="text-xs font-bold text-emerald-300 uppercase tracking-wide">Soll für den Zeitraum erfüllt</div>
+                                <div class="text-[11px] text-emerald-200/80">${surplusPts > 0 ? `+${surplusPts.toLocaleString('de-DE')} Punkte über dem aktuellen Soll` : 'Punktlandung auf das Soll'}</div>
+                            </div>
+                        </div>
+                        <span class="text-sm font-bold text-emerald-300">${s.progressPct}%</span>
+                   </div>`
+                : `<div class="bg-amber-950/60 border border-amber-600/50 rounded-xl p-3.5 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-triangle-exclamation text-amber-400 text-xl"></i>
+                            <div>
+                                <div class="text-xs font-bold text-amber-300 uppercase tracking-wide">Noch ${missingPts.toLocaleString('de-DE')} Punkte bis zum Soll</div>
+                                <div class="text-[11px] text-amber-200/80">Aktuell ${s.totalPts.toLocaleString('de-DE')} von ${s.targetSoFar.toLocaleString('de-DE')} Pkt (${s.playerActiveDays} Tage)</div>
+                            </div>
+                        </div>
+                        <span class="text-sm font-bold text-amber-300">${s.progressPct}%</span>
+                   </div>`;
+
+            const penaltyParts = [];
+            if (s.penaltyInfo.percentRate > 0) {
+                const formattedRate = String(s.penaltyInfo.percentRate).replace('.', ',');
+                penaltyParts.push(`+${formattedRate} % (${s.penaltyInfo.percentPenaltyPoints.toLocaleString('de-DE')} Pkt)`);
+            }
+            if (s.penaltyInfo.flatPenaltyPoints > 0) {
+                penaltyParts.push(`+${s.penaltyInfo.flatPenaltyPoints.toLocaleString('de-DE')} Pkt`);
+            }
+            const cyclesText = s.penaltyInfo.cyclesLeft > 0
+                ? ` · noch ${s.penaltyInfo.cyclesLeft} ${s.penaltyInfo.cyclesLeft === 1 ? 'Zyklus' : 'Zyklen'}`
+                : '';
+            const individualGoalHtml = s.hasIndividualGoal
+                ? `<div class="mt-2 bg-emerald-950/50 border border-emerald-700/50 rounded-lg px-3 py-1.5 text-[11px] text-emerald-200">
+                       <i class="fa-solid fa-bullseye mr-1 text-emerald-400"></i>
+                       Individuelle Zielvorgabe aktiv: <strong>${s.baseGoalFullCycle.toLocaleString('de-DE')} Pkt</strong> (voller Zyklus)
+                   </div>`
+                : '';
+            const penaltyHtml = s.penaltyInfo.hasPenalty
+                ? `<div class="mt-2 bg-rose-950/50 border border-rose-700/50 rounded-lg px-3 py-1.5 text-[11px] text-rose-200">
+                       <i class="fa-solid fa-gavel mr-1 text-rose-400"></i>
+                       Strafe aktiv: <strong>${penaltyParts.join(' + ')}</strong>${cyclesText}
+                   </div>`
+                : '';
+
+            const chestsHtml = s.chestList.length
+                ? s.chestList.map(c => `
+                    <div class="flex items-center justify-between bg-slate-900/90 border border-slate-800 rounded-lg px-3 py-2 text-xs">
+                        <div class="min-w-0 pr-2">
+                            <div class="font-semibold text-slate-200 truncate">${escapeAttr(c.name)}</div>
+                            <div class="text-[10px] text-slate-400">${c.count}× à ${c.pointsPerUnit} Pkt</div>
+                        </div>
+                        <span class="font-bold text-amber-300 shrink-0">${c.totalPoints.toLocaleString('de-DE')} Pkt</span>
+                    </div>`).join('')
+                : `<div class="text-xs text-slate-400 text-center py-3 bg-slate-900/50 rounded-lg border border-slate-800/80">Keine Truhen im aktuellen Zeitraum erfasst.</div>`;
+
+            const growthColor = s.powerGrowth > 0 ? 'text-emerald-400' : s.powerGrowth < 0 ? 'text-rose-400' : 'text-slate-300';
+            const growthSign = s.powerGrowth > 0 ? '+' : s.powerGrowth < 0 ? '−' : '';
+
+            return `
+                <div class="bg-slate-800 border border-amber-500/40 rounded-2xl p-4 sm:p-5 shadow-xl space-y-4">
+                    <!-- Spieler-Kopf -->
+                    <div class="flex items-start justify-between gap-3 border-b border-slate-700/80 pb-3.5">
+                        <div>
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <h2 class="text-lg sm:text-xl font-cinzel font-bold text-amber-300">${escapeAttr(p.name)}</h2>
+                                <span class="text-[10px] uppercase tracking-wider font-bold px-2.5 py-0.5 rounded-md bg-slate-900 border border-amber-500/40 text-amber-200">${escapeAttr(p.rank || 'Soldat')}</span>
+                            </div>
+                            <div class="text-[11px] text-slate-400 mt-1 flex flex-wrap gap-x-3 gap-y-1">
+                                ${s.heroLevel > 0 ? `<span><i class="fa-solid fa-hat-wizard text-amber-400 mr-1"></i>Helden-Lvl ${s.heroLevel}</span>` : ''}
+                                ${p.joinDate ? `<span><i class="fa-solid fa-calendar-plus text-cyan-400 mr-1"></i>Beitritt: ${formatDateGerman(p.joinDate)}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="text-right shrink-0">
+                            <div class="text-[10px] uppercase text-slate-400 font-bold">Gesamtpunkte</div>
+                            <div class="text-2xl font-cinzel font-bold text-amber-400">${s.totalPts.toLocaleString('de-DE')}</div>
+                        </div>
+                    </div>
+
+                    <!-- Soll-Status -->
+                    ${statusBanner}
+                    ${individualGoalHtml}
+                    ${penaltyHtml}
+
+                    <!-- Fortschrittsbalken -->
+                    <div class="space-y-1.5">
+                        <div class="flex justify-between text-[11px] text-slate-300">
+                            <span>Soll (${s.playerActiveDays} Tage): <strong class="text-amber-300">${s.targetSoFar.toLocaleString('de-DE')} Pkt</strong></span>
+                            <span class="text-slate-400">${s.dailyRegularTarget.toLocaleString('de-DE')} Pkt/Tag · Voll: ${s.baseGoalFullCycle.toLocaleString('de-DE')}</span>
+                        </div>
+                        <div class="w-full h-2.5 bg-slate-950 rounded-full overflow-hidden border border-slate-700">
+                            <div class="h-full transition-all duration-300 ${s.isMet ? 'bg-gradient-to-r from-emerald-600 to-emerald-400' : 'bg-gradient-to-r from-amber-600 to-amber-400'}" style="width: ${s.progressPct}%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Kennzahlen-Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3">
+                            <div class="text-[10px] uppercase text-slate-400 font-bold">Truhen (${s.totalChestsCount} Stk)</div>
+                            <div class="text-sm font-bold text-amber-300 mt-0.5">${s.chestPts.toLocaleString('de-DE')} Pkt</div>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3">
+                            <div class="text-[10px] uppercase text-slate-400 font-bold">Turmbau (${s.towerCount})</div>
+                            <div class="text-sm font-bold text-amber-200 mt-0.5">${s.towerPts.toLocaleString('de-DE')} Pkt</div>
+                            ${s.bankedTowerPts > 0 ? `<div class="text-[9px] text-emerald-400">inkl. ${s.bankedTowerPts.toLocaleString('de-DE')} Bank</div>` : ''}
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3">
+                            <div class="text-[10px] uppercase text-cyan-400 font-bold">Silber</div>
+                            <div class="text-sm font-bold text-cyan-300 mt-0.5">${formatSilver(s.silver)}</div>
+                        </div>
+                        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3">
+                            <div class="text-[10px] uppercase text-slate-400 font-bold">Macht</div>
+                            <div class="text-sm font-bold text-slate-100 mt-0.5">${formatPower(s.currentPower)}</div>
+                            <div class="text-[10px] font-semibold ${growthColor}">${growthSign}${formatPower(Math.abs(s.powerGrowth))}</div>
+                        </div>
+                    </div>
+
+                    <!-- Truhen-Aufschlüsselung -->
+                    <div class="space-y-2 pt-1">
+                        <div class="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center justify-between">
+                            <span><i class="fa-solid fa-box-open mr-1"></i> Gesammelte Truhen</span>
+                            <span class="text-[11px] text-slate-400 font-normal normal-case">${s.totalChestsCount} Truhen gesamt</span>
+                        </div>
+                        <div class="space-y-1.5 max-h-60 overflow-y-auto custom-scrollbar pr-0.5">
+                            ${chestsHtml}
+                        </div>
+                    </div>
+                </div>`;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            applyClanHeaderBranding();
+            renderPlayerAnnouncement();
+            const savedSearch = localStorage.getItem('legio_player_last_search');
+            if (savedSearch) {
+                document.getElementById('playerSearch').value = savedSearch;
+            }
+            loadLiveData();
+        });
+    </script>
+</body>
+</html>
