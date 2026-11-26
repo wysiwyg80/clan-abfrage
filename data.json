@@ -2698,9 +2698,9 @@
       "customGoal": null,
       "hero_level": 135,
       "startPower": 59616851,
+      "goalCyclesLeft": 0,
       "individualGoal": null,
-      "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "penaltyPercent": null
     }
   ],
   "evalStartDate": "2026-11-21",
@@ -2712,5 +2712,5 @@
   "defaultCycleDays": 30,
   "goalLow": 12500,
   "goalHigh": 15000,
-  "lastUpdated": "2026-11-26T19:40:19.104Z"
+  "lastUpdated": "2026-11-26T21:01:31.262Z"
 }
