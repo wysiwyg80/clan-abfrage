@@ -2777,7 +2777,9 @@
     {
       "name": "KX CP",
       "rank": "Soldat",
-      "chests": {},
+      "chests": {
+        "Knochentruhe (Gruft Level 15)": 1
+      },
       "tower": 0,
       "silver": 0,
       "power": 83063875,
