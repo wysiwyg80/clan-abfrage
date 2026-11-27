@@ -2743,6 +2743,20 @@
       "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null
+    },
+    {
+      "name": "KX CP",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 83063875,
+      "startPower": 83063875,
+      "hero_level": 139,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-27"
     }
   ],
   "evalStartDate": "2026-11-21",
