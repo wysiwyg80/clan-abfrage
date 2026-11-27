@@ -2778,7 +2778,8 @@
       "name": "KX CP",
       "rank": "Soldat",
       "chests": {
-        "Knochentruhe (Gruft Level 15)": 1
+        "Knochentruhe (Gruft Level 15)": 1,
+        "Truhe der Maya (Gruft Level 15)": 1
       },
       "tower": 0,
       "silver": 0,
