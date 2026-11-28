@@ -2282,23 +2282,6 @@
       "penaltyPercent": null
     },
     {
-      "name": "Keratius",
-      "rank": "Soldat",
-      "power": 29409681,
-      "tower": 0,
-      "chests": {},
-      "silver": 0,
-      "joinDate": "2026-11-28",
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null,
-      "hero_level": 130,
-      "startPower": 29409681,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null
-    },
-    {
       "name": "Sargeras",
       "rank": "Soldat",
       "power": 24873925,
@@ -2382,5 +2365,5 @@
     "text": "Euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T19:41:17.778Z"
+  "lastUpdated": "2026-11-28T19:42:11.244Z"
 }
