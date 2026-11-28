@@ -1070,7 +1070,7 @@
       "name": "Biin",
       "rank": "Veteran",
       "power": 308133461,
-      "tower": 1,
+      "tower": 2,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Feuertruhe (Gruft Level 20)": 1,
@@ -1118,7 +1118,7 @@
       "name": "Maem",
       "rank": "Veteran",
       "power": 300554129,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 5,
         "Chimären-Truhe (Epische-Chimäre-Trupp)": 1,
@@ -1841,7 +1841,7 @@
       "name": "Cologne am Rhein",
       "rank": "Soldat",
       "power": 431065935,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
         "Feuertruhe (Gruft Level 25)": 2,
@@ -1889,7 +1889,7 @@
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
       "power": 415110655,
-      "tower": 1,
+      "tower": 2,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -2290,7 +2290,7 @@
       "name": "Xetlac",
       "rank": "Veteran",
       "power": 997516345,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Holztruhe (Bank)": 9,
         "Bronzetruhe (Bank)": 9,
@@ -2637,7 +2637,7 @@
       "name": "ANZ",
       "rank": "Soldat",
       "power": 91842273,
-      "tower": 0,
+      "tower": 1,
       "chests": {},
       "growth": 0,
       "silver": 0,
