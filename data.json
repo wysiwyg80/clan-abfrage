@@ -1177,7 +1177,7 @@
       "penaltyPercent": null
     },
     {
-      "name": "TD1",
+      "name": "TD",
       "rank": "Offizier",
       "hero_level": 185,
       "power": 147380125,
@@ -2433,5 +2433,5 @@
     "text": "Euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T21:30:23.539Z"
+  "lastUpdated": "2026-11-28T21:33:00.378Z"
 }
