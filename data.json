@@ -1368,7 +1368,7 @@
       "name": "Granidred",
       "rank": "Veteran",
       "power": 234597871,
-      "tower": 1,
+      "tower": 2,
       "chests": {
         "Feuertruhe (Gruft Level 20)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -2462,7 +2462,7 @@
       "name": "Eldriel",
       "rank": "Veteran",
       "power": 190719206,
-      "tower": 0,
+      "tower": 1,
       "chests": {},
       "growth": 0,
       "silver": 0,
