@@ -1040,6 +1040,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Momma Goramar",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 383264525,
+      "startPower": 383264525,
+      "hero_level": 266,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "SteelBallsシ",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 355363275,
+      "startPower": 355363275,
+      "hero_level": 233,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Morana",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 346419491,
+      "startPower": 346419491,
+      "hero_level": 247,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
