@@ -1672,7 +1672,7 @@
     {
       "name": "Shaligelv",
       "rank": "Veteran",
-      "power": 130170384,
+      "power": 130340384,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -1706,7 +1706,7 @@
     {
       "name": "Railkayilas",
       "rank": "Veteran",
-      "power": 128990761,
+      "power": 129017761,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -2372,6 +2372,20 @@
       "power": 285357641,
       "startPower": 285357641,
       "hero_level": 234,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Бejdeland",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 130555551,
+      "startPower": 130555551,
+      "hero_level": 155,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null,
