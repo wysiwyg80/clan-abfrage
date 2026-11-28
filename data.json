@@ -1738,8 +1738,16 @@
     {
       "name": "LegatusLabienus",
       "rank": "Anführer",
+      "hero_level": 356,
       "power": 765297691,
-      "tower": 2,
+      "startPower": 760936191,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
@@ -1759,16 +1767,8 @@
         "Gewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 8,
         "Ungewöhnliche Truhe des Wohlstands (Clan-Wohlstand)": 8
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 356,
-      "startPower": 760936191,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "man of war",
@@ -2702,8 +2702,16 @@
     {
       "name": "Legolas",
       "rank": "Offizier",
+      "hero_level": 371,
       "power": 1165296361,
-      "tower": 3,
+      "startPower": 1165295946,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-15",
       "chests": {
         "Sandtruhe (Gruft Level 25)": 12,
         "Feuertruhe (Gruft Level 25)": 4,
@@ -2730,16 +2738,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 24,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 3
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-15",
-      "customGoal": null,
-      "hero_level": 371,
-      "startPower": 1165295946,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "Bayernbua",
@@ -2812,22 +2812,22 @@
     {
       "name": "KX CP",
       "rank": "Soldat",
-      "hero_level": 139,
       "power": 83063875,
-      "startPower": 83063875,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-27",
       "chests": {
         "Knochentruhe (Gruft Level 15)": 2,
         "Truhe der Maya (Gruft Level 15)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-27",
+      "customGoal": null,
+      "hero_level": 139,
+      "startPower": 83063875,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     }
   ],
   "evalStartDate": "2026-11-21",
@@ -2845,5 +2845,5 @@
     "text": "Die Allianz BAD LegioXEquentris wünscht euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T09:23:51.137Z"
+  "lastUpdated": "2026-11-28T09:28:05.101Z"
 }
