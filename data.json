@@ -2006,6 +2006,34 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Faniilas",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 67049026,
+      "startPower": 67049026,
+      "hero_level": 146,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Lifanor",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 39405685,
+      "startPower": 39405685,
+      "hero_level": 117,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
