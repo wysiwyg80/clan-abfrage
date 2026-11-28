@@ -2365,20 +2365,6 @@
       "individualGoal": null,
       "penaltyPercent": null,
       "goalCyclesLeft": 0
-    },
-    {
-      "name": "Farés Dz",
-      "rank": "Soldat",
-      "chests": {},
-      "tower": 0,
-      "silver": 0,
-      "power": 206695408,
-      "startPower": 206695408,
-      "hero_level": 221,
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null,
-      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
@@ -2396,5 +2382,5 @@
     "text": "Euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T19:35:54.598Z"
+  "lastUpdated": "2026-11-28T19:41:17.778Z"
 }
