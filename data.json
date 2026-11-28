@@ -2369,6 +2369,20 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Lilith Morningstar",
+      "rank": "Anführer",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 235555211,
+      "startPower": 235555211,
+      "hero_level": 202,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
