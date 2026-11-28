@@ -1036,7 +1036,7 @@
       "name": "DRACULA",
       "rank": "Veteran",
       "power": 398581425,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Steintruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
@@ -1739,7 +1739,7 @@
       "name": "LegatusLabienus",
       "rank": "Anführer",
       "power": 765297691,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
         "Knochentruhe (Gruft Level 25)": 1,
@@ -2026,7 +2026,7 @@
       "name": "Farés Dz",
       "rank": "Offizier",
       "power": 203282528,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Steintruhe (Gruft Level 25)": 2,
         "Knochentruhe (Gruft Level 20)": 1,
@@ -2064,7 +2064,7 @@
       "name": "Tanmisis",
       "rank": "Veteran",
       "power": 1137207755,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -2703,7 +2703,7 @@
       "name": "Legolas",
       "rank": "Offizier",
       "power": 1165296361,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 12,
         "Feuertruhe (Gruft Level 25)": 4,
