@@ -984,6 +984,20 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "mikasa",
+      "rank": "Vorgesetzter",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 101089974,
+      "startPower": 101089974,
+      "hero_level": 150,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
