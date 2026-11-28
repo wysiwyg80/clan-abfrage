@@ -1166,6 +1166,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Vizshura",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 359210631,
+      "startPower": 359210631,
+      "hero_level": 247,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "BorzTotal",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 332048365,
+      "startPower": 332048365,
+      "hero_level": 271,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Kosmonavt",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 319897205,
+      "startPower": 319897205,
+      "hero_level": 220,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
