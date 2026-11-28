@@ -890,8 +890,16 @@
     {
       "name": "Manador II",
       "rank": "Veteran",
+      "hero_level": 319,
       "power": 636429255,
-      "tower": 0,
+      "startPower": 633226375,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Holztruhe (Bank)": 3,
         "Bronzetruhe (Bank)": 3,
@@ -913,30 +921,14 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 8,
         "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 3
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 319,
-      "startPower": 633226375,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "Riyash IV",
       "rank": "Veteran",
-      "hero_level": 291,
       "power": 481153990,
-      "startPower": 479857600,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 25)": 5,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -956,8 +948,16 @@
         "Truhe des Priesters (Epische Gruft Level 35)": 1,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 3
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 291,
+      "startPower": 479857600,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Magellan",
@@ -1267,16 +1267,8 @@
     {
       "name": "Carruggi 5r",
       "rank": "Veteran",
-      "hero_level": 222,
       "power": 243445085,
-      "startPower": 239786835,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Steintruhe (Gruft Level 25)": 2,
@@ -1302,8 +1294,16 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 30-34)": 1,
         "Epische Truhe des Goldenen Wächters (Epischer Ahnentrupp)": 35
       },
-      "bankedTowerPoints": 50,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 222,
+      "startPower": 239786835,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 50
     },
     {
       "name": "ICHNOS",
@@ -1636,16 +1636,8 @@
     {
       "name": "Burigas",
       "rank": "Veteran",
-      "hero_level": 186,
       "power": 106960155,
-      "startPower": 103614705,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1658,8 +1650,16 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 3,
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 5
       },
-      "bankedTowerPoints": 50,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 186,
+      "startPower": 103614705,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 50
     },
     {
       "name": "Vudorr",
@@ -1993,8 +1993,16 @@
     {
       "name": "Frederico Freitas",
       "rank": "Vorgesetzter",
+      "hero_level": 198,
       "power": 134215526,
-      "tower": 0,
+      "startPower": 128566016,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Barbarentruhe (Gruft Level 25)": 1,
         "Schöne Truhe (Gruft Level 25)": 1,
@@ -2002,16 +2010,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 20)": 20,
         "Truhe der Festung der Elfen (Festung Level 20)": 14
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 198,
-      "startPower": 128566016,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "Gran Rex",
@@ -2179,16 +2179,8 @@
     {
       "name": "Riyash",
       "rank": "Vorgesetzter",
-      "hero_level": 299,
       "power": 691227971,
-      "startPower": 689443971,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
         "Steintruhe (Gruft Level 25)": 2,
@@ -2205,8 +2197,16 @@
         "Truhe der Zwergen-Werkstatt (Gruft Level 25)": 2,
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 2
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 299,
+      "startPower": 689443971,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Ajji",
@@ -2238,8 +2238,16 @@
     {
       "name": "LORD MOSQUITÉ",
       "rank": "Veteran",
+      "hero_level": 137,
       "power": 37566326,
-      "tower": 0,
+      "startPower": 31358181,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Steintruhe (Gruft Level 15)": 1,
         "Barbarentruhe (Gruft Level 20)": 1,
@@ -2256,16 +2264,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 15)": 1,
         "Truhe der Festung der Elfen (Festung Level 15)": 9
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 137,
-      "startPower": 31358181,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "Aurora",
@@ -2389,8 +2389,16 @@
     {
       "name": "Arik",
       "rank": "Veteran",
+      "hero_level": 145,
       "power": 133522561,
-      "tower": 0,
+      "startPower": 124614871,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Feuertruhe (Gruft Level 20)": 2,
@@ -2413,34 +2421,25 @@
         "Truhe der Festung der Elfen (Festung Level 25)": 7,
         "Truhe der Festung der Verfluchten (Festung Level 25)": 1
       },
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "prevPower": 0,
-      "activeDays": 1,
-      "customGoal": null,
-      "hero_level": 145,
-      "startPower": 124614871,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Arashigore",
       "rank": "Soldat",
-      "hero_level": 51,
       "power": 1845507,
-      "startPower": 812592,
       "tower": 1,
+      "chests": {},
+      "growth": 0,
       "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 51,
+      "startPower": 812592,
+      "goalCyclesLeft": 0,
       "individualGoal": null,
       "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
-      "chests": {},
-      "bankedTowerPoints": 50,
-      "growth": 0
+      "bankedTowerPoints": 50
     },
     {
       "name": "Akinohn",
@@ -2503,16 +2502,8 @@
     {
       "name": "Rysiek121",
       "rank": "Offizier",
-      "hero_level": 409,
       "power": 1319490075,
-      "startPower": 1319490025,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 25)": 7,
         "Feuertruhe (Gruft Level 25)": 9,
@@ -2544,8 +2535,16 @@
         "Saphir-Truhe (Schatzkammer der Ahnen Level 35-39)": 7,
         "Saphir-Truhe (Schatzkammer der Ahnen Level 40-44)": 1
       },
-      "bankedTowerPoints": 50,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-01",
+      "customGoal": null,
+      "hero_level": 409,
+      "startPower": 1319490025,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 50
     },
     {
       "name": "Que",
@@ -2714,16 +2713,8 @@
     {
       "name": "Riyash III",
       "rank": "Veteran",
-      "hero_level": 226,
       "power": 308051262,
-      "startPower": 307454262,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-15",
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Steintruhe (Gruft Level 25)": 9,
@@ -2732,8 +2723,16 @@
         "Seltene Drachentruhe (Seltene Gruft Level 30)": 2,
         "Truhe der Verfluchten (Epische Gruft Level 25)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-15",
+      "customGoal": null,
+      "hero_level": 226,
+      "startPower": 307454262,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "Legolas",
@@ -2883,5 +2882,5 @@
     "text": "Euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T13:57:08.478Z"
+  "lastUpdated": "2026-11-28T14:15:45.656Z"
 }
