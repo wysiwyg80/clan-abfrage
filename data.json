@@ -1111,7 +1111,7 @@
     {
       "name": "Morana",
       "rank": "Offizier",
-      "power": 346419491,
+      "power": 346697491,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -1145,7 +1145,7 @@
     {
       "name": "John Carter",
       "rank": "Offizier",
-      "power": 280787401,
+      "power": 280821361,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -1162,7 +1162,7 @@
     {
       "name": "sLd",
       "rank": "Offizier",
-      "power": 203765001,
+      "power": 204225001,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -1194,16 +1194,16 @@
       "penaltyPercent": null
     },
     {
-      "name": "td",
-      "rank": "Soldat",
-      "power": 10268613,
+      "name": "TD",
+      "rank": "Offizier",
+      "power": 147380125,
       "tower": 0,
       "chests": {},
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-28",
       "customGoal": null,
-      "hero_level": 69,
+      "hero_level": 185,
       "startPower": 10268613,
       "goalCyclesLeft": 0,
       "individualGoal": null,
