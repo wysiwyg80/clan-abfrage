@@ -2585,8 +2585,16 @@
     {
       "name": "Spartakus",
       "rank": "Offizier",
+      "hero_level": 418,
       "power": 1562017781,
-      "tower": 0,
+      "startPower": 1556072281,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-06",
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Schöne Truhe (Gruft Level 25)": 1,
@@ -2622,16 +2630,8 @@
         "Truhe der Verfluchten (Heldenhafte Monster Level 38)": 1,
         "Truhe der Verfluchten (Heldenhafte Monster Level 43)": 1
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-06",
-      "customGoal": null,
-      "hero_level": 418,
-      "startPower": 1556072281,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "ANZ",
@@ -2825,9 +2825,9 @@
       "customGoal": null,
       "hero_level": 139,
       "startPower": 83063875,
+      "goalCyclesLeft": 0,
       "individualGoal": null,
-      "penaltyPercent": null,
-      "goalCyclesLeft": 0
+      "penaltyPercent": null
     }
   ],
   "evalStartDate": "2026-11-21",
@@ -2845,5 +2845,5 @@
     "text": "Die Allianz BAD LegioXEquentris wünscht euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-27T19:36:57.708Z"
+  "lastUpdated": "2026-11-28T09:12:49.353Z"
 }
