@@ -963,7 +963,7 @@
       "name": "Magellan",
       "rank": "Veteran",
       "power": 453078870,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 3,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -1001,7 +1001,7 @@
       "name": "Explorer",
       "rank": "Veteran",
       "power": 415616775,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 2,
         "Steintruhe (Gruft Level 25)": 4,
@@ -1403,7 +1403,7 @@
       "name": "Roula",
       "rank": "Veteran",
       "power": 211154711,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Sandtruhe (Gruft Level 25)": 1,
@@ -2116,7 +2116,7 @@
       "name": "BAD Guo II",
       "rank": "Veteran",
       "power": 764241009,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 6,
         "Feuertruhe (Gruft Level 25)": 3,
