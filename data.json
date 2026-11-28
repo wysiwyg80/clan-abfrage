@@ -1548,7 +1548,7 @@
       "name": "AyBars",
       "rank": "Veteran",
       "power": 114875266,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Sandtruhe (Gruft Level 25)": 2,
@@ -1647,7 +1647,7 @@
       "name": "Vudorr",
       "rank": "Veteran",
       "power": 40759388,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Steintruhe (Gruft Level 20)": 2,
@@ -2550,7 +2550,7 @@
       "name": "nomad",
       "rank": "Soldat",
       "power": 143880065,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 1,
         "Feuertruhe (Gruft Level 15)": 1,
@@ -2654,7 +2654,7 @@
       "name": "travelling wilburys",
       "rank": "Soldat",
       "power": 75509455,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 15)": 1,
         "Steintruhe (Gruft Level 15)": 2,
