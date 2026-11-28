@@ -1880,6 +1880,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Shahuginn",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 59496915,
+      "startPower": 59496915,
+      "hero_level": 122,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Arya",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 56161319,
+      "startPower": 56161319,
+      "hero_level": 175,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Doomterror",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 48270941,
+      "startPower": 48270941,
+      "hero_level": 121,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
