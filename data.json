@@ -1247,7 +1247,7 @@
     {
       "name": "BorzTotal",
       "rank": "Veteran",
-      "power": 332048365,
+      "power": 332183365,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -1264,7 +1264,7 @@
     {
       "name": "Kosmonavt",
       "rank": "Veteran",
-      "power": 319897205,
+      "power": 319946205,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -1281,7 +1281,7 @@
     {
       "name": "Furya",
       "rank": "Veteran",
-      "power": 310084311,
+      "power": 310244311,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -1315,7 +1315,7 @@
     {
       "name": "Ajax",
       "rank": "Veteran",
-      "power": 235754135,
+      "power": 235784335,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -2358,6 +2358,20 @@
       "power": 206695408,
       "startPower": 206695408,
       "hero_level": 221,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "iboo",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 285357641,
+      "startPower": 285357641,
+      "hero_level": 234,
       "prevPower": 0,
       "activeDays": 28,
       "customGoal": null,
