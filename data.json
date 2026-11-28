@@ -998,6 +998,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "BAD Guo II",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 768479549,
+      "startPower": 768479549,
+      "hero_level": 342,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Derya",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 464831611,
+      "startPower": 464831611,
+      "hero_level": 268,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "WYSIWYG",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 426310355,
+      "startPower": 426310355,
+      "hero_level": 253,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
