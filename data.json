@@ -1888,8 +1888,16 @@
     {
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
+      "hero_level": 251,
       "power": 415110655,
-      "tower": 2,
+      "startPower": 406240935,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
         "Feuertruhe (Gruft Level 25)": 3,
@@ -1916,16 +1924,8 @@
         "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 2,
         "Unionstruhe (Persönliche Belohnung Union des Triumphs)": 3
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 251,
-      "startPower": 406240935,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 50
+      "bankedTowerPoints": 50,
+      "growth": 0
     },
     {
       "name": "kikito",
@@ -2762,8 +2762,16 @@
     {
       "name": "Rosalinda",
       "rank": "Veteran",
+      "hero_level": 187,
       "power": 109379065,
-      "tower": 0,
+      "startPower": 109379065,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-21",
       "chests": {
         "Sandtruhe (Gruft Level 15)": 1,
         "Knochentruhe (Gruft Level 15)": 1,
@@ -2775,17 +2783,8 @@
         "Truhe des Priesters (Epische Gruft Level 20)": 1,
         "Alte Truhe eines Kriegers (Epische Gruft Level 20)": 1
       },
-      "silver": 0,
-      "joinDate": "2026-11-21",
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null,
-      "hero_level": 187,
-      "startPower": 109379065,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Sinem",
@@ -2845,5 +2844,5 @@
     "text": "Die Allianz BAD LegioXEquentris wünscht euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T09:33:19.403Z"
+  "lastUpdated": "2026-11-28T09:34:23.492Z"
 }
