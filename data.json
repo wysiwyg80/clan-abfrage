@@ -1181,7 +1181,7 @@
       "rank": "Offizier",
       "hero_level": 185,
       "power": 147380125,
-      "startPower": 10268613,
+      "startPower": 147380125,
       "tower": 0,
       "silver": 0,
       "individualGoal": null,
@@ -2433,5 +2433,5 @@
     "text": "Euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T21:33:00.378Z"
+  "lastUpdated": "2026-11-28T21:34:01.321Z"
 }
