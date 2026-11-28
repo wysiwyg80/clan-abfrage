@@ -1082,6 +1082,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Auzar",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 318613825,
+      "startPower": 318613825,
+      "hero_level": 243,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "John Carter",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 280787401,
+      "startPower": 280787401,
+      "hero_level": 220,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "sLd",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 203765001,
+      "startPower": 203765001,
+      "hero_level": 202,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
