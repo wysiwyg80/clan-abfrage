@@ -1192,7 +1192,7 @@
       "name": "Elginan",
       "rank": "Offizier",
       "power": 317598506,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
         "Feuertruhe (Gruft Level 25)": 4,
@@ -1343,7 +1343,7 @@
       "name": "Lee the Ugly",
       "rank": "Veteran",
       "power": 253750191,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Truhe der Maya (Gruft Level 25)": 1,
