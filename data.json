@@ -1194,16 +1194,16 @@
       "penaltyPercent": null
     },
     {
-      "name": "TD",
-      "rank": "Offizier",
-      "power": 147380125,
+      "name": "td",
+      "rank": "Veteran",
+      "power": 10268613,
       "tower": 0,
       "chests": {},
       "growth": 0,
       "silver": 0,
       "joinDate": "2026-11-28",
       "customGoal": null,
-      "hero_level": 185,
+      "hero_level": 69,
       "startPower": 10268613,
       "goalCyclesLeft": 0,
       "individualGoal": null,
@@ -2165,7 +2165,7 @@
     {
       "name": "Mourão",
       "rank": "Veteran",
-      "power": 42312441,
+      "power": 42351941,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -2266,7 +2266,7 @@
     },
     {
       "name": "MartinKrpan",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "power": 31101550,
       "tower": 0,
       "chests": {},
@@ -2283,7 +2283,7 @@
     },
     {
       "name": "Sargeras",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "power": 24873925,
       "tower": 0,
       "chests": {},
@@ -2317,7 +2317,7 @@
     },
     {
       "name": "Martin3",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "power": 18247150,
       "tower": 0,
       "chests": {},
