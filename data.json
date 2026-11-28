@@ -1070,7 +1070,7 @@
       "name": "Biin",
       "rank": "Veteran",
       "power": 308133461,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 2,
         "Feuertruhe (Gruft Level 20)": 1,
@@ -1889,7 +1889,7 @@
       "name": "WYSIWYG",
       "rank": "Vorgesetzter",
       "power": 415110655,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 4,
         "Feuertruhe (Gruft Level 25)": 3,
