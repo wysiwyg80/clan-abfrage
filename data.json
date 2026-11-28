@@ -2348,6 +2348,20 @@
       "individualGoal": null,
       "penaltyPercent": null,
       "goalCyclesLeft": 0
+    },
+    {
+      "name": "MozGoLom",
+      "rank": "Soldat",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 62695990,
+      "startPower": 62695990,
+      "hero_level": 148,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
