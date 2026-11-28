@@ -2790,44 +2790,44 @@
     {
       "name": "Sinem",
       "rank": "Soldat",
-      "hero_level": 135,
       "power": 59616851,
-      "startPower": 59616851,
       "tower": 1,
-      "silver": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "customGoal": null,
-      "goalCyclesLeft": 0,
-      "joinDate": "2026-11-26",
       "chests": {
         "Knochentruhe (Gruft Level 20)": 1,
         "Tartaros-Truhe (Gruft von Tartaros Level 15)": 20,
         "Tartaros-Truhe (Gruft von Tartaros Level 20)": 10,
         "Truhe der Zwergen-Werkstatt (Gruft Level 15)": 1
       },
-      "bankedTowerPoints": 0,
-      "growth": 0
+      "growth": 0,
+      "silver": 0,
+      "joinDate": "2026-11-26",
+      "customGoal": null,
+      "hero_level": 135,
+      "startPower": 59616851,
+      "goalCyclesLeft": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "bankedTowerPoints": 0
     },
     {
       "name": "KX CP",
       "rank": "Soldat",
+      "hero_level": 139,
       "power": 83063875,
-      "tower": 0,
+      "startPower": 83063875,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-27",
       "chests": {
         "Knochentruhe (Gruft Level 15)": 2,
         "Truhe der Maya (Gruft Level 15)": 1
       },
-      "silver": 0,
-      "joinDate": "2026-11-27",
-      "prevPower": 0,
-      "activeDays": 28,
-      "customGoal": null,
-      "hero_level": 139,
-      "startPower": 83063875,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null
+      "bankedTowerPoints": 0,
+      "growth": 0
     }
   ],
   "evalStartDate": "2026-11-21",
@@ -2845,5 +2845,5 @@
     "text": "Die Allianz BAD LegioXEquentris wünscht euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T09:20:27.303Z"
+  "lastUpdated": "2026-11-28T09:23:51.137Z"
 }
