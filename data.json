@@ -1124,6 +1124,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Valvakos",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 193945485,
+      "startPower": 193945485,
+      "hero_level": 183,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "TD",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 147296125,
+      "startPower": 147296125,
+      "hero_level": 185,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "JackTravis",
+      "rank": "Offizier",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 122705261,
+      "startPower": 122705261,
+      "hero_level": 142,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
