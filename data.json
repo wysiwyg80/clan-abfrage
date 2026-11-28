@@ -1376,6 +1376,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Aybrineyl",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 162136181,
+      "startPower": 162136181,
+      "hero_level": 176,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Blackshade",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 159659206,
+      "startPower": 159659206,
+      "hero_level": 190,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Lathris",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 155485751,
+      "startPower": 155485751,
+      "hero_level": 147,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
