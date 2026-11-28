@@ -2270,8 +2270,16 @@
     {
       "name": "Aurora",
       "rank": "Veteran",
+      "hero_level": 144,
       "power": 75040935,
-      "tower": 0,
+      "startPower": 66564015,
+      "tower": 1,
+      "silver": 0,
+      "individualGoal": null,
+      "penaltyPercent": null,
+      "customGoal": null,
+      "goalCyclesLeft": 0,
+      "joinDate": "2026-11-01",
       "chests": {
         "Sandtruhe (Gruft Level 15)": 1,
         "Sandtruhe (Gruft Level 25)": 3,
@@ -2300,16 +2308,8 @@
         "Seltene Drachentruhe (Seltene Gruft Level 25)": 4,
         "Truhe der Festung der Elfen (Festung Level 25)": 5
       },
-      "growth": 0,
-      "silver": 0,
-      "joinDate": "2026-11-01",
-      "customGoal": null,
-      "hero_level": 144,
-      "startPower": 66564015,
-      "goalCyclesLeft": 0,
-      "individualGoal": null,
-      "penaltyPercent": null,
-      "bankedTowerPoints": 0
+      "bankedTowerPoints": 0,
+      "growth": 0
     },
     {
       "name": "Xetlac",
@@ -2882,5 +2882,5 @@
     "text": "Euch allen eine besinnliche Vorweihnachtszeit & frohe Weihnachten!",
     "target": "2026-12-24T18:00"
   },
-  "lastUpdated": "2026-11-28T14:15:45.656Z"
+  "lastUpdated": "2026-11-28T14:22:31.090Z"
 }
