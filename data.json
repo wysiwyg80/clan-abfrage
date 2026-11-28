@@ -1927,7 +1927,7 @@
     {
       "name": "Gipsy Danger",
       "rank": "Veteran",
-      "power": 95814801,
+      "power": 95888501,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -1944,7 +1944,7 @@
     {
       "name": "Anneen",
       "rank": "Veteran",
-      "power": 88690156,
+      "power": 88758656,
       "tower": 0,
       "chests": {},
       "silver": 0,
@@ -2198,7 +2198,7 @@
     },
     {
       "name": "Zorro",
-      "rank": "Soldat",
+      "rank": "Veteran",
       "power": 89917126,
       "tower": 0,
       "chests": {},
