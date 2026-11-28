@@ -1140,7 +1140,7 @@
       "name": "Auzar",
       "rank": "Veteran",
       "power": 316525525,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 6,
         "Feuertruhe (Gruft Level 25)": 4,
@@ -1447,7 +1447,7 @@
       "name": "Vudor SK6",
       "rank": "Veteran",
       "power": 214475865,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Steintruhe (Gruft Level 25)": 2,
         "Truhe der Maya (Gruft Level 15)": 1,
@@ -1478,7 +1478,7 @@
       "name": "King Slayer",
       "rank": "Veteran",
       "power": 169503688,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 2,
         "Steintruhe (Gruft Level 20)": 1,
@@ -1705,7 +1705,7 @@
       "name": "SaturdayNightFever",
       "rank": "Soldat",
       "power": 107983843,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Gladiatorentruhe (Arena)": 1,
         "Sandtruhe (Gruft Level 20)": 4,
@@ -2188,7 +2188,7 @@
       "name": "Ajji",
       "rank": "Soldat",
       "power": 388608593,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 25)": 1,
         "Truhe der Orks (Gruft Level 25)": 2,
@@ -2421,7 +2421,7 @@
       "name": "Akinohn",
       "rank": "Vorgesetzter",
       "power": 765581807,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Steintruhe (Gruft Level 25)": 3,
         "Barbarentruhe (Gruft Level 15)": 1,
@@ -2522,7 +2522,7 @@
       "name": "Que",
       "rank": "Soldat",
       "power": 120269715,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Sandtruhe (Gruft Level 20)": 1,
         "Schöne Truhe (Gruft Level 25)": 1,
