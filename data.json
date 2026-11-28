@@ -942,6 +942,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "REDDRAGON",
+      "rank": "Vorgesetzter",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 213843825,
+      "startPower": 213843825,
+      "hero_level": 171,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "ski",
+      "rank": "Vorgesetzter",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 184629841,
+      "startPower": 184629841,
+      "hero_level": 191,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Enfir",
+      "rank": "Vorgesetzter",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 114956186,
+      "startPower": 114956186,
+      "hero_level": 152,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
