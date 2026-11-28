@@ -1368,7 +1368,7 @@
       "name": "Granidred",
       "rank": "Veteran",
       "power": 234597871,
-      "tower": 0,
+      "tower": 1,
       "chests": {
         "Feuertruhe (Gruft Level 20)": 1,
         "Feuertruhe (Gruft Level 25)": 1,
@@ -2703,7 +2703,7 @@
       "name": "Legolas",
       "rank": "Offizier",
       "power": 1165296361,
-      "tower": 2,
+      "tower": 3,
       "chests": {
         "Sandtruhe (Gruft Level 25)": 12,
         "Feuertruhe (Gruft Level 25)": 4,
