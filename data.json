@@ -1502,6 +1502,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Lifedil",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 131773461,
+      "startPower": 131773461,
+      "hero_level": 150,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Kostolom",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 131382381,
+      "startPower": 131382381,
+      "hero_level": 162,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Shaligelv",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 130170384,
+      "startPower": 130170384,
+      "hero_level": 185,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
