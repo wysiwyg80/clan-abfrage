@@ -1796,6 +1796,48 @@
       "activeDays": 28,
       "customGoal": null,
       "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Ririn",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 79091781,
+      "startPower": 79091781,
+      "hero_level": 143,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "Sath",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 74820684,
+      "startPower": 74820684,
+      "hero_level": 129,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
+    },
+    {
+      "name": "solta",
+      "rank": "Veteran",
+      "chests": {},
+      "tower": 0,
+      "silver": 0,
+      "power": 73958256,
+      "startPower": 73958256,
+      "hero_level": 124,
+      "prevPower": 0,
+      "activeDays": 28,
+      "customGoal": null,
+      "joinDate": "2026-11-28"
     }
   ],
   "evalStartDate": "2026-11-21",
